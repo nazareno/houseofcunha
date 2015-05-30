@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<proposicao tipo="PEC       " numero="182" ano="2007">
+  <nomeProposicao>PEC 182/2007</nomeProposicao>
+  <idProposicao>373327</idProposicao>
+  <idProposicaoPrincipal>
+  </idProposicaoPrincipal>
+  <nomeProposicaoOrigem>PEC 23/2007</nomeProposicaoOrigem>
+  <tipoProposicao>Proposta de Emenda à Constituição</tipoProposicao>
+  <tema>Organização Político-Administrativa do Estado (utilizado até a legislatura 53)</tema>
+  <Ementa>Altera os arts. 17, 46 e 55 da Constituição Federal, para assegurar aos partidos políticos a titularidade dos mandatos parlamentares e estabelecer a perda dos mandatos dos membros do Poder Legislativo e do Poder Executivo que se desfiliarem dos partidos pelos quais forem eleitos.</Ementa>
+  <ExplicacaoEmenta>PEC da Fidelidade Partidária.</ExplicacaoEmenta>
+  <Autor>Senado Federal - Marco Maciel</Autor>
+  <ideCadastro>
+  </ideCadastro>
+  <ufAutor>PE</ufAutor>
+  <partidoAutor>DEM       </partidoAutor>
+  <DataApresentacao>23/10/2007</DataApresentacao>
+  <RegimeTramitacao>Especial</RegimeTramitacao>
+  <UltimoDespacho Data="30/10/2007">À Comissão de Constituição e Justiça e de Cidadania. Apensem-se a esta a PEC 85/95 e suas apensadas, e a PEC 124/07.Proposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</UltimoDespacho>
+  <Apreciacao>Proposição Sujeita à Apreciação do Plenário</Apreciacao>
+  <Indexacao>Legislativo, garantia, partido político, titularidade, mandato parlamentar, perda, mandato, membros, Executivo, Legislativo, desfiliação  partidária, infidelidade partidária, exceção, extinção, incorporação, fusão, perda de função pública, Presidente da República, Vice-Presidente da República, Governador, Vice-Governador,  Estados, Distrito Federal,  Juiz Eleitoral, Prefeito, Vice-Prefeito, Vereador, Deputado Federal, Senador, Deputado Estadual, Deputado Distrital, Mesa Diretora, comunicação, diretório nacional, diretório partidário, documento, comprovação, desligamento, representação partidária, obrigatoriedade, suplente, igualdade, sigla, membros, titular, Senado.</Indexacao>
+  <Situacao>Diversas</Situacao>
+  <LinkInteiroTeor>http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=516056</LinkInteiroTeor>
+  <apensadas>
+    <proposicao>
+      <nomeProposicao>PEC 124/2007</nomeProposicao>
+      <codProposicao>359934</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 42/1995</nomeProposicao>
+      <codProposicao>14293</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 4/2007</nomeProposicao>
+      <codProposicao>340741</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 190/1994</nomeProposicao>
+      <codProposicao>14522</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 142/1995</nomeProposicao>
+      <codProposicao>14448</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 149/2003</nomeProposicao>
+      <codProposicao>130647</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 312/2004</nomeProposicao>
+      <codProposicao>263013</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 51/2007</nomeProposicao>
+      <codProposicao>349027</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 147/2007</nomeProposicao>
+      <codProposicao>365678</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 228/2008</nomeProposicao>
+      <codProposicao>384110</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 404/2009</nomeProposicao>
+      <codProposicao>448983</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 27/2011</nomeProposicao>
+      <codProposicao>501394</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 60/2011</nomeProposicao>
+      <codProposicao>513466</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 67/2003</nomeProposicao>
+      <codProposicao>117155</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 25/2007</nomeProposicao>
+      <codProposicao>345730</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 492/1997</nomeProposicao>
+      <codProposicao>14789</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 19/2003</nomeProposicao>
+      <codProposicao>108245</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 115/2003</nomeProposicao>
+      <codProposicao>124432</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 246/2004</nomeProposicao>
+      <codProposicao>155775</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 409/2005</nomeProposicao>
+      <codProposicao>289072</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 430/2005</nomeProposicao>
+      <codProposicao>292419</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 578/2006</nomeProposicao>
+      <codProposicao>335667</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 15/2007</nomeProposicao>
+      <codProposicao>344199</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 41/2007</nomeProposicao>
+      <codProposicao>348066</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 65/2007</nomeProposicao>
+      <codProposicao>351811</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 72/2007</nomeProposicao>
+      <codProposicao>353351</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 77/2007</nomeProposicao>
+      <codProposicao>353866</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 103/2007</nomeProposicao>
+      <codProposicao>357237</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 123/2007</nomeProposicao>
+      <codProposicao>359932</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 164/2007</nomeProposicao>
+      <codProposicao>369638</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 257/2008</nomeProposicao>
+      <codProposicao>396007</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 311/2008</nomeProposicao>
+      <codProposicao>419338</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 314/2008</nomeProposicao>
+      <codProposicao>419808</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 520/2006</nomeProposicao>
+      <codProposicao>316999</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 586/2006</nomeProposicao>
+      <codProposicao>337860</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 155/2007</nomeProposicao>
+      <codProposicao>367370</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 279/2000</nomeProposicao>
+      <codProposicao>14650</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 211/1995</nomeProposicao>
+      <codProposicao>14556</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 46/2003</nomeProposicao>
+      <codProposicao>114072</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 6/2003</nomeProposicao>
+      <codProposicao>105227</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 151/2003</nomeProposicao>
+      <codProposicao>131538</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 273/2004</nomeProposicao>
+      <codProposicao>253305</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 390/2005</nomeProposicao>
+      <codProposicao>283204</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 402/2005</nomeProposicao>
+      <codProposicao>287762</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 539/2006</nomeProposicao>
+      <codProposicao>322094</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 6/2007</nomeProposicao>
+      <codProposicao>340854</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 11/2007</nomeProposicao>
+      <codProposicao>343711</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 131/2007</nomeProposicao>
+      <codProposicao>361830</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 160/2007</nomeProposicao>
+      <codProposicao>368429</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 220/2008</nomeProposicao>
+      <codProposicao>383692</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 119/1999</nomeProposicao>
+      <codProposicao>14411</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 127/2003</nomeProposicao>
+      <codProposicao>127000</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 297/2008</nomeProposicao>
+      <codProposicao>413910</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 262/2004</nomeProposicao>
+      <codProposicao>250007</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 249/2004</nomeProposicao>
+      <codProposicao>156072</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 322/2009</nomeProposicao>
+      <codProposicao>423411</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 159/2012</nomeProposicao>
+      <codProposicao>540574</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 322/2013</nomeProposicao>
+      <codProposicao>595223</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 328/2013</nomeProposicao>
+      <codProposicao>597047</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 334/2013</nomeProposicao>
+      <codProposicao>598007</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 356/2013</nomeProposicao>
+      <codProposicao>602568</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 444/2014</nomeProposicao>
+      <codProposicao>858581</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 168/2012</nomeProposicao>
+      <codProposicao>544179</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 221/2012</nomeProposicao>
+      <codProposicao>560572</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 344/2013</nomeProposicao>
+      <codProposicao>599229</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 345/2013</nomeProposicao>
+      <codProposicao>599231</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 352/2013</nomeProposicao>
+      <codProposicao>600023</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 20/2007</nomeProposicao>
+      <codProposicao>344644</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 199/2007</nomeProposicao>
+      <codProposicao>379577</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 169/2012</nomeProposicao>
+      <codProposicao>544180</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 222/2012</nomeProposicao>
+      <codProposicao>560575</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 384/2014</nomeProposicao>
+      <codProposicao>606692</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 378/2005</nomeProposicao>
+      <codProposicao>280071</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 434/2005</nomeProposicao>
+      <codProposicao>292574</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 580/2006</nomeProposicao>
+      <codProposicao>336202</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 583/2006</nomeProposicao>
+      <codProposicao>336680</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 308/2008</nomeProposicao>
+      <codProposicao>415633</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 128/2011</nomeProposicao>
+      <codProposicao>531974</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 430/2014</nomeProposicao>
+      <codProposicao>643935</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 7/2015</nomeProposicao>
+      <codProposicao>996556</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 224/2012</nomeProposicao>
+      <codProposicao>561199</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 10/1995</nomeProposicao>
+      <codProposicao>14252</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 133/2003</nomeProposicao>
+      <codProposicao>127937</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 585/2006</nomeProposicao>
+      <codProposicao>337852</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 523/2006</nomeProposicao>
+      <codProposicao>317803</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 365/2009</nomeProposicao>
+      <codProposicao>434498</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 170/1999</nomeProposicao>
+      <codProposicao>14492</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 105/2007</nomeProposicao>
+      <codProposicao>357555</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 258/2013</nomeProposicao>
+      <codProposicao>570982</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 3/2015</nomeProposicao>
+      <codProposicao>946574</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 223/2008</nomeProposicao>
+      <codProposicao>383980</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 519/2006</nomeProposicao>
+      <codProposicao>316997</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 587/2006</nomeProposicao>
+      <codProposicao>337906</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 280/2008</nomeProposicao>
+      <codProposicao>404696</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 153/2012</nomeProposicao>
+      <codProposicao>539534</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 225/2003</nomeProposicao>
+      <codProposicao>150040</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 361/2005</nomeProposicao>
+      <codProposicao>275121</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 142/2007</nomeProposicao>
+      <codProposicao>364642</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 148/2007</nomeProposicao>
+      <codProposicao>365879</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 241/2008</nomeProposicao>
+      <codProposicao>389978</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 151/2012</nomeProposicao>
+      <codProposicao>539290</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 306/2004</nomeProposicao>
+      <codProposicao>260647</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 198/2012</nomeProposicao>
+      <codProposicao>551953</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 199/2012</nomeProposicao>
+      <codProposicao>551955</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 221/2008</nomeProposicao>
+      <codProposicao>383695</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 326/2013</nomeProposicao>
+      <codProposicao>596776</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 14/2015</nomeProposicao>
+      <codProposicao>1194346</codProposicao>
+    </proposicao>
+  </apensadas>
+</proposicao>

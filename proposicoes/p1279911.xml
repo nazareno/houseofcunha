@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<proposicao tipo="REQ       " numero="784" ano="2015">
+  <nomeProposicao>REQ 784/2015 CPIPETRO</nomeProposicao>
+  <idProposicao>1279911</idProposicao>
+  <idProposicaoPrincipal>
+  </idProposicaoPrincipal>
+  <nomeProposicaoOrigem>
+  </nomeProposicaoOrigem>
+  <tipoProposicao>Requerimento</tipoProposicao>
+  <tema>
+  </tema>
+  <Ementa>Requer a esta Comissão Parlamentar de Inquérito convoque o Senhor Paulo Pires de Almeida.</Ementa>
+  <ExplicacaoEmenta>
+  </ExplicacaoEmenta>
+  <Autor>Altineu Côrtes</Autor>
+  <ideCadastro>178937</ideCadastro>
+  <ufAutor>RJ</ufAutor>
+  <partidoAutor>PR        </partidoAutor>
+  <DataApresentacao>20/05/2015</DataApresentacao>
+  <RegimeTramitacao>Ordinária</RegimeTramitacao>
+  <UltimoDespacho Data="">
+  </UltimoDespacho>
+  <Apreciacao>Requerimento</Apreciacao>
+  <Indexacao>
+  </Indexacao>
+  <Situacao>CPIPETRO - Pronta para Pauta</Situacao>
+  <LinkInteiroTeor>http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1337335</LinkInteiroTeor>
+  <apensadas />
+</proposicao>

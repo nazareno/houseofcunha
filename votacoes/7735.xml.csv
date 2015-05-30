@@ -1,0 +1,4 @@
+Ano,Numero,Sigla,Votacao [Data],Votacao [Hora],Votacao [ObjVotacao],Votacao [Resumo],Votacao [codSessao],Deputado [Nome],Deputado [Partido],Deputado [UF],Deputado [Voto],Deputado [ideCadastro],bancada [Sigla],bancada [orientacao]
+2014,7735,PL,17/12/2014,21:31,REQ. DE RETIRADA DE PAUTA,,5427,Chico Alencar,PSOL      ,RJ,Sim            ,74171,Minoria,Não            
+2014,7735,PL,10/2/2015,18:40,DVS - PRB - EMENDA Nº 193,Rejeitada a Emenda nº 193. Sim: 161; não: 241; abstenção: 1; total: 403.,5443,Renzo Braz,PP        ,MG,Não            ,160654,GOV.,Sim            
+2014,7735,PL,27/4/2015,21:31,DVS - PDT - EMENDA Nº 3,Rejeitada a Emenda nº 3. Sim: 135; não: 283; abstenções: 2; total: 420.,5511,Renzo Braz,PP        ,MG,Não            ,160654,GOV.,Não            
