@@ -97,8 +97,8 @@ dev.off()
 Alguns ilustres
 
 ```{r}
-ggplot(data = mca1_obs_df, 
-       aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque, size = destaque)) +
+p <- ggplot(data = mca1_obs_df, 
+            aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque, size = destaque)) +
   geom_hline(yintercept = 0, colour = "gray70") +
   geom_vline(xintercept = 0, colour = "gray70") +
   geom_text() +
@@ -112,12 +112,18 @@ ggplot(data = mca1_obs_df,
         axis.text = element_blank(), 
         axis.line = element_blank())
 
+p
+png("icones.png", 
+    width = 800, height = 600)
+p
+dev.off()
+
 ```
 
 Partidos
 
 ```{r}
-ggplot(data = mca1_obs_df, 
+p <- ggplot(data = mca1_obs_df, 
        aes(x = Dim.1, y = Dim.2, label = nome, 
            colour = destaque_partido)) +
   geom_hline(yintercept = 0, colour = "gray70") +
@@ -136,13 +142,23 @@ ggplot(data = mca1_obs_df,
   theme(axis.ticks = element_blank(), 
         axis.text = element_blank(), 
         axis.line = element_blank())
+p
+png("partidos.png", 
+    width = 800, height = 600)
+p
+dev.off()
+
 ```
 
 O pessoal da PB 
 
 ```{r}
-ggplot(data = mca1_obs_df, 
-       aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque_pb, size = destaque_pb == "PB")) +
+p <- ggplot(data = mca1_obs_df, 
+            aes(x = Dim.1, 
+                y = Dim.2, 
+                label = nome, 
+                colour = destaque_pb, 
+                size = destaque_pb == "PB")) +
   geom_hline(yintercept = 0, colour = "gray70") +
   geom_vline(xintercept = 0, colour = "gray70") +
   geom_text() +
@@ -155,5 +171,10 @@ ggplot(data = mca1_obs_df,
         axis.ticks = element_blank(), 
         axis.text = element_blank(), 
         axis.line = element_blank())
+p
+png("deputados-da-pb.png", 
+    width = 800, height = 600)
+p
+dev.off()
 
 ```
