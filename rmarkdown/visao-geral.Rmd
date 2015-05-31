@@ -79,17 +79,20 @@ ggplot(data = mca1_obs_df, aes(x = Dim.1, y = Dim.2, label = nome)) +
 ```
 
 ```{r}
-mca1_obs_df = data.frame(mca1_obs_df, 
+mca1_obs_df2 = data.frame(mca1_obs_df, 
                          destaque = (mca1_obs_df$nome %in% c("Tiririca (pr)", 
                                                              "Pr. Marco Feliciano (psc)", 
                                                              "Jair Bolsonaro (pp)", 
                                                              "Luiz Couto (pt)", 
                                                              "Jean Wyllys (psol)")))
 
-ggplot(data = mca1_obs_df, aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque)) +
+mca1_obs_df2$t_size <- ifelse(mca1_obs_df2$destaque, 5, 4.9)
+
+ggplot(data = mca1_obs_df2, aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque)) +
   geom_hline(yintercept = 0, colour = "gray70") +
   geom_vline(xintercept = 0, colour = "gray70") +
-  geom_text(alpha = 0.7, size =3) +
+  geom_text(alpha = 0.7, size = 3) +
+  scale_colour_manual(values=c("grey70", "darkred")) + 
   ggtitle("MCA") +
   theme_bw()
 
