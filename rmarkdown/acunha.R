@@ -49,3 +49,14 @@ ggplot(to_plot, aes(cat_partido, prop, colour = cat_partido) ) +
   geom_point( position = position_jitter(), alpha = 0.5, size = 4 ) +
   coord_flip() + 
   theme_bw()
+
+# top do bem
+pdf(file="bbb.pdf", height = 30, width = 10)
+tops = filter(ac, prop < 0.5 , prop != 'NA')
+
+ggplot(tops, aes(reorder(nome,prop), prop)) + 
+  geom_point(alpha = 0.5, size = 4) +
+  theme_bw() + 
+  coord_flip()
+dev.off()
+
