@@ -1,0 +1,97 @@
+---
+title: "Visão dos votos"
+author: "Nazareno Andrade e João Arthur B. Monteiro"
+date: "30 de maio de 2015"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(reshape2)
+require(cluster)
+require(ade4)
+```
+
+```{r}
+votos <- read.csv("votacoes//votacao.txt", strip.white=TRUE)
+
+votos <- filter(votos, voto %in% c("sim", "não")) 
+votos$voto <- droplevels(votos$voto)
+votos$num_pro <- factor(votos$num_pro)
+votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
+
+votos$nome <- paste0(votos$nome, " (", votos$partido, ")")
+
+ativos <- votos %>% 
+  group_by(nome) %>% 
+  summarise(c = n()) %>% 
+  filter(c >= 31) %>% 
+  select(nome)
+
+votos <- filter(votos, nome %in% ativos$nome) 
+```
+
+```{r}
+votacao <- votos %>% 
+  select(nome, num_pro, voto)
+
+votacao.cast <- dcast(votacao, nome ~ num_pro)
+votacao.cast <- as.data.frame(apply(votacao.cast, 2, as.factor))
+
+# "Tiririca", "Luiz Couto", "Jandira Fegalli", "Marco Feliciano", "Romário", "Celso Russomano", "Lindemberg Farias", "Manoela D'Ávila", "Chico Alencar"
+
+# TODO para agrupar:
+# dispensar a coluna de nome 
+#rownames(votacao.cast) <- votacao.cast$nome
+#votacao.cast <- select(votacao.cast, -1)
+#diss <- daisy(votacao.cast[,2:ncol(votacao.cast)], metric = "gower") # stand = FALSE?
+```
+
+```{r}
+require(FactoMineR)
+
+# TODO DEIXAR "Average"?
+mca1 = MCA(votacao.cast, 
+           ncp = 2,
+           graph = FALSE, 
+           na.method = "Average")
+
+cats <- apply(votacao.cast, 2, function(x) nlevels(as.factor(x)))
+
+mca1_vars_df = data.frame(mca1$var$coord, Variable = rep(names(cats), cats))
+
+# data frame with observation coordinates
+mca1_obs_df = data.frame(mca1$ind$coord, nome = votacao.cast$nome)
+
+# plot of variable categories
+ggplot(data = mca1_obs_df, aes(x = Dim.1, y = Dim.2, label = nome)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  #geom_point(colour = "gray50", alpha = 0.7) +
+  geom_text(colour = "gray50", alpha = 0.7, size =3) +
+  #geom_density2d(colour = "gray75") +
+  ggtitle("MCA") +
+  scale_colour_discrete(name = "Variable") + 
+  theme_bw()
+
+
+```
+
+```{r}
+mca1_obs_df = data.frame(mca1_obs_df, 
+                         destaque = (mca1_obs_df$nome %in% c("Tiririca (pr)", 
+                                                             "Pr. Marco Feliciano (psc)", 
+                                                             "Jair Bolsonaro (pp)", 
+                                                             "Luiz Couto (pt)", 
+                                                             "Jean Wyllys (psol)")))
+
+ggplot(data = mca1_obs_df, aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(alpha = 0.7, size =3) +
+  ggtitle("MCA") +
+  theme_bw()
+
+```
+
