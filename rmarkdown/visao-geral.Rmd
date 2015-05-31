@@ -11,22 +11,26 @@ library(dplyr)
 library(reshape2)
 require(cluster)
 require(ade4)
+require(scales)
+
 source("R/camara-lib.R")
 ```
 
 ```{r}
 votos <- ler_votos_de_ativos("votacoes//votacao.csv")
+# separar sessões de uma mesma proposição
+votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 ```
+
 
 ```{r}
 votacao <- votos %>% 
-  select(nome, num_pro, voto)
-
-votacao.cast <- dcast(votacao, nome ~ num_pro)
+  select(nome, partido, uf, num_pro, voto)
+votacao.cast <- dcast(votacao, nome + partido + uf ~ num_pro)
 votacao.cast <- as.data.frame(apply(votacao.cast, 2, as.factor))
+```
 
-# "Tiririca", "Luiz Couto", "Jandira Fegalli", "Marco Feliciano", "Romário", "Celso Russomano", "Lindemberg Farias", "Manoela D'Ávila", "Chico Alencar"
-
+```{r}
 # TODO para agrupar:
 # dispensar a coluna de nome 
 #rownames(votacao.cast) <- votacao.cast$nome
@@ -40,16 +44,37 @@ require(FactoMineR)
 # TODO DEIXAR "Average"?
 mca1 = MCA(votacao.cast, 
            ncp = 2,
-           graph = FALSE, 
+           graph = FALSE,
+           quali.sup = c(1:3),
            na.method = "Average")
 
-cats <- apply(votacao.cast, 2, function(x) nlevels(as.factor(x)))
-
-mca1_vars_df = data.frame(mca1$var$coord, Variable = rep(names(cats), cats))
-
 # data frame with observation coordinates
-mca1_obs_df = data.frame(mca1$ind$coord, nome = votacao.cast$nome)
+mca1_obs_df = data.frame(mca1$ind$coord, 
+                         nome = votacao.cast$nome,
+                         partido = votacao.cast$partido, 
+                         uf = votacao.cast$uf)
 
+# Alguns notáveis: 
+# "Tiririca", "Luiz Couto", "Jandira Fegalli", "Marco Feliciano", "Romário", "Celso Russomano", "Lindemberg Farias", "Manoela D'Ávila", "Chico Alencar"
+mca1_obs_df$destaque <- mca1_obs_df$nome %in% c("Tiririca", 
+                                                "Pr. Marco Feliciano", 
+                                                "Jair Bolsonaro", 
+                                                "Luiz Couto", 
+                                                "Jean Wyllys", 
+                                                "Veneziano Vital do Rêgo")
+
+# Os da PB
+mca1_obs_df$destaque_pb <- ifelse(mca1_obs_df$uf == "PB", "PB", "Demais estados")
+
+# Partidos icônicos
+mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in% c("pmdb", "psdb", "pt", "psol"), 
+                                      as.character(mca1_obs_df$partido), 
+                                      "outros"))
+```
+
+Visão geral
+
+```{r}
 # plot of variable categories
 ggplot(data = mca1_obs_df, aes(x = Dim.1, y = Dim.2, label = nome)) +
   geom_hline(yintercept = 0, colour = "gray70") +
@@ -57,63 +82,73 @@ ggplot(data = mca1_obs_df, aes(x = Dim.1, y = Dim.2, label = nome)) +
   #geom_point(colour = "gray50", alpha = 0.7) +
   geom_text(colour = "gray50", alpha = 0.7, size =3) +
   #geom_density2d(colour = "gray75") +
-  ggtitle("MCA") +
-  scale_colour_discrete(name = "Variable") + 
-  theme_bw()
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+```
 
+Alguns ilustres
+
+```{r}
+ggplot(data = mca1_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque, size = destaque)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text() +
+  scale_size_manual(values = c(3.2, 4)) + 
+  scale_colour_manual(values = c(alpha("grey70", .6), 
+                                 alpha("black", 1))) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(legend.position = "none", 
+        axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
 
 ```
 
+Partidos
+
 ```{r}
-mca1_obs_df2 = data.frame(mca1_obs_df, 
-                         destaque = (mca1_obs_df$nome %in% c("Tiririca (pr)", 
-                                                             "Pr. Marco Feliciano (psc)", 
-                                                             "Jair Bolsonaro (pp)", 
-                                                             "Luiz Couto (pt)", 
-                                                             "Jean Wyllys (psol)", 
-                                                             "Veneziano Vital do Rêgo (pmdb)")))
-
-mca1_obs_df2$t_size <- ifelse(mca1_obs_df2$destaque, 5, 4.9)
-
-ggplot(data = mca1_obs_df2, aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque)) +
+ggplot(data = mca1_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_partido)) +
   geom_hline(yintercept = 0, colour = "gray70") +
   geom_vline(xintercept = 0, colour = "gray70") +
-  geom_text(alpha = 0.7, size = 3) +
-  scale_colour_manual(values=c("grey70", "darkred")) + 
-  ggtitle("MCA") +
-  theme_bw()
-
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .6), 
+                                 alpha("darkred", 1), 
+                                 alpha("#0066CC", 1),
+                                 alpha("#E69F00", 1),
+                                 alpha("#FF3300", 1)
+                                 ), 
+                      guide = guide_legend(title = "partido", 
+                                           override.aes = list(alpha = 1, size = 4))) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
 ```
 
+O pessoal da PB 
 
 ```{r}
-mca1_obs_df3 = data.frame(mca1_obs_df, 
-                         partido = "outros")
-
-mca1_obs_df3$partido <- ifelse(mca1_obs_df3$nome %in% grep("pmdb", 
-                                                           votacao.cast$nome, 
-                                                           value = T), 
-                               "pmdb",
-                               mca1_obs_df3$partido)
-
-mca1_obs_df3$partido <- ifelse(mca1_obs_df3$nome %in% grep("pt", 
-                                                           votacao.cast$nome, 
-                                                           value = T), 
-                               "pt",
-                               mca1_obs_df3$partido)
-
-mca1_obs_df3$partido <- ifelse(mca1_obs_df3$nome %in% grep("psdb", 
-                                                           votacao.cast$nome, 
-                                                           value = T),
-                               "psdb",
-                               mca1_obs_df3$partido)
-
-ggplot(data = mca1_obs_df3, aes(x = Dim.1, y = Dim.2, label = nome, colour = partido)) +
+ggplot(data = mca1_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque_pb, size = destaque_pb == "PB")) +
   geom_hline(yintercept = 0, colour = "gray70") +
   geom_vline(xintercept = 0, colour = "gray70") +
-  geom_text(alpha = 0.7, size = 3) +
-  #scale_colour_manual(values=c("grey70", "darkred")) + 
-  ggtitle("MCA") +
-  theme_bw()
+  geom_text() +
+  scale_colour_manual(values = c(alpha("grey70", .5), 
+                                 alpha("black", 1))) + 
+  scale_size_manual(values = c(3.2, 4)) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(legend.position = "none", 
+        axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
 
 ```

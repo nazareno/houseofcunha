@@ -6,8 +6,7 @@ ler_votos_de_ativos <- function(filepath){
   votos <- filter(votos, voto %in% c("sim", "não")) 
   votos$voto <- droplevels(votos$voto)
   votos$num_pro <- factor(votos$num_pro)
-  votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
-  votos$nome <- paste0(votos$nome, " (", votos$partido, ")")
+  #votos$nome <- paste0(votos$nome, " (", votos$partido, ")")
   
   # apenas quem votou em muitas proposições 
   # (espero que seja é deputado em 2015)
