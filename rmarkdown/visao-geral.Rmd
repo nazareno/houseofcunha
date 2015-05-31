@@ -76,7 +76,7 @@ Visão geral
 
 ```{r}
 # plot of variable categories
-ggplot(data = mca1_obs_df, aes(x = Dim.1, y = Dim.2, label = nome)) +
+p <- ggplot(data = mca1_obs_df, aes(x = Dim.1, y = Dim.2, label = nome)) +
   geom_hline(yintercept = 0, colour = "gray70") +
   geom_vline(xintercept = 0, colour = "gray70") +
   #geom_point(colour = "gray50", alpha = 0.7) +
@@ -87,6 +87,11 @@ ggplot(data = mca1_obs_df, aes(x = Dim.1, y = Dim.2, label = nome)) +
   theme(axis.ticks = element_blank(), 
         axis.text = element_blank(), 
         axis.line = element_blank())
+p
+png("visao-geral.png", 
+    width = 800, height = 600)
+p
+dev.off()
 ```
 
 Alguns ilustres
