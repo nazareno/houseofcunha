@@ -1,7 +1,7 @@
 library(ggplot2)
 library(dplyr)
 
-votos <- read.csv("../votacoes//votacao.csv", strip.white=TRUE)
+votos <- read.csv("votacoes//votacao.csv", strip.white=TRUE)
 
 votos <- filter(votos, voto %in% c("sim", "não")) 
 votos$voto <- droplevels(votos$voto)
@@ -31,12 +31,16 @@ ac = acunhamento %>%
 
 ### PLOTS ###
 
-pdf(file="aaa.pdf", height = 30, width = 10)
-tops = filter(ac, prop > 0.85 , prop != 'NA')
+png(file="tops-cunhas.png", height = 850, width = 650)
+tops = filter(ac, prop >= 0.9 , prop != 'NA')
 
-ggplot(tops, aes(reorder(nome,prop), prop)) + 
-  geom_point(alpha = 0.5, size = 4) +
+ggplot(tops, aes(reorder(nome,prop), prop*100)) + 
+  geom_point(alpha = 0.9, size = 4, colour = "darkred") +
   theme_bw() + 
+  theme(axis.title = element_text(color="#666666", face="bold", size=16), 
+        axis.text = element_text(size=14), 
+        axis.line = element_blank()) + 
+  xlab("") + ylab("Concordância com Cunha (%)") + 
   coord_flip()
 dev.off()
   
@@ -51,12 +55,16 @@ ggplot(to_plot, aes(cat_partido, prop, colour = cat_partido) ) +
   theme_bw()
 
 # top do bem
-pdf(file="bbb.pdf", height = 30, width = 10)
-tops = filter(ac, prop < 0.5 , prop != 'NA')
+png(file="tops-acunhas.png", height = 850, width = 650)
+tops = filter(ac, prop < 0.4 , prop != 'NA')
 
-ggplot(tops, aes(reorder(nome,prop), prop)) + 
-  geom_point(alpha = 0.5, size = 4) +
+ggplot(tops, aes(reorder(nome,prop), prop*100)) + 
+  geom_point(alpha = 0.9, size = 4, colour = "darkgreen") +
   theme_bw() + 
+  theme(axis.title = element_text(color="#666666", face="bold", size=16), 
+        axis.text = element_text(size=14), 
+        axis.line = element_blank()) + 
+  xlab("") + ylab("Concordância com Cunha (%)") + 
   coord_flip()
 dev.off()
 
