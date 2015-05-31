@@ -4,7 +4,7 @@ from xml.dom import minidom
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-print 'tipo,num_pro,ano,id_votacao,resumo,data,hora,objetivo,sessao,nome,id_dep,partido,uf,voto,orientacao' 
+print 'tipo,num_pro,ano,id_votacao,resumo,data,hora,objetivo,sessao,nome,id_dep,partido,uf,voto,orientacao_partido,orientacao_gov,cunha'
 xmldoc = minidom.parse(sys.argv[1])
 
 
@@ -40,14 +40,12 @@ for votacao in votacoes:
     
     for b in bancada:
     
-        value = b.attributes['orientacao'].value
+        content = b.attributes.get('orientacao','NA')
         
-        if not value:
-            o = 'NA'
-        else:
-            o = b.attributes['orientacao'].value.strip().lower()
+        if content != 'NA':
+            content = content.value.strip().lower()
 
-        map_bancada[b.attributes['Sigla'].value.lower()] = o
+        map_bancada[b.attributes['Sigla'].value.lower()] = content
     
     reg_votos = votacao.getElementsByTagName('votos')[0]
     
@@ -65,18 +63,20 @@ for votacao in votacoes:
         to_print_dep.append(uf)
         to_print_dep.append(voto)
 
-        orientacao = map_bancada.get(partido)
-        if not orientacao:
+        orientacao = map_bancada.get(partido, 'NA')
+        if orientacao == 'NA':
             for key in map_bancada.keys():
                 if len(key) > 8:
                     if partido in key:
                         orientacao = map_bancada.get(key)
-        if not orientacao:
-            to_print_dep.append('NA')
-        else:
-            to_print_dep.append(orientacao)
+        
+        to_print_dep.append(orientacao)
+        to_print_dep.append(map_bancada.get('gov.','NA'))
 
-        if len(to_print + to_print_dep) == 15:
+        for key in map_bancada:
+            if 'pmdb' in key:
+                to_print_dep.append(map_bancada.get(key,'NA'))
+                break
+        
+        if len(to_print + to_print_dep) == 17:
             print ','.join(to_print + to_print_dep)
-        else:
-            print '#########'
