@@ -14,6 +14,11 @@ require(ade4)
 require(scales)
 
 source("R/camara-lib.R")
+
+# para instalar o rCharts:
+# require(devtools)
+# install_github('rCharts', 'ramnathv')
+require("rCharts")
 ```
 
 ```{r}
@@ -178,3 +183,25 @@ p
 dev.off()
 
 ```
+
+# Interativo
+
+```{r}
+options(RCHART_WIDTH = 800, RCHART_HEIGHT = 500)
+n1 <- nPlot(Dim.2 ~ Dim.1, 
+            group = 'destaque_partido', 
+            data = mca1_obs_df, 
+            type = "scatterChart")
+n1$chart(color = c("#BDBDBD", "#FF3300", "darkred", "#0066CC", "#E69F00"))
+n1$chart(tooltipContent = "#! function(key, x, y, e){ 
+  return e.point.nome + ', ' + (e.point.partido.toUpperCase());
+} !#")
+n1$chart(tooltipXContent = NA, tooltipYContent = NA)
+n1$chart(sizeRange = c(50,50))
+n1$chart(showXAxis = FALSE, showYAxis = FALSE)
+n1
+
+n1$print("chart3", include_assets = TRUE, cdn=TRUE)
+n1$publish('House of Cunha - alguns partidos', host = 'gist')
+```
+
