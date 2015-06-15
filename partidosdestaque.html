@@ -22,21 +22,21 @@
   </head>
   <body >
     
-    <div id = 'chart82759cc5821' class = 'rChart nvd3'></div>    
+    <div id = 'charta4815892c9f' class = 'rChart nvd3'></div>    
     <script type='text/javascript'>
  $(document).ready(function(){
-      drawchart82759cc5821()
+      drawcharta4815892c9f()
     });
-    function drawchart82759cc5821(){  
+    function drawcharta4815892c9f(){  
       var opts = {
- "dom": "chart82759cc5821",
+ "dom": "charta4815892c9f",
 "width":    800,
 "height":    500,
 "x": "Dim.1",
 "y": "Dim.2",
-"group": "partido",
+"group": "destaque_partido",
 "type": "scatterChart",
-"id": "chart82759cc5821" 
+"id": "charta4815892c9f" 
 },
         data = [
  {
@@ -5190,6 +5190,7 @@
           
          
         chart
+  .color([ "#BDBDBD", "#FF3300", "darkred", "#0066CC", "#E69F00" ])
   .tooltipContent( function(key, x, y, e){ 
   return e.point.nome + ', ' + (e.point.partido.toUpperCase());
 } )
