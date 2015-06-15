@@ -49,24 +49,29 @@
         <h1>
 <a id="contexto" class="anchor" href="#contexto" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contexto</h1>
 
-<p>Analisamos dados das votações na <a href="http://nazareno.github.io/houseofcunha/images/cunha.png">Câmara dos Deputados</a>. Foram analisados mais de 50.000 votos para 44 diferentes proposições votadas no ano de 2015.</p>
+<p>Todos temos acompanhado uma série de matérias polêmicas da <a href="http://nazareno.github.io/houseofcunha/images/cunha.png">Câmara dos Deputados</a> na mídia. 
+Por um lado, algo que marcou a Câmara em 2015 é a sua presidência. Por outro lado, embora as posições de Eduardo Cunha sejam frequentemente criticáveis, ele não aprova as matérias sozinho. 
+Assim, para entender as posições dos demais deputados, baixamos e analisamos o histórico de votações de todos os deputados nas proposições votadas em 2015.  
+Foram analisados mais de 50.000 votos para 44 diferentes proposições.</p>
 
-<p>O objetivo principal foi agrupar os deputados de acordo com o nível de concordância nas votações. Em particular, ilustramos também como eles estão relacionados aos votos de Eduardo Cunha. É importante destacar que assumimos que os votos de Cunha seguem a orientação do PMDB, uma vez que ele é um dos líderes do partido.</p>
+<p>De posse desses dados, utilizamos métodos estatísticos para comparar as posições dos deputados e partidos, e para mostrar quem tipicamente concorda com Eduardo Cunha. Como sendo presidente da casa, Cunha não vota, consideramos que sua posição é a do PMDB.</p>
 
 <h1>
-<a id="análise" class="anchor" href="#an%C3%A1lise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Análise</h1>
+<a id="análise" class="anchor" href="#an%C3%A1lise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Posições</h1>
 
-<p>O gráfico abaixo apresenta todos os deputados. No geral, é possível perceber que há 4 grandes grupos.</p>
+<p>Nossa primeira análise distribui os deputados no espaço de acordo com a semelhança de suas posições nas votações. Deputados que votam semelhante ficam juntos. (Caso você goste de estatística, nós utilizamos Multiple Correspondence Analysis - MCA, uma espécie de PCA para dados categóricos).</p>
+
+<p>É possível identificar três grandes grupos com atuação claramente distinta, representados por três nuvens de nomes. Mais abaixo os investigamos</p>
 
 <p><a href="http://nazareno.github.io/houseofcunha/images/visao-geral.png">
 	<img src="http://nazareno.github.io/houseofcunha/images/visao-geral.png" alt=""></a></p>
 
-<p>No gráfico abaixo, destacamos alguns deputados icônicos.</p>
+<p>Antes para situar as posições, destacamos alguns deputados icônicos.</p>
 
 <p><a href="http://nazareno.github.io/houseofcunha/images/icones.png">
 	<img src="http://nazareno.github.io/houseofcunha/images/icones.png" alt=""></a></p>
 
-<p>Agora, colorimos os partidos mais populares (PT, PSDB, PMDB e PSOL). Note que é possível ver que há unidade dentro de um partido, embora haja alguns deputados que nem sempre votam em concordância com o partido.</p>
+<p>Agora, colorimos quatro partidos que definem os três grandes grupos mais um conjunto de atuação bastante diferente. Os 4 partidos são PT, PSDB, PMDB e PSOL. É interessante reparar que o PMDB fica entre PT e PSDB, mais próximo do PT, porém não tanto quanto outros partidos.</p>
 
 <p><a href="http://nazareno.github.io/houseofcunha/images/partidos.png">
 	<img src="http://nazareno.github.io/houseofcunha/images/partidos.png" alt=""></a></p>
