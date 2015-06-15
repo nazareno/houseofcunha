@@ -201,7 +201,8 @@ n1$chart(sizeRange = c(50,50))
 n1$chart(showXAxis = FALSE, showYAxis = FALSE)
 n1
 
-n1$save("partidosdestaque.html", include_assets = TRUE, cdn=TRUE)
+# n1$save("partidosdestaque.html", include_assets = TRUE, cdn=TRUE)
+n1$save("partidosdestaque.html", cdn=TRUE)
 n1$publish('House of Cunha - alguns partidos', host = 'gist')
 ```
 
