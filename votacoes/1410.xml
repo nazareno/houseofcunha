@@ -23,10 +23,9 @@
         <Deputado Nome="Wolney Queiroz" ideCadastro="74439" Partido="PDT       " UF="PE" Voto="Não            " />
         <Deputado Nome="Roberto Góes" ideCadastro="178995" Partido="PDT       " UF="AP" Voto="Obstrução      " />
         <Deputado Nome="Esperidião Amin" ideCadastro="160649" Partido="PP        " UF="SC" Voto="Sim            " />
-        <Deputado Nome="Fabio Garcia" ideCadastro="178905" Partido="PSB       " UF="MT" Voto="Obstrução      " />
-        <Deputado Nome="Jaime Martins" ideCadastro="74665" Partido="PSD       " UF="MG" Voto="Não            " />
-        <Deputado Nome="Alberto Fraga" ideCadastro="73579" Partido="DEM       " UF="DF" Voto="Sim            " />
-        <Deputado Nome="José Mentor" ideCadastro="74275" Partido="PT        " UF="SP" Voto="Obstrução      " />
+        <Deputado Nome="Delegado Edson Moreira" ideCadastro="178893" Partido="PTN       " UF="MG" Voto="Não            " />
+        <Deputado Nome="Raquel Muniz" ideCadastro="178998" Partido="PSC       " UF="MG" Voto="Não            " />
+        <Deputado Nome="Jose Stédile" ideCadastro="160607" Partido="PSB       " UF="RS" Voto="Obstrução      " />
         <Deputado Nome="Flavinho" ideCadastro="178978" Partido="PSB       " UF="SP" Voto="Não            " />
         <Deputado Nome="Vicentinho" ideCadastro="74283" Partido="PT        " UF="SP" Voto="Não            " />
         <Deputado Nome="Edmar Arruda" ideCadastro="160578" Partido="PSC       " UF="PR" Voto="Não            " />
@@ -39,6 +38,8 @@
         <Deputado Nome="Cabuçu Borges" ideCadastro="105112" Partido="PMDB      " UF="AP" Voto="Obstrução      " />
         <Deputado Nome="Ronaldo Lessa" ideCadastro="178845" Partido="PDT       " UF="AL" Voto="Não            " />
         <Deputado Nome="Marcelo Belinati" ideCadastro="178932" Partido="PP        " UF="PR" Voto="Não            " />
+        <Deputado Nome="Carlos Eduardo Cadoca" ideCadastro="74474" Partido="PCdoB     " UF="PE" Voto="Não            " />
+        <Deputado Nome="Augusto Coutinho" ideCadastro="160665" Partido="Solidaried" UF="PE" Voto="Obstrução      " />
         <Deputado Nome="Carlos Marun" ideCadastro="178900" Partido="PMDB      " UF="MS" Voto="Não            " />
         <Deputado Nome="Roberto Balestra" ideCadastro="73674" Partido="PP        " UF="GO" Voto="Sim            " />
         <Deputado Nome="Edmilson Rodrigues" ideCadastro="134812" Partido="PSOL      " UF="PA" Voto="Não            " />
@@ -51,6 +52,19 @@
         <Deputado Nome="Hildo Rocha" ideCadastro="178884" Partido="PMDB      " UF="MA" Voto="Obstrução      " />
         <Deputado Nome="Marcelo Castro" ideCadastro="74460" Partido="PMDB      " UF="PI" Voto="Não            " />
         <Deputado Nome="Ivan Valente" ideCadastro="73531" Partido="PSOL      " UF="SP" Voto="Não            " />
+        <Deputado Nome="Pedro Vilela" ideCadastro="178844" Partido="PSDB      " UF="AL" Voto="Obstrução      " />
+        <Deputado Nome="Arolde de Oliveira" ideCadastro="74833" Partido="PSD       " UF="RJ" Voto="Obstrução      " />
+        <Deputado Nome="Pastor Eurico" ideCadastro="160642" Partido="PSB       " UF="PE" Voto="Sim            " />
+        <Deputado Nome="Weverton Rocha" ideCadastro="167493" Partido="PDT       " UF="MA" Voto="Obstrução      " />
+        <Deputado Nome="Tadeu Alencar" ideCadastro="178922" Partido="PSB       " UF="PE" Voto="Não            " />
+        <Deputado Nome="Marcos Rotta" ideCadastro="178850" Partido="PMDB      " UF="AM" Voto="Obstrução      " />
+        <Deputado Nome="Augusto Carvalho" ideCadastro="73655" Partido="Solidaried" UF="DF" Voto="Sim            " />
+        <Deputado Nome="Arthur Virgílio Bisneto" ideCadastro="178847" Partido="PSDB      " UF="AM" Voto="Obstrução      " />
+        <Deputado Nome="Fabio Garcia" ideCadastro="178905" Partido="PSB       " UF="MT" Voto="Obstrução      " />
+        <Deputado Nome="Jaime Martins" ideCadastro="74665" Partido="PSD       " UF="MG" Voto="Não            " />
+        <Deputado Nome="Alberto Fraga" ideCadastro="73579" Partido="DEM       " UF="DF" Voto="Sim            " />
+        <Deputado Nome="José Mentor" ideCadastro="74275" Partido="PT        " UF="SP" Voto="Obstrução      " />
+        <Deputado Nome="Wadson Ribeiro" ideCadastro="137853" Partido="PCdoB     " UF="MG" Voto="Não            " />
         <Deputado Nome="Professora Dorinha Seabra Rezende" ideCadastro="160639" Partido="DEM       " UF="TO" Voto="Obstrução      " />
         <Deputado Nome="Miro Teixeira" ideCadastro="74862" Partido="PROS      " UF="RJ" Voto="Não            " />
         <Deputado Nome="Pedro Chaves" ideCadastro="74812" Partido="PMDB      " UF="GO" Voto="Não            " />
@@ -67,20 +81,6 @@
         <Deputado Nome="André Fufuca" ideCadastro="178882" Partido="PEN       " UF="MA" Voto="Não            " />
         <Deputado Nome="Renata Abreu" ideCadastro="178989" Partido="PTN       " UF="SP" Voto="Sim            " />
         <Deputado Nome="Marx Beltrão" ideCadastro="178843" Partido="PMDB      " UF="AL" Voto="Obstrução      " />
-        <Deputado Nome="Pedro Vilela" ideCadastro="178844" Partido="PSDB      " UF="AL" Voto="Obstrução      " />
-        <Deputado Nome="Arolde de Oliveira" ideCadastro="74833" Partido="PSD       " UF="RJ" Voto="Obstrução      " />
-        <Deputado Nome="Wadson Ribeiro" ideCadastro="137853" Partido="PCdoB     " UF="MG" Voto="Não            " />
-        <Deputado Nome="Augusto Coutinho" ideCadastro="160665" Partido="Solidaried" UF="PE" Voto="Obstrução      " />
-        <Deputado Nome="Carlos Eduardo Cadoca" ideCadastro="74474" Partido="PCdoB     " UF="PE" Voto="Não            " />
-        <Deputado Nome="Delegado Edson Moreira" ideCadastro="178893" Partido="PTN       " UF="MG" Voto="Não            " />
-        <Deputado Nome="Raquel Muniz" ideCadastro="178998" Partido="PSC       " UF="MG" Voto="Não            " />
-        <Deputado Nome="Jose Stédile" ideCadastro="160607" Partido="PSB       " UF="RS" Voto="Obstrução      " />
-        <Deputado Nome="Pastor Eurico" ideCadastro="160642" Partido="PSB       " UF="PE" Voto="Sim            " />
-        <Deputado Nome="Weverton Rocha" ideCadastro="167493" Partido="PDT       " UF="MA" Voto="Obstrução      " />
-        <Deputado Nome="Tadeu Alencar" ideCadastro="178922" Partido="PSB       " UF="PE" Voto="Não            " />
-        <Deputado Nome="Marcos Rotta" ideCadastro="178850" Partido="PMDB      " UF="AM" Voto="Obstrução      " />
-        <Deputado Nome="Augusto Carvalho" ideCadastro="73655" Partido="Solidaried" UF="DF" Voto="Sim            " />
-        <Deputado Nome="Arthur Virgílio Bisneto" ideCadastro="178847" Partido="PSDB      " UF="AM" Voto="Obstrução      " />
       </votos>
     </Votacao>
   </Votacoes>
