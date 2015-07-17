@@ -1,0 +1,86 @@
+[
+    {
+        "estado": "TODOS"
+    },
+    {
+        "estado": "AC"
+    },
+    {
+        "estado": "AL"
+    },
+    {
+        "estado": "AM"
+    },
+    {
+        "estado": "AP"
+    },
+    {
+        "estado": "BA"
+    },
+    {
+        "estado": "CE"
+    },
+    {
+        "estado": "DF"
+    },
+    {
+        "estado": "ES"
+    },
+    {
+        "estado": "GO"
+    },
+    {
+        "estado": "MA"
+    },
+    {
+        "estado": "MG"
+    },
+    {
+        "estado": "MS"
+    },
+    {
+        "estado": "MT"
+    },
+    {
+        "estado": "PA"
+    },
+    {
+        "estado": "PB"
+    },
+    {
+        "estado": "PE"
+    },
+    {
+        "estado": "PI"
+    },
+    {
+        "estado": "PR"
+    },
+    {
+        "estado": "RJ"
+    },
+    {
+        "estado": "RN"
+    },
+    {
+        "estado": "RO"
+    },
+    {
+        "estado": "RR"
+    },
+    {
+        "estado": "RS"
+    },
+    {
+        "estado": "SC"
+    },
+    {
+        "estado": "SE"
+    },
+    {
+        "estado": "SP"
+    },
+    {
+        "estado": "TO"
+    }
+]
