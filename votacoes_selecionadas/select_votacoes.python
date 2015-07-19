@@ -1,0 +1,23 @@
+import csv
+with open('Selecionadas.csv', 'rb') as selecionadas:
+    votacoes = open('votacoes2.csv', 'rb')
+    votacoesReader = csv.reader(votacoes, delimiter=',')
+    listaVotaca = []
+    listaSele = []
+
+    paraSalvar = open("votacoes_selecionadas.csv","w")
+    selecionadasReader = csv.reader(selecionadas, delimiter=',')
+    for votacao in votacoesReader:
+        listaVotaca.append(votacao)
+    for selecionada in selecionadasReader:
+        listaSele.append(selecionada)
+
+
+    for selecionada in listaSele:
+        encontrou = False
+        for votacao in listaVotaca:
+            if (selecionada[0] in votacao[4]):
+                encontrou = True
+                paraSalvar.write(', '.join(votacao) + "\n")
+        if (not encontrou):
+            print selecionada
