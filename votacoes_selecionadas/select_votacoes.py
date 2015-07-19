@@ -1,3 +1,4 @@
+# coding: utf-8
 import csv
 
 selecionadas_file = open('votacoes_selecionadas_resumo_nome.csv', 'rb')
@@ -8,7 +9,7 @@ listaVotaca = []
 listaSele = []
 
 paraSalvar_file = open("votacoes_selecionadas.csv","w")
-header = "tipo,num_pro,ano,id_votacao,resumo,data,hora,objetivo,sessao,nome,id_dep,partido,uf,voto,orientacao_partido,orientacao_gov,cunha"
+header = "tipo,num_pro,ano,id_votacao,resumo,data,hora,objetivo,sessao,nome,id_dep,partido,uf,voto,orientacao_partido,orientacao_gov,cunha,nome_votacao"
 paraSalvar_file.write(header+"\n")
 
 for votacao in votacoesReader:
@@ -21,8 +22,9 @@ for selecionada in listaSele:
     for votacao in listaVotaca:
         if (selecionada[0] in votacao[4]):
             encontrou = True
-            paraSalvar_file.write(', '.join(votacao) + "\n")
-    if (not encontrou):
+            votacao_com_nome = votacao + [selecionada[-1]]
+            paraSalvar_file.write(','.join(votacao_com_nome) + "\n")
+    if not encontrou:
         print "DIDN'T FIND " + selecionada
 
 
