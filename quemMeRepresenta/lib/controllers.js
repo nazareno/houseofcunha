@@ -7,6 +7,7 @@ var houseOfCunhaApp = angular.module('houseOfCunhaApp', []);
 houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.estados = [];
     $scope.deputados = [];
+    $scope.temas = [];
 
     $scope.estadoSelecionado = "TODOS";
 
@@ -17,11 +18,14 @@ houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, 
 
     });
 
-    $http.get('dados/deputados.json').success(function(data) {
+    $http.get('dados/deputados_votos.json').success(function(data) {
 
         $scope.deputados = data;
-        var a = 1;
+    });
 
+    $http.get('dados/temas.json').success(function(data) {
+
+        $scope.temas = data;
     });
 
 
