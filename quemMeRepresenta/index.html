@@ -107,7 +107,7 @@
                                <!--data-on-text="Sim" data-off-text="Não"-->
                                <!--id="1" />-->
 
-                            <div ng-repeat="tema in temas">
+                            <div ng-repeat="tema in temas" >
                                 <!--<input type="checkbox" checked data-toggle="switch"-->
                                        <!--data-on-color="success" data-off-color="danger"-->
                                        <!--data-on-text="Sim" data-off-text="Não"-->
@@ -116,8 +116,12 @@
                             <!--<li >-->
 
                                 {{tema.Tema}}
+                                <div class="input-group">
 
-
+                                    <label class="radio-inline"><input type="radio" name="optradio" ng-click="click(tema,'s')">Sim</label>
+                                    <label class="radio-inline"><input type="radio" name="optradio" ng-click="click(tema,'n')">Não</label>
+                                    <label class="radio-inline"><input type="radio" name="optradio" ng-click="click(tema,'x')">Não sei</label>
+                                </div>
                             <!--</li>-->
                             </div>
                         <!--</ul>-->

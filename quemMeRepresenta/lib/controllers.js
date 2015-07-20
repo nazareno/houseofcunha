@@ -26,9 +26,21 @@ houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, 
     $http.get('dados/temas.json').success(function(data) {
 
         $scope.temas = data;
+        _.map($scope.temas,function (tema){
+            _.extend(tema,{"value":-1})
+        })
+        var a = 2;
     });
 
-
+    $scope.click =  function(data,value) {
+        if(value == "sim"){
+            data.value = 1;
+        }else if (value == "nao"){
+            data.value = 0;
+        }else{
+            data.value = -1;
+        }
+    };
 
 }]);
 
