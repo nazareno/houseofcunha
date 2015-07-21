@@ -11,8 +11,10 @@
 
     <title>Quem me representa?</title>
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/flat/bootstrap.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+    <script src="lib/controllers.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
@@ -22,26 +24,16 @@
     <!--<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">-->
     <!--<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">-->
 
-
-    <!-- Loading Flat UI -->
-    <link href="css/flat/flat-ui.css" rel="stylesheet">
-
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
-        <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
-    <!--<![endif]&ndash;&gt;-->
-    <script src="js/angular.min.js"></script>
-    <script src="js/ui-bootstrap-tpls-0.13.0.min.js"></script>
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-
-
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
-<body id="page-top"  ng-controller="VotacoesCtrl">
+<body ng-controller="VotacoesCtrl" id="page-top" class="index">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -54,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top">Quem me representa?</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -64,7 +56,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="#page-top">Deputados</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#about">About</a>
@@ -86,8 +78,8 @@
                         <span class="name">Deputados</span>
                     </div>
                     <ul>
-                        <li ng-repeat="deputado in deputados">
-                            {{deputado.nome}} - {{deputado.partido}}/{{deputado.uf}}
+                        <li ng-repeat="deputado in deputados | orderBy:['-score','partido','nome']">
+                            {{deputado.nome}} - {{deputado.partido}}/{{deputado.uf}}    -   {{deputado.score * 100}}%
                         </li>
                     </ul>
 
@@ -101,58 +93,21 @@
 
                     <div>
 
-                        <!--<ul>-->
-
-                            <!--<input type="checkbox" checked data-toggle="switch"-->
-                                   <!--data-on-color="success" data-off-color="danger"-->
-                                   <!--data-on-text="Sim" data-off-text="Não"-->
-                                   <!--id="ads" />-->
-                        <!--<input type="checkbox" checked data-toggle="switch"-->
-                               <!--data-on-color="success" data-off-color="danger"-->
-                               <!--data-on-text="Sim" data-off-text="Não"-->
-                               <!--id="1" />-->
-                        <!--<input type="checkbox" checked data-toggle="switch"-->
-                        <!--data-on-color="success" data-off-color="danger"-->
-                        <!--data-on-text="Sim" data-off-text="Não"-->
-                        <!--id="voto-{{$index}}" />-->
-
-                        <!--<li >-->
-
-                       <!--http://stackoverflow.com/questions/27604955/single-select-with-multiple-radio-groups-in-bootstrap-3-->
-                        <!--<div class="btn-toolbar" role="toolbar">-->
-                        <div class="btn-group">
-                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Left'">Left</label>
-                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Middle'">Middle</label>
-                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Right'">Right</label>
-                        </div>
-                        <div class="btn-group">
-                            <label class="btn btn-success" ng-model="radioModel" btn-radio="'Left'" uncheckable>Left</label>
-                            <label class="btn btn-success" ng-model="radioModel" btn-radio="'Middle'" uncheckable>Middle</label>
-                            <label class="btn btn-success" ng-model="radioModel" btn-radio="'Right'" uncheckable>Right</label>
-                        </div>
-
-
                             <div ng-repeat="tema in temas" >
                                 <label>
                                     {{tema.Tema}}
                                 </label>
                                     <div class="btn-group" role="group" id="tema-{{$index}}" >
 
-                                        <label class="btn btn-primary " btn-radio="'Sim'" ng-click="click(tema,'s')">
+                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Sim'" ng-click="click(tema,'s')">
                                            Sim</label>
-                                        <label class="btn btn-primary" btn-radio="'Não'" ng-click="click(tema,'s')">
+                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Não'" ng-click="click(tema,'n')">
                                             Não</label>
-                                        <label class="btn btn-primary" btn-radio="'Não sei'" ng-click="click(tema,'s')">
+                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Não sei'" ng-click="click(tema,'ns')">
                                             Não sei</label>
                                     </div>
                             </div>
-
-                        <!--</div>-->
-
-
                     </div><!-- /input-group -->
-
-
 
                 </div>
 
@@ -160,23 +115,8 @@
         </div>
     </header>
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-
-            </div>
-        </div>
-    </section>
-
     <!-- About Section -->
-    <section class="success" id="about">
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -185,17 +125,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> Download Theme
-                    </a>
-                </div>
+             
             </div>
         </div>
     </section>
@@ -264,14 +194,13 @@
     <!--<script src="js/bootstrap.min.js"></script>-->
 
     <!-- Plugin JavaScript -->
-    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
-    <!--<script src="js/freelancer/classie.js"></script>-->
-    <!--<script src="js/freelancer/cbpAnimatedHeader.js"></script>-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/freelancer/classie.js"></script>
+    <script src="js/freelancer/cbpAnimatedHeader.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <!--<script src="js/freelancer/freelancer.js"></script>-->
+     <!--Custom Theme JavaScript-->
+    <script src="js/freelancer/freelancer.js"></script>
 
-    <!--<script src="js/flat-ui.min.js"></script>-->
     <!--<script src="js/application.js"></script>-->
 
 

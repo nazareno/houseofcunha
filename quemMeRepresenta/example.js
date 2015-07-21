@@ -1,5 +1,6 @@
-angular.module('ui.bootstrap.demo', ['ui.bootstrap']);
-angular.module('ui.bootstrap.demo').controller('ButtonsCtrl', function ($scope) {
+var houseOfCunhaApp = angular.module('houseOfCunhaApp', ['ui.bootstrap']);
+
+houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, $http) {
   $scope.singleModel = 1;
 
   $scope.radioModel = 'Middle';
@@ -9,4 +10,4 @@ angular.module('ui.bootstrap.demo').controller('ButtonsCtrl', function ($scope) 
     middle: true,
     right: false
   };
-});
+}]);

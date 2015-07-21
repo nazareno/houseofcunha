@@ -1,47 +1,47 @@
 [
   {
-    "Tema":"Maioridade 1"
-  },
-  {
-    "Tema":"Reeleição"
-  },
-  {
-    "Tema":"Distritao"
-  },
-  {
-    "Tema":"Financiamento privado para partidos e candidatos"
-  },
-  {
-    "Tema":"Financiamento privado para partidos"
-  },
-  {
     "Tema":"Coincidência reeleição"
-  },
-  {
-    "Tema":"Voto impresso"
-  },
-  {
-    "Tema":"Tempo Mandato"
   },
   {
     "Tema":"Cota para mulheres legislativo"
   },
   {
-    "Tema":"Pensão"
+    "Tema":"Distritao"
   },
   {
-    "Tema":"Seguro Desemprego"
+    "Tema":"Financiamento privado para partidos"
   },
   {
-    "Tema":"Transgênico"
+    "Tema":"Financiamento privado para partidos e candidatos"
+  },
+  {
+    "Tema":"Maioridade 1"
   },
   {
     "Tema":"Maioridade 2"
   },
   {
-    "Tema":"Voto Facultativo"
+    "Tema":"Pensão"
+  },
+  {
+    "Tema":"Reeleição"
+  },
+  {
+    "Tema":"Seguro Desemprego"
+  },
+  {
+    "Tema":"Tempo Mandato"
   },
   {
     "Tema":"Terceirização"
+  },
+  {
+    "Tema":"Transgênico"
+  },
+  {
+    "Tema":"Voto Facultativo"
+  },
+  {
+    "Tema":"Voto impresso"
   }
 ]
