@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-var houseOfCunhaApp = angular.module('houseOfCunhaApp', []);
+var houseOfCunhaApp = angular.module('houseOfCunhaApp', ['ui.bootstrap']);
 
 houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.estados = [];

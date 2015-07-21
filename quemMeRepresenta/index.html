@@ -33,6 +33,11 @@
         <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
         <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
     <!--<![endif]&ndash;&gt;-->
+    <script src="js/angular.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.13.0.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+
 
 </head>
 
@@ -106,25 +111,45 @@
                                <!--data-on-color="success" data-off-color="danger"-->
                                <!--data-on-text="Sim" data-off-text="Não"-->
                                <!--id="1" />-->
+                        <!--<input type="checkbox" checked data-toggle="switch"-->
+                        <!--data-on-color="success" data-off-color="danger"-->
+                        <!--data-on-text="Sim" data-off-text="Não"-->
+                        <!--id="voto-{{$index}}" />-->
+
+                        <!--<li >-->
+
+                       <!--http://stackoverflow.com/questions/27604955/single-select-with-multiple-radio-groups-in-bootstrap-3-->
+                        <!--<div class="btn-toolbar" role="toolbar">-->
+                        <div class="btn-group">
+                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Left'">Left</label>
+                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Middle'">Middle</label>
+                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Right'">Right</label>
+                        </div>
+                        <div class="btn-group">
+                            <label class="btn btn-success" ng-model="radioModel" btn-radio="'Left'" uncheckable>Left</label>
+                            <label class="btn btn-success" ng-model="radioModel" btn-radio="'Middle'" uncheckable>Middle</label>
+                            <label class="btn btn-success" ng-model="radioModel" btn-radio="'Right'" uncheckable>Right</label>
+                        </div>
+
 
                             <div ng-repeat="tema in temas" >
-                                <!--<input type="checkbox" checked data-toggle="switch"-->
-                                       <!--data-on-color="success" data-off-color="danger"-->
-                                       <!--data-on-text="Sim" data-off-text="Não"-->
-                                       <!--id="voto-{{$index}}" />-->
+                                <label>
+                                    {{tema.Tema}}
+                                </label>
+                                    <div class="btn-group" role="group" id="tema-{{$index}}" >
 
-                            <!--<li >-->
-
-                                {{tema.Tema}}
-                                <div class="input-group">
-
-                                    <label class="radio-inline"><input type="radio" name="optradio" ng-click="click(tema,'s')">Sim</label>
-                                    <label class="radio-inline"><input type="radio" name="optradio" ng-click="click(tema,'n')">Não</label>
-                                    <label class="radio-inline"><input type="radio" name="optradio" ng-click="click(tema,'x')">Não sei</label>
-                                </div>
-                            <!--</li>-->
+                                        <label class="btn btn-primary " btn-radio="'Sim'" ng-click="click(tema,'s')">
+                                           Sim</label>
+                                        <label class="btn btn-primary" btn-radio="'Não'" ng-click="click(tema,'s')">
+                                            Não</label>
+                                        <label class="btn btn-primary" btn-radio="'Não sei'" ng-click="click(tema,'s')">
+                                            Não sei</label>
+                                    </div>
                             </div>
-                        <!--</ul>-->
+
+                        <!--</div>-->
+
+
                     </div><!-- /input-group -->
 
 
@@ -233,25 +258,25 @@
 
 
     <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
+    <!--<script src="js/jquery.min.js"></script>-->
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
 
     <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/freelancer/classie.js"></script>
-    <script src="js/freelancer/cbpAnimatedHeader.js"></script>
+    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
+    <!--<script src="js/freelancer/classie.js"></script>-->
+    <!--<script src="js/freelancer/cbpAnimatedHeader.js"></script>-->
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer/freelancer.js"></script>
+    <!--<script src="js/freelancer/freelancer.js"></script>-->
 
-    <script src="js/flat-ui.min.js"></script>
-    <script src="js/application.js"></script>
+    <!--<script src="js/flat-ui.min.js"></script>-->
+    <!--<script src="js/application.js"></script>-->
 
 
 
-    <script src="js/angular.min.js"></script>
+
     <script src="lib/controllers.js"></script>
     <script src="js/underscore-min.js"></script>
 
