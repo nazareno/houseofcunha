@@ -9,7 +9,17 @@ houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, 
     $scope.deputados = [];
     $scope.temas = [];
 
-    //$scope.estadoSelecionado = {"uf":"PB"};
+
+
+    $scope.options = {width: 500, height: 300, 'bar': 'aaa'};
+    $scope.data = [1, 2, 3, 4];
+    $scope.hovered = function(d){
+        $scope.barValue = d;
+        $scope.$apply();
+    };
+    $scope.barValue = 'None';
+
+
 
     $http.get('dados/estados.json').success(function(data) {
 

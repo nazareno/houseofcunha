@@ -73,6 +73,11 @@
         <div class="container">
             <div class="row">
 
+                <!--<chart-form></chart-form>-->
+                <!--<bar-chart height="options.height" data="data" hovered="hovered(args)"></bar-chart>-->
+
+                <!--<bar-chart height="options.height" data="data" hovered="hovered(args)"></bar-chart>-->
+
                 <div class="col-lg-8">
                     <div class="intro-text">
                         <span class="name">Deputados</span>
@@ -82,11 +87,11 @@
                     <select  ng-model="estadoSelecionado" ng-options="estado.uf for estado in estados">
                         <option value="">TODOS</option>
                     </select>
-                    <ul>
-                        <li ng-repeat="deputado in deputados | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">
+                    <div class="list-group">
+                        <p class="list-group-item-text" ng-repeat="deputado in deputados | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">
                             {{deputado.nome}} - {{deputado.partido}}/{{deputado.uf}}    -   {{deputado.score * 100}}%
-                        </li>
-                    </ul>
+                        </p>
+                    </div>
 
                 </div>
 
@@ -178,9 +183,13 @@
     <!--<script src="js/application.js"></script>-->
 
 
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+
 
 
     <script src="lib/controllers.js"></script>
+    <script src="lib/directives.js"></script>
+    <script src="lib/reusable_chart.js"></script>
     <script src="js/underscore-min.js"></script>
 
 
