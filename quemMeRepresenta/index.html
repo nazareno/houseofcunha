@@ -76,16 +76,14 @@
                 <div class="col-lg-8">
                     <div class="intro-text">
                         <span class="name">Deputados</span>
+                        {{estadoSelecionado}}
                     </div>
 
-                    <select  ng-model="estadoSelecionado" ng-init="estadoSelecionado">
-                        <option ng-repeat="estado in estados"
-                                value="{{estado.estado}}">
-                            {{estado.estado}}
-                        </option>
+                    <select  ng-model="estadoSelecionado" ng-options="estado.uf for estado in estados">
+                        <option value="">TODOS</option>
                     </select>
                     <ul>
-                        <li ng-repeat="deputado in deputados | orderBy:['-score','partido','nome']">
+                        <li ng-repeat="deputado in deputados | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">
                             {{deputado.nome}} - {{deputado.partido}}/{{deputado.uf}}    -   {{deputado.score * 100}}%
                         </li>
                     </ul>

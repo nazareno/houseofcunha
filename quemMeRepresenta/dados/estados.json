@@ -1,86 +1,83 @@
 [
     {
-        "estado": "TODOS"
+        "uf": "AC"
     },
     {
-        "estado": "AC"
+        "uf": "AL"
     },
     {
-        "estado": "AL"
+        "uf": "AM"
     },
     {
-        "estado": "AM"
+        "uf": "AP"
     },
     {
-        "estado": "AP"
+        "uf": "BA"
     },
     {
-        "estado": "BA"
+        "uf": "CE"
     },
     {
-        "estado": "CE"
+        "uf": "DF"
     },
     {
-        "estado": "DF"
+        "uf": "ES"
     },
     {
-        "estado": "ES"
+        "uf": "GO"
     },
     {
-        "estado": "GO"
+        "uf": "MA"
     },
     {
-        "estado": "MA"
+        "uf": "MG"
     },
     {
-        "estado": "MG"
+        "uf": "MS"
     },
     {
-        "estado": "MS"
+        "uf": "MT"
     },
     {
-        "estado": "MT"
+        "uf": "PA"
     },
     {
-        "estado": "PA"
+        "uf": "PB"
     },
     {
-        "estado": "PB"
+        "uf": "PE"
     },
     {
-        "estado": "PE"
+        "uf": "PI"
     },
     {
-        "estado": "PI"
+        "uf": "PR"
     },
     {
-        "estado": "PR"
+        "uf": "RJ"
     },
     {
-        "estado": "RJ"
+        "uf": "RN"
     },
     {
-        "estado": "RN"
+        "uf": "RO"
     },
     {
-        "estado": "RO"
+        "uf": "RR"
     },
     {
-        "estado": "RR"
+        "uf": "RS"
     },
     {
-        "estado": "RS"
+        "uf": "SC"
     },
     {
-        "estado": "SC"
+        "uf": "SE"
     },
     {
-        "estado": "SE"
+        "uf": "SP"
     },
     {
-        "estado": "SP"
-    },
-    {
-        "estado": "TO"
+        "uf": "TO"
     }
 ]
