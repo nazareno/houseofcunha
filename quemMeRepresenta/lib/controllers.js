@@ -5,19 +5,28 @@
 var houseOfCunhaApp = angular.module('houseOfCunhaApp', ['ui.bootstrap']);
 
 houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, $http) {
+
+    $scope.title = "DemoCtrl";
+    $scope.d3Data = [
+        {name: "Greg", score:98},
+        {name: "Ari", score:96},
+        {name: "Loser", score: 48}
+    ];
+    $scope.d3OnClick = function(item){
+        alert(item.name);
+    };
+
+
+
+
+
+
+
+
     $scope.estados = [];
     $scope.deputados = [];
     $scope.temas = [];
 
-
-
-    $scope.options = {width: 500, height: 300, 'bar': 'aaa'};
-    $scope.data = [1, 2, 3, 4];
-    $scope.hovered = function(d){
-        $scope.barValue = d;
-        $scope.$apply();
-    };
-    $scope.barValue = 'None';
 
 
 
