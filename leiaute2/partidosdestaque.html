@@ -1,0 +1,5223 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.css'>
+    
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='//d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.js' type='text/javascript'></script>
+    <script src='//nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 500px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'charta4815892c9f' class = 'rChart nvd3'></div>    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawcharta4815892c9f()
+    });
+    function drawcharta4815892c9f(){  
+      var opts = {
+ "dom": "charta4815892c9f",
+"width":    800,
+"height":    500,
+"x": "Dim.1",
+"y": "Dim.2",
+"group": "destaque_partido",
+"type": "scatterChart",
+"id": "charta4815892c9f" 
+},
+        data = [
+ {
+ "Dim.1": 0.1456339281575,
+"Dim.2": 0.06710678950429,
+"nome": "Abel Mesquita Jr.",
+"partido": "pdt",
+"uf": "RR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2980449274106,
+"Dim.2": -0.4122704555509,
+"nome": "Adail Carneiro",
+"partido": "phs",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.7051180381309,
+"Dim.2": 0.5068338543633,
+"nome": "Adelmo Carneiro Leão",
+"partido": "pt",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.3216227277526,
+"Dim.2": -0.01190182733865,
+"nome": "Adelson Barreto",
+"partido": "ptb",
+"uf": "SE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4639635800777,
+"Dim.2": 0.2486115146117,
+"nome": "Ademir Camilo",
+"partido": "pros",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5340508975267,
+"Dim.2": -0.06483172293487,
+"nome": "Adilton Sachetti",
+"partido": "psb",
+"uf": "MT",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4446536642349,
+"Dim.2": -0.2487624369844,
+"nome": "Aelton Freitas",
+"partido": "pr",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6677555624961,
+"Dim.2": 0.4328513053904,
+"nome": "Afonso Florence",
+"partido": "pt",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.7343938041092,
+"Dim.2": 0.05940468517755,
+"nome": "Afonso Hamm",
+"partido": "pp",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.02850248674039,
+"Dim.2": 0.2610381664095,
+"nome": "Afonso Motta",
+"partido": "pdt",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3711465339827,
+"Dim.2": -0.1283673217575,
+"nome": "Aguinaldo Ribeiro",
+"partido": "pp",
+"uf": "PB",
+"destaque": false,
+"destaque_pb": "PB",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.05522454624593,
+"Dim.2": 0.003151488409826,
+"nome": "Alan Rick",
+"partido": "prb",
+"uf": "AC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2566482981946,
+"Dim.2": -0.2671282190243,
+"nome": "Alberto Filho",
+"partido": "pmdb",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.794700979663,
+"Dim.2": -0.05789233511073,
+"nome": "Alberto Fraga",
+"partido": "dem",
+"uf": "DF",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2817383302104,
+"Dim.2": -0.2574452463862,
+"nome": "Alceu Moreira",
+"partido": "pmdb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.6535858657814,
+"Dim.2": 0.4680160018413,
+"nome": "Alessandro Molon",
+"partido": "pt",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.08363477680824,
+"Dim.2": -0.2917687663689,
+"nome": "Alex Canziani",
+"partido": "ptb",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7893880344544,
+"Dim.2": 0.198407923951,
+"nome": "Alex Manente",
+"partido": "pps",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4044816882977,
+"Dim.2": 0.06593125709823,
+"nome": "Alexandre Baldy",
+"partido": "psdb",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.735616963549,
+"Dim.2": -0.09773035737478,
+"nome": "Alexandre Leite",
+"partido": "dem",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.3944071142298,
+"Dim.2": -0.02636017459,
+"nome": "Alexandre Serfiotis",
+"partido": "psd",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3891939891288,
+"Dim.2": -0.1316913542794,
+"nome": "Alexandre Valle",
+"partido": "prp",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5162107086989,
+"Dim.2": -0.141443696252,
+"nome": "Alfredo Kaefer",
+"partido": "psdb",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.439781809322,
+"Dim.2": 0.06122068074407,
+"nome": "Alfredo Nascimento",
+"partido": "pr",
+"uf": "AM",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5365416826984,
+"Dim.2": 0.6323987356663,
+"nome": "Alice Portugal",
+"partido": "pcdob",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1706972025464,
+"Dim.2": 0.6005272432427,
+"nome": "Aliel Machado",
+"partido": "pcdob",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2305647783899,
+"Dim.2": -0.2022850386598,
+"nome": "Altineu Côrtes",
+"partido": "pr",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4615957883956,
+"Dim.2": -0.1385412162294,
+"nome": "Aluisio Mendes",
+"partido": "psdc",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.620686697696,
+"Dim.2": 0.3782264578558,
+"nome": "Ana Perugini",
+"partido": "pt",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.3645143088597,
+"Dim.2": -0.2856804713983,
+"nome": "Anderson Ferreira",
+"partido": "pr",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5014311475788,
+"Dim.2": -0.07850826103339,
+"nome": "André Abdon",
+"partido": "prb",
+"uf": "AP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.05076980690848,
+"Dim.2": 0.2146742072044,
+"nome": "André Figueiredo",
+"partido": "pdt",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2082833206774,
+"Dim.2": -0.2927283188068,
+"nome": "André Fufuca",
+"partido": "pen",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2418486699912,
+"Dim.2": -0.08369907219382,
+"nome": "Andre Moura",
+"partido": "psc",
+"uf": "SE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6270929178503,
+"Dim.2": 0.3067495780947,
+"nome": "Andres Sanchez",
+"partido": "pt",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.6376330934576,
+"Dim.2": 0.4325589400342,
+"nome": "Angelim",
+"partido": "pt",
+"uf": "AC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.2191116299568,
+"Dim.2": -0.244955668504,
+"nome": "Aníbal Gomes",
+"partido": "pmdb",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.3510713179421,
+"Dim.2": -0.05780483625327,
+"nome": "Antonio Balhmann",
+"partido": "pros",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.002816033727236,
+"Dim.2": -0.08764920008686,
+"nome": "Antonio Brito",
+"partido": "ptb",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4745887919326,
+"Dim.2": -0.04165767751372,
+"nome": "Antonio Bulhões",
+"partido": "prb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1902342795483,
+"Dim.2": 0.01192609935109,
+"nome": "Antonio Carlos Mendes Thame",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.5667702198831,
+"Dim.2": -0.07318455686499,
+"nome": "Antonio Imbassahy",
+"partido": "psdb",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1":  0.44177766056,
+"Dim.2": 0.3041083109896,
+"nome": "Antônio Jácome",
+"partido": "pmn",
+"uf": "RN",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.623535620337,
+"Dim.2": 0.4089130143413,
+"nome": "Arlindo Chinaglia",
+"partido": "pt",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.6642817520985,
+"Dim.2": 0.1934222146817,
+"nome": "Arnaldo Faria de Sá",
+"partido": "ptb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4098121478222,
+"Dim.2": 0.4019267585114,
+"nome": "Arnaldo Jordy",
+"partido": "pps",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3363214596144,
+"Dim.2": -0.3012833716187,
+"nome": "Arnon Bezerra",
+"partido": "ptb",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1085989714948,
+"Dim.2": -0.3660838742834,
+"nome": "Arthur Lira",
+"partido": "pp",
+"uf": "AL",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4342531243837,
+"Dim.2": -0.07177633995913,
+"nome": "Arthur Oliveira Maia",
+"partido": "solidaried",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.8798606266893,
+"Dim.2": -0.008748355205867,
+"nome": "Arthur Virgílio Bisneto",
+"partido": "psdb",
+"uf": "AM",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.6347371013329,
+"Dim.2": 0.3537996825771,
+"nome": "Assis Carvalho",
+"partido": "pt",
+"uf": "PI",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.4546586551185,
+"Dim.2": 0.3309962111288,
+"nome": "Assis do Couto",
+"partido": "pt",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.2863976397733,
+"Dim.2": -0.3504394116575,
+"nome": "Átila Lins",
+"partido": "psd",
+"uf": "AM",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3149389297015,
+"Dim.2": -0.07193325682259,
+"nome": "Átila Lira",
+"partido": "psb",
+"uf": "PI",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7815107680733,
+"Dim.2": 0.2969343260234,
+"nome": "Augusto Carvalho",
+"partido": "solidaried",
+"uf": "DF",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7716674055376,
+"Dim.2": -0.06615668399578,
+"nome": "Augusto Coutinho",
+"partido": "solidaried",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7131278897531,
+"Dim.2": -0.007050294805248,
+"nome": "Aureo",
+"partido": "solidaried",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5362147824168,
+"Dim.2": 0.300188218473,
+"nome": "Bacelar",
+"partido": "ptn",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2935555548653,
+"Dim.2": -0.3205907189735,
+"nome": "Baleia Rossi",
+"partido": "pmdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.2343703318378,
+"Dim.2": 0.5327937350977,
+"nome": "Bebeto",
+"partido": "psb",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.646753949465,
+"Dim.2": 0.3206220874769,
+"nome": "Benedita da Silva",
+"partido": "pt",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.5230349892366,
+"Dim.2": -0.1149142431407,
+"nome": "Benito Gama",
+"partido": "ptb",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6954518478732,
+"Dim.2": -0.07160448249122,
+"nome": "Benjamin Maranhão",
+"partido": "solidaried",
+"uf": "PB",
+"destaque": false,
+"destaque_pb": "PB",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.8020322108517,
+"Dim.2": 0.02471419140441,
+"nome": "Betinho Gomes",
+"partido": "psdb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.7231848482097,
+"Dim.2": 0.4156835386865,
+"nome": "Beto Faro",
+"partido": "pt",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.2417214264413,
+"Dim.2": -0.2566010569588,
+"nome": "Beto Mansur",
+"partido": "prb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.008326801028479,
+"Dim.2": -0.1130662089237,
+"nome": "Beto Rosado",
+"partido": "pp",
+"uf": "RN",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4214799923949,
+"Dim.2": 0.03723858818318,
+"nome": "Beto Salame",
+"partido": "pros",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3497540440167,
+"Dim.2": -0.2620504497463,
+"nome": "Bilac Pinto",
+"partido": "pr",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6779794605479,
+"Dim.2": 0.4097074717097,
+"nome": "Bohn Gass",
+"partido": "pt",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.2909480355795,
+"Dim.2": -0.2126584514297,
+"nome": "Bonifácio de Andrada",
+"partido": "psdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.4237413098216,
+"Dim.2": -0.1559553073197,
+"nome": "Bruna Furlan",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.444314682374,
+"Dim.2": 0.07131714604423,
+"nome": "Brunny",
+"partido": "ptc",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5658894023233,
+"Dim.2": -0.07874755305575,
+"nome": "Bruno Araújo",
+"partido": "psdb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.6155088133352,
+"Dim.2": -0.009821385189582,
+"nome": "Bruno Covas",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.3852676497232,
+"Dim.2": 0.6356125434436,
+"nome": "Cabo Daciolo",
+"partido": "psol",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psol" 
+},
+{
+ "Dim.1": -0.04074530693448,
+"Dim.2": 0.1210792040567,
+"nome": "Cabo Daciolo",
+"partido": "s.part.",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2669781072377,
+"Dim.2": -0.01394097503518,
+"nome": "Cabo Sabino",
+"partido": "pr",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2424255073874,
+"Dim.2": -0.4303385342083,
+"nome": "Cabuçu Borges",
+"partido": "pmdb",
+"uf": "AP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.3209755307601,
+"Dim.2": -0.3740373651092,
+"nome": "Cacá Leão",
+"partido": "pp",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5937428358286,
+"Dim.2": 0.3094118155034,
+"nome": "Caetano",
+"partido": "pt",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.8326522542874,
+"Dim.2": -0.02025165397158,
+"nome": "Caio Narcio",
+"partido": "psdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.410929823845,
+"Dim.2": -0.2244740931348,
+"nome": "Capitão Augusto",
+"partido": "pr",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1691548882034,
+"Dim.2": -0.4118269081989,
+"nome": "Carlos Andrade",
+"partido": "phs",
+"uf": "RR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2281709501423,
+"Dim.2": -0.1797914032666,
+"nome": "Carlos Bezerra",
+"partido": "pmdb",
+"uf": "MT",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.5487986324548,
+"Dim.2": 0.4648356331078,
+"nome": "Carlos Eduardo Cadoca",
+"partido": "pcdob",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3735372232973,
+"Dim.2": -0.1424867655741,
+"nome": "Carlos Gomes",
+"partido": "prb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3344702719955,
+"Dim.2": -0.4653306725034,
+"nome": "Carlos Henrique Gaguim",
+"partido": "pmdb",
+"uf": "TO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.8007119104574,
+"Dim.2": -0.1397763589425,
+"nome": "Carlos Manato",
+"partido": "solidaried",
+"uf": "ES",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2374523679209,
+"Dim.2": -0.3785090675944,
+"nome": "Carlos Marun",
+"partido": "pmdb",
+"uf": "MS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.2974834669865,
+"Dim.2": -0.2543552934831,
+"nome": "Carlos Melles",
+"partido": "dem",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.305587629764,
+"Dim.2": -0.08269954778317,
+"nome": "Carlos Sampaio",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.6324247779198,
+"Dim.2": 0.3936236931202,
+"nome": "Carlos Zarattini",
+"partido": "pt",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.7712118292389,
+"Dim.2": 0.2233373946385,
+"nome": "Carmen Zanotto",
+"partido": "pps",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.8137801801943,
+"Dim.2": -0.04379465464163,
+"nome": "Célio Silveira",
+"partido": "psdb",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.3060469938784,
+"Dim.2": -0.4465599725002,
+"nome": "Celso Jacob",
+"partido": "pmdb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.2912413146305,
+"Dim.2": -0.382609196743,
+"nome": "Celso Maldaner",
+"partido": "pmdb",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.3074708347163,
+"Dim.2": -0.2580485965692,
+"nome": "Celso Pansera",
+"partido": "pmdb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.3731433807577,
+"Dim.2": -0.1149085834316,
+"nome": "Celso Russomanno",
+"partido": "prb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2399644579405,
+"Dim.2": -0.2013230715364,
+"nome": "César Halum",
+"partido": "prb",
+"uf": "TO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4107466848427,
+"Dim.2": 0.1468993262378,
+"nome": "César Messias",
+"partido": "psb",
+"uf": "AC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2447086928174,
+"Dim.2": -0.07580252171703,
+"nome": "Cesar Souza",
+"partido": "psd",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2871324610062,
+"Dim.2": 0.9541754765728,
+"nome": "Chico Alencar",
+"partido": "psol",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psol" 
+},
+{
+ "Dim.1": -0.6322535569889,
+"Dim.2": 0.4034481971117,
+"nome": "Chico D Angelo",
+"partido": "pt",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.5863292732776,
+"Dim.2": 0.5128860082756,
+"nome": "Chico Lopes",
+"partido": "pcdob",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.01960776303522,
+"Dim.2": 0.453402588395,
+"nome": "Christiane de Souza Yared",
+"partido": "ptn",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.05331245805936,
+"Dim.2": 0.009096565363182,
+"nome": "Cícero Almeida",
+"partido": "prtb",
+"uf": "AL",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1325905419391,
+"Dim.2": 0.2406055414023,
+"nome": "Clarissa Garotinho",
+"partido": "pr",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1837454951121,
+"Dim.2": -0.1920481264241,
+"nome": "Claudio Cajado",
+"partido": "dem",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3732849995983,
+"Dim.2": -0.09119769090638,
+"nome": "Cleber Verde",
+"partido": "prb",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2453160343736,
+"Dim.2": 0.1795174474001,
+"nome": "Conceição Sampaio",
+"partido": "pp",
+"uf": "AM",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5665357730914,
+"Dim.2": -0.1249784568159,
+"nome": "Covatti Filho",
+"partido": "pp",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5475120483371,
+"Dim.2": -0.1058981866715,
+"nome": "Cristiane Brasil",
+"partido": "ptb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.06156714437872,
+"Dim.2": 0.1164572369401,
+"nome": "Dagoberto",
+"partido": "pdt",
+"uf": "MS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.06154303035799,
+"Dim.2": 0.3100139636447,
+"nome": "Damião Feliciano",
+"partido": "pdt",
+"uf": "PB",
+"destaque": false,
+"destaque_pb": "PB",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3554355637309,
+"Dim.2": -0.292737216697,
+"nome": "Dâmina Pereira",
+"partido": "pmn",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5906763988377,
+"Dim.2": 0.4670294254705,
+"nome": "Daniel Almeida",
+"partido": "pcdob",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.8509260304074,
+"Dim.2": 0.0755600889654,
+"nome": "Daniel Coelho",
+"partido": "psdb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.3697271824763,
+"Dim.2": -0.2980442109594,
+"nome": "Daniel Vilela",
+"partido": "pmdb",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.1548654207638,
+"Dim.2": -0.2001721732912,
+"nome": "Danilo Forte",
+"partido": "pmdb",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.2095737989801,
+"Dim.2": -0.1597446010743,
+"nome": "Danrlei de Deus Hinterholz",
+"partido": "psd",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1525712183948,
+"Dim.2": -0.2167151946593,
+"nome": "Darcísio Perondi",
+"partido": "pmdb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.6137562967956,
+"Dim.2": 0.4910313920824,
+"nome": "Davidson Magalhães",
+"partido": "pcdob",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4126714848169,
+"Dim.2": 0.3832500204656,
+"nome": "Décio Lima",
+"partido": "pt",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1":  -0.3461414835,
+"Dim.2": -0.2395451472647,
+"nome": "Delegado Éder Mauro",
+"partido": "psd",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4015851862817,
+"Dim.2": -0.345514113247,
+"nome": "Delegado Edson Moreira",
+"partido": "ptn",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6943453653286,
+"Dim.2": -0.06679868698289,
+"nome": "Delegado Waldir",
+"partido": "psdb",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.5424246342754,
+"Dim.2": 0.3075605995999,
+"nome": "Deley",
+"partido": "ptb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2486974597606,
+"Dim.2": -0.2696143598142,
+"nome": "Diego Andrade",
+"partido": "psd",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2791104842811,
+"Dim.2": -0.3160661524613,
+"nome": "Diego Garcia",
+"partido": "phs",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2510559604641,
+"Dim.2": -0.448383578368,
+"nome": "Dilceu Sperafico",
+"partido": "pp",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.381550725799,
+"Dim.2": -0.237269336779,
+"nome": "Dimas Fabiano",
+"partido": "pp",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3819231639493,
+"Dim.2": -0.1501759219786,
+"nome": "Domingos Neto",
+"partido": "pros",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.754196469309,
+"Dim.2": -0.008907617371041,
+"nome": "Domingos Sávio",
+"partido": "psdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.3645292479582,
+"Dim.2": -0.3421045810243,
+"nome": "Dr. João",
+"partido": "pr",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4079204215098,
+"Dim.2": 0.1014212797013,
+"nome": "Dr. Jorge Silva",
+"partido": "pros",
+"uf": "ES",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2109302878941,
+"Dim.2": 0.1845083132179,
+"nome": "Dr. Sinval Malheiros",
+"partido": "pv",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1634228822287,
+"Dim.2": -0.2883975629517,
+"nome": "Dulce Miranda",
+"partido": "pmdb",
+"uf": "TO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.2421767113928,
+"Dim.2": -0.3189430703405,
+"nome": "Edinho Bez",
+"partido": "pmdb",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.2412490100995,
+"Dim.2": -0.399565498047,
+"nome": "Edio Lopes",
+"partido": "pmdb",
+"uf": "RR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.1214638474757,
+"Dim.2": -0.03742452721083,
+"nome": "Edmar Arruda",
+"partido": "psc",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2846099669372,
+"Dim.2": 0.8558566587114,
+"nome": "Edmilson Rodrigues",
+"partido": "psol",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psol" 
+},
+{
+ "Dim.1": 0.8882877229607,
+"Dim.2": -0.00417417239996,
+"nome": "Eduardo Barbosa",
+"partido": "psdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.8169808029443,
+"Dim.2": -0.05812469042018,
+"nome": "Eduardo Bolsonaro",
+"partido": "psc",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.8061867901565,
+"Dim.2": -0.0552279378568,
+"nome": "Eduardo Cury",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.1301723691654,
+"Dim.2": -0.2281537268879,
+"nome": "Eduardo da Fonte",
+"partido": "pp",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.577677116683,
+"Dim.2": 0.01901098215539,
+"nome": "Efraim Filho",
+"partido": "dem",
+"uf": "PB",
+"destaque": false,
+"destaque_pb": "PB",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2171750029941,
+"Dim.2": -0.1203581884218,
+"nome": "Elcione Barbalho",
+"partido": "pmdb",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.100075669972,
+"Dim.2": -0.0491925841011,
+"nome": "Eli Correa Filho",
+"partido": "dem",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.06510073706317,
+"Dim.2": -0.3189139753057,
+"nome": "Elizeu Dionizio",
+"partido": "solidaried",
+"uf": "MS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6183533249261,
+"Dim.2": 0.3356584281071,
+"nome": "Eliziane Gama",
+"partido": "pps",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4220491258128,
+"Dim.2": -0.1130213841432,
+"nome": "Elmar Nascimento",
+"partido": "dem",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6977096355376,
+"Dim.2": 0.3677818448072,
+"nome": "Enio Verri",
+"partido": "pt",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.4856845220309,
+"Dim.2": 0.6614850321852,
+"nome": "Erika Kokay",
+"partido": "pt",
+"uf": "DF",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.5772406187751,
+"Dim.2": -0.05888893754467,
+"nome": "Erivelton Santana",
+"partido": "psc",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2831440462468,
+"Dim.2": -0.01851836642469,
+"nome": "Eros Biondini",
+"partido": "ptb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6570951402906,
+"Dim.2": 0.008629669938601,
+"nome": "Esperidião Amin",
+"partido": "pp",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4765640785519,
+"Dim.2": -0.1560483350693,
+"nome": "Evair de Melo",
+"partido": "pv",
+"uf": "ES",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6522767356503,
+"Dim.2": 0.02625552746835,
+"nome": "Evandro Gussi",
+"partido": "pv",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1484712395294,
+"Dim.2": -0.1765512978119,
+"nome": "Evandro Rogerio Roman",
+"partido": "psd",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1245313411964,
+"Dim.2": -0.09688132079358,
+"nome": "Evandro Roman",
+"partido": "psd",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5612573817161,
+"Dim.2": -0.04263204109602,
+"nome": "Expedito Netto",
+"partido": "solidaried",
+"uf": "RO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1432471113439,
+"Dim.2": -0.3575358676647,
+"nome": "Ezequiel Fonseca",
+"partido": "pp",
+"uf": "MT",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5387941088214,
+"Dim.2": -0.1135824765353,
+"nome": "Ezequiel Teixeira",
+"partido": "solidaried",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5890241723654,
+"Dim.2": 0.2613454896143,
+"nome": "Fabiano Horta",
+"partido": "pt",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.1860789274953,
+"Dim.2": -0.2055249406106,
+"nome": "Fábio Faria",
+"partido": "psd",
+"uf": "RN",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4144231821006,
+"Dim.2": -0.05992446001927,
+"nome": "Fabio Garcia",
+"partido": "psb",
+"uf": "MT",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1656202270259,
+"Dim.2": -0.165376483488,
+"nome": "Fábio Mitidieri",
+"partido": "psd",
+"uf": "SE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.281710198189,
+"Dim.2": -0.234074892503,
+"nome": "Fábio Ramalho",
+"partido": "pv",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1727041939878,
+"Dim.2": -0.3154964512778,
+"nome": "Fabio Reis",
+"partido": "pmdb",
+"uf": "SE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.8129741704031,
+"Dim.2": -0.03134322969058,
+"nome": "Fábio Sousa",
+"partido": "psdb",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.3598261243728,
+"Dim.2": -0.001249627084938,
+"nome": "Fausto Pinato",
+"partido": "prb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.3982920217488,
+"Dim.2": -0.08799289092801,
+"nome": "Felipe Bornier",
+"partido": "psd",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6319898715037,
+"Dim.2": -0.01789826241865,
+"nome": "Felipe Maia",
+"partido": "dem",
+"uf": "RN",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1348449689376,
+"Dim.2": 0.149305019354,
+"nome": "Félix Mendonça Júnior",
+"partido": "pdt",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.3113726553349,
+"Dim.2": 0.09628420747773,
+"nome": "Fernando Coelho Filho",
+"partido": "psb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.04521293159832,
+"Dim.2": -0.2309912787674,
+"nome": "Fernando Jordão",
+"partido": "pmdb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.653035943244,
+"Dim.2": 0.3639708991727,
+"nome": "Fernando Marroni",
+"partido": "pt",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.3036426035593,
+"Dim.2": -0.3835991114181,
+"nome": "Fernando Monteiro",
+"partido": "pp",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2303209759706,
+"Dim.2": -0.02942848723478,
+"nome": "Fernando Torres",
+"partido": "psd",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.05019680819577,
+"Dim.2": 0.3513041620546,
+"nome": "Flávia Morais",
+"partido": "pdt",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3234994193046,
+"Dim.2": -0.3772421928807,
+"nome": "Flaviano Melo",
+"partido": "pmdb",
+"uf": "AC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.7170741407852,
+"Dim.2": 0.2431753764351,
+"nome": "Flavinho",
+"partido": "psb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1850909658109,
+"Dim.2": -0.1921044590745,
+"nome": "Francisco Chapadinha",
+"partido": "psd",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3841932264081,
+"Dim.2": -0.2427047071167,
+"nome": "Francisco Floriano",
+"partido": "pr",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4793581744079,
+"Dim.2": 0.3014508946561,
+"nome": "Gabriel Guimarães",
+"partido": "pt",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.3938372973649,
+"Dim.2": -0.1288159440077,
+"nome": "Genecias Noronha",
+"partido": "solidaried",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.716693791996,
+"Dim.2": 0.1308706817958,
+"nome": "Geovania de Sá",
+"partido": "psdb",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.1909186875831,
+"Dim.2": -0.2837382759018,
+"nome": "Geraldo Resende",
+"partido": "pmdb",
+"uf": "MS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.1432982249848,
+"Dim.2": -0.1698383620169,
+"nome": "Giacobo",
+"partido": "pr",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6130694447298,
+"Dim.2": -0.03023808639799,
+"nome": "Gilberto Nascimento",
+"partido": "psc",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.05979158265952,
+"Dim.2": -0.07041853883338,
+"nome": "Giovani Cherini",
+"partido": "pdt",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1":  0.81591913444,
+"Dim.2": -0.07418854366432,
+"nome": "Giuseppe Vecci",
+"partido": "psdb",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.329851096234,
+"Dim.2": -0.2122844187748,
+"nome": "Givaldo Carimbão",
+"partido": "pros",
+"uf": "AL",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6350656173845,
+"Dim.2": 0.3346819897759,
+"nome": "Givaldo Vieira",
+"partido": "pt",
+"uf": "ES",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.2437903194493,
+"Dim.2": 0.7261844387248,
+"nome": "Glauber Braga",
+"partido": "psb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4287662930106,
+"Dim.2": 0.2322610920757,
+"nome": "Gonzaga Patriota",
+"partido": "psb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2740472586143,
+"Dim.2": -0.2091998899929,
+"nome": "Gorete Pereira",
+"partido": "pr",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2393305810561,
+"Dim.2": -0.2740015165256,
+"nome": "Goulart",
+"partido": "psd",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1207907228888,
+"Dim.2": -0.3025995597201,
+"nome": "Guilherme Mussi",
+"partido": "pp",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4532877139671,
+"Dim.2": 0.4007420349996,
+"nome": "Heitor Schuch",
+"partido": "psb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6415166615563,
+"Dim.2": 0.3804568177345,
+"nome": "Helder Salomão",
+"partido": "pt",
+"uf": "ES",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.6370371021745,
+"Dim.2": -0.04152517472252,
+"nome": "Hélio Leite",
+"partido": "dem",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6728937766339,
+"Dim.2": 0.4152861607191,
+"nome": "Henrique Fontana",
+"partido": "pt",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.4112856436115,
+"Dim.2": 0.01385358339696,
+"nome": "Heráclito Fortes",
+"partido": "psb",
+"uf": "PI",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3900521552762,
+"Dim.2": -0.1291857165173,
+"nome": "Herculano Passos",
+"partido": "psd",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4840454330072,
+"Dim.2": 0.003148552129956,
+"nome": "Hermes Parcianello",
+"partido": "pmdb",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.2312134814096,
+"Dim.2": -0.2656435592283,
+"nome": "Heuler Cruvinel",
+"partido": "psd",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2369584057761,
+"Dim.2": -0.3063364800201,
+"nome": "Hildo Rocha",
+"partido": "pmdb",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.4116340127593,
+"Dim.2": -0.04143762227387,
+"nome": "Hiran Gonçalves",
+"partido": "pmn",
+"uf": "RR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6408207540382,
+"Dim.2": 0.3603255329664,
+"nome": "Hissa Abrahão",
+"partido": "pps",
+"uf": "AM",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.448007768641,
+"Dim.2": -0.05497905177012,
+"nome": "Hugo Leal",
+"partido": "pros",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1574579011935,
+"Dim.2": -0.3045136754178,
+"nome": "Hugo Motta",
+"partido": "pmdb",
+"uf": "PB",
+"destaque": false,
+"destaque_pb": "PB",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.1728920218999,
+"Dim.2": -0.2764953839729,
+"nome": "Indio da Costa",
+"partido": "psd",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2113311713625,
+"Dim.2": -0.2099748957892,
+"nome": "Iracema Portella",
+"partido": "pp",
+"uf": "PI",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1698411505544,
+"Dim.2": -0.1994509084226,
+"nome": "Irajá Abreu",
+"partido": "psd",
+"uf": "TO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4126489378852,
+"Dim.2": 0.01420715531327,
+"nome": "Irmão Lazaro",
+"partido": "psc",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2506205328378,
+"Dim.2": 0.9395087764574,
+"nome": "Ivan Valente",
+"partido": "psol",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psol" 
+},
+{
+ "Dim.1": 0.649482257146,
+"Dim.2": -0.06313158270025,
+"nome": "Izalci",
+"partido": "psdb",
+"uf": "DF",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.1513880187213,
+"Dim.2": -0.2622120082677,
+"nome": "Jaime Martins",
+"partido": "psd",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.867592583668,
+"Dim.2": -0.04498225939877,
+"nome": "Jair Bolsonaro",
+"partido": "pp",
+"uf": "RJ",
+"destaque": true,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4945883376699,
+"Dim.2": 0.4875666419019,
+"nome": "Jandira Feghali",
+"partido": "pcdob",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.06284288363763,
+"Dim.2":  0.36658547294,
+"nome": "Janete Capiberibe",
+"partido": "psb",
+"uf": "AP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5599906990986,
+"Dim.2": 0.04587073127996,
+"nome": "Jarbas Vasconcelos",
+"partido": "pmdb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.2988635780841,
+"Dim.2": 0.7691452336634,
+"nome": "Jean Wyllys",
+"partido": "psol",
+"uf": "RJ",
+"destaque": true,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psol" 
+},
+{
+ "Dim.1": 0.4224307612471,
+"Dim.2": -0.06523338476845,
+"nome": "Jefferson Campos",
+"partido": "psd",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7796968764361,
+"Dim.2": 0.02413491909623,
+"nome": "Jerônimo Goergen",
+"partido": "pp",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2481354281821,
+"Dim.2": -0.366534382467,
+"nome": "Jéssica Sales",
+"partido": "pmdb",
+"uf": "AC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.5772754310396,
+"Dim.2": 0.3023071417751,
+"nome": "JHC",
+"partido": "solidaried",
+"uf": "AL",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2048633858851,
+"Dim.2": -0.1059866628434,
+"nome": "Jhonatan de Jesus",
+"partido": "prb",
+"uf": "RR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5896137418059,
+"Dim.2": 0.4900438067508,
+"nome": "Jô Moraes",
+"partido": "pcdob",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.05062099139243,
+"Dim.2": 0.003514301944689,
+"nome": "João Arruda",
+"partido": "pmdb",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.6240840551942,
+"Dim.2": 0.1548728622889,
+"nome": "João Campos",
+"partido": "psdb",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.2615581476103,
+"Dim.2": -0.1880431869885,
+"nome": "João Carlos Bacelar",
+"partido": "pr",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.8228425782099,
+"Dim.2": -0.007258051994413,
+"nome": "João Castelo",
+"partido": "psdb",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.680164384492,
+"Dim.2": 0.4394831849655,
+"nome": "João Daniel",
+"partido": "pt",
+"uf": "SE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.2683159278647,
+"Dim.2":  0.67630402212,
+"nome": "João Derly",
+"partido": "pcdob",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.3532829004708,
+"Dim.2": 0.2505186640837,
+"nome": "João Fernando Coutinho",
+"partido": "psb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6282260458915,
+"Dim.2": -0.09041470421713,
+"nome": "João Gualberto",
+"partido": "psdb",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.3603423820308,
+"Dim.2": -0.3926400627606,
+"nome": "João Marcelo Souza",
+"partido": "pmdb",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.8137624907641,
+"Dim.2": 0.03577500978671,
+"nome": "João Paulo Papa",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.321043536862,
+"Dim.2": -0.1203677426658,
+"nome": "João Rodrigues",
+"partido": "psd",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2246166565931,
+"Dim.2": -0.2578534649558,
+"nome": "Joaquim Passarinho",
+"partido": "psd",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5324495701702,
+"Dim.2": 0.005860781462938,
+"nome": "Jony Marcos",
+"partido": "prb",
+"uf": "SE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4651199949001,
+"Dim.2": 0.2464233602678,
+"nome": "Jorge Boeira",
+"partido": "pp",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3103276091891,
+"Dim.2": -0.313478716814,
+"nome": "Jorge Côrte Real",
+"partido": "ptb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.544742694696,
+"Dim.2": 0.4002793794603,
+"nome": "Jorge Solla",
+"partido": "pt",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.4254583112706,
+"Dim.2": -0.08161932256637,
+"nome": "Jorge Tadeu Mudalen",
+"partido": "dem",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.301298914627,
+"Dim.2": -0.2645805045923,
+"nome": "Jorginho Mello",
+"partido": "pr",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6411279202567,
+"Dim.2": 0.3541771423218,
+"nome": "José Airton Cirilo",
+"partido": "pt",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.289379805742,
+"Dim.2": -0.2306004805813,
+"nome": "José Carlos Aleluia",
+"partido": "dem",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2356996364835,
+"Dim.2": -0.2106690029146,
+"nome": "José Carlos Araújo",
+"partido": "psd",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.141791507254,
+"Dim.2": 0.2062055554055,
+"nome": "José Fogaça",
+"partido": "pmdb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.5776015409018,
+"Dim.2": 0.1387623292157,
+"nome": "José Guimarães",
+"partido": "pt",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.1916511755668,
+"Dim.2": -0.09078291664588,
+"nome": "José Maia Filho",
+"partido": "solidaried",
+"uf": "PI",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6504158577951,
+"Dim.2": 0.3687185968954,
+"nome": "José Mentor",
+"partido": "pt",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.3560024479784,
+"Dim.2": -0.1375822136496,
+"nome": "José Nunes",
+"partido": "psd",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.344087583064,
+"Dim.2": -0.03821176553798,
+"nome": "José Otávio Germano",
+"partido": "pp",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3345172400555,
+"Dim.2": -0.3334070891492,
+"nome": "José Priante",
+"partido": "pmdb",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.109631214899,
+"Dim.2": -0.2760190861248,
+"nome": "José Reinaldo",
+"partido": "psb",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4751498752086,
+"Dim.2": -0.1886998689743,
+"nome": "José Rocha",
+"partido": "pr",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4786451269548,
+"Dim.2": 0.6338585157833,
+"nome": "Jose Stédile",
+"partido": "psb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2424343896117,
+"Dim.2": -0.2390712438747,
+"nome": "Josi Nunes",
+"partido": "pmdb",
+"uf": "TO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.1439242296754,
+"Dim.2": -0.1978556325966,
+"nome": "Josué Bengtson",
+"partido": "ptb",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2773129660326,
+"Dim.2": -0.3361160180354,
+"nome": "Jovair Arantes",
+"partido": "ptb",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1873035172104,
+"Dim.2": -0.3590107446692,
+"nome": "Jozi Rocha",
+"partido": "ptb",
+"uf": "AP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5114379216215,
+"Dim.2": 0.02157756213625,
+"nome": "Júlia Marinho",
+"partido": "psc",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3461124674464,
+"Dim.2": -0.2469547825077,
+"nome": "Júlio Cesar",
+"partido": "psd",
+"uf": "PI",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1962074166413,
+"Dim.2": 0.1198238595099,
+"nome": "Júlio Delgado",
+"partido": "psb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.001966780052584,
+"Dim.2": -0.3640175948609,
+"nome": "Julio Lopes",
+"partido": "pp",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.01419679249283,
+"Dim.2": -0.1263184287821,
+"nome": "Junior Marreca",
+"partido": "pen",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3888476047926,
+"Dim.2": -0.2392860427602,
+"nome": "Juscelino Filho",
+"partido": "prp",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.3390230922306,
+"Dim.2": -0.01848587976403,
+"nome": "Jutahy Junior",
+"partido": "psdb",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.1565730176292,
+"Dim.2": -0.3150753251365,
+"nome": "Kaio Maniçoba",
+"partido": "phs",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.301250516735,
+"Dim.2": 0.1473742509635,
+"nome": "Keiko Ota",
+"partido": "psb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4528532384793,
+"Dim.2": 0.03604521373715,
+"nome": "Laercio Oliveira",
+"partido": "solidaried",
+"uf": "SE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3158820785645,
+"Dim.2": -0.1670549229015,
+"nome": "Laerte Bessa",
+"partido": "pr",
+"uf": "DF",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1441527006329,
+"Dim.2": -0.2493657578428,
+"nome": "Laudivio Carvalho",
+"partido": "pmdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.312445523991,
+"Dim.2": -0.4049252260818,
+"nome": "Lázaro Botelho",
+"partido": "pp",
+"uf": "TO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6540661680313,
+"Dim.2": 0.3490738401106,
+"nome": "Leandre",
+"partido": "pv",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.01610858338801,
+"Dim.2": -0.0658649662577,
+"nome": "Lelo Coimbra",
+"partido": "pmdb",
+"uf": "ES",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.5764918486422,
+"Dim.2": 0.3697408408352,
+"nome": "Leo de Brito",
+"partido": "pt",
+"uf": "AC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.5192872750845,
+"Dim.2": 0.370162516477,
+"nome": "Leonardo Monteiro",
+"partido": "pt",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.3498979249119,
+"Dim.2": -0.3994299296274,
+"nome": "Leonardo Picciani",
+"partido": "pmdb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.2244644384741,
+"Dim.2": -0.3055140331175,
+"nome": "Leonardo Quintão",
+"partido": "pmdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.4268634908444,
+"Dim.2": -0.04237053611758,
+"nome": "Leônidas Cristino",
+"partido": "pros",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.3420847857207,
+"Dim.2": 0.2038756270595,
+"nome": "Leopoldo Meyer",
+"partido": "psb",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3463738311381,
+"Dim.2": 0.1181940745026,
+"nome": "Lincoln Portela",
+"partido": "pr",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3594012349403,
+"Dim.2": -0.2865888344678,
+"nome": "Lindomar Garçon",
+"partido": "pmdb",
+"uf": "RO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.8162645164735,
+"Dim.2": 0.05476116086421,
+"nome": "Lobbe Neto",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.7338343809289,
+"Dim.2": -0.1467691217762,
+"nome": "Lucas Vergilio",
+"partido": "solidaried",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4878557258289,
+"Dim.2": 0.4494852383662,
+"nome": "Luciana Santos",
+"partido": "pcdob",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4973886970391,
+"Dim.2": 0.209669421945,
+"nome": "Luciano Ducci",
+"partido": "psb",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2634178245651,
+"Dim.2": -0.3290573613906,
+"nome": "Lucio Mosquini",
+"partido": "pmdb",
+"uf": "RO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.4757173083876,
+"Dim.2": -0.2160370205996,
+"nome": "Lúcio Vale",
+"partido": "pr",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1645917600439,
+"Dim.2": -0.3693916118089,
+"nome": "Lucio Vieira Lima",
+"partido": "pmdb",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.8093983837063,
+"Dim.2": -0.02724754514992,
+"nome": "Luis Carlos Heinze",
+"partido": "pp",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2405943767179,
+"Dim.2": -0.03837175180773,
+"nome": "Luis Tibé",
+"partido": "ptdob",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4205074165469,
+"Dim.2": -0.1602624015063,
+"nome": "Luiz Carlos Busato",
+"partido": "ptb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6736467886214,
+"Dim.2": 0.101794387356,
+"nome": "Luiz Carlos Hauly",
+"partido": "psdb",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.2410679099516,
+"Dim.2": -0.2625312979882,
+"nome": "Luiz Carlos Ramos",
+"partido": "psdc",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4151320527427,
+"Dim.2": -0.2644284214669,
+"nome": "Luiz Cláudio",
+"partido": "pr",
+"uf": "RO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6921490415098,
+"Dim.2": 0.5206987333388,
+"nome": "Luiz Couto",
+"partido": "pt",
+"uf": "PB",
+"destaque": true,
+"destaque_pb": "PB",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.1918597812557,
+"Dim.2": -0.3561541487249,
+"nome": "Luiz Fernando Faria",
+"partido": "pp",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.02390139237038,
+"Dim.2": -0.1683379096327,
+"nome": "Luiz Lauro Filho",
+"partido": "psb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3952815431299,
+"Dim.2": -0.3070826927542,
+"nome": "Luiz Nishimori",
+"partido": "pr",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5889550154868,
+"Dim.2": 0.3059241015353,
+"nome": "Luiz Sérgio",
+"partido": "pt",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.01884057403578,
+"Dim.2": 0.3827264811792,
+"nome": "Luiza Erundina",
+"partido": "psb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2626263188176,
+"Dim.2": 0.4566008920338,
+"nome": "Luizianne Lins",
+"partido": "pt",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.5264978200932,
+"Dim.2": 0.005504885129811,
+"nome": "Macedo",
+"partido": "psl",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3498269463037,
+"Dim.2": -0.1526054007856,
+"nome": "Magda Mofatto",
+"partido": "pr",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2674358957309,
+"Dim.2": 0.3683538966196,
+"nome": "Major Olimpio",
+"partido": "pdt",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7617479641013,
+"Dim.2": 0.1057443062273,
+"nome": "Mandetta",
+"partido": "dem",
+"uf": "MS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1703161930495,
+"Dim.2": -0.3596182327701,
+"nome": "Manoel Junior",
+"partido": "pmdb",
+"uf": "PB",
+"destaque": false,
+"destaque_pb": "PB",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.6155852812763,
+"Dim.2": -0.004754497310741,
+"nome": "Mara Gabrilli",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.1665006623582,
+"Dim.2": -0.2457462142036,
+"nome": "Marcelo Aguiar",
+"partido": "dem",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2495780647886,
+"Dim.2": -0.07025965797047,
+"nome": "Marcelo Álvaro Antônio",
+"partido": "prp",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.09799851946067,
+"Dim.2": -0.4113524256599,
+"nome": "Marcelo Aro",
+"partido": "phs",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6682227240377,
+"Dim.2": 0.5126181170281,
+"nome": "Marcelo Belinati",
+"partido": "pp",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2670651516038,
+"Dim.2": -0.18632356555,
+"nome": "Marcelo Castro",
+"partido": "pmdb",
+"uf": "PI",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.09306943703227,
+"Dim.2": 0.2877856680677,
+"nome": "Marcelo Matos",
+"partido": "pdt",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3198846247207,
+"Dim.2": -0.177116784529,
+"nome": "Marcelo Squassoni",
+"partido": "prb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4454067745424,
+"Dim.2": -0.3528241164199,
+"nome": "Marcio Alvino",
+"partido": "pr",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4181333183663,
+"Dim.2": -0.07134758364364,
+"nome": "Márcio Marinho",
+"partido": "prb",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5632388362916,
+"Dim.2": 0.3220840540861,
+"nome": "Marco Maia",
+"partido": "pt",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.8309261009783,
+"Dim.2": -0.002599750873531,
+"nome": "Marco Tebaldi",
+"partido": "psdb",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.5704956079606,
+"Dim.2": 0.493695624369,
+"nome": "Marcon",
+"partido": "pt",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.737275027085,
+"Dim.2": 0.1492352525539,
+"nome": "Marcos Abrão",
+"partido": "pps",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2386570752336,
+"Dim.2": -0.3378057656101,
+"nome": "Marcos Montes",
+"partido": "psd",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2423732739602,
+"Dim.2": 0.09636146669113,
+"nome": "Marcos Reategui",
+"partido": "psc",
+"uf": "AP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.05401975017602,
+"Dim.2": 0.2220720437547,
+"nome": "Marcos Rogério",
+"partido": "pdt",
+"uf": "RO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.09392757027305,
+"Dim.2": -0.3287239798133,
+"nome": "Marcos Rotta",
+"partido": "pmdb",
+"uf": "AM",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.027751184911,
+"Dim.2": -0.07222797976129,
+"nome": "Marcos Soares",
+"partido": "pr",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.8241740813593,
+"Dim.2": 0.01998915914912,
+"nome": "Marcus Pestana",
+"partido": "psdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.2529203690391,
+"Dim.2": -0.1571325073676,
+"nome": "Marcus Vicente",
+"partido": "pp",
+"uf": "ES",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6431893732053,
+"Dim.2": 0.3774667047835,
+"nome": "Margarida Salomão",
+"partido": "pt",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.6378446619578,
+"Dim.2": 0.3749276303103,
+"nome": "Maria do Rosário",
+"partido": "pt",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.2043765006749,
+"Dim.2": 0.2275929478869,
+"nome": "Maria Helena",
+"partido": "psb",
+"uf": "RR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7412975448099,
+"Dim.2": 0.06306994019906,
+"nome": "Mariana Carvalho",
+"partido": "psdb",
+"uf": "RO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.178966440666,
+"Dim.2": 0.08763463562182,
+"nome": "Marinaldo Rosendo",
+"partido": "psb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.155844833538,
+"Dim.2": -0.08471733427384,
+"nome": "Marinha Raupp",
+"partido": "pmdb",
+"uf": "RO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.1969997872004,
+"Dim.2": -0.02527870098483,
+"nome": "Mário Heringer",
+"partido": "pdt",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2350866224708,
+"Dim.2": -0.3575211086249,
+"nome": "Mário Negromonte Jr.",
+"partido": "pp",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3225323127377,
+"Dim.2": -0.4334778521196,
+"nome": "Marquinho Mendes",
+"partido": "pmdb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.1129342458809,
+"Dim.2": -0.2946681240356,
+"nome": "Marx Beltrão",
+"partido": "pmdb",
+"uf": "AL",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.322371735769,
+"Dim.2": -0.2585107313089,
+"nome": "Maurício Quintella Lessa",
+"partido": "pr",
+"uf": "AL",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2714266390374,
+"Dim.2": -0.4238030607094,
+"nome": "Mauro Lopes",
+"partido": "pmdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.3115355681336,
+"Dim.2": -0.4014288064502,
+"nome": "Mauro Mariani",
+"partido": "pmdb",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.1320083833588,
+"Dim.2": -0.2176018743722,
+"nome": "Mauro Pereira",
+"partido": "pmdb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.8246995066444,
+"Dim.2": 0.1427053506244,
+"nome": "Max Filho",
+"partido": "psdb",
+"uf": "ES",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.7424159624054,
+"Dim.2": 0.0223674858877,
+"nome": "Mendonça Filho",
+"partido": "dem",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3053770021036,
+"Dim.2": 0.2058423995564,
+"nome": "Merlong Solano",
+"partido": "pt",
+"uf": "PI",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.8973650130433,
+"Dim.2": -0.01062146167392,
+"nome": "Miguel Haddad",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.4506530334373,
+"Dim.2": -0.3208938160334,
+"nome": "Miguel Lombardi",
+"partido": "pr",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3640823576788,
+"Dim.2": -0.2690740304616,
+"nome": "Milton Monti",
+"partido": "pr",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4043347223737,
+"Dim.2": 0.5232906128288,
+"nome": "Miro Teixeira",
+"partido": "pros",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.09305567572422,
+"Dim.2": -0.2536663347908,
+"nome": "Misael Varella",
+"partido": "dem",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.538316076335,
+"Dim.2": -0.1826498844026,
+"nome": "Missionário José Olimpio",
+"partido": "pp",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6502128351734,
+"Dim.2": 0.4791670795925,
+"nome": "Moema Gramacho",
+"partido": "pt",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.7748148157314,
+"Dim.2": 0.2023979544173,
+"nome": "Moroni Torgan",
+"partido": "dem",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6956825646733,
+"Dim.2": 0.2351946602771,
+"nome": "Moses Rodrigues",
+"partido": "pps",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6882005677052,
+"Dim.2": 0.01317501364257,
+"nome": "Nelson Marchezan Junior",
+"partido": "psdb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.1999984926967,
+"Dim.2": -0.4180665082215,
+"nome": "Nelson Marquezelli",
+"partido": "ptb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4212757371786,
+"Dim.2": -0.1944877868752,
+"nome": "Nelson Meurer",
+"partido": "pp",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3615834016907,
+"Dim.2": -0.3798506640265,
+"nome": "Newton Cardoso Jr",
+"partido": "pmdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.6324802012019,
+"Dim.2": -0.1200812168443,
+"nome": "Nilson Leitão",
+"partido": "psdb",
+"uf": "MT",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.8674497108374,
+"Dim.2": -0.03579495537872,
+"nome": "Nilson Pinto",
+"partido": "psdb",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.7102752698905,
+"Dim.2": 0.3842536607447,
+"nome": "Nilto Tatto",
+"partido": "pt",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.05354621250481,
+"Dim.2": -0.1518346199833,
+"nome": "Nilton Capixaba",
+"partido": "ptb",
+"uf": "RO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.8368536833261,
+"Dim.2": -0.03486063902332,
+"nome": "Odelmo Leão",
+"partido": "pp",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5885912131941,
+"Dim.2": 0.1802348666811,
+"nome": "Odorico Monteiro",
+"partido": "pt",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.458196325598,
+"Dim.2": -0.055639203051,
+"nome": "Onyx Lorenzoni",
+"partido": "dem",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6326405439754,
+"Dim.2": 0.5383756091684,
+"nome": "Orlando Silva",
+"partido": "pcdob",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7076496605153,
+"Dim.2": 0.03514351561126,
+"nome": "Osmar Bertoldi",
+"partido": "dem",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.04550445289859,
+"Dim.2": -0.3161735864543,
+"nome": "Osmar Serraglio",
+"partido": "pmdb",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.1010508219842,
+"Dim.2": -0.1519888927125,
+"nome": "Osmar Terra",
+"partido": "pmdb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.5333102461056,
+"Dim.2": 0.006373898342981,
+"nome": "Otavio Leite",
+"partido": "psdb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.5776291960565,
+"Dim.2": 0.4814720324782,
+"nome": "Padre João",
+"partido": "pt",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.3821054456095,
+"Dim.2": -0.2551194461131,
+"nome": "Paes Landim",
+"partido": "ptb",
+"uf": "PI",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7606442577672,
+"Dim.2": 0.00424046391775,
+"nome": "Pastor Eurico",
+"partido": "psb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4109403420961,
+"Dim.2": -0.1864562215969,
+"nome": "Pastor Franklin",
+"partido": "ptdob",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7211576762039,
+"Dim.2": 0.0239799041208,
+"nome": "Pauderney Avelino",
+"partido": "dem",
+"uf": "AM",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5853937277481,
+"Dim.2": 0.3595089924093,
+"nome": "Paulão",
+"partido": "pt",
+"uf": "AL",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.6420746765983,
+"Dim.2": 0.0009271947305526,
+"nome": "Paulo Abi-Ackel",
+"partido": "psdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.2994790997232,
+"Dim.2": -0.1704339702651,
+"nome": "Paulo Azi",
+"partido": "dem",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.03120090942557,
+"Dim.2": -0.1147779141963,
+"nome": "Paulo Feijó",
+"partido": "pr",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.3394728599285,
+"Dim.2": 0.2022294202483,
+"nome": "Paulo Foletto",
+"partido": "psb",
+"uf": "ES",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1206170524093,
+"Dim.2": 0.02961147480353,
+"nome": "Paulo Freire",
+"partido": "pr",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4352860486344,
+"Dim.2": -0.1011316869093,
+"nome": "Paulo Magalhães",
+"partido": "psd",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.09826558256315,
+"Dim.2": -0.1693508003131,
+"nome": "Paulo Maluf",
+"partido": "pp",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4250117499182,
+"Dim.2": -0.1187231807368,
+"nome": "Paulo Pereira da Silva",
+"partido": "solidaried",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5965847090744,
+"Dim.2": 0.3273314019571,
+"nome": "Paulo Pimenta",
+"partido": "pt",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.6739331169569,
+"Dim.2": 0.4850541281883,
+"nome": "Paulo Teixeira",
+"partido": "pt",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.3786372362431,
+"Dim.2": -0.4623459353783,
+"nome": "Pedro Chaves",
+"partido": "pmdb",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.8591498363343,
+"Dim.2": 0.05430535328763,
+"nome": "Pedro Cunha Lima",
+"partido": "psdb",
+"uf": "PB",
+"destaque": false,
+"destaque_pb": "PB",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.366799624501,
+"Dim.2": -0.2396596234026,
+"nome": "Pedro Fernandes",
+"partido": "ptb",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4698932230461,
+"Dim.2": 0.5572460783875,
+"nome": "Pedro Uczai",
+"partido": "pt",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.8670441958737,
+"Dim.2": 0.01446830011787,
+"nome": "Pedro Vilela",
+"partido": "psdb",
+"uf": "AL",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.07574075239496,
+"Dim.2": 0.2358075849342,
+"nome": "Pompeo de Mattos",
+"partido": "pdt",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2142838537522,
+"Dim.2": 0.06295426233801,
+"nome": "Pr. Marco Feliciano",
+"partido": "psc",
+"uf": "SP",
+"destaque": true,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6616381665379,
+"Dim.2": -0.08765084245116,
+"nome": "Professor Victório Galli",
+"partido": "psc",
+"uf": "MT",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.6850193570928,
+"Dim.2": 0.231843091481,
+"nome": "Professora Dorinha Seabra Rezende",
+"partido": "dem",
+"uf": "TO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3614009300957,
+"Dim.2": 0.5728439708774,
+"nome": "Professora Marcivania",
+"partido": "pt",
+"uf": "AP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.2724399638646,
+"Dim.2": 0.1493617216486,
+"nome": "Rafael Motta",
+"partido": "pros",
+"uf": "RN",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7718429174436,
+"Dim.2": 0.03524398951046,
+"nome": "Raimundo Gomes de Matos",
+"partido": "psdb",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.6108425035175,
+"Dim.2": -0.1001280544891,
+"nome": "Raquel Muniz",
+"partido": "psc",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.3192281127041,
+"Dim.2": 0.3007302636055,
+"nome": "Raul Jungmann",
+"partido": "pps",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5298464004089,
+"Dim.2": 0.244716623306,
+"nome": "Reginaldo Lopes",
+"partido": "pt",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.1354273348716,
+"Dim.2": -0.2557955784293,
+"nome": "Remídio Monai",
+"partido": "pr",
+"uf": "RR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4532441027856,
+"Dim.2": -0.003218404229234,
+"nome": "Renata Abreu",
+"partido": "ptn",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.147492429673,
+"Dim.2": -0.2431796684166,
+"nome": "Renato Molling",
+"partido": "pp",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5318503760476,
+"Dim.2": -0.118256234662,
+"nome": "Renzo Braz",
+"partido": "pp",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3418528539498,
+"Dim.2": -0.3116876330255,
+"nome": "Ricardo Barros",
+"partido": "pp",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3029905779467,
+"Dim.2": -0.1675110259318,
+"nome": "Ricardo Izar",
+"partido": "psd",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3155806802402,
+"Dim.2": -0.2629352311489,
+"nome": "Ricardo Teobaldo",
+"partido": "ptb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.803333378999,
+"Dim.2": 0.03622307284636,
+"nome": "Ricardo Tripoli",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.4504854851784,
+"Dim.2": -0.1120625661932,
+"nome": "Roberto Alves",
+"partido": "prb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5394376945139,
+"Dim.2": -0.2346085653961,
+"nome": "Roberto Balestra",
+"partido": "pp",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3558795348664,
+"Dim.2": -0.4238647373705,
+"nome": "Roberto Britto",
+"partido": "pp",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4990470584435,
+"Dim.2": 0.130595342189,
+"nome": "Roberto Freire",
+"partido": "pps",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1021640830683,
+"Dim.2": 0.2078498962111,
+"nome": "Roberto Góes",
+"partido": "pdt",
+"uf": "AP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2550744704247,
+"Dim.2": -0.04975336028264,
+"nome": "Roberto Sales",
+"partido": "prb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.8273491430025,
+"Dim.2": 0.0022734761189,
+"nome": "Rocha",
+"partido": "psdb",
+"uf": "AC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.8301757319166,
+"Dim.2": -0.0109308564747,
+"nome": "Rodrigo de Castro",
+"partido": "psdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.1730798275686,
+"Dim.2": -0.1928112364393,
+"nome": "Rodrigo Maia",
+"partido": "dem",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.637666301525,
+"Dim.2": 0.2410681097211,
+"nome": "Rodrigo Martins",
+"partido": "psb",
+"uf": "PI",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3311048278701,
+"Dim.2": -0.04544298764009,
+"nome": "Rodrigo Pacheco",
+"partido": "pmdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.7469915562307,
+"Dim.2": -0.06012309774053,
+"nome": "Rogério Marinho",
+"partido": "psdb",
+"uf": "RN",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.2795035549156,
+"Dim.2": -0.3752379677079,
+"nome": "Rogério Peninha Mendonça",
+"partido": "pmdb",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.3418538587946,
+"Dim.2": -0.2546017464627,
+"nome": "Rogério Rosso",
+"partido": "psd",
+"uf": "DF",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3685104777324,
+"Dim.2": -0.2912924521423,
+"nome": "Rômulo Gouveia",
+"partido": "psd",
+"uf": "PB",
+"destaque": false,
+"destaque_pb": "PB",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3776091380202,
+"Dim.2": -0.3606437391932,
+"nome": "Ronaldo Benedet",
+"partido": "pmdb",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.01881602663649,
+"Dim.2": -0.330722968889,
+"nome": "Ronaldo Carletto",
+"partido": "pp",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1544431675307,
+"Dim.2": 0.2234536236252,
+"nome": "Ronaldo Fonseca",
+"partido": "pros",
+"uf": "DF",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1517733812622,
+"Dim.2": 0.3073536183066,
+"nome": "Ronaldo Lessa",
+"partido": "pdt",
+"uf": "AL",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1883218946634,
+"Dim.2": 0.1077752539711,
+"nome": "Ronaldo Martins",
+"partido": "prb",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1337675946555,
+"Dim.2": 0.1757982543016,
+"nome": "Ronaldo Nogueira",
+"partido": "ptb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3087857571658,
+"Dim.2": -0.2616493709732,
+"nome": "Roney Nemer",
+"partido": "pmdb",
+"uf": "DF",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.424158667544,
+"Dim.2": -0.08006195275572,
+"nome": "Rosangela Gomes",
+"partido": "prb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5345972759843,
+"Dim.2": -0.02484914749914,
+"nome": "Rossoni",
+"partido": "psdb",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.7433467461443,
+"Dim.2": 0.1325656855083,
+"nome": "Rubens Bueno",
+"partido": "pps",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4437543305247,
+"Dim.2": 0.2493230848852,
+"nome": "Rubens Otoni",
+"partido": "pt",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.5838948805688,
+"Dim.2": 0.4637908601597,
+"nome": "Rubens Pereira Júnior",
+"partido": "pcdob",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4849910189053,
+"Dim.2": 0.3433742322766,
+"nome": "Ságuas Moraes",
+"partido": "pt",
+"uf": "MT",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.9227789347352,
+"Dim.2": -0.006864099948414,
+"nome": "Samuel Moreira",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.1565025683754,
+"Dim.2": -0.2097341023888,
+"nome": "Sandes Júnior",
+"partido": "pp",
+"uf": "GO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7418670181739,
+"Dim.2": 0.1723580308985,
+"nome": "Sandro Alex",
+"partido": "pps",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2885122373365,
+"Dim.2": -0.3881936863712,
+"nome": "Saraiva Felipe",
+"partido": "pmdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.1936494725988,
+"Dim.2": 0.07924728927587,
+"nome": "Sarney Filho",
+"partido": "pv",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3756221446666,
+"Dim.2": -0.2934313889705,
+"nome": "Sérgio Brito",
+"partido": "psd",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.4595508283498,
+"Dim.2": -0.008159075197575,
+"nome": "Sérgio Moraes",
+"partido": "ptb",
+"uf": "RS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3129569365202,
+"Dim.2": -0.156794767649,
+"nome": "Sérgio Reis",
+"partido": "prb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2917842652135,
+"Dim.2": -0.4671145653889,
+"nome": "Sergio Souza",
+"partido": "pmdb",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.1394797852288,
+"Dim.2": 0.3773542114046,
+"nome": "Sergio Vidigal",
+"partido": "pdt",
+"uf": "ES",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3155885125559,
+"Dim.2": -0.3163505691377,
+"nome": "Sergio Zveiter",
+"partido": "psd",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.8287267370359,
+"Dim.2": 0.04852294192737,
+"nome": "Shéridan",
+"partido": "psdb",
+"uf": "RR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.589012238112,
+"Dim.2": 0.3371222869677,
+"nome": "Sibá Machado",
+"partido": "pt",
+"uf": "AC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.0008053729156575,
+"Dim.2": -0.1658384266931,
+"nome": "Silas Brasileiro",
+"partido": "pmdb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.2811981449875,
+"Dim.2": -0.2172771400122,
+"nome": "Silas Câmara",
+"partido": "psd",
+"uf": "AM",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4948975510517,
+"Dim.2":  0.20703954483,
+"nome": "Silas Freire",
+"partido": "pr",
+"uf": "PI",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4017566957483,
+"Dim.2": -0.1399210914138,
+"nome": "Silvio Costa",
+"partido": "psc",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.8177738320979,
+"Dim.2": -0.04139063213971,
+"nome": "Silvio Torres",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.2545987333547,
+"Dim.2": -0.2425012283397,
+"nome": "Simão Sessim",
+"partido": "pp",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2822999465547,
+"Dim.2": -0.2524155631838,
+"nome": "Simone Morgado",
+"partido": "pmdb",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.232718361357,
+"Dim.2": -0.419953180073,
+"nome": "Soraya Santos",
+"partido": "pmdb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.3413261083698,
+"Dim.2": -0.1147371117388,
+"nome": "Sóstenes Cavalcante",
+"partido": "psd",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.5177401851917,
+"Dim.2": 0.06353194803362,
+"nome": "Stefano Aguiar",
+"partido": "psb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.02446657558974,
+"Dim.2": 0.3053494026604,
+"nome": "Subtenente Gonzaga",
+"partido": "pdt",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1356807816801,
+"Dim.2": 0.5593996025593,
+"nome": "Tadeu Alencar",
+"partido": "psb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1726822395168,
+"Dim.2": 0.09382036992754,
+"nome": "Tenente Lúcio",
+"partido": "psb",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.1628119220532,
+"Dim.2": -0.1717031013668,
+"nome": "Tereza Cristina",
+"partido": "psb",
+"uf": "MS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2657015908499,
+"Dim.2": -0.1048480683693,
+"nome": "Tia Eron",
+"partido": "prb",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.0325503904077,
+"Dim.2": -0.06297304644785,
+"nome": "Tiririca",
+"partido": "pr",
+"uf": "SP",
+"destaque": true,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1798286661134,
+"Dim.2": -0.1926227389991,
+"nome": "Toninho Pinheiro",
+"partido": "pp",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.6522325903846,
+"Dim.2": 0.308232246101,
+"nome": "Toninho Wandscheer",
+"partido": "pt",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.4667411209796,
+"Dim.2": 0.1664000486736,
+"nome": "Uldurico Junior",
+"partido": "ptc",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.3642454526247,
+"Dim.2": 0.194915267394,
+"nome": "Valadares Filho",
+"partido": "psb",
+"uf": "SE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.0937573012805,
+"Dim.2": -0.1762732571004,
+"nome": "Valdir Colatto",
+"partido": "pmdb",
+"uf": "SC",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.6635045782394,
+"Dim.2": 0.4993282317339,
+"nome": "Valmir Assunção",
+"partido": "pt",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.6043008277436,
+"Dim.2": 0.3283402464675,
+"nome": "Valmir Prascidelli",
+"partido": "pt",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.4130871269123,
+"Dim.2": -0.02497158831604,
+"nome": "Valtenir Pereira",
+"partido": "pros",
+"uf": "MT",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5184827882251,
+"Dim.2": 0.2372536614077,
+"nome": "Vander Loubet",
+"partido": "pt",
+"uf": "MS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.5587636794471,
+"Dim.2": -0.002486392105759,
+"nome": "Vanderlei Macris",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": -0.2650013519059,
+"Dim.2": -0.2169564374861,
+"nome": "Veneziano Vital do Rêgo",
+"partido": "pmdb",
+"uf": "PB",
+"destaque": true,
+"destaque_pb": "PB",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.4372686755904,
+"Dim.2": 0.245054858908,
+"nome": "Vicente Candido",
+"partido": "pt",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.6100721272986,
+"Dim.2": 0.3601504269838,
+"nome": "Vicentinho",
+"partido": "pt",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.3310702981295,
+"Dim.2": -0.225148445142,
+"nome": "Vicentinho Júnior",
+"partido": "psb",
+"uf": "TO",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1059981180788,
+"Dim.2": -0.05649230090513,
+"nome": "Victor Mendes",
+"partido": "pv",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4605697990795,
+"Dim.2": -0.1654842297433,
+"nome": "Vinicius Carvalho",
+"partido": "prb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.1708820568167,
+"Dim.2": -0.1402058673599,
+"nome": "Vinicius Gurgel",
+"partido": "pr",
+"uf": "AP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.7604628491793,
+"Dim.2": -0.03994504257157,
+"nome": "Vitor Lippi",
+"partido": "psdb",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "psdb" 
+},
+{
+ "Dim.1": 0.598864844448,
+"Dim.2": 0.01572514619902,
+"nome": "Vitor Valim",
+"partido": "pmdb",
+"uf": "CE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.6276045255545,
+"Dim.2": 0.5588222689735,
+"nome": "Wadson Ribeiro",
+"partido": "pcdob",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5569711481294,
+"Dim.2": 0.4049920212528,
+"nome": "Waldenor Pereira",
+"partido": "pt",
+"uf": "BA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.09686505052354,
+"Dim.2": -0.1777244261567,
+"nome": "Waldir Maranhão",
+"partido": "pp",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2821908194368,
+"Dim.2": -0.1915469074899,
+"nome": "Walney Rocha",
+"partido": "ptb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.2976320349868,
+"Dim.2": -0.4530810267719,
+"nome": "Walter Alves",
+"partido": "pmdb",
+"uf": "RN",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": -0.3370119732536,
+"Dim.2": -0.24478085481,
+"nome": "Walter Ihoshi",
+"partido": "psd",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3351329312209,
+"Dim.2": -0.3702942356848,
+"nome": "Washington Reis",
+"partido": "pmdb",
+"uf": "RJ",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pmdb" 
+},
+{
+ "Dim.1": 0.2951926884755,
+"Dim.2": 0.4762896495385,
+"nome": "Weliton Prado",
+"partido": "pt",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.4085804747593,
+"Dim.2": -0.1926200374032,
+"nome": "Wellington Roberto",
+"partido": "pr",
+"uf": "PB",
+"destaque": false,
+"destaque_pb": "PB",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.0724351644314,
+"Dim.2": 0.2976641900942,
+"nome": "Weverton Rocha",
+"partido": "pdt",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.2542067412014,
+"Dim.2": 0.03535202383977,
+"nome": "William Woo",
+"partido": "pv",
+"uf": "SP",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.3224922625841,
+"Dim.2": -0.1747274118084,
+"nome": "Wilson Filho",
+"partido": "ptb",
+"uf": "PB",
+"destaque": false,
+"destaque_pb": "PB",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": 0.08476021673303,
+"Dim.2": 0.4687188130053,
+"nome": "Wolney Queiroz",
+"partido": "pdt",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4862726668868,
+"Dim.2": 0.3955052500396,
+"nome": "Zé Carlos",
+"partido": "pt",
+"uf": "MA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.556679577466,
+"Dim.2": 0.315917547729,
+"nome": "Zé Geraldo",
+"partido": "pt",
+"uf": "PA",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": 0.718325783087,
+"Dim.2": -0.0687538678377,
+"nome": "Zé Silva",
+"partido": "solidaried",
+"uf": "MG",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.4755328336459,
+"Dim.2": -0.09818519703574,
+"nome": "Zeca Cavalcanti",
+"partido": "ptb",
+"uf": "PE",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+},
+{
+ "Dim.1": -0.5352440126147,
+"Dim.2": 0.2896346684665,
+"nome": "Zeca Dirceu",
+"partido": "pt",
+"uf": "PR",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.6575908211297,
+"Dim.2": 0.3550387227414,
+"nome": "Zeca do Pt",
+"partido": "pt",
+"uf": "MS",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "pt" 
+},
+{
+ "Dim.1": -0.4099193647212,
+"Dim.2": 0.09163675746062,
+"nome": "Zenaide Maia",
+"partido": "pr",
+"uf": "RN",
+"destaque": false,
+"destaque_pb": "Demais estados",
+"destaque_partido": "outros" 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        chart
+  .color([ "#BDBDBD", "#FF3300", "darkred", "#0066CC", "#E69F00" ])
+  .tooltipContent( function(key, x, y, e){ 
+  return e.point.nome + ', ' + (e.point.partido.toUpperCase());
+} )
+  .tooltipXContent(null)
+  .tooltipYContent(null)
+  .sizeRange([     50,     50 ])
+  .showXAxis(false)
+  .showYAxis(false)
+          
+        
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+    <script></script>    
+  </body>
+</html>
