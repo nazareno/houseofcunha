@@ -49,10 +49,12 @@ body {
 
 .featurette-image.pull-left {
     margin-right: 40px;
+    max-width: 60%;
 }
 
 .featurette-image.pull-right {
     margin-left: 40px;
+    max-width: 60%;
 }
 
 .featurette-heading {
