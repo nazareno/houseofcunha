@@ -29,6 +29,10 @@ body {
     background: rgba(255,255,255,0.9);
 }
 
+.lead {
+    font-size: 18px;
+}
+
 .headline h2 {
     font-size: 77px;
     background: #fff;
@@ -52,7 +56,7 @@ body {
 }
 
 .featurette-heading {
-    font-size: 50px;
+    font-size: 46px;
 }
 
 footer {
