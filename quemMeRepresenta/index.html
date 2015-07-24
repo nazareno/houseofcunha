@@ -76,8 +76,23 @@
 
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3" ng-controller="VotacoesCtrl">
+
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="intro-text">
+                        <span class="name">Deputados</span>
+                        {{estadoSelecionado}}
+                    </div>
+
+                    <select  ng-model="estadoSelecionado" ng-options="estado.uf for estado in estados"
+                             ng-change="filter()" >
+                        <option value="">TODOS</option>
+                    </select>
+                    <div class="list-group">
                         <span>{{title}}</span>
-                        <d3-bars data="d3Data" label="name" on-click="d3OnClick(item)"></d3-bars>
+                        <d3-bars data="deputadosDaParada" label="nome" on-click="d3OnClick(item)"></d3-bars>
                         <br>
                         <br>
                         <span>First Item</span>
@@ -88,21 +103,9 @@
                         <br>
                         <span>Third Item</span>
                         <input type="text" ng-model="d3Data[2].score"></input>
-                    </div>
-                </div>
 
-                <div class="col-lg-8">
-                    <div class="intro-text">
-                        <span class="name">Deputados</span>
-                        {{estadoSelecionado}}
-                    </div>
-
-                    <select  ng-model="estadoSelecionado" ng-options="estado.uf for estado in estados">
-                        <option value="">TODOS</option>
-                    </select>
-                    <div class="list-group">
                         <p class="list-group-item-text" ng-repeat="deputado in deputados | orderBy:['-score','partido','nome'] | filter:estadoSelecionado">
-                            {{deputado.nome}} - {{deputado.partido}}/{{deputado.uf}}    -   {{deputado.score * 100}}%
+                            {{deputado.nome}} - {{deputado.partido}}/{{deputado.uf}}    -   {{deputado.score}}%
                         </p>
                     </div>
 

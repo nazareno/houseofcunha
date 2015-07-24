@@ -13,7 +13,7 @@ houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, 
         {name: "Loser", score: 48}
     ];
     $scope.d3OnClick = function(item){
-        alert(item.name);
+        alert(item.nome);
     };
 
 
@@ -22,11 +22,13 @@ houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, 
 
 
 
+    $scope.estadoSelecionado = "";
 
     $scope.estados = [];
-    $scope.deputados = [];
+    $scope.deputadosDaParada = [];
     $scope.temas = [];
 
+    $scope.deputados = [];
 
 
 
@@ -43,7 +45,7 @@ houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, 
         _.map($scope.deputados,function (deputado){
             _.extend(deputado,{"score":0})
         })
-
+        $scope.deputadosDaParada = $scope.deputados;
     });
 
     $http.get('dados/temas.json').success(function(data) {
@@ -64,6 +66,28 @@ houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, 
         }
 
         $scope.refresh_values(data,value);
+    };
+
+    $scope.filter =  function() {
+        if ($scope.estadoSelecionado != ""){
+            //TODOS
+            if ($scope.estadoSelecionado == null){
+                $scope.deputadosDaParada = $scope.deputados;
+            }else{
+                $scope.deputadosDaParada = _.filter($scope.deputados, function(deputados){
+                    return deputados.uf == $scope.estadoSelecionado.uf;
+                });
+
+            }
+
+
+            $scope.deputadosDaParada = _.sortBy($scope.deputadosDaParada, function(deputado) {
+                return -deputado.score;
+            });
+
+        }
+
+
     };
 
 
@@ -91,9 +115,20 @@ houseOfCunhaApp.controller('VotacoesCtrl', ['$scope', '$http', function($scope, 
             },{sum:0,total:0})
             if (! sumEquals["total"] == 0){
                 var score = sumEquals["sum"] / sumEquals["total"];
-                deputado.score = score;
+                deputado.score = score * 100;
             }
         })
+
+
+        if ($scope.estadoSelecionado != "" && $scope.estadoSelecionado != null){
+            $scope.deputadosDaParada = _.filter($scope.deputados, function(deputados){
+                return deputados.uf == $scope.estadoSelecionado.uf;
+            });
+        }
+
+        $scope.deputadosDaParada = _.sortBy($scope.deputadosDaParada, function(deputado) {
+            return -deputado.score;
+        }); // [3, 2, 1, 0, -1, -2, -3]
     };
 
 
