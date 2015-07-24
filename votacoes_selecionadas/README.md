@@ -24,3 +24,18 @@ Do arquivo votacoes_selecionadas.csv seleciona as informações de cada votaçã
 votacoes_dados.csv
 Arquivo com os dados da votações (e não do ato de votação):
 tipo,num_pro,ano,id_votacao,resumo,data,hora,objetivo,sessao,nome_votacaonum_pro,ano,id_votacao,resumo,data,hora,objetivo,sessao,nome_votacao
+
+deputados_votos.R
+Filtra o arquivo votacoes_dados e deixa no formato long, gerando o arquivo deputados_votos.csv
+
+deputados_votos.csv
+Arquivo filtrado e no formato long das votações dos deputados
+id_dep,nome,partido,uf,Coincidência reeleição,Cota para mulheres legislativo,Distritao,Financiamento privado para partidos,Financiamento privado para partidos e candidatos,Maioridade 1,Maioridade 2,Pensão, Reeleição,Seguro Desemprego,Tempo Mandato,Terceirização,Transgênico,Voto Facultativo,Voto impresso
+
+parse_deputados_votos.py
+Transforma o deputados_votos.csv em um json, onde os temas são agrupados em um elemento.
+
+deputados_votos.json
+Json criado a partir do parse_deputados_votos.py
+
+
