@@ -83,6 +83,10 @@ footer {
         font-size: 50px;
     }
 
+    .headline2 {
+        font-size: 80px;
+    }
+
     .featurette-divider {
         margin: 40px 0;
     }
@@ -127,6 +131,11 @@ footer {
         font-size: 32px;
     }
 
+    .headline2 {
+        font-size: 60px;
+    }
+
+
     .featurette-divider {
         margin: 30px 0;
     }
@@ -144,4 +153,9 @@ footer {
     .headline h2 {
         font-size: 30px;
     }
+
+    .headline2 {
+        font-size: 50px;
+    }
+
 }
