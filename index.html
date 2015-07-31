@@ -1,119 +1,179 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
+<html lang="en">
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
+<head>
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>House of Cunha by nazareno</title>
-  </head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <body>
-    <a id="forkme_banner" href="https://github.com/nazareno/houseofcunha">View on GitHub</a>
-    <div class="shell">
+    <title>House of Cunha</title>
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>House of Cunha</h1>
-            <h2>Quem Cunha e quem a-Cunha na Câmara dos Deputados</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/nazareno/houseofcunha/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/nazareno/houseofcunha/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
+    <!-- Custom CSS -->
+    <!--<link href="css/one-page-wonder.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>body { margin: 0px; } .embed-container { position: relative; padding-bottom: 100%; height: 0; overflow: hidden; max-width: 90%;  } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">House of Cunha</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">As posições</a>
+                    </li>
+                    <li>
+                        <a href="#">Cunhômetro</a>
+                    </li>
+                    <li>
+                        <a href="#">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Width Image Header -->
+    <header class="header-image">
+        <div class="headline">
+            <div class="container">
+                <h1>House of Cunha</h1>
+                <h2>quem é quem lá</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
 
 
-      <span class="banner-fix"></span>
+        <hr class="featurette-divider">
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <a href="images/visao-geral.png">
+                <img class="featurette-image img-circle img-responsive pull-right m" src="images/visao-geral.png">
+            </a>
+            <h2 class="featurette-heading">As posições
+                <span class="text-muted">pelas ações</span>
+            </h2>
+            <p class="lead">A partir das votações, criamos um mapa que coloca junto os deputados da house of cunha que votam parecidos. Há três grupos maiores que detalharemos mais abaixo. (Você pode clicar na imagem para vê-la maior, se quiser procurar alguém...)</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Second Featurette -->
+        <div class="featurette" id="services">
+            <a href="images/icones.png">
+                <img class="featurette-image img-circle img-responsive pull-left" src="images/icones.png">
+            </a>
+            <h2 class="featurette-heading">Algumas referências
+                <span class="text-muted">para orientação.</span>
+            </h2>
+            <p class="lead">Para situar a leitura do mapa, aqui estão onde ficaram alguns deputados icônicos. Se como nós você é da Paraíba, temos uma versão com <a href="images/deputados-da-pb.png">destaque para os deputados da PB</a>.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Third Featurette -->
+        <div class="featurette" id="contact">
+            <a href="images/partidos.png">
+                <img class="featurette-image img-circle img-responsive pull-right" max-width="60%" src="images/partidos.png">
+            </a>
+            <h2 class="featurette-heading">Três partidos grandes
+                <span class="text-muted">e um quarto diferente.</span>
+            </h2>
+            <p class="lead">Os três maiores grupos no mapa são as posições de PT, PMDB e PSDB. O PSOL marca uma quarta posição diferente das três.
+            O PSDB está mais longe que o PMDB do PT, mas não tanto. O PMDB fica entre oposição e situação. </p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Fourth Featurette -->
+        <div class="featurette" id="services">
+            <img class="featurette-image img-circle img-responsive pull-left" src="http://img3.wikia.nocookie.net/__cb20061003200043/uncyclopedia/images/thumb/4/44/White_square.png/500px-White_square.png">
+            <h2 class="featurette-heading">Alguém em particular?
+                <span class="text-muted">procure com o mouse.</span>
+            </h2>
+            <p class="lead">As cores são as mesmas que usamos acima.</p>
+        </div>
+        <div class='embed-container'><iframe src='partidosdestaque.html' style='border:0;'></iframe></div>
+
+        <hr class="featurette-divider">
 
 
-      <section id="main_content">
-
-<a id="contexto" class="anchor" href="#contexto" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-
-<p>Todos temos acompanhado uma série de matérias polêmicas da <a href="http://nazareno.github.io/houseofcunha/images/cunha.png">Câmara dos Deputados</a> na mídia. 
-Por um lado, algo que marcou a Câmara em 2015 é a sua presidência. Por outro lado, embora as posições de Eduardo Cunha sejam frequentemente criticáveis, ele não aprova as matérias sozinho. 
-Assim, para entender as posições dos demais deputados, baixamos e analisamos o histórico de votações de todos os deputados nas proposições votadas em 2015.  
-Foram analisados mais de 50.000 votos para 44 diferentes proposições.</p>
-
-<p>De posse desses dados, utilizamos métodos estatísticos para comparar as posições dos deputados e partidos, e para mostrar quem tipicamente concorda com Eduardo Cunha. Como sendo presidente da casa, Cunha não vota, consideramos que sua posição é a do PMDB.</p>
-
-<h1>
-<a id="análise" class="anchor" href="#an%C3%A1lise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Posições</h1>
-
-<p>Nossa primeira análise distribui os deputados no espaço de acordo com a semelhança de suas posições nas votações. Deputados que votam semelhante ficam juntos. (Caso você goste de estatística, nós utilizamos Multiple Correspondence Analysis - MCA, uma espécie de PCA para dados categóricos).</p>
-
-<p>É possível identificar três grandes grupos com atuação claramente distinta, representados por três nuvens de nomes. Mais abaixo os investigamos</p>
-
-<p class="centeredImg"><a href="http://nazareno.github.io/houseofcunha/images/visao-geral.png">
-	<img src="http://nazareno.github.io/houseofcunha/images/visao-geral.png" class="centeredImage" alt=""></a></p>
-
-<p>Antes para situar as posições, destacamos alguns deputados icônicos.</p>
-
-<p><a href="http://nazareno.github.io/houseofcunha/images/icones.png">
-	<img src="http://nazareno.github.io/houseofcunha/images/icones.png" alt=""></a></p>
-
-<p>Agora, colorimos quatro partidos que definem os três grandes grupos mais um conjunto de atuação bastante diferente. Os 4 partidos são PT, PSDB, PMDB e PSOL. É interessante reparar que o PMDB fica entre PT e PSDB, mais próximo do PT, porém não tanto quanto outros partidos.</p>
-
-<p><a href="http://nazareno.github.io/houseofcunha/images/partidos.png">
-	<img src="http://nazareno.github.io/houseofcunha/images/partidos.png" alt=""></a></p>
-
-<p>Abaixo destacamos os deputados paraibanos.</p>
-
-<p><a href="http://nazareno.github.io/houseofcunha/images/deputados-da-pb.png">
-	<img src="http://nazareno.github.io/houseofcunha/images/deputados-da-pb.png" alt=""></a></p>
-
-<p>E aqui você pode navegar em todos os deputados. Coloque o mouse sobre um ponto para ver o nome do deputado: <a id="includedContent"></a></p> 
-<embed style="center" src="partidosdestaque.html" width=800 height=600></embed> 
-
-<h1>
-<a id="cunhômetro" class="anchor" href="#cunh%C3%B4metro" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cunhômetro</h1>
-
-A seguir, listamos os deputados em ordem de sua concordância ou discordância com as posições de Eduardo Cunha. 
-
-<p><a href="http://nazareno.github.io/houseofcunha/images/cunhometro-por-partido.png">
-	<img src="http://nazareno.github.io/houseofcunha/images/cunhometro-por-partido.png" alt="" width=520></a></p>
-
-<p><a href="http://nazareno.github.io/houseofcunha/images/tops-cunhas.png">
-	<img src="http://nazareno.github.io/houseofcunha/images/tops-cunhas.png" alt="" width=500></a></p>
-
-<p><a href="http://nazareno.github.io/houseofcunha/images/tops-acunhas.png">
-	<img src="http://nazareno.github.io/houseofcunha/images/tops-acunhas.png" alt="" width=500></a></p>
-      </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>O código-fonte deste projeto está disponível no <a href="https://github.com/nazareno/houseofcunha">GitHub</a>. 
-            	Seus autores são Nazareno Andrade e João Arthur Brunet Monteiro.</p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Gerado com o <a href="https://pages.github.com">GitHub Pages</a>, usando Merlot</p>
-        <span class="octocat"></span>
-      </footer>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Projeto criado por Nazareno Andrade e João Arthur Brunet Monteiro no 3o Hackfest do Laboratório Analytics</p>
+                    <p>O código que gera essa análise <a href="http://github.com/nazareno/houseofcunha">está no github</a>, e pode ser usado e alterado.</p>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                </div>
+            </div>
+        </footer>
 
     </div>
+    <!-- /.container -->
 
-    
-  </body>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        (function ($) {
+            $(document).ready(function(){
+
+                // hide .navbar first
+                $(".navbar").hide();
+
+                // fade in .navbar
+                $(function () {
+                    $(window).scroll(function () {
+
+                        // set distance user needs to scroll before we start fadeIn
+                        if ($(this).scrollTop() > 100) {
+                            $('.navbar').fadeIn();
+                        } else {
+                            $('.navbar').fadeOut();
+                        }
+                    });
+                });
+
+            });
+        }(jQuery));
+    </script>
+</body>
+
 </html>
