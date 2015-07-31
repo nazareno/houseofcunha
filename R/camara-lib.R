@@ -1,6 +1,6 @@
 
 ler_votos_de_ativos <- function(filepath){
-  votos <- read.csv(filepath, strip.white=TRUE)
+  votos <- read.csv(filepath, strip.white=TRUE, quote="")
   
   # ajustes nos valores e tipos das variáveis
   votos <- filter(votos, voto %in% c("sim", "não")) 

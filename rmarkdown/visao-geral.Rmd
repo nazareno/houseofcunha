@@ -22,7 +22,7 @@ require("rCharts")
 ```
 
 ```{r}
-votos <- ler_votos_de_ativos("votacoes//votacao.csv")
+votos <- ler_votos_de_ativos("votacoes.csv")
 # separar sessões de uma mesma proposição
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 ```
@@ -194,7 +194,7 @@ n1 <- nPlot(Dim.2 ~ Dim.1,
             type = "scatterChart")
 n1$chart(color = c("#BDBDBD", "#FF3300", "darkred", "#0066CC", "#E69F00"))
 n1$chart(tooltipContent = "#! function(key, x, y, e){ 
-  return e.point.nome + ', ' + (e.point.partido.toUpperCase());
+  return e.point.nome + ', ' + (e.point.partido.toUpperCase()) + '(' + (e.point.uf) + ')';
 } !#")
 n1$chart(tooltipXContent = NA, tooltipYContent = NA)
 n1$chart(sizeRange = c(50,50))
@@ -204,6 +204,10 @@ n1
 # n1$save("partidosdestaque.html", include_assets = TRUE, cdn=TRUE)
 n1$save("partidosdestaque.html", cdn=TRUE)
 n1$publish('House of Cunha - alguns partidos', host = 'gist')
+sink("viz-inline.html")
+cat(n1$show('inline', include_assets = TRUE, cdn = TRUE))
+sink()
+n1
 ```
 
 ```{r}
@@ -221,4 +225,6 @@ n1
 
 #n1$save("partidos destaque", include_assets = TRUE, cdn=TRUE)
 ```
+
+
 
