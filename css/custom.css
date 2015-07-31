@@ -19,6 +19,15 @@
     background: rgba(255,255,255,0.9);
 }
 
+.headline2 {
+    padding: 120px 0;
+    font-size: 100px;
+    text-align: center;
+    background: #fff;
+    background: rgba(200,200,200,0.6);
+}
+
+
 .lead {
     font-size: 18px;
 }

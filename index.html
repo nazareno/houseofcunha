@@ -46,13 +46,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">As posições</a>
+                        <a href="#asposicoes">As posições</a>
                     </li>
                     <li>
-                        <a href="#">Cunhômetro</a>
+                        <a href="#ocunhometro">Cunhômetro</a>
                     </li>
                     <li>
-                        <a href="#">Sobre</a>
+                        <a href="#sobre">Sobre</a>
                     </li>
                 </ul>
             </div>
@@ -75,7 +75,7 @@
 
         <hr class="featurette-divider">
 
-        <div class="row">
+        <div class="row" id="asposicoes">
             <div class="col-md-offset-2 col-md-8 headline2">
                 Ato 1: As posições
             </div>
@@ -160,13 +160,16 @@
 
         <hr class="featurette-divider">
 
-        <div class="row">
+        <div class="row" id="ocunhometro">
             <div class="col-md-offset-2 col-md-8 headline2">
                     Ato 2: Um Cunhômetro
             </div>
         </div>
 
-        <div class="row vertical-align">
+        <hr class="featurette-divider">
+
+
+        <div class="row">
             <div class="col-md-4">
                 <!--<span class="glyphicon glyphicon-question-sign"></span>-->
                 <h2 class="featurette-heading">Quem vota com Cunha?
@@ -183,35 +186,36 @@
 
     <hr class="featurette-divider">
 
-    <div class="row vertical-align">
-            <div class="col-md-6 pull-right">
-                <a href="images/tops-acunhas.png">
-                    <img class="img-responsive pull-left" src="images/tops-acunhas.png">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <h2 class="featurette-heading">E quem é oposição a Cunha?
-                    <span class="text-muted">Quem vota contra ele?</span>
-                <p class="lead">Quanto cada deputado concorda com as posições de Cunha (aqui as recomendações do PMDB partido do qual ele é líder)</p>
-                </h2>
-            </div>
+    <div class="row">
+        <div class="col-md-6 pull-left">
+            <a href="images/tops-acunhas.png">
+                <img class="img-responsive pull-right" src="images/tops-acunhas.png">
+            </a>
         </div>
+        <div class="col-md-4">
+            <h2 class="featurette-heading">E quem é oposição
+                <span class="text-muted">e vota diferente dele?</span>
+            <p class="lead">Quanto cada deputado concorda com as posições de Cunha (aqui as recomendações do PMDB, o partido do qual ele é líder)</p>
+            </h2>
+        </div>
+    </div>
 
     <hr class="featurette-divider">
 
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h2>Cunhômetro por partido</h2>
+                <h2 style="text-align: center">Cunhômetro por partido</h2>
                 <a href="images/cunhometro-por-partido.png">
                     <img class="img-responsive pull-left" src="images/cunhometro-por-partido.png">
                 </a>
             </div>
         </div>
 
+        <hr class="featurette-divider">
 
         <!-- Footer -->
         <footer>
-            <div class="row">
+            <div class="row" id="sobre">
                 <div class="col-lg-12">
                     <p>Projeto criado por Nazareno Andrade e João Arthur Brunet Monteiro no 3o Hackfest do Laboratório Analytics</p>
                     <p>O código que gera essa análise <a href="http://github.com/nazareno/houseofcunha">está no github</a>, e pode ser usado e alterado.</p>
@@ -221,7 +225,7 @@
         </footer>
 
     </div>
-    
+
     </div>
 
     <!-- /.container -->
@@ -231,6 +235,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!--Para o rChart-->
+    <script type='text/javascript' src=//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js></script>
+    <script type='text/javascript' src=//d3js.org/d3.v3.min.js></script>
+    <script type='text/javascript' src=//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.js></script>
+    <script type='text/javascript' src=//nvd3.org/assets/lib/fisheye.js></script>
+
 
     <script>
         (function ($) {
@@ -257,7 +268,7 @@
     </script>
 
     <script>
-        $(function(){
+        $(document).ready(function(){
             $("#includedContent").load("viz-inline.html");
         });
     </script>
