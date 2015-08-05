@@ -16,5 +16,8 @@ ler_votos_de_ativos <- function(filepath){
     filter(c >= 31) %>% 
     select(nome)
   votos <- filter(votos, nome %in% ativos$nome) 
-  
+
+  # Cabo Daciolo aparece com duas afiliações. 
+  # Usar apenas a última
+  votos[votos$nome == "Cabo Daciolo", "partido"] <- "psol"
 }

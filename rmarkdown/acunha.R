@@ -42,8 +42,24 @@ ggplot(tops, aes(reorder(nome,prop), prop*100)) +
   ylim(0, 100) + 
   coord_flip()
 dev.off()
-  
 
+# top do bem
+png(file="tops-acunhas.png", height = 500, width = 650)
+tops = filter(ac, prop <= 0.38 , prop != 'NA')
+
+ggplot(tops, aes(reorder(nome,prop), prop*100)) + 
+  geom_bar(stat="identity", width=.05, fill = "darkgreen") + 
+  geom_point(alpha = 0.9, size = 4, colour = "darkgreen") +
+  theme_bw() + 
+  theme(axis.title = element_text(color="#666666", face="bold", size=16), 
+        axis.text = element_text(size=14), 
+        axis.line = element_blank()) + 
+  xlab("") + ylab("Concordância com Cunha (%)") + 
+  ylim(0, 100) + 
+  coord_flip()
+dev.off()
+
+# Por partido
 to_plot = mutate(ac, cat_partido = ifelse(partido == 'pt' | partido == 'pmdb' | partido == 'psol' 
                                 | partido == 'psdb' , as.character(partido), 'outros'))
 to_plot$cat_partido <- factor(to_plot$cat_partido, 
@@ -69,19 +85,5 @@ ggplot(to_plot, aes(cat_partido, prop * 100, colour = cat_partido) ) +
   theme_bw()
 dev.off()
 
-# top do bem
-png(file="tops-acunhas.png", height = 500, width = 650)
-tops = filter(ac, prop <= 0.38 , prop != 'NA')
-
-ggplot(tops, aes(reorder(nome,prop), prop*100)) + 
-  geom_bar(stat="identity", width=.05, fill = "darkgreen") + 
-  geom_point(alpha = 0.9, size = 4, colour = "darkgreen") +
-  theme_bw() + 
-  theme(axis.title = element_text(color="#666666", face="bold", size=16), 
-        axis.text = element_text(size=14), 
-        axis.line = element_blank()) + 
-  xlab("") + ylab("Concordância com Cunha (%)") + 
-  ylim(0, 100) + 
-  coord_flip()
-dev.off()
-
+r1 <- nPlot(cat_partido ~ prop, data = to_plot, type = 'point')
+r1
