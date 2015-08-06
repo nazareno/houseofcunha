@@ -82,7 +82,7 @@ mca1_obs_df$destaque <- mca1_obs_df$nome %in% c("Tiririca",
                                                 "Pr. Marco Feliciano", 
                                                 "Jair Bolsonaro", 
                                                 "Luiz Couto", 
-                                                "Romário",
+                                                "Jandira Feghali",
                                                 "Jean Wyllys", 
                                                 "Veneziano Vital do Rêgo")
 
@@ -131,10 +131,10 @@ png("visao-geral-gg.png", width = 1500, height = 1200)
 p
 dev.off()
 
-p + geom_point(data = filter(mca1_obs_df, nome == "Eduardo Cunha"), 
-               colour = "darkred", 
-               size = 8, 
-               alpha = 0.5)
+p <- p + geom_point(data = filter(mca1_obs_df, nome == "Eduardo Cunha"), 
+                    colour = "darkred", 
+                    size = 15, 
+                    alpha = 0.7)
 
 png("visao-geral-cc.png", width = 800, height = 600)
 p
@@ -145,7 +145,7 @@ dev.off()
 Alguns ilustres
 
 ```{r}
-p <- ggplot(data = mca1_obs_df, 
+p <- ggplot(data = semcunha, 
             aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque, size = destaque)) +
   geom_hline(yintercept = 0, colour = "gray70") +
   geom_vline(xintercept = 0, colour = "gray70") +
@@ -171,7 +171,7 @@ dev.off()
 Partidos
 
 ```{r}
-p <- ggplot(data = mca1_obs_df, 
+p <- ggplot(data = semcunha, 
        aes(x = Dim.1, y = Dim.2, label = nome, 
            colour = destaque_partido)) +
   geom_hline(yintercept = 0, colour = "gray70") +
@@ -196,12 +196,15 @@ png("partidos.png",
 p
 dev.off()
 
+png("partidos-gg.png", width = 1500, height = 1200)
+p
+dev.off()
 ```
 
 O pessoal da PB 
 
 ```{r}
-p <- ggplot(data = mca1_obs_df, 
+p <- ggplot(data = semcunha, 
             aes(x = Dim.1, 
                 y = Dim.2, 
                 label = nome, 
@@ -233,7 +236,7 @@ dev.off()
 options(RCHART_WIDTH = 800, RCHART_HEIGHT = 500)
 n1 <- nPlot(Dim.2 ~ Dim.1, 
             group = 'destaque_partido', 
-            data = mca1_obs_df, 
+            data = semcunha, 
             type = "scatterChart")
 n1$chart(color = c("#BDBDBD", "#FF3300", "darkred", "#0066CC", "#E69F00"))
 n1$chart(tooltipContent = "#! function(key, x, y, e){ 
@@ -244,29 +247,12 @@ n1$chart(sizeRange = c(50,50))
 n1$chart(showXAxis = FALSE, showYAxis = FALSE)
 n1
 
-# n1$save("partidosdestaque.html", include_assets = TRUE, cdn=TRUE)
 n1$save("partidosdestaque.html", cdn=TRUE)
-n1$publish('House of Cunha - alguns partidos', host = 'gist')
+#n1$publish('House of Cunha - alguns partidos', host = 'gist')
 sink("viz-inline.html")
 cat(n1$show('inline', include_assets = TRUE, cdn = TRUE))
 sink()
 n1
-```
-
-```{r}
-n1 <- nPlot(Dim.2 ~ Dim.1, 
-            group = 'partido', 
-            data = mca1_obs_df, 
-            type = "scatterChart")
-n1$chart(tooltipContent = "#! function(key, x, y, e){ 
-  return e.point.nome + ', ' + (e.point.partido.toUpperCase());
-} !#")
-n1$chart(tooltipXContent = NA, tooltipYContent = NA)
-n1$chart(sizeRange = c(50,50))
-n1$chart(showXAxis = FALSE, showYAxis = FALSE)
-n1
-
-#n1$save("partidos destaque", include_assets = TRUE, cdn=TRUE)
 ```
 
 

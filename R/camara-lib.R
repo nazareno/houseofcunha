@@ -6,7 +6,7 @@ ler_votos_de_ativos <- function(filepath){
   votos <- filter(votos, voto %in% c("sim", "não")) 
   votos$voto <- droplevels(votos$voto)
   votos$num_pro <- factor(votos$num_pro)
-  #votos$nome <- paste0(votos$nome, " (", votos$partido, ")")
+  votos$uf <- droplevels(votos$uf)
   
   # apenas quem votou em muitas proposições 
   # (espero que seja é deputado em 2015)
@@ -19,5 +19,7 @@ ler_votos_de_ativos <- function(filepath){
 
   # Cabo Daciolo aparece com duas afiliações. 
   # Usar apenas a última
-  votos[votos$nome == "Cabo Daciolo", "partido"] <- "psol"
+  votos[votos$nome == "Cabo Daciolo", "partido"] <- "s.part."
+  
+  votos
 }

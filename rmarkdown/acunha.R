@@ -1,8 +1,8 @@
 library(ggplot2)
 library(dplyr)
+source("R/camara-lib.R")
 
 votos <- ler_votos_de_ativos("votacoes.csv")
-votos$uf <- droplevels(votos$uf) # TODO PQ isso?
 # separar sessões de uma mesma proposição
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 votos$nome <- paste0(votos$nome, " (", toupper(votos$partido), " ", votos$uf, ")")
@@ -16,15 +16,10 @@ ativos <- votos %>%
 votos <- filter(votos, nome %in% ativos$nome) 
 votos = mutate(votos, concorda = ifelse(as.character(voto) == as.character(cunha), 1, 0) )
 
-acunhamento = votos %>%
+ac = votos %>%
   group_by(nome, partido) %>%
-  summarise(prop = sum(concorda) / n())
-
-ac = acunhamento %>%
-  mutate(nivel = ifelse(prop >= 0.70,'Cunha', ifelse(prop <= 0.6, 'Acunha','Muro'))) %>%
-  ungroup() %>%
+  summarise(prop = sum(concorda) / n()) %>% 
   arrange(desc(prop))
-
 
 ### PLOTS ###
 
@@ -67,7 +62,7 @@ to_plot$cat_partido <- factor(to_plot$cat_partido,
                               ordered = T)
                               
 require(scales)
-png(file="cunhometro-por-partido.png", height = 450, width = 600)
+png(file="cunhometro-por-partido.png", height = 400, width = 500)
 ggplot(to_plot, aes(cat_partido, prop * 100, colour = cat_partido) ) + 
   geom_point( position = position_jitter(width = 0.2), size = 5 ) +
   scale_colour_manual(values = c(alpha("#E69F00", 0.6),
