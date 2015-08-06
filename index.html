@@ -15,7 +15,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <!--<link href="css/one-page-wonder.css" rel="stylesheet">-->
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -84,16 +83,36 @@
             </div>
         </div>
 
+        <hr class="featurette-divider">
+
         <div class="row vertical-align">
+            <div class="col-md-8" id="geral">
+                <a href="images/visao-geral-gg.png">
+                    <img class="img-responsive pull-right" src="images/visao-geral.png">
+                </a>
+            </div>
             <div class="col-md-4">
                 <h2 class="featurette-heading">As posições
                     <span class="text-muted">pelas ações</span>
                 </h2>
                 <p class="lead">A partir das votações, criamos um mapa que agrupa os deputados da house of cunha que votam parecidos. Há três grupos maiores que detalharemos mais abaixo. (Você pode clicar na imagem para vê-la maior, se quiser procurar alguém...)</p>
             </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row vertical-align">
+            <div class="col-md-4">
+                <h2 class="featurette-heading">Eduardo Cunha
+                    <span class="text-muted">como referência</span>
+                </h2>
+                <p class="lead">O ponto vermelho na figura ao lado ilustra onde estaria um deputado que seguisse exatamente as
+                    orientações de Eduardo Cunha. Cunha não vota, mas como ele é o líder do PMDB na Câmara, podemos utilizar as orientações
+                    do PMDB como orientações de Cunha.</p>
+            </div>
             <div class="col-md-8" id="geral">
-                <a href="images/visao-geral.png">
-                    <img class="img-responsive pull-left" src="images/visao-geral.png">
+                <a href="images/visao-geral-cc.png">
+                    <img class="img-responsive pull-left" src="images/visao-geral-cc.png">
                 </a>
             </div>
         </div>
@@ -107,7 +126,7 @@
                 </a>
             </div>
             <div class="col-md-4 pull-left" id="geral">
-                <h2 class="featurette-heading">Algumas referências
+                <h2 class="featurette-heading">Mais referências
                     <span class="text-muted">para orientação.</span>
                 </h2>
                 <p class="lead">Para situar a leitura do mapa, aqui estão onde ficaram alguns deputados icônicos. Se, assim como a gente, você é da Paraíba, temos uma versão com <a href="images/deputados-da-pb.png">destaque para os deputados da PB</a>.</p>
@@ -137,9 +156,9 @@
         <div class="row vertical-align" id="interativo">
             <div class="col-md-6 col-md-offset-3">
             <h2 class="featurette-heading" style="text-align: center">Alguém em particular?
-                <span class="text-muted" style="text-align: center">clique nos pontos abaixo.</span>
+                <span class="text-muted" style="text-align: center">passe o mouse ou toque nos pontos abaixo.</span>
             </h2>
-            <p class="lead  style="text-align: center">As cores são as mesmas que usamos acima.</p>
+            <p class="lead" style="text-align: center">As cores são as mesmas que usamos acima.</p>
             </div>
         </div>
         <div class="row">
@@ -156,7 +175,10 @@
                 <h2 class="featurette-heading">Os detalhes?
                     <span class="text-muted">Ok.</span>
                 </h2>
-                <p>Para fazer o mapa acima, utilizamos os dados de todas as votações da Câmara até julho/2015. A atividade dos deputados é comparada de acordo com sua similaridade, e o espaço no qual os distribuímos nas figuras é criado utilizando um método estatístico chamado Multiple Correspondence Analysis, uma técnica de redução de dimensionalidade para dados categóricos (essa última frase só deve fazer sentido se você gostar muito de estatística e Mineração de Dados).</p>
+                <p>Para fazer o mapa acima, utilizamos os dados de todas as votações da Câmara até julho/2015.
+                    A atividade dos deputados é comparada de acordo com sua similaridade, e o espaço no qual os distribuímos nas figuras é criado utilizando um método estatístico chamado Multiple Correspondence Analysis,
+                    uma técnica de redução de dimensionalidade para dados categóricos (essa última frase só deve fazer sentido se você gostar muito de estatística e Mineração de Dados).
+                    Quando um deputado não vota sim ou não, assumimos que ele concorda com a maioria.</p>
                 <p class="lead">Mas não acabou. Abaixo, o Cunhômetro!</p>
             </div>
         </div>
@@ -198,7 +220,7 @@
         <div class="col-md-4">
             <h2 class="featurette-heading">E quem é oposição
                 <span class="text-muted">e vota diferente dele?</span>
-            <p class="lead">Quanto cada deputado concorda com as posições de Cunha (aqui as recomendações do PMDB, o partido do qual ele é líder)</p>
+            <p class="lead">Quem menos concorda são os deputados mais abaixo nessa lista. Hoje, Cabo Daciolo e Jean Wyllis.</p>
             </h2>
         </div>
     </div>
@@ -218,7 +240,7 @@
 
         <div class="row" id="quemMeRepresenta">
             <div class="col-md-offset-2 col-md-8 headline2">
-                Quem me representa?
+                Epílogo: Quem me representa?
             </div>
         </div>
 
@@ -228,12 +250,12 @@
         <div class="row">
             <div class="col-md-4">
                 <!--<span class="glyphicon glyphicon-question-sign"></span>-->
-                <h2 class="featurette-heading">Quem me representa?
-                    <span class="text-muted">Descubra que deputado pensa igual a você.</span>
+                <h2 class="featurette-heading">Descubra que deputados
+                    <span class="text-muted">pensam como você.</span>
                 </h2>
                 <p class="lead">Outro projeto realizado pelo <a href="https://www.facebook.com/analytics.ufcg">Laboratório Analytics</a>
-                    é o  <a href="http://www.qmrepresenta.com.br">Quem Me Representa?</a>. Você dá sua opinião nos temas listados e
-                    descobre quais deputados votaram parecido com suas opiniões.
+                    é o  <a href="http://www.qmrepresenta.com.br">Quem Me Representa?</a> Nele você dá sua opinião em temas
+                    polêmicos e descobre quais deputados votaram concordando com suas opiniões.
 
                 </p>
             </div>
@@ -253,6 +275,7 @@
                     <p>Projeto criado por Nazareno Andrade e João Arthur Brunet Monteiro no 3o Hackfest do
                         <a href="https://www.facebook.com/analytics.ufcg">Laboratório Analytics</a></p>
                     <p>O código que gera essa análise <a href="http://github.com/nazareno/houseofcunha">está no github</a>, e pode ser usado e alterado.</p>
+                    <p>Dúvidas? Sugestões? Manda <a href="https://www.facebook.com/analytics.ufcg">pra gente do Facebook.</a></p>
                     <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
                 </div>
             </div>
