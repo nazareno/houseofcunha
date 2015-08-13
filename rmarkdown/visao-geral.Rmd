@@ -31,6 +31,10 @@ votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 ```{r}
 votacao <- votos %>% 
   select(nome, partido, uf, num_pro, voto)
+# votacao.detalhes <- votos %>% 
+#   select(nome, partido, uf, num_pro, voto, objetivo, cunha)
+# write.csv(votacao.detalhes, "detalhada.csv")
+
 # versão do dataframe com recomendações do PMDB sendo a
 # votação de Eduardo Cunha:
 ec.v <- votos %>% 

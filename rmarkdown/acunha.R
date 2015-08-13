@@ -17,9 +17,13 @@ votos <- filter(votos, nome %in% ativos$nome)
 votos = mutate(votos, concorda = ifelse(as.character(voto) == as.character(cunha), 1, 0) )
 
 ac = votos %>%
-  group_by(nome, partido) %>%
+  group_by(nome, partido, uf) %>%
   summarise(prop = sum(concorda) / n()) %>% 
-  arrange(desc(prop))
+  ungroup() %>% 
+  arrange(desc(prop)) %>% 
+  mutate(rank = rank(-prop, ties.method = "min"))
+
+# ac <- ac %>% filter (uf == "PE")
 
 ### PLOTS ###
 
