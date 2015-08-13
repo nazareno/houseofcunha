@@ -16,10 +16,15 @@ ler_votos_de_ativos <- function(filepath){
     filter(c >= 31) %>% 
     select(nome)
   votos <- filter(votos, nome %in% ativos$nome) 
+  descartados <- filter(votos, !(nome %in% ativos$nome)) %>% select(nome, uf, partido)
+  print("Descartados por inatividade: ")
+  print(descartados)
 
   # Cabo Daciolo aparece com duas afiliações. 
   # Usar apenas a última
   votos[votos$nome == "Cabo Daciolo", "partido"] <- "s.part."
+  # Evandro Roman aparece com dois nomes
+  votos[votos$nome == "Evandro Rogerio Roman", "nome"] <- "Evandro Roman"
   
   votos
 }
