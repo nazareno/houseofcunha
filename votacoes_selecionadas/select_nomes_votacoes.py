@@ -15,4 +15,4 @@ for votacao in votacoesReader:
         dados = votacao[1:9] + [votacao[-1]]
         votacoes[nome] = dados
         paraSalvar_file.write(','.join(dados) + "\n")
-print votacoes
+#print votacoes

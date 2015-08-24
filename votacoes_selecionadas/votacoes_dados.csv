@@ -1,6 +1,6 @@
 tipo,num_pro,ano,id_votacao,resumo,data,hora,objetivo,sessao,nome_votacaonum_pro,ano,id_votacao,resumo,data,hora,objetivo,sessao,nome_votacao
 171,1993,1,Rejeitado o Substitutivo adotado pela Comissão Especial à Proposta de Emenda à Constituição nº 171 de 1993. Sim: 303; não: 184; abstenções: 3; total: 490.,30/6/2015,00:16,SUBSTITUTIVO DA COMISSÃO ESPECIAL,5587,Maioridade 1
-182,2007,15,Aprovado o art. 3º do Substitutivo oferecido pelo Relator da Comissão Especial. Sim: 452; não: 19; abstenção: 1; total: 472.,27/5/2015,23:09,ARTIGO 3º DO SUBSTITUTIVO - FIM DA REELEIÇÃO,5548, Reeleição
+182,2007,15,Aprovado o art. 3º do Substitutivo oferecido pelo Relator da Comissão Especial. Sim: 452; não: 19; abstenção: 1; total: 472.,27/5/2015,23:09,ARTIGO 3º DO SUBSTITUTIVO - FIM DA REELEIÇÃO,5548,Reeleição
 182,2007,3,Rejeitado o artigo 1º do Substitutivo. Sim: 210; não: 267; abstenção: 5; total: 482.,26/5/2015,21:49,ART. 1º DO SUBSTITUTIVO,5545,Distritao
 182,2007,5,Rejeitada a Emenda Aglutinativa nº 22. Sim: 264; não: 207; abstenção: 4; total: 475.,26/5/2015,23:53,EMENDA AGLUTINATIVA Nº 22,5545,Financiamento privado para partidos e candidatos
 182,2007,14,Aprovada a Emenda Aglutinativa nº 28. Sim: 330; não: 141; abstenção: 1; total: 472.,27/5/2015,21:08,EMENDA AGLUTINATIVA Nº 28,5547,Financiamento privado para partidos
@@ -14,3 +14,4 @@ tipo,num_pro,ano,id_votacao,resumo,data,hora,objetivo,sessao,nome_votacaonum_pro
 171,1993,4,Aprovada a Emenda Aglutinativa nº 16. Sim: 323; não: 155; abstenção: 2; total: 480.,1/7/2015,00:03,EMENDA AGLUTINATIVA Nº 16,5590,Maioridade 2
 182,2007,7,Rejeitado o artigo 8º do Substitutivo. Sim: 134; não: 311; abstenção: 3; total: 448.,10/6/2015,19:19,ARTIGO 8º DO SUBSTITUTIVO  - VOTO FACULTATIVO,5562,Voto Facultativo
 4330,2004,2,Aprovada a Subemenda Substitutiva Global oferecida pelo Relator da Comissão de Constituição e Justiça e de Cidadania às Emendas de Plenário e ao Projeto de Lei nº 4.330 de 2004. ressalvados os destaques. Sim: 324; não: 137; abstenção: 2; total: 463.,8/4/2015,20:49,SUBEMENDA SUBSTITUTIVA,5494,Terceirização
+2016,2015,1,Aprovada a Emenda Aglutinativa nº 4. Sim: 362; não: 85; abstenção: 3; total: 450.,12/8/2015,20:22,EMENDA AGLUTINATIVA Nº 4,5624,Terrorismo
