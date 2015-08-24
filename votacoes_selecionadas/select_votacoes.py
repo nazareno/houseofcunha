@@ -2,7 +2,7 @@
 import csv
 
 selecionadas_file = open('votacoes_selecionadas_resumo_nome.csv', 'rb')
-votacoes_file = open('../votacoes.csv', 'rb')
+votacoes_file = open('votacoes.csv', 'rb')
 votacoesReader = csv.reader(votacoes_file, delimiter=',')
 selecionadasReader = csv.reader(selecionadas_file, delimiter=',')
 listaVotaca = []
