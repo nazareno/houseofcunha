@@ -1,5 +1,7 @@
 python parser.py "votacoes_selecionadas/*.xml" "votacoes.csv"
-python select_votacoes.py
+#in votacoes_selecionadas_resumo_nome.csv votacoes.csv #out votacoes_selecionadas.csv
+python select_votacoes.py 
+python correctFiles.py
 python select_deputados.py
 python select_nomes_votacoes.py
 Rscript deputados_votos.R
