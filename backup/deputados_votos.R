@@ -1,4 +1,4 @@
-setwd("~/Projects/houseofcunha/votacoes_selecionadas")
+setwd("~/Projects/houseofcunha/backup")
 library(reshape)
 
 votacoes = read.csv("votacoes_selecionadas.csv",stringsAsFactors=FALSE)

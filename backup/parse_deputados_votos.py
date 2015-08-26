@@ -34,5 +34,5 @@ def parse(fileValue,fileName,fileJSON,indexCut):
     json.dump(deputados, deputados_json, ensure_ascii=False)
 
     deputados_json.close()
-
-parse("partidos_votos.csv","partidos_votos_nomes.csv","partidos_votos.json",1)
+parse("deputados_votos.csv","deputados_votos2.csv","deputados_votos.json",4)
+#parse("partidos_votos.csv","partidos_votos_nomes.csv","partidos_votos.json",1)
