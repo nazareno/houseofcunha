@@ -4,8 +4,7 @@ id_dep,nome,partido,uf,Coincidência reeleição,Cota para mulheres legislativo,
 74651,Carlos Melles,dem,MG,0,1,1,1,1,1,1,-1,0,1,0,1,1,1,1,1
 74537,Claudio Cajado,dem,BA,-1,-1,1,1,1,1,1,1,1,1,-1,-1,1,1,1,-1
 141422,Efraim Filho,dem,PB,1,1,1,1,1,1,1,0,0,0,0,1,-1,1,1,1
-160532,Eli Côrrea Filho,dem,SP,-1,-1,-1,1,-1,-1,-1,0,1,0,-1,1,-1,1,-1,-1
-160532,Eli Corrêa Filho,dem,SP,-1,1,-1,-1,-1,1,1,-1,-1,-1,0,-1,1,-1,1,1
+160532,Eli Corrêa Filho,dem,SP,-1,1,-1,1,-1,1,1,0,1,0,0,1,1,1,1,1
 178854,Elmar Nascimento,dem,BA,1,0,1,1,1,1,1,-1,1,1,0,1,0,1,1,1
 141429,Felipe Maia,dem,RN,1,-2,1,1,1,1,1,0,1,0,0,1,-1,1,1,1
 178909,Hélio Leite,dem,PA,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,-1
@@ -306,8 +305,7 @@ id_dep,nome,partido,uf,Coincidência reeleição,Cota para mulheres legislativo,
 160552,Danrlei de Deus Hinterholz,psd,RS,1,1,0,1,1,1,1,1,1,1,1,0,1,1,0,1
 178908,Delegado Éder Mauro,psd,PA,0,1,0,1,1,1,1,0,1,1,1,-2,1,1,0,1
 160588,Diego Andrade,psd,MG,-1,-1,0,1,1,1,1,1,1,1,-1,1,1,1,-1,1
-178930,Evandro Rogerio Roman,psd,PR,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,-1,1,-1,1,-1,-1
-178930,Evandro Roman,psd,PR,0,1,0,1,1,1,1,1,1,-1,1,-1,1,-1,0,1
+178930,Evandro Roman,psd,PR,0,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1
 141428,Fábio Faria,psd,RN,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1
 178969,Fábio Mitidieri,psd,SE,1,-1,0,1,1,1,1,1,1,1,1,1,0,1,0,1
 141430,Felipe Bornier,psd,RJ,1,1,1,1,1,1,1,0,1,0,1,-1,0,1,1,1
@@ -391,7 +389,6 @@ id_dep,nome,partido,uf,Coincidência reeleição,Cota para mulheres legislativo,
 178881,Aluisio Mendes,psdc,MA,1,0,0,1,0,1,1,1,1,1,0,1,1,1,0,0
 178802,Luiz Carlos Ramos,psdc,RJ,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1
 178867,Macedo,psl,CE,1,1,1,1,0,-1,-1,1,1,1,1,0,1,1,0,1
-178938,Cabo Daciolo,psol,RJ,-1,-1,-1,-1,-1,-1,-1,0,-1,0,-1,0,-1,0,-1,-1
 74171,Chico Alencar,psol,RJ,0,1,0,-3,0,0,-3,0,1,0,1,0,0,0,0,1
 134812,Edmilson Rodrigues,psol,PA,0,1,0,-3,0,0,-3,0,1,0,1,0,0,0,0,1
 73531,Ivan Valente,psol,SP,0,1,0,-3,0,0,-3,0,1,0,1,0,0,0,0,1
@@ -522,4 +519,4 @@ id_dep,nome,partido,uf,Coincidência reeleição,Cota para mulheres legislativo,
 141518,Paulo Pereira da Silva,solidaried,SP,1,-2,1,-1,1,1,1,0,-1,0,1,1,0,1,1,1
 73930,Wladimir Costa,solidaried,PA,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,-1,-1,-1
 160632,Zé Silva,solidaried,MG,1,1,1,1,1,1,1,0,1,0,1,1,1,1,0,1
-178938,Cabo Daciolo,s.part.,RJ,0,-1,-1,0,-1,0,0,-1,1,-1,0,-1,0,-1,1,-1
+178938,Cabo Daciolo,s.part.,RJ,0,-1,-1,0,-1,0,0,0,1,0,0,0,0,0,1,-1

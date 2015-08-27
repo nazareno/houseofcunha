@@ -4,8 +4,7 @@ id_dep,nome,partido,uf,Coincidência reeleição,Cota para mulheres legislativo,
 74651,Carlos Melles,dem,MG,não,sim,sim,sim,sim,sim,sim,não votou,não,sim,não,sim,sim,sim,sim,sim
 74537,Claudio Cajado,dem,BA,não votou,não votou,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não votou,sim,sim,sim,não votou
 141422,Efraim Filho,dem,PB,sim,sim,sim,sim,sim,sim,sim,não,não,não,não,sim,não votou,sim,sim,sim
-160532,Eli Côrrea Filho,dem,SP,não votou,não votou,não votou,sim,não votou,não votou,não votou,não,sim,não,não votou,sim,não votou,sim,não votou,não votou
-160532,Eli Corrêa Filho,dem,SP,não votou,sim,não votou,não votou,não votou,sim,sim,não votou,não votou,não votou,não,não votou,sim,não votou,sim,sim
+160532,Eli Corrêa Filho,dem,SP,não votou,sim,não votou,sim,não votou,sim,sim,não,sim,não,não,sim,sim,sim,sim,sim
 178854,Elmar Nascimento,dem,BA,sim,não,sim,sim,sim,sim,sim,não votou,sim,sim,não,sim,não,sim,sim,sim
 141429,Felipe Maia,dem,RN,sim,abstenção,sim,sim,sim,sim,sim,não,sim,não,não,sim,não votou,sim,sim,sim
 178909,Hélio Leite,dem,PA,não,não,não,sim,sim,sim,sim,não,não,não,não,sim,sim,sim,sim,não votou
@@ -306,8 +305,7 @@ id_dep,nome,partido,uf,Coincidência reeleição,Cota para mulheres legislativo,
 160552,Danrlei de Deus Hinterholz,psd,RS,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,não,sim
 178908,Delegado Éder Mauro,psd,PA,não,sim,não,sim,sim,sim,sim,não,sim,sim,sim,abstenção,sim,sim,não,sim
 160588,Diego Andrade,psd,MG,não votou,não votou,não,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,não votou,sim
-178930,Evandro Rogerio Roman,psd,PR,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim,não votou,sim,não votou,sim,não votou,não votou
-178930,Evandro Roman,psd,PR,não,sim,não,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,sim,não votou,não,sim
+178930,Evandro Roman,psd,PR,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim
 141428,Fábio Faria,psd,RN,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim
 178969,Fábio Mitidieri,psd,SE,sim,não votou,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim
 141430,Felipe Bornier,psd,RJ,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,não votou,não,sim,sim,sim
@@ -391,7 +389,6 @@ id_dep,nome,partido,uf,Coincidência reeleição,Cota para mulheres legislativo,
 178881,Aluisio Mendes,psdc,MA,sim,não,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim,sim,não,não
 178802,Luiz Carlos Ramos,psdc,RJ,não,sim,sim,sim,sim,sim,sim,sim,sim,não,não,sim,sim,sim,sim,sim
 178867,Macedo,psl,CE,sim,sim,sim,sim,não,não votou,não votou,sim,sim,sim,sim,não,sim,sim,não,sim
-178938,Cabo Daciolo,psol,RJ,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não,não votou,não,não votou,não,não votou,não,não votou,não votou
 74171,Chico Alencar,psol,RJ,não,sim,não,obstrução,não,não,obstrução,não,sim,não,sim,não,não,não,não,sim
 134812,Edmilson Rodrigues,psol,PA,não,sim,não,obstrução,não,não,obstrução,não,sim,não,sim,não,não,não,não,sim
 73531,Ivan Valente,psol,SP,não,sim,não,obstrução,não,não,obstrução,não,sim,não,sim,não,não,não,não,sim
@@ -522,4 +519,4 @@ id_dep,nome,partido,uf,Coincidência reeleição,Cota para mulheres legislativo,
 141518,Paulo Pereira da Silva,solidaried,SP,sim,abstenção,sim,não votou,sim,sim,sim,não,não votou,não,sim,sim,não,sim,sim,sim
 73930,Wladimir Costa,solidaried,PA,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim,não votou,não votou,não votou
 160632,Zé Silva,solidaried,MG,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,não,sim
-178938,Cabo Daciolo,s.part.,RJ,não,não votou,não votou,não,não votou,não,não,não votou,sim,não votou,não,não votou,não,não votou,sim,não votou
+178938,Cabo Daciolo,s.part.,RJ,não,não votou,não votou,não,não votou,não,não,não,sim,não,não,não,não,não,sim,não votou
