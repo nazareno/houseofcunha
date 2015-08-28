@@ -30,6 +30,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -114,6 +119,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -206,6 +216,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -290,6 +305,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -378,6 +398,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -470,6 +495,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -554,6 +584,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -646,6 +681,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -730,6 +770,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -822,6 +867,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -906,6 +956,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -994,6 +1049,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -1086,6 +1146,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -1170,6 +1235,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -1262,6 +1332,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -1350,6 +1425,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -1434,6 +1514,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -1526,6 +1611,11 @@
             {
                 "value_name": "não votou", 
                 "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -1610,6 +1700,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -1702,6 +1797,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -1786,6 +1886,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -1878,6 +1983,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -1962,6 +2072,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -2054,6 +2169,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -2138,6 +2258,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -2230,6 +2355,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -2314,6 +2444,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -2406,6 +2541,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -2494,6 +2634,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -2578,6 +2723,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -2670,6 +2820,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -2754,6 +2909,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -2846,6 +3006,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -2930,6 +3095,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -3022,6 +3192,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -3106,6 +3281,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -3196,6 +3376,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -3282,6 +3467,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -3372,6 +3562,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -3458,6 +3653,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -3550,6 +3750,11 @@
             {
                 "value_name": "não votou", 
                 "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -3634,6 +3839,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -3724,6 +3934,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -3810,6 +4025,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -3902,6 +4122,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -3986,6 +4211,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "abstenção", 
@@ -4078,6 +4308,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -4162,6 +4397,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -4252,6 +4492,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -4338,6 +4583,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -4428,6 +4678,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "abstenção", 
+                "value": "-2", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -4514,6 +4769,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -4604,6 +4864,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -4692,6 +4957,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -4778,6 +5048,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -4870,6 +5145,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -4954,6 +5234,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -5044,6 +5329,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -5130,6 +5420,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -5220,6 +5515,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -5306,6 +5606,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -5398,6 +5703,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -5482,6 +5792,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -5574,6 +5889,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -5658,6 +5978,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -5748,6 +6073,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Maioridade 1"
@@ -5836,6 +6166,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Maioridade 1"
@@ -5922,6 +6257,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -6014,6 +6354,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -6098,6 +6443,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -6190,6 +6540,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -6274,6 +6629,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -6362,6 +6722,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -6454,6 +6819,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -6538,6 +6908,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -6630,6 +7005,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -6714,6 +7094,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -6806,6 +7191,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -6890,6 +7280,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -6982,6 +7377,11 @@
             {
                 "value_name": "art. 17", 
                 "value": "-4", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "art. 17", 
+                "value": "-4", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -7066,6 +7466,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -7158,6 +7563,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -7242,6 +7652,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -7334,6 +7749,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -7418,6 +7838,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -7510,6 +7935,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -7594,6 +8024,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -7686,6 +8121,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -7770,6 +8210,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -7862,6 +8307,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -7946,6 +8396,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -8036,6 +8491,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "abstenção", 
+                "value": "-2", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -8122,6 +8582,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -8212,6 +8677,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Maioridade 1"
@@ -8298,6 +8768,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -8390,6 +8865,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -8474,6 +8954,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -8566,6 +9051,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -8654,6 +9144,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -8738,6 +9233,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "abstenção", 
@@ -8830,6 +9330,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -8914,6 +9419,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -9006,6 +9516,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -9090,6 +9605,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -9182,6 +9702,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -9266,6 +9791,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -9358,6 +9888,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -9442,6 +9977,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -9534,6 +10074,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -9618,6 +10163,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -9710,6 +10260,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -9794,6 +10349,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -9886,6 +10446,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -9970,6 +10535,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -10062,6 +10632,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -10146,6 +10721,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -10238,6 +10818,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -10322,6 +10907,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -10414,6 +11004,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -10498,6 +11093,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -10590,6 +11190,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -10674,6 +11279,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -10762,6 +11372,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -10854,6 +11469,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -10942,6 +11562,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -11026,6 +11651,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -11118,6 +11748,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -11206,6 +11841,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -11290,6 +11930,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -11382,6 +12027,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -11466,6 +12116,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -11558,6 +12213,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -11642,6 +12302,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -11732,6 +12397,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Maioridade 1"
@@ -11820,6 +12490,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Maioridade 1"
@@ -11906,6 +12581,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -11998,6 +12678,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -12082,6 +12767,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "abstenção", 
+                "value": "-2", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -12174,6 +12864,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -12258,6 +12953,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -12350,6 +13050,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -12434,6 +13139,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -12526,6 +13236,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -12610,6 +13325,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -12700,6 +13420,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Maioridade 1"
@@ -12788,6 +13513,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Maioridade 1"
@@ -12874,6 +13604,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -12966,6 +13701,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -13054,6 +13794,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -13138,6 +13883,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -13230,6 +13980,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -13314,6 +14069,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -13406,6 +14166,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -13494,6 +14259,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -13578,6 +14348,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -13670,6 +14445,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -13754,6 +14534,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -13846,6 +14631,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -13930,6 +14720,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -14022,6 +14817,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -14106,6 +14906,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -14198,6 +15003,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -14282,6 +15092,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -14372,6 +15187,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Maioridade 1"
@@ -14458,6 +15278,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -14550,6 +15375,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -14634,6 +15464,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -14726,6 +15561,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -14814,6 +15654,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -14898,6 +15743,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -14990,6 +15840,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -15074,6 +15929,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -15166,6 +16026,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -15250,6 +16115,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -15340,6 +16210,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -15426,6 +16301,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -15516,6 +16396,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -15602,6 +16487,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -15694,6 +16584,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -15778,6 +16673,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -15868,6 +16768,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -15954,6 +16859,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -16046,6 +16956,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -16134,6 +17049,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -16218,6 +17138,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -16310,6 +17235,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -16394,6 +17324,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -16486,6 +17421,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -16570,6 +17510,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -16662,6 +17607,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -16746,6 +17696,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -16838,6 +17793,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -16926,6 +17886,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -17010,6 +17975,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -17102,6 +18072,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -17186,6 +18161,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -17274,6 +18254,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -17366,6 +18351,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -17450,6 +18440,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -17542,6 +18537,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -17626,6 +18626,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -17718,6 +18723,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -17802,6 +18812,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -17894,6 +18909,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -17978,6 +18998,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -18070,6 +19095,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -18154,6 +19184,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -18246,6 +19281,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -18330,6 +19370,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -18422,6 +19467,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -18506,6 +19556,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -18598,6 +19653,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -18682,6 +19742,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -18774,6 +19839,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -18858,6 +19928,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -18950,6 +20025,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -19034,6 +20114,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -19126,6 +20211,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -19210,6 +20300,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -19302,6 +20397,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -19386,6 +20486,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -19478,6 +20583,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -19562,6 +20672,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -19654,6 +20769,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -19738,6 +20858,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -19830,6 +20955,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -19918,6 +21048,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -20002,6 +21137,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -20094,6 +21234,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -20178,6 +21323,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -20270,6 +21420,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -20354,6 +21509,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -20446,6 +21606,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -20530,6 +21695,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -20620,6 +21790,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Maioridade 1"
@@ -20706,6 +21881,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -20798,6 +21978,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -20882,6 +22067,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -20972,6 +22162,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Maioridade 1"
@@ -21058,6 +22253,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -21148,6 +22348,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -21234,6 +22439,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -21324,6 +22534,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -21410,6 +22625,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -21500,6 +22720,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -21588,6 +22813,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -21674,6 +22904,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -21766,6 +23001,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -21850,6 +23090,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -21940,6 +23185,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Maioridade 1"
@@ -22026,6 +23276,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -22118,6 +23373,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -22202,6 +23462,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -22294,6 +23559,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -22382,6 +23652,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -22466,6 +23741,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -22558,6 +23838,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -22642,6 +23927,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -22734,6 +24024,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -22818,6 +24113,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -22908,6 +24208,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -22994,6 +24299,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -23086,6 +24396,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -23170,6 +24485,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -23260,6 +24580,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -23346,6 +24671,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "abstenção", 
@@ -23436,6 +24766,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -23522,6 +24857,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "abstenção", 
+                "value": "-2", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -23612,6 +24952,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Maioridade 1"
@@ -23700,6 +25045,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -23786,6 +25136,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -23878,6 +25233,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -23962,6 +25322,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -24054,6 +25419,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -24138,6 +25508,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -24230,6 +25605,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -24314,6 +25694,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -24406,6 +25791,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -24490,6 +25880,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -24580,6 +25975,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -24666,6 +26066,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -24758,6 +26163,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -24842,6 +26252,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -24932,6 +26347,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -25020,6 +26440,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -25106,6 +26531,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -25198,6 +26628,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -25282,6 +26717,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -25374,6 +26814,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -25458,6 +26903,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -25550,6 +27000,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -25638,6 +27093,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -25722,6 +27182,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -25814,6 +27279,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -25898,6 +27368,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -25990,6 +27465,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -26074,6 +27554,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -26166,6 +27651,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -26254,6 +27744,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -26338,6 +27833,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -26430,6 +27930,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -26514,6 +28019,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -26606,6 +28116,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -26690,6 +28205,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -26782,6 +28302,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -26866,6 +28391,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -26958,6 +28488,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -27042,6 +28577,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "abstenção", 
+                "value": "-2", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -27134,6 +28674,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -27222,6 +28767,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -27306,6 +28856,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -27398,6 +28953,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -27482,6 +29042,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -27574,6 +29139,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -27658,6 +29228,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -27750,6 +29325,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -27834,6 +29414,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -27926,6 +29511,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -28010,6 +29600,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -28102,6 +29697,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -28186,6 +29786,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -28278,6 +29883,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -28362,6 +29972,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -28454,6 +30069,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -28542,6 +30162,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -28626,6 +30251,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -28718,6 +30348,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -28802,6 +30437,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -28894,6 +30534,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -28978,6 +30623,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -29068,6 +30718,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Maioridade 1"
@@ -29154,6 +30809,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -29246,6 +30906,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -29334,6 +30999,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -29418,6 +31088,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -29510,6 +31185,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -29594,6 +31274,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -29686,6 +31371,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -29774,6 +31464,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -29858,6 +31553,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "abstenção", 
+                "value": "-2", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -29950,6 +31650,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -30034,6 +31739,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -30126,6 +31836,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -30210,6 +31925,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -30302,6 +32022,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -30386,6 +32111,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -30478,6 +32208,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -30562,6 +32297,11 @@
                 "value_name": "abstenção", 
                 "value": "-2", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "abstenção", 
+                "value": "-2", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -30654,6 +32394,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -30742,6 +32487,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -30826,6 +32576,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -30918,6 +32673,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -31002,6 +32762,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -31094,6 +32859,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -31178,6 +32948,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -31270,6 +33045,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -31354,6 +33134,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -31446,6 +33231,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -31534,6 +33324,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -31618,6 +33413,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -31710,6 +33510,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -31794,6 +33599,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -31884,6 +33694,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Maioridade 1"
@@ -31970,6 +33785,11 @@
                 "value_name": "abstenção", 
                 "value": "-2", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -32062,6 +33882,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -32146,6 +33971,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -32238,6 +34068,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -32322,6 +34157,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -32414,6 +34254,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -32498,6 +34343,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -32590,6 +34440,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -32674,6 +34529,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -32766,6 +34626,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -32850,6 +34715,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -32942,6 +34812,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -33026,6 +34901,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -33118,6 +34998,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -33202,6 +35087,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -33294,6 +35184,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -33382,6 +35277,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -33466,6 +35366,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -33558,6 +35463,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -33642,6 +35552,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -33734,6 +35649,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -33818,6 +35738,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -33910,6 +35835,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -33998,6 +35928,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -34082,6 +36017,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -34174,6 +36114,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -34258,6 +36203,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -34350,6 +36300,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -34434,6 +36389,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -34526,6 +36486,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -34610,6 +36575,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -34702,6 +36672,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -34786,6 +36761,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -34878,6 +36858,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -34966,6 +36951,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -35050,6 +37040,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -35142,6 +37137,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -35226,6 +37226,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -35316,6 +37321,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Maioridade 1"
@@ -35404,6 +37414,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "abstenção", 
+                "value": "-2", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -35490,6 +37505,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -35582,6 +37602,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -35670,6 +37695,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -35754,6 +37784,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -35846,6 +37881,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -35930,6 +37970,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -36022,6 +38067,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -36106,6 +38156,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -36198,6 +38253,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -36282,6 +38342,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -36374,6 +38439,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -36458,6 +38528,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -36550,6 +38625,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -36634,6 +38714,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -36726,6 +38811,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -36814,6 +38904,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -36898,6 +38993,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -36990,6 +39090,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -37074,6 +39179,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -37166,6 +39276,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -37250,6 +39365,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -37342,6 +39462,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -37430,6 +39555,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -37514,6 +39644,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -37606,6 +39741,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -37690,6 +39830,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -37782,6 +39927,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -37870,6 +40020,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -37954,6 +40109,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -38046,6 +40206,11 @@
             {
                 "value_name": "não votou", 
                 "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -38130,6 +40295,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -38222,6 +40392,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -38306,6 +40481,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "abstenção", 
+                "value": "-2", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -38398,6 +40578,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -38482,6 +40667,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -38574,6 +40764,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -38658,6 +40853,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -38750,6 +40950,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -38834,6 +41039,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -38924,6 +41134,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -39010,6 +41225,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -39102,6 +41322,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -39190,6 +41415,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -39274,6 +41504,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -39366,6 +41601,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -39450,6 +41690,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -39540,6 +41785,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -39626,6 +41876,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -39718,6 +41973,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -39806,6 +42066,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -39890,6 +42155,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -39982,6 +42252,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -40070,6 +42345,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -40154,6 +42434,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -40246,6 +42531,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -40330,6 +42620,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -40422,6 +42717,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -40506,6 +42806,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -40596,6 +42901,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -40682,6 +42992,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -40774,6 +43089,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -40858,6 +43178,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -40950,6 +43275,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -41034,6 +43364,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -41124,6 +43459,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -41210,6 +43550,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -41302,6 +43647,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -41386,6 +43736,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -41478,6 +43833,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -41562,6 +43922,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -41652,6 +44017,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -41738,6 +44108,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -41830,6 +44205,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -41918,6 +44298,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -42002,6 +44387,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -42094,6 +44484,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -42178,6 +44573,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -42270,6 +44670,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -42358,6 +44763,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -42442,6 +44852,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -42534,6 +44949,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -42618,6 +45038,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -42706,6 +45131,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -42798,6 +45228,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -42882,6 +45317,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -42972,6 +45412,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -43058,6 +45503,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -43150,6 +45600,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -43234,6 +45689,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -43324,6 +45784,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -43410,6 +45875,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -43502,6 +45972,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -43586,6 +46061,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -43678,6 +46158,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -43762,6 +46247,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -43854,6 +46344,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -43938,6 +46433,11 @@
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -44030,6 +46530,11 @@
             {
                 "value_name": "não votou", 
                 "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -44114,6 +46619,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -44206,6 +46716,11 @@
             {
                 "value_name": "não", 
                 "value": "0", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "não", 
+                "value": "0", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -44294,6 +46809,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -44378,6 +46898,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -44470,6 +46995,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -44554,6 +47084,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -44646,6 +47181,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -44730,6 +47270,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -44822,6 +47367,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -44906,6 +47456,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "sim", 
@@ -44996,6 +47551,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Maioridade 1"
@@ -45084,6 +47644,11 @@
                 "tema": "Financiamento privado para partidos e candidatos"
             }, 
             {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
                 "value_name": "não", 
                 "value": "0", 
                 "tema": "Maioridade 1"
@@ -45170,6 +47735,11 @@
                 "value_name": "sim", 
                 "value": "1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
@@ -45262,6 +47832,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -45350,6 +47925,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -45434,6 +48014,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -45526,6 +48111,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -45610,6 +48200,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não votou", 
@@ -45702,6 +48297,11 @@
             {
                 "value_name": "sim", 
                 "value": "1", 
+                "tema": "Infaticídio indígena"
+            }, 
+            {
+                "value_name": "sim", 
+                "value": "1", 
                 "tema": "Maioridade 1"
             }, 
             {
@@ -45786,6 +48386,11 @@
                 "value_name": "não votou", 
                 "value": "-1", 
                 "tema": "Financiamento privado para partidos e candidatos"
+            }, 
+            {
+                "value_name": "não votou", 
+                "value": "-1", 
+                "tema": "Infaticídio indígena"
             }, 
             {
                 "value_name": "não", 
