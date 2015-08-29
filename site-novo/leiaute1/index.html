@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>House of Cunha by nazareno</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/nazareno/houseofcunha">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>House of Cunha</h1>
+            <h2>Quem Cunha e quem a-Cunha na Câmara dos Deputados</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/nazareno/houseofcunha/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/nazareno/houseofcunha/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+
+<a id="contexto" class="anchor" href="#contexto" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+
+<p>Todos temos acompanhado uma série de matérias polêmicas da <a href="http://nazareno.github.io/houseofcunha/images/cunha.png">Câmara dos Deputados</a> na mídia. 
+Por um lado, algo que marcou a Câmara em 2015 é a sua presidência. Por outro lado, embora as posições de Eduardo Cunha sejam frequentemente criticáveis, ele não aprova as matérias sozinho. 
+Assim, para entender as posições dos demais deputados, baixamos e analisamos o histórico de votações de todos os deputados nas proposições votadas em 2015.  
+Foram analisados mais de 50.000 votos para 44 diferentes proposições.</p>
+
+<p>De posse desses dados, utilizamos métodos estatísticos para comparar as posições dos deputados e partidos, e para mostrar quem tipicamente concorda com Eduardo Cunha. Como sendo presidente da casa, Cunha não vota, consideramos que sua posição é a do PMDB.</p>
+
+<h1>
+<a id="análise" class="anchor" href="#an%C3%A1lise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Posições</h1>
+
+<p>Nossa primeira análise distribui os deputados no espaço de acordo com a semelhança de suas posições nas votações. Deputados que votam semelhante ficam juntos. (Caso você goste de estatística, nós utilizamos Multiple Correspondence Analysis - MCA, uma espécie de PCA para dados categóricos).</p>
+
+<p>É possível identificar três grandes grupos com atuação claramente distinta, representados por três nuvens de nomes. Mais abaixo os investigamos</p>
+
+<p class="centeredImg"><a href="http://nazareno.github.io/houseofcunha/images/visao-geral.png">
+	<img src="http://nazareno.github.io/houseofcunha/images/visao-geral.png" class="centeredImage" alt=""></a></p>
+
+<p>Antes para situar as posições, destacamos alguns deputados icônicos.</p>
+
+<p><a href="http://nazareno.github.io/houseofcunha/images/icones.png">
+	<img src="http://nazareno.github.io/houseofcunha/images/icones.png" alt=""></a></p>
+
+<p>Agora, colorimos quatro partidos que definem os três grandes grupos mais um conjunto de atuação bastante diferente. Os 4 partidos são PT, PSDB, PMDB e PSOL. É interessante reparar que o PMDB fica entre PT e PSDB, mais próximo do PT, porém não tanto quanto outros partidos.</p>
+
+<p><a href="http://nazareno.github.io/houseofcunha/images/partidos.png">
+	<img src="http://nazareno.github.io/houseofcunha/images/partidos.png" alt=""></a></p>
+
+<p>Abaixo destacamos os deputados paraibanos.</p>
+
+<p><a href="http://nazareno.github.io/houseofcunha/images/deputados-da-pb.png">
+	<img src="http://nazareno.github.io/houseofcunha/images/deputados-da-pb.png" alt=""></a></p>
+
+<p>E aqui você pode navegar em todos os deputados. Coloque o mouse sobre um ponto para ver o nome do deputado: <a id="includedContent"></a></p> 
+<embed style="center" src="partidosdestaque.html" width=800 height=600></embed> 
+
+<h1>
+<a id="cunhômetro" class="anchor" href="#cunh%C3%B4metro" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cunhômetro</h1>
+
+A seguir, listamos os deputados em ordem de sua concordância ou discordância com as posições de Eduardo Cunha. 
+
+<p><a href="images/cunhometro-por-partido.png">
+	<img src="http://nazareno.github.io/houseofcunha/images/cunhometro-por-partido.png" alt="" width=520></a></p>
+
+<p><a href="http://nazareno.github.io/houseofcunha/images/tops-cunhas.png">
+	<img src="http://nazareno.github.io/houseofcunha/images/tops-cunhas.png" alt="" width=500></a></p>
+
+<p><a href="http://nazareno.github.io/houseofcunha/images/tops-acunhas.png">
+	<img src="http://nazareno.github.io/houseofcunha/images/tops-acunhas.png" alt="" width=500></a></p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>O código-fonte deste projeto está disponível no <a href="https://github.com/nazareno/houseofcunha">GitHub</a>. 
+            	Seus autores são Nazareno Andrade e João Arthur Brunet Monteiro.</p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Gerado com o <a href="https://pages.github.com">GitHub Pages</a>, usando Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
