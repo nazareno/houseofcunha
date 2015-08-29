@@ -28,3 +28,13 @@ ler_votos_de_ativos <- function(filepath){
   
   votos
 }
+
+
+ler_doacoes_de_eleitos <- function(arquivo.doacoes, arquivo.eleitos){
+  deputados <- read.csv(arquivo.eleitos, strip.white=TRUE) %>% select(nome, nomeParlamentar)
+  deputados$nomeMaiusculo <- toupper(deputados$nome)
+  doacoes <- read.csv(arquivo.doacoes, sep=";", strip.white=TRUE)
+  doacoes$CPF.do.candidato <- as.factor(doacoes$CPF.do.candidato)
+  doacoes$CPF.CNPJ.do.doador <- as.factor(doacoes$CPF.CNPJ.do.doador)
+  doacoes %>% filter(Nome.candidato %in% deputados$nomeMaiusculo)
+}
