@@ -18,7 +18,7 @@ votos = mutate(votos, concorda = ifelse(as.character(voto) == as.character(cunha
 
 ac = votos %>%
   group_by(nome, partido, uf) %>%
-  summarise(prop = sum(concorda) / n()) %>% 
+  summarise(prop = sum(concorda) / n(), concordancias = sum(concorda), votos = n()) %>% 
   ungroup() %>% 
   arrange(desc(prop)) %>% 
   mutate(rank = rank(-prop, ties.method = "min"))
