@@ -13,8 +13,9 @@ ativos <- votos %>%
   filter(c >= 31) %>% 
   select(nome)
 
-votos <- filter(votos, nome %in% ativos$nome) 
-votos = mutate(votos, concorda = ifelse(as.character(voto) == as.character(cunha), 1, 0) )
+votos <- filter(votos, nome %in% ativos$nome, cunha %in% c("sim", "não")) 
+votos$cunha <- droplevels(votos$cunha)
+votos = mutate(votos, concorda = ifelse(voto == cunha, 1, 0)) 
 
 ac = votos %>%
   group_by(nome, partido, uf) %>%
@@ -28,10 +29,11 @@ ac = votos %>%
 ### PLOTS ###
 
 png(file="tops-cunhas.png", height = 500, width = 650)
-tops = filter(ac, prop >= 0.9 , prop != 'NA')
+# top 12
+tops = ac[1:12,] # filter(ac, prop >= 0.95 , prop != 'NA')
 
 ggplot(tops, aes(reorder(nome,prop), prop*100)) + 
-  geom_bar(stat="identity", width=.05, fill = "darkred") + 
+  geom_bar(stat="identity", width=.07, fill = "darkred") + 
   geom_point(alpha = 0.9, size = 5, colour = "darkred") +
   theme_bw() + 
   theme(axis.title = element_text(color="#666666", face="bold", size=16), 
@@ -44,7 +46,7 @@ dev.off()
 
 # top do bem
 png(file="tops-acunhas.png", height = 500, width = 650)
-tops = filter(ac, prop <= 0.38 , prop != 'NA')
+tops = ac[(NROW(ac) - 12):NROW(ac),]
 
 ggplot(tops, aes(reorder(nome,prop), prop*100)) + 
   geom_bar(stat="identity", width=.05, fill = "darkgreen") + 

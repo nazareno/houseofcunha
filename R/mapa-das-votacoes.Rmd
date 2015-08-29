@@ -12,6 +12,7 @@ library(reshape2)
 require(cluster)
 require(ade4)
 require(scales)
+require(FactoMineR)
 
 source("R/camara-lib.R")
 
@@ -31,6 +32,7 @@ votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 ```{r}
 votacao <- votos %>% 
   select(nome, partido, uf, num_pro, voto)
+
 # votacao.detalhes <- votos %>% 
 #   select(nome, partido, uf, num_pro, voto, objetivo, cunha)
 # write.csv(votacao.detalhes, "detalhada.csv")
@@ -60,14 +62,11 @@ votacao.cc <- rbind(votacao, ec)
 ```
 
 ```{r}
-require(FactoMineR)
-
 votacao.cast <- dcast(votacao.cc, 
                       nome + partido + uf ~ num_pro, 
                       value.var = "voto")
 votacao.cast <- as.data.frame(apply(votacao.cast, 2, as.factor))
 
-# TODO DEIXAR "Average"?
 mca1 = MCA(votacao.cast, 
            ncp = 2,
            graph = FALSE,
