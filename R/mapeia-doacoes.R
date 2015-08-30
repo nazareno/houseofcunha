@@ -54,7 +54,8 @@ doacoes.empresas <- doacoes.todas %>%
 
 doacoes.empresas.totais <- doacoes.empresas %>% 
   group_by(Nome.doador.corrigido, CPF.CNPJ.do.doador) %>%
-  summarise(valor.total.doacoes = sum(valor.total.doacoes, na.rm=TRUE)) %>% 
+  summarise(valor.total.doacoes = sum(valor.total.doacoes, na.rm=TRUE), 
+            numero.de.candidatos = n()) %>% 
   ungroup() %>% 
   arrange(-valor.total.doacoes)
 
@@ -81,54 +82,87 @@ png("top-empresas-doadoras.png", 600, 600)
 p
 dev.off()
 
+# Ver empresas mais e menos doadoras em número de candidatos
+top5.maiscandidatos <- arrange(doacoes.empresas.totais, -numero.de.candidatos)[1:5,]
+p <- ggplot(arrange(doacoes.empresas.totais, -numero.de.candidatos), 
+            aes(x = 1:NROW(doacoes.empresas.totais), 
+                y = numero.de.candidatos)) + 
+  geom_point(size = 3, alpha = 0.7) + 
+  geom_text(data = top5.maiscandidatos, 
+            aes(x = 1:NROW(top5.maiscandidatos), 
+                y = numero.de.candidatos, 
+                label = Nome.doador.corrigido), 
+            hjust = -.03, 
+            size = 4, 
+            colour = "grey20") + 
+  ylab("Candidatos financiados") + 
+  xlab("Ranking do doador") + 
+  theme_bw() + 
+  scale_y_continuous(labels=function(n){format(n, scientific = FALSE)}) + 
+  scale_x_log10()
+
+p
+png("top-empresas-numero-candidatos.png", 600, 600)
+p
+dev.off()
 
 ###
 # PCA!
 ### 
 
-data.plot <- doacoes[order(desc(doacoes$valor.total.doacoes)),][1:10,]
-
-png(file="top-doadores.png", height = 500, width = 650)
-ggplot(data.plot, aes(x= reorder(Nome.do.doador,valor.total.doacoes), y=valor.total.doacoes)) + 
-  geom_bar(stat='identity') + 
-  theme_bw() +
-  xlab("Empresa doadora") + 
-  ylab("Total doado (R$)") + 
-  coord_flip()
-dev.off()
-
 # PCA com os principais doadores 
-top.empresas <- doacoes[order(desc(doacoes$valor.total.doacoes)), 'CPF.CNPJ.do.doador']
-top.doacoes <- doacoes.empresas[doacoes.empresas$CPF.CNPJ.do.doador %in% 
-                                  top.empresas$CPF.CNPJ.do.doador[1:20],] 
-  
-doacoes.cast <- dcast(top.doacoes, 
-                      Nome.candidato + Sigla..Partido + UF ~ CPF.CNPJ.do.doador, 
-                      value.var = "valor.total.doacoes")
+doacoes.empresas.partido <- doacoes.empresas %>% 
+  group_by(Nome.doador.corrigido, CPF.CNPJ.do.doador, Sigla..Partido) %>% 
+  summarise(doado = sum(valor.total.doacoes))
 
-doacoes.pca = PCA(doacoes.cast[,4:23], 
-                  scale.unit=TRUE, 
+top.empresas <- doacoes.empresas.totais[1:100, 'CPF.CNPJ.do.doador']
+
+# top.doacoes <- doacoes.empresas[doacoes.empresas$CPF.CNPJ.do.doador %in% 
+#                                   top.empresas$CPF.CNPJ.do.doador,] 
+top.doacoes <- doacoes.empresas.partido[doacoes.empresas.partido$CPF.CNPJ.do.doador %in% 
+                                  top.empresas$CPF.CNPJ.do.doador,] 
+
+# doacoes.cast <- dcast(top.doacoes, 
+#                       Nome.candidato + Sigla..Partido + UF ~ Nome.doador.corrigido, 
+#                       fun.aggregate = sum,
+#                       value.var = "valor.total.doacoes")
+doacoes.cast <- dcast(top.doacoes, 
+                      Sigla..Partido ~ Nome.doador.corrigido, 
+                      fun.aggregate = sum,
+                      value.var = "doado")
+
+doacoes.pca = PCA(doacoes.cast[,2:100], 
+                  scale.unit=T, 
                   ncp=2, 
-                  graph=F, 
+                  graph=T, 
                   quali.sup = c(1:3))
 
 pca_obs_df = data.frame(doacoes.pca$ind$coord, 
-                         nome = doacoes.cast$Nome.candidato,
-                         partido = doacoes.cast$Sigla..Partido, 
-                         uf = doacoes.cast$UF)
+                         partido = doacoes.cast$Sigla..Partido)
 
-ggplot(data = pca_obs_df, aes(x = Dim.1, y = Dim.2, label = nome)) +
+dimexps <- data.frame(doacoes.pca$var$coord)
+dimexps$empresas <- row.names(dimexps)
+dimexps %>% filter(Dim.1 > 0.2)
+
+p <- ggplot(data = pca_obs_df, aes(x = Dim.1, y = Dim.2, label = partido)) +
   geom_hline(yintercept = 0, colour = "gray70") +
   geom_vline(xintercept = 0, colour = "gray70") +
   #geom_point(colour = "gray50", alpha = 0.7) +
-  geom_text(colour = "gray50", alpha = 0.7, size =3) +
+  geom_text(colour = "gray10", alpha = 0.7, size =4) +
   #geom_density2d(colour = "gray75") +
   ylab("") + xlab("")+ 
   theme_classic() + 
+  ylim(-7, 18) + 
+  xlim(-7, 16) + 
   theme(axis.ticks = element_blank(), 
         axis.text = element_blank(), 
         axis.line = element_blank())
+p
+png("mapa-doacoes-partidos.png", width = 800, height = 600)
+p
+dev.off()
 
-
+write.csv2(pca_obs_df, "pca-partidos.csv", row.names = F)
+write(toJSONArray(pca_obs_df), "pca-partidos.json")
 dimdesc(doacoes.pca, axes = 1:2, proba  = 0.05)
 
