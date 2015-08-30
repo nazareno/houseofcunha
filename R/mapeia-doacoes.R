@@ -61,6 +61,18 @@ doacoes.empresas.totais <- doacoes.empresas %>%
 
 top5.empresas <- doacoes.empresas.totais[1:5,]
 
+# Doações PF
+doacoes.pf.totais <- doacoes.todas %>%
+  filter(! (CPF.CNPJ.do.doador %in% cnpjs.comites$CPF.CNPJ.do.doador)) %>% 
+  filter(as.numeric(as.character(CPF.CNPJ.do.doador)) < 100000000000) %>% 
+  group_by(Nome.doador.corrigido, CPF.CNPJ.do.doador) %>% 
+  summarise( 
+    valor.total.doacoes = sum(valor.doacoes, na.rm=TRUE)
+  ) %>% ungroup() %>% arrange(-valor.total.doacoes)
+write.csv2(doacoes.pf.totais, "data/doacoes-por-pf.csv", row.names=F)
+require(rCharts)
+write(toJSONArray(doacoes.pf.totais), "data/doacoes-pf-tentativa.json")
+
 p <- ggplot(doacoes.empresas.totais, 
             aes(x = 1:NROW(doacoes.empresas.totais), 
                 y = valor.total.doacoes / 1e6)) + 
@@ -109,27 +121,31 @@ dev.off()
 ###
 # PCA!
 ### 
-
-# PCA com os principais doadores 
 doacoes.empresas.partido <- doacoes.empresas %>% 
   group_by(Nome.doador.corrigido, CPF.CNPJ.do.doador, Sigla..Partido) %>% 
   summarise(doado = sum(valor.total.doacoes))
 
 top.empresas <- doacoes.empresas.totais[1:100, 'CPF.CNPJ.do.doador']
 
-# top.doacoes <- doacoes.empresas[doacoes.empresas$CPF.CNPJ.do.doador %in% 
-#                                   top.empresas$CPF.CNPJ.do.doador,] 
+top.doacoes.candidato <- doacoes.empresas[doacoes.empresas$CPF.CNPJ.do.doador %in% 
+                                   top.empresas$CPF.CNPJ.do.doador,] 
+
 top.doacoes <- doacoes.empresas.partido[doacoes.empresas.partido$CPF.CNPJ.do.doador %in% 
                                   top.empresas$CPF.CNPJ.do.doador,] 
 
-# doacoes.cast <- dcast(top.doacoes, 
-#                       Nome.candidato + Sigla..Partido + UF ~ Nome.doador.corrigido, 
-#                       fun.aggregate = sum,
-#                       value.var = "valor.total.doacoes")
+x <- top.doacoes.candidato
+x$Candidato <- paste0(x$Nome.candidato, "(", x$Sigla..Partido, "-", x$UF, ")")
+doacoes.cast.candidato <- dcast(x, 
+                       Candidato ~ Nome.doador.corrigido, 
+                       fun.aggregate = sum,
+                       value.var = "valor.total.doacoes")
+
 doacoes.cast <- dcast(top.doacoes, 
                       Sigla..Partido ~ Nome.doador.corrigido, 
                       fun.aggregate = sum,
                       value.var = "doado")
+
+# PCA Por partido:
 
 doacoes.pca = PCA(doacoes.cast[,2:100], 
                   scale.unit=T, 
@@ -164,5 +180,22 @@ dev.off()
 
 write.csv2(pca_obs_df, "pca-partidos.csv", row.names = F)
 write(toJSONArray(pca_obs_df), "pca-partidos.json")
-dimdesc(doacoes.pca, axes = 1:2, proba  = 0.05)
+dimdesc(doacoes.pca, axes = 1:2, proba  = 0.01)
+
+##################
+# Agrupamento
+##################
+require(cluster)
+pro.cluster <- doacoes.cast.candidato[,2:100]
+row.names(pro.cluster) <- doacoes.cast.candidato[,1]
+clustering <- agnes(doacoes.cast.candidato, 
+                    metric = "manhattan", 
+                    method = "ward")
+
+# cluster = hclust(doacoes.cast.candidato, method = "ward.D")
+  
+plot(clustering)
+groups <- cutree(cluster, k = 6)
+groups_c <- cutree(cluster, k = 6)
+rect.hclust(cluster, k=6, border="red")
 

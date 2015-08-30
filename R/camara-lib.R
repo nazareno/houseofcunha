@@ -35,6 +35,7 @@ ler_doacoes_de_eleitos <- function(arquivo.doacoes, arquivo.eleitos){
   doacoes <- doacoes.f %>% filter(Nome.candidato %in% deputados$nome)
   doacoes$CPF.do.candidato <- droplevels(as.factor(doacoes$CPF.do.candidato))
   doacoes$CPF.CNPJ.do.doador <- droplevels(as.factor(doacoes$CPF.CNPJ.do.doador))
+  doacoes
 }
 
 adiciona_nomes_corrigidos <- function(data){
