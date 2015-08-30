@@ -9,7 +9,6 @@ angular.module('houseofcunha').directive('ranking', function ($parse) {
         link: function (scope, element, attrs) {
 
             scope.$watch('ranking', function (oldValue, newValue) {
-                console.log(attrs);
                 if (scope.ranking && scope.ranking.length > 0) {
                     scope.plotdata = [{
                         "key": attrs.rankingTitle,
