@@ -25,3 +25,22 @@ angular.module('houseofcunha')
                 redirectTo: '/'
             });
     });
+
+angular.module('houseofcunha').
+   directive('camara2d', function ($parse) {
+     var directiveDefinitionObject = {
+         restrict: 'E',
+         replace: false,
+         link: function (scope, element, attrs) {
+           var data = attrs.chartData.split(',');
+           var chart = d3.select(element[0]);
+            chart.append("div").attr("class", "chart")
+             .selectAll('div')
+             .data(data).enter().append("div")
+             .transition().ease("elastic")
+             .style("width", function(d) { return d + "%"; })
+             .text(function(d) { return d + "%"; });
+         }
+      };
+      return directiveDefinitionObject;
+   });
