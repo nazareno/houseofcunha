@@ -4,26 +4,26 @@ angular.module('houseofcunha')
     .config(function ($routeProvider) {
         $routeProvider
             .when('/ato1', {
-                templateUrl: '/templates/pages/ato1/index.html',
+                templateUrl: '/site-novo/templates/pages/ato1/index.html',
                 controller: 'Ato1Controller',
                 controllerAs: 'ato1Controller'
             })
             .when('/ato2', {
-                templateUrl: '/templates/pages/ato2/index.html',
+                templateUrl: '/site-novo/templates/pages/ato2/index.html',
             })
             .when('/ato3', {
-                templateUrl: '/templates/pages/ato3/index.html',
+                templateUrl: '/site-novo/templates/pages/ato3/index.html',
                 controller: 'Ato3Controller',
                 controllerAs: 'ato3Controller'
             })
             .when('/ato4', {
-                templateUrl: '/templates/pages/ato4/index.html'
+                templateUrl: '/site-novo/templates/pages/ato4/index.html'
             })
             .when('/extras', {
-                templateUrl: '/templates/pages/extras/index.html'
+                templateUrl: '/site-novo/templates/pages/extras/index.html'
             })
             .when('/', {
-                templateUrl: '/templates/pages/ato1/index.html',
+                templateUrl: '/site-novo/templates/pages/ato1/index.html',
                 controller: 'Ato1Controller',
                 controllerAs: 'ato1Controller'
 
