@@ -188,14 +188,32 @@ dimdesc(doacoes.pca, axes = 1:2, proba  = 0.01)
 require(cluster)
 pro.cluster <- doacoes.cast.candidato[,2:100]
 row.names(pro.cluster) <- doacoes.cast.candidato[,1]
-clustering <- agnes(doacoes.cast.candidato, 
+clustering <- agnes(pro.cluster, 
                     metric = "manhattan", 
                     method = "ward")
 
 # cluster = hclust(doacoes.cast.candidato, method = "ward.D")
-  
 plot(clustering)
-groups <- cutree(cluster, k = 6)
-groups_c <- cutree(cluster, k = 6)
-rect.hclust(cluster, k=6, border="red")
 
+require(ggdendro)
+png("dendrogram.png", height = 2000, width = 1200)
+ggdendrogram(as.dendrogram(clustering), rotate = TRUE, size = 4, theme_dendro = T, color = "tomato")
+dev.off()
+
+library(dendextend)
+library(circlize)
+
+# create a dendrogram
+dend <- as.dendrogram(clustering)
+
+# modify the dendrogram to have some colors in the branches and labels
+# dend <- dend %>% 
+#   color_branches(k=4) %>% 
+#   color_labels
+
+# plot the radial plot
+par(mar = rep(0,4))
+# circlize_dendrogram(dend, dend_track_height = 0.8) 
+png("circular.png", h = 1500, w = 1500)
+circlize_dendrogram(dend, labels_track_height = 0.05, dend_track_height = .8) 
+dev.off()
