@@ -1,9 +1,8 @@
 library(dplyr)
 library(ggplot2)
 
-args <- commandArgs(TRUE)
-
-data <- read.table(args[1], sep=";", header = TRUE)
+data <- ler_doacoes_de_eleitos(arquivo.doacoes = "data//receitas_todos_deputados_federais.txt", 
+                               arquivo.eleitos = "deputados-detalhes.csv")
 
 data.filtered <- data %>%
   filter(  Nome.do.doador != 'Diretório Nacional' & 

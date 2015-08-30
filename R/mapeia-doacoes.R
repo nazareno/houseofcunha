@@ -8,7 +8,7 @@ require(FactoMineR)
 source("R/camara-lib.R")
 
 doacoes.todas <- ler_doacoes_de_eleitos(arquivo.doacoes = "data//receitas_todos_deputados_federais.txt", 
-                                  arquivo.eleitos = "deputados-detalhes.csv")
+                                        arquivo.eleitos = "deputados-detalhes.csv")
 
 
 
