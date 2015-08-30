@@ -1,0 +1,14 @@
+{
+  "name": "d3-plugins",
+  "homepage": "https://github.com/d3/d3-plugins",
+  "_release": "41bbd13ae7",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "41bbd13ae7e62ed60dddc617bbdfb328a35eca35"
+  },
+  "_source": "git://github.com/d3/d3-plugins.git",
+  "_target": "*",
+  "_originalSource": "d3-plugins",
+  "_direct": true
+}
