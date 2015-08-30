@@ -1,5 +1,6 @@
 angular.module('houseofcunha').directive('ranking', function ($parse) {
     var directiveDefinitionObject = {
+        template: "<div class='rChart nvd3'>",
         restrict: 'E',
         replace: false,
         scope: {
@@ -8,11 +9,14 @@ angular.module('houseofcunha').directive('ranking', function ($parse) {
         link: function (scope, element, attrs) {
 
             scope.$watch('ranking', function (oldValue, newValue) {
+                console.log(attrs);
                 if (scope.ranking && scope.ranking.length > 0) {
                     scope.plotdata = [{
-                        "key": "Total de Doações",
+                        "key": attrs.rankingTitle,
                         "color": "#d67777",
-                        "values": scope.ranking.slice(1, 20)
+                        "values": scope.ranking.sort(function (a, b) {
+                            return b[attrs.rankingMetric] - a[attrs.rankingMetric];
+                        }).slice(0, 20)
                     }];
 
                     scope.redraw();
@@ -30,7 +34,7 @@ angular.module('houseofcunha').directive('ranking', function ($parse) {
                             return d.nome
                         })
                         .y(function (d) {
-                            return d.valor
+                            return d[attrs.rankingMetric]
                         })
                         .margin({
                             top: 30,
@@ -45,9 +49,9 @@ angular.module('houseofcunha').directive('ranking', function ($parse) {
                     //                        .showControls(true); //Allow user to switch between "Grouped" and "Stacked" mode.
 
                     chart.yAxis
-                        .tickFormat(d3.format(',.2f'));
+                        .tickFormat(d3.format('d'));
 
-                    d3.select("#ranking")
+                    d3.select(element[0]).select('div')
                         .append('svg')
                         .datum(scope.plotdata)
                         .call(chart);

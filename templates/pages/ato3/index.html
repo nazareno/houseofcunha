@@ -1,25 +1,19 @@
 <hr class="featurette-divider">
 
-<div class="row" id="odinheiro">
-    <div class="col-md-offset-2 col-md-8 headline2">
-        Ato 3: Patrocínio
+
+<!-- Fourth Featurette -->
+<div class="row vertical-align" id="interativo">
+    <div class="col-md-6 col-md-offset-3">
+        <h2 class="featurette-heading" style="text-align: center">Alguém em particular?
+            <span class="text-muted" style="text-align: center">passe o mouse ou toque nos pontos abaixo.</span>
+        </h2>
+        <p class="lead" style="text-align: center">As cores são as mesmas que usamos acima.</p>
     </div>
 </div>
 
-<hr class="featurette-divider">
-
 <div class="row">
-    <div class="col-md-4">
-        <!--<span class="glyphicon glyphicon-question-sign"></span>-->
-        <h2 class="featurette-heading">Quem banca quem?
-            <span class="text-muted"></span>
-        </h2>
-        <p class="lead">veja quais empresas patrocinam os nosso politicos.</p>
-    </div>
-    <div class="col-md-6 pull-left">
-        <a href="images/tops-cunhas.png">
-            <img class="img-responsive pull-left" src="images/tops-cunhas.png">
-        </a>
+    <div class="col-md-8  col-md-offset-2">
+        <ranking ranking-data="rankingCNPJ" ranking-metric="valor" ranking-title="Total de Doações"></ranking>
     </div>
 </div>
 
@@ -36,9 +30,27 @@
 </div>
 
 <div class="row">
-    <div class="col-md-12 ">
-        <ranking ranking-data="rankingCNPJ">
-            <div id='ranking' class="rChart nvd3"></div>
-        </ranking>
+    <div class="col-md-8  col-md-offset-2">
+        <ranking ranking-data="rankingCNPJ" ranking-metric="quant" ranking-title="Quantidade de Doações"></ranking>
     </div>
 </div>
+
+
+<!--
+<hr class="featurette-divider">
+
+ Fourth Featurette 
+<div class="row vertical-align" id="interativo">
+    <div class="col-md-6 col-md-offset-3">
+        <h2 class="featurette-heading" style="text-align: center">Alguém em particular?
+            <span class="text-muted" style="text-align: center">passe o mouse ou toque nos pontos abaixo.</span>
+        </h2>
+        <p class="lead" style="text-align: center">As cores são as mesmas que usamos acima.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8  col-md-offset-2">
+        <ranking ranking-data="rankingCPF" ranking-metric="valor" ranking-title="Total de Doações"></ranking>
+    </div>
+</div>-->

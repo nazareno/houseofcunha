@@ -55,6 +55,10 @@ angular.module('houseofcunha')
         });
 
         $http.get('data/rankingCNPJ.json').then(function (response) {
+            response.data = response.data.map(function (e) {
+                e.quant = parseInt(e.quant, 10);
+                return e;
+            });
             $scope.rankingCNPJ = response.data;
         }, function (response) {
             console.log(response);
