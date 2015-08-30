@@ -36,3 +36,20 @@ ler_doacoes_de_eleitos <- function(arquivo.doacoes, arquivo.eleitos){
   doacoes$CPF.do.candidato <- droplevels(as.factor(doacoes$CPF.do.candidato))
   doacoes$CPF.CNPJ.do.doador <- droplevels(as.factor(doacoes$CPF.CNPJ.do.doador))
 }
+
+adiciona_nomes_corrigidos <- function(data){
+  cpfs.cnpjs <- data %>% 
+    select(CPF.CNPJ.do.doador) %>% 
+    unique()
+  
+  cpfs.cnpjs.nomes <- left_join(cpfs.cnpjs, 
+                                data[, c('CPF.CNPJ.do.doador', 'Nome.do.doador')], 
+                                by = c('CPF.CNPJ.do.doador')) %>% 
+    group_by(CPF.CNPJ.do.doador) %>% 
+    do(.[1,])
+  
+  names(cpfs.cnpjs.nomes) <- c("CPF.CNPJ.do.doador", "Nome.doador.corrigido")
+  cpfs.cnpjs.nomes$Nome.doador.corrigido <- droplevels(cpfs.cnpjs.nomes$Nome.doador.corrigido)
+  data <- left_join(data, cpfs.cnpjs.nomes)
+  data 
+}
