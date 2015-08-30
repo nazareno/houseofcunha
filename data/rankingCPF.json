@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "Abel Mesquita Jr.",
+        "valor": 10000,
+        "cpf": "012345678-11"
+    },
+    {
+        "nome": "Ricardo.",
+        "valor": 500,
+        "cpf": "012345678-12"
+    },
+    {
+        "nome": "Nazareno.",
+        "valor": 400,
+        "cpf": "012345678-13"
+    },
+    {
+        "nome": "Arthur",
+        "valor": 5000,
+        "cpf": "012345678-14"
+    }
+]
