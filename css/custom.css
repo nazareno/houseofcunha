@@ -2,7 +2,7 @@
     display: block;
     width: 100%;
     background: url('../images/headline.jpg') no-repeat center center scroll;
--webkit-background-size: cover;
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
@@ -16,7 +16,7 @@
 .headline h1 {
     font-size: 130px;
     background: #fff;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .headline2 {
@@ -24,9 +24,8 @@
     font-size: 100px;
     text-align: center;
     background: #fff;
-    background: rgba(200,200,200,0.6);
+    background: rgba(200, 200, 200, 0.6);
 }
-
 
 .lead {
     font-size: 18px;
@@ -35,9 +34,8 @@
 .headline h2 {
     font-size: 77px;
     background: #fff;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
 }
-
 
 footer {
     margin: 50px 0;
@@ -52,23 +50,18 @@ footer {
     .headline h1 {
         font-size: 140px;
     }
-
     .headline h2 {
         font-size: 63px;
     }
-
     .featurette-divider {
         margin: 50px 0;
     }
-
     .featurette-image.pull-left {
         margin-right: 20px;
     }
-
     .featurette-image.pull-right {
         margin-left: 20px;
     }
-
     .featurette-heading {
         font-size: 35px;
     }
@@ -78,31 +71,24 @@ footer {
     .headline h1 {
         font-size: 105px;
     }
-
     .headline h2 {
         font-size: 50px;
     }
-
     .headline2 {
         font-size: 80px;
     }
-
     .featurette-divider {
         margin: 40px 0;
     }
-
     .featurette-image {
         max-width: 50%;
     }
-
     .featurette-image.pull-left {
         margin-right: 10px;
     }
-
     .featurette-image.pull-right {
         margin-left: 10px;
     }
-
     .featurette-heading {
         font-size: 30px;
     }
@@ -112,11 +98,9 @@ footer {
     .container {
         margin: 0 15px;
     }
-
     .featurette-divider {
         margin: 40px 0;
     }
-
     .featurette-heading {
         font-size: 25px;
     }
@@ -126,16 +110,12 @@ footer {
     .headline h1 {
         font-size: 70px;
     }
-
     .headline h2 {
         font-size: 32px;
     }
-
     .headline2 {
         font-size: 60px;
     }
-
-
     .featurette-divider {
         margin: 30px 0;
     }
@@ -145,17 +125,21 @@ footer {
     .headline {
         padding: 75px 0 25px 0;
     }
-
     .headline h1 {
         font-size: 60px;
     }
-
     .headline h2 {
         font-size: 30px;
     }
-
     .headline2 {
         font-size: 50px;
     }
+}
 
+.rChart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 500px;
 }
