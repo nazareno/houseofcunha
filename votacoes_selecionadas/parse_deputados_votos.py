@@ -31,7 +31,7 @@ def parse(fileValue,fileName,fileJSON,indexCut):
         # dict_dept["temas_nomes"] = [{"tema":voto[0],"value":voto[1]} for voto in zip( header[4:], deputado2[4:])]
         deputados.append(dict_dept)
 
-    json.dump(deputados, deputados_json, ensure_ascii=False,indent=4)
+    json.dump(deputados, deputados_json, ensure_ascii=False)
 
     deputados_json.close()
 
