@@ -1,0 +1,513 @@
+anexo,codOrcamento,condicao,email,fone,gabinete,idParlamentar,ideCadastro,matricula,nome,nomeParlamentar,partido,sexo,uf,urlFoto
+4,3283,Titular,dep.goulart@camara.gov.br,3215-5533,533,5830382,178980,361,ANTONIO GOULART DOS REIS,GOULART,PSD,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178980.jpg
+4,2152,Titular,dep.betofaro@camara.gov.br,3215-5723,723,5830714,141335,19,JOSÉ ROBERTO OLIVEIRA FARO,BETO FARO,PT,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/141335.jpg
+4,2488,Titular,dep.rodrigodecastro@camara.gov.br,3215-5701,701,5830453,141531,268,RODRIGO BATISTA DE CASTRO,RODRIGO DE CASTRO,PSDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/141531.jpg
+4,2551,Titular,dep.laertebessa@camara.gov.br,3215-5340,340,5830785,141478,412,LAERTE RODRIGUES DE BESSA,LAERTE BESSA,PR,masculino,DF,http://www.camara.gov.br/internet/deputado/bandep/141478.jpg
+3,3712,Titular,dep.majorolimpio@camara.gov.br,3215-5279,279,5830405,178826,368,SERGIO OLIMPIO GOMES,MAJOR OLIMPIO,PDT,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178826.jpg
+4,2762,Titular,dep.luistibe@camara.gov.br,3215-5632,632,5830737,160510,251,LUIS HENRIQUE DE OLIVEIRA RESENDE,LUIS TIBÉ,PTdoB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/160510.jpg
+3,3041,Titular,dep.alielmachado@camara.gov.br,3215-5480,480,5830336,178927,441,ALIEL MACHADO BARK,ALIEL MACHADO,PCdoB,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/178927.jpg
+4,3228,Titular,dep.ivanvalente@camara.gov.br,3215-5716,716,5830668,73531,359,IVAN VALENTE,IVAN VALENTE,PSOL,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/73531.jpg
+4,3672,Titular,dep.pedrochaves@camara.gov.br,3215-5406,406,5830691,74812,428,PEDRO PINHEIRO CHAVES,PEDRO CHAVES,PMDB,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/74812.jpg
+4,2705,Titular,dep.assiscarvalho@camara.gov.br,3215-5909,909,5830359,159237,111,FRANCISCO DE ASSIS CARVALHO GONÇALVES,ASSIS CARVALHO,PT,masculino,PI,http://www.camara.gov.br/internet/deputado/bandep/159237.jpg
+3,3053,Titular,dep.betinhogomes@camara.gov.br,3215-5269,269,5830545,178915,141,HEBERTE LAMARCK GOMES DA SILVA,BETINHO GOMES,PSDB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/178915.jpg
+4,3068,Titular,dep.carloshenriquegaguim@camara.gov.br,3215-5222,222,5830622,178993,60,CARLOS HENRIQUE AMORIM,CARLOS HENRIQUE GAGUIM,PMDB,masculino,TO,http://www.camara.gov.br/internet/deputado/bandep/178993.jpg
+4,3707,Titular,dep.luizcarlosramos@camara.gov.br,3215-5636,636,5830522,178802,318,LUIZ CARLOS RAMOS,LUIZ CARLOS RAMOS ,PSDC,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178802.jpg
+4,3695,Titular,dep.josinunes@camara.gov.br,3215-5950,950,5830528,114941,62,JOSINIANE BRAGA NUNES,JOSI NUNES,PMDB,feminino,TO,http://www.camara.gov.br/internet/deputado/bandep/114941.jpg
+4,2399,Titular,dep.alfredokaefer@camara.gov.br,3215-5818,818,5830645,141454,451,JACOB ALFREDO STOFFELS KAEFER,ALFREDO KAEFER,PSDB,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/141454.jpg
+4,2538,Titular,dep.ricardotripoli@camara.gov.br,3215-5241,241,5830307,141472,384,JOSÉ RICARDO ALVARENGA TRIPOLI,RICARDO TRIPOLI,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/141472.jpg
+4,2448,Titular,dep.felipemaia@camara.gov.br,3215-5528,528,5830330,141429,120,FELIPE CATALÃO MAIA,FELIPE MAIA,DEM,masculino,RN,http://www.camara.gov.br/internet/deputado/bandep/141429.jpg
+4,2844,Titular,dep.leopoldomeyer@camara.gov.br,3215-5233,233,5830499,160663,456,LEOPOLDO COSTA MEYER,LEOPOLDO MEYER,PSB,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/160663.jpg
+4,3726,Titular,dep.marinaldorosendo@camara.gov.br,3215-5827,827,5830476,178919,152,MARINALDO ROSENDO DE ALBUQUERQUE,MARINALDO ROSENDO,PSB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/178919.jpg
+4,1818,Titular,dep.nelsonmarquezelli@camara.gov.br,3215-5920,920,5830353,73553,381,NELSON MARQUEZELLI,NELSON MARQUEZELLI,PTB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/73553.jpg
+4,2756,Titular,dep.domingossavio@camara.gov.br,3215-5345,345,5830599,160758,233,DOMINGOS SÁVIO CAMPOS RESENDE,DOMINGOS SÁVIO,PSDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/160758.jpg
+4,3743,Titular,dep.raquelmuniz@camara.gov.br,3215-5444,444,5830376,178998,258,TANIA RAQUEL DE QUEIROZ MUNIZ,RAQUEL MUNIZ,PSC,feminino,MG,http://www.camara.gov.br/internet/deputado/bandep/178998.jpg
+3,3101,Titular,dep.fabiogarcia@camara.gov.br,3215-5278,278,5830459,178905,403,FABIO PAULINO GARCIA,FABIO GARCIA,PSB,masculino,MT,http://www.camara.gov.br/internet/deputado/bandep/178905.jpg
+4,3775,Titular,dep.vicentinhojunior@camara.gov.br,3215-5817,817,5830708,137070,66,VICENTE ALVES DE OLIVEIRA JUNIOR,VICENTINHO JÚNIOR,PSB,masculino,TO,http://www.camara.gov.br/internet/deputado/bandep/137070.jpg
+4,3046,Titular,dep.andrefufuca@camara.gov.br,3215-5945,945,5830768,178882,72,ANDRE LUIS CARVALHO RIBEIRO,ANDRÉ FUFUCA,PEN,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/178882.jpg
+4,3703,Titular,dep.leodebrito@camara.gov.br,3215-5619,619,5830505,178825,57,LEONARDO CUNHA DE BRITO,LEO DE BRITO,PT,masculino,AC,http://www.camara.gov.br/internet/deputado/bandep/178825.jpg
+4,2717,Titular,dep.andersonferreira@camara.gov.br,3215-5450,450,5830422,160551,142,ANDERSON FERREIRA RODRIGUES,ANDERSON FERREIRA,PR,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/160551.jpg
+4,2711,Titular,dep.aguinaldoribeiro@camara.gov.br,3215-5735,735,5830568,160527,129,AGUINALDO VELLOSO BORGES RIBEIRO,AGUINALDO RIBEIRO,PP,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/160527.jpg
+4,3095,Titular,dep.evandroroman@camara.gov.br,3215-5303,303,5830516,178930,452,EVANDRO ROGERIO ROMAN,EVANDRO ROMAN,PSD,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/178930.jpg
+4,2570,Titular,dep.deciolima@camara.gov.br,3215-5218,218,5830313,141413,475,DÉCIO NERY DE LIMA,DÉCIO LIMA,PT,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/141413.jpg
+4,2871,Titular,dep.afonsoflorence@camara.gov.br,3215-5305,305,5830319,160508,182,AFONSO BANDEIRA FLORENCE,AFONSO FLORENCE,PT,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/160508.jpg
+4,3756,Titular,dep.rosangelagomes@camara.gov.br,3215-5438,438,5830662,178945,325,ROSANGELA DE SOUZA GOMES,ROSANGELA GOMES,PRB,feminino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178945.jpg
+4,2569,Titular,dep.celsomaldaner@camara.gov.br,3215-5311,311,5830413,141405,472,CELSO MALDANER,CELSO MALDANER,PMDB,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/141405.jpg
+4,3446,Titular,dep.marcusvicente@camara.gov.br,3215-5360,360,5830562,74235,281,MARCUS ANTÔNIO VICENTE,MARCUS VICENTE,PP,masculino,ES,http://www.camara.gov.br/internet/deputado/bandep/74235.jpg
+4,3034,Titular,dep.adelsonbarreto@camara.gov.br,3215-5937,937,5830370,178968,175,ADELSON BARRETO DOS SANTOS,ADELSON BARRETO,PTB,masculino,SE,http://www.camara.gov.br/internet/deputado/bandep/178968.jpg
+4,2517,Titular,dep.viniciuscarvalho@camara.gov.br,3215-5356,356,5830631,141555,397,VINICIUS RAPOZO DE CARVALHO,VINICIUS CARVALHO,PRB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/141555.jpg
+4,2738,Titular,dep.antonioimbassahy@camara.gov.br,3215-5810,810,5830702,160530,191,ANTONIO JOSÉ IMBASSAHY DA SILVA,ANTONIO IMBASSAHY,PSDB,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/160530.jpg
+3,3257,Titular,dep.giuseppevecci@camara.gov.br,3215-5383,383,5830559,178878,429,GIUSEPPE VECCI,GIUSEPPE VECCI,PSDB,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/178878.jpg
+4,2784,Titular,dep.jeanwyllys@camara.gov.br,3215-5646,646,5830725,160672,307,JEAN WYLLYS DE MATOS SANTOS,JEAN WYLLYS,PSOL,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/160672.jpg
+4,2470,Titular,dep.robertobritto@camara.gov.br,3215-5733,733,5830608,141529,211,ROBERTO PEREIRA DE BRITTO,ROBERTO BRITTO,PP,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/141529.jpg
+4,2789,Titular,dep.sergiozveiter@camara.gov.br,3215-5437,437,5830774,160612,320,SERGIO ZVEITER,SERGIO ZVEITER,PSD,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/160612.jpg
+4,3779,Titular,dep.walteralves@camara.gov.br,3215-5435,435,5830419,178952,125,WALTER PEREIRA ALVES,WALTER ALVES,PMDB,masculino,RN,http://www.camara.gov.br/internet/deputado/bandep/178952.jpg
+3,3042,Titular,dep.altineucortes@camara.gov.br,3215-5578,578,5830582,178937,286,ALTINEU CÔRTES FREITAS COUTINHO,ALTINEU CÔRTES,PR,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178937.jpg
+4,3691,Titular,dep.joaodaniel@camara.gov.br,3215-5605,605,5830751,178970,179,JOAO SOMARIVA DANIEL,JOÃO DANIEL,PT,masculino,SE,http://www.camara.gov.br/internet/deputado/bandep/178970.jpg
+4,3693,Titular,dep.jonymarcos@camara.gov.br,3215-5807,807,5830396,178971,181,JONY MARCOS DE SOUZA ARAUJO,JONY MARCOS,PRB,masculino,SE,http://www.camara.gov.br/internet/deputado/bandep/178971.jpg
+3,2867,Titular,dep.marcon@camara.gov.br,3215-5569,569,5830794,160535,507,DIONILSO MATEUS MARCON,MARCON,PT,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/160535.jpg
+4,3176,Titular,dep.dilceusperafico@camara.gov.br,3215-5746,746,5830651,73768,444,DILCEU JOÃO SPERAFICO,DILCEU SPERAFICO,PP,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/73768.jpg
+4,3097,Titular,dep.ezequielfonseca@camara.gov.br,3215-5658,658,5830745,178904,402,EZEQUIEL ANGELO FONSECA,EZEQUIEL FONSECA,PP,masculino,MT,http://www.camara.gov.br/internet/deputado/bandep/178904.jpg
+4,1970,Titular,dep.takayama@camara.gov.br,3215-5910,910,5830674,74385,469,HIDEKAZU TAKAYAMA,TAKAYAMA,PSC,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/74385.jpg
+4,2519,Titular,dep.antoniobulhoes@camara.gov.br,3215-5327,327,5830625,141383,333,ANTONIO CARLOS MARTINS DE BULHÕES,ANTONIO BULHÕES,PRB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/141383.jpg
+4,2505,Titular,dep.indiodacosta@camara.gov.br,3215-5509,509,5830731,141389,315,ANTONIO PEDRO DE SIQUEIRA INDIO DA COSTA,INDIO DA COSTA,PSD,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/141389.jpg
+4,1997,Titular,dep.vicentinho@camara.gov.br,3215-5740,740,5830496,74283,396,VICENTE PAULO DA SILVA,VICENTINHO,PT,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/74283.jpg
+4,1479,Titular,dep.augustocarvalho@camara.gov.br,3215-5215,215,5830433,73655,411,AUGUSTO SILVEIRA DE CARVALHO,AUGUSTO CARVALHO,SD,masculino,DF,http://www.camara.gov.br/internet/deputado/bandep/73655.jpg
+3,3721,Titular,dep.marcosabrao@camara.gov.br,3215-5375,375,5830445,178880,432,MARCOS ABRAO RORIZ SOARES DE CARVALHO,MARCOS ABRÃO,PPS,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/178880.jpg
+4,2676,Titular,dep.viniciusgurgel@camara.gov.br,3215-5852,852,5830482,160591,16,VINICIUS DE AZEVEDO GURGEL,VINICIUS GURGEL,PR,masculino,AP,http://www.camara.gov.br/internet/deputado/bandep/160591.jpg
+4,3061,Titular,dep.cacaleao@camara.gov.br,3215-5320,320,5830296,93083,193,CARLOS FELIPE VAZQUEZ DE SOUZA LEÃO,CACÁ LEÃO,PP,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/93083.jpg
+4,3235,Titular,dep.geovaniadesa@camara.gov.br,3215-5606,606,5830539,178966,482,GEOVANIA DE SA RODRIGUES,GEOVANIA DE SÁ,PSDB,feminino,SC,http://www.camara.gov.br/internet/deputado/bandep/178966.jpg
+3,2429,Titular,dep.lazarobotelho@camara.gov.br,3215-5478,478,5830290,141480,63,LÁZARO BOTELHO MARTINS,LÁZARO BOTELHO,PP,masculino,TO,http://www.camara.gov.br/internet/deputado/bandep/141480.jpg
+4,2739,Titular,dep.arthuroliveiramaia@camara.gov.br,3215-5830,830,5830788,160600,192,ARTHUR DE OLIVEIRA MAIA DA SILVA,ARTHUR OLIVEIRA MAIA,SD,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/160600.jpg
+4,3762,Titular,dep.sergiovidigal@camara.gov.br,3215-5812,812,5830682,178874,283,ANTONIO SERGIO ALVES VIDIGAL,SERGIO VIDIGAL,PDT,masculino,ES,http://www.camara.gov.br/internet/deputado/bandep/178874.jpg
+4,3780,Titular,dep.rocha@camara.gov.br,3215-5607,607,5830688,178840,59,WHERLES FERNANDES DA ROCHA,ROCHA,PSDB,masculino,AC,http://www.camara.gov.br/internet/deputado/bandep/178840.jpg
+4,1508,Titular,dep.leonardopicciani@camara.gov.br,3215-5302,302,5830339,74254,312,LEONARDO CARNEIRO MONTEIRO PICCIANI,LEONARDO PICCIANI,PMDB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/74254.jpg
+4,3186,Titular,dep.eduardobarbosa@camara.gov.br,3215-1540,540,5830588,74655,230,EDUARDO LUIZ BARROS BARBOSA,EDUARDO BARBOSA,PSDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74655.jpg
+4,1581,Titular,dep.jeffersoncampos@camara.gov.br,3215-5346,346,5830439,74273,349,JEFFERSON ALVES DE CAMPOS,JEFFERSON CAMPOS,PSD,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/74273.jpg
+4,2831,Titular,dep.ronaldofonseca@camara.gov.br,3215-5223,223,5830488,160637,414,RONALDO FONSECA DE SOUZA,RONALDO FONSECA,PROS,masculino,DF,http://www.camara.gov.br/internet/deputado/bandep/160637.jpg
+3,2700,Titular,dep.daniloforte@camara.gov.br,3215-5384,384,5830390,62881,95,FRANCISCO DANILO BASTOS FORTE,DANILO FORTE,PMDB,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/62881.jpg
+4,3020,Titular,dep.afonsomotta@camara.gov.br,3215-5711,711,5830619,178835,490,AFONSO ANTUNES DA MOTTA,AFONSO MOTTA,PDT,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/178835.jpg
+4,2751,Titular,dep.waldenorpereira@camara.gov.br,3215-5954,954,5830548,160569,219,WALDENOR ALVES PEREIRA FILHO,WALDENOR PEREIRA,PT,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/160569.jpg
+4,1619,Titular,dep.atilalins@camara.gov.br,3215-5730,730,5830571,74090,38,ÁTILA SIDNEY LINS ALBUQUERQUE,ÁTILA LINS,PSD,masculino,AM,http://www.camara.gov.br/internet/deputado/bandep/74090.jpg
+4,3745,Titular,dep.remidiomonai@camara.gov.br,3215-5641,641,5830333,178960,7,REMIDIO MONAI MONTESSI,REMÍDIO MONAI,PR,masculino,RR,http://www.camara.gov.br/internet/deputado/bandep/178960.jpg
+4,2797,Titular,dep.brunafurlan@camara.gov.br,3215-5836,836,5830665,160589,335,BRUNA DIAS FURLAN,BRUNA FURLAN,PSDB,feminino,SP,http://www.camara.gov.br/internet/deputado/bandep/160589.jpg
+4,2923,Titular,dep.fernandojordao@camara.gov.br,3215-5626,626,5830642,163831,310,FERNANDO ANTÔNIO CECILIANO JORDÃO,FERNANDO JORDÃO,PMDB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/163831.jpg
+3,3755,Titular,dep.roneynemer@camara.gov.br,3215-5572,572,5830310,178870,415,RONEY TANIOS NEMER,RONEY NEMER,PMDB,masculino,DF,http://www.camara.gov.br/internet/deputado/bandep/178870.jpg
+4,1664,Titular,dep.moronitorgan@camara.gov.br,3215-5445,445,5830717,74457,105,MORONI BING TORGAN,MORONI TORGAN,DEM,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/74457.jpg
+4,3066,Titular,dep.carlosandrade@camara.gov.br,3215-5758,758,5830456,178958,3,CARLOS AUGUSTO ANDRADE SILVA,CARLOS ANDRADE,PHS,masculino,RR,http://www.camara.gov.br/internet/deputado/bandep/178958.jpg
+4,2812,Titular,dep.pr.marcofeliciano@camara.gov.br,3215-5254,254,5830379,160601,379,MARCO ANTÔNIO FELICIANO,PR. MARCO FELICIANO,PSC,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/160601.jpg
+3,3071,Titular,dep.celsopansera@camara.gov.br,3215-5475,475,5830473,72912,292,CELSO PANSERA,CELSO PANSERA,PMDB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/72912.jpg
+4,1246,Titular,dep.juliocesar@camara.gov.br,3215-5944,944,5830694,74317,114,JÚLIO CÉSAR DE CARVALHO LIMA,JÚLIO CESAR,PSD,masculino,PI,http://www.camara.gov.br/internet/deputado/bandep/74317.jpg
+4,2815,Titular,dep.ricardoizar@camara.gov.br,3215-5634,634,5830479,160655,383,RICARDO IZAR JUNIOR,RICARDO IZAR,PSD,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/160655.jpg
+4,3767,Titular,dep.tadeualencar@camara.gov.br,3215-5820,820,5830425,178922,161,FRANCISCO TADEU BARBOSA DE ALENCAR,TADEU ALENCAR,PSB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/178922.jpg
+4,3692,Titular,dep.joaquimpassarinho@camara.gov.br,3215-5339,339,5830502,178910,33,JOAQUIM PASSARINHO PINTO DE SOUZA PORTO,JOAQUIM PASSARINHO,PSD,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/178910.jpg
+4,1403,Titular,dep.leonardomonteiro@camara.gov.br,3215-5922,922,5830402,74156,253,JOSÉ LEONARDO COSTA MONTEIRO,LEONARDO MONTEIRO,PT,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74156.jpg
+4,2550,Titular,dep.valtenirpereira@camara.gov.br,3215-5913,913,5830648,141552,404,VALTENIR LUIZ PEREIRA,VALTENIR PEREIRA,PROS,masculino,MT,http://www.camara.gov.br/internet/deputado/bandep/141552.jpg
+4,2690,Titular,dep.cesarhalum@camara.gov.br,3215-5422,422,5830525,160576,64,CESAR HANNA HALUM,CÉSAR HALUM,PRB,masculino,TO,http://www.camara.gov.br/internet/deputado/bandep/160576.jpg
+4,3043,Titular,dep.aluisiomendes@camara.gov.br,3215-5931,931,5830565,178881,68,ALUISIO GUIMARAES MENDES FILHO,ALUISIO MENDES,PSDC,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/178881.jpg
+4,1478,Titular,dep.robertobalestra@camara.gov.br,3215-5219,219,5830602,73674,427,ROBERTO EGÍDIO BALESTRA,ROBERTO BALESTRA,PP,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/73674.jpg
+4,2841,Titular,dep.edmararruda@camara.gov.br,3215-5962,962,5830508,160578,446,EDMAR DE SOUZA ARRUDA,EDMAR ARRUDA,PSC,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/160578.jpg
+4,1124,Titular,dep.mariahelena@camara.gov.br,3215-5410,410,5830765,64960,6,MARIA HELENA VERONESE RODRIGUES,MARIA HELENA,PSB,feminino,RR,http://www.camara.gov.br/internet/deputado/bandep/64960.jpg
+4,2449,Titular,dep.efraimfilho@camara.gov.br,3215-5744,744,5830519,141422,128,EFRAIM DE ARAÚJO MORAIS FILHO,EFRAIM FILHO,DEM,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/141422.jpg
+4,3079,Titular,dep.daminapereira@camara.gov.br,3215-5434,434,5830705,178892,227,DAMINA DE CARVALHO PEREIRA,DÂMINA PEREIRA,PMN,feminino,MG,http://www.camara.gov.br/internet/deputado/bandep/178892.jpg
+4,1527,Titular,dep.carlossampaio@camara.gov.br,3215-5207,207,5830711,74262,338,CARLOS HENRIQUE FOCESI SAMPAIO,CARLOS SAMPAIO,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/74262.jpg
+4,1955,Titular,dep.joaocampos@camara.gov.br,3215-5315,315,5830462,74366,418,JOÃO CAMPOS DE ARAÚJO,JOÃO CAMPOS,PSDB,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/74366.jpg
+4,2608,Titular,dep.laerciooliveira@camara.gov.br,3215-5629,629,5830362,151208,176,LAERCIO JOSÉ DE OLIVEIRA,LAERCIO OLIVEIRA,SD,masculino,SE,http://www.camara.gov.br/internet/deputado/bandep/151208.jpg
+4,3058,Titular,dep.cabodaciolo@camara.gov.br,3215-5803,803,5830757,178938,289,BENEVENUTO DACIOLO FONSECA DOS SANTOS,CABO DACIOLO,S.PART.,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178938.jpg
+4,3477,Titular,dep.jutahyjunior@camara.gov.br,3215-5407,407,5830416,74570,206,JUTAHY MAGALHÃES JÚNIOR,JUTAHY JUNIOR,PSDB,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/74570.jpg
+4,1867,Titular,dep.luizcarloshauly@camara.gov.br,3215-5220,220,5830316,73778,454,LUIZ CARLOS JORGE HAULY,LUIZ CARLOS HAULY,PSDB,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/73778.jpg
+4,2760,Titular,dep.gabrielguimaraes@camara.gov.br,3215-5821,821,5830611,129037,244,GABRIEL GUIMARÃES DE ANDRADE,GABRIEL GUIMARÃES,PT,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/129037.jpg
+4,3339,Titular,dep.helioleite@camara.gov.br,3215-5403,403,5830299,178909,32,HELIO LEITE DA SILVA,HÉLIO LEITE,DEM,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/178909.jpg
+4,3074,Titular,dep.ciceroalmeida@camara.gov.br,3215-5760,760,5830797,178841,165,JOSÉ CÍCERO SOARES DE ALMEIDA,CÍCERO ALMEIDA,PRTB,masculino,AL,http://www.camara.gov.br/internet/deputado/bandep/178841.jpg
+3,3051,Titular,dep.bacelar@camara.gov.br,3215-5381,381,5830536,69871,184,JOAO CARLOS BACELAR BATISTA,BACELAR,PTN,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/69871.jpg
+4,2778,Titular,dep.aureo@camara.gov.br,3215-5212,212,5830465,160512,290,AUREO LIDIO MOREIRA RIBEIRO,AUREO,SD,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/160512.jpg
+4,2975,Titular,dep.margaridasalomao@camara.gov.br,3215-5236,236,5830442,171619,237,MARIA MARGARIDA MARTINS SALOMÃO,MARGARIDA SALOMÃO,PT,feminino,MG,http://www.camara.gov.br/internet/deputado/bandep/171619.jpg
+3,2435,Titular,dep.waldirmaranhao@camara.gov.br,3215-5575,575,5830393,141558,84,WALDIR MARANHÃO CARDOSO,WALDIR MARANHÃO,PP,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/141558.jpg
+4,3711,Titular,dep.macedo@camara.gov.br,3215-5214,214,5830605,178867,104,JOSE MARIA MACEDO JUNIOR,MACEDO,PSL,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/178867.jpg
+3,3398,Titular,dep.hissaabrahao@camara.gov.br,3215-5272,272,5830728,178849,42,HISSA NAGIB ABRAHAO FILHO,HISSA ABRAHÃO,PPS,masculino,AM,http://www.camara.gov.br/internet/deputado/bandep/178849.jpg
+4,3038,Titular,dep.alexandrebaldy@camara.gov.br,3215-5441,441,5830373,178875,416,ALEXANDRE BALDY DE SANT'ANNA BRAGA,ALEXANDRE BALDY,PSDB,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/178875.jpg
+3,3035,Titular,dep.adiltonsachetti@camara.gov.br,3215-5374,374,5830628,178903,401,ADILTON DOMINGOS SACHETTI,ADILTON SACHETTI,PSB,masculino,MT,http://www.camara.gov.br/internet/deputado/bandep/178903.jpg
+4,2927,Titular,dep.delegadowaldir@camara.gov.br,3215-5645,645,5830350,164359,421,WALDIR SOARES DE OLIVEIRA,DELEGADO WALDIR,PSDB,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/164359.jpg
+4,3080,Titular,dep.danielcoelho@camara.gov.br,3215-5813,813,5830748,178916,144,DANIEL PIRES COELHO,DANIEL COELHO,PSDB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/178916.jpg
+4,2637,Titular,dep.alfredonascimento@camara.gov.br,3215-5401,401,5830771,178846,36,ALFREDO PEREIRA DO NASCIMENTO,ALFREDO NASCIMENTO,PR,masculino,AM,http://www.camara.gov.br/internet/deputado/bandep/178846.jpg
+4,2547,Titular,dep.carlosbezerra@camara.gov.br,3215-5815,815,5830791,141401,400,CARLOS GOMES BEZERRA,CARLOS BEZERRA,PMDB,masculino,MT,http://www.camara.gov.br/internet/deputado/bandep/141401.jpg
+4,3650,Titular,dep.osmarserraglio@camara.gov.br,3215-5845,845,5830293,73463,463,OSMAR JOSÉ SERRAGLIO,OSMAR SERRAGLIO,PMDB,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/73463.jpg
+4,2384,Titular,dep.mauromariani@camara.gov.br,3215-5925,925,5830542,141507,480,MAURO MARIANI,MAURO MARIANI,PMDB,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/141507.jpg
+3,3040,Titular,dep.alexandrevalle@camara.gov.br,3215-5587,587,5830436,178936,285,ALEXANDRE VALLE CARDOSO,ALEXANDRE VALLE,PRP,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178936.jpg
+4,2170,Titular,dep.dagoberto@camara.gov.br,3215-5654,654,5830399,141411,434,DAGOBERTO NOGUEIRA FILHO,DAGOBERTO,PDT,masculino,MS,http://www.camara.gov.br/internet/deputado/bandep/141411.jpg
+4,3037,Titular,dep.alexmanente@camara.gov.br,3215-5245,245,5830591,178972,331,ALEX SPINELLI MANENTE,ALEX MANENTE,PPS,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178972.jpg
+4,1718,Titular,dep.josecarlosaleluia@camara.gov.br,3215-5854,854,5830579,74553,207,JOSÉ CARLOS ALELUIA COSTA,JOSÉ CARLOS ALELUIA,DEM,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/74553.jpg
+3,3728,Titular,dep.marxbeltrao@camara.gov.br,3215-5474,474,5830777,178843,169,MARX BELTRÃO LIMA SIQUEIRA,MARX BELTRÃO ,PMDB,masculino,AL,http://www.camara.gov.br/internet/deputado/bandep/178843.jpg
+1,2077,Titular,dep.marcomaia@camara.gov.br,3215-5964,28,5830634,133373,496,MARCO AURÉLIO SPALL MAIA,MARCO MAIA,PT,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/133373.jpg
+4,1960,Titular,dep.rubensotoni@camara.gov.br,3215-5501,501,5830485,74371,425,RUBENS OTONI GOMIDE,RUBENS OTONI,PT,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/74371.jpg
+3,3070,Titular,dep.celiosilveira@camara.gov.br,3215-5565,565,5830585,178876,417,CELIO ANTONIO DA SILVEIRA,CÉLIO SILVEIRA,PSDB,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/178876.jpg
+4,2531,Titular,dep.paulomaluf@camara.gov.br,3215-5512,512,5830342,132056,373,PAULO SALIM MALUF,PAULO MALUF,PP,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/132056.jpg
+4,3054,Titular,dep.betorosado@camara.gov.br,3215-5840,840,5830685,178948,122,CARLOS ALBERTO DE SOUSA ROSADO SEGUNDO,BETO ROSADO,PP,masculino,RN,http://www.camara.gov.br/internet/deputado/bandep/178948.jpg
+4,2420,Titular,dep.lindomargarcon@camara.gov.br,3215-5548,548,5830734,141483,45,LINDOMAR BARBOSA ALVES,LINDOMAR GARÇON,PMDB,masculino,RO,http://www.camara.gov.br/internet/deputado/bandep/141483.jpg
+4,3086,Titular,dep.dulcemiranda@camara.gov.br,3215-5530,530,5830311,178994,61,DULCE FERREIRA PAGANI MIRANDA,DULCE MIRANDA,PMDB,feminino,TO,http://www.camara.gov.br/internet/deputado/bandep/178994.jpg
+3,2838,Titular,dep.mandetta@camara.gov.br,3215-5577,577,5830643,160633,436,LUIZ HENRIQUE MANDETTA,MANDETTA,DEM,masculino,MS,http://www.camara.gov.br/internet/deputado/bandep/160633.jpg
+4,3098,Titular,dep.ezequielteixeira@camara.gov.br,3215-5210,210,5830620,178941,303,EZEQUIEL CORTAZ TEIXEIRA,EZEQUIEL TEIXEIRA,SD,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178941.jpg
+4,3611,Titular,dep.luizaerundina@camara.gov.br,3215-5620,620,5830288,74784,371,LUIZA ERUNDINA DE SOUSA,LUIZA ERUNDINA,PSB,feminino,SP,http://www.camara.gov.br/internet/deputado/bandep/74784.jpg
+4,3332,Titular,dep.ricardobarros@camara.gov.br,3215-5412,412,5830357,73788,462,RICARDO JOSÉ MAGALHÃES BARROS,RICARDO BARROS,PP,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/73788.jpg
+4,2858,Titular,dep.alceumoreira@camara.gov.br,3215-5238,238,5830689,160559,486,ALCEU MOREIRA DA SILVA,ALCEU MOREIRA,PMDB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/160559.jpg
+4,3748,Titular,dep.robertogoes@camara.gov.br,3215-5462,462,5830334,178995,17,ANTONIO ROBERTO RODRIGUES GÓES DA SILVA,ROBERTO GÓES,PDT,masculino,AP,http://www.camara.gov.br/internet/deputado/bandep/178995.jpg
+4,3091,Titular,dep.elmarnascimento@camara.gov.br,3215-5935,935,5830666,178854,198,ELMAR JOSE VIEIRA NASCIMENTO,ELMAR NASCIMENTO,DEM,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/178854.jpg
+4,3322,Titular,dep.paulofeijo@camara.gov.br,3215-5336,336,5830551,74017,323,PAULO FERNANDO FEIJO TORRES,PAULO FEIJÓ,PR,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/74017.jpg
+4,1141,Titular,dep.wladimircosta@camara.gov.br,3215-5343,343,5830474,73930,23,WLADIMIR AFONSO DA COSTA RABELO,WLADIMIR COSTA,SD,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/73930.jpg
+4,3122,Titular,dep.anibalgomes@camara.gov.br,3215-5731,731,5830497,74212,87,ANÍBAL FERREIRA GOMES,ANÍBAL GOMES,PMDB,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/74212.jpg
+4,2675,Titular,dep.professoramarcivania@camara.gov.br,3215-5338,338,5830503,160641,15,MARCIVANIA DO SOCORRO DA ROCHA FLEXA,PROFESSORA MARCIVANIA,PT,feminino,AP,http://www.camara.gov.br/internet/deputado/bandep/160641.jpg
+4,2442,Titular,dep.joseguimaraes@camara.gov.br,3215-5306,306,5830597,141470,103,JOSÉ NOBRE GUIMARÃES,JOSÉ GUIMARÃES,PT,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/141470.jpg
+4,2868,Titular,dep.nelsonmarchezanjunior@camara.gov.br,3215-5250,250,5830428,160567,509,NELSON MARCHEZAN JÚNIOR,NELSON MARCHEZAN JUNIOR,PSDB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/160567.jpg
+4,1799,Titular,dep.betomansur@camara.gov.br,3215-5616,616,5830451,73437,340,PAULO ROBERTO GOMES MANSUR,BETO MANSUR,PRB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/73437.jpg
+4,3682,Titular,dep.juliodelgado@camara.gov.br,3215-5323,323,5830574,73586,250,JÚLIO CÉSAR DELGADO,JÚLIO DELGADO,PSB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/73586.jpg
+4,3752,Titular,dep.ronaldocarletto@camara.gov.br,3215-5262,262,5830566,178861,216,RONALDO CARLETTO,RONALDO CARLETTO,PP,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/178861.jpg
+4,3094,Titular,dep.evandrogussi@camara.gov.br,3215-5433,433,5830649,178828,354,EVANDRO HERRERA BERTONE GUSSI,EVANDRO GUSSI,PV,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178828.jpg
+4,3717,Titular,dep.marcioalvino@camara.gov.br,3215-5331,331,5830720,178983,370,MARCIO LUIZ ALVINO DE SOUZA,MARCIO ALVINO,PR,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178983.jpg
+4,1504,Titular,dep.juliolopes@camara.gov.br,3215-5544,544,5830411,74253,308,JULIO LUIZ BAPTISTA LOPES,JULIO LOPES,PP,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/74253.jpg
+4,2083,Titular,dep.andrefigueiredo@camara.gov.br,3215-5940,940,5830614,133439,89,ANDRÉ PEIXOTO FIGUEIREDO LIMA,ANDRÉ FIGUEIREDO,PDT,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/133439.jpg
+4,3547,Titular,dep.sergioreis@camara.gov.br,3215-5213,213,5830603,178991,390,SERGIO BAVINI,SÉRGIO REIS,PRB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178991.jpg
+4,3614,Titular,dep.miltonmonti@camara.gov.br,3215-5328,328,5830520,74787,374,MILTON ANTONIO CASQUEL MONTI,MILTON MONTI,PR,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/74787.jpg
+3,2863,Titular,dep.giovanicherini@camara.gov.br,3215-5468,468,5830766,160673,502,GIOVANI CHERINI,GIOVANI CHERINI,PDT,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/160673.jpg
+4,2774,Titular,dep.paulofoletto@camara.gov.br,3215-5839,839,5830457,160517,280,PAULO ROBERTO FOLETTO,PAULO FOLETTO,PSB,masculino,ES,http://www.camara.gov.br/internet/deputado/bandep/160517.jpg
+4,3230,Titular,dep.jaimemartins@camara.gov.br,3215-5904,904,5830468,74665,240,JAIME MARTINS FILHO,JAIME MARTINS,PSD,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74665.jpg
+4,9048,Titular,dep.osmarterra@camara.gov.br,3215-5927,927,5830557,73692,497,OSMAR GASPARINI TERRA,OSMAR TERRA,PMDB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/73692.jpg
+4,3264,Titular,dep.givaldovieira@camara.gov.br,3215-5805,805,5830706,178872,276,GIVALDO VIEIRA DA SILVA,GIVALDO VIEIRA,PT,masculino,ES,http://www.camara.gov.br/internet/deputado/bandep/178872.jpg
+4,1159,Titular,dep.sarneyfilho@camara.gov.br,3215-5202,202,5830511,74210,85,JOSÉ SARNEY FILHO,SARNEY FILHO,PV,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/74210.jpg
+4,1355,Titular,dep.josecarlosaraujo@camara.gov.br,3215-5232,232,5830760,74140,197,JOSÉ CARLOS LEÃO DE ARAÚJO,JOSÉ CARLOS ARAÚJO,PSD,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/74140.jpg
+4,1568,Titular,dep.gilbertonascimento@camara.gov.br,3215-5834,834,5830514,74270,360,GILBERTO NASCIMENTO SILVA,GILBERTO NASCIMENTO,PSC,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/74270.jpg
+4,3765,Titular,dep.sorayasantos@camara.gov.br,3215-5352,352,5830365,178946,328,SORAYA ALENCAR DOS SANTOS,SORAYA SANTOS,PMDB,feminino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178946.jpg
+4,1310,Titular,dep.beneditadasilva@camara.gov.br,3215-5330,330,5830660,73701,291,BENEDITA SOUZA DA SILVA SAMPAIO,BENEDITA DA SILVA,PT,feminino,RJ,http://www.camara.gov.br/internet/deputado/bandep/73701.jpg
+4,3764,Titular,dep.simonemorgado@camara.gov.br,3215-5440,440,5830394,178911,35,SIMONE MARIA MORGADO FERREIRA,SIMONE MORGADO,PMDB,feminino,PA,http://www.camara.gov.br/internet/deputado/bandep/178911.jpg
+4,3771,Titular,dep.toninhowandscheer@camara.gov.br,3215-5902,902,5830417,178934,470,ANTONIO WANDSCHEER,TONINHO WANDSCHEER,PT,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/178934.jpg
+3,3735,Titular,dep.niltotatto@camara.gov.br,3215-5267,267,5830749,178986,382,NILTO IGNACIO TATTO,NILTO TATTO,PT,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178986.jpg
+4,1339,Titular,dep.danielalmeida@camara.gov.br,3215-5317,317,5830345,74060,188,DANIEL GOMES DE ALMEIDA,DANIEL ALMEIDA,PCdoB,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/74060.jpg
+4,2979,Titular,dep.fabioreis@camara.gov.br,3215-5456,456,5830680,171623,178,FABIO DE ALMEIDA REIS,FABIO REIS,PMDB,masculino,SE,http://www.camara.gov.br/internet/deputado/bandep/171623.jpg
+3,3699,Titular,dep.juscelinofilho@camara.gov.br,3215-5370,370,5830606,178886,79,JOSE JUSCELINO DOS SANTOS REZENDE FILHO,JUSCELINO FILHO,PRP,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/178886.jpg
+4,2922,Titular,dep.ronaldonogueira@camara.gov.br,3215-5625,625,5830723,163321,517,RONALDO NOGUEIRA DE OLIVEIRA,RONALDO NOGUEIRA,PTB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/163321.jpg
+3,3067,Titular,dep.carlosgomes@camara.gov.br,3215-5285,285,5830302,178962,492,ANTONIO CARLOS GOMES DA SILVA,CARLOS GOMES,PRB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/178962.jpg
+4,-,Titular,dep.pastorfranklin@camara.gov.br,3215-5627,627,5830835,186775,544,FRANKLIN ROBERTO DE LIMA SOUZA,PASTOR FRANKLIN,PTdoB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/186775.jpg
+4,2397,Titular,dep.hugoleal@camara.gov.br,3215-5631,631,5830320,141450,306,HUGO LEAL MELO DA SILVA,HUGO LEAL,PROS,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/141450.jpg
+3,2737,Titular,dep.antoniobrito@camara.gov.br,3215-5479,479,5830609,160553,189,ANTONIO LUIZ PARANHOS RIBEIRO LEITE DE BRITO,ANTONIO BRITO,PTB,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/160553.jpg
+4,1445,Titular,dep.geraldoresende@camara.gov.br,3215-5905,905,5830512,74374,435,GERALDO RESENDE PEREIRA,GERALDO RESENDE,PMDB,masculino,MS,http://www.camara.gov.br/internet/deputado/bandep/74374.jpg
+4,2520,Titular,dep.carloszarattini@camara.gov.br,3215-5808,808,5830561,141398,398,CARLOS ALBERTO ROLIM ZARATTINI,CARLOS ZARATTINI,PT,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/141398.jpg
+4,3763,Titular,dep.sheridan@camara.gov.br,3215-5246,246,5830489,178961,8,SHÉRIDAN ESTÉRFANY OLIVEIRA DE ANCHIETA,SHÉRIDAN,PSDB,feminino,RR,http://www.camara.gov.br/internet/deputado/bandep/178961.jpg
+4,3491,Titular,dep.josuebengtson@camara.gov.br,3215-5505,505,5830632,74351,30,JOSUÉ BENGTSON,JOSUÉ BENGTSON,PTB,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/74351.jpg
+4,3742,Titular,dep.rafaelmotta@camara.gov.br,3215-5737,737,5830775,178951,123,RAFAEL HUETE DA MOTTA,RAFAEL MOTTA,PROS,masculino,RN,http://www.camara.gov.br/internet/deputado/bandep/178951.jpg
+4,2532,Titular,dep.paulopereiradasilva@camara.gov.br,3215-5217,217,5830369,141518,372,PAULO PEREIRA DA SILVA,PAULO PEREIRA DA SILVA,SD,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/141518.jpg
+4,2813,Titular,dep.paulofreire@camara.gov.br,3215-5416,416,5830701,160558,380,PAULO ROBERTO FREIRE DA COSTA,PAULO FREIRE,PR,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/160558.jpg
+4,2755,Titular,dep.dimasfabiano@camara.gov.br,3215-5325,325,5830297,160599,231,DIMAS FABIANO TOLEDO JÚNIOR,DIMAS FABIANO,PP,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/160599.jpg
+4,2850,Titular,dep.esperidiaoamin@camara.gov.br,3215-5252,252,5830346,160649,471,ESPERIDIÃO AMIN HELOU FILHO,ESPERIDIÃO AMIN,PP,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/160649.jpg
+4,3036,Titular,dep.alanrick@camara.gov.br,3215-5650,650,5830326,178836,53,ALAN RICK MIRANDA,ALAN RICK,PRB,masculino,AC,http://www.camara.gov.br/internet/deputado/bandep/178836.jpg
+4,2701,Titular,dep.domingosneto@camara.gov.br,3215-5546,546,5830652,143632,97,DOMINGOS GOMES DE AGUIAR NETO,DOMINGOS NETO,PROS,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/143632.jpg
+4,2478,Titular,dep.jomoraes@camara.gov.br,3215-5322,322,5830724,141503,246,MARIA DO SOCORRO JÔ MORAES,JÔ MORAES,PCdoB,feminino,MG,http://www.camara.gov.br/internet/deputado/bandep/141503.jpg
+4,2936,Titular,dep.nilsonleitao@camara.gov.br,3215-5825,825,5830675,166401,405,NILSON APARECIDO LEITÃO,NILSON LEITÃO,PSDB,masculino,MT,http://www.camara.gov.br/internet/deputado/bandep/166401.jpg
+4,3387,Titular,dep.wolneyqueiroz@camara.gov.br,3215-5936,936,5830303,74439,164,WOLNEY QUEIROZ MACIEL,WOLNEY QUEIROZ,PDT,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/74439.jpg
+4,2678,Titular,dep.arnaldojordy@camara.gov.br,3215-5506,506,5830744,160602,18,ARNALDO JORDY FIGUEIREDO,ARNALDO JORDY,PPS,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/160602.jpg
+4,3260,Titular,dep.josepriante@camara.gov.br,3215-5752,752,5830495,74079,26,JOSÉ BENITO PRIANTE JÚNIOR,JOSÉ PRIANTE,PMDB,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/74079.jpg
+4,1345,Titular,dep.simaosessim@camara.gov.br,3215-5709,709,5830589,73424,327,SIMÃO SESSIM,SIMÃO SESSIM,PP,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/73424.jpg
+4,2834,Titular,dep.heulercruvinel@camara.gov.br,3215-5536,536,5830638,160596,423,HEULER ABREU CRUVINEL,HEULER CRUVINEL,PSD,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/160596.jpg
+4,3737,Titular,dep.orlandosilva@camara.gov.br,3215-5923,923,5830446,178987,386,ORLANDO SILVA DE JESUS JUNIOR,ORLANDO SILVA,PCdoB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178987.jpg
+4,2723,Titular,dep.lucianasantos@camara.gov.br,3215-5524,524,5830532,160628,153,LUCIANA BARBOSA DE OLIVEIRA SANTOS,LUCIANA SANTOS,PCdoB,feminino,PE,http://www.camara.gov.br/internet/deputado/bandep/160628.jpg
+3,3715,Titular,dep.marcelobelinati@camara.gov.br,3215-5268,268,5830581,178932,461,MARCELO BELINATI MARTINS,MARCELO BELINATI,PP,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/178932.jpg
+4,3731,Titular,dep.misaelvarella@camara.gov.br,3215-5721,721,5830681,178895,245,MISAEL ARTUR FERREIRA VARELLA,MISAEL VARELLA,DEM,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/178895.jpg
+4,2615,Titular,dep.robertoalves@camara.gov.br,3215-5946,946,5830289,152610,387,BENEDITO ROBERTO ALVES FERREIRA,ROBERTO ALVES,PRB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/152610.jpg
+4,3739,Titular,dep.pedrocunhalima@camara.gov.br,3215-5611,611,5830538,178912,135,PEDRO OLIVEIRA CUNHA LIMA,PEDRO CUNHA LIMA,PSDB,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/178912.jpg
+4,2764,Titular,dep.padrejoao@camara.gov.br,3215-5743,743,5830781,160556,259,JOÃO CARLOS SIQUEIRA,PADRE JOÃO,PT,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/160556.jpg
+4,2566,Titular,dep.sergiomoraes@camara.gov.br,3215-5258,258,5830340,141542,512,SÉRGIO IVAN MORAES,SÉRGIO MORAES,PTB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/141542.jpg
+4,2707,Titular,dep.iracemaportella@camara.gov.br,3215-5924,924,5830389,67138,113,IRACEMA MARIA PORTELLA NUNES NOGUEIRA LIMA,IRACEMA PORTELLA,PP,feminino,PI,http://www.camara.gov.br/internet/deputado/bandep/67138.jpg
+4,2441,Titular,dep.joseairtoncirilo@camara.gov.br,3215-5319,319,5830501,141464,101,JOSÉ AIRTON FÉLIX CIRILO DA SILVA,JOSÉ AIRTON CIRILO,PT,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/141464.jpg
+4,2746,Titular,dep.luciovieiralima@camara.gov.br,3215-5612,612,5830430,94931,205,LÚCIO QUADROS VIEIRA LIMA,LUCIO VIEIRA LIMA,PMDB,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/94931.jpg
+3,2786,Titular,dep.marcelomatos@camara.gov.br,3215-5579,579,5830762,76287,311,MARCELO VIVIANI GONÇALVES,MARCELO MATOS,PDT,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/76287.jpg
+4,2864,Titular,dep.jeronimogoergen@camara.gov.br,3215-5316,316,5830478,160570,505,JERÔNIMO PIZZOLOTTO GOERGEN,JERÔNIMO GOERGEN,PP,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/160570.jpg
+4,2032,Titular,dep.heraclitofortes@camara.gov.br,3215-5708,708,5830716,97707,115,HERÁCLITO DE SOUSA FORTES,HERÁCLITO FORTES,PSB,masculino,PI,http://www.camara.gov.br/internet/deputado/bandep/97707.jpg
+4,2702,Titular,dep.geneciasnoronha@camara.gov.br,3215-5244,244,5830384,160669,99,GENECIAS MATEUS NORONHA,GENECIAS NORONHA,SD,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/160669.jpg
+4,3705,Titular,dep.lucianoducci@camara.gov.br,3215-5427,427,5830407,178931,457,LUCIANO DUCCI,LUCIANO DUCCI,PSB,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/178931.jpg
+4,3747,Titular,dep.ricardoteobaldo@camara.gov.br,3215-5603,603,5830593,178920,157,RICARDO TEOBALDO CAVALCANTI,RICARDO TEOBALDO ,PTB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/178920.jpg
+4,2852,Titular,dep.jorginhomello@camara.gov.br,3215-5329,329,5830670,160509,476,JORGINHO DOS SANTOS MELLO,JORGINHO MELLO,PR,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/160509.jpg
+4,3773,Titular,dep.valmirprascidelli@camara.gov.br,3215-5837,837,5830355,113247,393,VALMIR PRASCIDELLI,VALMIR PRASCIDELLI,PT,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/113247.jpg
+4,3687,Titular,dep.joaogualberto@camara.gov.br,3215-5358,358,5830693,178856,200,JOAO GUALBERTO VASCONCELOS,JOÃO GUALBERTO,PSDB,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/178856.jpg
+4,2745,Titular,dep.josenunes@camara.gov.br,3215-5728,728,5830570,160619,201,JOSÉ NUNES SOARES,JOSÉ NUNES,PSD,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/160619.jpg
+4,2849,Titular,dep.zecadirceu@camara.gov.br,3215-5613,613,5830576,160592,468,JOSÉ CARLOS BECKER DE OLIVEIRA E SILVA,ZECA DIRCEU,PT,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/160592.jpg
+4,3725,Titular,dep.marianacarvalho@camara.gov.br,3215-5508,508,5830624,178956,51,MARIANA FONSECA RIBEIRO CARVALHO DE MORAES,MARIANA CARVALHO,PSDB,feminino,RO,http://www.camara.gov.br/internet/deputado/bandep/178956.jpg
+4,2818,Titular,dep.tiririca@camara.gov.br,3215-5637,637,5830378,160976,392,FRANCISCO EVERARDO OLIVEIRA SILVA,TIRIRICA,PR,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/160976.jpg
+4,2754,Titular,dep.diegoandrade@camara.gov.br,3215-5307,307,5830547,160588,228,DIEGO LEONARDO DE ANDRADE CARVALHO,DIEGO ANDRADE,PSD,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/160588.jpg
+4,3722,Titular,dep.marcosreategui@camara.gov.br,3215-5344,344,5830524,178852,12,MARCOS JOSE REATEGUI SOUZA,MARCOS REATEGUI,PSC,masculino,AP,http://www.camara.gov.br/internet/deputado/bandep/178852.jpg
+4,2098,Titular,dep.afonsohamm@camara.gov.br,3215-5604,604,5830647,136811,487,JOSÉ ALFONSO EBERT HAMM,AFONSO HAMM,PP,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/136811.jpg
+4,3496,Titular,dep.silascamara@camara.gov.br,3215-5532,532,5830401,74356,39,SILAS CÂMARA,SILAS CÂMARA,PSD,masculino,AM,http://www.camara.gov.br/internet/deputado/bandep/74356.jpg
+4,3783,Titular,dep.zecadopt@camara.gov.br,3215-5860,860,5830424,178902,440,JOSE ORCIRIO MIRANDA DOS SANTOS,ZECA DO PT,PT,masculino,MS,http://www.camara.gov.br/internet/deputado/bandep/178902.jpg
+3,3776,Titular,dep.victormendes@camara.gov.br,3215-5580,580,5830507,178888,82,CARLOS VICTOR GUTERRES MENDES,VICTOR MENDES,PV,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/178888.jpg
+4,3030,Titular,dep.abelmesquitajr@camara.gov.br,3215-5248,248,5830756,178957,1,ABEL SALVADOR MESQUITA JUNIOR,ABEL MESQUITA JR.,PDT,masculino,RR,http://www.camara.gov.br/internet/deputado/bandep/178957.jpg
+4,1331,Titular,dep.aliceportugal@camara.gov.br,3215-5420,420,5830470,74057,180,ALICE MAZZUCO PORTUGAL,ALICE PORTUGAL,PCdoB,feminino,BA,http://www.camara.gov.br/internet/deputado/bandep/74057.jpg
+3,2662,Titular,dep.rogeriorosso@camara.gov.br,3215-5283,283,5830553,160426,413,ROGÉRIO SCHUMANN ROSSO,ROGÉRIO ROSSO,PSD,masculino,DF,http://www.camara.gov.br/internet/deputado/bandep/160426.jpg
+4,2487,Titular,dep.pauloabiackel@camara.gov.br,3215-5460,460,5830616,141516,263,PAULO ABI-ACKEL,PAULO ABI-ACKEL,PSDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/141516.jpg
+4,1775,Titular,dep.jandirafeghali@camara.gov.br,3215-5622,622,5830367,74848,305,JANDIRA FEGHALI,JANDIRA FEGHALI,PCdoB,feminino,RJ,http://www.camara.gov.br/internet/deputado/bandep/74848.jpg
+4,1473,Titular,dep.deley@camara.gov.br,3215-5742,742,5830564,74172,298,WANDERLEY ALVES DE OLIVEIRA,DELEY,PTB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/74172.jpg
+4,3265,Titular,dep.jovairarantes@camara.gov.br,3215-5504,504,5830361,73666,419,JOVAIR DE OLIVEIRA ARANTES,JOVAIR ARANTES,PTB,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/73666.jpg
+4,3774,Titular,dep.venezianovitaldorego@camara.gov.br,3215-5833,833,5830710,178913,137,VENEZIANO VITAL DO RÊGO SEGUNDO NETO,VENEZIANO VITAL DO RÊGO,PMDB,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/178913.jpg
+3,3088,Titular,dep.eduardobolsonaro@camara.gov.br,3215-5481,481,5830315,92346,352,EDUARDO NANTES BOLSONARO,EDUARDO BOLSONARO,PSC,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/92346.jpg
+4,2482,Titular,dep.luizfernandofaria@camara.gov.br,3215-5832,832,5830610,141487,256,LUIZ FERNANDO RAMOS FARIA,LUIZ FERNANDO FARIA,PP,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/141487.jpg
+4,3078,Titular,dep.cristianebrasil@camara.gov.br,3215-5644,644,5830347,93472,296,CRISTIANE BRASIL FRANCISCO,CRISTIANE BRASIL,PTB,feminino,RJ,http://www.camara.gov.br/internet/deputado/bandep/93472.jpg
+4,3346,Titular,dep.herculanopassos@camara.gov.br,3215-5926,926,5830513,178981,362,HERCULANO CASTILHO PASSOS JUNIOR,HERCULANO PASSOS,PSD,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178981.jpg
+4,3751,Titular,dep.rodrigopacheco@camara.gov.br,3215-5720,720,5830584,178897,260,RODRIGO OTAVIO SOARES PACHECO,RODRIGO PACHECO,PMDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/178897.jpg
+3,3050,Titular,dep.arthurvirgiliobisneto@camara.gov.br,3215-5583,583,5830441,178847,37,ARTHUR VIRGILIO DO CARMO RIBEIRO BISNETO,ARTHUR VIRGÍLIO BISNETO,PSDB,masculino,AM,http://www.camara.gov.br/internet/deputado/bandep/178847.jpg
+4,2497,Titular,dep.chicodangelo@camara.gov.br,3215-5542,542,5830298,141439,293,FRANCISCO JOSÉ D'ANGELO PINTO,CHICO D'ANGELO,PT,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/141439.jpg
+4,1468,Titular,dep.chicoalencar@camara.gov.br,3215-5848,848,5830653,74171,295,FRANCISCO RODRIGUES DE ALENCAR FILHO,CHICO ALENCAR,PSOL,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/74171.jpg
+4,2726,Titular,dep.arthurlira@camara.gov.br,3215-5942,942,5830321,160541,162,ARTHUR CÉSAR PEREIRA DE LIRA,ARTHUR LIRA,PP,masculino,AL,http://www.camara.gov.br/internet/deputado/bandep/160541.jpg
+4,2450,Titular,dep.romulogouveia@camara.gov.br,3215-5411,411,5830776,141536,134,RÔMULO JOSÉ DE GOUVEIA,RÔMULO GOUVEIA,PSD,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/141536.jpg
+4,3702,Titular,dep.leandre@camara.gov.br,3215-5454,454,5830676,178832,453,LEANDRE DAL PONTE,LEANDRE,PV,feminino,PR,http://www.camara.gov.br/internet/deputado/bandep/178832.jpg
+4,3492,Titular,dep.nilsonpinto@camara.gov.br,3215-5527,527,5830421,74352,31,NILSON PINTO DE OLIVEIRA,NILSON PINTO,PSDB,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/74352.jpg
+4,2807,Titular,dep.maragabrilli@camara.gov.br,3215-5226,226,5830398,160565,366,MARA CRISTINA GABRILLI,MARA GABRILLI,PSDB,feminino,SP,http://www.camara.gov.br/internet/deputado/bandep/160565.jpg
+4,2215,Titular,dep.bilacpinto@camara.gov.br,3215-5806,806,5830796,141513,232,OLAVO BILAC PINTO NETO,BILAC PINTO,PR,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/141513.jpg
+4,2851,Titular,dep.joaorodrigues@camara.gov.br,3215-5503,503,5830304,160571,473,JOÃO RODRIGUES,JOÃO RODRIGUES,PSD,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/160571.jpg
+4,1745,Titular,dep.odelmoleao@camara.gov.br,3215-5419,419,5830327,74752,248,ODELMO LEÃO CARNEIRO SOBRINHO,ODELMO LEÃO,PP,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74752.jpg
+4,3662,Titular,dep.luiscarlosheinze@camara.gov.br,3215-5526,526,5830770,73483,500,LUIS CARLOS HEINZE,LUIS CARLOS HEINZE,PP,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/73483.jpg
+4,1808,Titular,dep.jorgetadeumudalen@camara.gov.br,3215-5538,538,5830590,73535,363,JORGE TADEU MUDALEN,JORGE TADEU MUDALEN,DEM,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/73535.jpg
+4,2670,Titular,dep.jhonatandejesus@camara.gov.br,3215-5535,535,5830341,160531,5,JOHNATHAN PEREIRA DE JESUS,JHONATAN DE JESUS,PRB,masculino,RR,http://www.camara.gov.br/internet/deputado/bandep/160531.jpg
+4,3772,Titular,dep.ulduricojunior@camara.gov.br,3215-5729,729,5830447,178863,220,ULDURICO ALENCAR PINTO,ULDURICO JUNIOR,PTC,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/178863.jpg
+4,3701,Titular,dep.laudiviocarvalho@camara.gov.br,3215-5717,717,5830484,178894,234,LAUDIVIO ALVARENGA CARVALHO,LAUDIVIO CARVALHO,PMDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/178894.jpg
+4,1413,Titular,dep.carlosmanato@camara.gov.br,3215-5313,313,5830639,74163,275,CARLOS HUMBERTO MANNATO,CARLOS MANATO,SD,masculino,ES,http://www.camara.gov.br/internet/deputado/bandep/74163.jpg
+4,3048,Titular,dep.angelim@camara.gov.br,3215-5543,543,5830541,178837,52,RAIMUNDO ANGELIM VASCONCELOS,ANGELIM,PT,masculino,AC,http://www.camara.gov.br/internet/deputado/bandep/178837.jpg
+4,3666,Titular,dep.pompeodemattos@camara.gov.br,3215-5704,704,5830627,73486,516,DARCI POMPEO DE MATTOS,POMPEO DE MATTOS,PDT,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/73486.jpg
+4,1492,Titular,dep.eduardocunha@camara.gov.br,3215-5510,510,5830533,74173,300,EDUARDO COSENTINO DA CUNHA,EDUARDO CUNHA,PMDB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/74173.jpg
+4,2741,Titular,dep.eriveltonsantana@camara.gov.br,3215-5756,756,5830292,99654,194,ERIVELTON LIMA SANTANA,ERIVELTON SANTANA,PSC,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/99654.jpg
+4,3511,Titular,dep.pedrofernandes@camara.gov.br,3215-5814,814,5830633,74449,80,PEDRO FERNANDES RIBEIRO,PEDRO FERNANDES,PTB,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/74449.jpg
+4,2809,Titular,dep.missionariojoseolimpio@camara.gov.br,3215-5507,507,5830782,160561,375,JOSÉ OLIMPIO SILVEIRA MORAES,MISSIONÁRIO JOSÉ OLIMPIO,PP,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/160561.jpg
+3,3714,Titular,dep.marceloaro@camara.gov.br,3215-5280,280,5830596,146788,236,MARCELO GUILHERME DE ARO FERREIRA,MARCELO ARO,PHS,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/146788.jpg
+4,3733,Titular,dep.mosesrodrigues@camara.gov.br,3215-5809,809,5830667,178997,106,MOSES HAENDEL MELO RODRIGUES,MOSES RODRIGUES,PPS,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/178997.jpg
+4,1968,Titular,dep.giacobo@camara.gov.br,3215-5762,762,5830713,74383,466,FERNANDO LÚCIO GIACOBO,GIACOBO,PR,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/74383.jpg
+4,2796,Titular,dep.alexandreleite@camara.gov.br,3215-5841,841,5830381,160545,334,ALEXANDRE LEITE DA SILVA,ALEXANDRE LEITE,DEM,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/160545.jpg
+4,2437,Titular,dep.chicolopes@camara.gov.br,3215-5310,310,5830690,141440,88,FRANCISCO LOPES DA SILVA,CHICO LOPES,PCdoB,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/141440.jpg
+4,1135,Titular,dep.janetecapiberibe@camara.gov.br,3215-5209,209,5830358,73926,10,JANETE MARIA GÓES CAPIBERIBE,JANETE CAPIBERIBE,PSB,feminino,AP,http://www.camara.gov.br/internet/deputado/bandep/73926.jpg
+4,3710,Titular,dep.luiziannelins@camara.gov.br,3215-5713,713,5830427,178866,98,LUIZIANNE DE OLIVEIRA LINS,LUIZIANNE LINS,PT,feminino,CE,http://www.camara.gov.br/internet/deputado/bandep/178866.jpg
+4,2769,Titular,dep.zesilva@camara.gov.br,3215-5608,608,5830504,160632,271,JOSÉ SILVA SOARES,ZÉ SILVA,SD,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/160632.jpg
+4,3713,Titular,dep.marceloalvaroantonio@camara.gov.br,3215-5824,824,5830404,179000,235,MARCELO HENRIQUE TEIXEIRA DIAS,MARCELO ÁLVARO ANTÔNIO,PRP,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/179000.jpg
+4,3573,Titular,dep.luizsergio@camara.gov.br,3215-5409,409,5830521,74688,313,LUIZ SÉRGIO NÓBREGA DE OLIVEIRA,LUIZ SÉRGIO,PT,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/74688.jpg
+4,3661,Titular,dep.henriquefontana@camara.gov.br,3215-5256,256,5830527,73482,498,HENRIQUE FONTANA JÚNIOR,HENRIQUE FONTANA,PT,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/73482.jpg
+4,2424,Titular,dep.flavianomelo@camara.gov.br,3215-5224,224,5830742,141434,54,FLAVIANO FLÁVIO BAPTISTA DE MELO,FLAVIANO MELO,PMDB,masculino,AC,http://www.camara.gov.br/internet/deputado/bandep/141434.jpg
+4,3096,Titular,dep.expeditonetto@camara.gov.br,3215-5943,943,5830550,178953,44,EXPEDITO GONCALVES FERREIRA NETTO,EXPEDITO NETTO,SD,masculino,RO,http://www.camara.gov.br/internet/deputado/bandep/178953.jpg
+4,3155,Titular,dep.carlosmelles@camara.gov.br,3215-5243,243,5830719,74651,226,CARLOS DO CARMO ANDRADE MELLES,CARLOS MELLES,DEM,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74651.jpg
+4,3709,Titular,dep.luizlaurofilho@camara.gov.br,3215-5519,519,5830696,178982,365,LUIZ LAURO FERREIRA FILHO,LUIZ LAURO FILHO,PSB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178982.jpg
+4,1876,Titular,dep.rubensbueno@camara.gov.br,3215-5623,623,5830573,73466,460,RUBENS BUENO,RUBENS BUENO,PPS,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/73466.jpg
+4,2565,Titular,dep.renatomolling@camara.gov.br,3215-5337,337,5830450,141527,511,RENATO DELMAR MOLLING,RENATO MOLLING,PP,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/141527.jpg
+4,3028,Titular,dep.bebeto@camara.gov.br,3215-5541,541,5830613,178834,185,ADALBERTO SOUZA GALVÃO,BEBETO,PSB,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/178834.jpg
+4,3045,Titular,dep.andreabdon@camara.gov.br,3215-5831,831,5830650,178831,9,ANDRE DOS SANTOS ABDON,ANDRÉ ABDON,PRB,masculino,AP,http://www.camara.gov.br/internet/deputado/bandep/178831.jpg
+4,3730,Titular,dep.miguellombardi@camara.gov.br,3215-5835,835,5830556,178985,378,MIGUEL LOMBARDI,MIGUEL LOMBARDI,PR,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178985.jpg
+4,3499,Titular,dep.niltoncapixaba@camara.gov.br,3215-5724,724,5830458,74359,47,NILTON BALBINO,NILTON CAPIXABA,PTB,masculino,RO,http://www.camara.gov.br/internet/deputado/bandep/74359.jpg
+4,2385,Titular,dep.luciovale@camara.gov.br,3215-5822,822,5830567,141484,29,LÚCIO DUTRA VALE,LÚCIO VALE,PR,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/141484.jpg
+4,3087,Titular,dep.edmilsonrodrigues@camara.gov.br,3215-5301,301,5830604,134812,27,EDMILSON BRITO RODRIGUES,EDMILSON RODRIGUES,PSOL,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/134812.jpg
+4,3768,Titular,dep.tenentelucio@camara.gov.br,3215-5239,239,5830759,178898,266,SERGIO LUCIO DE ALMEIDA,TENENTE LÚCIO,PSB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/178898.jpg
+4,2857,Titular,dep.ronaldobenedet@camara.gov.br,3215-5918,918,5830753,160515,484,RONALDO JOSÉ BENEDET,RONALDO BENEDET,PMDB,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/160515.jpg
+4,2874,Titular,dep.luiznishimori@camara.gov.br,3215-5907,907,5830410,162332,459,LUIZ HILOSHI NISHIMORI,LUIZ NISHIMORI,PR,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/162332.jpg
+4,3578,Titular,dep.rodrigomaia@camara.gov.br,3215-5308,308,5830464,74693,322,RODRIGO FELINTO IBARRA EPITÁCIO MAIA,RODRIGO MAIA,DEM,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/74693.jpg
+4,2783,Titular,dep.franciscofloriano@camara.gov.br,3215-5719,719,5830707,160677,297,FRANCISCO FLORIANO DE SOUSA SILVA,FRANCISCO FLORIANO,PR,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/160677.jpg
+4,3032,Titular,dep.adalbertocavalcanti@camara.gov.br,3215-5402,402,5830364,178914,138,ADALBERTO CAVALCANTI RODRIGUES,ADALBERTO CAVALCANTI,PTB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/178914.jpg
+4,3523,Titular,dep.marcelocastro@camara.gov.br,3215-5811,811,5830659,74460,110,MARCELO COSTA E CASTRO,MARCELO CASTRO,PMDB,masculino,PI,http://www.camara.gov.br/internet/deputado/bandep/74460.jpg
+4,3166,Titular,dep.claudiocajado@camara.gov.br,3215-5630,630,5830679,74537,186,CLÁUDIO CAJADO SAMPAIO,CLAUDIO CAJADO,DEM,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/74537.jpg
+4,2750,Titular,dep.valmirassuncao@camara.gov.br,3215-5739,739,5830418,160610,218,VALMIR CARLOS DA ASSUNÇÃO,VALMIR ASSUNÇÃO,PT,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/160610.jpg
+4,2799,Titular,dep.elicorreafilho@camara.gov.br,3215-5850,850,5830750,160532,345,ADRIANO ELI CORRÊA,ELI CORRÊA FILHO,DEM,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/160532.jpg
+3,3487,Titular,dep.irmaolazaro@camara.gov.br,3215-5467,467,5830324,178855,199,ANTONIO LAZARO SILVA,IRMÃO LAZARO,PSC,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/178855.jpg
+4,3052,Titular,dep.baleiarossi@camara.gov.br,3215-5829,829,5830607,178975,342,LUIZ FELIPE BALEIA TENUTO ROSSI,BALEIA ROSSI,PMDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178975.jpg
+4,3393,Titular,dep.hildorocha@camara.gov.br,3215-5734,734,5830656,178884,74,HILDO AUGUSTO DA ROCHA NETO,HILDO ROCHA,PMDB,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/178884.jpg
+4,3059,Titular,dep.cabosabino@camara.gov.br,3215-5617,617,5830773,178865,94,FLAVIO ALVES SABINO,CABO SABINO,PR,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/178865.jpg
+4,2925,Titular,dep.carmenzanotto@camara.gov.br,3215-5240,240,5830630,164360,477,CARMEN EMÍLIA BONFÁ ZANOTTO,CARMEN ZANOTTO,PPS,feminino,SC,http://www.camara.gov.br/internet/deputado/bandep/164360.jpg
+4,1405,Titular,dep.marioheringer@camara.gov.br,3215-5211,211,5830467,74158,239,MÁRIO LÚCIO HERINGER,MÁRIO HERINGER,PDT,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74158.jpg
+4,2732,Titular,dep.andremoura@camara.gov.br,3215-5846,846,5830799,160543,174,ANDRÉ LUIS DANTAS FERREIRA,ANDRE MOURA,PSC,masculino,SE,http://www.camara.gov.br/internet/deputado/bandep/160543.jpg
+4,1277,Titular,dep.wellingtonroberto@camara.gov.br,3215-5514,514,5830395,74043,136,JOSÉ WELLINGTON ROBERTO,WELLINGTON ROBERTO,PR,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/74043.jpg
+4,2691,Titular,dep.irajaabreu@camara.gov.br,3215-5802,802,5830444,81232,65,IRAJÁ SILVESTRE FILHO,IRAJÁ ABREU,PSD,masculino,TO,http://www.camara.gov.br/internet/deputado/bandep/81232.jpg
+4,3697,Titular,dep.juliamarinho@camara.gov.br,3215-5707,707,5830699,67312,34,JULIA MARIA GODINHO DA CRUZ MARINHO,JÚLIA MARINHO,PSC,feminino,PA,http://www.camara.gov.br/internet/deputado/bandep/67312.jpg
+3,2973,Titular,dep.paulao@camara.gov.br,3215-5366,366,5830375,171617,170,PAULO FERNANDO DOS SANTOS,PAULÃO,PT,masculino,AL,http://www.camara.gov.br/internet/deputado/bandep/171617.jpg
+3,3736,Titular,dep.odoricomonteiro@camara.gov.br,3215-5582,582,5830301,178868,107,LUIZ ODORICO MONTEIRO DE ANDRADE,ODORICO MONTEIRO,PT,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/178868.jpg
+4,2940,Titular,dep.sergiosouza@camara.gov.br,3215-5702,702,5830722,178933,467,SERGIO DE SOUZA,SERGIO SOUZA ,PMDB,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/178933.jpg
+4,3530,Titular,dep.damiaofeliciano@camara.gov.br,3215-5938,938,5830673,74467,127,DAMIÃO FELICIANO DA SILVA,DAMIÃO FELICIANO,PDT,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/74467.jpg
+4,3044,Titular,dep.anaperugini@camara.gov.br,3215-5436,436,5830779,178973,332,ANA LUCIA LIPPAUS PERUGINI,ANA PERUGINI,PT,feminino,SP,http://www.camara.gov.br/internet/deputado/bandep/178973.jpg
+4,3309,Titular,dep.nelsonmeurer@camara.gov.br,3215-5916,916,5830544,73781,458,NELSON MEURER,NELSON MEURER,PP,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/73781.jpg
+4,3047,Titular,dep.andressanchez@camara.gov.br,3215-5939,939,5830481,178974,341,ANDRES NAVARRO SANCHEZ,ANDRES SANCHEZ,PT,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178974.jpg
+3,3191,Titular,dep.flavinho@camara.gov.br,3215-5379,379,5830493,178978,357,FLAVIO AUGUSTO DA SILVA,FLAVINHO,PSB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178978.jpg
+4,1935,Titular,dep.atilalira@camara.gov.br,3215-5640,640,5830530,74459,109,ÁTILA FREITAS LIRA,ÁTILA LIRA,PSB,masculino,PI,http://www.camara.gov.br/internet/deputado/bandep/74459.jpg
+4,3134,Titular,dep.faustopinato@camara.gov.br,3215-5562,562,5830338,66828,355,FAUSTO RUY PINATO,FAUSTO PINATO,PRB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/66828.jpg
+4,3049,Titular,dep.antoniojacome@camara.gov.br,3215-5230,230,5830587,178950,121,ANTONIO JACOME DE LIMA JUNIOR,ANTÔNIO JÁCOME,PMN,masculino,RN,http://www.camara.gov.br/internet/deputado/bandep/178950.jpg
+4,2820,Titular,dep.vicentecandido@camara.gov.br,3215-5819,819,5830344,160622,395,VICENTE CÂNDIDO DA SILVA,VICENTE CANDIDO,PT,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/160622.jpg
+4,2994,Titular,dep.subtenentegonzaga@camara.gov.br,3215-5750,750,5830736,177282,273,LUIZ GONZAGA RIBEIRO,SUBTENENTE GONZAGA,PDT,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/177282.jpg
+4,2805,Titular,dep.keikoota@camara.gov.br,3215-5523,523,5830730,160659,356,IOLANDA KEIKO MIASHIRO OTA,KEIKO OTA,PSB,feminino,SP,http://www.camara.gov.br/internet/deputado/bandep/160659.jpg
+4,3595,Titular,dep.lincolnportela@camara.gov.br,3215-5615,615,5830687,74585,243,LINCOLN DINIZ PORTELA,LINCOLN PORTELA,PR,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74585.jpg
+4,3750,Titular,dep.rodrigomartins@camara.gov.br,3215-5558,558,5830636,178926,117,RODRIGO RODRIGUES DE SOUZA MARTINS,RODRIGO MARTINS,PSB,masculino,PI,http://www.camara.gov.br/internet/deputado/bandep/178926.jpg
+4,2724,Titular,dep.pastoreurico@camara.gov.br,3215-5906,906,5830387,160642,155,FRANCISCO EURICO DA SILVA,PASTOR EURICO,PSB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/160642.jpg
+4,3777,Titular,dep.vitorlippi@camara.gov.br,3215-5823,823,5830438,178992,399,VITOR LIPPI,VITOR LIPPI,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178992.jpg
+4,1410,Titular,dep.arnaldofariadesa@camara.gov.br,3215-5929,929,5830487,73434,337,ARNALDO FARIA DE SÁ,ARNALDO FARIA DE SÁ,PTB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/73434.jpg
+3,3357,Suplente,dep.silasbrasileiro@camara.gov.br,3215-5382,382,5830809,74765,526,SILAS BRASILEIRO,SILAS BRASILEIRO,PMDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74765.jpg
+4,3023,Suplente,dep.wadsonribeiro@camara.gov.br,3215-5556,556,5830810,137853,527,WADSON NATHANIEL RIBEIRO,WADSON RIBEIRO,PCdoB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/137853.jpg
+3,2718,Suplente,dep.augustocoutinho@camara.gov.br,3215-5373,373,5830811,160665,528,AUGUSTO RODRIGUES COUTINHO DE MELO,AUGUSTO COUTINHO ,SD,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/160665.jpg
+3,-,Suplente,dep.fernandomonteiro@camara.gov.br,3215-5282,282,5830812,92699,529,FERNANDO MONTEIRO DE ALBUQUERQUE,FERNANDO MONTEIRO ,PP,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/92699.jpg
+4,1071,Suplente,dep.carloseduardocadoca@camara.gov.br,3215-5423,423,5830813,74474,530,CARLOS EDUARDO CINTRA DA COSTA PEREIRA,CARLOS EDUARDO CADOCA,PCdoB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/74474.jpg
+4,3660,Suplente,dep.fernandomarroni@camara.gov.br,3215-5858,858,5830823,73481,534,FERNANDO STEPHAN MARRONI,FERNANDO MARRONI,PT,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/73481.jpg
+3,2793,Suplente,dep.walneyrocha@camara.gov.br,3215-5585,585,5830826,160631,535,WALNEY DA ROCHA CARVALHO,WALNEY ROCHA,PTB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/160631.jpg
+4,-,Suplente,dep.marquinhomendes@camara.gov.br,3215-5727,727,5830827,181315,536,MARCOS DA ROCHA MENDES,MARQUINHO MENDES,PMDB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/181315.jpg
+4,3551,Suplente,dep.celsojacob@camara.gov.br,3215-5917,917,5830828,73568,537,CELSO ALENCAR RAMOS JACOB,CELSO JACOB,PMDB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/73568.jpg
+4,-,Suplente,dep.mauropereira@camara.gov.br,3215-5843,843,5830831,124411,540,MAURO PEREIRA,MAURO PEREIRA,PMDB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/124411.jpg
+3,2172,Suplente,dep.josefogaca@camara.gov.br,3215-5376,376,5830830,131966,539,JOSÉ ALBERTO FOGAÇA DE MEDEIROS,JOSÉ FOGAÇA ,PMDB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/131966.jpg
+4,1234,Suplente,dep.robertofreire@camara.gov.br,3215-5242,242,5830837,73805,546,ROBERTO JOÃO PEREIRA FREIRE,ROBERTO FREIRE,PPS,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/73805.jpg
+4,2694,Titular,dep.albertofilho@camara.gov.br,3215-5350,350,5830840,160582,548,JOSÉ ALBERTO OLIVEIRA VELOSO FILHO,ALBERTO FILHO,PMDB,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/160582.jpg
+4,2611,Suplente,dep.mainha@camara.gov.br,3215-5624,624,5830841,151965,549,JOSÉ DE ANDRADE MAIA FILHO,MAINHA,SD,masculino,PI,http://www.camara.gov.br/internet/deputado/bandep/151965.jpg
+3,-,Suplente,dep.wadihdamous@camara.gov.br,3215-5483,483,5830842,189593,550,WADIH NEMER DAMOUS FILHO,WADIH DAMOUS,PT,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/189593.jpg
+4,2814,Suplente,dep.penna@camara.gov.br,3215-5235,235,5830843,80920,551,JOSÉ LUIZ DE FRANÇA PENNA,PENNA,PV,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/80920.jpg
+4,1299,Suplente,dep.rauljungmann@camara.gov.br,3215-5754,754,5830832,74048,541,RAUL BELENS JUNGMANN PINTO,RAUL JUNGMANN,PPS,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/74048.jpg
+4,-,Suplente,dep.fabriciooliveira@camara.gov.br,3215-5342,342,5830844,190149,552,FABRICIO JOSE SATIRO DE OLIVEIRA,FABRICIO OLIVEIRA,PSB,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/190149.jpg
+4,3376,Suplente,dep.vicentearruda@camara.gov.br,3215-5522,522,5830845,74308,553,VICENTE FERREIRA DE ARRUDA COELHO,VICENTE ARRUDA,PROS,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/74308.jpg
+4,1066,Suplente,dep.antoniocarlosmendesthame@camara.gov.br,3215-5915,915,5830802,73584,519,ANTONIO CARLOS DE MENDES THAME,ANTONIO CARLOS MENDES THAME,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/73584.jpg
+3,1599,Suplente,dep.lobbeneto@camara.gov.br,3215-5275,275,5830804,74277,521,ANTONIO ADOLPHO LOBBE NETO,LOBBE NETO,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/74277.jpg
+4,-,Suplente,dep.davidsonmagalhaes@camara.gov.br,3215-5826,826,5830808,101309,525,DAVIDSON DE MAGALHÃES SANTOS,DAVIDSON MAGALHÃES,PCdoB,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/101309.jpg
+4,1961,Suplente,dep.sandesjunior@camara.gov.br,3215-5941,941,5830807,74372,524,JOÃO SANDES JÚNIOR,SANDES JÚNIOR,PP,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/74372.jpg
+4,3183,Suplente,dep.edinhobez@camara.gov.br,3215-5703,703,5830818,73793,532,EDSON BEZ DE OLIVEIRA,EDINHO BEZ,PMDB,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/73793.jpg
+4,2545,Suplente,dep.walterihoshi@camara.gov.br,3215-5418,418,5830801,141560,518,WALTER SHINDI IIHOSHI,WALTER IHOSHI,PSD,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/141560.jpg
+4,2075,Suplente,dep.ademircamilo@camara.gov.br,3215-5804,804,5830803,133374,520,ADEMIR CAMILO PRATES RODRIGUES,ADEMIR CAMILO,PROS,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/133374.jpg
+4,2743,Suplente,dep.fernandotorres@camara.gov.br,3215-5642,642,5830806,160676,523,FERNANDO DANTAS TORRES,FERNANDO TORRES,PSD,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/160676.jpg
+4,1622,Titular,dep.pauderneyavelino@camara.gov.br,3215-5610,610,5830374,74095,40,PAUDERNEY TOMAZ AVELINO,PAUDERNEY AVELINO,DEM,masculino,AM,http://www.camara.gov.br/internet/deputado/bandep/74095.jpg
+4,3188,Titular,dep.elcionebarbalho@camara.gov.br,3215-5919,919,5830325,74075,21,ELCIONE THEREZINHA ZAHLUTH BARBALHO,ELCIONE BARBALHO,PMDB,feminino,PA,http://www.camara.gov.br/internet/deputado/bandep/74075.jpg
+3,3312,Titular,dep.heldersalomao@camara.gov.br,3215-5573,573,5830351,178873,279,HELDER IGNACIO SALOMAO,HELDER SALOMÃO,PT,masculino,ES,http://www.camara.gov.br/internet/deputado/bandep/178873.jpg
+4,3746,Titular,dep.renataabreu@camara.gov.br,3215-5726,726,5830772,178989,330,RENATA HELLMEISTER DE ABREU,RENATA ABREU,PTN,feminino,SP,http://www.camara.gov.br/internet/deputado/bandep/178989.jpg
+4,2593,Titular,dep.professorvictoriogalli@camara.gov.br,3215-5539,539,5830388,148134,406,VICTORIO GALLI FILHO,PROFESSOR VICTÓRIO GALLI,PSC,masculino,MT,http://www.camara.gov.br/internet/deputado/bandep/148134.jpg
+3,3055,Titular,dep.betosalame@camara.gov.br,3215-5473,473,5830637,178906,20,ROBERTO SALAME FILHO,BETO SALAME,PROS,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/178906.jpg
+4,2453,Titular,dep.brunoaraujo@camara.gov.br,3215-5718,718,5830294,141394,146,BRUNO CAVALCANTI DE ARAÚJO,BRUNO ARAÚJO,PSDB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/141394.jpg
+4,1270,Titular,dep.joaocarlosbacelar@camara.gov.br,3215-5928,928,5830780,141458,187,JOÃO CARLOS PAOLILO BACELAR FILHO,JOÃO CARLOS BACELAR,PR,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/141458.jpg
+4,2763,Titular,dep.marcuspestana@camara.gov.br,3215-5715,715,5830743,159238,254,MARCUS VINÍCIUS CAETANO PESTANA DA SILVA,MARCUS PESTANA,PSDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/159238.jpg
+3,2766,Titular,dep.toninhopinheiro@camara.gov.br,3215-5584,584,5830792,160611,264,ANTÔNIO PINHEIRO JÚNIOR,TONINHO PINHEIRO,PP,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/160611.jpg
+4,3073,Titular,dep.christianedesouzayared@camara.gov.br,3215-5201,201,5830531,178928,442,CHRISTIANE DE SOUZA YARED,CHRISTIANE DE SOUZA YARED,PTN,feminino,PR,http://www.camara.gov.br/internet/deputado/bandep/178928.jpg
+4,3063,Titular,dep.caionarcio@camara.gov.br,3215-5431,431,5830543,178891,225,CAIO NARCIO RODRIGUES DA SILVEIRA,CAIO NARCIO,PSDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/178891.jpg
+4,3753,Titular,dep.ronaldolessa@camara.gov.br,3215-5722,722,5830580,178845,173,RONALDO AUGUSTO LESSA SANTOS,RONALDO LESSA,PDT,masculino,AL,http://www.camara.gov.br/internet/deputado/bandep/178845.jpg
+4,1411,Titular,dep.reginaldolopes@camara.gov.br,3215-5426,426,5830494,74161,272,REGINALDO LÁZARO DE OLIVEIRA LOPES,REGINALDO LOPES,PT,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74161.jpg
+3,3706,Titular,dep.luciomosquini@camara.gov.br,3215-5581,581,5830729,178954,46,LUCIO ANTONIO MOSQUINI,LUCIO MOSQUINI,PMDB,masculino,RO,http://www.camara.gov.br/internet/deputado/bandep/178954.jpg
+3,3214,Titular,dep.franciscochapadinha@camara.gov.br,3215-5385,385,5830337,178907,28,FRANCISCO ALVES DE AGUIAR,FRANCISCO CHAPADINHA,PSD,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/178907.jpg
+3,3754,Titular,dep.ronaldomartins@camara.gov.br,3215-5568,568,5830437,122466,91,RONALDO MANCHADO MARTINS,RONALDO MARTINS,PRB,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/122466.jpg
+4,2370,Titular,dep.ediolopes@camara.gov.br,3215-5408,408,5830686,141417,2,ÉDIO VIEIRA LOPES,EDIO LOPES,PMDB,masculino,RR,http://www.camara.gov.br/internet/deputado/bandep/141417.jpg
+3,3690,Titular,dep.joaopaulopapa@camara.gov.br,3215-5476,476,5830586,178988,364,JOAO PAULO TAVARES PAPA,JOÃO PAULO PAPA,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178988.jpg
+4,2483,Titular,dep.marcosmontes@camara.gov.br,3215-5334,334,5830537,141500,257,MARCOS MONTES CORDEIRO,MARCOS MONTES,PSD,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/141500.jpg
+4,3759,Titular,dep.samuelmoreira@camara.gov.br,3215-5921,921,5830477,178990,389,SAMUEL MOREIRA DA SILVA JUNIOR,SAMUEL MOREIRA,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178990.jpg
+4,2601,Titular,dep.marciomarinho@camara.gov.br,3215-5326,326,5830454,150418,212,MÁRCIO CARLOS MARINHO,MÁRCIO MARINHO,PRB,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/150418.jpg
+4,3270,Titular,dep.leonidascristino@camara.gov.br,3215-5948,948,5830786,74299,96,JOSÉ LEÔNIDAS DE MENEZES CRISTINO,LEÔNIDAS CRISTINO,PROS,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/74299.jpg
+4,3723,Titular,dep.marcosrotta@camara.gov.br,3215-5333,333,5830431,178850,43,MARCOS SERGIO ROTTA,MARCOS ROTTA,PMDB,masculino,AM,http://www.camara.gov.br/internet/deputado/bandep/178850.jpg
+4,3716,Titular,dep.marcelosquassoni@camara.gov.br,3215-5550,550,5830594,118594,369,MARCELO SQUASSONI,MARCELO SQUASSONI,PRB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/118594.jpg
+4,2847,Titular,dep.sandroalex@camara.gov.br,3215-5221,221,5830763,160621,465,SANDRO ALEX CRUZ DE OLIVEIRA,SANDRO ALEX,PPS,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/160621.jpg
+4,1168,Titular,dep.paeslandim@camara.gov.br,3215-5648,648,5830740,74319,118,JOSÉ FRANCISCO PAES LANDIM,PAES LANDIM,PTB,masculino,PI,http://www.camara.gov.br/internet/deputado/bandep/74319.jpg
+4,2462,Titular,dep.valadaresfilho@camara.gov.br,3215-5660,660,5830408,141384,183,ANTÔNIO CARLOS VALADARES FILHO,VALADARES FILHO,PSB,masculino,SE,http://www.camara.gov.br/internet/deputado/bandep/141384.jpg
+4,2855,Titular,dep.pedrouczai@camara.gov.br,3215-5229,229,5830617,160604,481,PEDRO FRANCISCO UCZAI,PEDRO UCZAI,PT,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/160604.jpg
+4,3696,Titular,dep.joziaraujo@camara.gov.br,3215-5309,309,5830308,178851,11,JOZIANE ARAUJO NASCIMENTO ROCHA,JOZI ARAÚJO,PTB,feminino,AP,http://www.camara.gov.br/internet/deputado/bandep/178851.jpg
+3,3396,Titular,dep.hirangoncalves@camara.gov.br,3215-5274,274,5830646,178959,4,HIRAN MANUEL GONCALVES DA SILVA,HIRAN GONÇALVES,PMN,masculino,RR,http://www.camara.gov.br/internet/deputado/bandep/178959.jpg
+4,3688,Titular,dep.joaomarcelosouza@camara.gov.br,3215-5639,639,5830331,112437,76,JOÃO MARCELO SANTOS SOUZA,JOÃO MARCELO SOUZA,PMDB,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/112437.jpg
+4,1986,Titular,dep.paulopimenta@camara.gov.br,3215-5552,552,5830669,74400,513,PAULO ROBERTO SEVERO PIMENTA,PAULO PIMENTA,PT,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/74400.jpg
+4,1646,Titular,dep.josereinaldo@camara.gov.br,3215-5529,529,5830354,73714,77,José Reinaldo Carneiro Tavares,JOSÉ REINALDO,PSB,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/73714.jpg
+4,3077,Titular,dep.covattifilho@camara.gov.br,3215-5228,228,5830523,178963,493,LUIS ANTONIO FRANCISCATTO COVATTI,COVATTI FILHO,PP,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/178963.jpg
+4,2502,Titular,dep.felipebornier@camara.gov.br,3215-5216,216,5830600,141430,301,FELIPE LEONE BORNIER DE OLIVEIRA,FELIPE BORNIER,PSD,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/141430.jpg
+4,3026,Titular,dep.dr.sinvalmalheiros@camara.gov.br,3215-5520,520,5830623,178830,351,SINVAL MALHEIROS PINTO JÚNIOR,DR. SINVAL MALHEIROS,PV,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178830.jpg
+4,2865,Titular,dep.josestedile@camara.gov.br,3215-5354,354,5830377,160607,506,JOSE LUIZ STÉDILE,JOSE STÉDILE,PSB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/160607.jpg
+4,2947,Titular,dep.marcosrogerio@camara.gov.br,3215-5930,930,5830471,167722,49,MARCOS ROGÉRIO DA SILVA BRITO,MARCOS ROGÉRIO,PDT,masculino,RO,http://www.camara.gov.br/internet/deputado/bandep/167722.jpg
+4,2510,Titular,dep.otavioleite@camara.gov.br,3215-5225,225,5830554,141515,316,OTAVIO SANTOS SILVA LEITE,OTAVIO LEITE,PSDB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/141515.jpg
+4,2456,Titular,dep.eduardodafonte@camara.gov.br,3215-5628,628,5830517,141421,156,EDUARDO HENRIQUE DA FONTE DE ALBUQUERQUE SILVA,EDUARDO DA FONTE,PP,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/141421.jpg
+4,3033,Suplente,dep.adelmocarneiroleao@camara.gov.br,3215-5231,231,5830314,178890,221,ADELMO CARNEIRO LEAO,ADELMO CARNEIRO LEÃO,PT,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/178890.jpg
+4,3766,Titular,dep.sostenescavalcante@camara.gov.br,3215-5560,560,5830563,178947,329,SOSTENES SILVA CAVALCANTE,SÓSTENES CAVALCANTE,PSD,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178947.jpg
+3,3732,Titular,dep.moemagramacho@camara.gov.br,3215-5576,576,5830663,178859,210,MOEMA ISABEL PASSOS GRAMACHO,MOEMA GRAMACHO,PT,feminino,BA,http://www.camara.gov.br/internet/deputado/bandep/178859.jpg
+4,3430,Titular,dep.marinharaupp@camara.gov.br,3215-5614,614,5830657,74177,50,MARINHA CÉLIA ROCHA RAUPP DE MATOS,MARINHA RAUPP,PMDB,feminino,RO,http://www.camara.gov.br/internet/deputado/bandep/74177.jpg
+3,3694,Titular,dep.jorgesolla@camara.gov.br,3215-5571,571,5830414,178857,204,JORGE JOSE SANTOS PEREIRA SOLLA,JORGE SOLLA,PT,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/178857.jpg
+3,2825,Titular,dep.saguasmoraes@camara.gov.br,3215-5371,371,5830560,160630,409,SÁGUAS MORAES SOUSA,SÁGUAS MORAES,PT,masculino,MT,http://www.camara.gov.br/internet/deputado/bandep/160630.jpg
+3,2861,Titular,dep.danrleidedeushinterholz@camara.gov.br,3215-5566,566,5830726,160552,495,DANRLEI DE DEUS HINTERHOLZ,DANRLEI DE DEUS HINTERHOLZ,PSD,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/160552.jpg
+3,3686,Titular,dep.joaofernandocoutinho@camara.gov.br,32155567,567,5830583,178917,149,JOAO FERNANDO PONTUAL COUTINHO,JOÃO FERNANDO COUTINHO,PSB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/178917.jpg
+3,3092,Titular,dep.enioverri@camara.gov.br,3215-5472,472,5830348,132504,449,ENIO JOSÉ VERRI,ENIO VERRI,PT,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/132504.jpg
+4,2759,Titular,dep.erosbiondini@camara.gov.br,3215-5321,321,5830677,160640,242,EROS FERREIRA BIONDINI,EROS BIONDINI,PTB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/160640.jpg
+3,3298,Titular,dep.heitorschuch@camara.gov.br,3215-5277,277,5830703,178964,504,HEITOR JOSE SCHUCH,HEITOR SCHUCH,PSB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/178964.jpg
+4,2018,Titular,dep.aeltonfreitas@camara.gov.br,3215-5204,204,5830322,141372,224,AELTON JOSÉ DE FREITAS,AELTON FREITAS,PR,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/141372.jpg
+4,2716,Titular,dep.wilsonfilho@camara.gov.br,3215-5534,534,5830752,160636,139,JOSÉ WILSON SANTIAGO FILHO,WILSON FILHO,PTB,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/160636.jpg
+4,2616,Titular,dep.glauberbraga@camara.gov.br,3215-5362,362,5830397,152605,304,GLAUBER DE MEDEIROS BRAGA,GLAUBER BRAGA,PSB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/152605.jpg
+4,1268,Titular,dep.benjaminmaranhao@camara.gov.br,3215-5458,458,5830769,74040,131,BENJAMIN GOMES MARANHÃO NETO,BENJAMIN MARANHÃO,SD,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/74040.jpg
+4,2924,Titular,dep.stefanoaguiar@camara.gov.br,3215-5341,341,5830746,92776,267,STEFANO AGUIAR DOS SANTOS,STEFANO AGUIAR,PSB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/92776.jpg
+4,3724,Titular,dep.marcossoares@camara.gov.br,3215-5741,741,5830328,178943,321,MARCOS BEZERRA RIBEIRO SOARES,MARCOS SOARES,PR,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178943.jpg
+4,2856,Titular,dep.rogeriopeninhamendonca@camara.gov.br,3215-5656,656,5830697,160651,483,ROGÉRIO MENDONÇA,ROGÉRIO PENINHA MENDONÇA,PMDB,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/160651.jpg
+4,2687,Titular,dep.sibamachado@camara.gov.br,3215-5421,421,5830795,160613,58,SEBASTIÃO SIBÁ MACHADO OLIVEIRA,SIBÁ MACHADO,PT,masculino,AC,http://www.camara.gov.br/internet/deputado/bandep/160613.jpg
+3,3514,Titular,dep.maxfilho@camara.gov.br,3215-5276,276,5830483,178827,282,MAX FREITAS MAURO FILHO,MAX FILHO,PSDB,masculino,ES,http://www.camara.gov.br/internet/deputado/bandep/178827.jpg
+4,3769,Titular,dep.terezacristina@camara.gov.br,3215-5448,448,5830732,178901,437,TEREZA CRISTINA CORREA DA COSTA DIAS,TEREZA CRISTINA,PSB,feminino,MS,http://www.camara.gov.br/internet/deputado/bandep/178901.jpg
+4,3090,Titular,dep.elizianegama@camara.gov.br,3215-5205,205,5830448,178883,73,ELIZIANE PEREIRA GAMA FERREIRA,ELIZIANE GAMA,PPS,feminino,MA,http://www.camara.gov.br/internet/deputado/bandep/178883.jpg
+4,3782,Titular,dep.zecacavalcanti@camara.gov.br,3215-5318,318,5830626,178923,163,JOSE CAVALCANTI ALVES JUNIOR,ZECA CAVALCANTI,PTB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/178923.jpg
+4,3351,Titular,dep.saraivafelipe@camara.gov.br,3215-5429,429,5830577,74762,265,JOSÉ SARAIVA FELIPE,SARAIVA FELIPE,PMDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74762.jpg
+3,3064,Titular,dep.capitaoaugusto@camara.gov.br,3215-5273,273,5830434,178829,346,JOSE AUGUSTO ROSA,CAPITÃO AUGUSTO,PR,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178829.jpg
+4,3262,Titular,dep.joserocha@camara.gov.br,3215-5908,908,5830789,74554,203,JOSÉ ALVES ROCHA,JOSÉ ROCHA,PR,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/74554.jpg
+4,3738,Titular,dep.pauloazi@camara.gov.br,3215-5635,635,5830391,178860,215,PAULO VELLOSO DANTAS AZI,PAULO AZI,DEM,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/178860.jpg
+4,3778,Titular,dep.vitorvalim@camara.gov.br,3215-5545,545,5830640,178869,108,VITOR PEREIRA VALIM,VITOR VALIM,PMDB,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/178869.jpg
+4,3173,Titular,dep.darcisioperondi@camara.gov.br,3215-5518,518,5830385,73891,491,DARCÍSIO PAULO PERONDI,DARCÍSIO PERONDI,PMDB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/73891.jpg
+4,3749,Titular,dep.robertosales@camara.gov.br,3215-5332,332,5830540,178944,324,ROBERTO DA SILVA SALES,ROBERTO SALES,PRB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178944.jpg
+4,1451,Titular,dep.vanderloubet@camara.gov.br,3215-5838,838,5830534,74376,438,VANDER LUIZ DOS SANTOS LOUBET,VANDER LOUBET,PT,masculino,MS,http://www.camara.gov.br/internet/deputado/bandep/74376.jpg
+4,2794,Titular,dep.washingtonreis@camara.gov.br,3215-5856,856,5830491,160620,326,WASHINGTON REIS DE OLIVEIRA,WASHINGTON REIS,PMDB,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/160620.jpg
+4,2693,Titular,dep.professoradorinhaseabrarezende@camara.gov.br,3215-5432,432,5830683,160639,67,MARIA AUXILIADORA SEABRA REZENDE,PROFESSORA DORINHA SEABRA REZENDE,DEM,feminino,TO,http://www.camara.gov.br/internet/deputado/bandep/160639.jpg
+3,2853,Titular,dep.marcotebaldi@camara.gov.br,3215-5284,284,5830440,160536,478,MARCO ANTONIO TEBALDI,MARCO TEBALDI,PSDB,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/160536.jpg
+4,2471,Titular,dep.sergiobrito@camara.gov.br,3215-5638,638,5830291,73808,213,SÉRGIO LUÍS LACERDA BRITO,SÉRGIO BRITO,PSD,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/73808.jpg
+3,3060,Titular,dep.cabucuborges@camara.gov.br,3215-5380,380,5830572,105112,14,LUIZ GIONILSON PINHEIRO BORGES,CABUÇU BORGES,PMDB,masculino,AP,http://www.camara.gov.br/internet/deputado/bandep/105112.jpg
+3,3069,Titular,dep.carlosmarun@camara.gov.br,3215-5372,372,5830595,178900,433,CARLOS EDUARDO XAVIER MARUN,CARLOS MARUN,PMDB,masculino,MS,http://www.camara.gov.br/internet/deputado/bandep/178900.jpg
+4,3740,Titular,dep.pedrovilela@camara.gov.br,3215-5705,705,5830787,178844,172,PEDRO TORRES BRANDÃO VILELA,PEDRO VILELA,PSDB,masculino,AL,http://www.camara.gov.br/internet/deputado/bandep/178844.jpg
+4,1304,Titular,dep.mauricioquintellalessa@camara.gov.br,3215-5425,425,5830618,74050,168,MAURÍCIO QUINTELLA MALTA LESSA,MAURÍCIO QUINTELLA LESSA,PR,masculino,AL,http://www.camara.gov.br/internet/deputado/bandep/74050.jpg
+4,2388,Titular,dep.cleberverde@camara.gov.br,3215-5710,710,5830455,141408,70,CLEBER VERDE CORDEIRO MENDES,CLEBER VERDE,PRB,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/141408.jpg
+4,2355,Titular,dep.silviocosta@camara.gov.br,3215-5417,417,5830641,4930,160,SÍLVIO SERAFIM COSTA,SILVIO COSTA,PSC,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/4930.jpg
+4,3698,Titular,dep.juniormarreca@camara.gov.br,3215-5537,537,5830432,178885,78,ANTONIO DA CRUZ FILGUEIRA JUNIOR,JUNIOR MARRECA,PEN,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/178885.jpg
+4,3299,Titular,dep.mendoncafilho@camara.gov.br,3215-5314,314,5830764,74428,154,JOSÉ MENDONÇA BEZERRA FILHO,MENDONÇA FILHO,DEM,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/74428.jpg
+4,2772,Titular,dep.dr.jorgesilva@camara.gov.br,3215-5227,227,5830309,160643,278,JORGE SILVA,DR. JORGE SILVA,PROS,masculino,ES,http://www.camara.gov.br/internet/deputado/bandep/160643.jpg
+4,2366,Titular,dep.vanderleimacris@camara.gov.br,3215-5348,348,5830332,141553,394,VANDERLEI MACRIS,VANDERLEI MACRIS,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/141553.jpg
+4,3640,Titular,dep.jessicasales@camara.gov.br,3215-5952,952,5830403,178839,56,JESSICA ROJAS SALES,JÉSSICA SALES,PMDB,feminino,AC,http://www.camara.gov.br/internet/deputado/bandep/178839.jpg
+4,1257,Titular,dep.benitogama@camara.gov.br,3215-5414,414,5830741,74535,190,BENITO DA GAMA SANTOS,BENITO GAMA,PTB,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/74535.jpg
+4,2768,Titular,dep.welitonprado@camara.gov.br,3215-5862,862,5830380,160518,270,WELITON FERNANDES PRADO,WELITON PRADO,PT,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/160518.jpg
+4,3508,Titular,dep.joaocastelo@camara.gov.br,3215-5324,324,5830718,74445,75,JOÃO CASTELO RIBEIRO GONÇALVES,JOÃO CASTELO,PSDB,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/74445.jpg
+4,3056,Titular,dep.brunny@camara.gov.br,3215-5260,260,5830695,178999,223,BRUNIELE FERREIRA GOMES,BRUNNY,PTC,feminino,MG,http://www.camara.gov.br/internet/deputado/bandep/178999.jpg
+4,2363,Titular,dep.izalci@camara.gov.br,3215-5602,602,5830526,4931,408,IZALCI LUCAS FERREIRA,IZALCI,PSDB,masculino,DF,http://www.camara.gov.br/internet/deputado/bandep/4931.jpg
+4,1984,Titular,dep.onyxlorenzoni@camara.gov.br,3215-5828,828,5830449,74399,510,ONYX DORNELLES LORENZONI,ONYX LORENZONI,DEM,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/74399.jpg
+4,3084,Titular,dep.diegogarcia@camara.gov.br,3215-5745,745,5830672,178929,447,DIEGO ALEXSANDER GONCALO PAULA GARCIA,DIEGO GARCIA,PHS,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/178929.jpg
+4,3433,Titular,dep.raimundogomesdematos@camara.gov.br,3215-5725,725,5830549,74216,102,RAIMUNDO GOMES DE MATOS,RAIMUNDO GOMES DE MATOS,PSDB,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/74216.jpg
+4,3680,Titular,dep.alexcanziani@camara.gov.br,3215-5842,842,5830426,73458,445,ALEX CANZIANI SILVEIRA,ALEX CANZIANI,PTB,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/73458.jpg
+4,1271,Titular,dep.luizcouto@camara.gov.br,3215-5442,442,5830317,74041,133,LUIZ ALBUQUERQUE COUTO,LUIZ COUTO,PT,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/74041.jpg
+4,3031,Titular,dep.adailcarneiro@camara.gov.br,3215-5335,335,5830601,178864,92,JOSE ADAIL CARNEIRO SILVA,ADAIL CARNEIRO,PHS,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/178864.jpg
+4,3630,Titular,dep.albertofraga@camara.gov.br,3215-5511,511,5830472,73579,410,JOÃO ALBERTO FRAGA SILVA,ALBERTO FRAGA,DEM,masculino,DF,http://www.camara.gov.br/internet/deputado/bandep/73579.jpg
+4,3684,Titular,dep.jhc@camara.gov.br,3215-5958,958,5830555,178842,167,JOAO HENRIQUE HOLANDA  CALDAS,JHC,SD,masculino,AL,http://www.camara.gov.br/internet/deputado/bandep/178842.jpg
+3,1142,Titular,dep.zegeraldo@camara.gov.br,3215-5266,266,5830518,73931,25,JOSÉ GERALDO TORRES DA SILVA,ZÉ GERALDO,PT,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/73931.jpg
+4,2942,Titular,dep.wevertonrocha@camara.gov.br,3215-5405,405,5830409,167493,83,WEVERTON ROCHA MARQUES DE SOUSA,WEVERTON ROCHA,PDT,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/167493.jpg
+3,3103,Titular,dep.fabiosousa@camara.gov.br,3215-5271,271,5830415,178877,426,FABIO FERNANDES DE SOUSA,FÁBIO SOUSA,PSDB,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/178877.jpg
+4,3075,Titular,dep.clarissagarotinho@camara.gov.br,3215-5714,714,5830658,178939,294,CLARISSA BARROS ASSED MATHEUS DE OLIVEIRA,CLARISSA GAROTINHO,PR,feminino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178939.jpg
+4,3138,Titular,dep.arnonbezerra@camara.gov.br,3215-5413,413,5830664,74291,90,JOSÉ ARNON CRUZ BEZERRA DE MENEZES,ARNON BEZERRA,PTB,masculino,CE,http://www.camara.gov.br/internet/deputado/bandep/74291.jpg
+4,2367,Titular,dep.manoeljunior@camara.gov.br,3215-5601,601,5830509,141490,130,MANOEL ALVES DA SILVA JUNIOR,MANOEL JUNIOR,PMDB,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/141490.jpg
+4,3083,Titular,dep.delegadoedsonmoreira@camara.gov.br,3215-5933,933,5830363,178893,229,EDSON MOREIRA DA SILVA,DELEGADO EDSON MOREIRA,PTN,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/178893.jpg
+4,2843,Titular,dep.joaoarruda@camara.gov.br,3215-5633,633,5830612,160573,455,JOÃO JOSÉ DE ARRUDA JÚNIOR,JOÃO ARRUDA,PMDB,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/160573.jpg
+4,2447,Titular,dep.rogeriomarinho@camara.gov.br,3215-5446,446,5830463,141535,124,ROGÉRIO SIMONETTI MARINHO,ROGÉRIO MARINHO,PSDB,masculino,RN,http://www.camara.gov.br/internet/deputado/bandep/141535.jpg
+4,3700,Titular,dep.kaiomanicoba@camara.gov.br,3215-5525,525,5830758,178918,151,KAIO CESAR DE MOURA MANICOBA NOVAES FERRAZ,KAIO MANIÇOBA,PHS,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/178918.jpg
+4,2573,Titular,dep.jarbasvasconcelos@camara.gov.br,3215-5304,304,5830323,131943,147,Jarbas de Andrade Vasconcelos,JARBAS VASCONCELOS,PMDB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/131943.jpg
+3,2862,Titular,dep.bohngass@camara.gov.br,3215-5469,469,5830655,160538,499,ELVINO JOSÉ BOHN GASS,BOHN GASS,PT,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/160538.jpg
+4,1117,Titular,dep.joseotaviogermano@camara.gov.br,3215-5424,424,5830798,74395,501,JOSÉ OTÁVIO GERMANO,JOSÉ OTÁVIO GERMANO,PP,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/74395.jpg
+4,1983,Titular,dep.mariadorosario@camara.gov.br,3215-5312,312,5830300,74398,508,MARIA DO ROSÁRIO NUNES,MARIA DO ROSÁRIO,PT,feminino,RS,http://www.camara.gov.br/internet/deputado/bandep/74398.jpg
+4,2481,Titular,dep.leonardoquintao@camara.gov.br,3215-5914,914,5830466,141482,255,LEONARDO LEMOS BARROS QUINTÃO,LEONARDO QUINTÃO,PMDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/141482.jpg
+4,3360,Titular,dep.silviotorres@camara.gov.br,3215-5404,404,5830704,73560,391,SILVIO FRANÇA TORRES,SILVIO TORRES,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/73560.jpg
+4,3734,Titular,dep.newtoncardosojr@camara.gov.br,3215-5932,932,5830372,178896,247,NEWTON CARDOSO JUNIOR,NEWTON CARDOSO JR,PMDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/178896.jpg
+4,2742,Titular,dep.felixmendoncajunior@camara.gov.br,3215-5912,912,5830443,160666,195,FELIX DE ALMEIDA MENDONÇA JÚNIOR,FÉLIX MENDONÇA JÚNIOR,PDT,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/160666.jpg
+4,3076,Titular,dep.conceicaosampaio@camara.gov.br,3215-5515,515,5830629,178848,41,MARIA DA CONCEICAO SAMPAIO MOURA,CONCEIÇÃO SAMPAIO,PP,feminino,AM,http://www.camara.gov.br/internet/deputado/bandep/178848.jpg
+4,3704,Titular,dep.lucasvergilio@camara.gov.br,3215-5816,816,5830727,178879,430,LUCAS DE CASTRO SANTOS,LUCAS VERGILIO,SD,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/178879.jpg
+4,2392,Titular,dep.fernandocoelhofilho@camara.gov.br,3215-5662,662,5830678,141431,158,FERNANDO BEZERRA DE SOUZA COELHO FILHO,FERNANDO COELHO FILHO,PSB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/141431.jpg
+4,3039,Titular,dep.alexandreserfiotis@camara.gov.br,3215-5554,554,5830747,178833,284,ALEXANDRE AUGUSTUS SERFIOTIS,ALEXANDRE SERFIOTIS,PSD,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178833.jpg
+4,2409,Titular,dep.fabiofaria@camara.gov.br,3215-5706,706,5830349,141428,119,FÁBIO SALUSTINO MESQUITA DE FARIA,FÁBIO FARIA,PSD,masculino,RN,http://www.camara.gov.br/internet/deputado/bandep/141428.jpg
+4,3072,Titular,dep.cesarmessias@camara.gov.br,3215-5956,956,5830698,178838,55,CARLOS CESAR CORREIA DE MESSIAS,CÉSAR MESSIAS,PSB,masculino,AC,http://www.camara.gov.br/internet/deputado/bandep/178838.jpg
+3,1773,Titular,dep.jairbolsonaro@camara.gov.br,3215-5482,482,5830721,74847,302,JAIR MESSIAS BOLSONARO,JAIR BOLSONARO,PP,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/74847.jpg
+4,3542,Titular,dep.givaldocarimbao@camara.gov.br,3215-5732,732,5830400,74558,166,GIVALDO DE SÁ GOUVEIA,GIVALDO CARIMBÃO,PROS,masculino,AL,http://www.camara.gov.br/internet/deputado/bandep/74558.jpg
+4,2801,Titular,dep.guilhermemussi@camara.gov.br,3215-5712,712,5830578,160667,348,GUILHERME MUSSI FERREIRA,GUILHERME MUSSI,PP,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/160667.jpg
+4,2776,Titular,dep.alessandromolon@camara.gov.br,3215-5652,652,5830329,160511,287,ALESSANDRO LUCCIOLA MOLON,ALESSANDRO MOLON,PT,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/160511.jpg
+4,3708,Titular,dep.luizclaudio@camara.gov.br,3215-5643,643,5830435,178955,48,LUIZ CLAUDIO PEREIRA ALVES,LUIZ CLÁUDIO,PR,masculino,RO,http://www.camara.gov.br/internet/deputado/bandep/178955.jpg
+3,3089,Titular,dep.eduardocury@camara.gov.br,3215-5368,368,5830529,178977,353,EDUARDO PEDROSA CURY,EDUARDO CURY,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178977.jpg
+4,3160,Titular,dep.celsorussomanno@camara.gov.br,3215-5960,960,5830790,73441,347,CELSO UBIRAJARA RUSSOMANNO,CELSO RUSSOMANNO,PRB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/73441.jpg
+4,2833,Titular,dep.flaviamorais@camara.gov.br,3215-5738,738,5830778,160598,422,FLÁVIA CARREIRO ALBUQUERQUE MORAIS,FLÁVIA MORAIS,PDT,feminino,GO,http://www.camara.gov.br/internet/deputado/bandep/160598.jpg
+4,3568,Titular,dep.paulomagalhaes@camara.gov.br,3215-5903,903,5830592,74574,214,PAULO SÉRGIO PARANHOS DE MAGALHÃES,PAULO MAGALHÃES,PSD,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/74574.jpg
+4,2935,Titular,dep.magdamofatto@camara.gov.br,3215-5934,934,5830735,166402,431,MAGDA MOFATTO HON,MAGDA MOFATTO,PR,feminino,GO,http://www.camara.gov.br/internet/deputado/bandep/166402.jpg
+4,3062,Titular,dep.caetano@camara.gov.br,3215-5415,415,5830486,178853,196,LUIZ CARLOS CAETANO,CAETANO,PT,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/178853.jpg
+4,1881,Titular,dep.cesarsouza@camara.gov.br,3215-5609,609,5830492,73720,479,César Antonio de Souza,CESAR SOUZA,PSD,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/73720.jpg
+4,3784,Titular,dep.zenaidemaia@camara.gov.br,3215-5439,439,5830392,178949,126,ZENAIDE MAIA CALADO PEREIRA DOS SANTOS,ZENAIDE MAIA,PR,feminino,RN,http://www.camara.gov.br/internet/deputado/bandep/178949.jpg
+4,1963,Titular,dep.assisdocouto@camara.gov.br,3215-5428,428,5830386,74378,443,ASSIS MIGUEL DO COUTO,ASSIS DO COUTO,PT,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/74378.jpg
+4,2712,Titular,dep.hugomotta@camara.gov.br,3215-5237,237,5830343,160674,132,HUGO MOTTA WANDERLEY DA NÓBREGA,HUGO MOTTA,PMDB,masculino,PB,http://www.camara.gov.br/internet/deputado/bandep/160674.jpg
+4,3093,Titular,dep.evairdemelo@camara.gov.br,3215-5443,443,5830535,178871,274,EVAIR VIEIRA DE MELO,EVAIR DE MELO,PV,masculino,ES,http://www.camara.gov.br/internet/deputado/bandep/178871.jpg
+3,1334,Titular,dep.miroteixeira@camara.gov.br,3215-5270,270,5830684,74862,317,MIRO TEIXEIRA,MIRO TEIXEIRA,PROS,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/74862.jpg
+3,2534,Titular,dep.pauloteixeira@camara.gov.br,3215-5281,281,5830635,141488,376,LUIZ PAULO TEIXEIRA FERREIRA,PAULO TEIXEIRA,PT,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/141488.jpg
+4,1063,Titular,dep.valdircolatto@camara.gov.br,3215-5516,516,5830406,74010,489,VALDIR COLATTO,VALDIR COLATTO,PMDB,masculino,SC,http://www.camara.gov.br/internet/deputado/bandep/74010.jpg
+4,3057,Titular,dep.brunocovas@camara.gov.br,3215-5521,521,5830738,178976,343,BRUNO COVAS LOPES,BRUNO COVAS,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178976.jpg
+4,3085,Titular,dep.dr.joao@camara.gov.br,3215-5911,911,5830429,178940,299,JOAO FERREIRA NETO,DR. JOÃO,PR,masculino,RJ,http://www.camara.gov.br/internet/deputado/bandep/178940.jpg
+4,3781,Titular,dep.zecarlos@camara.gov.br,3215-5748,748,5830644,178889,86,JOSÉ CARLOS NUNES JÚNIOR,ZÉ CARLOS,PT,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/178889.jpg
+1,3135,Titular,dep.arlindochinaglia@camara.gov.br,3215-5966,4,5830761,73433,336,ARLINDO CHIGNALIA JUNIOR,ARLINDO CHINAGLIA,PT,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/73433.jpg
+3,3729,Titular,dep.miguelhaddad@camara.gov.br,3215-5369,369,5830360,178984,377,MIGUEL MOUBADDA HADDAD,MIGUEL HADDAD,PSDB,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/178984.jpg
+3,3081,Titular,dep.danielvilela@camara.gov.br,3215-5471,471,5830692,144523,420,DANIEL ELIAS CARVALHO VILELA,DANIEL VILELA,PMDB,masculino,GO,http://www.camara.gov.br/internet/deputado/bandep/144523.jpg
+4,2826,Titular,dep.erikakokay@camara.gov.br,3215-5203,203,5830715,160575,407,ÉRIKA JUCÁ KOKAY,ERIKA KOKAY,PT,feminino,DF,http://www.camara.gov.br/internet/deputado/bandep/160575.jpg
+3,2842,Titular,dep.fernandofrancischini@camara.gov.br,3215-5265,265,5830383,160646,450,FERNANDO DESTITO FRANCISCHINI,FERNANDO FRANCISCHINI,SD,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/160646.jpg
+3,3082,Titular,dep.delegadoedermauro@camara.gov.br,32155586,586,5830498,178908,22,EDER MAURO CARDOSO BARRA,DELEGADO ÉDER MAURO,PSD,masculino,PA,http://www.camara.gov.br/internet/deputado/bandep/178908.jpg
+3,3100,Titular,dep.fabiomitidieri@camara.gov.br,3215-5286,286,5830569,178969,177,FABIO CRUZ MITIDIERI,FÁBIO MITIDIERI,PSD,masculino,SE,http://www.camara.gov.br/internet/deputado/bandep/178969.jpg
+4,1218,Titular,dep.gonzagapatriota@camara.gov.br,3215-5430,430,5830575,74419,143,LUIZ GONZAGA PATRIOTA,GONZAGA PATRIOTA,PSB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/74419.jpg
+4,3757,Titular,dep.rossoni@camara.gov.br,3215-5513,513,5830546,178935,464,VALDIR LUIZ ROSSONI,ROSSONI,PSDB,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/178935.jpg
+4,2368,Titular,dep.fabioramalho@camara.gov.br,3215-5452,452,5830552,141427,238,FÁBIO AUGUSTO RAMALHO DOS SANTOS,FÁBIO RAMALHO,PV,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/141427.jpg
+4,2721,Titular,dep.jorgecortereal@camara.gov.br,3215-5621,621,5830621,160572,150,JORGE WICKS CÔRTE REAL,JORGE CÔRTE REAL,PTB,masculino,PE,http://www.camara.gov.br/internet/deputado/bandep/160572.jpg
+4,2765,Titular,dep.renzobraz@camara.gov.br,3215-5736,736,5830452,160654,262,RENZO DO AMARAL BRAZ,RENZO BRAZ,PP,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/160654.jpg
+4,1593,Titular,dep.josementor@camara.gov.br,3215-5502,502,5830475,74275,367,JOSÉ MENTOR GUILHERME DE MELLO NETTO,JOSÉ MENTOR,PT,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/74275.jpg
+3,2407,Titular,dep.luizcarlosbusato@camara.gov.br,3215-5570,570,5830598,141485,488,LUIZ CARLOS GHIORZZI BUSATO,LUIZ CARLOS BUSATO,PTB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/141485.jpg
+4,3685,Titular,dep.joaoderly@camara.gov.br,3215-5901,901,5830412,178965,514,JOAO DERLY DE OLIVEIRA NUNES JUNIOR,JOÃO DERLY,PCdoB,masculino,RS,http://www.camara.gov.br/internet/deputado/bandep/178965.jpg
+4,1928,Titular,dep.bonifaciodeandrada@camara.gov.br,3215-5208,208,5830755,74650,222,BONIFÁCIO JOSÉ TAMM DE ANDRADA,BONIFÁCIO DE ANDRADA,PSDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74650.jpg
+3,3758,Titular,dep.rubenspereirajunior@camara.gov.br,3215-5574,574,5830306,178887,81,RUBENS PEREIRA E SILVA JUNIOR,RUBENS PEREIRA JÚNIOR,PCdoB,masculino,MA,http://www.camara.gov.br/internet/deputado/bandep/178887.jpg
+4,3770,Titular,dep.tiaeron@camara.gov.br,3215-5618,618,5830767,178862,217,ERONILDES VASCONCELOS CARVALHO,TIA ERON,PRB,feminino,BA,http://www.camara.gov.br/internet/deputado/bandep/178862.jpg
+4,3220,Titular,dep.hermesparcianello@camara.gov.br,3215-5234,234,5830423,73772,448,HERMES PARCIANELLO,HERMES PARCIANELLO,PMDB,masculino,PR,http://www.camara.gov.br/internet/deputado/bandep/73772.jpg
+4,3297,Titular,dep.maurolopes@camara.gov.br,3215-5844,844,5830615,74749,252,MAURO RIBEIRO LOPES,MAURO LOPES,PMDB,masculino,MG,http://www.camara.gov.br/internet/deputado/bandep/74749.jpg
+4,2491,Titular,dep.lelocoimbra@camara.gov.br,3215-5801,801,5830469,141562,277,WELINGTON COIMBRA,LELO COIMBRA,PMDB,masculino,ES,http://www.camara.gov.br/internet/deputado/bandep/141562.jpg
+4,3727,Titular,dep.marionegromontejr@camara.gov.br,3215-5517,517,5830558,178858,208,MARIO SILVIO MENDES NEGROMONTE JUNIOR,MÁRIO NEGROMONTE JR.,PP,masculino,BA,http://www.camara.gov.br/internet/deputado/bandep/178858.jpg
+3,-,Suplente,dep.silasfreire@camara.gov.br,3215-5484,484,5830836,187008,545,SILAS FREIRE PEREIRA E SILVA,SILAS FREIRE,PR,masculino,PI,http://www.camara.gov.br/internet/deputado/bandep/187008.jpg
+4,2070,Titular,dep.goretepereira@camara.gov.br,3215-5206,206,5830366,129618,100,MARIA GORETE PEREIRA,GORETE PEREIRA,PR,feminino,CE,http://www.camara.gov.br/internet/deputado/bandep/129618.jpg
+3,2808,Suplente,dep.marceloaguiar@camara.gov.br,3215-5367,367,5830805,160660,522,MARCELO THEODORO DE AGUIAR,MARCELO AGUIAR,DEM,masculino,SP,http://www.camara.gov.br/internet/deputado/bandep/160660.jpg
