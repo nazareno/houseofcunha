@@ -189,7 +189,8 @@ require(cluster)
 pro.cluster <- doacoes.cast.candidato[,2:100]
 row.names(pro.cluster) <- doacoes.cast.candidato[,1]
 clustering <- agnes(pro.cluster, 
-                    metric = "manhattan", 
+                    stand = F,
+#                     metric = "manhattan", 
                     method = "ward")
 
 # cluster = hclust(doacoes.cast.candidato, method = "ward.D")
@@ -197,7 +198,7 @@ plot(clustering)
 
 require(ggdendro)
 png("dendrogram.png", height = 2000, width = 1200)
-ggdendrogram(as.dendrogram(clustering), rotate = TRUE, size = 4, theme_dendro = T, color = "tomato")
+ggdendrogram(as.dendrogram(clustering), rotate = TRUE, size = 4, theme_dendro = T, color = cl.lab)
 dev.off()
 
 library(dendextend)
@@ -205,6 +206,20 @@ library(circlize)
 
 # create a dendrogram
 dend <- as.dendrogram(clustering)
+clusters <- cutree(dend, k= 15)
+cl.lab <- factor(clusters, labels = paste("Cluster", 1:15))
+
+clust.centroid = function(i, dat, clusters) {
+  ind = (clusters == i)
+  colMeans(dat[ind,])
+}
+sapply(unique(clusters), clust.centroid, pro.cluster, clusters)
+
+# Cluster 1: Financiamento "sortido"
+# Cluster 2: IGUATEMI S.A., LIDER TAXI AÉREO S.A., RIMA INDUSTRIAL S.A., 
+# Cluster 3: INDUSTRIAS BRASILEIRAS DE ARTIGOS REFRATÁRIOS - IBAR - LTDA, IBAR NORDESTE LTDA, 
+# Cluster 4: BRASIL TRADING LTDA, PAULO ANTONIO SKAF GOVERNADOR , G.PMM PLANEJAMENTODE MRKETING E MERCADO LTDA, RITA DE CASSIA TRINCA PASSOS
+# Cluster 5: BANCO BTG PACTUAL S/A , DIAL - DISTRIBUICAO· ABASTECIMENTO E LOGISTICA LTDA, GLOBOAVES SAO PAULO AGROAVICOLA LTDA, PLUMA AGRO AVICOLA LTDA
 
 # modify the dendrogram to have some colors in the branches and labels
 # dend <- dend %>% 
@@ -216,4 +231,41 @@ par(mar = rep(0,4))
 # circlize_dendrogram(dend, dend_track_height = 0.8) 
 png("circular.png", h = 1500, w = 1500)
 circlize_dendrogram(dend, labels_track_height = 0.05, dend_track_height = .8) 
+dev.off()
+
+png("circular-colorido.png", h = 1500, w = 1500)
+dend <- dend %>% 
+  color_branches(k=35) %>% 
+  color_labels(k=35)
+circlize_dendrogram(dend, labels_track_height = 0.05, dend_track_height = .8) 
+dev.off()
+
+require(ape)
+
+labelColors = c("#556270", "#4ECDC4", "#1B676B", "#FF6B6B", "#C44D58")
+colLab <- function(n) {
+  if (is.leaf(n)) {
+    a <- attributes(n)
+    labCol <- labelColors[clusters[which(names(clusters) == a$label)]]
+    attr(n, "nodePar") <- c(a$nodePar, lab.col = labCol)
+  }
+  n
+}
+clusDendro = dendrapply(dend, colLab)
+
+plot(clusDendro, main = "Cool Dendrogram", type = "rectangle")
+
+
+source("http://addictedtor.free.fr/packages/A2R/lastVersion/R/code.R")
+hc = hclust(dist(pro.cluster), method = "ward.D")
+png("x.png", h=1000, w = 600)
+A2Rplot(hc, 
+        k = 5, 
+        boxes = FALSE, 
+        col.up = "gray50", 
+        col.down = labelColors)
+dev.off()
+
+png("arte.png", h = 600, w = 600)
+plot(clusDendro, main = "Cool Dendrogram", type = "triangle")
 dev.off()
