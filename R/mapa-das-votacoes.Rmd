@@ -155,7 +155,6 @@ mca1_obs_df$destaque_cassacao_partido <-  ifelse(mca1_obs_df$destaque_cassacao =
 # E E. Cunha
 mca1_obs_df$destaque_cunha <- ifelse(mca1_obs_df$nome == "Eduardo Cunha", TRUE, FALSE)
 
-
 ```
 
 Visão geral
@@ -204,66 +203,6 @@ dev.off()
 Gráfico com os deputados que pediram a cassação de Cunha em destaque
 
 ```{r}
-p <- ggplot(data = semcunha, 
-            aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque_cassacao, size = destaque_cassacao)) +
-  geom_hline(yintercept = 0, colour = "gray70") +
-  geom_vline(xintercept = 0, colour = "gray70") +
-  geom_text() +
-  scale_size_manual(values = c(3.2, 4)) + 
-  scale_colour_manual(values = c(alpha("grey70", .6), 
-                                 alpha("black", 1))) + 
-  ylab("") + xlab("")+ 
-  theme_classic() + 
-  theme(legend.position = "none", 
-        axis.ticks = element_blank(), 
-        axis.text = element_blank(), 
-        axis.line = element_blank())
-
-png("cassacao_1.png", 
-    width = 800, height = 600)
-p
-dev.off()
-
-p <- p + geom_point(data = filter(mca1_obs_df, nome == "Eduardo Cunha"), 
-                    colour = "darkred", 
-                    size = 15, 
-                    alpha = 0.7)
-
-png("cassacao_2.png", 
-    width = 800, height = 600)
-p
-dev.off()
-
-p <- ggplot(data = cassacao, 
-       aes(x = Dim.1, y = Dim.2, label = nome, 
-           colour = destaque_partido)) +
-  geom_hline(yintercept = 0, colour = "gray70") +
-  geom_vline(xintercept = 0, colour = "gray70") +
-  geom_text(size = 3.) +
-  scale_colour_manual(values = c(alpha("grey70", .6), 
-                                 alpha("darkred", 1), 
-                                 alpha("#E69F00", 1),
-                                 alpha("#FF3300", 1)
-                                 ), 
-                      guide = guide_legend(title = "Partido", 
-                                           override.aes = list(alpha = 1, size = 4))) + 
-  ylab("") + xlab("")+ 
-  theme_classic() + 
-  theme(axis.ticks = element_blank(), 
-        axis.text = element_blank(), 
-        axis.line = element_blank())
-
-p <- p + geom_point(data = filter(mca1_obs_df, nome == "Eduardo Cunha"), 
-                    colour = "darkred", 
-                    size = 15, 
-                    alpha = 0.7)
-
-png("cassacao_3.png", 
-    width = 800, height = 600)
-p
-dev.off()
-
-
 p <- ggplot(data = mca1_obs_df, 
        aes(x = Dim.1, y = Dim.2, label = nome, 
            colour = destaque_cassacao_partido)) +
@@ -289,8 +228,6 @@ p <- p + geom_point(data = filter(mca1_obs_df, nome == "Eduardo Cunha"),
                     size = 15, 
                     alpha = 0.7)
 
-
-p
 
 png("cassacao_4.png", 
     width = 800, height = 600)
