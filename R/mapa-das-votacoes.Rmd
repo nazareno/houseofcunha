@@ -35,7 +35,7 @@ votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 quant_tipo_votacao <- unique(votos[,c("tipo","num_pro")])
 ```
 
-unique(votos[,c("tipo","num_pro")])
+
 
 ```{r}
 votacao <- votos %>% 
@@ -97,6 +97,12 @@ mca1_obs_df$destaque <- mca1_obs_df$nome %in% c("Tiririca",
                                                 "Jean Wyllys", 
                                                 "Veneziano Vital do Rêgo")
 
+# Destaque dos dep que se tornaram ministros
+mca1_obs_df$destaque_ministros  <- mca1_obs_df$nome %in% c("Celso Pansera",
+                                "André Figueiredo",
+                                "Marcelo Castro"
+                                )
+
 # Destaque dos dep que pediram a cassação de Cunha 
 mca1_obs_df$destaque_cassacao  <- mca1_obs_df$nome %in% c("Adelmo Carneiro Leão",
                                 "Afonso Florence",
@@ -144,8 +150,6 @@ mca1_obs_df$destaque_cassacao  <- mca1_obs_df$nome %in% c("Adelmo Carneiro Leão
                                 "Wadih Damous",
                                 "Zé Carlos",
                                 "Zeca Dirceu")
-
-
 
 # Os da PB
 mca1_obs_df$destaque_pb <- ifelse(mca1_obs_df$uf == "PB", "PB", "Demais estados")
@@ -274,6 +278,36 @@ p
 dev.off()
 ```
 
+Gráfico com os deputados que agora são ministros
+
+```{r}
+p <- ggplot(data = mca1_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_ministros)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .6), 
+                                 alpha("black", 1))) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+   theme(legend.position = "none", 
+        axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+p <- p + geom_point(data = filter(mca1_obs_df, nome == "Eduardo Cunha"), 
+                    colour = "darkred", 
+                    size = 15, 
+                    alpha = 0.7)
+
+
+png("plot/novos_ministros.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
 Alguns ilustres
 
 ```{r}
@@ -392,7 +426,7 @@ Proporção por cada PEC / Votação
 ```{r}
 
 quant_tipo_pro$tipo <- as.character(quant_tipo_pro$tipo)
-p <- ggplot(as.data.frame(table(quant_tipo_pro$tipo)), aes(Var1, Freq)) + geom_bar(stat = "identity") +
+p <- ggplot(as.data.frame(table(quant_tipo_pro$tipo)), aes(x=reorder(Var1, -Freq), Freq)) + geom_bar(stat = "identity") +
   labs(title = "Proporção do tipo de votação", x = "", y = "") +
   theme_classic()
 
@@ -402,8 +436,8 @@ p
 dev.off()
 
 
-quant_tipo$tipo <- as.character(quant_tipo$tipo)
-p <-ggplot(as.data.frame(table(quant_tipo$tipo)), aes(Var1, Freq)) + geom_bar(stat = "identity") +
+quant_tipo_votacao$tipo <- as.character(quant_tipo_votacao$tipo)
+p <- ggplot(as.data.frame(table(quant_tipo_votacao$tipo)), aes(x=reorder(Var1, -Freq), Freq)) + geom_bar(stat = "identity") +
   labs(title = "Proporção de cada tipo de votação", x = "", y = "") + 
   theme_classic()
 
