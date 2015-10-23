@@ -1,0 +1,93 @@
+---
+title: "concordância-governo-partidos"
+author: "Rodolfo Viana"
+date: "22-10-2015"
+output: html_document
+---
+
+Bibliotecas necessárias 
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(reshape2)
+require(cluster)
+require(ade4)
+require(scales)
+require(FactoMineR)
+
+source("R/camara-lib.R")
+
+# para instalar o rCharts:
+# require(devtools)
+# install_github('rCharts', 'ramnathv')
+require("rCharts")
+```
+
+Carregando CSV com os votos dos deputados
+
+```{r}
+votos <- ler_votos_de_ativos("votacoes.csv")
+
+# distinguir diferentes votações de uma mesma proposição
+votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
+
+votos$pro_orientacao <- paste0(votos$num_pro, "-", votos$orientacao_partido)
+```
+
+Orientação de cada partido para cada votação
+
+```{r}
+orientacao_partidos <- unique(votos[,c("data", "partido", "pro_orientacao")])
+
+orientacao_pt <- orientacao_partidos %>%
+  filter(partido == "pt")
+
+orientacao_pmdb <- orientacao_partidos %>%
+  filter(partido == "pmdb")
+
+orientacao_psdb <- orientacao_partidos %>%
+  filter(partido == "psdb")
+
+orientacao_psol <- orientacao_partidos %>%
+  filter(partido == "psol")
+
+```
+
+```{r}
+concordancia <- function(partidoA, partidoB){
+  concordancia <- length(intersect(partidoA , partidoB))
+  discordancia <- length(partidoA) - concordancia
+  indice <- concordancia / (concordancia + discordancia)
+  indice
+}
+
+pmdb <- concordancia(orientacao_pt$pro_orientacao, orientacao_pmdb$pro_orientacao)
+psdb <- concordancia(orientacao_pt$pro_orientacao, orientacao_psdb$pro_orientacao)
+psol <- concordancia(orientacao_pt$pro_orientacao, orientacao_psol$pro_orientacao)
+
+
+partido <- c("pmdb", "psdb", "psol")
+concordanciagoverno <- c(pmdb, psdb, psol)
+concordanciagoverno <- data.frame(Concordancia = concordanciagoverno, Partidos = partido)
+
+
+p <- ggplot(data = concordanciagoverno, aes(x=reorder(Partidos, -Concordancia), y = Concordancia)) + 
+  geom_bar(stat="identity") + 
+  labs(y='Concordância com o Governo', x='Partidos') +
+  theme_classic() +
+   theme(panel.background=element_blank())
+
+png("plot/concordancia_1.png", 
+    width = 800, height = 600)
+p
+dev.off()
+
+
+
+
+orientacao_partidos$data <- as.character(orientacao_partidos$data)
+orientacao_partidos$mes <- strsplit(orientacao_partidos$data[1], "/")
+orientacao_partidos$mes <- strsplit(orientacao_partidos$data, "/")[[1]][2]
+str(orientacao_partidos$data[1])
+```

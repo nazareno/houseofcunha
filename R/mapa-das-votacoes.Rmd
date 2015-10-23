@@ -357,12 +357,12 @@ p <- ggplot(data = semcunha,
         axis.text = element_blank(), 
         axis.line = element_blank())
 p
-png("partidos.png", 
+png("plot/partidos.png", 
     width = 800, height = 600)
 p
 dev.off()
 
-png("partidos-gg.png", width = 1500, height = 1200)
+png("plot/partidos-gg.png", width = 1500, height = 1200)
 p
 dev.off()
 ```
