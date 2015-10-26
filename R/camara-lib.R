@@ -54,3 +54,30 @@ adiciona_nomes_corrigidos <- function(data){
   data <- left_join(data, cpfs.cnpjs.nomes)
   data 
 }
+
+# Comparação da orientação entre dois partidos partidos. 
+concordancia <- function(partidoA, partidoB){
+  concordancia <- length(intersect(partidoA , partidoB))
+  discordancia <- length(partidoA) - concordancia
+  indice <- concordancia / (concordancia + discordancia)
+  indice
+}
+
+
+# Comparação da orientação entre dois partidos mês a mês 
+concordancia_mes <- function(partidoA, partidoB){
+  df <- data.frame()
+  mes <- unique(partidoA$mes)
+  
+  for (m in mes){
+    partidoA_mes <-  partidoA %>%
+      filter(mes == m)
+    
+    partidoB_mes <-  partidoB %>%
+      filter(mes == m)
+    
+    
+    df <- rbind(df, data.frame(Concordancia = concordancia(partidoA_mes$pro_orientacao, partidoB_mes$pro_orientacao), Mes = m))
+  }
+  df
+}

@@ -10,18 +10,8 @@ Bibliotecas necessárias
 ```{r}
 library(ggplot2)
 library(dplyr)
-library(reshape2)
-require(cluster)
-require(ade4)
-require(scales)
-require(FactoMineR)
 
 source("R/camara-lib.R")
-
-# para instalar o rCharts:
-# require(devtools)
-# install_github('rCharts', 'ramnathv')
-require("rCharts")
 ```
 
 Carregando CSV com os votos dos deputados
@@ -39,6 +29,11 @@ Orientação de cada partido para cada votação
 
 ```{r}
 orientacao_partidos <- unique(votos[,c("data", "partido", "pro_orientacao")])
+orientacao_partidos$ano <- as.numeric(format(as.Date(orientacao_partidos$data, format = "%d/%m/%Y"),'%Y'))
+orientacao_partidos$mes <- as.numeric(format(as.Date(orientacao_partidos$data, format = "%d/%m/%Y"),'%m'))
+
+orientacao_partidos <- orientacao_partidos %>%
+  filter(ano >= 2015)
 
 orientacao_pt <- orientacao_partidos %>%
   filter(partido == "pt")
@@ -54,25 +49,16 @@ orientacao_psol <- orientacao_partidos %>%
 
 ```
 
-```{r}
-concordancia <- function(partidoA, partidoB){
-  concordancia <- length(intersect(partidoA , partidoB))
-  discordancia <- length(partidoA) - concordancia
-  indice <- concordancia / (concordancia + discordancia)
-  indice
-}
+Comparação da orientação do governo com a orientação dos outros partidos. 
 
+```{r}
 pmdb <- concordancia(orientacao_pt$pro_orientacao, orientacao_pmdb$pro_orientacao)
 psdb <- concordancia(orientacao_pt$pro_orientacao, orientacao_psdb$pro_orientacao)
 psol <- concordancia(orientacao_pt$pro_orientacao, orientacao_psol$pro_orientacao)
 
+concordancia_governo <- data.frame(Concordancia = c(pmdb, psdb, psol), Partidos = c("pmdb", "psdb", "psol"))
 
-partido <- c("pmdb", "psdb", "psol")
-concordanciagoverno <- c(pmdb, psdb, psol)
-concordanciagoverno <- data.frame(Concordancia = concordanciagoverno, Partidos = partido)
-
-
-p <- ggplot(data = concordanciagoverno, aes(x=reorder(Partidos, -Concordancia), y = Concordancia)) + 
+p <- ggplot(data = concordancia_governo, aes(x=reorder(Partidos, -Concordancia), y = Concordancia)) + 
   geom_bar(stat="identity") + 
   labs(y='Concordância com o Governo', x='Partidos') +
   theme_classic() +
@@ -82,12 +68,42 @@ png("plot/concordancia_1.png",
     width = 800, height = 600)
 p
 dev.off()
+```
 
+Comparação entre o governo e outros partidos mês a mês 
 
+```{r}
+pt_pmdb <- concordancia_mes(orientacao_pt, orientacao_pmdb)
+pt_pmdb$partido <- "pmdb"
 
+pt_psdb <- concordancia_mes(orientacao_pt, orientacao_psdb)
+pt_psdb$partido <- "psdb"
 
-orientacao_partidos$data <- as.character(orientacao_partidos$data)
-orientacao_partidos$mes <- strsplit(orientacao_partidos$data[1], "/")
-orientacao_partidos$mes <- strsplit(orientacao_partidos$data, "/")[[1]][2]
-str(orientacao_partidos$data[1])
+pt_psol <- concordancia_mes(orientacao_pt, orientacao_psol)
+pt_psol$partido <- "psol"  
+
+plot <- rbind(pt_pmdb, pt_psdb, pt_psol)
+plot$nome_mes <- month.abb[plot$Mes]
+
+# write.csv(plot, file = "plot.csv", row.names= FALSE)
+# plot <- read.csv("~/Projetos/houseofcunha/plot.csv")
+
+p <- ggplot(data = plot, aes(x=reorder(nome_mes, Mes), y = Concordancia, group=partido,  colour=partido)) + 
+  geom_line() +
+  geom_point() + 
+    scale_colour_manual(values = c(alpha("darkred", 1), 
+                                 alpha("#0066CC", 1),
+                                 alpha("#E69F00", 1)
+                                 ), 
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) +
+  ylab("Concordância com o Governo") + xlab("Mês") +  
+  theme_classic() + 
+  theme(axis.ticks = element_blank())
+
+png("plot/concordancia_mes_a_mes_1.png", 
+    width = 800, height = 600)
+p
+dev.off()
+
 ```
