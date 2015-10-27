@@ -81,3 +81,18 @@ concordancia_mes <- function(partidoA, partidoB){
   }
   df
 }
+
+# Quantidade de votação mês a mês 
+quantiade_votacao_mes <- function(partidoA){
+  df <- data.frame()
+  mes <- unique(partidoA$mes)
+  
+  for (m in mes){
+    partidoA_mes <-  partidoA %>%
+      filter(mes == m)
+        
+    df <- rbind(df, data.frame(N_votacoes = nrow(partidoA_mes), Mes = m))
+  }
+  df
+}
+

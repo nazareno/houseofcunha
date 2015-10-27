@@ -107,3 +107,22 @@ p
 dev.off()
 
 ```
+
+Quntidade de votação mês a mês
+
+```{r}
+quantidade_votacao <- quantiade_votacao_mes(orientacao_pt)
+quantidade_votacao$nome_mes <- month.abb[quantidade_votacao$Mes]
+
+p <- ggplot(data = quantidade_votacao, aes(x=reorder(nome_mes, Mes), y = N_votacoes)) + 
+  geom_bar(stat="identity") + 
+  labs(y='Número de Votações', x='Mês') + 
+  theme_classic() + 
+  theme(axis.ticks = element_blank())
+
+png("plot/numero_votacao_mes_1.png", 
+    width = 800, height = 600)
+p
+dev.off()
+
+```
