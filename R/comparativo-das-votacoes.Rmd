@@ -27,6 +27,76 @@ proposicoes <- as.data.frame(unique(votos[,c("tipo", "num_pro")]))
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 ```
 
+Formatação das datas
+
+```{r}
+votos$data <- as.Date(votos$data, format = "%d/%m/%Y")
+votacoes <- unique(votos[,c("data", "num_pro")])
+votacoes$ano <- as.numeric(format(votacoes$data, format = '%Y'))
+votacoes$mes <- as.numeric(format(votacoes$data, format = '%m'))
+votacoes$dia <- as.numeric(format(votacoes$data, format = '%j'))
+votacoes$semana <- as.numeric(format(votacoes$data, format = '%W'))
+
+votacoes <- votacoes %>%
+  filter(ano >= 2015)
+```
+
+Quantidade de votação mês a mês
+
+```{r}
+plot <- quantidade_votacao_mes(votacoes)
+plot$nome_mes <- month.abb[plot$mes]
+
+p <- ggplot(data = plot, aes(x=reorder(nome_mes, mes), y = n_votacoes)) + 
+  geom_bar(stat="identity") + 
+  labs(y='Número de Votações', x='Mês') + 
+  theme_classic() + 
+  theme(axis.ticks = element_blank())
+
+png("plot/numero_votacao_mes_1.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
+Quantidade de votação dia a dia
+
+```{r}
+plot <- quantidade_votacao_dia(votacoes)
+
+p <- ggplot(data = plot, aes(x=reorder(dia, dia), y = n_votacoes, group=1)) + 
+  geom_line() +
+  geom_point() + 
+  labs(y='Número de Votações', x='Dia') + 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(),
+        axis.text.x=element_blank()) +
+  scale_y_continuous(breaks = round(seq(min(plot$n_votacoes), max(plot$n_votacoes), by = 1),))
+
+png("plot/numero_votacao_dia_1.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
+Quantidade de votação semana a semana
+
+```{r}
+plot <- quantidade_votacao_semana(votacoes)
+
+p <- ggplot(data = plot, aes(x=reorder(semana, semana), y = n_votacoes)) + 
+  geom_bar(stat="identity") + 
+  labs(y='Número de Votações', x='Semana') + 
+  theme_classic() + 
+  theme(axis.ticks = element_blank()) +
+  scale_y_continuous(breaks = round(seq(min(plot$n_votacoes), max(plot$n_votacoes), by = 1),))
+
+png("plot/numero_votacao_semana_1.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
 Tipo de votações 
 
 ```{r}
@@ -40,32 +110,6 @@ p <- ggplot(data = plot, aes(x=reorder(Var1, -Freq), y = Freq)) +
   theme(axis.ticks = element_blank())
 
 png("plot/numero_de_proposicoes_1.png", 
-    width = 800, height = 600)
-p
-dev.off()
-```
-
-
-Quantidade de votação mês a mês
-
-```{r}
-votacoes <- unique(votos[,c("data", "num_pro")])
-votacoes$ano <- as.numeric(format(as.Date(votacoes$data, format = "%d/%m/%Y"),'%Y'))
-votacoes$mes <- as.numeric(format(as.Date(votacoes$data, format = "%d/%m/%Y"),'%m'))
-
-votacoes <- votacoes %>%
-  filter(ano >= 2015)
-
-plot <- quantidade_votacao_mes(votacoes)
-plot$nome_mes <- month.abb[plot$Mes]
-
-p <- ggplot(data = plot, aes(x=reorder(nome_mes, Mes), y = N_votacoes)) + 
-  geom_bar(stat="identity") + 
-  labs(y='Número de Votações', x='Mês') + 
-  theme_classic() + 
-  theme(axis.ticks = element_blank())
-
-png("plot/numero_votacao_mes_1.png", 
     width = 800, height = 600)
 p
 dev.off()
