@@ -83,7 +83,7 @@ concordancia_mes <- function(partidoA, partidoB){
 }
 
 # Quantidade de votação mês a mês 
-quantiade_votacao_mes <- function(partidoA){
+quantidade_votacao_mes <- function(partidoA){
   df <- data.frame()
   mes <- unique(partidoA$mes)
   

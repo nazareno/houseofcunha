@@ -5,6 +5,9 @@ date: "30 de maio de 2015"
 output: html_document
 ---
 
+Compara as posições dos deputados federais considerando os votos em cada proposição. 
+
+
 Bibliotecas necessárias 
 
 ```{r}
@@ -34,7 +37,6 @@ quant_tipo_pro <- unique(votos[,c("tipo","num_pro")])
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 quant_tipo_votacao <- unique(votos[,c("tipo","num_pro")])
 ```
-
 
 
 ```{r}

@@ -1,6 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <deputados>
   <deputado>
+    <ideCadastro>191684</ideCadastro>
+    <codOrcamento />
+    <condicao>Suplente</condicao>
+    <matricula>554</matricula>
+    <idParlamentar>5830846</idParlamentar>
+    <nome>ROSANGELA APARECIDA DA SILVA BARROS</nome>
+    <nomeParlamentar>ROSÂNGELA CURADO</nomeParlamentar>
+    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/191684.jpg</urlFoto>
+    <sexo>feminino</sexo>
+    <uf>MA</uf>
+    <partido>PDT</partido>
+    <gabinete>405</gabinete>
+    <anexo>4</anexo>
+    <fone>3215-5405</fone>
+    <email>dep.rosangelacurado@camara.gov.br</email>
+    <comissoes>
+      <titular />
+      <suplente />
+    </comissoes>
+  </deputado>
+  <deputado>
+    <ideCadastro>191923</ideCadastro>
+    <codOrcamento />
+    <condicao>Suplente</condicao>
+    <matricula>556</matricula>
+    <idParlamentar>5830848</idParlamentar>
+    <nome>FLAVIO RODRIGUES NOGUEIRA</nome>
+    <nomeParlamentar>FLAVIO NOGUEIRA</nomeParlamentar>
+    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/191923.jpg</urlFoto>
+    <sexo>masculino</sexo>
+    <uf>PI</uf>
+    <partido>PDT</partido>
+    <gabinete>811</gabinete>
+    <anexo>4</anexo>
+    <fone>3215-5811</fone>
+    <email>dep.flavionogueira@camara.gov.br</email>
+    <comissoes>
+      <titular />
+      <suplente />
+    </comissoes>
+  </deputado>
+  <deputado>
+    <ideCadastro>74103</ideCadastro>
+    <codOrcamento>1653</codOrcamento>
+    <condicao>Suplente</condicao>
+    <matricula>555</matricula>
+    <idParlamentar>5830847</idParlamentar>
+    <nome>FRANCISCO ARIOSTO HOLANDA</nome>
+    <nomeParlamentar>ARIOSTO HOLANDA</nomeParlamentar>
+    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/74103.jpg</urlFoto>
+    <sexo>masculino</sexo>
+    <uf>CE</uf>
+    <partido>PROS</partido>
+    <gabinete>940</gabinete>
+    <anexo>4</anexo>
+    <fone>3215-5940</fone>
+    <email>dep.ariostoholanda@camara.gov.br</email>
+    <comissoes>
+      <titular />
+      <suplente />
+    </comissoes>
+  </deputado>
+  <deputado>
+    <ideCadastro>191945</ideCadastro>
+    <codOrcamento />
+    <condicao>Suplente</condicao>
+    <matricula>557</matricula>
+    <idParlamentar>5830849</idParlamentar>
+    <nome>JOSÉ AUGUSTO NALIN</nome>
+    <nomeParlamentar>ZÉ AUGUSTO NALIN</nomeParlamentar>
+    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/191945.jpg</urlFoto>
+    <sexo>masculino</sexo>
+    <uf>RJ</uf>
+    <partido>PMDB</partido>
+    <gabinete>475</gabinete>
+    <anexo>3</anexo>
+    <fone>3215-5475</fone>
+    <email>dep.zeaugustonalin@camara.gov.br</email>
+    <comissoes>
+      <titular />
+      <suplente />
+    </comissoes>
+  </deputado>
+  <deputado>
+    <ideCadastro>74856</ideCadastro>
+    <codOrcamento>3268</codOrcamento>
+    <condicao>Suplente</condicao>
+    <matricula>558</matricula>
+    <idParlamentar>5830850</idParlamentar>
+    <nome>MARIA LAURA MONTEZA DE SOUZA CARNEIRO</nome>
+    <nomeParlamentar>LAURA CARNEIRO</nomeParlamentar>
+    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/74856.jpg</urlFoto>
+    <sexo>feminino</sexo>
+    <uf>RJ</uf>
+    <partido>PMDB</partido>
+    <gabinete>437</gabinete>
+    <anexo>4</anexo>
+    <fone>3215-5437</fone>
+    <email>dep.lauracarneiro@camara.gov.br</email>
+    <comissoes>
+      <titular />
+      <suplente />
+    </comissoes>
+  </deputado>
+  <deputado>
+    <ideCadastro>192120</ideCadastro>
+    <codOrcamento />
+    <condicao>Suplente</condicao>
+    <matricula>559</matricula>
+    <idParlamentar>5830851</idParlamentar>
+    <nome>ANGELA ALBINO</nome>
+    <nomeParlamentar>ANGELA ALBINO</nomeParlamentar>
+    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/192120.jpg</urlFoto>
+    <sexo>feminino</sexo>
+    <uf>SC</uf>
+    <partido>PCdoB</partido>
+    <gabinete>609</gabinete>
+    <anexo>4</anexo>
+    <fone>3215-5609</fone>
+    <email>dep.angelaalbino@camara.gov.br</email>
+    <comissoes>
+      <titular />
+      <suplente />
+    </comissoes>
+  </deputado>
+  <deputado>
     <ideCadastro>178980</ideCadastro>
     <codOrcamento>3283</codOrcamento>
     <condicao>Titular</condicao>
@@ -137,7 +263,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178927.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>PR</uf>
-    <partido>PCdoB</partido>
+    <partido>REDE</partido>
     <gabinete>480</gabinete>
     <anexo>3</anexo>
     <fone>3215-5480</fone>
@@ -841,27 +967,6 @@
     </comissoes>
   </deputado>
   <deputado>
-    <ideCadastro>160612</ideCadastro>
-    <codOrcamento>2789</codOrcamento>
-    <condicao>Titular</condicao>
-    <matricula>320</matricula>
-    <idParlamentar>5830774</idParlamentar>
-    <nome>SERGIO ZVEITER</nome>
-    <nomeParlamentar>SERGIO ZVEITER</nomeParlamentar>
-    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/160612.jpg</urlFoto>
-    <sexo>masculino</sexo>
-    <uf>RJ</uf>
-    <partido>PSD</partido>
-    <gabinete>437</gabinete>
-    <anexo>4</anexo>
-    <fone>3215-5437</fone>
-    <email>dep.sergiozveiter@camara.gov.br</email>
-    <comissoes>
-      <titular />
-      <suplente />
-    </comissoes>
-  </deputado>
-  <deputado>
     <ideCadastro>178952</ideCadastro>
     <codOrcamento>3779</codOrcamento>
     <condicao>Titular</condicao>
@@ -1376,7 +1481,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/62881.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>CE</uf>
-    <partido>PMDB</partido>
+    <partido>PSB</partido>
     <gabinete>384</gabinete>
     <anexo>3</anexo>
     <fone>3215-5384</fone>
@@ -1591,27 +1696,6 @@
     <anexo>4</anexo>
     <fone>3215-5254</fone>
     <email>dep.pr.marcofeliciano@camara.gov.br</email>
-    <comissoes>
-      <titular />
-      <suplente />
-    </comissoes>
-  </deputado>
-  <deputado>
-    <ideCadastro>72912</ideCadastro>
-    <codOrcamento>3071</codOrcamento>
-    <condicao>Titular</condicao>
-    <matricula>292</matricula>
-    <idParlamentar>5830473</idParlamentar>
-    <nome>CELSO PANSERA</nome>
-    <nomeParlamentar>CELSO PANSERA</nomeParlamentar>
-    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/72912.jpg</urlFoto>
-    <sexo>masculino</sexo>
-    <uf>RJ</uf>
-    <partido>PMDB</partido>
-    <gabinete>475</gabinete>
-    <anexo>3</anexo>
-    <fone>3215-5475</fone>
-    <email>dep.celsopansera@camara.gov.br</email>
     <comissoes>
       <titular />
       <suplente />
@@ -2069,7 +2153,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178841.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>AL</uf>
-    <partido>PRTB</partido>
+    <partido>PSD</partido>
     <gabinete>760</gabinete>
     <anexo>4</anexo>
     <fone>3215-5760</fone>
@@ -3019,27 +3103,6 @@
     <anexo>4</anexo>
     <fone>3215-5544</fone>
     <email>dep.juliolopes@camara.gov.br</email>
-    <comissoes>
-      <titular />
-      <suplente />
-    </comissoes>
-  </deputado>
-  <deputado>
-    <ideCadastro>133439</ideCadastro>
-    <codOrcamento>2083</codOrcamento>
-    <condicao>Titular</condicao>
-    <matricula>89</matricula>
-    <idParlamentar>5830614</idParlamentar>
-    <nome>ANDRÉ PEIXOTO FIGUEIREDO LIMA</nome>
-    <nomeParlamentar>ANDRÉ FIGUEIREDO</nomeParlamentar>
-    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/133439.jpg</urlFoto>
-    <sexo>masculino</sexo>
-    <uf>CE</uf>
-    <partido>PDT</partido>
-    <gabinete>940</gabinete>
-    <anexo>4</anexo>
-    <fone>3215-5940</fone>
-    <email>dep.andrefigueiredo@camara.gov.br</email>
     <comissoes>
       <titular />
       <suplente />
@@ -5818,6 +5881,27 @@
     </comissoes>
   </deputado>
   <deputado>
+    <ideCadastro>73447</ideCadastro>
+    <codOrcamento>3182</codOrcamento>
+    <condicao>Titular</condicao>
+    <matricula>344</matricula>
+    <idParlamentar>5830510</idParlamentar>
+    <nome>EDSON EDINHO COELHO ARAÚJO</nome>
+    <nomeParlamentar>EDINHO ARAÚJO</nomeParlamentar>
+    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/73447.jpg</urlFoto>
+    <sexo>masculino</sexo>
+    <uf>SP</uf>
+    <partido>PMDB</partido>
+    <gabinete>418</gabinete>
+    <anexo>4</anexo>
+    <fone>3215-5418</fone>
+    <email>dep.edinhoaraujo@camara.gov.br</email>
+    <comissoes>
+      <titular />
+      <suplente />
+    </comissoes>
+  </deputado>
+  <deputado>
     <ideCadastro>162332</ideCadastro>
     <codOrcamento>2874</codOrcamento>
     <condicao>Titular</condicao>
@@ -5896,27 +5980,6 @@
     <anexo>4</anexo>
     <fone>3215-5402</fone>
     <email>dep.adalbertocavalcanti@camara.gov.br</email>
-    <comissoes>
-      <titular />
-      <suplente />
-    </comissoes>
-  </deputado>
-  <deputado>
-    <ideCadastro>74460</ideCadastro>
-    <codOrcamento>3523</codOrcamento>
-    <condicao>Titular</condicao>
-    <matricula>110</matricula>
-    <idParlamentar>5830659</idParlamentar>
-    <nome>MARCELO COSTA E CASTRO</nome>
-    <nomeParlamentar>MARCELO CASTRO</nomeParlamentar>
-    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/74460.jpg</urlFoto>
-    <sexo>masculino</sexo>
-    <uf>PI</uf>
-    <partido>PMDB</partido>
-    <gabinete>811</gabinete>
-    <anexo>4</anexo>
-    <fone>3215-5811</fone>
-    <email>dep.marcelocastro@camara.gov.br</email>
     <comissoes>
       <titular />
       <suplente />
@@ -6664,7 +6727,7 @@
     <matricula>529</matricula>
     <idParlamentar>5830812</idParlamentar>
     <nome>FERNANDO MONTEIRO DE ALBUQUERQUE</nome>
-    <nomeParlamentar>FERNANDO MONTEIRO </nomeParlamentar>
+    <nomeParlamentar>FERNANDO MONTEIRO</nomeParlamentar>
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/92699.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>PE</uf>
@@ -6700,21 +6763,21 @@
     </comissoes>
   </deputado>
   <deputado>
-    <ideCadastro>73481</ideCadastro>
-    <codOrcamento>3660</codOrcamento>
+    <ideCadastro>141563</ideCadastro>
+    <codOrcamento>2546</codOrcamento>
     <condicao>Suplente</condicao>
-    <matricula>534</matricula>
-    <idParlamentar>5830823</idParlamentar>
-    <nome>FERNANDO STEPHAN MARRONI</nome>
-    <nomeParlamentar>FERNANDO MARRONI</nomeParlamentar>
-    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/73481.jpg</urlFoto>
+    <matricula>533</matricula>
+    <idParlamentar>5830825</idParlamentar>
+    <nome>WILLIAM BOSS WOO</nome>
+    <nomeParlamentar>WILLIAM WOO</nomeParlamentar>
+    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/141563.jpg</urlFoto>
     <sexo>masculino</sexo>
-    <uf>RS</uf>
-    <partido>PT</partido>
-    <gabinete>858</gabinete>
+    <uf>SP</uf>
+    <partido>PV</partido>
+    <gabinete>235</gabinete>
     <anexo>4</anexo>
-    <fone>3215-5858</fone>
-    <email>dep.fernandomarroni@camara.gov.br</email>
+    <fone>3215-5235</fone>
+    <email>dep.williamwoo@camara.gov.br</email>
     <comissoes>
       <titular />
       <suplente />
@@ -6910,27 +6973,6 @@
     </comissoes>
   </deputado>
   <deputado>
-    <ideCadastro>80920</ideCadastro>
-    <codOrcamento>2814</codOrcamento>
-    <condicao>Suplente</condicao>
-    <matricula>551</matricula>
-    <idParlamentar>5830843</idParlamentar>
-    <nome>JOSÉ LUIZ DE FRANÇA PENNA</nome>
-    <nomeParlamentar>PENNA</nomeParlamentar>
-    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/80920.jpg</urlFoto>
-    <sexo>masculino</sexo>
-    <uf>SP</uf>
-    <partido>PV</partido>
-    <gabinete>235</gabinete>
-    <anexo>4</anexo>
-    <fone>3215-5235</fone>
-    <email>dep.penna@camara.gov.br</email>
-    <comissoes>
-      <titular />
-      <suplente />
-    </comissoes>
-  </deputado>
-  <deputado>
     <ideCadastro>74048</ideCadastro>
     <codOrcamento>1299</codOrcamento>
     <condicao>Suplente</condicao>
@@ -7093,27 +7135,6 @@
     <anexo>4</anexo>
     <fone>3215-5703</fone>
     <email>dep.edinhobez@camara.gov.br</email>
-    <comissoes>
-      <titular />
-      <suplente />
-    </comissoes>
-  </deputado>
-  <deputado>
-    <ideCadastro>141560</ideCadastro>
-    <codOrcamento>2545</codOrcamento>
-    <condicao>Suplente</condicao>
-    <matricula>518</matricula>
-    <idParlamentar>5830801</idParlamentar>
-    <nome>WALTER SHINDI IIHOSHI</nome>
-    <nomeParlamentar>WALTER IHOSHI</nomeParlamentar>
-    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/141560.jpg</urlFoto>
-    <sexo>masculino</sexo>
-    <uf>SP</uf>
-    <partido>PSD</partido>
-    <gabinete>418</gabinete>
-    <anexo>4</anexo>
-    <fone>3215-5418</fone>
-    <email>dep.walterihoshi@camara.gov.br</email>
     <comissoes>
       <titular />
       <suplente />
@@ -8128,6 +8149,27 @@
     </comissoes>
   </deputado>
   <deputado>
+    <ideCadastro>141445</ideCadastro>
+    <codOrcamento>2400</codOrcamento>
+    <condicao>Titular</condicao>
+    <matricula>503</matricula>
+    <idParlamentar>5830709</idParlamentar>
+    <nome>GILBERTO JOSÉ SPIER VARGAS</nome>
+    <nomeParlamentar>PEPE VARGAS</nomeParlamentar>
+    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/141445.jpg</urlFoto>
+    <sexo>masculino</sexo>
+    <uf>RS</uf>
+    <partido>PT</partido>
+    <gabinete>858</gabinete>
+    <anexo>4</anexo>
+    <fone>3215-5858</fone>
+    <email>dep.pepevargas@camara.gov.br</email>
+    <comissoes>
+      <titular />
+      <suplente />
+    </comissoes>
+  </deputado>
+  <deputado>
     <ideCadastro>160630</ideCadastro>
     <codOrcamento>2825</codOrcamento>
     <condicao>Titular</condicao>
@@ -8306,7 +8348,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/152605.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>RJ</uf>
-    <partido>PSB</partido>
+    <partido>PSOL</partido>
     <gabinete>362</gabinete>
     <anexo>4</anexo>
     <fone>3215-5362</fone>
@@ -8474,7 +8516,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178883.jpg</urlFoto>
     <sexo>feminino</sexo>
     <uf>MA</uf>
-    <partido>PPS</partido>
+    <partido>REDE</partido>
     <gabinete>205</gabinete>
     <anexo>4</anexo>
     <fone>3215-5205</fone>
@@ -9251,7 +9293,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178842.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>AL</uf>
-    <partido>SD</partido>
+    <partido>PSB</partido>
     <gabinete>958</gabinete>
     <anexo>4</anexo>
     <fone>3215-5958</fone>
@@ -9277,27 +9319,6 @@
     <anexo>3</anexo>
     <fone>3215-5266</fone>
     <email>dep.zegeraldo@camara.gov.br</email>
-    <comissoes>
-      <titular />
-      <suplente />
-    </comissoes>
-  </deputado>
-  <deputado>
-    <ideCadastro>167493</ideCadastro>
-    <codOrcamento>2942</codOrcamento>
-    <condicao>Titular</condicao>
-    <matricula>83</matricula>
-    <idParlamentar>5830409</idParlamentar>
-    <nome>WEVERTON ROCHA MARQUES DE SOUSA</nome>
-    <nomeParlamentar>WEVERTON ROCHA</nomeParlamentar>
-    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/167493.jpg</urlFoto>
-    <sexo>masculino</sexo>
-    <uf>MA</uf>
-    <partido>PDT</partido>
-    <gabinete>405</gabinete>
-    <anexo>4</anexo>
-    <fone>3215-5405</fone>
-    <email>dep.wevertonrocha@camara.gov.br</email>
     <comissoes>
       <titular />
       <suplente />
@@ -9839,7 +9860,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/160511.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>RJ</uf>
-    <partido>PT</partido>
+    <partido>REDE</partido>
     <gabinete>652</gabinete>
     <anexo>4</anexo>
     <fone>3215-5652</fone>
@@ -9997,27 +10018,6 @@
     </comissoes>
   </deputado>
   <deputado>
-    <ideCadastro>73720</ideCadastro>
-    <codOrcamento>1881</codOrcamento>
-    <condicao>Titular</condicao>
-    <matricula>479</matricula>
-    <idParlamentar>5830492</idParlamentar>
-    <nome>César Antonio de Souza</nome>
-    <nomeParlamentar>CESAR SOUZA</nomeParlamentar>
-    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/73720.jpg</urlFoto>
-    <sexo>masculino</sexo>
-    <uf>SC</uf>
-    <partido>PSD</partido>
-    <gabinete>609</gabinete>
-    <anexo>4</anexo>
-    <fone>3215-5609</fone>
-    <email>dep.cesarsouza@camara.gov.br</email>
-    <comissoes>
-      <titular />
-      <suplente />
-    </comissoes>
-  </deputado>
-  <deputado>
     <ideCadastro>178949</ideCadastro>
     <codOrcamento>3784</codOrcamento>
     <condicao>Titular</condicao>
@@ -10112,7 +10112,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/74862.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>RJ</uf>
-    <partido>PROS</partido>
+    <partido>REDE</partido>
     <gabinete>270</gabinete>
     <anexo>3</anexo>
     <fone>3215-5270</fone>
@@ -10532,7 +10532,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178965.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>RS</uf>
-    <partido>PCdoB</partido>
+    <partido>REDE</partido>
     <gabinete>901</gabinete>
     <anexo>4</anexo>
     <fone>3215-5901</fone>
@@ -10759,11 +10759,11 @@
     <matricula>538</matricula>
     <idParlamentar>5830829</idParlamentar>
     <nome>ELIZEU DIONIZIO SOUZA  DA SILVA</nome>
-    <nomeParlamentar>ELIZEU DIONIZIO </nomeParlamentar>
+    <nomeParlamentar>ELIZEU DIONIZIO</nomeParlamentar>
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/181316.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>MS</uf>
-    <partido>SD</partido>
+    <partido>PSDB</partido>
     <gabinete>531</gabinete>
     <anexo>4</anexo>
     <fone>3215-5531</fone>

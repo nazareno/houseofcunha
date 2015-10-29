@@ -5,11 +5,15 @@ date: "22-10-2015"
 output: html_document
 ---
 
+
+Mostra qual o nível de concordância dos partidos com o governo. 
+
 Bibliotecas necessárias 
 
 ```{r}
 library(ggplot2)
 library(dplyr)
+require(scales)
 
 source("R/camara-lib.R")
 ```
@@ -46,7 +50,6 @@ orientacao_psdb <- orientacao_partidos %>%
 
 orientacao_psol <- orientacao_partidos %>%
   filter(partido == "psol")
-
 ```
 
 Comparação da orientação do governo com a orientação dos outros partidos. 
@@ -93,8 +96,7 @@ p <- ggplot(data = plot, aes(x=reorder(nome_mes, Mes), y = Concordancia, group=p
   geom_point() + 
     scale_colour_manual(values = c(alpha("darkred", 1), 
                                  alpha("#0066CC", 1),
-                                 alpha("#E69F00", 1)
-                                 ), 
+                                 alpha("#E69F00", 1)), 
                       guide = guide_legend(title = "Partido", 
                                            override.aes = list(alpha = 1, size = 4))) +
   ylab("Concordância com o Governo") + xlab("Mês") +  
@@ -108,21 +110,3 @@ dev.off()
 
 ```
 
-Quntidade de votação mês a mês
-
-```{r}
-quantidade_votacao <- quantiade_votacao_mes(orientacao_pt)
-quantidade_votacao$nome_mes <- month.abb[quantidade_votacao$Mes]
-
-p <- ggplot(data = quantidade_votacao, aes(x=reorder(nome_mes, Mes), y = N_votacoes)) + 
-  geom_bar(stat="identity") + 
-  labs(y='Número de Votações', x='Mês') + 
-  theme_classic() + 
-  theme(axis.ticks = element_blank())
-
-png("plot/numero_votacao_mes_1.png", 
-    width = 800, height = 600)
-p
-dev.off()
-
-```

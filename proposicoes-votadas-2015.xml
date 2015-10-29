@@ -26,9 +26,29 @@
     <dataVotacao>02/07/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>14493</codProposicao>
+    <nomeProposicao>PEC 171/1993</nomeProposicao>
+    <dataVotacao>19/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>14493</codProposicao>
+    <nomeProposicao>PEC 171/1993</nomeProposicao>
+    <dataVotacao>19/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>18180</codProposicao>
+    <nomeProposicao>PL 2479/2000</nomeProposicao>
+    <dataVotacao>20/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>18216</codProposicao>
     <nomeProposicao>PL 2505/2000</nomeProposicao>
     <dataVotacao>23/04/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>148200</codProposicao>
+    <nomeProposicao>PEC 215/2003</nomeProposicao>
+    <dataVotacao>20/10/2015</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>267841</codProposicao>
@@ -56,6 +76,11 @@
     <dataVotacao>22/04/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>270277</codProposicao>
+    <nomeProposicao>PL 4474/2004</nomeProposicao>
+    <dataVotacao>24/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>298878</codProposicao>
     <nomeProposicao>PEC 457/2005</nomeProposicao>
     <dataVotacao>04/03/2015</dataVotacao>
@@ -84,6 +109,11 @@
     <codProposicao>298878</codProposicao>
     <nomeProposicao>PEC 457/2005</nomeProposicao>
     <dataVotacao>05/05/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>304008</codProposicao>
+    <nomeProposicao>PEC 471/2005</nomeProposicao>
+    <dataVotacao>26/08/2015</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>339287</codProposicao>
@@ -101,9 +131,34 @@
     <dataVotacao>05/03/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>344866</codProposicao>
+    <nomeProposicao>PLP 25/2007</nomeProposicao>
+    <dataVotacao>01/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>344866</codProposicao>
+    <nomeProposicao>PLP 25/2007</nomeProposicao>
+    <dataVotacao>02/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>344866</codProposicao>
+    <nomeProposicao>PLP 25/2007</nomeProposicao>
+    <dataVotacao>02/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>344866</codProposicao>
+    <nomeProposicao>PLP 25/2007</nomeProposicao>
+    <dataVotacao>02/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>348730</codProposicao>
     <nomeProposicao>PL 789/2007</nomeProposicao>
     <dataVotacao>25/03/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>351362</codProposicao>
+    <nomeProposicao>PL 1057/2007</nomeProposicao>
+    <dataVotacao>26/08/2015</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>372066</codProposicao>
@@ -276,6 +331,16 @@
     <dataVotacao>15/07/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>373327</codProposicao>
+    <nomeProposicao>PEC 182/2007</nomeProposicao>
+    <dataVotacao>04/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>373327</codProposicao>
+    <nomeProposicao>PEC 182/2007</nomeProposicao>
+    <dataVotacao>12/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>388449</codProposicao>
     <nomeProposicao>PL 3131/2008</nomeProposicao>
     <dataVotacao>26/03/2015</dataVotacao>
@@ -289,6 +354,36 @@
     <codProposicao>412728</codProposicao>
     <nomeProposicao>PL 4148/2008</nomeProposicao>
     <dataVotacao>28/04/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>463155</codProposicao>
+    <nomeProposicao>PEC 443/2009</nomeProposicao>
+    <dataVotacao>04/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>463155</codProposicao>
+    <nomeProposicao>PEC 443/2009</nomeProposicao>
+    <dataVotacao>06/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>463155</codProposicao>
+    <nomeProposicao>PEC 443/2009</nomeProposicao>
+    <dataVotacao>06/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>463155</codProposicao>
+    <nomeProposicao>PEC 443/2009</nomeProposicao>
+    <dataVotacao>06/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>463155</codProposicao>
+    <nomeProposicao>PEC 443/2009</nomeProposicao>
+    <dataVotacao>11/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>526536</codProposicao>
+    <nomeProposicao>PLP 106/2011</nomeProposicao>
+    <dataVotacao>26/08/2015</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>537900</codProposicao>
@@ -306,6 +401,36 @@
     <dataVotacao>10/03/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>544681</codProposicao>
+    <nomeProposicao>PEC 172/2012</nomeProposicao>
+    <dataVotacao>02/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>544681</codProposicao>
+    <nomeProposicao>PEC 172/2012</nomeProposicao>
+    <dataVotacao>02/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>544681</codProposicao>
+    <nomeProposicao>PEC 172/2012</nomeProposicao>
+    <dataVotacao>02/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>544681</codProposicao>
+    <nomeProposicao>PEC 172/2012</nomeProposicao>
+    <dataVotacao>22/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>544681</codProposicao>
+    <nomeProposicao>PEC 172/2012</nomeProposicao>
+    <dataVotacao>23/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>544681</codProposicao>
+    <nomeProposicao>PEC 172/2012</nomeProposicao>
+    <dataVotacao>23/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>544724</codProposicao>
     <nomeProposicao>PLP 177/2012</nomeProposicao>
     <dataVotacao>24/02/2015</dataVotacao>
@@ -321,14 +446,19 @@
     <dataVotacao>11/02/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>553947</codProposicao>
+    <nomeProposicao>PEC 209/2012</nomeProposicao>
+    <dataVotacao>30/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>571550</codProposicao>
     <nomeProposicao>REQ 7492/2013 =&gt; PL 4372/2012</nomeProposicao>
     <dataVotacao>03/03/2015</dataVotacao>
   </proposicao>
   <proposicao>
-    <codProposicao>580148</codProposicao>
-    <nomeProposicao>PL 5735/2013</nomeProposicao>
-    <dataVotacao>14/07/2015</dataVotacao>
+    <codProposicao>578047</codProposicao>
+    <nomeProposicao>PLP 278/2013</nomeProposicao>
+    <dataVotacao>15/10/2015</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>580148</codProposicao>
@@ -354,6 +484,31 @@
     <codProposicao>580148</codProposicao>
     <nomeProposicao>PL 5735/2013</nomeProposicao>
     <dataVotacao>14/07/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>580148</codProposicao>
+    <nomeProposicao>PL 5735/2013</nomeProposicao>
+    <dataVotacao>14/07/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>580148</codProposicao>
+    <nomeProposicao>PL 5735/2013</nomeProposicao>
+    <dataVotacao>09/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>580148</codProposicao>
+    <nomeProposicao>PL 5735/2013</nomeProposicao>
+    <dataVotacao>09/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>580148</codProposicao>
+    <nomeProposicao>PL 5735/2013</nomeProposicao>
+    <dataVotacao>09/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>580148</codProposicao>
+    <nomeProposicao>PL 5735/2013</nomeProposicao>
+    <dataVotacao>09/09/2015</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>585608</codProposicao>
@@ -406,6 +561,21 @@
     <dataVotacao>19/03/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>593856</codProposicao>
+    <nomeProposicao>PL 6446/2013</nomeProposicao>
+    <dataVotacao>20/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>593856</codProposicao>
+    <nomeProposicao>PL 6446/2013</nomeProposicao>
+    <dataVotacao>20/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>593856</codProposicao>
+    <nomeProposicao>PL 6446/2013</nomeProposicao>
+    <dataVotacao>20/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>600023</codProposicao>
     <nomeProposicao>PEC 352/2013</nomeProposicao>
     <dataVotacao>03/02/2015</dataVotacao>
@@ -426,9 +596,39 @@
     <dataVotacao>10/02/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>603566</codProposicao>
+    <nomeProposicao>PLP 366/2013</nomeProposicao>
+    <dataVotacao>10/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>603566</codProposicao>
+    <nomeProposicao>PLP 366/2013</nomeProposicao>
+    <dataVotacao>16/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>603566</codProposicao>
+    <nomeProposicao>PLP 366/2013</nomeProposicao>
+    <dataVotacao>16/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>603566</codProposicao>
+    <nomeProposicao>PLP 366/2013</nomeProposicao>
+    <dataVotacao>16/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>603566</codProposicao>
+    <nomeProposicao>PLP 366/2013</nomeProposicao>
+    <dataVotacao>16/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>611193</codProposicao>
     <nomeProposicao>REQ 9909/2014 =&gt; PL 5201/2013</nomeProposicao>
     <dataVotacao>26/02/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>611966</codProposicao>
+    <nomeProposicao>PEC 395/2014</nomeProposicao>
+    <dataVotacao>21/10/2015</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>613662</codProposicao>
@@ -486,9 +686,9 @@
     <dataVotacao>09/04/2015</dataVotacao>
   </proposicao>
   <proposicao>
-    <codProposicao>860923</codProposicao>
-    <nomeProposicao>MPV 663/2014</nomeProposicao>
-    <dataVotacao>12/05/2015</dataVotacao>
+    <codProposicao>818166</codProposicao>
+    <nomeProposicao>REQ 10903/2014 =&gt; PL 1462/2007</nomeProposicao>
+    <dataVotacao>09/09/2015</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>860923</codProposicao>
@@ -501,6 +701,11 @@
     <dataVotacao>12/05/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>860923</codProposicao>
+    <nomeProposicao>MPV 663/2014</nomeProposicao>
+    <dataVotacao>12/05/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>865929</codProposicao>
     <nomeProposicao>MPV 664/2014</nomeProposicao>
     <dataVotacao>13/05/2015</dataVotacao>
@@ -634,6 +839,11 @@
     <codProposicao>865930</codProposicao>
     <nomeProposicao>MPV 665/2014</nomeProposicao>
     <dataVotacao>07/05/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>944251</codProposicao>
+    <nomeProposicao>PL 10/2015</nomeProposicao>
+    <dataVotacao>20/08/2015</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>944494</codProposicao>
@@ -731,6 +941,11 @@
     <dataVotacao>05/03/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>994612</codProposicao>
+    <nomeProposicao>PLP 25/2015</nomeProposicao>
+    <dataVotacao>13/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>996537</codProposicao>
     <nomeProposicao>REQ 894/2015 =&gt; PL 623/2015</nomeProposicao>
     <dataVotacao>24/03/2015</dataVotacao>
@@ -754,6 +969,11 @@
     <codProposicao>1049075</codProposicao>
     <nomeProposicao>REQ 1030/2015 =&gt; PL 644/2015</nomeProposicao>
     <dataVotacao>24/03/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1049167</codProposicao>
+    <nomeProposicao>REQ 1041/2015 =&gt; PL 6232/2013</nomeProposicao>
+    <dataVotacao>25/08/2015</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>1049380</codProposicao>
@@ -851,6 +1071,11 @@
     <dataVotacao>26/03/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>1050847</codProposicao>
+    <nomeProposicao>REQ 1126/2015 =&gt; PL 3111/2012</nomeProposicao>
+    <dataVotacao>25/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>1050852</codProposicao>
     <nomeProposicao>REQ 1129/2015 =&gt; PL 5773/2013</nomeProposicao>
     <dataVotacao>30/03/2015</dataVotacao>
@@ -896,6 +1121,21 @@
     <dataVotacao>26/02/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>1194736</codProposicao>
+    <nomeProposicao>REQ 1219/2015 =&gt; PL 6726/2013</nomeProposicao>
+    <dataVotacao>06/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1228455</codProposicao>
+    <nomeProposicao>PDC 57/2015</nomeProposicao>
+    <dataVotacao>20/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1228455</codProposicao>
+    <nomeProposicao>PDC 57/2015</nomeProposicao>
+    <dataVotacao>08/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>1228940</codProposicao>
     <nomeProposicao>REQ 1681/2015 =&gt; PL 1358/2015</nomeProposicao>
     <dataVotacao>30/06/2015</dataVotacao>
@@ -911,13 +1151,208 @@
     <dataVotacao>04/03/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>1280621</codProposicao>
+    <nomeProposicao>MPV 675/2015 </nomeProposicao>
+    <dataVotacao>03/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>1280721</codProposicao>
     <nomeProposicao>REQ 796/2015 CPIPETRO</nomeProposicao>
     <dataVotacao>05/03/2015</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>1301437</codProposicao>
+    <nomeProposicao>REQ 2027/2015 =&gt; PDC 1408/2013</nomeProposicao>
+    <dataVotacao>10/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1306690</codProposicao>
+    <nomeProposicao>REQ 2118/2015 =&gt; PL 1780/2015</nomeProposicao>
+    <dataVotacao>10/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1504953</codProposicao>
+    <nomeProposicao>MPV 676/2015</nomeProposicao>
+    <dataVotacao>30/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1504953</codProposicao>
+    <nomeProposicao>MPV 676/2015</nomeProposicao>
+    <dataVotacao>30/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1514014</codProposicao>
+    <nomeProposicao>PL 2016/2015</nomeProposicao>
+    <dataVotacao>12/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1514136</codProposicao>
+    <nomeProposicao>PL 2020/2015</nomeProposicao>
+    <dataVotacao>04/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>1514282</codProposicao>
     <nomeProposicao>REQ 894/2015 CPIPETRO</nomeProposicao>
     <dataVotacao>24/03/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1515648</codProposicao>
+    <nomeProposicao>MPV 678/2015 </nomeProposicao>
+    <dataVotacao>07/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1515648</codProposicao>
+    <nomeProposicao>MPV 678/2015 </nomeProposicao>
+    <dataVotacao>08/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1515648</codProposicao>
+    <nomeProposicao>MPV 678/2015 </nomeProposicao>
+    <dataVotacao>08/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1515648</codProposicao>
+    <nomeProposicao>MPV 678/2015 </nomeProposicao>
+    <dataVotacao>08/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1515648</codProposicao>
+    <nomeProposicao>MPV 678/2015 </nomeProposicao>
+    <dataVotacao>13/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1515649</codProposicao>
+    <nomeProposicao>MPV 679/2015 </nomeProposicao>
+    <dataVotacao>17/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1554118</codProposicao>
+    <nomeProposicao>REQ 2409/2015 =&gt; PL 5230/2013</nomeProposicao>
+    <dataVotacao>25/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1555340</codProposicao>
+    <nomeProposicao>PLP 124/2015</nomeProposicao>
+    <dataVotacao>23/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1555340</codProposicao>
+    <nomeProposicao>PLP 124/2015</nomeProposicao>
+    <dataVotacao>23/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1570705</codProposicao>
+    <nomeProposicao>REC 49/2015 =&gt; PL 8170/2014</nomeProposicao>
+    <dataVotacao>18/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1570898</codProposicao>
+    <nomeProposicao>MPV 681/2015 </nomeProposicao>
+    <dataVotacao>15/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1570899</codProposicao>
+    <nomeProposicao>MPV 682/2015 </nomeProposicao>
+    <dataVotacao>21/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1579302</codProposicao>
+    <nomeProposicao>REQ 2507/2015 =&gt; PLP 124/2015</nomeProposicao>
+    <dataVotacao>17/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1671673</codProposicao>
+    <nomeProposicao>MPV 687/2015 </nomeProposicao>
+    <dataVotacao>27/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1671673</codProposicao>
+    <nomeProposicao>MPV 687/2015 </nomeProposicao>
+    <dataVotacao>27/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1671859</codProposicao>
+    <nomeProposicao>REQ 2727/2015 =&gt; PL 8170/2014</nomeProposicao>
+    <dataVotacao>25/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1672013</codProposicao>
+    <nomeProposicao>REQ 2738/2015 =&gt; PL 2455/2015</nomeProposicao>
+    <dataVotacao>02/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1672259</codProposicao>
+    <nomeProposicao>REQ 1030/2015 CPIPETRO =&gt; RCP 3/2015</nomeProposicao>
+    <dataVotacao>24/03/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1673072</codProposicao>
+    <nomeProposicao>REQ 1041/2015 CPIPETRO</nomeProposicao>
+    <dataVotacao>25/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1673126</codProposicao>
+    <nomeProposicao>PL 2750/2015</nomeProposicao>
+    <dataVotacao>22/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1712864</codProposicao>
+    <nomeProposicao>REQ 2971/2015 =&gt; PL 4059/2012</nomeProposicao>
+    <dataVotacao>16/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1715687</codProposicao>
+    <nomeProposicao>PL 2960/2015</nomeProposicao>
+    <dataVotacao>28/10/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1734344</codProposicao>
+    <nomeProposicao>REQ 3048/2015 =&gt; PL 6401/2009</nomeProposicao>
+    <dataVotacao>22/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1734841</codProposicao>
+    <nomeProposicao>REQ 1108/2015 CPIPETRO =&gt; RCP 3/2015</nomeProposicao>
+    <dataVotacao>24/03/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1744988</codProposicao>
+    <nomeProposicao>REQ 3101/2015 =&gt; PL 2430/2003</nomeProposicao>
+    <dataVotacao>29/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1786206</codProposicao>
+    <nomeProposicao>REQ 3117/2015 =&gt; PL 3075/2015</nomeProposicao>
+    <dataVotacao>30/09/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1805441</codProposicao>
+    <nomeProposicao>REQ 1117/2015 CPIPETRO</nomeProposicao>
+    <dataVotacao>24/03/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1805529</codProposicao>
+    <nomeProposicao>REQ 1118/2015 CPIPETRO</nomeProposicao>
+    <dataVotacao>24/03/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1805865</codProposicao>
+    <nomeProposicao>REQ 1121/2015 CPIPETRO</nomeProposicao>
+    <dataVotacao>24/03/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1805871</codProposicao>
+    <nomeProposicao>REQ 1125/2015 CPIPETRO</nomeProposicao>
+    <dataVotacao>26/03/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1805872</codProposicao>
+    <nomeProposicao>REQ 1126/2015 CPIPETRO</nomeProposicao>
+    <dataVotacao>25/08/2015</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1806117</codProposicao>
+    <nomeProposicao>REQ 1129/2015 CPIPETRO</nomeProposicao>
+    <dataVotacao>30/03/2015</dataVotacao>
   </proposicao>
 </proposicoes>
