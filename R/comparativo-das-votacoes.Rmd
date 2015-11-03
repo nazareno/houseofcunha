@@ -154,9 +154,6 @@ p <- ggplot(data = toPlot, aes(x=reorder(semana, semana), y = n_votacoes, colour
   theme_classic() + 
   theme(axis.ticks = element_blank()) 
 
-p <- p + ggplot(data = plot, aes(x=reorder(semana, semana), y = votacoes_bbb)) + 
-  geom_point() 
-
 png("plot/numero_votacao_semana_2.png", 
     width = 800, height = 600)
 p
