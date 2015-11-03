@@ -131,10 +131,29 @@ quantidade_votacao_semana <- function(votacoes){
   
   for (s in semana){
     votacao_semana <-  votacoes %>%
-      filter(semana == s)
+      filter(semana == s) 
     
     df <- rbind(df, data.frame(n_votacoes = nrow(votacao_semana), semana = s))
   }
   df
 }
 
+# Quantidade de votação semana a semana BBB/não BBB
+quantidade_votacao_semana_bbb <- function(votacoes){
+  df <- data.frame()
+  semana <- unique(votacoes$semana)
+  
+  for (s in semana){
+    votacao_semana <-  votacoes %>%
+      filter(semana == s) 
+    
+    votacao_bbb <- votacao_semana %>%
+      filter(bbb == TRUE)
+    
+    votacao_N_bbb <- votacao_semana %>%
+      filter(bbb == FALSE)
+    
+    df <- rbind(df, data.frame(votacoes_BBB = nrow(votacao_bbb), votacoes_nao_bbb = nrow(votacao_N_bbb),semana = s))
+  }
+  df
+}
