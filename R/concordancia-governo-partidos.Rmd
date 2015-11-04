@@ -76,6 +76,23 @@ dev.off()
 Comparação entre o governo e outros partidos mês a mês 
 
 ```{r}
+concordancia_mes <- function(partidoA, partidoB){
+  df <- data.frame()
+  mes <- unique(partidoA$mes)
+  
+  for (m in mes){
+    partidoA_mes <-  partidoA %>%
+      filter(mes == m)
+    
+    partidoB_mes <-  partidoB %>%
+      filter(mes == m)
+    
+    
+    df <- rbind(df, data.frame(Concordancia = concordancia(partidoA_mes$pro_orientacao, partidoB_mes$pro_orientacao), Mes = m))
+  }
+  df
+}
+
 pt_pmdb <- concordancia_mes(orientacao_pt, orientacao_pmdb)
 pt_pmdb$partido <- "pmdb"
 

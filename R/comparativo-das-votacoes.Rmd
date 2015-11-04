@@ -1,15 +1,15 @@
 ---
-title: "comparativo-das-votacoes"
+title: "Comparativo das votações na câmara"
 author: "Rodolfo Viana"
 date: "29-10-2015"
 output: html_document
 ---
 
-Verifica quais são os meses/semanas/dias que mais tem votações na camâra.
+Tem como objetivo verifica quais são os meses/semanas/dias que mais tem votações na câmara e qual a proporção de votações Bíblia, Boi e Bala(BBB)/não BBB
 
 Bibliotecas necessárias 
 
-```{r}
+```{r, warning=FALSE, message=FALSE}
 library(ggplot2)
 library(dplyr)
 require(scales)
@@ -20,9 +20,9 @@ source("R/camara-lib.R")
 
 Carregando CSV com os votos dos deputados
 
-```{r}
+```{r, warning=FALSE, message=FALSE}
 votos <- ler_votos_de_ativos("votacoes.csv")
-votacoes_bbb <- read.table("~/Projetos/houseofcunha/proposicoes-bbb.csv", header=TRUE, quote="\"")
+votacoes_bbb <- read.table("proposicoes-bbb.csv", header=TRUE, quote="\"")
 
 proposicoes <- as.data.frame(unique(votos[,c("tipo", "num_pro")]))
 votos$bbb  <- votos$num_pro %in%  votacoes_bbb$bbb
@@ -47,7 +47,7 @@ votacoes <- votacoes %>%
 
 Quantidade de votação mês a mês
 
-```{r}
+```{r, fig.align='center'}
 plot <- quantidade_votacao_mes(votacoes)
 plot$nome_mes <- month.abb[plot$mes]
 
@@ -57,6 +57,7 @@ p <- ggplot(data = plot, aes(x=reorder(nome_mes, mes), y = n_votacoes)) +
   theme_classic() + 
   theme(axis.ticks = element_blank())
 
+p
 png("plot/numero_votacao_mes_1.png", 
     width = 800, height = 600)
 p
@@ -65,20 +66,33 @@ dev.off()
 
 Quantidade de votação mês a mês BBB/não BBB
 
-```{r}
+```{r, fig.align='center'}
 plot <- quantidade_votacao_mes_bbb(votacoes)
 plot$nome_mes <- month.abb[plot$mes]
+
+plot$total_votacao_mes <- plot$bbb + plot$nao_bbb
+mean_votacoes_mes <- mean(plot$total_votacao_mes)
 
 plot <- plot %>%
   gather(tipo, n_votacoes, bbb:nao_bbb)
 
 p <- ggplot(data=plot, aes(x=reorder(nome_mes, mes), y=n_votacoes, fill=tipo)) + 
   geom_bar(stat="identity") + 
-  labs(y='Número de Votações', x='Mês', title = "Número de votações BBB/não BBB na semana") + 
+  scale_fill_manual(values = c("nao_bbb" = "#99D8C9", "bbb" = "#2CA25F")) +
+  labs(y='Número de Votações', x='Mês', title = "Número de votações BBB/não BBB ao mês") + 
   theme_classic() + 
   theme(axis.ticks = element_blank())
 
+p
 png("plot/numero_votacao_mes_2.png", 
+    width = 800, height = 600)
+p
+dev.off()
+
+p <- p + geom_abline(intercept=mean_votacoes_mes,slope= 0,colour="blue")
+
+p
+png("plot/numero_votacao_mes_3.png", 
     width = 800, height = 600)
 p
 dev.off()
@@ -86,7 +100,7 @@ dev.off()
 
 Quantidade de votação dia a dia
 
-```{r}
+```{r, fig.align='center'}
 plot <- quantidade_votacao_dia(votacoes)
 
 rompimento_com_governo = 216 # Dia 04/08 
@@ -113,6 +127,7 @@ p <- p + geom_point(data = filter(plot, destaque == "Contas na Suiça"),
                     size = 8, 
                     alpha = 0.7)
 
+p
 png("plot/numero_votacao_dia_1.png", 
     width = 800, height = 600)
 p
@@ -121,8 +136,11 @@ dev.off()
 
 Quantidade de votação dia a dia BBB/não BBB
 
-```{r}
+```{r, fig.align='center'}
 plot <- quantidade_votacao_dia_bbb(votacoes)
+
+plot$total_votacao_dia <- plot$bbb + plot$nao_bbb
+mean_votacoes_dia <- mean(plot$total_votacao_dia)
 
 rompimento_com_governo = 216 # Dia 04/08 
 contas_suica = 273 # Dia 30/09
@@ -133,26 +151,27 @@ plot$total_votacao <- plot$bbb + plot$nao_bbb
 plot <- plot %>%
   gather(tipo, n_votacoes, bbb:nao_bbb)
 
-p <- ggplot(data = toPlot, aes(x=reorder(dia, dia), y = n_votacoes, fill=tipo)) + 
+p <- ggplot(data = plot, aes(x=reorder(dia, dia), y = n_votacoes, fill=tipo)) + 
   geom_bar(stat="identity") +
+  scale_fill_manual(values = c("nao_bbb" = "#99D8C9", "bbb" = "#2CA25F")) +
   labs(y='Número de Votações', x='Dia', title = "Número de votações ao dia") + 
   theme_classic() + 
   theme(axis.ticks = element_blank(),
         axis.text.x=element_blank()) +
-  scale_y_continuous(breaks = round(seq(min(toPlot$n_votacoes), max(toPlot$n_votacoes), by = 1),))
+  scale_y_continuous(breaks = round(seq(min(plot$n_votacoes), max(plot$n_votacoes), by = 1),))
 
-p <- p + geom_point(data = filter(plot, dia == 216), 
-                    position = "identity",
-                    colour = "darkred", 
-                    size = 8, 
-                    alpha = 0.7)
+p <- p + geom_bar(data = filter(plot, dia == rompimento_com_governo | dia == contas_suica), stat="identity", colour="red") + guides(fill=FALSE)
 
-p <- p + geom_point(data = filter(plot, destaque == "Contas na Suiça"), 
-                    colour = "darkred", 
-                    size = 8, 
-                    alpha = 0.7)
-
+p
 png("plot/numero_votacao_dia_2.png", 
+    width = 800, height = 600)
+p
+dev.off()
+
+p <- p + geom_abline(intercept=mean_votacoes_dia,slope= 0,colour="blue")
+
+p
+png("plot/numero_votacao_dia_3.png", 
     width = 800, height = 600)
 p
 dev.off()
@@ -160,7 +179,7 @@ dev.off()
 
 Quantidade de votação semana a semana
 
-```{r}
+```{r, fig.align='center'}
 plot <- quantidade_votacao_semana(votacoes)
 
 p <- ggplot(data = plot, aes(x=reorder(semana, semana), y = n_votacoes)) + 
@@ -170,6 +189,7 @@ p <- ggplot(data = plot, aes(x=reorder(semana, semana), y = n_votacoes)) +
   theme(axis.ticks = element_blank()) +
   scale_y_continuous(breaks = round(seq(min(plot$n_votacoes), max(plot$n_votacoes), by = 1),))
 
+p
 png("plot/numero_votacao_semana_1.png", 
     width = 800, height = 600)
 p
@@ -178,7 +198,7 @@ dev.off()
 
 Quantidade de votação semana a semana BBB/não BBB
 
-```{r}
+```{r, fig.align='center'}
 plot <- quantidade_votacao_semana_bbb(votacoes)
 
 plot <- plot %>%
@@ -186,10 +206,12 @@ plot <- plot %>%
 
 p <- ggplot(data=plot, aes(x=reorder(semana, semana), y=n_votacoes, fill=tipo)) + 
   geom_bar(stat="identity") +
+  scale_fill_manual(values = c("nao_bbb" = "#99D8C9", "bbb" = "#2CA25F")) +
   labs(y='Número de Votações', x='Semana', title = "Número de votações BBB/não BBB na semana") + 
   theme_classic() + 
   theme(axis.ticks = element_blank()) 
 
+p
 png("plot/numero_votacao_semana_2.png", 
     width = 800, height = 600)
 p
@@ -198,7 +220,7 @@ dev.off()
 
 Tipo de votações 
 
-```{r}
+```{r, fig.align='center'}
 proposicoes$tipo <- as.character(proposicoes$tipo)
 plot <- as.data.frame(table(proposicoes$tipo))
 
@@ -208,6 +230,7 @@ p <- ggplot(data = plot, aes(x=reorder(Var1, -Freq), y = Freq)) +
   theme_classic() + 
   theme(axis.ticks = element_blank())
 
+p
 png("plot/numero_de_proposicoes_1.png", 
     width = 800, height = 600)
 p
@@ -216,18 +239,22 @@ dev.off()
 
 Tipo de votações BBB e não BBB
 
-```{r}
+```{r, fig.align='center'}
 proposicoes$num_pro <- as.character(proposicoes$num_pro)
 proposicoes$bbb  <- proposicoes$num_pro %in% votacoes_bbb$bbb
 
 plot <- as.data.frame(table(proposicoes$bbb))
 
-p <- ggplot(data = plot, aes(x=reorder(Var1, -Freq), y = Freq)) + 
+plot$Tipo <- ifelse(plot$Var1 == FALSE, "Não BBB", ifelse(plot$Var1 == TRUE, "BBB", ""))
+
+p <- ggplot(data = plot, aes(x=reorder(Tipo, -Freq), y = Freq, fill = Tipo)) + 
   geom_bar(stat="identity") + 
-  labs(y='Número de Proposições', x='Tipo', title = 'Número de Proposições BBB') + 
+  scale_fill_manual(values = c("Não BBB" = "#99D8C9", "BBB" = "#2CA25F")) +
+  labs(y='Número de Proposições', x='', title = 'Número de Proposições BBB') + 
   theme_classic() + 
   theme(axis.ticks = element_blank())
 
+p
 png("plot/numero_de_proposicoes_2.png", 
     width = 800, height = 600)
 p
