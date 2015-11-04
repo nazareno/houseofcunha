@@ -110,6 +110,26 @@ quantidade_votacao_mes <- function(votacoes){
   df
 }
 
+
+quantidade_votacao_mes_bbb <- function(votacoes){
+  df <- data.frame()
+  mes <- unique(votacoes$mes)
+  
+  for (m in mes){
+    votacoes_mes <-  votacoes %>%
+      filter(mes == m)
+    
+    votacao_bbb <- votacoes_mes %>%
+      filter(bbb == TRUE)
+    
+    votacao_N_bbb <- votacoes_mes %>%
+      filter(bbb == FALSE)
+    
+    df <- rbind(df, data.frame(bbb = nrow(votacao_bbb), nao_bbb = nrow(votacao_N_bbb),mes = m))
+  }
+  df
+}
+
 # Quantidade de votação dia a dia 
 quantidade_votacao_dia <- function(votacoes){
   df <- data.frame()
@@ -120,6 +140,26 @@ quantidade_votacao_dia <- function(votacoes){
       filter(dia == d)
     
     df <- rbind(df, data.frame(n_votacoes = nrow(votacao_dia), dia = d))
+  }
+  df
+}
+
+# Quantidade de votação dia a dia BBB/não BBB
+quantidade_votacao_dia_bbb <- function(votacoes){
+  df <- data.frame()
+  dia <- unique(votacoes$dia)
+  
+  for (d in dia){
+    votacao_dia <-  votacoes %>%
+      filter(dia == d)
+    
+    votacao_bbb <- votacao_dia %>%
+      filter(bbb == TRUE)
+    
+    votacao_N_bbb <- votacao_dia %>%
+      filter(bbb == FALSE)
+    
+    df <- rbind(df, data.frame(bbb = nrow(votacao_bbb), nao_bbb = nrow(votacao_N_bbb), dia = d))
   }
   df
 }
@@ -149,11 +189,11 @@ quantidade_votacao_semana_bbb <- function(votacoes){
     
     votacao_bbb <- votacao_semana %>%
       filter(bbb == TRUE)
-    
+        
     votacao_N_bbb <- votacao_semana %>%
       filter(bbb == FALSE)
     
-    df <- rbind(df, data.frame(votacoes_BBB = nrow(votacao_bbb), votacoes_nao_bbb = nrow(votacao_N_bbb),semana = s))
+    df <- rbind(df, data.frame(bbb = nrow(votacao_bbb), nao_bbb = nrow(votacao_N_bbb),semana = s))
   }
   df
 }
