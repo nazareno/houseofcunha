@@ -157,20 +157,6 @@ mca1_obs_df$destaque_cunha <- ifelse(mca1_obs_df$nome == "Eduardo Cunha", TRUE, 
 Visão geral
 
 ```{r}
-plotMCA <- function(dados){
-  ggplot(data = semcunha, aes(x = Dim.1, y = Dim.2, label = nome)) +
-    geom_hline(yintercept = 0, colour = "gray70") +
-    geom_vline(xintercept = 0, colour = "gray70") +
-    #geom_point(colour = "gray50", alpha = 0.7) +
-    geom_text(colour = "gray50", alpha = 0.7, size =3) +
-    #geom_density2d(colour = "gray75") +
-    ylab("") + xlab("")+ 
-    theme_classic() + 
-    theme(axis.ticks = element_blank(), 
-          axis.text = element_blank(), 
-          axis.line = element_blank())
-}
-
 # plot of variable categories
 semcunha <- filter(mca1_obs_df, nome != "Eduardo Cunha")
 p <- plotMCA(semcunha)

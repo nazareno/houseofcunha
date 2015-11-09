@@ -1,4 +1,25 @@
+# Responsável por gerar o gráfico
+plotMCA <- function(dados){
+  ggplot(data = dados, aes(x = Dim.1, y = Dim.2, label = nome,  colour = destaque_partido)) +
+    geom_hline(yintercept = 0, colour = "gray70") +
+    geom_vline(xintercept = 0, colour = "gray70") +
+    geom_text(size = 3.) +
+    scale_colour_manual(values = c(alpha("grey70", .6), 
+                                   alpha("darkred", 1), 
+                                   alpha("#0066CC", 1),
+                                   alpha("#E69F00", 1),
+                                   alpha("#FF3300", 1)
+    ), 
+    guide = guide_legend(title = "partido", 
+                         override.aes = list(alpha = 1, size = 4))) + 
+    ylab("") + xlab("")+ 
+    theme_classic() + 
+    theme(axis.ticks = element_blank(), 
+          axis.text = element_blank(), 
+          axis.line = element_blank())
+}
 
+# Ler os votos ativos dos deputados
 ler_votos_de_ativos <- function(filepath){
   votos <- read.csv(filepath, strip.white=TRUE, quote="")
   
@@ -77,6 +98,54 @@ adiciona_nomes_corrigidos <- function(data){
   data <- left_join(data, cpfs.cnpjs.nomes)
   data 
 }
+
+geraMCA <-  function(votos){
+  votacao <- votos %>% 
+    select(nome, partido, uf, num_pro, voto)
+  
+  # versão do dataframe com recomendações do PMDB sendo a
+  # votação de Eduardo Cunha:
+  ec.v <- votos %>% 
+    select(num_pro, cunha) %>% 
+    filter(cunha %in% c("sim", "não")) %>% 
+    unique()
+  
+  ec <- cbind(data.frame(nome = "Eduardo Cunha", 
+                         partido = "pmdb", 
+                         uf = "rj"), 
+              ec.v)
+  names(ec) <- names(votacao)
+  # esse é o df com cunha:
+  votacao.cc <- rbind(votacao, ec)
+  
+  votacao.cast <- dcast(votacao.cc, 
+                        nome + partido + uf ~ num_pro, 
+                        value.var = "voto")
+  
+  votacao.cast <- as.data.frame(apply(votacao.cast, 2, as.factor))
+  
+  mca1 = MCA(votacao.cast, 
+             ncp = 2, # Default is 5 
+             graph = FALSE,
+             quali.sup = c(1:3),
+             na.method = "Average") # NA or Avarege
+  
+  # data frame with observation coordinates
+  mca1_obs_df = data.frame(mca1$ind$coord, 
+                           nome = votacao.cast$nome,
+                           partido = votacao.cast$partido, 
+                           uf = votacao.cast$uf)
+  
+  # Partidos icônicos
+  mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in% 
+                                                 c("pmdb", "psdb", "pt", "psol"), 
+                                               as.character(mca1_obs_df$partido), 
+                                               "outros"))
+  
+  mca1_obs_df
+}
+
+
 
 # Comparação da orientação entre dois partidos partidos. 
 concordancia <- function(partidoA, partidoB){
