@@ -37,14 +37,14 @@ votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 
 
 # Dep que pediram a cassação de Cunha 
-cassacao.cunha <- read.table("~/Projetos/houseofcunha/cassacao-cunha.csv", header=TRUE, quote="\"")
+cassacao.cunha <- read.table("data/cassacao-cunha.csv", header=TRUE, quote="\"")
 
 # Bancadas
-bancada.bala <- read.table("~/Projetos/houseofcunha/bancada-bala.csv", header=TRUE, quote="\"")
-bancada.humanista <- read.table("~/Projetos/houseofcunha/bancada-humanista.csv", header=TRUE, quote="\"")
-bancada.sindical <- read.table("~/Projetos/houseofcunha/bancada-sindical.csv", header=TRUE, quote="\"")
-bancada.evangelica <- read.table("~/Projetos/houseofcunha/bancada-evangelica.csv", header=TRUE, quote="\"")
-bancada.ruralista <- read.table("~/Projetos/houseofcunha/bancada-ruralista.csv", header=TRUE, quote="\"")
+bancada.bala <- read.table("data/bancada-bala.csv", header=TRUE, quote="\"")
+bancada.humanista <- read.table("data/bancada-humanista.csv", header=TRUE, quote="\"")
+bancada.sindical <- read.table("data/bancada-sindical.csv", header=TRUE, quote="\"")
+bancada.evangelica <- read.table("data/bancada-evangelica.csv", header=TRUE, quote="\"")
+bancada.ruralista <- read.table("data/bancada-ruralista.csv", header=TRUE, quote="\"")
 ```
 
 
