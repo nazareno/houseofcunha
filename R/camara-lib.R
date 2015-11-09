@@ -26,6 +26,30 @@ ler_votos_de_ativos <- function(filepath){
   # Evandro Roman aparece com dois nomes
   votos[votos$nome == "Evandro Rogerio Roman", "nome"] <- "Evandro Roman"
   
+  # Bancadas 
+  votos[votos$nome == "Glauber Braga", "partido"] <- "s.part."
+  votos[votos$nome == "Silvio Costa", "partido"] <- "s.part."
+  votos[votos$nome == "Elizeu Dionizio", "partido"] <- "s.part."
+  votos[votos$nome == "Eliziane Gama", "partido"] <- "s.part."
+  votos[votos$nome == "Fernando Francischini", "partido"] <- "s.part."
+  votos[votos$nome == "João Derly", "partido"] <- "s.part."
+  votos[votos$nome == "Marcelo Aguiar", "partido"] <- "s.part."
+  votos[votos$nome == "Ronaldo Fonseca", "partido"] <- "s.part."
+  votos[votos$nome == "Stefano Aguiar", "partido"] <- "s.part."
+  votos[votos$nome == "Arthur Oliveira Maia", "partido"] <- "s.part."
+  votos[votos$nome == "Augusto Carvalho", "partido"] <- "s.part."
+  votos[votos$nome == "Elizeu Dionizio", "partido"] <- "s.part."
+  votos[votos$nome == "Genecias Noronha", "partido"] <- "s.part."
+  votos[votos$nome == "Givaldo Carimbão", "partido"] <- "s.part."
+  votos[votos$nome == "Izalci", "partido"] <- "s.part."
+  votos[votos$nome == "Jaime Martins", "partido"] <- "s.part."
+  votos[votos$nome == "Jorginho Mello", "partido"] <- "s.part."
+  votos[votos$nome == "Luiz Nishimori", "partido"] <- "s.part."
+  votos[votos$nome == "Valtenir Pereira", "partido"] <- "s.part."
+  votos[votos$nome == "Zé Silva", "partido"] <- "s.part."
+  votos[votos$nome == "Augusto Carvalho", "partido"] <- "s.part."
+  votos[votos$nome == "Paulo Pereira da Silva", "partido"] <- "s.part."
+  
   votos
 }
 

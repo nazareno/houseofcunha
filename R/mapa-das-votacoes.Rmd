@@ -36,6 +36,9 @@ quant_tipo_pro <- unique(votos[,c("tipo","num_pro")])
 # distinguir diferentes votações de uma mesma proposição
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 quant_tipo_votacao <- unique(votos[,c("tipo","num_pro")])
+
+bancada_bala <- read.table("~/Projetos/houseofcunha/bancada-bala.csv", header=TRUE, quote="\"")
+bancada.humanista <- read.table("~/Projetos/houseofcunha/bancada-humanista.csv", header=TRUE, quote="\"")
 ```
 
 
@@ -85,7 +88,7 @@ mca1 = MCA(votacao.cast,
 
 summary(mca1)
 
-plot(mca1,invisible=c("ind","quali.sup","quanti.sup"))
+# plot(mca1,invisible=c("ind","quali.sup","quanti.sup"))
 
 # data frame with observation coordinates
 mca1_obs_df = data.frame(mca1$ind$coord, 
@@ -108,6 +111,26 @@ mca1_obs_df$destaque_ministros  <- mca1_obs_df$nome %in% c("Celso Pansera",
                                 "André Figueiredo",
                                 "Marcelo Castro"
                                 )
+
+# Destaque dos deputados que participam da bancada bala
+# Arthur Maia não aparece nos dados da gente 
+mca1_obs_df$destaque_bancada_bala <-  mca1_obs_df$nome %in% bancada_bala$Bala
+
+# Destaque dos deputados que participam da bancada humanista
+mca1_obs_df$destaque_bancada_humanista <-  mca1_obs_df$nome %in% bancada.humanista$Humanista
+
+# Bancada Evangelica 
+bancada.evangelica <- read.table("~/Projetos/houseofcunha/bancada-evangelica.csv", header=TRUE, quote="\"")
+mca1_obs_df$destaque_bancada_evangelica <- mca1_obs_df$nome %in% bancada.evangelica$Evangelica
+
+# Bancada Ruralista
+bancada.ruralista <- read.table("~/Projetos/houseofcunha/bancada-ruralista.csv", header=TRUE, quote="\"")
+mca1_obs_df$destaque_bancada_ruralista <- mca1_obs_df$nome %in% bancada.ruralista$Ruralista
+
+# Bancada Sindical
+bancada.sindical <- read.table("~/Projetos/houseofcunha/bancada-sindical.csv", header=TRUE, quote="\"")
+mca1_obs_df$destaque_bancada_sindical <- mca1_obs_df$nome %in% bancada.sindical$Sindical
+
 
 # Destaque dos dep que pediram a cassação de Cunha 
 mca1_obs_df$destaque_cassacao  <- mca1_obs_df$nome %in% c("Adelmo Carneiro Leão",
@@ -309,6 +332,133 @@ p <- p + geom_point(data = filter(mca1_obs_df, nome == "Eduardo Cunha"),
 
 
 png("plot/novos_ministros.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
+
+Gráfico com os deputados que participam da bancada bala
+
+```{r}
+toPlot <- filter(toPlot, nome != "Eduardo Cunha")
+p <- ggplot(data = mca1_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_bancada_bala)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .6), 
+                                 alpha("black", 1))) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+   theme(legend.position = "none", 
+        axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+png("plot/bancada_bala.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
+Gráfico com os deputados que participam da bancada dos direitos humanos
+
+```{r}
+toPlot <- filter(mca1_obs_df, nome != "Eduardo Cunha")
+p <- ggplot(data = toPlot, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_bancada_humanista)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .6), 
+                                 alpha("black", 1))) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+   theme(legend.position = "none", 
+        axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+png("plot/bancada_dos_direitos_humanos.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
+
+Gráfico com os deputados que participam da bancada evangelica
+
+```{r}
+toPlot <- filter(mca1_obs_df, nome != "Eduardo Cunha")
+p <- ggplot(data = toPlot, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_bancada_evangelica)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .6), 
+                                 alpha("black", 1))) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+   theme(legend.position = "none", 
+        axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+png("plot/bancada_evangelica.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
+Gráfico com os deputados que participam da bancada ruralista
+
+```{r}
+toPlot <- filter(mca1_obs_df, nome != "Eduardo Cunha")
+p <- ggplot(data = toPlot, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_bancada_ruralista)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .6), 
+                                 alpha("black", 1))) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+   theme(legend.position = "none", 
+        axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+png("plot/bancada_ruralista.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
+Gráfico com os deputados que participam da bancada sindical
+
+```{r}
+toPlot <- filter(mca1_obs_df, nome != "Eduardo Cunha")
+p <- ggplot(data = toPlot, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_bancada_sindical)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .6), 
+                                 alpha("black", 1))) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+   theme(legend.position = "none", 
+        axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+png("plot/bancada_sindical.png", 
     width = 800, height = 600)
 p
 dev.off()
