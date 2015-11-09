@@ -49,7 +49,6 @@ ler_votos_de_ativos <- function(filepath){
   votos[votos$nome == "Zé Silva", "partido"] <- "s.part."
   votos[votos$nome == "Augusto Carvalho", "partido"] <- "s.part."
   votos[votos$nome == "Paulo Pereira da Silva", "partido"] <- "s.part."
-  
   votos
 }
 
