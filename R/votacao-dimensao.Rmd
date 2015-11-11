@@ -78,7 +78,7 @@ plot(mca1, invisible=c("ind","quali.sup","quanti.sup"), cex=0.9,  selectMod ="co
 
 
 summary(mca1)
-barplot(mca1$eig[,1], names.arg = paste("Dim", 1:nrow(res$eig), sep = ""))
+barplot(mca1$eig[,1], names.arg = paste("Dim", 1:nrow(mca1$eig), sep = ""))
 
 
 contrib_var <- as.data.frame(mca1$var$contrib)
