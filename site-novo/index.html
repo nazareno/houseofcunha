@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="houseofcunha">
+<html lang="en">
 
 <head>
 
@@ -12,8 +12,7 @@
     <title>House of Cunha</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bower_components/nvd3/build/nv.d3.min.css" rel='stylesheet'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
@@ -21,164 +20,253 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#/">House of Cunha</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#/ato1">As posições</a>
-                    </li>
-                    <li>
-                        <a href="#/ato2">Cunhômetro</a>
-                    </li>
-                    <li>
-                        <a href="#/ato3">Patrocínio</a>
-                    </li>
-                    <li>
-                        <a href="#/ato4">Uma mão lava a outra</a>
-                    </li>
-
-                    <li>
-                        <button class="btn2 bnt2-primary dropdown-toggle btn2-primary" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#/extras">Quem Me Representa?</a></li>
-                            <li><a href="#/sobre">Sobre</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <div class="jumbotron header-image">
-        <div class="headline">
-            <div class="container">
-                <h1>House of Cunha</h1>
-                <h2>quem é quem na câmara</h2>
-            </div>
-        </div>
-    </div>
-
-    <!-- Page Content -->
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-
-        <div ng-view autoscroll="true"></div>
-
-        <hr class="featurette-divider">
-        <!-- Footer -->
-        <footer>
-            <div class="row" id="sobre">
-                <div class="col-lg-12">
-                    <p>Projeto criado por Nazareno Andrade e João Arthur Brunet Monteiro no 3o Hackfest do
-                        <a href="https://www.facebook.com/analytics.ufcg">Laboratório Analytics</a></p>
-                    <p>O código que gera essa análise <a href="http://github.com/nazareno/houseofcunha">está no github</a>, e pode ser usado e alterado.</p>
-                    <p>Dúvidas? Sugestões? Manda <a href="https://www.facebook.com/analytics.ufcg">pra gente no Facebook.</a></p>
-                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
-                </div>
-            </div>
-        </footer>
-
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">House of Cunha</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#asposicoes">As posições</a>
+                </li>
+                <li>
+                    <a href="#ocunhometro">Cunhômetro</a>
+                </li>
+                <li>
+                    <a href="#quemMeRepresenta">Quem Me Representa?</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
-
-    </div>
-
     <!-- /.container -->
+</nav>
+
+<div class="jumbotron header-image">
+    <div class="headline">
+        <div class="container">
+            <h1>House of Cunha</h1>
+            <h2>quem é quem na câmara</h2>
+        </div>
+    </div>
+</div>
+
+<!-- Page Content -->
+<div class="container">
+
+    <hr class="featurette-divider">
+
+    <div class="row" id="asposicoes">
+        <div class="col-md-offset-2 col-md-8 headline2">
+            Ato 5: As Bancadas
+        </div>
+    </div>
+
+    <div class="row vertical-align" id="interativo">
+        <div class="col-md-6 col-md-offset-3">
+             <h2>A partir das votações, destacamos onde estão localizados os integrantes das bancadas Boi, Bala, Biblia,
+                 Direitos Humanos e Sindical.</h2>
+        </div>
+    </div>
 
 
-    <!--Para o rChart-->
-    <!--
+    <hr class="featurette-divider">
+
+    <div class="row vertical-align">
+        <div class="col-md-4">
+            <h2 class="featurette-heading">Bancada
+                <span class="text-muted">BOI</span>
+            </h2>
+            <p class="lead">Na política do Brasil, a bancada ruralista constitui uma frente parlamentar que atua em
+                defesa dos interesses dos proprietários rurais. A bancada ruralista é particularmente atuante na hora de
+                contrapor-se a projetos de lei com o objetivo de promover a reforma agrária. Dentre as atividades
+                da bancada, segundo seus críticos, destacar-se-ia sua atuação para impedir o efetivo o combate ao
+                trabalho escravo nas fazendas, e sua feroz oposição a quaisquer medidas de preservação da ecologia e do
+                meio ambiente, bem como o patrocínio de um projeto de lei em tramitação no Congresso</p>
+        </div>
+        <div class="col-md-8" id="geral">
+            <a href="images/bancada_ruralista.png">
+                <img class="img-responsive pull-left" src="images/bancada_ruralista.png">
+            </a>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row vertical-align">
+        <div class="col-md-4">
+            <h2 class="featurette-heading">Bancada
+                <span class="text-muted">BALA</span>
+            </h2>
+            <p class="lead">Na política do Brasil, a bancada da bala é o nome pelo qual é conhecida a frente parlamentar
+                composta por políticos ligados à indústria de armas, ex-policiais e militares de modo geral. No nível
+                federal, a bancada se movimentou para alterar o Estatuto do Desarmamento através da propositura de 41
+                projetos, dentre os quais constava o do parlamentar Rogério Mendonça (PMDB-SC), que propôs a revogação
+                total do Estatuto.</p>
+        </div>
+        <div class="col-md-8" id="geral">
+            <a href="images/bancada_bala.png">
+                <img class="img-responsive pull-left" src="images/bancada_bala.png">
+            </a>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row vertical-align">
+        <div class="col-md-4">
+            <h2 class="featurette-heading">Bancada
+                <span class="text-muted">BIBLIA</span>
+            </h2>
+            <p class="lead">Frente Parlamentar Evangélica, ou simplesmente bancada evangélica, é um termo aplicado a uma
+                frente parlamentar do Congresso Nacional do Brasil composta por políticos evangélicos de partidos
+                políticos distintos. A frente parlamentar se articula contra temas como igualdade racial e de gênero,
+                direito ao aborto, eutanásia e casamento entre pessoas do mesmo sexo, além de também se opor à
+                criminalização da violência e discriminação contra homossexuais, bissexuais e transexuais e de castigos
+                físicos impostos por pais aos filhos.</p>
+        </div>
+        <div class="col-md-8" id="geral">
+            <a href="images/bancada_evangelica.png">
+                <img class="img-responsive pull-left" src="images/bancada_evangelica.png">
+            </a>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row vertical-align">
+        <div class="col-md-4">
+            <h2 class="featurette-heading">Bancada
+                <span class="text-muted">SINDICAL</span>
+            </h2>
+            <p class="lead">A bancada foi traçada com parlamentares que possuem como principal bandeira os
+                direitos humanos e com aqueles que também defendem a bandeira, mas não a tem como
+                uma das principais.</p>
+        </div>
+        <div class="col-md-8" id="geral">
+            <a href="images/bancada_dos_direitos_humanos.png">
+                <img class="img-responsive pull-left" src="images/bancada_dos_direitos_humanos.png">
+            </a>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+
+    <div class="row vertical-align">
+        <div class="col-md-4">
+            <h2 class="featurette-heading">Bancada
+                <span class="text-muted">DIREITOS HUMANOS</span>
+            </h2>
+            <p class="lead">A bancada foi traçada com parlamentares que possuem como principal bandeira os
+                direitos humanos e com aqueles que também defendem a bandeira, mas não a tem como
+                uma das principais.</p>
+        </div>
+        <div class="col-md-8" id="geral">
+            <a href="images/bancada_dos_direitos_humanos.png">
+                <img class="img-responsive pull-left" src="images/bancada_dos_direitos_humanos.png">
+            </a>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row vertical-align" id="interativo">
+        <div class="col-md-6 col-md-offset-3">
+            <h2 class="featurette-heading">Os detalhes?
+                <span class="text-muted">Ok.</span>
+            </h2>
+            <p>Para fazer o mapa acima, utilizamos os dados de todas as votações da Câmara até Outubro/2015.
+                A atividade dos deputados é comparada de acordo com sua similaridade, e o espaço no qual os distribuímos nas figuras é criado utilizando um método estatístico chamado Multiple Correspondence Analysis,
+                uma técnica de redução de dimensionalidade para dados categóricos (essa última frase só deve fazer sentido se você gostar muito de estatística e Mineração de Dados).
+                Quando um deputado não vota sim ou não, assumimos que ele concorda com a maioria.</p>
+            <p>Os dados e cálculos foram atualizados pela última vez em: 30/10/2015.</p>
+            <p class="lead">Mas não acabou. Abaixo, o Cunhômetro!</p>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+</div>
+
+</div>
+
+<!-- /.container -->
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!--Para o rChart-->
 <script type='text/javascript' src=//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js></script>
+<script type='text/javascript' src=//d3js.org/d3.v3.min.js></script>
+<script type='text/javascript' src=//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.js></script>
+<script type='text/javascript' src=//nvd3.org/assets/lib/fisheye.js></script>
 
--->
 
+<script>
+    (function ($) {
+        $(document).ready(function(){
 
-    <!--
-   <script>
-    $(document).ready(function () {
+            // hide .navbar first
+            $(".navbar").hide();
+
+            // fade in .navbar
+            $(function () {
+                $(window).scroll(function () {
+
+                    // set distance user needs to scroll before we start fadeIn
+                    if ($(this).scrollTop() > 100) {
+                        $('.navbar').fadeIn();
+                    } else {
+                        $('.navbar').fadeOut();
+                    }
+                });
+            });
+
+        });
+    }(jQuery));
+</script>
+
+<script>
+    $(document).ready(function(){
         $("#includedContent").load("viz-inline.html");
     });
 </script>
--->
 
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-65858334-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    ga('create', 'UA-65858334-1', 'auto');
+    ga('send', 'pageview');
 
-    <!--
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
-    <script src="bower_components/angularjs/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="bower_components/d3/d3.min.js"></script>
-    <!-- <script src="js/routes.js"></script> -->
-    <script src="bower_components/nvd3/build/nv.d3.min.js"></script>
-    <script src="bower_components/d3-plugins/fisheye/fisheye.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="js/houseofcunha.js"></script>
-    <script src="js/directives/camara2d.js"></script>
-    <script src="js/directives/ranking.js"></script>
-
-    <script>
-        (function ($) {
-            $(document).ready(function () {
-
-                // hide .navbar first
-                $(".navbar").hide();
-
-                // fade in .navbar
-                $(function () {
-                    $(window).scroll(function () {
-
-                        // set distance user needs to scroll before we start fadeIn
-                        if ($(this).scrollTop() > 100) {
-                            $('.navbar').fadeIn();
-                        } else {
-                            $('.navbar').fadeOut();
-                        }
-                    });
-                });
-
-            });
-        }(jQuery));
-    </script>
-
+</script>
 
 </body>
 
