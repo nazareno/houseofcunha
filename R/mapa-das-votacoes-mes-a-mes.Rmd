@@ -40,28 +40,64 @@ votos <- votos %>%
 
 ```{r, fig.align='center'}
 mca <- geraMCA(filter(votos, mes < 3))
-plotMCA(mca) + labs(title = "Votações até Fevereiro")
+p <- plotMCA(mca) 
+
+png("plot/evolucao_fevereiro.png", width = 800, height = 600)
+p
+dev.off()
 
 mca <- geraMCA(filter(votos, mes < 4))
-plotMCA(mca) + labs(title = "Votações até Março")
+p <- plotMCA(mca) 
+
+png("plot/evolucao_marco.png", width = 800, height = 600)
+p
+dev.off()
 
 mca <- geraMCA(filter(votos, mes < 5))
-plotMCA(mca) + labs(title = "Votações até Abril")
+p <- plotMCA(mca) 
+
+png("plot/evolucao_abril.png", width = 800, height = 600)
+p
+dev.off()
 
 mca <- geraMCA(filter(votos, mes < 6))
-plotMCA(mca) + labs(title = "Votações até Maio")
+p <- plotMCA(mca) 
+
+png("plot/evolucao_maio.png", width = 800, height = 600)
+p
+dev.off()
 
 mca <- geraMCA(filter(votos, mes < 7))
-plotMCA(mca) + labs(title = "Votações até Junho")
+p <- plotMCA(mca) 
+
+png("plot/evolucao_junho.png", width = 800, height = 600)
+p
+dev.off()
 
 mca <- geraMCA(filter(votos, mes < 8))
-plotMCA(mca) + labs(title = "Votações até Julho")
+p <- plotMCA(mca) 
+
+png("plot/evolucao_julho.png", width = 800, height = 600)
+p
+dev.off()
 
 mca <- geraMCA(filter(votos, mes < 9))
-plotMCA(mca) + labs(title = "Votações até Agosto")
+p <- plotMCA(mca) 
+
+png("plot/evolucao_agosto.png", width = 800, height = 600)
+p
+dev.off()
 
 mca <- geraMCA(filter(votos, mes < 10))
-plotMCA(mca) + labs(title = "Votações até Setembro")
+p <- plotMCA(mca)
+
+png("plot/evolucao_setembro.png", width = 800, height = 600)
+p
+dev.off()
 
 mca <- geraMCA(filter(votos, mes < 11))
-plotMCA(mca) + labs(title = "Votações até Outubro")
+p <- plotMCA(mca) 
+
+png("plot/evolucao_outubro.png", width = 800, height = 600)
+p
+dev.off()
