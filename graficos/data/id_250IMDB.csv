@@ -1,0 +1,251 @@
+,genres,idIMDB,ranking,rating,releaseDate,title
+1,Drama,tt0111161,1,9.3,19941014,The Shawshank Redemption
+2,Drama,tt0068646,2,9.2,19720324,The Godfather
+3,Drama,tt0071562,3,9.1,19741220,The Godfather: Part II
+4,Drama,tt0468569,4,9,20080718,The Dark Knight
+5,Drama,tt0108052,5,8.9,19940204,Schindler's List
+6,Drama,tt0050083,6,8.9,195704,12 Angry Men
+7,Drama,tt0110912,7,8.9,19941014,Pulp Fiction
+8,Western,tt0060196,8,8.9,19680308,"The Good, the Bad and the Ugly"
+9,Adventure,tt0167260,9,8.9,20031217,The Lord of the Rings: The Return of the King
+10,Drama,tt0137523,10,8.9,19991015,Fight Club
+11,Adventure,tt0120737,11,8.8,20011219,The Lord of the Rings: The Fellowship of the Ring
+12,Action,tt0080684,12,8.8,19800620,Star Wars: Episode V - The Empire Strikes Back
+13,Drama,tt0109830,13,8.8,19940706,Forrest Gump
+14,Action,tt1375666,14,8.8,20100716,Inception
+15,Drama,tt0073486,15,8.7,19751121,One Flew Over the Cuckoo's Nest
+16,Adventure,tt0167261,16,8.7,20021218,The Lord of the Rings: The Two Towers
+17,Drama,tt0099685,17,8.7,19900921,Goodfellas
+18,Action,tt0133093,18,8.7,19990331,The Matrix
+19,Action,tt0076759,19,8.7,19770525,Star Wars: Episode IV - A New Hope
+20,Drama,tt0047478,20,8.7,19561119,Seven Samurai
+21,Drama,tt0317248,21,8.7,20040213,City of God
+22,Drama,tt0114369,22,8.6,19950922,Se7en
+23,Drama,tt0102926,23,8.6,19910214,The Silence of the Lambs
+24,Drama,tt0114814,24,8.6,19950915,The Usual Suspects
+25,Drama,tt0038650,25,8.6,19470107,It's a Wonderful Life
+26,Drama,tt0118799,26,8.6,19990212,Life Is Beautiful
+27,Drama,tt0110413,27,8.6,19941118,Léon: The Professional
+28,Western,tt0064116,28,8.6,19690827,Once Upon a Time in the West
+29,Drama,tt0816692,29,8.7,20141107,Interstellar
+30,Drama,tt0120815,30,8.6,19980724,Saving Private Ryan
+31,Drama,tt0120586,31,8.6,19981120,American History X
+32,Animation,tt0245429,32,8.6,20030328,Spirited Away
+33,Drama,tt0034583,33,8.6,19430123,Casablanca
+34,Action,tt0082971,34,8.6,19810612,Raiders of the Lost Ark
+35,Drama,tt0021749,35,8.6,19310307,City Lights
+36,Thriller,tt0054215,36,8.6,19600908,Psycho
+37,Thriller,tt0047396,37,8.6,19550401,Rear Window
+38,Drama,tt1675434,38,8.6,20111102,The Intouchables
+39,Drama,tt0027977,39,8.6,19360225,Modern Times
+40,Drama,tt2582802,40,8.6,20141224,Whiplash
+41,Action,tt0103064,41,8.5,19910703,Terminator 2: Judgment Day
+42,Drama,tt0120689,42,8.5,19991210,The Green Mile
+43,Drama,tt0253474,43,8.5,20030328,The Pianist
+44,Thriller,tt0209144,44,8.5,20010525,Memento
+45,Drama,tt0407887,45,8.5,20061006,The Departed
+46,Drama,tt0172495,46,8.5,20000505,Gladiator
+47,Drama,tt0078788,47,8.5,19790815,Apocalypse Now
+48,Comedy,tt0088763,48,8.5,19850703,Back to the Future
+49,Drama,tt0043014,49,8.5,19500825,Sunset Blvd.
+50,Comedy,tt0057012,50,8.5,19640129,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb
+51,Drama,tt0482571,51,8.5,20061020,The Prestige
+52,Sci-Fi,tt0078748,52,8.5,19790525,Alien
+53,Animation,tt2096673,53,8.6,20150619,Inside Out
+54,Animation,tt0110357,54,8.5,19940624,The Lion King
+55,Drama,tt0405094,55,8.5,20070330,The Lives of Others
+56,Drama,tt0032553,56,8.5,19410307,The Great Dictator
+57,Drama,tt0095765,57,8.5,19900223,Cinema Paradiso
+58,Drama,tt0050825,58,8.5,19750326,Paths of Glory
+59,Horror,tt0081505,59,8.4,19800523,The Shining
+60,Western,tt1853728,60,8.5,20121225,Django Unchained
+61,Action,tt1345836,61,8.5,20120720,The Dark Knight Rises
+62,Animation,tt0910970,62,8.4,20080627,WALL·E
+63,Drama,tt0169547,63,8.4,19991001,American Beauty
+64,Animation,tt0095327,64,8.5,19880416,Grave of the Fireflies
+65,Action,tt0090605,65,8.4,19860718,Aliens
+66,Drama,tt0033467,66,8.4,19410905,Citizen Kane
+67,Adventure,tt0053125,67,8.4,19591021,North by Northwest
+68,Thriller,tt0052357,68,8.4,19581212,Vertigo
+69,Drama,tt0364569,69,8.4,20040929,Old Boy
+70,Animation,tt0119698,70,8.4,20000112,Princess Mononoke
+71,Drama,tt0082096,71,8.4,19820210,Das Boot
+72,Drama,tt0022100,72,8.4,19320408,M
+73,Action,tt0086190,73,8.4,19830525,Star Wars: Episode VI - Return of the Jedi
+74,Drama,tt0087843,74,8.4,19840523,Il était une fois en Amérique
+75,Comedy,tt0211915,75,8.4,20020208,Amélie
+76,Drama,tt0051201,76,8.4,19580206,Witness for the Prosecution
+77,Drama,tt0105236,77,8.4,19920902,Reservoir Dogs
+78,Animation,tt0435761,78,8.4,20100618,Toy Story 3
+79,Drama,tt0112573,79,8.4,19950524,Braveheart
+80,Drama,tt0066921,80,8.4,19720202,A Clockwork Orange
+81,Drama,tt0036775,81,8.4,19440424,Double Indemnity
+82,Drama,tt0075314,82,8.4,19760208,Taxi Driver
+83,Drama,tt0180093,83,8.4,20001215,Requiem for a Dream
+84,Drama,tt0056592,84,8.4,19630316,To Kill a Mockingbird
+85,Drama,tt0056172,85,8.4,19630315,Lawrence of Arabia
+86,Drama,tt0338013,86,8.4,20040319,Eternal Sunshine of the Spotless Mind
+87,Drama,tt0093058,87,8.3,19870710,Full Metal Jacket
+88,Drama,tt0070735,88,8.4,19740417,The Sting
+89,Drama,tt0040522,89,8.4,19491213,Bicycle Thieves
+90,Drama,tt0086879,90,8.3,19850405,Amadeus
+91,Comedy,tt0045152,91,8.4,19520411,Singin' in the Rain
+92,Comedy,tt0071853,92,8.3,19751203,Monty Python and the Holy Grail
+93,Comedy,tt0208092,93,8.3,20010119,Snatch.
+94,Sci-Fi,tt0062622,94,8.3,19680927,2001: A Space Odyssey
+95,Drama,tt0012349,95,8.4,19210206,The Kid
+96,Drama,tt0042876,96,8.3,19511226,Rashomon
+97,Western,tt0059578,97,8.3,19670510,For a Few Dollars More
+98,Drama,tt0119488,98,8.3,19970919,L.A. Confidential
+99,Animation,tt0114709,99,8.3,19951122,Toy Story
+100,Drama,tt0042192,100,8.4,19510418,All About Eve
+101,Drama,tt0053604,101,8.3,19600916,The Apartment
+102,Drama,tt0361748,102,8.3,20090821,Inglourious Basterds
+103,Drama,tt0040897,103,8.3,19480124,The Treasure of the Sierra Madre
+104,Action,tt1392190,104,8.3,20150515,Mad Max: Fury Road
+105,Drama,tt1832382,105,8.4,20110608,Une séparation
+106,Action,tt0097576,106,8.3,19890524,Indiana Jones and the Last Crusade
+107,Drama,tt0017136,107,8.3,19270313,Metropolis
+108,Drama,tt0055630,108,8.3,19610913,Yojimbo
+109,Thriller,tt0041959,109,8.3,19491012,The Third Man
+110,Action,tt0372784,110,8.3,20050615,Batman Begins
+111,Drama,tt0086250,111,8.3,19831209,Scarface
+112,Comedy,tt0053291,112,8.3,19590329,Some Like It Hot
+113,Western,tt0105695,113,8.3,19920807,Unforgiven
+114,Animation,tt1049413,114,8.3,20090529,Up
+115,Drama,tt1187043,115,8.5,20091225,3 Idiots
+116,Drama,tt0081398,116,8.3,19801219,Raging Bull
+117,Drama,tt0363163,117,8.3,20050408,Downfall
+118,Drama,tt2106476,118,8.3,20130110,The Hunt
+119,Drama,tt0071315,119,8.3,19740620,Chinatown
+120,Drama,tt0057115,120,8.3,19630704,The Great Escape
+121,Action,tt0095016,121,8.3,19880720,Die Hard
+122,Drama,tt0119217,122,8.3,19980109,Good Will Hunting
+123,Drama,tt0047296,123,8.3,19550114,On the Waterfront
+124,Drama,tt0113277,124,8.3,19951215,Heat
+125,Drama,tt0457430,125,8.3,20070119,Pan's Labyrinth
+126,Drama,tt0031679,126,8.3,19391019,Mr. Smith Goes to Washington
+127,Drama,tt0050212,127,8.2,19571214,The Bridge on the River Kwai
+128,Animation,tt0096283,128,8.3,19991208,My Neighbor Totoro
+129,Drama,tt0089881,129,8.3,19850918,Ran
+130,Drama,tt0044741,130,8.3,19560325,Vivre
+131,Drama,tt0015864,131,8.3,19251009,The Gold Rush
+132,Drama,tt0050976,132,8.3,19581013,The Seventh Seal
+133,Thriller,tt0083658,133,8.2,19820625,Blade Runner
+134,Drama,tt0050986,134,8.3,19590622,Wild Strawberries
+135,Drama,tt1305806,135,8.3,20100521,The Secret in Their Eyes
+136,Comedy,tt0017925,136,8.3,19270224,The General
+137,Comedy,tt0120735,137,8.2,19981028,"Lock, Stock and Two Smoking Barrels"
+138,Drama,tt0080678,138,8.2,19801010,The Elephant Man
+139,Drama,tt0112641,139,8.2,19951122,Casino
+140,Drama,tt0993846,140,8.2,20131225,The Wolf of Wall Street
+141,Animation,tt0347149,141,8.2,20050617,Howl's Moving Castle
+142,Drama,tt1291584,142,8.2,20110909,Warrior
+143,Drama,tt1205489,143,8.2,20090109,Gran Torino
+144,Drama,tt0434409,144,8.2,20060317,V for Vendetta
+145,Comedy,tt0118715,145,8.2,19980306,The Big Lebowski
+146,Thriller,tt0032976,146,8.2,19400412,Rebecca
+147,Drama,tt0055031,147,8.3,19611220,Judgment at Nuremberg
+148,Drama,tt0268978,148,8.2,20020104,A Beautiful Mind
+149,Drama,tt0061512,149,8.2,19671101,Cool Hand Luke
+150,Animation,tt0892769,150,8.2,20100326,How to Train Your Dragon
+151,Drama,tt0077416,151,8.2,19790223,The Deer Hunter
+152,Drama,tt0031381,152,8.2,19400117,Gone with the Wind
+153,Drama,tt0116282,153,8.2,19960405,Fargo
+154,Drama,tt0117951,154,8.2,19960619,Trainspotting
+155,Comedy,tt0025316,155,8.2,19340223,It Happened One Night
+156,Drama,tt0758758,156,8.2,20071019,Into the Wild
+157,Thriller,tt0046912,157,8.2,19540529,Dial M for Murder
+158,Drama,tt2267998,158,8.2,20141003,Gone Girl
+159,Drama,tt0167404,159,8.2,19990806,The Sixth Sense
+160,Drama,tt1979320,160,8.2,20130927,Rush
+161,Drama,tt0033870,161,8.2,19411018,The Maltese Falcon
+162,Animation,tt0266543,162,8.2,20030530,Finding Nemo
+163,Animation,tt0978762,163,8.2,20090930,Mary et Max.
+164,Sci-Fi,tt0084787,164,8.2,19820625,The Thing
+165,Drama,tt0477348,165,8.1,20071121,No Country for Old Men
+166,Drama,tt0395169,166,8.2,20050204,Hotel Rwanda
+167,Drama,tt1255953,167,8.2,20110112,Incendies
+168,Action,tt0266697,168,8.1,20031010,Kill Bill: Vol. 1
+169,Comedy,tt0079470,169,8.1,19790817,Life of Brian
+170,Drama,tt0091763,170,8.1,19870206,Platoon
+171,Drama,tt0046268,171,8.2,19550216,The Wages of Fear
+172,Western,tt0064115,172,8.1,19691024,Butch Cassidy and the Sundance Kid
+173,Drama,tt0074958,173,"8,2",19770310,Network
+174,Drama,tt0469494,174,8.1,20080125,There Will Be Blood
+175,Thriller,tt0052311,175,8.2,19580501,Touch of Evil
+176,Drama,tt0053198,176,8.2,19591116,The 400 Blows
+177,Drama,tt2024544,177,8.1,20131108,12 Years a Slave
+178,Drama,tt0092005,178,8.1,19860822,Stand by Me
+179,Drama,tt0075686,179,8.1,19770420,Annie Hall
+180,Comedy,tt0093779,180,8.2,19871009,The Princess Bride
+181,Drama,tt0060827,181,8.2,19670316,Persona
+182,Drama,tt2278388,182,8.1,20140328,The Grand Budapest Hotel
+183,Drama,tt0245712,183,8.1,20010413,Amores Perros
+184,Drama,tt0107207,184,8.1,19940225,Au nom du père
+185,Drama,tt0405159,185,8.1,20050128,Million Dollar Baby
+186,Drama,tt0052618,186,8.1,19601007,Ben-Hur
+187,Drama,tt0032551,187,8.1,19400315,The Grapes of Wrath
+188,Drama,tt1028532,188,8.2,20100609,Hachi: A Dog's Tale
+189,Animation,tt0087544,189,8.1,20060823,Nausicaä of the Valley of the Wind
+190,Drama,tt0046911,190,8.2,19551121,Diabolique
+191,Thriller,tt1130884,191,8.1,20100219,Shutter Island
+192,Thriller,tt0401792,192,8.1,20050401,Sin City
+193,Adventure,tt0032138,193,8.1,19390825,The Wizard of Oz
+194,Drama,tt0036868,194,8.2,19471003,The Best Years of Our Lives
+195,Drama,tt0079944,195,8.2,19800417,Stalker
+196,Drama,tt0083987,196,8.1,19830225,Gandhi
+197,Action,tt0440963,197,8.1,20070803,The Bourne Ultimatum
+198,Drama,tt0246578,198,8.1,20011026,Donnie Darko
+199,Drama,tt0056801,199,8.1,19630625,8½
+200,Thriller,tt0044079,200,8.1,19510630,Strangers on a Train
+201,Action,tt0848228,201,8.1,20120504,The Avengers
+202,Drama,tt3011894,202,8.2,20140821,Wild Tales
+203,Adventure,tt0107290,203,8.1,19930611,Jurassic Park
+204,Drama,tt0112471,204,8.1,19950129,Before Sunrise
+205,Thriller,tt0114746,205,8.1,19960105,Twelve Monkeys
+206,Drama,tt0058946,206,8.2,19670920,The Battle of Algiers
+207,Action,tt0088247,207,8.1,19841026,The Terminator
+208,Thriller,tt0338564,208,8.1,20040901,Infernal Affairs
+209,Drama,tt0073195,209,8.1,19750620,Jaws
+210,Action,tt2015381,210,8.1,20140801,Guardians of the Galaxy
+211,Comedy,tt0107048,211,8.1,19930212,Groundhog Day
+212,Drama,tt0353969,212,8.1,20040623,Memories of Murder
+213,Drama,tt0050613,213,8.2,19611122,Throne of Blood
+214,Animation,tt0198781,214,8.1,20011102,"Monsters, Inc."
+215,Drama,tt1201607,215,8.1,20110715,Harry Potter and the Deathly Hallows: Part 2
+216,Drama,tt0083922,216,8.1,19830309,Fanny and Alexander
+217,Drama,tt0120382,217,8.1,19980605,The Truman Show
+218,Drama,tt0075148,218,8.1,19761203,Rocky
+219,Drama,tt0072684,219,8.1,19751218,Barry Lyndon
+220,Drama,tt0072890,220,8.1,19750921,Dog Day Afternoon
+221,Drama,tt0044706,221,8.1,19520730,High Noon
+222,Drama,tt1220719,222,8.1,20081212,Ip Man
+223,Drama,tt1504320,223,8.1,20101225,The King's Speech
+224,Drama,tt2084970,224,8.1,20141225,The Imitation Game
+225,Drama,tt0113247,225,8.1,19960223,La Haine
+226,Drama,tt0058461,226,8.1,19670118,A Fistful of Dollars
+227,Drama,tt0038787,227,8.1,19460906,Notorious
+228,Action,tt0325980,228,8.1,20030709,Pirates of the Caribbean: The Curse of the Black Pearl
+229,Animation,tt0092067,229,8.1,20030115,Castle in the Sky
+230,Drama,tt0061184,230,8.1,19660622,Who's Afraid of Virginia Woolf?
+231,Drama,tt1454029,231,8.1,20110810,The Help
+232,Comedy,tt0046250,232,8.1,19530902,Roman Holiday
+233,Drama,tt1392214,233,8.1,20130920,Prisoners
+234,Drama,tt0048424,234,8.1,19560511,The Night of the Hunter
+235,Drama,tt0374546,235,8.1,20040528,"Spring, Summer, Fall, Winter... and Spring"
+236,Drama,tt0047528,236,8.1,19560716,La Strada
+237,Animation,tt0101414,237,8,19911122,Beauty and the Beast
+238,Action,tt1877832,238,8.1,20140523,X-Men: Days of Future Past
+239,Drama,tt0114787,239,8.1,19970620,Underground
+240,Drama,tt0070511,240,8.1,19731216,Papillon
+241,Drama,tt0381681,241,8.1,20040730,Before Sunset
+242,Drama,tt0053779,242,8.1,19610419,La Dolce Vita
+243,Drama,tt1069238,243,8.1,20090619,Departures
+244,Drama,tt0061722,244,8,19671222,The Graduate
+245,Drama,tt1954470,245,8.4,20120802,Gangs of Wasseypur
+246,Drama,tt0052561,246,8.1,195909,Anatomy of a Murder
+247,Drama,tt0169102,247,8.2,20020508,Lagaan
+248,Drama,tt0054997,248,8.1,19610925,The Hustler
+249,Thriller,tt0038355,249,8.1,19460831,The Big Sleep
+250,Drama,tt0118694,250,8.1,20010309,In the Mood for Love
