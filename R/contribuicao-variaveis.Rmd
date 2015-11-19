@@ -1,0 +1,83 @@
+---
+title: "contribuicao-variaveis"
+author: "Rodolfo Viana"
+date: "19-11-2015"
+output: html_document
+---
+
+Compara as posições dos deputados federais considerando os votos em cada proposição. 
+
+
+Bibliotecas necessárias 
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(reshape2)
+require(cluster)
+require(ade4)
+require(scales)
+require(FactoMineR)
+
+
+source("R/camara-lib.R")
+```
+
+Carregando CSV com os votos dos deputados
+
+```{r}
+votos <- ler_votos_de_ativos("votacoes.csv")
+
+# distinguir diferentes votações de uma mesma proposição
+votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
+```
+
+
+```{r}
+votacao <- votos %>% 
+  select(nome, partido, uf, num_pro, voto)
+
+ec.v <- votos %>% 
+  select(num_pro, cunha) %>% 
+  filter(cunha %in% c("sim", "não")) %>% 
+  unique()
+
+ec <- cbind(data.frame(nome = "Eduardo Cunha", 
+                       partido = "pmdb", 
+                       uf = "rj"), 
+            ec.v)
+names(ec) <- names(votacao)
+# esse é o df com cunha:
+votacao.cc <- rbind(votacao, ec)
+```
+
+
+```{r}
+votacao.cast <- dcast(votacao.cc, 
+                      nome + partido + uf ~ num_pro, 
+                      value.var = "voto")
+
+votacao.cast <- as.data.frame(apply(votacao.cast, 2, as.factor))
+
+mca1 = MCA(votacao.cast, 
+           ncp = 2, # Default is 5 
+           graph = TRUE,
+           quali.sup = c(1:3),
+           na.method = "Average") # NA or Avarege
+
+summary(mca1)
+
+eigenvalues <- mca1$eig
+head(eigenvalues[, 1:2])
+
+var_coord <- as.data.frame(mca1$var$coord)
+
+max(var_coord$"Dim 1")
+max(var_coord$"Dim 2")
+
+
+top_10_dim1 <- head(var_coord[order(var_coord$"Dim 1", decreasing=TRUE),], n=10)
+top_10_dim2 <- head(var_coord[order(var_coord$"Dim 2", decreasing=TRUE),], n=10)
+
+bottom_10_dim1 <- tail(var_coord[order(var_coord$"Dim 1", decreasing=TRUE),], n=10)
+bottom_10_dim2 <- tail(var_coord[order(var_coord$"Dim 2", decreasing=TRUE),], n=10)
