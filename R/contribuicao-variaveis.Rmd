@@ -67,6 +67,21 @@ mca1 = MCA(votacao.cast,
 
 summary(mca1)
 
+contrib_var <- as.data.frame(mca1$var$contrib)
+
+filter(contrib_var, row.names == "668-1_não")
+
+eigenvalues <- mca1$eig
+head(eigenvalues[, 1:2])
+
+var_coord <- as.data.frame(mca1$var$contrib)
+var_coord$sum <- (var_coord$"Dim 1"*0.2072 + var_coord$"Dim 2"*0.0970)/(0.2072 + 0.0970)
+var_coord <- var_coord[order(var_coord$sum, decreasing=TRUE),]
+
+x <- as.data.frame(mca1$ind$cos2)
+
+summary(mca1)
+
 eigenvalues <- mca1$eig
 head(eigenvalues[, 1:2])
 
@@ -74,6 +89,10 @@ var_coord <- as.data.frame(mca1$var$coord)
 
 max(var_coord$"Dim 1")
 max(var_coord$"Dim 2")
+
+
+plot(mca1,invisible = c("ind","quali.sup","quant.sup"),selectMod="contrib 10")
+plot(mca1,invisible = c("var","quali.sup","quant.sup"),select="cos2 100")
 
 
 top_10_dim1 <- head(var_coord[order(var_coord$"Dim 1", decreasing=TRUE),], n=10)
