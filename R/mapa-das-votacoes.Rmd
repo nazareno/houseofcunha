@@ -159,6 +159,10 @@ semcunha <- filter(mca1_obs_df, nome != "Eduardo Cunha")
 p <- plotMCA(semcunha)
 p
 
+#semcunha$novo_nome <- paste0(semcunha$nome, "-", semcunha$partido, "/", semcunha$uf)
+#x <- select(semcunha, Dim.1, Dim.2, novo_nome, destaque_partido)
+#write.csv(x, file = "MCAtoplot.csv", row.names = FALSE)
+
 cassacao <- filter(mca1_obs_df, destaque_cassacao == TRUE)
 
 png("visao-geral.png", width = 800, height = 600)
