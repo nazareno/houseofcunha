@@ -93,10 +93,6 @@ mca1 = MCA(votacao.cast,
            quali.sup = c(1:3),
            na.method = "Average") # NA or Avarege
 
-# summary(mca1)
-
-# plot(mca1,invisible=c("ind","quali.sup","quanti.sup"))
-
 # data frame with observation coordinates
 mca1_obs_df = data.frame(mca1$ind$coord, 
                          nome = votacao.cast$nome,
@@ -120,6 +116,7 @@ mca1_obs_df$destaque_ministros  <- mca1_obs_df$nome %in% c("Celso Pansera",
 
 # Destaque dos deputados que participam da bancada bala
 mca1_obs_df$destaque_bancada_bala <-  mca1_obs_df$nome %in% bancada.bala$Bala
+
 
 # Destaque dos deputados que participam da bancada humanista
 mca1_obs_df$destaque_bancada_humanista <-  mca1_obs_df$nome %in% bancada.humanista$Humanista
@@ -210,17 +207,10 @@ p <- ggplot(data = mca1_obs_df,
         axis.text = element_blank(), 
         axis.line = element_blank())
 
-p <- p + geom_point(data = filter(mca1_obs_df, nome == "Eduardo Cunha"), 
-                    colour = "darkred", 
-                    size = 15, 
-                    alpha = 0.7)
-
-
-png("cassacao_4.png", 
+png("plot/cassacao_4.png", 
     width = 800, height = 600)
 p
 dev.off()
-
 
 p <- ggplot(data = mca1_obs_df, 
        aes(x = Dim.1, y = Dim.2, label = nome, 
@@ -299,6 +289,32 @@ p <- ggplot(data = mca1_obs_df,
   theme_classic() + 
    theme(legend.position = "none", 
         axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+alpha("grey70", .6), 
+                                 alpha("darkred", 1), 
+                                 alpha("#0066CC", 1),
+                                 alpha("#E69F00", 1),
+                                 alpha("#FF3300", 1)
+
+ggplot(data = mca1_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_bala_partido)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("#999999", 1),
+                                 alpha("darkred", 1), 
+                                 alpha("#0066CC", 1),
+                                 alpha("#FF3300", 1)
+                                 ), 
+                      guide = guide_legend(title = "partido", 
+                                           override.aes = list(alpha = 1, size = 4))) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
         axis.text = element_blank(), 
         axis.line = element_blank())
 
