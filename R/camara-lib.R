@@ -70,6 +70,28 @@ ler_votos_de_ativos <- function(filepath){
   votos[votos$nome == "Zé Silva", "partido"] <- "s.part."
   votos[votos$nome == "Augusto Carvalho", "partido"] <- "s.part."
   votos[votos$nome == "Paulo Pereira da Silva", "partido"] <- "s.part."
+  
+  
+  votos[votos$nome == "Alessandro Molon", "partido"] <- "s.part."
+  votos[votos$nome == "Aliel Machado", "partido"] <- "s.part."
+  votos[votos$nome == "Ariosto Holanda", "partido"] <- "s.part."
+  votos[votos$nome == "Augusto Coutinho", "partido"] <- "s.part."
+  votos[votos$nome == "Beto Mansur", "partido"] <- "s.part."
+  
+  votos[votos$nome == "Ademir Camilo", "partido"] <- "s.part."
+  votos[votos$nome == "Carlos Eduardo Cadoca", "partido"] <- "s.part."
+  votos[votos$nome == "Cícero Almeida", "partido"] <- "s.part."
+  votos[votos$nome == "Danilo Forte", "partido"] <- "s.part."
+  
+  votos[votos$nome == "Deley", "partido"] <- "s.part."
+  votos[votos$nome == "Dr. Jorge Silva", "partido"] <- "s.part."
+  votos[votos$nome == "Hugo Leal", "partido"] <- "s.part."
+  votos[votos$nome == "JHC", "partido"] <- "s.part."
+  votos[votos$nome == "Jorge Boeira", "partido"] <- "s.part."
+  
+  votos[votos$nome == "Miro Teixeira", "partido"] <- "s.part."
+  votos[votos$nome == "Vicente Arruda", "partido"] <- "s.part."
+  
   votos
 }
 

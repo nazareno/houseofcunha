@@ -45,12 +45,13 @@ bancada.humanista <- read.table("data/bancada-humanista.csv", header=TRUE, quote
 bancada.sindical <- read.table("data/bancada-sindical.csv", header=TRUE, quote="\"")
 bancada.evangelica <- read.table("data/bancada-evangelica.csv", header=TRUE, quote="\"")
 bancada.ruralista <- read.table("data/bancada-ruralista.csv", header=TRUE, quote="\"")
+deputados <- read.delim("deputados/deputados.csv")
 ```
 
 
 ```{r}
 votacao <- votos %>% 
-  select(nome, partido, uf, num_pro, voto)
+  select(nome, partido, uf, num_pro, voto, id_dep)
 
 # votacao.detalhes <- votos %>% 
 #   select(nome, partido, uf, num_pro, voto, objetivo, cunha)
@@ -65,7 +66,8 @@ ec.v <- votos %>%
 
 ec <- cbind(data.frame(nome = "Eduardo Cunha", 
                        partido = "pmdb", 
-                       uf = "rj"), 
+                       uf = "rj", 
+                       id_dep = "999999"), 
             ec.v)
 names(ec) <- names(votacao)
 # esse é o df com cunha:
@@ -82,8 +84,9 @@ votacao.cc <- rbind(votacao, ec)
 
 ```{r}
 votacao.cast <- dcast(votacao.cc, 
-                      nome + partido + uf ~ num_pro, 
+                      nome + partido + uf + id_dep ~ num_pro, 
                       value.var = "voto")
+
 
 votacao.cast <- as.data.frame(apply(votacao.cast, 2, as.factor))
 
@@ -93,11 +96,22 @@ mca1 = MCA(votacao.cast,
            quali.sup = c(1:3),
            na.method = "Average") # NA or Avarege
 
+
 # data frame with observation coordinates
 mca1_obs_df = data.frame(mca1$ind$coord, 
                          nome = votacao.cast$nome,
                          partido = votacao.cast$partido, 
-                         uf = votacao.cast$uf)
+                         uf = votacao.cast$uf,
+                         id_dep = votacao.cast$id_dep,
+                         url = deputados$url)
+
+
+# ind <- duplicated(mca1_obs_df[,6])
+# mca1_obs_df[ind,]
+
+
+# To plot
+write.csv2(mca1_obs_df, "mapas_votacoes.csv", row.names = FALSE)
 
 # Alguns notáveis
 mca1_obs_df$destaque <- mca1_obs_df$nome %in% c("Tiririca", 

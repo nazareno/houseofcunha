@@ -71,8 +71,12 @@ contrib_var <- as.data.frame(mca1$var$contrib)
 
 filter(contrib_var, row.names == "668-1_não")
 
+select(votos, tipo, num_pro, ano) %>% 
+  filter(votos, num_pro == "10-1")
+
 eigenvalues <- mca1$eig
 head(eigenvalues[, 1:2])
+
 
 var_coord <- as.data.frame(mca1$var$contrib)
 var_coord$sum <- (var_coord$"Dim 1"*0.2072 + var_coord$"Dim 2"*0.0970)/(0.2072 + 0.0970)
@@ -89,11 +93,6 @@ var_coord <- as.data.frame(mca1$var$coord)
 
 max(var_coord$"Dim 1")
 max(var_coord$"Dim 2")
-
-
-plot(mca1,invisible = c("ind","quali.sup","quant.sup"),selectMod="contrib 10")
-plot(mca1,invisible = c("var","quali.sup","quant.sup"),select="cos2 100")
-
 
 top_10_dim1 <- head(var_coord[order(var_coord$"Dim 1", decreasing=TRUE),], n=10)
 top_10_dim2 <- head(var_coord[order(var_coord$"Dim 2", decreasing=TRUE),], n=10)
