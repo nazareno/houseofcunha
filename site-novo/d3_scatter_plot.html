@@ -36,18 +36,18 @@
             height = 740 - margin.top - margin.bottom;
 
     var x = d3.scale.linear()
-            .range([0, width]);
+            .range([0, width-50]);
 
     var y = d3.scale.linear()
             .range([height, 0]);
 
     var xAxis = d3.svg.axis()
             .scale(x)
-            .orient("bottom");
+            .orient("bottom").ticks(0);
 
     var yAxis = d3.svg.axis()
             .scale(y)
-            .orient("left");
+            .orient("left").ticks(0);
 
     // setup fill color
     var cValue = function(d) { return d.partido;},
@@ -78,30 +78,25 @@
 
         svg.append("g")
                 .attr("class", "x axis")
-                .attr("transform", "translate(0," + height + ")")
+                .attr("transform", "translate(0," + height/2 + ")")
                 .call(xAxis)
                 .append("text")
-                .attr("class", "label")
-                .attr("x", width)
-                .attr("y", -6)
-                .style("text-anchor", "end")
-                .text("Sepal Width (cm)");
+//                .style("text-anchor", "end")
+//                .text("Direita");
 
         svg.append("g")
                 .attr("class", "y axis")
+                .attr("transform", "translate(" + width/2 + ",0)")
                 .call(yAxis)
                 .append("text")
-                .attr("class", "label")
-                .attr("transform", "rotate(-90)")
-                .attr("y", 6)
-                .attr("dy", ".71em")
-                .style("text-anchor", "end")
-                .text("Sepal Length (cm)")
+//                .style("text-anchor", "end")
+//                .text("Liberal")
 
         svg.selectAll(".dot")
                 .data(data)
                 .enter().append("circle")
                 .attr("class", "dot")
+                .attr("id", "pt")
                 .attr("r", 3.5)
                 .attr("cx", function(d) { return x(d.dim1); })
                 .attr("cy", function(d) { return y(d.dim2); })
@@ -113,11 +108,33 @@
                     tooltip.html("<div> <img src='http://www.camara.gov.br/internet/deputado/bandep/141517.jpg' height=35 width=50> <br/>" + d["nome"] + "<br/>" + d["partido"].toUpperCase() + "</div>")
                             .style("left", (d3.event.pageX - 25) + "px")
                             .style("top", (d3.event.pageY - 70) + "px");
+
+                    d3.select(this).attr("r", 12).ease("elastic");
+
+                    // function to move mouseover item to front of SVG stage, in case
+                    // another bubble overlaps it
+                    d3.selection.prototype.moveToFront = function() {
+                        return this.each(function() {
+                            this.parentNode.appendChild(this);
+                        });
+                    };
+
+                    // skip this functionality for IE9, which doesn't like it
+                    if (!$.browser.msie) {
+                        circle.moveToFront();
+                    }
+                    //Show Tooltip with candidate name and party
+
                 })
                 .on("mouseout", function(d) {
                     tooltip.transition()
                             .duration(500)
                             .style("opacity", 0);
+                    d3.select(this).attr("r", 3.5).ease("elastic");
+                    // fade out guide lines, then remove them
+                    d3.selectAll(".guide").transition().duration(100).styleTween("opacity",
+                            function() { return d3.interpolate(.5, 0); })
+                            .remove()
                 });
 
         var legend = svg.selectAll(".legend")
@@ -125,6 +142,7 @@
                 .enter().append("g")
                 .attr("class", "legend")
                 .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
 
         legend.append("rect")
                 .attr("x", width + 10)
@@ -138,6 +156,23 @@
                 .attr("dy", ".35em")
                 .style("text-anchor", "end")
                 .text(function(d) { return d; });
+
+        // Add the blue line title
+        svg.append("text")
+                .attr("x", 0)
+                .attr("y", height + margin.top + 10)
+                .attr("class", "legend")
+                .style("fill", "steelblue")
+                .on("click", function(){
+                    // Determine if current line is visible
+                    var active   = blueLine.active ? false : true,
+                            newOpacity = active ? 0 : 1;
+                    // Hide or show the elements
+                    d3.select("#pt").style("opacity", newOpacity);
+                    // Update whether or not the elements are active
+                    blueLine.active = active;
+                })
+                .text("Blue Line");
 
     });
 

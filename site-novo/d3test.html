@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>D3 Demo: Making a scatterplot with SVG</title>
+    <script type="text/javascript" src="bower_components/d3/d3.min.js"></script>
+    <style type="text/css">
+        /* No style rules here yet */
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+
+    d3.text("data/deputados_coords.csv", function(rows) {
+        deputados = d3.csv.parseRows(rows);
+        alert(deputados);
+
+
+//        var jsonCircles = [
+//            {
+//                "x_axis": 30,
+//                "y_axis": 30,
+//                "radius": 20,
+//                "color" : "green"
+//            },
+//            {
+//                "x_axis": 70,
+//                "y_axis": 70,
+//                "radius": 20,
+//                "color" : "purple"
+//            },
+//            {
+//                "x_axis": 110,
+//                "y_axis": 100,
+//                "radius": 20,
+//                "color" : "red"
+//            }];
+
+
+        //Width and height
+        var w = 1000;
+        var h = 400;
+
+        //Create SVG element
+        var svg = d3.select("body")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+        svg.selectAll("circle")
+                .data(deputados[1])
+                .enter()
+                .append("circle")
+                .attr("cx", function(d) { return d[4] + 100; })
+                .attr("cy", function(d) { return d[5] + 50; })
+                .attr("r", function(d) { return 5; })
+                .attr("fill", function(d) { return "green"; });
+    })
+
+</script>
+</body>
+</html>
