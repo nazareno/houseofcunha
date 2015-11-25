@@ -41,13 +41,13 @@ ler_votos_de_ativos <- function(filepath){
   print("Descartados por inatividade: ")
   print(descartados)
 
-  # Cabo Daciolo aparece com duas afiliações. 
-  # Usar apenas a última
-  votos[votos$nome == "Cabo Daciolo", "partido"] <- "s.part."
-  # Evandro Roman aparece com dois nomes
+  # Aparece com dois nomes
   votos[votos$nome == "Evandro Rogerio Roman", "nome"] <- "Evandro Roman"
-  
-  # Bancadas 
+  votos[votos$nome == "Eli Correa Filho", "nome"] <- "Eli Corrêa Filho"
+  votos[votos$nome == "Mainha", "nome"] <- "José Maia Filho"
+    
+  # Aparece com duas afiliações.
+  votos[votos$nome == "Cabo Daciolo", "partido"] <- "s.part."
   votos[votos$nome == "Glauber Braga", "partido"] <- "s.part."
   votos[votos$nome == "Silvio Costa", "partido"] <- "s.part."
   votos[votos$nome == "Elizeu Dionizio", "partido"] <- "s.part."
@@ -70,25 +70,20 @@ ler_votos_de_ativos <- function(filepath){
   votos[votos$nome == "Zé Silva", "partido"] <- "s.part."
   votos[votos$nome == "Augusto Carvalho", "partido"] <- "s.part."
   votos[votos$nome == "Paulo Pereira da Silva", "partido"] <- "s.part."
-  
-  
   votos[votos$nome == "Alessandro Molon", "partido"] <- "s.part."
   votos[votos$nome == "Aliel Machado", "partido"] <- "s.part."
   votos[votos$nome == "Ariosto Holanda", "partido"] <- "s.part."
   votos[votos$nome == "Augusto Coutinho", "partido"] <- "s.part."
-  votos[votos$nome == "Beto Mansur", "partido"] <- "s.part."
-  
+  votos[votos$nome == "Beto Mansur", "partido"] <- "s.part." 
   votos[votos$nome == "Ademir Camilo", "partido"] <- "s.part."
   votos[votos$nome == "Carlos Eduardo Cadoca", "partido"] <- "s.part."
   votos[votos$nome == "Cícero Almeida", "partido"] <- "s.part."
-  votos[votos$nome == "Danilo Forte", "partido"] <- "s.part."
-  
+  votos[votos$nome == "Danilo Forte", "partido"] <- "s.part." 
   votos[votos$nome == "Deley", "partido"] <- "s.part."
   votos[votos$nome == "Dr. Jorge Silva", "partido"] <- "s.part."
   votos[votos$nome == "Hugo Leal", "partido"] <- "s.part."
   votos[votos$nome == "JHC", "partido"] <- "s.part."
   votos[votos$nome == "Jorge Boeira", "partido"] <- "s.part."
-  
   votos[votos$nome == "Miro Teixeira", "partido"] <- "s.part."
   votos[votos$nome == "Vicente Arruda", "partido"] <- "s.part."
   
@@ -102,6 +97,28 @@ ler_doacoes_de_eleitos <- function(arquivo.doacoes, arquivo.eleitos){
   doacoes$CPF.do.candidato <- droplevels(as.factor(doacoes$CPF.do.candidato))
   doacoes$CPF.CNPJ.do.doador <- droplevels(as.factor(doacoes$CPF.CNPJ.do.doador))
   doacoes
+}
+
+deputados_ativos <- function(votacao.cc){
+  dep_afastado <- filter(votacao.cc, id_dep %in% c("178864", 
+                                                   "133439", 
+                                                   "74213", 
+                                                   "72912",  
+                                                   "73720",     
+                                                   "146829", 
+                                                   "190149", 
+                                                   "73481",  
+                                                   "74460",  
+                                                   "188097",
+                                                   "180545", 
+                                                   "80920",  
+                                                   "88950",  
+                                                   "160612", 
+                                                   "141560", 
+                                                   "167493"))
+  
+  votacao.cc <- setdiff(votacao.cc, dep_afastado)
+  votacao.cc  
 }
 
 adiciona_nomes_corrigidos <- function(data){
