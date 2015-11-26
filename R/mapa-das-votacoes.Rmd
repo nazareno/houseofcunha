@@ -146,8 +146,13 @@ mca1_obs_df$id_dep <- as.integer(as.character(mca1_obs_df$id_dep))
 mca1_obs_df <- left_join(mca1_obs_df, deputados, by = c("id_dep" = "ideCadastro"))
 #write.csv2(mca1_obs_df, "mapas_votacoes.csv", row.names = FALSE)
 
+mca1_obs_df_names <- names(mca1_obs_df)
+mca1_obs_df_names[3] <- "nome"
+mca1_obs_df_names[4] <- "partido"
+names(mca1_obs_df) <- mca1_obs_df_names
+
 # Alguns notáveis
-mca1_obs_df$destaque <- mca1_obs_df$nome.x %in% c("Tiririca", 
+mca1_obs_df$destaque <- mca1_obs_df$nome %in% c("Tiririca", 
                                                 "Pr. Marco Feliciano", 
                                                 "Jair Bolsonaro", 
                                                 "Luiz Couto", 
@@ -156,37 +161,37 @@ mca1_obs_df$destaque <- mca1_obs_df$nome.x %in% c("Tiririca",
                                                 "Veneziano Vital do Rêgo")
 
 # Destaque dos dep que se tornaram ministros
-mca1_obs_df$destaque_ministros  <- mca1_obs_df$nome.x %in% c("Celso Pansera",
+mca1_obs_df$destaque_ministros  <- mca1_obs_df$nome %in% c("Celso Pansera",
                                 "André Figueiredo",
                                 "Marcelo Castro"
                                 )
 
 # Destaque dos deputados que participam da bancada bala
-mca1_obs_df$destaque_bancada_bala <-  mca1_obs_df$nome.x %in% bancada.bala$Bala
+mca1_obs_df$destaque_bancada_bala <-  mca1_obs_df$nome %in% bancada.bala$Bala
 
 
 # Destaque dos deputados que participam da bancada humanista
-mca1_obs_df$destaque_bancada_humanista <-  mca1_obs_df$nome.x %in% bancada.humanista$Humanista
+mca1_obs_df$destaque_bancada_humanista <-  mca1_obs_df$nome %in% bancada.humanista$Humanista
 
 # Bancada Evangelica 
-mca1_obs_df$destaque_bancada_evangelica <- mca1_obs_df$nome.x %in% bancada.evangelica$Evangelica
+mca1_obs_df$destaque_bancada_evangelica <- mca1_obs_df$nome %in% bancada.evangelica$Evangelica
 
 # Bancada Ruralista
-mca1_obs_df$destaque_bancada_ruralista <- mca1_obs_df$nome.x %in% bancada.ruralista$Ruralista
+mca1_obs_df$destaque_bancada_ruralista <- mca1_obs_df$nome %in% bancada.ruralista$Ruralista
 
 # Bancada Sindical
-mca1_obs_df$destaque_bancada_sindical <- mca1_obs_df$nome.x %in% bancada.sindical$Sindical
+mca1_obs_df$destaque_bancada_sindical <- mca1_obs_df$nome %in% bancada.sindical$Sindical
 
 # Destaque dos dep que pediram a cassação de Cunha 
-mca1_obs_df$destaque_cassacao  <- mca1_obs_df$nome.x %in% cassacao.cunha$Cassacao
+mca1_obs_df$destaque_cassacao  <- mca1_obs_df$nome %in% cassacao.cunha$Cassacao
 
 # Os da PB
 mca1_obs_df$destaque_pb <- ifelse(mca1_obs_df$uf.x == "PB", "PB", "Demais estados")
 
 # Partidos icônicos
-mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido.x %in% 
+mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in% 
                                                c("pmdb", "psdb", "pt", "psol"), 
-                                             as.character(mca1_obs_df$partido.x), 
+                                             as.character(mca1_obs_df$partido), 
                                              "outros"))
 
 
@@ -195,7 +200,7 @@ mca1_obs_df$destaque_cassacao_partido <-  ifelse(mca1_obs_df$destaque_cassacao =
 mca1_obs_df$destaque_cassacao_pt <-  ifelse(as.character(mca1_obs_df$partido) == "pt", ifelse(mca1_obs_df$destaque_cassacao == TRUE, "assinaram", "não assinaram"), "outros partidos")
 
 # E E. Cunha
-mca1_obs_df$destaque_cunha <- ifelse(mca1_obs_df$nome.x == "Eduardo Cunha", TRUE, FALSE)
+mca1_obs_df$destaque_cunha <- ifelse(mca1_obs_df$nome == "Eduardo Cunha", TRUE, FALSE)
 
 write.csv(mca1_obs_df,"data/destaques.csv")
 
