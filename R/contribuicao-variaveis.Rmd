@@ -61,41 +61,32 @@ votacao.cast <- as.data.frame(apply(votacao.cast, 2, as.factor))
 
 mca1 = MCA(votacao.cast, 
            ncp = 2, # Default is 5 
-           graph = TRUE,
+           graph = FALSE,
            quali.sup = c(1:3),
            na.method = "Average") # NA or Avarege
 
-summary(mca1)
-
-contrib_var <- as.data.frame(mca1$var$contrib)
-
-filter(contrib_var, row.names == "668-1_não")
-
-select(votos, tipo, num_pro, ano) %>% 
-  filter(votos, num_pro == "10-1")
-
-eigenvalues <- mca1$eig
-head(eigenvalues[, 1:2])
-
-
-var_coord <- as.data.frame(mca1$var$contrib)
-var_coord$sum <- (var_coord$"Dim 1"*0.2072 + var_coord$"Dim 2"*0.0970)/(0.2072 + 0.0970)
-var_coord <- var_coord[order(var_coord$sum, decreasing=TRUE),]
-
-x <- as.data.frame(mca1$ind$cos2)
-
-summary(mca1)
-
-eigenvalues <- mca1$eig
-head(eigenvalues[, 1:2])
-
 var_coord <- as.data.frame(mca1$var$coord)
 
-max(var_coord$"Dim 1")
-max(var_coord$"Dim 2")
+top_5_dim1 <- head(var_coord[order(var_coord$"Dim 1", decreasing=TRUE),], n=5)
+top_5_dim2 <- head(var_coord[order(var_coord$"Dim 2", decreasing=TRUE),], n=5)
 
-top_10_dim1 <- head(var_coord[order(var_coord$"Dim 1", decreasing=TRUE),], n=10)
-top_10_dim2 <- head(var_coord[order(var_coord$"Dim 2", decreasing=TRUE),], n=10)
+bottom_5_dim1 <- tail(var_coord[order(var_coord$"Dim 1", decreasing=TRUE),], n=5)
+bottom_5_dim2 <- tail(var_coord[order(var_coord$"Dim 2", decreasing=TRUE),], n=5)
 
-bottom_10_dim1 <- tail(var_coord[order(var_coord$"Dim 1", decreasing=TRUE),], n=10)
-bottom_10_dim2 <- tail(var_coord[order(var_coord$"Dim 2", decreasing=TRUE),], n=10)
+dep_coord <- as.data.frame(mca1$ind$coord)
+
+dep_top_5_dim1 <- head(dep_coord[order(dep_coord$"Dim 1", decreasing=TRUE),], n=5)
+dep_top_5_dim2 <- head(dep_coord[order(dep_coord$"Dim 2", decreasing=TRUE),], n=5)
+
+dep_bottom_5_dim1 <- tail(dep_coord[order(dep_coord$"Dim 1", decreasing=TRUE),], n=5)
+dep_bottom_5_dim2 <- tail(dep_coord[order(dep_coord$"Dim 2", decreasing=TRUE),], n=5)
+
+df_lest <- votos_deputados_extremo(dep_top_5_dim1, top_5_dim1)
+df_norte <- votos_deputados_extremo(dep_top_5_dim2, top_5_dim2)
+
+df_oest <- votos_deputados_extremo(dep_bottom_5_dim1, bottom_5_dim1)
+df_sul <- votos_deputados_extremo(dep_bottom_5_dim2, bottom_5_dim2)
+
+```
+
+

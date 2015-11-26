@@ -138,6 +138,22 @@ adiciona_nomes_corrigidos <- function(data){
   data 
 }
 
+# Mostra como é a votação dos extremos do gráfico
+votos_deputados_extremo <- function(deputados, votacoes){
+  df = data.frame()
+  for (i in row.names(deputados)){
+    df <- rbind(filter(votacao.cast[i,]), df)
+  }
+  
+  df1 = df[c("nome","partido","uf")] 
+  for (i in row.names(votacoes)){
+    df1 <- cbind(df1, df[strsplit(i, "_")[[1]][1]])
+  } 
+  
+  colnames(df1) <- c("nome","partido","uf", row.names(votacoes))
+  df1
+}
+
 geraMCA <-  function(votos){
   votacao <- votos %>% 
     select(nome, partido, uf, num_pro, voto)
