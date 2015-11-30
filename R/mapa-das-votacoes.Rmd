@@ -87,9 +87,7 @@ votacao.cc <- rbind(votacao, ec)
 votacao.cc.unique <- votacao.cc %>% unique()
 
 
-  
-  votacao.cc <- setdiff(votacao.cc, dep_afastado)
-  votacao.cc  
+votacao.cc <- setdiff(votacao.cc, dep_afastado)
 
 votacao.cc <- deputados_ativos(votacao.cc)
 
@@ -99,26 +97,11 @@ votacao.cast <- dcast(votacao.cc,
 
 votacao.cast <- as.data.frame(apply(votacao.cast, 2, as.factor))
 
-dep_afastado <- filter(votacao.cast, id_dep %in% c("178864", 
-                                                   "133439", 
-                                                   "74213", 
-                                                   "72912",  
-                                                   "73720",     
-                                                   "146829", 
-                                                   "190149", 
-                                                   "73481",  
-                                                   "74460",  
-                                                   "188097",
-                                                   "180545", 
-                                                   "80920",  
-                                                   "88950",  
-                                                   "160612", 
-                                                   "141560", 
-                                                   "167493"))
+votacao.cast <- deputadosAtivos(votacao.cast,0.5)
 
 mca1 = MCA(votacao.cast, 
            ncp = 2, # Default is 5 
-           graph = FALSE,
+           graph = TRUE,
            quali.sup = c(1:4),
            na.method = "Average") # NA or Avarege
 

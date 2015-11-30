@@ -121,6 +121,12 @@ deputados_ativos <- function(votacao.cc){
   votacao.cc  
 }
 
+deputadosAtivos <- function(votacao.cast, porcentagemAtividadeMinima) {
+  minNoVotacoes <- (ncol(votacao.cast) -5)*porcentagemAtividadeMinima
+  ativos <- votacao.cast[rowSums(!is.na(votacao.cast[,5:ncol(votacao.cast)])) >= minNoVotacoes,]
+  ativos
+}
+
 adiciona_nomes_corrigidos <- function(data){
   cpfs.cnpjs <- data %>% 
     select(CPF.CNPJ.do.doador) %>% 

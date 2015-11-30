@@ -10,22 +10,22 @@ require(scales)
 require(FactoMineR)
 require(rCharts)
 
-args <- commandArgs(trailingOnly = TRUE)
-
-DEF_NUM_ARGS = 2
-
-srcFilePath = ""
-experimentName = ""
-
-if (length(args) < DEF_NUM_ARGS) {
-  print("Wrong number of arguments!")
-  print("Usage:")
-  print("RScript clustering_deputados.R <caminhoPastaBaseHoC> <numClusters>")
-  stop()
-} else {
-  caminhoPastaBaseHoC = args[1]
-  numClusters = as.numeric(args[2])
-}
+# args <- commandArgs(trailingOnly = TRUE)
+# 
+# DEF_NUM_ARGS = 2
+# 
+# srcFilePath = ""
+# experimentName = ""
+# 
+# if (length(args) < DEF_NUM_ARGS) {
+#   print("Wrong number of arguments!")
+#   print("Usage:")
+#   print("RScript clustering_deputados.R <caminhoPastaBaseHoC> <numClusters>")
+#   stop()
+# } else {
+#   caminhoPastaBaseHoC = args[1]
+#   numClusters = as.numeric(args[2])
+# }
 
 clusterizar <- function(caminhoPastaBaseHoC,numClusters) {
   setwd(caminhoPastaBaseHoC)
@@ -71,7 +71,7 @@ clusterizar <- function(caminhoPastaBaseHoC,numClusters) {
   mca1.hcpc = HCPC(mca1,nb.clust = numClusters)
 }
 
-clusterizar(caminhoPastaBaseHoC,numClusters)
+# clusterizar(caminhoPastaBaseHoC,numClusters)
 
 
 
