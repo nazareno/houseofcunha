@@ -99,6 +99,34 @@ ler_doacoes_de_eleitos <- function(arquivo.doacoes, arquivo.eleitos){
   doacoes
 }
 
+recuperar_votacoes <- function(votos) {
+  votacao <- votos %>% 
+    select(nome, partido, uf, num_pro, voto, id_dep)
+  votacao
+}
+
+recuperar_votacoes_com_cunha <- function(votos) {
+  votacao <- recuperar_votacoes(votos)
+  
+  # versão do dataframe com recomendações do PMDB sendo a
+  # votação de Eduardo Cunha:
+  ec.v <- votos %>% 
+    select(num_pro, cunha) %>% 
+    filter(cunha %in% c("sim", "não")) %>% 
+    unique()
+  
+  ec <- cbind(data.frame(nome = "Eduardo Cunha", 
+                         partido = "pmdb", 
+                         uf = "rj"), 
+              ec.v)
+  ec$id_dep <- "999999"
+  
+  names(ec) <- names(votacao)
+  # esse é o df com cunha:
+  votacao.cc <- rbind(votacao, ec)
+  votacao.cc
+}
+
 deputados_ativos <- function(votacao.cc){
   dep_afastado <- filter(votacao.cc, id_dep %in% c("178864", 
                                                    "133439", 
@@ -119,6 +147,13 @@ deputados_ativos <- function(votacao.cc){
   
   votacao.cc <- setdiff(votacao.cc, dep_afastado)
   votacao.cc  
+}
+
+deputadosAtivos <- function(votacao.cast, porcentagemAtividadeMinima) {
+  minNoVotacoes <- (ncol(votacao.cast) -5)*porcentagemAtividadeMinima
+  ativos <- votacao.cast[rowSums(!is.na(votacao.cast[,5:ncol(votacao.cast)])) >= minNoVotacoes,]
+  ativos$num_votacoes <- rowSums(!is.na(ativos[,5:ncol(ativos)]))
+  ativos
 }
 
 adiciona_nomes_corrigidos <- function(data){
