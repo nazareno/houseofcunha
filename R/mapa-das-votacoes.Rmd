@@ -49,29 +49,13 @@ deputados <- read.delim("deputados/deputados.csv")
 
 
 ```{r}
-votacao <- votos %>% 
-  select(nome, partido, uf, num_pro, voto, id_dep)
+votacao <- recuperar_votacoes(votos)
 
 # votacao.detalhes <- votos %>% 
 #   select(nome, partido, uf, num_pro, voto, objetivo, cunha)
 # write.csv(votacao.detalhes, "detalhada.csv")
 
-# versão do dataframe com recomendações do PMDB sendo a
-# votação de Eduardo Cunha:
-ec.v <- votos %>% 
-  select(num_pro, cunha) %>% 
-  filter(cunha %in% c("sim", "não")) %>% 
-  unique()
-
-ec <- cbind(data.frame(nome = "Eduardo Cunha", 
-                       partido = "pmdb", 
-                       uf = "rj"), 
-            ec.v)
-
-ec$id_dep <- "999999"
-names(ec) <- names(votacao)
-# esse é o df com cunha:
-votacao.cc <- rbind(votacao, ec)
+votacao.cc <- recuperar_votacoes_com_cunha(votos)
 ```
 
 ```{r}
@@ -83,15 +67,7 @@ votacao.cc <- rbind(votacao, ec)
 ```
 
 ```{r}
-
-votacao.cc.unique <- votacao.cc %>% unique()
-
-
-votacao.cc <- setdiff(votacao.cc, dep_afastado)
-
-votacao.cc <- deputados_ativos(votacao.cc)
-
-votacao.cast <- dcast(votacao.cc, 
+votacao.cast <- dcast(votacao, 
                       nome + partido + uf + id_dep ~ num_pro, 
                       value.var = "voto")
 
