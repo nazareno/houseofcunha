@@ -10,15 +10,15 @@ ideCadastro	condicao	matricula	idParlamentar	nome	nomeParlamentar	urlFoto	sexo	u
 141335	Titular	19	5830714	JOSÉ ROBERTO OLIVEIRA FARO	BETO FARO	http://www.camara.gov.br/internet/deputado/bandep/141335.jpg	masculino	PA	PT	723	3215-5723	dep.betofaro@camara.gov.br	
 141531	Titular	268	5830453	RODRIGO BATISTA DE CASTRO	RODRIGO DE CASTRO	http://www.camara.gov.br/internet/deputado/bandep/141531.jpg	masculino	MG	PSDB	701	3215-5701	dep.rodrigodecastro@camara.gov.br	
 141478	Titular	412	5830785	LAERTE RODRIGUES DE BESSA	LAERTE BESSA	http://www.camara.gov.br/internet/deputado/bandep/141478.jpg	masculino	DF	PR	340	3215-5340	dep.laertebessa@camara.gov.br	
-178826	Titular	368	5830405	SERGIO OLIMPIO GOMES	MAJOR OLIMPIO	http://www.camara.gov.br/internet/deputado/bandep/178826.jpg	masculino	SP	PDT	279	3215-5279	dep.majorolimpio@camara.gov.br	
+178826	Titular	368	5830405	SERGIO OLIMPIO GOMES	MAJOR OLIMPIO	http://www.camara.gov.br/internet/deputado/bandep/178826.jpg	masculino	SP	PMB	279	3215-5279	dep.majorolimpio@camara.gov.br	
 160510	Titular	251	5830737	LUIS HENRIQUE DE OLIVEIRA RESENDE	LUIS TIBÉ	http://www.camara.gov.br/internet/deputado/bandep/160510.jpg	masculino	MG	PTdoB	632	3215-5632	dep.luistibe@camara.gov.br	
 178927	Titular	441	5830336	ALIEL MACHADO BARK	ALIEL MACHADO	http://www.camara.gov.br/internet/deputado/bandep/178927.jpg	masculino	PR	REDE	480	3215-5480	dep.alielmachado@camara.gov.br	
 73531	Titular	359	5830668	IVAN VALENTE	IVAN VALENTE	http://www.camara.gov.br/internet/deputado/bandep/73531.jpg	masculino	SP	PSOL	716	3215-5716	dep.ivanvalente@camara.gov.br	
 74812	Titular	428	5830691	PEDRO PINHEIRO CHAVES	PEDRO CHAVES	http://www.camara.gov.br/internet/deputado/bandep/74812.jpg	masculino	GO	PMDB	406	3215-5406	dep.pedrochaves@camara.gov.br	
 159237	Titular	111	5830359	FRANCISCO DE ASSIS CARVALHO GONÇALVES	ASSIS CARVALHO	http://www.camara.gov.br/internet/deputado/bandep/159237.jpg	masculino	PI	PT	909	3215-5909	dep.assiscarvalho@camara.gov.br	
 178915	Titular	141	5830545	HEBERTE LAMARCK GOMES DA SILVA	BETINHO GOMES	http://www.camara.gov.br/internet/deputado/bandep/178915.jpg	masculino	PE	PSDB	269	3215-5269	dep.betinhogomes@camara.gov.br	
-178993	Titular	60	5830622	CARLOS HENRIQUE AMORIM	CARLOS HENRIQUE GAGUIM	http://www.camara.gov.br/internet/deputado/bandep/178993.jpg	masculino	TO	PMDB	222	3215-5222	dep.carloshenriquegaguim@camara.gov.br	
-178802	Titular	318	5830522	LUIZ CARLOS RAMOS	LUIZ CARLOS RAMOS 	http://www.camara.gov.br/internet/deputado/bandep/178802.jpg	masculino	RJ	PSDC	636	3215-5636	dep.luizcarlosramos@camara.gov.br	
+178993	Titular	60	5830622	CARLOS HENRIQUE AMORIM	CARLOS HENRIQUE GAGUIM	http://www.camara.gov.br/internet/deputado/bandep/178993.jpg	masculino	TO	PMB	222	3215-5222	dep.carloshenriquegaguim@camara.gov.br	
+178802	Titular	318	5830522	LUIZ CARLOS RAMOS	LUIZ CARLOS RAMOS 	http://www.camara.gov.br/internet/deputado/bandep/178802.jpg	masculino	RJ	PMB	636	3215-5636	dep.luizcarlosramos@camara.gov.br	
 114941	Titular	62	5830528	JOSINIANE BRAGA NUNES	JOSI NUNES	http://www.camara.gov.br/internet/deputado/bandep/114941.jpg	feminino	TO	PMDB	950	3215-5950	dep.josinunes@camara.gov.br	
 141454	Titular	451	5830645	JACOB ALFREDO STOFFELS KAEFER	ALFREDO KAEFER	http://www.camara.gov.br/internet/deputado/bandep/141454.jpg	masculino	PR	PSDB	818	3215-5818	dep.alfredokaefer@camara.gov.br	
 141472	Titular	384	5830307	JOSÉ RICARDO ALVARENGA TRIPOLI	RICARDO TRIPOLI	http://www.camara.gov.br/internet/deputado/bandep/141472.jpg	masculino	SP	PSDB	241	3215-5241	dep.ricardotripoli@camara.gov.br	
@@ -88,12 +88,12 @@ ideCadastro	condicao	matricula	idParlamentar	nome	nomeParlamentar	urlFoto	sexo	u
 74156	Titular	253	5830402	JOSÉ LEONARDO COSTA MONTEIRO	LEONARDO MONTEIRO	http://www.camara.gov.br/internet/deputado/bandep/74156.jpg	masculino	MG	PT	922	3215-5922	dep.leonardomonteiro@camara.gov.br	
 141552	Titular	404	5830648	VALTENIR LUIZ PEREIRA	VALTENIR PEREIRA	http://www.camara.gov.br/internet/deputado/bandep/141552.jpg	masculino	MT	PMB	913	3215-5913	dep.valtenirpereira@camara.gov.br	
 160576	Titular	64	5830525	CESAR HANNA HALUM	CÉSAR HALUM	http://www.camara.gov.br/internet/deputado/bandep/160576.jpg	masculino	TO	PRB	422	3215-5422	dep.cesarhalum@camara.gov.br	
-178881	Titular	68	5830565	ALUISIO GUIMARAES MENDES FILHO	ALUISIO MENDES	http://www.camara.gov.br/internet/deputado/bandep/178881.jpg	masculino	MA	PSDC	931	3215-5931	dep.aluisiomendes@camara.gov.br	
+178881	Titular	68	5830565	ALUISIO GUIMARAES MENDES FILHO	ALUISIO MENDES	http://www.camara.gov.br/internet/deputado/bandep/178881.jpg	masculino	MA	PMB	931	3215-5931	dep.aluisiomendes@camara.gov.br	
 73674	Titular	427	5830602	ROBERTO EGÍDIO BALESTRA	ROBERTO BALESTRA	http://www.camara.gov.br/internet/deputado/bandep/73674.jpg	masculino	GO	PP	219	3215-5219	dep.robertobalestra@camara.gov.br	
 160578	Titular	446	5830508	EDMAR DE SOUZA ARRUDA	EDMAR ARRUDA	http://www.camara.gov.br/internet/deputado/bandep/160578.jpg	masculino	PR	PSC	962	3215-5962	dep.edmararruda@camara.gov.br	
 64960	Titular	6	5830765	MARIA HELENA VERONESE RODRIGUES	MARIA HELENA	http://www.camara.gov.br/internet/deputado/bandep/64960.jpg	feminino	RR	PSB	410	3215-5410	dep.mariahelena@camara.gov.br	
 141422	Titular	128	5830519	EFRAIM DE ARAÚJO MORAIS FILHO	EFRAIM FILHO	http://www.camara.gov.br/internet/deputado/bandep/141422.jpg	masculino	PB	DEM	744	3215-5744	dep.efraimfilho@camara.gov.br	
-178892	Titular	227	5830705	DAMINA DE CARVALHO PEREIRA	DÂMINA PEREIRA	http://www.camara.gov.br/internet/deputado/bandep/178892.jpg	feminino	MG	PMN	434	3215-5434	dep.daminapereira@camara.gov.br	
+178892	Titular	227	5830705	DAMINA DE CARVALHO PEREIRA	DÂMINA PEREIRA	http://www.camara.gov.br/internet/deputado/bandep/178892.jpg	feminino	MG	PMB	434	3215-5434	dep.daminapereira@camara.gov.br	
 74262	Titular	338	5830711	CARLOS HENRIQUE FOCESI SAMPAIO	CARLOS SAMPAIO	http://www.camara.gov.br/internet/deputado/bandep/74262.jpg	masculino	SP	PSDB	207	3215-5207	dep.carlossampaio@camara.gov.br	
 74366	Titular	418	5830462	JOÃO CAMPOS DE ARAÚJO	JOÃO CAMPOS	http://www.camara.gov.br/internet/deputado/bandep/74366.jpg	masculino	GO	PSDB	315	3215-5315	dep.joaocampos@camara.gov.br	
 151208	Titular	176	5830362	LAERCIO JOSÉ DE OLIVEIRA	LAERCIO OLIVEIRA	http://www.camara.gov.br/internet/deputado/bandep/151208.jpg	masculino	SE	SD	629	3215-5629	dep.laerciooliveira@camara.gov.br	
@@ -107,7 +107,7 @@ ideCadastro	condicao	matricula	idParlamentar	nome	nomeParlamentar	urlFoto	sexo	u
 160512	Titular	290	5830465	AUREO LIDIO MOREIRA RIBEIRO	AUREO	http://www.camara.gov.br/internet/deputado/bandep/160512.jpg	masculino	RJ	SD	212	3215-5212	dep.aureo@camara.gov.br	
 171619	Titular	237	5830442	MARIA MARGARIDA MARTINS SALOMÃO	MARGARIDA SALOMÃO	http://www.camara.gov.br/internet/deputado/bandep/171619.jpg	feminino	MG	PT	236	3215-5236	dep.margaridasalomao@camara.gov.br	
 141558	Titular	84	5830393	WALDIR MARANHÃO CARDOSO	WALDIR MARANHÃO	http://www.camara.gov.br/internet/deputado/bandep/141558.jpg	masculino	MA	PP	575	3215-5575	dep.waldirmaranhao@camara.gov.br	
-178867	Titular	104	5830605	JOSE MARIA MACEDO JUNIOR	MACEDO	http://www.camara.gov.br/internet/deputado/bandep/178867.jpg	masculino	CE	PSL	214	3215-5214	dep.macedo@camara.gov.br	
+178867	Titular	104	5830605	JOSE MARIA MACEDO JUNIOR	MACEDO	http://www.camara.gov.br/internet/deputado/bandep/178867.jpg	masculino	CE	PMB	214	3215-5214	dep.macedo@camara.gov.br	
 178849	Titular	42	5830728	HISSA NAGIB ABRAHAO FILHO	HISSA ABRAHÃO	http://www.camara.gov.br/internet/deputado/bandep/178849.jpg	masculino	AM	PPS	272	3215-5272	dep.hissaabrahao@camara.gov.br	
 178875	Titular	416	5830373	ALEXANDRE BALDY DE SANT'ANNA BRAGA	ALEXANDRE BALDY	http://www.camara.gov.br/internet/deputado/bandep/178875.jpg	masculino	GO	PSDB	441	3215-5441	dep.alexandrebaldy@camara.gov.br	
 178903	Titular	401	5830628	ADILTON DOMINGOS SACHETTI	ADILTON SACHETTI	http://www.camara.gov.br/internet/deputado/bandep/178903.jpg	masculino	MT	PSB	374	3215-5374	dep.adiltonsachetti@camara.gov.br	
@@ -117,7 +117,7 @@ ideCadastro	condicao	matricula	idParlamentar	nome	nomeParlamentar	urlFoto	sexo	u
 141401	Titular	400	5830791	CARLOS GOMES BEZERRA	CARLOS BEZERRA	http://www.camara.gov.br/internet/deputado/bandep/141401.jpg	masculino	MT	PMDB	815	3215-5815	dep.carlosbezerra@camara.gov.br	
 73463	Titular	463	5830293	OSMAR JOSÉ SERRAGLIO	OSMAR SERRAGLIO	http://www.camara.gov.br/internet/deputado/bandep/73463.jpg	masculino	PR	PMDB	845	3215-5845	dep.osmarserraglio@camara.gov.br	
 141507	Titular	480	5830542	MAURO MARIANI	MAURO MARIANI	http://www.camara.gov.br/internet/deputado/bandep/141507.jpg	masculino	SC	PMDB	925	3215-5925	dep.mauromariani@camara.gov.br	
-178936	Titular	285	5830436	ALEXANDRE VALLE CARDOSO	ALEXANDRE VALLE	http://www.camara.gov.br/internet/deputado/bandep/178936.jpg	masculino	RJ	PRP	587	3215-5587	dep.alexandrevalle@camara.gov.br	
+178936	Titular	285	5830436	ALEXANDRE VALLE CARDOSO	ALEXANDRE VALLE	http://www.camara.gov.br/internet/deputado/bandep/178936.jpg	masculino	RJ	PMB	587	3215-5587	dep.alexandrevalle@camara.gov.br	
 141411	Titular	434	5830399	DAGOBERTO NOGUEIRA FILHO	DAGOBERTO	http://www.camara.gov.br/internet/deputado/bandep/141411.jpg	masculino	MS	PDT	654	3215-5654	dep.dagoberto@camara.gov.br	
 178972	Titular	331	5830591	ALEX SPINELLI MANENTE	ALEX MANENTE	http://www.camara.gov.br/internet/deputado/bandep/178972.jpg	masculino	SP	PPS	245	3215-5245	dep.alexmanente@camara.gov.br	
 74553	Titular	207	5830579	JOSÉ CARLOS ALELUIA COSTA	JOSÉ CARLOS ALELUIA	http://www.camara.gov.br/internet/deputado/bandep/74553.jpg	masculino	BA	DEM	854	3215-5854	dep.josecarlosaleluia@camara.gov.br	
@@ -175,7 +175,7 @@ ideCadastro	condicao	matricula	idParlamentar	nome	nomeParlamentar	urlFoto	sexo	u
 141398	Titular	398	5830561	CARLOS ALBERTO ROLIM ZARATTINI	CARLOS ZARATTINI	http://www.camara.gov.br/internet/deputado/bandep/141398.jpg	masculino	SP	PT	808	3215-5808	dep.carloszarattini@camara.gov.br	
 178961	Titular	8	5830489	SHÉRIDAN ESTÉRFANY OLIVEIRA DE ANCHIETA	SHÉRIDAN	http://www.camara.gov.br/internet/deputado/bandep/178961.jpg	feminino	RR	PSDB	246	3215-5246	dep.sheridan@camara.gov.br	
 74351	Titular	30	5830632	JOSUÉ BENGTSON	JOSUÉ BENGTSON	http://www.camara.gov.br/internet/deputado/bandep/74351.jpg	masculino	PA	PTB	505	3215-5505	dep.josuebengtson@camara.gov.br	
-178951	Titular	123	5830775	RAFAEL HUETE DA MOTTA	RAFAEL MOTTA	http://www.camara.gov.br/internet/deputado/bandep/178951.jpg	masculino	RN	PROS	737	3215-5737	dep.rafaelmotta@camara.gov.br	
+178951	Titular	123	5830775	RAFAEL HUETE DA MOTTA	RAFAEL MOTTA	http://www.camara.gov.br/internet/deputado/bandep/178951.jpg	masculino	RN	S.PART.	737	3215-5737	dep.rafaelmotta@camara.gov.br	
 141518	Titular	372	5830369	PAULO PEREIRA DA SILVA	PAULO PEREIRA DA SILVA	http://www.camara.gov.br/internet/deputado/bandep/141518.jpg	masculino	SP	SD	217	3215-5217	dep.paulopereiradasilva@camara.gov.br	
 160558	Titular	380	5830701	PAULO ROBERTO FREIRE DA COSTA	PAULO FREIRE	http://www.camara.gov.br/internet/deputado/bandep/160558.jpg	masculino	SP	PR	416	3215-5416	dep.paulofreire@camara.gov.br	
 160599	Titular	231	5830297	DIMAS FABIANO TOLEDO JÚNIOR	DIMAS FABIANO	http://www.camara.gov.br/internet/deputado/bandep/160599.jpg	masculino	MG	PP	325	3215-5325	dep.dimasfabiano@camara.gov.br	
@@ -263,7 +263,7 @@ ideCadastro	condicao	matricula	idParlamentar	nome	nomeParlamentar	urlFoto	sexo	u
 73926	Titular	10	5830358	JANETE MARIA GÓES CAPIBERIBE	JANETE CAPIBERIBE	http://www.camara.gov.br/internet/deputado/bandep/73926.jpg	feminino	AP	PSB	209	3215-5209	dep.janetecapiberibe@camara.gov.br	
 178866	Titular	98	5830427	LUIZIANNE DE OLIVEIRA LINS	LUIZIANNE LINS	http://www.camara.gov.br/internet/deputado/bandep/178866.jpg	feminino	CE	PT	713	3215-5713	dep.luiziannelins@camara.gov.br	
 160632	Titular	271	5830504	JOSÉ SILVA SOARES	ZÉ SILVA	http://www.camara.gov.br/internet/deputado/bandep/160632.jpg	masculino	MG	SD	608	3215-5608	dep.zesilva@camara.gov.br	
-179000	Titular	235	5830404	MARCELO HENRIQUE TEIXEIRA DIAS	MARCELO ÁLVARO ANTÔNIO	http://www.camara.gov.br/internet/deputado/bandep/179000.jpg	masculino	MG	PRP	824	3215-5824	dep.marceloalvaroantonio@camara.gov.br	
+179000	Titular	235	5830404	MARCELO HENRIQUE TEIXEIRA DIAS	MARCELO ÁLVARO ANTÔNIO	http://www.camara.gov.br/internet/deputado/bandep/179000.jpg	masculino	MG	PMB	824	3215-5824	dep.marceloalvaroantonio@camara.gov.br	
 74688	Titular	313	5830521	LUIZ SÉRGIO NÓBREGA DE OLIVEIRA	LUIZ SÉRGIO	http://www.camara.gov.br/internet/deputado/bandep/74688.jpg	masculino	RJ	PT	409	3215-5409	dep.luizsergio@camara.gov.br	
 73482	Titular	498	5830527	HENRIQUE FONTANA JÚNIOR	HENRIQUE FONTANA	http://www.camara.gov.br/internet/deputado/bandep/73482.jpg	masculino	RS	PT	256	3215-5256	dep.henriquefontana@camara.gov.br	
 141434	Titular	54	5830742	FLAVIANO FLÁVIO BAPTISTA DE MELO	FLAVIANO MELO	http://www.camara.gov.br/internet/deputado/bandep/141434.jpg	masculino	AC	PMDB	224	3215-5224	dep.flavianomelo@camara.gov.br	
@@ -371,14 +371,14 @@ ideCadastro	condicao	matricula	idParlamentar	nome	nomeParlamentar	urlFoto	sexo	u
 141384	Titular	183	5830408	ANTÔNIO CARLOS VALADARES FILHO	VALADARES FILHO	http://www.camara.gov.br/internet/deputado/bandep/141384.jpg	masculino	SE	PSB	660	3215-5660	dep.valadaresfilho@camara.gov.br	
 160604	Titular	481	5830617	PEDRO FRANCISCO UCZAI	PEDRO UCZAI	http://www.camara.gov.br/internet/deputado/bandep/160604.jpg	masculino	SC	PT	229	3215-5229	dep.pedrouczai@camara.gov.br	
 178851	Titular	11	5830308	JOZIANE ARAUJO NASCIMENTO ROCHA	JOZI ARAÚJO	http://www.camara.gov.br/internet/deputado/bandep/178851.jpg	feminino	AP	PTB	309	3215-5309	dep.joziaraujo@camara.gov.br	
-178959	Titular	4	5830646	HIRAN MANUEL GONCALVES DA SILVA	HIRAN GONÇALVES	http://www.camara.gov.br/internet/deputado/bandep/178959.jpg	masculino	RR	PMN	274	3215-5274	dep.hirangoncalves@camara.gov.br	
+178959	Titular	4	5830646	HIRAN MANUEL GONCALVES DA SILVA	HIRAN GONÇALVES	http://www.camara.gov.br/internet/deputado/bandep/178959.jpg	masculino	RR	PMB	274	3215-5274	dep.hirangoncalves@camara.gov.br	
 112437	Titular	76	5830331	JOÃO MARCELO SANTOS SOUZA	JOÃO MARCELO SOUZA	http://www.camara.gov.br/internet/deputado/bandep/112437.jpg	masculino	MA	PMDB	639	3215-5639	dep.joaomarcelosouza@camara.gov.br	
 74400	Titular	513	5830669	PAULO ROBERTO SEVERO PIMENTA	PAULO PIMENTA	http://www.camara.gov.br/internet/deputado/bandep/74400.jpg	masculino	RS	PT	552	3215-5552	dep.paulopimenta@camara.gov.br	
 73714	Titular	77	5830354	José Reinaldo Carneiro Tavares	JOSÉ REINALDO	http://www.camara.gov.br/internet/deputado/bandep/73714.jpg	masculino	MA	PSB	529	3215-5529	dep.josereinaldo@camara.gov.br	
 178963	Titular	493	5830523	LUIS ANTONIO FRANCISCATTO COVATTI	COVATTI FILHO	http://www.camara.gov.br/internet/deputado/bandep/178963.jpg	masculino	RS	PP	228	3215-5228	dep.covattifilho@camara.gov.br	
 141430	Titular	301	5830600	FELIPE LEONE BORNIER DE OLIVEIRA	FELIPE BORNIER	http://www.camara.gov.br/internet/deputado/bandep/141430.jpg	masculino	RJ	PSD	216	3215-5216	dep.felipebornier@camara.gov.br	
 74388	Titular	474	5830500	JORGE CATARINO LEONARDELI BOEIRA	JORGE BOEIRA	http://www.camara.gov.br/internet/deputado/bandep/74388.jpg	masculino	SC	PP	342	3215-5342	dep.jorgeboeira@camara.gov.br	
-178830	Titular	351	5830623	SINVAL MALHEIROS PINTO JÚNIOR	DR. SINVAL MALHEIROS	http://www.camara.gov.br/internet/deputado/bandep/178830.jpg	masculino	SP	PV	520	3215-5520	dep.dr.sinvalmalheiros@camara.gov.br	
+178830	Titular	351	5830623	SINVAL MALHEIROS PINTO JÚNIOR	DR. SINVAL MALHEIROS	http://www.camara.gov.br/internet/deputado/bandep/178830.jpg	masculino	SP	PMB	520	3215-5520	dep.dr.sinvalmalheiros@camara.gov.br	
 160607	Titular	506	5830377	JOSE LUIZ STÉDILE	JOSE STÉDILE	http://www.camara.gov.br/internet/deputado/bandep/160607.jpg	masculino	RS	PSB	354	3215-5354	dep.josestedile@camara.gov.br	
 167722	Titular	49	5830471	MARCOS ROGÉRIO DA SILVA BRITO	MARCOS ROGÉRIO	http://www.camara.gov.br/internet/deputado/bandep/167722.jpg	masculino	RO	PDT	930	3215-5930	dep.marcosrogerio@camara.gov.br	
 141515	Titular	316	5830554	OTAVIO SANTOS SILVA LEITE	OTAVIO LEITE	http://www.camara.gov.br/internet/deputado/bandep/141515.jpg	masculino	RJ	PSDB	225	3215-5225	dep.otavioleite@camara.gov.br	
@@ -433,7 +433,7 @@ ideCadastro	condicao	matricula	idParlamentar	nome	nomeParlamentar	urlFoto	sexo	u
 74535	Titular	190	5830741	BENITO DA GAMA SANTOS	BENITO GAMA	http://www.camara.gov.br/internet/deputado/bandep/74535.jpg	masculino	BA	PTB	414	3215-5414	dep.benitogama@camara.gov.br	
 160518	Titular	270	5830380	WELITON FERNANDES PRADO	WELITON PRADO	http://www.camara.gov.br/internet/deputado/bandep/160518.jpg	masculino	MG	PMB	862	3215-5862	dep.welitonprado@camara.gov.br	
 74445	Titular	75	5830718	JOÃO CASTELO RIBEIRO GONÇALVES	JOÃO CASTELO	http://www.camara.gov.br/internet/deputado/bandep/74445.jpg	masculino	MA	PSDB	324	3215-5324	dep.joaocastelo@camara.gov.br	
-178999	Titular	223	5830695	BRUNIELE FERREIRA GOMES	BRUNNY	http://www.camara.gov.br/internet/deputado/bandep/178999.jpg	feminino	MG	PTC	260	3215-5260	dep.brunny@camara.gov.br	
+178999	Titular	223	5830695	BRUNIELE FERREIRA GOMES	BRUNNY	http://www.camara.gov.br/internet/deputado/bandep/178999.jpg	feminino	MG	PMB	260	3215-5260	dep.brunny@camara.gov.br	
 4931	Titular	408	5830526	IZALCI LUCAS FERREIRA	IZALCI	http://www.camara.gov.br/internet/deputado/bandep/4931.jpg	masculino	DF	PSDB	602	3215-5602	dep.izalci@camara.gov.br	
 74399	Titular	510	5830449	ONYX DORNELLES LORENZONI	ONYX LORENZONI	http://www.camara.gov.br/internet/deputado/bandep/74399.jpg	masculino	RS	DEM	828	3215-5828	dep.onyxlorenzoni@camara.gov.br	
 178929	Titular	447	5830672	DIEGO ALEXSANDER GONCALO PAULA GARCIA	DIEGO GARCIA	http://www.camara.gov.br/internet/deputado/bandep/178929.jpg	masculino	PR	PHS	745	3215-5745	dep.diegogarcia@camara.gov.br	
@@ -495,7 +495,7 @@ ideCadastro	condicao	matricula	idParlamentar	nome	nomeParlamentar	urlFoto	sexo	u
 178969	Titular	177	5830569	FABIO CRUZ MITIDIERI	FÁBIO MITIDIERI	http://www.camara.gov.br/internet/deputado/bandep/178969.jpg	masculino	SE	PSD	286	3215-5286	dep.fabiomitidieri@camara.gov.br	
 74419	Titular	143	5830575	LUIZ GONZAGA PATRIOTA	GONZAGA PATRIOTA	http://www.camara.gov.br/internet/deputado/bandep/74419.jpg	masculino	PE	PSB	430	3215-5430	dep.gonzagapatriota@camara.gov.br	
 178935	Titular	464	5830546	VALDIR LUIZ ROSSONI	ROSSONI	http://www.camara.gov.br/internet/deputado/bandep/178935.jpg	masculino	PR	PSDB	513	3215-5513	dep.rossoni@camara.gov.br	
-141427	Titular	238	5830552	FÁBIO AUGUSTO RAMALHO DOS SANTOS	FÁBIO RAMALHO	http://www.camara.gov.br/internet/deputado/bandep/141427.jpg	masculino	MG	PV	452	3215-5452	dep.fabioramalho@camara.gov.br	
+141427	Titular	238	5830552	FÁBIO AUGUSTO RAMALHO DOS SANTOS	FÁBIO RAMALHO	http://www.camara.gov.br/internet/deputado/bandep/141427.jpg	masculino	MG	PMB	452	3215-5452	dep.fabioramalho@camara.gov.br	
 160572	Titular	150	5830621	JORGE WICKS CÔRTE REAL	JORGE CÔRTE REAL	http://www.camara.gov.br/internet/deputado/bandep/160572.jpg	masculino	PE	PTB	621	3215-5621	dep.jorgecortereal@camara.gov.br	
 160654	Titular	262	5830452	RENZO DO AMARAL BRAZ	RENZO BRAZ	http://www.camara.gov.br/internet/deputado/bandep/160654.jpg	masculino	MG	PP	736	3215-5736	dep.renzobraz@camara.gov.br	
 74275	Titular	367	5830475	JOSÉ MENTOR GUILHERME DE MELLO NETTO	JOSÉ MENTOR	http://www.camara.gov.br/internet/deputado/bandep/74275.jpg	masculino	SP	PT	502	3215-5502	dep.josementor@camara.gov.br	

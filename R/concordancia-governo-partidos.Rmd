@@ -67,7 +67,7 @@ p <- ggplot(data = concordancia_governo, aes(x=reorder(Partidos, -Concordancia),
   theme_classic() +
    theme(panel.background=element_blank())
 
-png("plot/concordancia_1.png", 
+png("plot/concordancia_2.png", 
     width = 800, height = 600)
 p
 dev.off()
@@ -120,7 +120,7 @@ p <- ggplot(data = plot, aes(x=reorder(nome_mes, Mes), y = Concordancia, group=p
   theme_classic() + 
   theme(axis.ticks = element_blank())
 
-png("plot/concordancia_mes_a_mes_1.png", 
+png("plot/concordancia_mes_a_mes_2.png", 
     width = 800, height = 600)
 p
 dev.off()

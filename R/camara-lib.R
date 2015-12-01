@@ -150,10 +150,15 @@ deputados_ativos <- function(votacao.cc){
 }
 
 deputadosAtivos <- function(votacao.cast, porcentagemAtividadeMinima) {
-  minNoVotacoes <- (ncol(votacao.cast) -5)*porcentagemAtividadeMinima
+  minNoVotacoes <- (ncol(votacao.cast) -4)*porcentagemAtividadeMinima
   ativos <- votacao.cast[rowSums(!is.na(votacao.cast[,5:ncol(votacao.cast)])) >= minNoVotacoes,]
-  ativos$num_votacoes <- rowSums(!is.na(ativos[,5:ncol(ativos)]))
   ativos
+}
+
+recuperar_num_votacoes <- function(votacao.cast) {
+  num_votacoes <- as.data.frame(rowSums(!is.na(votacao.cast[,5:ncol(votacao.cast)])))
+  names(num_votacoes) = c("num_votacoes")
+  num_votacoes
 }
 
 adiciona_nomes_corrigidos <- function(data){

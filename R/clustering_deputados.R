@@ -69,9 +69,24 @@ clusterizar <- function(caminhoPastaBaseHoC,numClusters) {
   summary(mca1)
   
   mca1.hcpc = HCPC(mca1,nb.clust = numClusters)
+  mca1.hcpc
 }
 
 # clusterizar(caminhoPastaBaseHoC,numClusters)
+hcpc <- clusterizar("./",2)
+clusters <- hcpc$data.clust
+clusters <- select(clusters, nome, partido, uf, clust)
 
+#variaveis que melhor diferenciam/caracterizam os clusters
+top10_vars <- as.data.frame(var.desc$test.chi2)[1:10,]
 
+#categorias das variaveis que melhor diferenciam/caracterizam os clusters
+top10_cat1 <- as.data.frame(var.desc$category[1])[1:10,]
+top10_cat2 <- as.data.frame(var.desc$category[2])[1:10,]
 
+#descrição do HCPC pelas dimensões do MCA
+hcpc$desc.axes
+
+#descriçao do HCPC utilizando os individuos que estao mais perto do centro e mais longe dos outros clusters para cada cluster
+#interessante para ver os individuos que representam a media do cluster
+hcpc$desc.ind
