@@ -79,7 +79,7 @@ mca1 = MCA(votacao.cast,
            ncp = 2, # Default is 5 
            graph = FALSE,
            quali.sup = c(1:4),
-           na.method = "Average") # NA or Avarege
+           na.method = "Average") # NA or Average
 
 # data frame with observation coordinates
 mca1_obs_df = data.frame(mca1$ind$coord, 
