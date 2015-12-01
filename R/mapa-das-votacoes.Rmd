@@ -176,7 +176,31 @@ dev.off()
 
 ```
 
+Gráfico com os deputados que estão na lista dos cabeças de 2015
 
+```{r}
+p <- ggplot(data = mca1_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_cabeca)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("#018571", 1)                    
+                                 )) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank(),
+        legend.position="none")
+  
+
+png("plot/cabecas.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
 
 Gráfico com os deputados que pediram a cassação de Cunha em destaque
 
