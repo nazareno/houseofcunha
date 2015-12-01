@@ -47,7 +47,6 @@ bancada.ruralista <- read.table("data/bancada-ruralista.csv", header=TRUE, quote
 deputados <- read.delim("deputados/deputados.csv")
 ```
 
-
 ```{r}
 votacao <- recuperar_votacoes(votos)
 
@@ -58,13 +57,6 @@ votacao <- recuperar_votacoes(votos)
 votacao.cc <- recuperar_votacoes_com_cunha(votos)
 ```
 
-```{r}
-# TODO para agrupar:
-# dispensar a coluna de nome 
-#rownames(votacao.cast) <- votacao.cast$nome
-#votacao.cast <- select(votacao.cast, -1)
-#diss <- daisy(votacao.cast[,2:ncol(votacao.cast)], metric = "gower") # stand = FALSE?
-```
 
 ```{r}
 votacao.cast <- dcast(votacao, 
@@ -117,8 +109,8 @@ mca1_obs_df$destaque_ministros  <- mca1_obs_df$nome %in% c("Celso Pansera",
 # Destaque dos deputados que participam da bancada bala
 mca1_obs_df$destaque_bancada_bala <-  mca1_obs_df$nome %in% bancada.bala$Bala
 
-x <- filter(mca1_obs_df, nome %in% cabecas$Cabeca)
-
+# Destaque dos deputados que estão na lista dos cabeças de 2015
+mca1_obs_df$destaque_cabeca <- mca1_obs_df$nome %in% cabecas$Cabeca
 
 # Destaque dos deputados que participam da bancada humanista
 mca1_obs_df$destaque_bancada_humanista <-  mca1_obs_df$nome %in% bancada.humanista$Humanista
@@ -164,12 +156,6 @@ semcunha <- filter(mca1_obs_df, nome != "Eduardo Cunha")
 p <- plotMCA(semcunha)
 p
 
-#semcunha$novo_nome <- paste0(semcunha$nome, "-", semcunha$partido, "/", semcunha$uf)
-#x <- select(semcunha, Dim.1, Dim.2, novo_nome, destaque_partido)
-#write.csv(x, file = "MCAtoplot.csv", row.names = FALSE)
-
-cassacao <- filter(mca1_obs_df, destaque_cassacao == TRUE)
-
 png("visao-geral.png", width = 800, height = 600)
 p
 dev.off()
@@ -188,6 +174,65 @@ p
 dev.off()
 
 ```
+
+Gráfico com os deputados que estão na lista dos cabeças de 2015
+
+```{r}
+p <- ggplot(data = mca1_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_cabeca)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("#018571", 1), 
+                                 alpha("darkred", 1), 
+                                 alpha("#E69F00", 1),
+                                  alpha("#FF3300", 1)                      
+                                 ), 
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+png("plot/cassacao_4.png", 
+    width = 800, height = 600)
+p
+dev.off()
+
+p <- ggplot(data = mca1_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_cassacao_pt)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("darkred", 1),
+                                 alpha("black", 1),
+                                 alpha("grey70", .4)                   
+                                 ), 
+                      guide = guide_legend(title = "", 
+                                           override.aes = list(alpha = 1, size = 4))) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+p <- p + geom_point(data = filter(mca1_obs_df, nome == "Eduardo Cunha"), 
+                    colour = "darkred", 
+                    size = 15, 
+                    alpha = 0.7)
+
+
+png("cassacao_pt_assinaram.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
 
 Gráfico com os deputados que pediram a cassação de Cunha em destaque
 
