@@ -77,7 +77,7 @@ votacao.cast <- deputadosAtivos(votacao.cast,0.5)
 
 mca1 = MCA(votacao.cast, 
            ncp = 2, # Default is 5 
-           graph = TRUE,
+           graph = FALSE,
            quali.sup = c(1:4),
            na.method = "Average") # NA or Avarege
 
@@ -87,17 +87,6 @@ mca1_obs_df = data.frame(mca1$ind$coord,
                          partido = votacao.cast$partido, 
                          uf = votacao.cast$uf,
                          id_dep = votacao.cast$id_dep)
-
-
-x <- as.integer(as.character(mca1_obs_df$id_dep))
-
-y <- deputados$ideCadastro %>% unique()
-
-x_y <- as.data.frame(setdiff(x, y))
-y_x <- setdiff(y, x)
-
-ind <- duplicated(mca1_obs_df[,6])
-mca1_obs_df[ind,]
 
 
 # To plot
@@ -127,6 +116,8 @@ mca1_obs_df$destaque_ministros  <- mca1_obs_df$nome %in% c("Celso Pansera",
 
 # Destaque dos deputados que participam da bancada bala
 mca1_obs_df$destaque_bancada_bala <-  mca1_obs_df$nome %in% bancada.bala$Bala
+
+x <- filter(mca1_obs_df, nome %in% cabecas$Cabeca)
 
 
 # Destaque dos deputados que participam da bancada humanista
