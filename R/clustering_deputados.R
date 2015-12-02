@@ -42,6 +42,7 @@ clusterizar <- function(caminhoPastaBaseHoC,numClusters) {
   bancada.sindical <- read.table("data/bancada-sindical.csv", header=TRUE, quote="\"")
   bancada.evangelica <- read.table("data/bancada-evangelica.csv", header=TRUE, quote="\"")
   bancada.ruralista <- read.table("data/bancada-ruralista.csv", header=TRUE, quote="\"")
+  cabecas <- read.table("~/Projetos/houseofcunha/data/cabecas.csv", header=TRUE, quote="\"")
   deputados <- read.delim("deputados/deputados.csv")
   
   # distinguir diferentes votações de uma mesma proposição
@@ -56,15 +57,9 @@ clusterizar <- function(caminhoPastaBaseHoC,numClusters) {
   
   votacao.cast <- as.data.frame(apply(votacao.cast, 2, as.factor))
   
+  votacao.cast <- deputadosAtivos(votacao.cast,0.5)
+  
   mca1_obs_df = votacao.cast
-  
-  deputados <- select(deputados, ideCadastro, condicao, sexo)
-  
-  
-  # To plot
-  mca1_obs_df$id_dep <- as.integer(as.character(mca1_obs_df$id_dep))
-  mca1_obs_df <- left_join(mca1_obs_df, deputados, by = c("id_dep" = "ideCadastro"))
-  #write.csv2(mca1_obs_df, "mapas_votacoes.csv", row.names = FALSE)
   
   # Alguns notáveis
   mca1_obs_df$destaque <- mca1_obs_df$nome %in% c("Tiririca", 
@@ -157,9 +152,36 @@ obter_topN_cats_por_cluster <- function(res.hcpc, n) {
   topN_cats
 }
 
+obter_partidos_por_cluster <- function(clusters) {
+  partidos_por_cluster <- list()
+  num_clusters = length(unique(clusters))
+  for (i in unique(clusters$clust)) {
+    cluster <- filter(clusters,clust == i)
+    partidos_por_cluster[[i]] <- aggregate(clust ~ partido, cluster, length)
+    partidos_por_cluster[[i]] <- partidos_por_cluster[[i]][order(-partidos_por_cluster[[i]]$clust),]
+  }
+  partidos_por_cluster
+}
+
+obter_cluster_de_deputados_em_destaque <- function(clusters) {
+  deputados_em_destaque <-  c("Tiririca", 
+                                   "Pr. Marco Feliciano", 
+                                   "Jair Bolsonaro", 
+                                   "Luiz Couto", 
+                                   "Jandira Feghali",
+                                   "Jean Wyllys", 
+                                   "Veneziano Vital do Rêgo")
+  
+  posicao_deputados_em_destaque <- filter(clusters, nome %in% deputados_em_destaque)
+  posicao_deputados_em_destaque
+}
+
 # clusterizar(caminhoPastaBaseHoC,numClusters)
 hcpc <- clusterizar("./",3)
 clusters <- obter_clusters(hcpc)
+
+partidos_por_cluster <- obter_partidos_por_cluster(clusters)
+posicao_deputados_em_destaque <- obter_cluster_de_deputados_em_destaque(clusters)
 
 top10_vars <- obter_topN_vars(hcpc,10)
 
