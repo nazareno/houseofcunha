@@ -69,12 +69,13 @@ function buildMap(highlight_column_name) {
 //                .style("text-anchor", "end")
 //                .text("Liberal")
 
+
         svg.selectAll(".dot")
             .data(data)
             .enter().append("circle")
             .attr("class", "dot")
             .attr("id", "pt")
-            .attr("r", 3.5)
+            .attr("r", 4)
             .attr("cx", function(d) { return x(d["Dim.1"]); })
             .attr("cy", function(d) { return y(d["Dim.2"]); })
             .style("fill", function(d) { return color(cValue(d));})
@@ -84,8 +85,8 @@ function buildMap(highlight_column_name) {
             .on("mouseover", function(d) {
                 if (d[highlight_column_name] === "TRUE") {
                     tooltip.transition()
-                        .duration(200)
-                        .style("opacity", .9);
+                        .duration(800)
+                        .style("opacity", .8);
                     tooltip.html("<div style=background-color:white;> <img src='" + getPoliticianImgURL(d) + "' height=60 width=auto> <br/>" +
                             d["nome.x"] + "<br/>" + d["partido.x"].toUpperCase() + " - (" + d["uf.x"].toUpperCase() + ") </div>")
                         .style("left", (d3.event.pageX - 50) + "px")
@@ -108,13 +109,15 @@ function buildMap(highlight_column_name) {
                 }
 
             })
+
+
             .on("mouseout", function(d) {
                 if (d[highlight_column_name] === "TRUE") {
 
                     tooltip.transition()
-                        .duration(500)
+                        .duration(800).style("opacity", .5)
                         .style("opacity", 0);
-                    d3.select(this).attr("r", 3.5).ease("elastic");
+                    d3.select(this).attr("r", 4).ease("elastic");
                     // fade out guide lines, then remove them
                     d3.selectAll(".guide").transition().duration(100).styleTween("opacity",
                         function () {
@@ -123,6 +126,7 @@ function buildMap(highlight_column_name) {
                         .remove()
                 }
             });
+
 
         var legend = svg.selectAll(".legend")
             .data(color.domain())
@@ -143,6 +147,10 @@ function buildMap(highlight_column_name) {
             .attr("dy", ".35em")
             .style("text-anchor", "end")
             .text(function(d) { return d; });
+
+
+
+
     });
 }
 
