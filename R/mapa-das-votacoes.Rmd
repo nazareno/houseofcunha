@@ -30,7 +30,7 @@ require("rCharts")
 Carregando CSV com os votos dos deputados
 
 ```{r}
-votos <- ler_votos_de_ativos("votacoes.csv")
+votos <- ler_votos_de_ativos2("votacoes.csv")
 
 # distinguir diferentes votações de uma mesma proposição
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
@@ -44,7 +44,7 @@ bancada.humanista <- read.table("data/bancada-humanista.csv", header=TRUE, quote
 bancada.sindical <- read.table("data/bancada-sindical.csv", header=TRUE, quote="\"")
 bancada.evangelica <- read.table("data/bancada-evangelica.csv", header=TRUE, quote="\"")
 bancada.ruralista <- read.table("data/bancada-ruralista.csv", header=TRUE, quote="\"")
-cabecas <- read.table("~/Projetos/houseofcunha/data/cabecas.csv", header=TRUE, quote="\"")
+cabecas <- read.table("data/cabecas.csv", header=TRUE, quote="\"")
 deputados <- read.delim("deputados/deputados.csv")
 ```
 
@@ -65,8 +65,6 @@ votacao.cast <- dcast(votacao,
                       value.var = "voto")
 
 votacao.cast <- as.data.frame(apply(votacao.cast, 2, as.factor))
-
-votacao.cast <- deputadosAtivos(votacao.cast,0.5)
 
 mca1 = MCA(votacao.cast, 
            ncp = 2, # Default is 5 
