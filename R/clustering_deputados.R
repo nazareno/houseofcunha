@@ -42,7 +42,7 @@ clusterizar <- function(caminhoPastaBaseHoC,numClusters) {
   bancada.sindical <- read.table("data/bancada-sindical.csv", header=TRUE, quote="\"")
   bancada.evangelica <- read.table("data/bancada-evangelica.csv", header=TRUE, quote="\"")
   bancada.ruralista <- read.table("data/bancada-ruralista.csv", header=TRUE, quote="\"")
-  cabecas <- read.table("~/Projetos/houseofcunha/data/cabecas.csv", header=TRUE, quote="\"")
+  cabecas <- read.table("data/cabecas.csv", header=TRUE, quote="\"")
   deputados <- read.delim("deputados/deputados.csv")
   
   # distinguir diferentes votações de uma mesma proposição
@@ -131,6 +131,7 @@ clusterizar <- function(caminhoPastaBaseHoC,numClusters) {
 obter_clusters <- function(res.hcpc) {
   clusters <- res.hcpc$data.clust
   clusters <- select(clusters, nome, partido, uf, clust)
+  clusters$clust <- as.integer(as.character(clusters$clust))
   clusters
 }
 
@@ -154,8 +155,8 @@ obter_topN_cats_por_cluster <- function(res.hcpc, n) {
 
 obter_partidos_por_cluster <- function(clusters) {
   partidos_por_cluster <- list()
-  num_clusters = length(unique(clusters))
-  for (i in unique(clusters$clust)) {
+  num_clusters = length(unique(clusters$clust))
+  for (i in seq(1:num_clusters)) {
     cluster <- filter(clusters,clust == i)
     partidos_por_cluster[[i]] <- aggregate(clust ~ partido, cluster, length)
     partidos_por_cluster[[i]] <- partidos_por_cluster[[i]][order(-partidos_por_cluster[[i]]$clust),]
@@ -176,12 +177,27 @@ obter_cluster_de_deputados_em_destaque <- function(clusters) {
   posicao_deputados_em_destaque
 }
 
+obter_num_cabecas_por_cluster <- function(clusters) {
+  cabecas <- read.table("data/cabecas.csv", header=TRUE, quote="\"")
+  
+  clusters$cabeca <- clusters$nome %in% cabecas$Cabeca
+  
+  cabecas_por_cluster <- list()
+  num_clusters = length(unique(clusters$clust))
+  for (i in seq(1:num_clusters)) {
+    cluster <- filter(clusters,clust == i)
+    cabecas_por_cluster[[i]] <- aggregate(clust ~ cabeca, cluster, length)
+  }
+  cabecas_por_cluster
+}
+
 # clusterizar(caminhoPastaBaseHoC,numClusters)
-hcpc <- clusterizar("./",3)
+hcpc <- clusterizar("./",2)
 clusters <- obter_clusters(hcpc)
 
 partidos_por_cluster <- obter_partidos_por_cluster(clusters)
 posicao_deputados_em_destaque <- obter_cluster_de_deputados_em_destaque(clusters)
+cabecas_por_cluster <- obter_num_cabecas_por_cluster(clusters)
 
 top10_vars <- obter_topN_vars(hcpc,10)
 

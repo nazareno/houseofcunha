@@ -90,6 +90,100 @@ ler_votos_de_ativos <- function(filepath){
   votos
 }
 
+deputadosAtivos <- function(votacao.cast, porcentagemAtividadeMinima) {
+  minNoVotacoes <- (ncol(votacao.cast) -4)*porcentagemAtividadeMinima
+  ativos <- votacao.cast[rowSums(!is.na(votacao.cast[,5:ncol(votacao.cast)])) >= minNoVotacoes,]
+  ativos
+}
+
+numero_de_votacoes <- function(votos){
+  num_votacoes <- nrow(unique(votos[,c("num_pro","id_votacao")]))
+  num_votacoes
+}
+
+deputadosAtivos2 <- function(votos, porcentagemAtividadeMinima) {
+  num_votacoes <- numero_de_votacoes(votos)
+  print(num_votacoes)
+  min_num_votacoes <- num_votacoes*porcentagemAtividadeMinima
+  print(min_num_votacoes)
+  ativos <- votos %>% 
+    group_by(nome) %>% 
+    summarise(c = n()) %>% 
+    filter(c >= min_num_votacoes) %>% 
+    select(nome)
+  
+  ativos
+}
+
+# Ler os votos ativos dos deputados
+ler_votos_de_ativos2 <- function(filepath){
+  filepath <- "votacoes.csv"
+  votos <- read.csv(filepath, strip.white=TRUE, quote="")
+  
+  # ajustes nos valores e tipos das variáveis
+  votos <- filter(votos, voto %in% c("sim", "não")) 
+  votos$voto <- droplevels(votos$voto)
+  votos$num_pro <- factor(votos$num_pro)
+  votos$uf <- droplevels(votos$uf)
+  
+  # apenas quem votou em muitas proposições 
+  # (espero que seja quem é deputado em 2015)
+  ativos <- deputadosAtivos2(votos,0.5)
+  descartados <- unique(filter(votos, !(nome %in% ativos$nome)) %>% select(nome, uf, partido))
+  descartados <- descartados[order(descartados$nome),]
+  votos <- filter(votos, nome %in% ativos$nome) 
+  print("Descartados por inatividade: ")
+  print(descartados)
+  
+  # Aparece com dois nomes
+  votos[votos$nome == "Evandro Rogerio Roman", "nome"] <- "Evandro Roman"
+  votos[votos$nome == "Eli Correa Filho", "nome"] <- "Eli Corrêa Filho"
+  votos[votos$nome == "Mainha", "nome"] <- "José Maia Filho"
+  
+  # Aparece com duas afiliações.
+  votos[votos$nome == "Cabo Daciolo", "partido"] <- "s.part."
+  votos[votos$nome == "Glauber Braga", "partido"] <- "s.part."
+  votos[votos$nome == "Silvio Costa", "partido"] <- "s.part."
+  votos[votos$nome == "Elizeu Dionizio", "partido"] <- "s.part."
+  votos[votos$nome == "Eliziane Gama", "partido"] <- "s.part."
+  votos[votos$nome == "Fernando Francischini", "partido"] <- "s.part."
+  votos[votos$nome == "João Derly", "partido"] <- "s.part."
+  votos[votos$nome == "Marcelo Aguiar", "partido"] <- "s.part."
+  votos[votos$nome == "Ronaldo Fonseca", "partido"] <- "s.part."
+  votos[votos$nome == "Stefano Aguiar", "partido"] <- "s.part."
+  votos[votos$nome == "Arthur Oliveira Maia", "partido"] <- "s.part."
+  votos[votos$nome == "Augusto Carvalho", "partido"] <- "s.part."
+  votos[votos$nome == "Elizeu Dionizio", "partido"] <- "s.part."
+  votos[votos$nome == "Genecias Noronha", "partido"] <- "s.part."
+  votos[votos$nome == "Givaldo Carimbão", "partido"] <- "s.part."
+  votos[votos$nome == "Izalci", "partido"] <- "s.part."
+  votos[votos$nome == "Jaime Martins", "partido"] <- "s.part."
+  votos[votos$nome == "Jorginho Mello", "partido"] <- "s.part."
+  votos[votos$nome == "Luiz Nishimori", "partido"] <- "s.part."
+  votos[votos$nome == "Valtenir Pereira", "partido"] <- "s.part."
+  votos[votos$nome == "Zé Silva", "partido"] <- "s.part."
+  votos[votos$nome == "Augusto Carvalho", "partido"] <- "s.part."
+  votos[votos$nome == "Paulo Pereira da Silva", "partido"] <- "s.part."
+  votos[votos$nome == "Alessandro Molon", "partido"] <- "s.part."
+  votos[votos$nome == "Aliel Machado", "partido"] <- "s.part."
+  votos[votos$nome == "Ariosto Holanda", "partido"] <- "s.part."
+  votos[votos$nome == "Augusto Coutinho", "partido"] <- "s.part."
+  votos[votos$nome == "Beto Mansur", "partido"] <- "s.part." 
+  votos[votos$nome == "Ademir Camilo", "partido"] <- "s.part."
+  votos[votos$nome == "Carlos Eduardo Cadoca", "partido"] <- "s.part."
+  votos[votos$nome == "Cícero Almeida", "partido"] <- "s.part."
+  votos[votos$nome == "Danilo Forte", "partido"] <- "s.part." 
+  votos[votos$nome == "Deley", "partido"] <- "s.part."
+  votos[votos$nome == "Dr. Jorge Silva", "partido"] <- "s.part."
+  votos[votos$nome == "Hugo Leal", "partido"] <- "s.part."
+  votos[votos$nome == "JHC", "partido"] <- "s.part."
+  votos[votos$nome == "Jorge Boeira", "partido"] <- "s.part."
+  votos[votos$nome == "Miro Teixeira", "partido"] <- "s.part."
+  votos[votos$nome == "Vicente Arruda", "partido"] <- "s.part."
+  
+  votos
+}
+
 ler_doacoes_de_eleitos <- function(arquivo.doacoes, arquivo.eleitos){
   deputados <- read.csv(arquivo.eleitos, strip.white=TRUE) %>% select(nome, nomeParlamentar)
   doacoes.f <- read.csv(arquivo.doacoes, sep=";", strip.white=TRUE)
@@ -117,7 +211,7 @@ recuperar_votacoes_com_cunha <- function(votos) {
   
   ec <- cbind(data.frame(nome = "Eduardo Cunha", 
                          partido = "pmdb", 
-                         uf = "rj"), 
+                         uf = "RJ"), 
               ec.v)
   ec$id_dep <- "999999"
   
@@ -147,12 +241,6 @@ deputados_ativos <- function(votacao.cc){
   
   votacao.cc <- setdiff(votacao.cc, dep_afastado)
   votacao.cc  
-}
-
-deputadosAtivos <- function(votacao.cast, porcentagemAtividadeMinima) {
-  minNoVotacoes <- (ncol(votacao.cast) -4)*porcentagemAtividadeMinima
-  ativos <- votacao.cast[rowSums(!is.na(votacao.cast[,5:ncol(votacao.cast)])) >= minNoVotacoes,]
-  ativos
 }
 
 recuperar_num_votacoes <- function(votacao.cast) {
