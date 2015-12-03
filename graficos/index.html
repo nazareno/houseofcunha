@@ -13,7 +13,9 @@
             stroke: #eee;
             shape-rendering: crispEdges;
             opacity: 1;
+            vector-effect: non-scaling-stroke;
         }
+
 
         .axis text { font-size:10px; }
 
@@ -46,7 +48,7 @@
                 .range(["#bdbdbd", "darkred", "#0066CC", "#E69F00", "#FF3300"]);
 
         var zoom = d3.behavior.zoom()
-                .scaleExtent([1, 5])
+                .scaleExtent([0, 1])
                 .on("zoom", zoomed);
 
         var drag = d3.behavior.drag()
@@ -58,8 +60,9 @@
         var svg = d3.select("#genres").append("svg")
                 .attr("width", w + margin.l + margin.r)
                 .attr("height", h + margin.t + margin.b)
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.right + ")")
                 .call(zoom);
-
 
         // set axes, as well as details on their ticks
         var xAxis = d3.svg.axis()
@@ -105,8 +108,6 @@
                                 r: 4,
                                 id: function(d) { return d.novo_nome; }
                             })
-                            .attr("cx", function(d) { return d.x; })
-                            .attr("cy", function(d) { return d.y; })
                             .style("fill", function(d) { return color(d.destaque_partido); })
                             .call(drag);
 
