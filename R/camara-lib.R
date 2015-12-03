@@ -103,7 +103,6 @@ numero_de_votacoes <- function(votos){
 
 deputadosAtivos2 <- function(votos, porcentagemAtividadeMinima) {
   num_votacoes <- numero_de_votacoes(votos)
-  print(num_votacoes)
   min_num_votacoes <- num_votacoes*porcentagemAtividadeMinima
   print(min_num_votacoes)
   ativos <- votos %>% 
@@ -115,6 +114,30 @@ deputadosAtivos2 <- function(votos, porcentagemAtividadeMinima) {
   ativos
 }
 
+deputados_que_mudaram_de_partido <- function(votos) {
+  deputados <- select(votos,nome,id_dep,partido,uf)
+  deputados_agrupados_por_nome <- aggregate(partido ~ nome + id_dep, deputados_partido, length)
+  
+  deputados_infieis <- filter(deputados_agrupados_por_nome,partido > 1)
+  deputados_infieis  
+}
+
+partido_atual <- function(id_deputado,votos) {
+  votos_por_data <- votos[order(as.Date(votos$data, format="%d/%m/%Y")),]
+  votos_deputado <- votos_por_data[votos_por_data$id_dep == id_deputado,]
+  partido <- tail(votos_deputado,1)$partido
+}
+
+definir_partido <- function(deputados_infieis,votos) {
+  for (i in seq(1:nrow(deputados_infieis))) {
+    id_deputado <- deputados_infieis[i,]$id_dep
+    partido <- partido_atual(id_deputado,votos) 
+    votos$partido[votos$id_dep == id_deputado] <- partido
+  }
+  
+  votos
+}
+
 # Ler os votos ativos dos deputados
 ler_votos_de_ativos2 <- function(filepath){
   filepath <- "votacoes.csv"
@@ -123,7 +146,7 @@ ler_votos_de_ativos2 <- function(filepath){
   # ajustes nos valores e tipos das variáveis
   votos <- filter(votos, voto %in% c("sim", "não")) 
   votos$voto <- droplevels(votos$voto)
-  votos$num_pro <- factor(votos$num_pro)
+  votos$num_pro <- factor(votos$num_pro) 
   votos$uf <- droplevels(votos$uf)
   
   # apenas quem votou em muitas proposições 
@@ -140,46 +163,9 @@ ler_votos_de_ativos2 <- function(filepath){
   votos[votos$nome == "Eli Correa Filho", "nome"] <- "Eli Corrêa Filho"
   votos[votos$nome == "Mainha", "nome"] <- "José Maia Filho"
   
-  # Aparece com duas afiliações.
-  votos[votos$nome == "Cabo Daciolo", "partido"] <- "s.part."
-  votos[votos$nome == "Glauber Braga", "partido"] <- "s.part."
-  votos[votos$nome == "Silvio Costa", "partido"] <- "s.part."
-  votos[votos$nome == "Elizeu Dionizio", "partido"] <- "s.part."
-  votos[votos$nome == "Eliziane Gama", "partido"] <- "s.part."
-  votos[votos$nome == "Fernando Francischini", "partido"] <- "s.part."
-  votos[votos$nome == "João Derly", "partido"] <- "s.part."
-  votos[votos$nome == "Marcelo Aguiar", "partido"] <- "s.part."
-  votos[votos$nome == "Ronaldo Fonseca", "partido"] <- "s.part."
-  votos[votos$nome == "Stefano Aguiar", "partido"] <- "s.part."
-  votos[votos$nome == "Arthur Oliveira Maia", "partido"] <- "s.part."
-  votos[votos$nome == "Augusto Carvalho", "partido"] <- "s.part."
-  votos[votos$nome == "Elizeu Dionizio", "partido"] <- "s.part."
-  votos[votos$nome == "Genecias Noronha", "partido"] <- "s.part."
-  votos[votos$nome == "Givaldo Carimbão", "partido"] <- "s.part."
-  votos[votos$nome == "Izalci", "partido"] <- "s.part."
-  votos[votos$nome == "Jaime Martins", "partido"] <- "s.part."
-  votos[votos$nome == "Jorginho Mello", "partido"] <- "s.part."
-  votos[votos$nome == "Luiz Nishimori", "partido"] <- "s.part."
-  votos[votos$nome == "Valtenir Pereira", "partido"] <- "s.part."
-  votos[votos$nome == "Zé Silva", "partido"] <- "s.part."
-  votos[votos$nome == "Augusto Carvalho", "partido"] <- "s.part."
-  votos[votos$nome == "Paulo Pereira da Silva", "partido"] <- "s.part."
-  votos[votos$nome == "Alessandro Molon", "partido"] <- "s.part."
-  votos[votos$nome == "Aliel Machado", "partido"] <- "s.part."
-  votos[votos$nome == "Ariosto Holanda", "partido"] <- "s.part."
-  votos[votos$nome == "Augusto Coutinho", "partido"] <- "s.part."
-  votos[votos$nome == "Beto Mansur", "partido"] <- "s.part." 
-  votos[votos$nome == "Ademir Camilo", "partido"] <- "s.part."
-  votos[votos$nome == "Carlos Eduardo Cadoca", "partido"] <- "s.part."
-  votos[votos$nome == "Cícero Almeida", "partido"] <- "s.part."
-  votos[votos$nome == "Danilo Forte", "partido"] <- "s.part." 
-  votos[votos$nome == "Deley", "partido"] <- "s.part."
-  votos[votos$nome == "Dr. Jorge Silva", "partido"] <- "s.part."
-  votos[votos$nome == "Hugo Leal", "partido"] <- "s.part."
-  votos[votos$nome == "JHC", "partido"] <- "s.part."
-  votos[votos$nome == "Jorge Boeira", "partido"] <- "s.part."
-  votos[votos$nome == "Miro Teixeira", "partido"] <- "s.part."
-  votos[votos$nome == "Vicente Arruda", "partido"] <- "s.part."
+  # Aparecem com mais de uma afiliação.
+  deputados_infieis <- deputados_que_mudaram_de_partido(votos)
+  votos <- definir_partido(deputados_infieis,votos)
   
   votos
 }
