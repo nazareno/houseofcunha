@@ -104,22 +104,22 @@ numero_de_votacoes <- function(votos){
 deputadosAtivos2 <- function(votos, porcentagemAtividadeMinima) {
   num_votacoes <- numero_de_votacoes(votos)
   min_num_votacoes <- num_votacoes*porcentagemAtividadeMinima
-  print(min_num_votacoes)
   ativos <- votos %>% 
-    group_by(nome) %>% 
+    group_by(id_dep) %>% 
     summarise(c = n()) %>% 
     filter(c >= min_num_votacoes) %>% 
-    select(nome)
+    select(id_dep)
   
   ativos
 }
 
 deputados_que_mudaram_de_partido <- function(votos) {
-  deputados <- select(votos,nome,id_dep,partido,uf)
-  deputados_agrupados_por_nome <- aggregate(partido ~ nome + id_dep, deputados_partido, length)
+  deputados <- select(votos,id_dep,partido,uf)
+  deputados <- deputados[!duplicated(deputados),]
+  deputados_agrupados_por_nome <- aggregate(partido ~ id_dep, deputados, length)
   
   deputados_infieis <- filter(deputados_agrupados_por_nome,partido > 1)
-  deputados_infieis  
+  deputados_infieis
 }
 
 partido_atual <- function(id_deputado,votos) {
@@ -139,7 +139,7 @@ definir_partido <- function(deputados_infieis,votos) {
 }
 
 # Ler os votos ativos dos deputados
-ler_votos_de_ativos2 <- function(filepath){
+ler_votos_de_ativos2 <- function(filepath, corrigir_migracoes){
   filepath <- "votacoes.csv"
   votos <- read.csv(filepath, strip.white=TRUE, quote="")
   
@@ -149,23 +149,28 @@ ler_votos_de_ativos2 <- function(filepath){
   votos$num_pro <- factor(votos$num_pro) 
   votos$uf <- droplevels(votos$uf)
   
-  # apenas quem votou em muitas proposições 
+  deputados_antes <- votos[!duplicated(votos$id_dep),]
+    
+  # apenas quem votou em pelo menos 50% das proposições
   # (espero que seja quem é deputado em 2015)
   ativos <- deputadosAtivos2(votos,0.5)
-  descartados <- unique(filter(votos, !(nome %in% ativos$nome)) %>% select(nome, uf, partido))
-  descartados <- descartados[order(descartados$nome),]
-  votos <- filter(votos, nome %in% ativos$nome) 
-  print("Descartados por inatividade: ")
-  print(descartados)
   
+#   descartados <- filter(votos, !(id_dep %in% ativos$id_dep)) %>% select(nome, id_dep, uf, partido)
+#   descartados <- descartados[!duplicated(descartados$id_dep),]
+#   print("Descartados por inatividade: ")
+#   print(descartados)
+
+  votos <- filter(votos, id_dep %in% ativos$id_dep) 
   # Aparece com dois nomes
   votos[votos$nome == "Evandro Rogerio Roman", "nome"] <- "Evandro Roman"
   votos[votos$nome == "Eli Correa Filho", "nome"] <- "Eli Corrêa Filho"
   votos[votos$nome == "Mainha", "nome"] <- "José Maia Filho"
-  
-  # Aparecem com mais de uma afiliação.
-  deputados_infieis <- deputados_que_mudaram_de_partido(votos)
-  votos <- definir_partido(deputados_infieis,votos)
+    
+  if (corrigir_migracoes) {
+    # Deputados que aparecem com mais de uma afiliação.
+    deputados_infieis <- deputados_que_mudaram_de_partido(votos)
+    votos <- definir_partido(deputados_infieis,votos)
+  }
   
   votos
 }

@@ -30,7 +30,7 @@ require("rCharts")
 Carregando CSV com os votos dos deputados
 
 ```{r}
-votos <- ler_votos_de_ativos2("votacoes.csv")
+votos <- ler_votos_de_ativos2("votacoes.csv",TRUE)
 
 # distinguir diferentes votações de uma mesma proposição
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
@@ -60,6 +60,9 @@ votacao.cc <- recuperar_votacoes_com_cunha(votos)
 
 
 ```{r}
+
+votacao2 <- votacao[!duplicated(votacao),]
+
 votacao.cast <- dcast(votacao, 
                       nome + partido + uf + id_dep ~ num_pro, 
                       value.var = "voto")
