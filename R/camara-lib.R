@@ -116,16 +116,18 @@ deputadosAtivos2 <- function(votos, porcentagemAtividadeMinima) {
 deputados_que_mudaram_de_partido <- function(votos) {
   deputados <- select(votos,id_dep,partido,uf)
   deputados <- deputados[!duplicated(deputados),]
-  deputados_agrupados_por_nome <- aggregate(partido ~ id_dep, deputados, length)
+  deputados_agrupados_por_id <- aggregate(partido ~ id_dep, deputados, length)
   
-  deputados_infieis <- filter(deputados_agrupados_por_nome,partido > 1)
+  deputados_infieis <- filter(deputados_agrupados_por_id,partido > 1)
   deputados_infieis
 }
 
 partido_atual <- function(id_deputado,votos) {
-  votos_por_data <- votos[order(as.Date(votos$data, format="%d/%m/%Y")),]
-  votos_deputado <- votos_por_data[votos_por_data$id_dep == id_deputado,]
-  partido <- tail(votos_deputado,1)$partido
+  votos_deputado <- votos[votos$id_dep == id_deputado,]
+  partidos_por_data <- votos_deputado[order(as.Date(votos_deputado$data, format="%d/%m/%Y")),]
+  partido <- tail(partidos_por_data,1)$partido
+  
+  return(partido)
 }
 
 definir_partido <- function(deputados_infieis,votos) {
@@ -135,12 +137,38 @@ definir_partido <- function(deputados_infieis,votos) {
     votos$partido[votos$id_dep == id_deputado] <- partido
   }
   
-  votos
+  return(votos)
+}
+
+deputados_com_multiplos_nomes <- function(votos) {
+  deputados <- select(votos,nome,id_dep,uf)
+  deputados <- deputados[!duplicated(deputados),]
+  deputados_agrupados_por_id <- aggregate(nome ~ id_dep, deputados, length)
+  
+  deputados_repetidos <- filter(deputados_agrupados_por_id,nome > 1)
+  deputados_repetidos
+}
+
+nome_atual <- function(id_deputado,votos) {
+  nomes_deputado <- votos[votos$id_dep == id_deputado,]
+  nomes_por_data <- nomes_deputado[order(as.Date(nomes_deputado$data, format="%d/%m/%Y")),]
+  nome <- tail(nomes_por_data,1)$nome
+  
+  return(nome)
+}
+
+definir_nome <- function(deputados_repetidos,votos) {
+  for (i in seq(1:nrow(deputados_repetidos))) {
+    id_deputado <- deputados_repetidos[i,]$id_dep
+    nome <- nome_atual(id_deputado,votos) 
+    votos$nome[votos$id_dep == id_deputado] <- nome
+  }
+  
+  return(votos)
 }
 
 # Ler os votos ativos dos deputados
 ler_votos_de_ativos2 <- function(filepath, corrigir_migracoes){
-  filepath <- "votacoes.csv"
   votos <- read.csv(filepath, strip.white=TRUE, quote="")
   
   # ajustes nos valores e tipos das variáveis
@@ -161,18 +189,20 @@ ler_votos_de_ativos2 <- function(filepath, corrigir_migracoes){
 #   print(descartados)
 
   votos <- filter(votos, id_dep %in% ativos$id_dep) 
-  # Aparece com dois nomes
-  votos[votos$nome == "Evandro Rogerio Roman", "nome"] <- "Evandro Roman"
-  votos[votos$nome == "Eli Correa Filho", "nome"] <- "Eli Corrêa Filho"
-  votos[votos$nome == "Mainha", "nome"] <- "José Maia Filho"
-    
+
+  #Correção de deputados com múltiplos nomes
+  deputados_repetidos <- deputados_com_multiplos_nomes(votos)
+  votos <- definir_nome(deputados_repetidos,votos)
+
   if (corrigir_migracoes) {
-    # Deputados que aparecem com mais de uma afiliação.
+    # Correção de deputados que aparecem com mais de uma afiliação.
     deputados_infieis <- deputados_que_mudaram_de_partido(votos)
     votos <- definir_partido(deputados_infieis,votos)
   }
+
+  deputados_depois <- votos[!duplicated(votos$id_dep),]
   
-  votos
+  return(votos)
 }
 
 ler_doacoes_de_eleitos <- function(arquivo.doacoes, arquivo.eleitos){
@@ -182,6 +212,23 @@ ler_doacoes_de_eleitos <- function(arquivo.doacoes, arquivo.eleitos){
   doacoes$CPF.do.candidato <- droplevels(as.factor(doacoes$CPF.do.candidato))
   doacoes$CPF.CNPJ.do.doador <- droplevels(as.factor(doacoes$CPF.CNPJ.do.doador))
   doacoes
+}
+
+recuperar_votos_por_deputado <- function(arquivo.votos, corrigir.migracoes) {
+  votos <- ler_votos_de_ativos2(arquivo.votos,corrigir.migracoes)
+  
+  # distinguir diferentes votações de uma mesma proposição
+  votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
+  
+  votacao <- recuperar_votacoes(votos)
+  
+  votos_por_deputado <- dcast(votacao, 
+                        nome + partido + uf + id_dep ~ num_pro, 
+                        value.var = "voto")
+  
+  votos_por_deputado <- as.data.frame(apply(votos_por_deputado, 2, as.factor))
+  
+  return(votos_por_deputado)
 }
 
 recuperar_votacoes <- function(votos) {

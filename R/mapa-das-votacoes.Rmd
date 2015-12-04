@@ -30,10 +30,7 @@ require("rCharts")
 Carregando CSV com os votos dos deputados
 
 ```{r}
-votos <- ler_votos_de_ativos2("votacoes.csv",TRUE)
-
-# distinguir diferentes votações de uma mesma proposição
-votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
 
 # Dep que pediram a cassação de Cunha 
 cassacao.cunha <- read.table("data/cassacao-cunha.csv", header=TRUE, quote="\"")
@@ -49,27 +46,9 @@ deputados <- read.delim("deputados/deputados.csv")
 ```
 
 ```{r}
-votacao <- recuperar_votacoes(votos)
-
-# votacao.detalhes <- votos %>% 
-#   select(nome, partido, uf, num_pro, voto, objetivo, cunha)
-# write.csv(votacao.detalhes, "detalhada.csv")
-
-votacao.cc <- recuperar_votacoes_com_cunha(votos)
-```
 
 
-```{r}
-
-votacao2 <- votacao[!duplicated(votacao),]
-
-votacao.cast <- dcast(votacao, 
-                      nome + partido + uf + id_dep ~ num_pro, 
-                      value.var = "voto")
-
-votacao.cast <- as.data.frame(apply(votacao.cast, 2, as.factor))
-
-mca1 = MCA(votacao.cast, 
+mca1 = MCA(votos_por_deputado, 
            ncp = 2, # Default is 5 
            graph = FALSE,
            quali.sup = c(1:4),
