@@ -19,9 +19,9 @@ plotMCA <- function(dados){
           axis.line = element_blank())
 }
 
-deputadosAtivos <- function(votacao.cast, porcentagemAtividadeMinima) {
-  minNoVotacoes <- (ncol(votacao.cast) -4)*porcentagemAtividadeMinima
-  ativos <- votacao.cast[rowSums(!is.na(votacao.cast[,5:ncol(votacao.cast)])) >= minNoVotacoes,]
+deputadosAtivos <- function(votacao, porcentagemAtividadeMinima) {
+  minNoVotacoes <- (ncol(votacao) -4)*porcentagemAtividadeMinima
+  ativos <- votacao[rowSums(!is.na(votacao[,5:ncol(votacao)])) >= minNoVotacoes,]
   ativos
 }
 
@@ -97,7 +97,7 @@ definir_nome <- function(deputados_repetidos,votos) {
 }
 
 # Ler os votos ativos dos deputados
-ler_votos_de_ativos <- function(filepath, corrigir_migracoes, min.porc.votacoes=0.5){
+ler_votos_de_ativos <- function(filepath, corrigir_migracoes, min.porc.votacoes=0.2){
   votos <- read.csv(filepath, strip.white=TRUE, quote="")
   
   # ajustes nos valores e tipos das variáveis
@@ -209,8 +209,8 @@ deputados_ativos <- function(votacao.cc){
   votacao.cc  
 }
 
-recuperar_num_votacoes <- function(votacao.cast) {
-  num_votacoes <- as.data.frame(rowSums(!is.na(votacao.cast[,5:ncol(votacao.cast)])))
+recuperar_num_votacoes <- function(votacao) {
+  num_votacoes <- as.data.frame(rowSums(!is.na(votacao[,5:ncol(votacao)])))
   names(num_votacoes) = c("num_votacoes")
   num_votacoes
 }

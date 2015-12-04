@@ -42,12 +42,11 @@ bancada.sindical <- read.table("data/bancada-sindical.csv", header=TRUE, quote="
 bancada.evangelica <- read.table("data/bancada-evangelica.csv", header=TRUE, quote="\"")
 bancada.ruralista <- read.table("data/bancada-ruralista.csv", header=TRUE, quote="\"")
 cabecas <- read.table("data/cabecas.csv", header=TRUE, quote="\"")
+conselho.etica <- read.table("data/conselho-de-etica.csv", header=TRUE, quote="\"")
 deputados <- read.delim("deputados/deputados.csv")
 ```
 
 ```{r}
-
-
 mca1 = MCA(votos_por_deputado, 
            ncp = 2, # Default is 5 
            graph = FALSE,
@@ -56,10 +55,10 @@ mca1 = MCA(votos_por_deputado,
 
 # data frame with observation coordinates
 mca1_obs_df = data.frame(mca1$ind$coord, 
-                         nome = votacao.cast$nome,
-                         partido = votacao.cast$partido, 
-                         uf = votacao.cast$uf,
-                         id_dep = votacao.cast$id_dep)
+                         nome = votos_por_deputado$nome,
+                         partido = votos_por_deputado$partido, 
+                         uf = votos_por_deputado$uf,
+                         id_dep = votos_por_deputado$id_dep)
 
 
 # To plot
@@ -86,6 +85,9 @@ mca1_obs_df$destaque_ministros  <- mca1_obs_df$nome %in% c("Celso Pansera",
                                 "André Figueiredo",
                                 "Marcelo Castro"
                                 )
+
+# Destaque dos deputados que participam do conselho de ética
+mca1_obs_df$destaque_conselho_etica <- mca1_obs_df$nome %in% conselho.etica$Deputados
 
 # Destaque dos deputados que participam da bancada bala
 mca1_obs_df$destaque_bancada_bala <-  mca1_obs_df$nome %in% bancada.bala$Bala
@@ -155,6 +157,33 @@ p
 dev.off()
 
 ```
+
+Gráfico com os deputados que estão no conselho de ética 2015
+
+```{r}
+p <- ggplot(data = mca1_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque_conselho_etica)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("#018571", 1)                    
+                                 )) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank(),
+        legend.position="none")
+  
+
+png("plot/conselho_etica.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
 
 Gráfico com os deputados que estão na lista dos cabeças de 2015
 

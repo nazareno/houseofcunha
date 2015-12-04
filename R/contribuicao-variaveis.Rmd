@@ -10,7 +10,7 @@ Compara as posições dos deputados federais considerando os votos em cada propo
 
 Bibliotecas necessárias 
 
-```{r}
+```{r,  message=FALSE, warning=FALSE}
 library(ggplot2)
 library(dplyr)
 library(reshape2)
@@ -20,7 +20,7 @@ require(scales)
 require(FactoMineR)
 
 
-source("R/camara-lib.R")
+source(" R/camara-lib.R")
 ```
 
 Carregando CSV com os votos dos deputados
@@ -29,33 +29,27 @@ Carregando CSV com os votos dos deputados
 votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
 
 mca1 = MCA(votos_por_deputado, 
-           ncp = 5, # Default is 5 
+           ncp = 2, # Default is 5 
            graph = FALSE,
            quali.sup = c(1:4),
            na.method = "Average") # NA or Avarege
 
+# Top contribuição das variaveis
+top_contrib <- head(as.data.frame(mca1$var$contrib))
+top_contrib
+
+# Top extremos
 var_coord <- as.data.frame(mca1$var$coord)
 
 top_5_dim1 <- head(var_coord[order(var_coord$"Dim 1", decreasing=TRUE),], n=5)
+top_5_dim1
+
 top_5_dim2 <- head(var_coord[order(var_coord$"Dim 2", decreasing=TRUE),], n=5)
+top_5_dim2
 
 bottom_5_dim1 <- tail(var_coord[order(var_coord$"Dim 1", decreasing=TRUE),], n=5)
+bottom_5_dim1
+
 bottom_5_dim2 <- tail(var_coord[order(var_coord$"Dim 2", decreasing=TRUE),], n=5)
-
-dep_coord <- as.data.frame(mca1$ind$coord)
-
-dep_top_5_dim1 <- head(dep_coord[order(dep_coord$"Dim 1", decreasing=TRUE),], n=5)
-dep_top_5_dim2 <- head(dep_coord[order(dep_coord$"Dim 2", decreasing=TRUE),], n=5)
-
-dep_bottom_5_dim1 <- tail(dep_coord[order(dep_coord$"Dim 1", decreasing=TRUE),], n=5)
-dep_bottom_5_dim2 <- tail(dep_coord[order(dep_coord$"Dim 2", decreasing=TRUE),], n=5)
-
-df_lest <- votos_deputados_extremo(dep_top_5_dim1, top_5_dim1)
-df_norte <- votos_deputados_extremo(dep_top_5_dim2, top_5_dim2)
-
-df_oest <- votos_deputados_extremo(dep_bottom_5_dim1, bottom_5_dim1)
-df_sul <- votos_deputados_extremo(dep_bottom_5_dim2, bottom_5_dim2)
-
+bottom_5_dim2
 ```
-
-
