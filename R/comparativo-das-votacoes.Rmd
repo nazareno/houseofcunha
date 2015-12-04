@@ -21,7 +21,7 @@ source("R/camara-lib.R")
 Carregando CSV com os votos dos deputados
 
 ```{r, warning=FALSE, message=FALSE}
-votos <- ler_votos_de_ativos("votacoes.csv")
+votos <- ler_votos_de_ativos("votacoes.csv", corrigir_migracoes = TRUE)
 votacoes_bbb <- read.table("proposicoes-bbb.csv", header=TRUE, quote="\"")
 quant_tipo_pro <- unique(votos[,c("tipo","num_pro")])
 

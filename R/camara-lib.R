@@ -19,77 +19,6 @@ plotMCA <- function(dados){
           axis.line = element_blank())
 }
 
-# Ler os votos ativos dos deputados
-ler_votos_de_ativos <- function(filepath){
-  votos <- read.csv(filepath, strip.white=TRUE, quote="")
-  
-  # ajustes nos valores e tipos das variáveis
-  votos <- filter(votos, voto %in% c("sim", "não")) 
-  votos$voto <- droplevels(votos$voto)
-  votos$num_pro <- factor(votos$num_pro)
-  votos$uf <- droplevels(votos$uf)
-  
-  # apenas quem votou em muitas proposições 
-  # (espero que seja é deputado em 2015)
-  ativos <- votos %>% 
-    group_by(nome) %>% 
-    summarise(c = n()) %>% 
-    filter(c >= 31) %>% 
-    select(nome)
-  votos <- filter(votos, nome %in% ativos$nome) 
-  descartados <- filter(votos, !(nome %in% ativos$nome)) %>% select(nome, uf, partido)
-  print("Descartados por inatividade: ")
-  print(descartados)
-
-  # Aparece com dois nomes
-  votos[votos$nome == "Evandro Rogerio Roman", "nome"] <- "Evandro Roman"
-  votos[votos$nome == "Eli Correa Filho", "nome"] <- "Eli Corrêa Filho"
-  votos[votos$nome == "Mainha", "nome"] <- "José Maia Filho"
-    
-  # Aparece com duas afiliações.
-  votos[votos$nome == "Cabo Daciolo", "partido"] <- "s.part."
-  votos[votos$nome == "Glauber Braga", "partido"] <- "s.part."
-  votos[votos$nome == "Silvio Costa", "partido"] <- "s.part."
-  votos[votos$nome == "Elizeu Dionizio", "partido"] <- "s.part."
-  votos[votos$nome == "Eliziane Gama", "partido"] <- "s.part."
-  votos[votos$nome == "Fernando Francischini", "partido"] <- "s.part."
-  votos[votos$nome == "João Derly", "partido"] <- "s.part."
-  votos[votos$nome == "Marcelo Aguiar", "partido"] <- "s.part."
-  votos[votos$nome == "Ronaldo Fonseca", "partido"] <- "s.part."
-  votos[votos$nome == "Stefano Aguiar", "partido"] <- "s.part."
-  votos[votos$nome == "Arthur Oliveira Maia", "partido"] <- "s.part."
-  votos[votos$nome == "Augusto Carvalho", "partido"] <- "s.part."
-  votos[votos$nome == "Elizeu Dionizio", "partido"] <- "s.part."
-  votos[votos$nome == "Genecias Noronha", "partido"] <- "s.part."
-  votos[votos$nome == "Givaldo Carimbão", "partido"] <- "s.part."
-  votos[votos$nome == "Izalci", "partido"] <- "s.part."
-  votos[votos$nome == "Jaime Martins", "partido"] <- "s.part."
-  votos[votos$nome == "Jorginho Mello", "partido"] <- "s.part."
-  votos[votos$nome == "Luiz Nishimori", "partido"] <- "s.part."
-  votos[votos$nome == "Valtenir Pereira", "partido"] <- "s.part."
-  votos[votos$nome == "Zé Silva", "partido"] <- "s.part."
-  votos[votos$nome == "Augusto Carvalho", "partido"] <- "s.part."
-  votos[votos$nome == "Paulo Pereira da Silva", "partido"] <- "s.part."
-  votos[votos$nome == "Alessandro Molon", "partido"] <- "s.part."
-  votos[votos$nome == "Aliel Machado", "partido"] <- "s.part."
-  votos[votos$nome == "Ariosto Holanda", "partido"] <- "s.part."
-  votos[votos$nome == "Augusto Coutinho", "partido"] <- "s.part."
-  votos[votos$nome == "Beto Mansur", "partido"] <- "s.part." 
-  votos[votos$nome == "Ademir Camilo", "partido"] <- "s.part."
-  votos[votos$nome == "Carlos Eduardo Cadoca", "partido"] <- "s.part."
-  votos[votos$nome == "Cícero Almeida", "partido"] <- "s.part."
-  votos[votos$nome == "Danilo Forte", "partido"] <- "s.part." 
-  votos[votos$nome == "Deley", "partido"] <- "s.part."
-  votos[votos$nome == "Dr. Jorge Silva", "partido"] <- "s.part."
-  votos[votos$nome == "Hugo Leal", "partido"] <- "s.part."
-  votos[votos$nome == "JHC", "partido"] <- "s.part."
-  votos[votos$nome == "Jorge Boeira", "partido"] <- "s.part."
-  votos[votos$nome == "Miro Teixeira", "partido"] <- "s.part."
-  votos[votos$nome == "Vicente Arruda", "partido"] <- "s.part."
-  
-  votos
-}
-
 deputadosAtivos <- function(votacao.cast, porcentagemAtividadeMinima) {
   minNoVotacoes <- (ncol(votacao.cast) -4)*porcentagemAtividadeMinima
   ativos <- votacao.cast[rowSums(!is.na(votacao.cast[,5:ncol(votacao.cast)])) >= minNoVotacoes,]
@@ -168,7 +97,7 @@ definir_nome <- function(deputados_repetidos,votos) {
 }
 
 # Ler os votos ativos dos deputados
-ler_votos_de_ativos2 <- function(filepath, corrigir_migracoes){
+ler_votos_de_ativos <- function(filepath, corrigir_migracoes, min.porc.votacoes=0.5){
   votos <- read.csv(filepath, strip.white=TRUE, quote="")
   
   # ajustes nos valores e tipos das variáveis
@@ -179,9 +108,8 @@ ler_votos_de_ativos2 <- function(filepath, corrigir_migracoes){
   
   deputados_antes <- votos[!duplicated(votos$id_dep),]
     
-  # apenas quem votou em pelo menos 50% das proposições
-  # (espero que seja quem é deputado em 2015)
-  ativos <- deputadosAtivos2(votos,0.5)
+  # Apenas quem votou em pelo menos 50% das proposições
+  ativos <- deputadosAtivos2(votos,min.porc.votacoes)
   
 #   descartados <- filter(votos, !(id_dep %in% ativos$id_dep)) %>% select(nome, id_dep, uf, partido)
 #   descartados <- descartados[!duplicated(descartados$id_dep),]
@@ -190,7 +118,7 @@ ler_votos_de_ativos2 <- function(filepath, corrigir_migracoes){
 
   votos <- filter(votos, id_dep %in% ativos$id_dep) 
 
-  #Correção de deputados com múltiplos nomes
+  # Correção de deputados com múltiplos nomes
   deputados_repetidos <- deputados_com_multiplos_nomes(votos)
   votos <- definir_nome(deputados_repetidos,votos)
 
@@ -215,7 +143,7 @@ ler_doacoes_de_eleitos <- function(arquivo.doacoes, arquivo.eleitos){
 }
 
 recuperar_votos_por_deputado <- function(arquivo.votos, corrigir.migracoes) {
-  votos <- ler_votos_de_ativos2(arquivo.votos,corrigir.migracoes)
+  votos <- ler_votos_de_ativos(arquivo.votos,corrigir.migracoes)
   
   # distinguir diferentes votações de uma mesma proposição
   votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
