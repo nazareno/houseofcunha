@@ -23,5 +23,5 @@ done < props-tipo_numero_ano.txt
 
 mkdir deputados
 curl "http://www.camara.gov.br/SitCamaraWS/Deputados.asmx/ObterDeputados" > deputados/deputados.xml
-java -jar xml2csv-conv.jar deputados/deputados.xml data/deputados-detalhes.csv 
+
 

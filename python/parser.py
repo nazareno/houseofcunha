@@ -19,6 +19,7 @@ fileToWrite = open(sys.argv[2],'w')
 header =  'tipo,num_pro,ano,id_votacao,resumo,data,hora,objetivo,sessao,nome,id_dep,partido,uf,voto,orientacao_partido,orientacao_gov,cunha'
 fileToWrite.write(header + '\n')
 
+total_num_votacoes = 0
 for file in files:
 
     try:
@@ -26,7 +27,7 @@ for file in files:
     except:
         txt = open(file)
         if ("xml") not in txt.readline():
-            print "ERROR: NOT A XML >>> " + file
+            print "ERROR: NOT AN XML >>> " + file
             continue
         else:
             print "ERROR: >>>" + file
@@ -46,7 +47,7 @@ for file in files:
         to_print.append(ano)
 
         i += 1
-        resumo = votacao.attributes['Resumo'].value.strip().replace(',','.')
+        resumo = votacao.attributes['Resumo'].value.strip().replace(',','.').replace("\r\n",'')
         data_prop = votacao.attributes['Data'].value.strip()
         hora_prop = votacao.attributes['Hora'].value.strip()
         objetivo = votacao.attributes['ObjVotacao'].value.strip().replace(',','.')
@@ -105,6 +106,11 @@ for file in files:
             if len(to_print + to_print_dep) == 17:
                 to_print_final =  ','.join(to_print + to_print_dep)
                 fileToWrite.write(to_print_final + "\n")
+
+    total_num_votacoes += i
+
+print "total_num_votacoes: ", total_num_votacoes
+        
 
 
 fileToWrite.close()
