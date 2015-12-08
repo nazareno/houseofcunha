@@ -27,6 +27,10 @@ votos <- ler_votos_de_ativos("votacoes.csv")
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 
 votos$pro_orientacao <- paste0(votos$num_pro, "-", votos$orientacao_partido)
+
+votos$mes <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%m'))
+votos$ano <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%Y'))
+votos <- filter(votos, ano >=2015)
 ```
 
 Orientação de cada partido para cada votação
@@ -117,6 +121,7 @@ p <- ggplot(data = plot, aes(x=reorder(nome_mes, Mes), y = Concordancia, group=p
                       guide = guide_legend(title = "Partido", 
                                            override.aes = list(alpha = 1, size = 4))) +
   ylab("Concordância com o Governo") + xlab("Mês") +  
+  facet_grid(partido ~ .) +
   theme_classic() + 
   theme(axis.ticks = element_blank())
 
@@ -125,5 +130,8 @@ png("plot/concordancia_mes_a_mes_1.png",
 p
 dev.off()
 
+# PAREI AQUI. CONTAR VOTAÇÕES POR MÊS
+votos %>% group_by(mes) %>% mutate(votados = NROW(unique(num_pro)))
+  
 ```
 

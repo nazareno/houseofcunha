@@ -408,7 +408,12 @@ dev.off()
 Alguns ilustres
 
 ```{r}
-p <- ggplot(data = semcunha, 
+toplot <- read.csv2("semcunha.csv")
+toplot$itau <- ifelse(is.na(toplot$itau), "F", toplot$itau)
+toplot$taurus <- ifelse(is.na(toplot$taurus), "F", toplot$taurus)
+toplot$destaque <- as.factor(toplot$taurus) == T
+
+p <- ggplot(data = toplot, 
             aes(x = Dim.1, y = Dim.2, label = nome, colour = destaque, size = destaque)) +
   geom_hline(yintercept = 0, colour = "gray70") +
   geom_vline(xintercept = 0, colour = "gray70") +
@@ -424,10 +429,13 @@ p <- ggplot(data = semcunha,
         axis.line = element_blank())
 
 p
-png("plot/icones.png", 
+png("plot/taurus.png", 
     width = 800, height = 600)
 p
 dev.off()
+
+nomes <- filter(toplot, taurus == TRUE)$nome
+x <- votacao.cast %>% filter(nome %in% nomes) 
 
 ```
 

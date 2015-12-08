@@ -38,6 +38,26 @@ votos <- votos %>%
   filter(ano_votacao >= 2015)
 ```
 
+```{r}
+library("googleVis")
+mca_t <- geraMCA(filter(votos, mes <= 5))
+mca_t$data <- as.Date(paste0("01/02/2015"), format = "%d/%m/%Y")
+for(ate in 6:10){
+  mca <- geraMCA(filter(votos, mes <= ate))
+  mca$data <- as.Date(paste0("01/", ate, "/2015"), format = "%d/%m/%Y")
+  mca_t <- rbind(mca_t, mca)
+}
+
+mca_t$nome <- paste0(mca_t$nome, " - ", mca_t$partido, "/", mca_t$uf)
+
+motion <- gvisMotionChart(mca_t, 
+                          idvar = "nome", 
+                          timevar = "data", 
+                          options = list(poiintSize = 1))
+plot(motion)
+```
+
+
 ```{r, fig.align='center'}
 mca <- geraMCA(filter(votos, mes < 3))
 plotMCA(mca) + labs(title = "Votações até Fevereiro")
