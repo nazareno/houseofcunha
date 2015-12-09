@@ -89,7 +89,7 @@ dev.off()
 # Conselho de ética, sem nomes
 c1 <- geom_point(data = filter(mca1_obs_df, conselho_etica == TRUE), 
                  aes(x = Dim.1, y = Dim.2, label = nome), 
-                 colour = "brown", alpha = 0.5, size = 6) 
+                 colour = "blue", alpha = 0.5, size = 6) 
 png(paste(caminho_pasta_resultados,"conselho-etica-pontos.png",sep="/"), width = 800, height = 600)
 p + c1 
 dev.off()
