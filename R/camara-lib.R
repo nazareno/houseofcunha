@@ -8,16 +8,29 @@ plotMCA <- function(dados){
                                    alpha("darkred", 1), 
                                    alpha("#0066CC", 1),
                                    alpha("#E69F00", 1),
-                                   alpha("#FF3300", 1)
-    ), 
-    guide = guide_legend(title = "partido", 
-                         override.aes = list(alpha = 1, size = 4))) + 
+                                   alpha("#FF3300", 1)), 
+                        guide = guide_legend(title = "partido", 
+                                             override.aes = list(alpha = 1, size = 4))) + 
     ylab("") + xlab("")+ 
     theme_classic() + 
     theme(axis.ticks = element_blank(), 
           axis.text = element_blank(), 
           axis.line = element_blank())
 }
+
+plotMCAstains <- function(dados, alfa = 0.2){
+  ggplot(data = dados, aes(x = Dim.1, y = Dim.2, label = nome)) +
+    geom_hline(yintercept = 0, colour = "gray70") +
+    geom_vline(xintercept = 0, colour = "gray70") +
+    geom_point(size = 9, alpha = alfa, colour = "grey") + 
+    # stat_density2d(aes(fill = ..level..), geom="polygon") + 
+    ylab("") + xlab("")+ 
+    theme_classic() + 
+    theme(axis.ticks = element_blank(), 
+          axis.text = element_blank(), 
+          axis.line = element_blank())
+}
+
 
 deputadosAtivos <- function(votacao, porcentagemAtividadeMinima) {
   minNoVotacoes <- (ncol(votacao) -4)*porcentagemAtividadeMinima
