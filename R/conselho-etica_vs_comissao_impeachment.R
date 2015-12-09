@@ -104,7 +104,7 @@ dev.off()
 # Chapa eleita (oposição), sem nomes
 c2 <- geom_point(data = filter(mca1_obs_df, chapa == "oposição"), 
                  aes(x = Dim.1, y = Dim.2, label = nome), 
-                 colour = "darkcyan", alpha = 0.5, size = 6)
+                 colour = "green", alpha = 0.5, size = 6)
 png(paste(caminho_pasta_resultados,"chapa-oposicao-pontos.png",sep="/"), width = 800, height = 600)
 p + c2 
 dev.off()
