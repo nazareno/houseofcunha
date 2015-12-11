@@ -72,24 +72,13 @@ mca1_obs_df <- left_join(mca1_obs_df, select(indicados, ideCadastro, chapa), by 
 # Destaque dos deputados que participam do conselho de ética
 mca1_obs_df$conselho_etica <- mca1_obs_df$nome %in% conselho.etica$Deputados
 
-p <- plotMCAstains(mca1_obs_df, alfa = 0.1)
-
-# Referência geral
-png("plot/visao-geral-pontos.png", width = 800, height = 600)
-p + geom_point(aes(colour = destaque_partido), size = 7)  +  
-  scale_colour_manual(values = c(alpha("grey70", .05), 
-                                 alpha("darkred", .6), 
-                                 alpha("#0066CC", .6),
-                                 alpha("#E69F00", .6),
-                                 alpha("#FF3300", .6)), 
-                      guide = guide_legend(title = "partido", 
-                                           override.aes = list(alpha = 1, size = 7))) 
-dev.off()
+p <- plotMCAstains(mca1_obs_df, alfa = 0.15)
 
 # Conselho de ética, sem nomes
+destaque.cor = "#660033"
 c1 <- geom_point(data = filter(mca1_obs_df, conselho_etica == TRUE), 
                  aes(x = Dim.1, y = Dim.2, label = nome), 
-                 colour = "blue", alpha = 0.5, size = 6) 
+                 colour = destaque.cor, alpha = 0.5, size = 9) 
 png(paste(caminho_pasta_resultados,"conselho-etica-pontos.png",sep="/"), width = 800, height = 600)
 p + c1 
 dev.off()
@@ -98,13 +87,14 @@ png(paste(caminho_pasta_resultados,"conselho-etica-pontos-e-nomes.png",sep="/"),
 p + c1 + geom_text(data = filter(mca1_obs_df, conselho_etica == TRUE), 
                    aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
                    check_overlap = TRUE,
-                   colour = "blue", alpha = 0.5, size = 3.5, hjust = 0.5, vjust = 1.9)
+                   colour = destaque.cor, alpha = 0.5, size = 3.5, hjust = 0.5, vjust = 2.2)
 dev.off()
 
+destaque.oposicao ="darkcyan"
 # Chapa eleita (oposição), sem nomes
 c2 <- geom_point(data = filter(mca1_obs_df, chapa == "oposição"), 
                  aes(x = Dim.1, y = Dim.2, label = nome), 
-                 colour = "green", alpha = 0.5, size = 6)
+                 colour = destaque.oposicao, alpha = 0.5, size = 9)
 png(paste(caminho_pasta_resultados,"chapa-oposicao-pontos.png",sep="/"), width = 800, height = 600)
 p + c2 
 dev.off()
@@ -113,18 +103,11 @@ png(paste(caminho_pasta_resultados,"conselho-etica-vs-chapa-oposicao-pontos.png"
 p + c1 + c2
 dev.off()
 
-# png("plot/impeachment/chapas-as-duas-pontos-e-manchas.png", width = 800, height = 600)
-# p + c1 + c2 + stat_density2d(aes(fill = chapa, #colour = chapa,
-#                                  alpha = ..level..),
-#                              geom = "polygon") +  
-#   scale_alpha(range = c(0, 1/3), guide = "none") 
-# dev.off()
-
 png(paste(caminho_pasta_resultados,"chapa-oposicao-pontos-e-nomes.png",sep="/"), width = 800, height = 600)
 p + c2 + geom_text(data = filter(mca1_obs_df, chapa == "oposição"), 
                    aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
                    check_overlap = TRUE,
-                   colour = "darkcyan", alpha = 0.5, size = 3.5, hjust = 0.5, vjust = 1.9)
+                   colour = "darkcyan", alpha = 0.5, size = 3.5, hjust = 1.1, vjust = 2.2)
 dev.off()
 
 # p + stat_density2d(aes(fill = destaque_partido, colour = destaque_partido,

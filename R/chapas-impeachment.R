@@ -111,7 +111,7 @@ png("plot/impeachment/chapas-as-duas-pontos-e-manchas.png", width = 800, height 
 p + c1 + c2 + stat_density2d(aes(fill = chapa, #colour = chapa,
                                  alpha = ..level..),
                              geom = "polygon") +  
-  scale_alpha(range = c(0, 1/3), guide = "none") 
+  scale_alpha(range = c(.1, .3), guide = "none") 
 dev.off()
 
 
@@ -130,7 +130,6 @@ p + stat_density2d(aes(fill = destaque_partido, colour = destaque_partido,
   scale_size(range = c(0, 6/2), guide = "none")
 
 p + stat_density2d(aes(fill = chapa, #colour = chapa,
-                       alpha = ..level.., 
-                       size = ..level..),
+                       alpha = ..level..),
                    geom = "polygon") +  
   scale_alpha(range = c(0, 1/2), guide = "none") 
