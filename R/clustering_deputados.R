@@ -127,7 +127,7 @@ caminho_pasta_resultados = "plot/clusters"
 votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
 
 mca <- MCA(votos_por_deputado, 
-           ncp = 2, # Default is 5 
+           ncp = 6, # Default is 5 
            graph = FALSE,
            quali.sup = c(1:4),
            na.method = "Average") # NA or Average
