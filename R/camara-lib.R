@@ -48,7 +48,7 @@ deputadosAtivos2 <- function(votos, porcentagemAtividadeMinima) {
   min_num_votacoes <- num_votacoes*porcentagemAtividadeMinima
   ativos <- votos %>% 
     group_by(id_dep) %>% 
-    summarise(c = n()) %>% 
+    dplyr::summarise(c = n()) %>% 
     filter(c >= min_num_votacoes) %>% 
     select(id_dep)
   

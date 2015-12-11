@@ -2,8 +2,8 @@
 
 #Bibliotecas necessárias 
 library(ggplot2)
-library(dplyr)
 library(plyr)
+library(dplyr)
 library(reshape2)
 require(cluster)
 require(ade4)
@@ -33,7 +33,13 @@ caminho_pasta_resultados = "plot/clusters"
 
 votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
 
-mca1_obs_df <-  data.frame(mca1$ind$coord, 
+mca <- MCA(votos_por_deputado, 
+           ncp = 2, # Default is 5 
+           graph = FALSE,
+           quali.sup = c(1:4),
+           na.method = "Average") # NA or Average
+
+mca1_obs_df <-  data.frame(mca$ind$coord, 
                            nome = votos_por_deputado$nome,
                            partido = votos_por_deputado$partido, 
                            uf = votos_por_deputado$uf,
@@ -134,15 +140,9 @@ mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in%
 #              quali.sup = c(1:4,261:274),
 #              na.method = "Average") # NA or Average
 
-mca <- MCA(votos_por_deputado, 
-           ncp = 2, # Default is 5 
-           graph = FALSE,
-           quali.sup = c(1:4),
-           na.method = "Average") # NA or Average
-
 clusterizar <- function(mca,numClusters) {    
-  mca1.hcpc = HCPC(mca1,nb.clust = numClusters)
-  mca1.hcpc
+  mca.hcpc = HCPC(mca,nb.clust = numClusters)
+  mca.hcpc
 }
 
 obter_clusters <- function(res.hcpc) {
@@ -230,6 +230,12 @@ buildClustersPlots <- function(hcpc, mca1_obs_df,pasta_resultados) {
   }
 }
 
+recuperar_convex_hulls <- function(df) {
+  find_hull <- function(df) df[chull(df$Dim.1, df$Dim.2), ]
+  hulls <- ddply(df, "clust", find_hull)
+  return(hulls)
+}
+
 hcpc <- clusterizar(mca,2)
 clusters <- obter_clusters(hcpc)
 
@@ -254,66 +260,83 @@ hcpc$desc.axes
 hcpc$desc.ind
 
 #getting the convex hull of each unique point set
-df <- mca1_obs_df
-find_hull <- function(df) df[chull(df$Dim.1, df$Dim.2), ]
-hulls <- ddply(df, "clust", find_hull)
+hulls <- recuperar_convex_hulls(mca1_obs_df)
 
 p <- plotMCAstains(mca1_obs_df, alfa = 0.1)
 
+paleta_partidos <- c("grey70", "darkred", "#56B4E9", "#F0E442", "#FF0000", "#0072B2", "#009E73", "#CC79A7")
+
+paleta_partidos_small <- c("grey70", "darkred", "#FF0000", "#0072B2", "#009E73", "#CC79A7")
+
 png(paste(caminho_pasta_resultados,"c2_1.png",sep="/"), width = 800, height = 600)
-p + geom_polygon(data = hulls[hulls$clust == 1,], alpha = 0.1, color = "red", fill = "red") + 
+p + geom_polygon(data = hulls[hulls$clust == 1,], alpha = 0.05, color = "red") + 
   geom_point(data = filter(mca1_obs_df, clust == 1), aes(colour = destaque_partido), size = 7)  +  
-  scale_colour_manual(values = c(alpha("grey70", .05), 
-                                 alpha("darkred", .6), 
-                                 alpha("#FF3300", .6),
-                                 alpha("#0066CC", .6),
-                                 alpha("#E69F00", .6)), 
+  scale_colour_manual(values = paleta_partidos_small, 
                       guide = guide_legend(title = "partido", 
                                            override.aes = list(alpha = 1, size = 7))) 
 dev.off()
-# plot
 
 
 png(paste(caminho_pasta_resultados,"c2_2.png",sep="/"), width = 800, height = 600)
-p + geom_polygon(data = hulls[hulls$clust == 2,], alpha = 0.1, color = "blue", fill = "blue") + 
+p + geom_polygon(data = hulls[hulls$clust == 2,], alpha = 0.05, color = "blue") + 
   geom_point(data = filter(mca1_obs_df, clust == 2), aes(colour = destaque_partido), size = 7)  +  
-  scale_colour_manual(values = c(alpha("grey70", .05), 
-                                 alpha("#FF3300", .6), 
-                                 alpha("#0066CC", .6),
-                                 alpha("darkred", .6),
-                                 alpha("#E69F00", .6)), 
+  scale_colour_manual(values = paleta_partidos, 
                       guide = guide_legend(title = "partido", 
                                            override.aes = list(alpha = 1, size = 7))) 
 dev.off()
+
 
 png(paste(caminho_pasta_resultados,"c2_all.png",sep="/"), width = 800, height = 600)
-p + geom_polygon(data = hulls, alpha = 0.1, color = hulls$clust, fill = hulls$clust) + 
+p + geom_polygon(data = hulls[hulls$clust == 1,], alpha = 0.05, color = "red") + 
+  geom_polygon(data = hulls[hulls$clust == 2,], alpha = 0.05, color = "blue") +
   geom_point(data = mca1_obs_df, aes(colour = destaque_partido), size = 7)  +  
-  scale_colour_manual(values = c(alpha("grey70", .05), 
-                                 alpha("darkred", .6), 
-                                 alpha("#FF3300", .6),
-                                 alpha("#0066CC", .6),
-                                 alpha("#E69F00", .6)), 
+  scale_colour_manual(values = paleta_partidos, 
                       guide = guide_legend(title = "partido", 
                                            override.aes = list(alpha = 1, size = 7))) 
 dev.off()
 
-# c2 <- geom_point(data = filter(mca1_obs_df, clust == 2), 
-#                  aes(x = Dim.1, y = Dim.2, label = nome), 
-#                  colour = "blue", alpha = 0.5, size = 6)
-# c2_ellipse <- stat_ellipse(data = filter(mca1_obs_df, clust == 2),  
-#                            aes(x = Dim.1, y = Dim.2, label = nome), colour = "blue",
-#                            type = "norm")
-# png(paste(caminho_pasta_resultados,"c2_2.png",sep="/"), width = 800, height = 600)
-# p + c2 + c2_ellipse
-# dev.off()
-# 
-# png(paste(caminho_pasta_resultados,"c2_all.png",sep="/"), width = 800, height = 600)
-# p + c1 + c2 + c1_ellipse + c2_ellipse
-# p + c1 + c2 + geom_polygon(data = hulls, alpha = 0.5)
-# dev.off()
-# 
-# ggplot(data = mca1_obs_df, aes(x = Dim.1, y = Dim.2, colour=clust, fill = clust)) +
-#   geom_point() + 
-#   geom_polygon(data = hulls, alpha = 0.5)
+######################## cluster size = 3 #########################################
 
+hcpc <- clusterizar(mca,3)
+clusters <- obter_clusters(hcpc)
+
+mca1_obs_df <- cbind(mca1_obs_df, select(clusters,clust))
+mca1_obs_df$clust <- as.factor(mca1_obs_df$clust)
+
+hulls <- recuperar_convex_hulls(mca1_obs_df)
+
+png(paste(caminho_pasta_resultados,"c3_1.png",sep="/"), width = 800, height = 600)
+p + geom_polygon(data = hulls[hulls$clust == 1,], alpha = 0.05, color = "red") + 
+  geom_point(data = filter(mca1_obs_df, clust == 1), aes(colour = destaque_partido), size = 7)  +  
+  scale_colour_manual(values = paleta_partidos_small, 
+                      guide = guide_legend(title = "partido", 
+                                           override.aes = list(alpha = 1, size = 7))) 
+dev.off()
+
+
+png(paste(caminho_pasta_resultados,"c3_2.png",sep="/"), width = 800, height = 600)
+p + geom_polygon(data = hulls[hulls$clust == 2,], alpha = 0.05, color = "orange") + 
+  geom_point(data = filter(mca1_obs_df, clust == 2), aes(colour = destaque_partido), size = 7)  +  
+  scale_colour_manual(values = paleta_partidos, 
+                      guide = guide_legend(title = "partido", 
+                                           override.aes = list(alpha = 1, size = 7))) 
+dev.off()
+
+png(paste(caminho_pasta_resultados,"c3_3.png",sep="/"), width = 800, height = 600)
+p + geom_polygon(data = hulls[hulls$clust == 3,], alpha = 0.05, color = "blue") + 
+  geom_point(data = filter(mca1_obs_df, clust == 3), aes(colour = destaque_partido), size = 7)  +  
+  scale_colour_manual(values = paleta_partidos, 
+                      guide = guide_legend(title = "partido", 
+                                           override.aes = list(alpha = 1, size = 7))) 
+dev.off()
+
+
+png(paste(caminho_pasta_resultados,"c3_all.png",sep="/"), width = 800, height = 600)
+p + geom_polygon(data = hulls[hulls$clust == 1,], alpha = 0.05, color = "red") + 
+  geom_polygon(data = hulls[hulls$clust == 2,], alpha = 0.05, color = "orange") +
+  geom_polygon(data = hulls[hulls$clust == 3,], alpha = 0.05, color = "blue") +
+  geom_point(data = mca1_obs_df, aes(colour = destaque_partido), size = 7)  +  
+  scale_colour_manual(values = paleta_partidos, 
+                      guide = guide_legend(title = "partido", 
+                                           override.aes = list(alpha = 1, size = 7))) 
+dev.off()
