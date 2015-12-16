@@ -20,7 +20,7 @@ require(scales)
 require(FactoMineR)
 
 
-source(" R/camara-lib.R")
+source("R/camara-lib.R")
 ```
 
 Carregando CSV com os votos dos deputados

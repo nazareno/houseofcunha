@@ -34,6 +34,16 @@ plotMCAstains <- function(dados, alfa = 0.2){
           axis.line = element_blank())
 }
 
+plotBancadas <- function(dados){
+  aux <- as.data.frame(table(dados$clust))
+  colnames(aux) <- c("clust", "freq")
+  aux$porcentagem <- aux$freq / sum(aux$freq)
+  
+  ggplot(data = aux, aes(x=reorder(clust, -porcentagem), y = porcentagem)) + 
+    geom_bar(stat="identity") + 
+    theme_classic() + 
+    theme(axis.ticks = element_blank())
+}
 
 deputadosAtivos <- function(votacao, porcentagemAtividadeMinima) {
   minNoVotacoes <- (ncol(votacao) -4)*porcentagemAtividadeMinima
