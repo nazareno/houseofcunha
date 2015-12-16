@@ -566,22 +566,35 @@ buildClustersPlots <- function(hcpc, mca1_obs_df,pasta_resultados) {
   dev.off()
 }
 
-clusterizar_deputados_por_proposicao <- function(votos_df, numero.prop) {
+recuperar_votos_proposicao <- function(votos_df, numero.prop, remover.nas = FALSE) {
   proposicao = as.character(numero.prop)
-  
-  votos_proposicao <- votos_por_deputado[,grepl(proposicao,names(votos_por_deputado))]
+  votos_proposicao <- votos_por_deputado[,grepl(paste("^",proposicao,"\\b", sep=""),names(votos_por_deputado))]
   votos_proposicao <- cbind(votos_por_deputado[,1:4],votos_proposicao)
   
-  #remove linhas com NAs
-  #votos_proposicao <- votos_proposicao[complete.cases(votos_proposicao),]
+  if (remover.nas) {
+    votos_proposicao <- votos_proposicao[complete.cases(votos_proposicao),]
+  }
   
-  mca1 = MCA(votos_proposicao, 
-             ncp = 2, # Default is 5 
-             graph = TRUE,
-             quali.sup = c(1:4),
-             na.method = "Average") # NA or Average
+  return(votos_proposicao)
+}
+
+recuperar_df_pontos_mca <- function(mca.res, votos_df) {
+  mca_obs_df <-  data.frame(mca.res$ind$coord, 
+                            nome = votos_df$nome,
+                            partido = votos_df$partido, 
+                            uf = votos_df$uf,
+                            id_dep = votos_df$id_dep)
   
-  hcpc <- clusterizar(mca1,2)
+  mca_obs_df$id_dep <- as.integer(as.character(mca_obs_df$id_dep))
   
-  return (hcpc)
+  return(mca_obs_df)
+}
+
+add_col_partidos_iconicos <- function(df_pontos_mca) {
+  df_pontos_mca$destaque_partido = factor(ifelse(df_pontos_mca$partido %in% 
+                                                 c("pmdb", "psdb", "pt", "psol"), 
+                                               as.character(df_pontos_mca$partido), 
+                                               "outros"))
+  
+  return(df_pontos_mca)
 }
