@@ -1,0 +1,123 @@
+---
+title: "Proporção Bancadas Cluster"
+author: "Rodolfo Viana"
+date: "16-12-2015"
+output: html_document
+---
+
+Mostra a proporção de deputados de cada bancada em cada cluster
+
+```{r}
+#Bibliotecas necessárias 
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(reshape2)
+require(cluster)
+require(ade4)
+require(scales)
+require(FactoMineR)
+require(rCharts)
+source("R/camara-lib.R")
+```
+
+
+
+```{r}
+caminho_pasta_resultados = "plot/clusters"
+
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
+
+mca <- MCA(votos_por_deputado, 
+           ncp = 6, # Default is 5 
+           graph = FALSE,
+           quali.sup = c(1:4),
+           na.method = "Average") # NA or Average
+
+mca1_obs_df <-  data.frame(mca$ind$coord, 
+                           nome = votos_por_deputado$nome,
+                           partido = votos_por_deputado$partido, 
+                           uf = votos_por_deputado$uf,
+                           id_dep = votos_por_deputado$id_dep)
+
+mca1_obs_df$id_dep <- as.integer(as.character(mca1_obs_df$id_dep))
+
+hcpc <- clusterizar(mca,3)
+clusters <- obter_clusters(hcpc)
+
+mca1_obs_df <- cbind(mca1_obs_df, select(clusters,clust))
+mca1_obs_df$clust <- as.factor(mca1_obs_df$clust)
+```
+
+```{r}
+# Bancadas
+bancada.bala <- read.table("/home/viana/Projetos/houseofcunha/data/bancada-bala.csv", header=TRUE, quote="\"")
+bancada.humanista <- read.table("/home/viana/Projetos/houseofcunha/data/bancada-humanista.csv", header=TRUE, quote="\"")
+bancada.sindical <- read.table("/home/viana/Projetos/houseofcunha/data/bancada-sindical.csv", header=TRUE, quote="\"")
+bancada.evangelica <- read.table("/home/viana/Projetos/houseofcunha/data/bancada-evangelica.csv", header=TRUE, quote="\"")
+bancada.ruralista <- read.table("/home/viana/Projetos/houseofcunha/data/bancada-ruralista.csv", header=TRUE, quote="\"")
+```
+
+
+```{r}
+# Partidos icônicos
+mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in% 
+                                               c("pmdb", "psdb", "pt", "psol"), 
+                                             as.character(mca1_obs_df$partido), 
+                                             "outros"))
+
+# Destaque dos deputados que participam da bancada bala
+mca1_obs_df$destaque_bancada_bala <-  mca1_obs_df$nome %in% bancada.bala$Bala
+
+# Destaque dos deputados que participam da bancada humanista
+mca1_obs_df$destaque_bancada_humanista <-  mca1_obs_df$nome %in% bancada.humanista$Humanista
+
+# Bancada Evangelica 
+mca1_obs_df$destaque_bancada_evangelica <- mca1_obs_df$nome %in% bancada.evangelica$Evangelica
+
+# Bancada Ruralista
+mca1_obs_df$destaque_bancada_ruralista <- mca1_obs_df$nome %in% bancada.ruralista$Ruralista
+
+# Bancada Sindical
+mca1_obs_df$destaque_bancada_sindical <- mca1_obs_df$nome %in% bancada.sindical$Sindical
+
+# Bancada da Bala
+p <- plotBancadas(filter(mca1_obs_df, destaque_bancada_bala == TRUE))  + 
+  labs(y='% da bancada', x='Clust', title = "Bancada da Bala") 
+  
+p
+png("plot/bancadas/bancada_clust_bala.png", width = 800, height = 600)
+dev.off()
+
+# Bancada dos direitos humanos 
+p <- plotBancadas(filter(mca1_obs_df, destaque_bancada_humanista == TRUE))  + 
+  labs(y='% da bancada', x='Clust', title = "Bancada dos Direitos Humanos") 
+  
+p
+png("plot/bancadas/bancada_clust_direitos_humanos.png", width = 800, height = 600)
+dev.off()
+
+# Bancada Evangelica 
+p <- plotBancadas(filter(mca1_obs_df, destaque_bancada_evangelica == TRUE))  + 
+  labs(y='% da bancada', x='Clust', title = "Bancada Evangelica") 
+  
+p
+png("plot/bancadas/bancada_clust_evangelica.png", width = 800, height = 600)
+dev.off()
+
+# Bancada Ruralista 
+p <- plotBancadas(filter(mca1_obs_df, destaque_bancada_ruralista == TRUE))  + 
+  labs(y='% da bancada', x='Clust', title = "Bancada Ruralista") 
+  
+p
+png("plot/bancadas/bancada_clust_ruralista.png", width = 800, height = 600)
+dev.off()
+
+# Bancada Sindical 
+p <- plotBancadas(filter(mca1_obs_df, destaque_bancada_sindical == TRUE))  + 
+  labs(y='% da bancada', x='Clust', title = "Bancada Sindical") 
+  
+p
+png("plot/bancadas/bancada_clust_sindical.png", width = 800, height = 600)
+dev.off()
+```
