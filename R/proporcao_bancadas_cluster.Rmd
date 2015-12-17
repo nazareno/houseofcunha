@@ -18,9 +18,10 @@ require(ade4)
 require(scales)
 require(FactoMineR)
 require(rCharts)
+library(plotly)
+library(RColorBrewer)
 source("R/camara-lib.R")
 ```
-
 
 
 ```{r}
@@ -80,44 +81,125 @@ mca1_obs_df$destaque_bancada_ruralista <- mca1_obs_df$nome %in% bancada.ruralist
 
 # Bancada Sindical
 mca1_obs_df$destaque_bancada_sindical <- mca1_obs_df$nome %in% bancada.sindical$Sindical
+```
 
+Plot mostrando a proporção de deputados por clust
+
+```{r}
+dep_clust <- as.data.frame(table(mca1_obs_df$clust))
+colnames(dep_clust) <- c("clust", "freq")
+
+dep_clust$porcentagem <- (dep_clust$freq / sum(dep_clust$freq)) * 100
+
+p <- ggplot(data = dep_clust, aes(x=reorder(clust, -porcentagem), y = porcentagem)) + 
+    geom_bar(stat="identity") + 
+    theme_classic() + 
+    labs(y='% de Deputados', x='Clust', title = "Deputados por Clust") +
+    theme(axis.ticks = element_blank())
+
+png("plot/bancadas/deputados_clust.png", width = 800, height = 600)
+p
+dev.off()
+```
+
+Plots das mostrando a proporção das bancadas por clust
+
+```{r}
 # Bancada da Bala
 p <- plotBancadas(filter(mca1_obs_df, destaque_bancada_bala == TRUE))  + 
   labs(y='% da bancada', x='Clust', title = "Bancada da Bala") 
   
-p
 png("plot/bancadas/bancada_clust_bala.png", width = 800, height = 600)
+p
 dev.off()
 
 # Bancada dos direitos humanos 
 p <- plotBancadas(filter(mca1_obs_df, destaque_bancada_humanista == TRUE))  + 
   labs(y='% da bancada', x='Clust', title = "Bancada dos Direitos Humanos") 
   
-p
+
 png("plot/bancadas/bancada_clust_direitos_humanos.png", width = 800, height = 600)
+p
 dev.off()
 
 # Bancada Evangelica 
 p <- plotBancadas(filter(mca1_obs_df, destaque_bancada_evangelica == TRUE))  + 
   labs(y='% da bancada', x='Clust', title = "Bancada Evangelica") 
   
-p
+
 png("plot/bancadas/bancada_clust_evangelica.png", width = 800, height = 600)
+p
 dev.off()
 
 # Bancada Ruralista 
 p <- plotBancadas(filter(mca1_obs_df, destaque_bancada_ruralista == TRUE))  + 
   labs(y='% da bancada', x='Clust', title = "Bancada Ruralista") 
   
-p
+
 png("plot/bancadas/bancada_clust_ruralista.png", width = 800, height = 600)
+p
 dev.off()
 
 # Bancada Sindical 
 p <- plotBancadas(filter(mca1_obs_df, destaque_bancada_sindical == TRUE))  + 
   labs(y='% da bancada', x='Clust', title = "Bancada Sindical") 
   
-p
+
 png("plot/bancadas/bancada_clust_sindical.png", width = 800, height = 600)
+p
+dev.off()
+```
+
+Plot das bancadas por clust
+
+```{r}
+# Bancada da Bala
+p <- plotCluster(mca1_obs_df) + 
+  geom_point(data = filter(mca1_obs_df, destaque_bancada_bala == TRUE), size = 9, alpha = 0.2, colour = "Black")  +
+  coord_equal() +
+  labs(title = "Bancada da Bala") 
+  
+png("plot/bancadas/bancada_clust_bala_dep.png", width = 800, height = 600)
+p
+dev.off()
+
+# Bancada dos direitos humanos 
+p <- plotCluster(mca1_obs_df) + 
+  geom_point(data = filter(mca1_obs_df, destaque_bancada_humanista == TRUE), size = 9, alpha = 0.2, colour = "Black")  +
+  coord_equal() +
+  labs(title = "Bancada dos Direitos Humanos")
+  
+png("plot/bancadas/bancada_clust_direitos_humanos_dep.png", width = 800, height = 600)
+p
+dev.off()
+
+# Bancada Evangelica 
+p <- plotCluster(mca1_obs_df) + 
+  geom_point(data = filter(mca1_obs_df, destaque_bancada_evangelica == TRUE), size = 9, alpha = 0.2, colour = "Black")  +
+  coord_equal() +
+  labs(title = "Bancada Evangelica")
+
+png("plot/bancadas/bancada_clust_evangelica_dep.png", width = 800, height = 600)
+p
+dev.off()
+
+# Bancada Ruralista 
+p <- plotCluster(mca1_obs_df) + 
+  geom_point(data = filter(mca1_obs_df, destaque_bancada_ruralista == TRUE), size = 9, alpha = 0.2, colour = "Black")  +
+  coord_equal() +
+  labs(title = "Bancada Ruralista")
+
+png("plot/bancadas/bancada_clust_ruralista_dep.png", width = 800, height = 600)
+p
+dev.off()
+
+# Bancada Sindical 
+p <- plotCluster(mca1_obs_df) + 
+  geom_point(data = filter(mca1_obs_df, destaque_bancada_sindical == TRUE), size = 9, alpha = 0.2, colour = "Black")  +
+  coord_equal() +
+  labs(title = "Bancada Sindical")
+
+png("plot/bancadas/bancada_clust_sindical_dep.png", width = 800, height = 600)
+p
 dev.off()
 ```

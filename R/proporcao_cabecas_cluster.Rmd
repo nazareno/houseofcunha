@@ -1,0 +1,99 @@
+---
+title: "proporcao_cabecas_cluster"
+author: "Rodolfo Viana"
+date: "17-12-2015"
+output: html_document
+---
+
+Mostra a proporção de deputados cabeças por clust
+
+```{r}
+#Bibliotecas necessárias 
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(reshape2)
+require(cluster)
+require(ade4)
+require(scales)
+require(FactoMineR)
+require(rCharts)
+source("R/camara-lib.R")
+```
+
+
+```{r}
+caminho_pasta_resultados = "plot/clusters"
+
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
+
+mca <- MCA(votos_por_deputado, 
+           ncp = 6, # Default is 5 
+           graph = FALSE,
+           quali.sup = c(1:4),
+           na.method = "Average") # NA or Average
+
+mca1_obs_df <-  data.frame(mca$ind$coord, 
+                           nome = votos_por_deputado$nome,
+                           partido = votos_por_deputado$partido, 
+                           uf = votos_por_deputado$uf,
+                           id_dep = votos_por_deputado$id_dep)
+
+mca1_obs_df$id_dep <- as.integer(as.character(mca1_obs_df$id_dep))
+
+hcpc <- clusterizar(mca,3)
+clusters <- obter_clusters(hcpc)
+
+mca1_obs_df <- cbind(mca1_obs_df, select(clusters,clust))
+mca1_obs_df$clust <- as.factor(mca1_obs_df$clust)
+```
+
+```{r}
+# Cabeças
+cabecas <- read.table("data/cabecas.csv", header=TRUE, quote="\"")
+```
+
+
+```{r}
+# Partidos icônicos
+mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in% 
+                                               c("pmdb", "psdb", "pt", "psol"), 
+                                             as.character(mca1_obs_df$partido), 
+                                             "outros"))
+
+# Destaque dos deputados que estão na lista dos cabeças de 2015
+mca1_obs_df$destaque_cabeca <- mca1_obs_df$nome %in% cabecas$Cabeca
+```
+
+Plot mostrando a proporção de deputados por clust
+
+```{r}
+dep_clust <- filter(mca1_obs_df, destaque_cabeca == TRUE)
+dep_clust <- as.data.frame(table(dep_clust$clust))
+colnames(dep_clust) <- c("clust", "freq")
+
+dep_clust$porcentagem <- (dep_clust$freq / sum(dep_clust$freq)) * 100
+
+p <- ggplot(data = dep_clust, aes(x=reorder(clust, -porcentagem), y = porcentagem)) + 
+    geom_bar(stat="identity") + 
+    theme_classic() + 
+    labs(y='% de Deputados', x='Clust', title = "Deputados por Clust") +
+    theme(axis.ticks = element_blank())
+
+png("plot/bancadas/deputados_cabeca_clust.png", width = 800, height = 600)
+p
+dev.off()
+```
+
+Plot mostrando os deputados por clust
+
+```{r}
+p <- plotCluster(mca1_obs_df) + 
+  geom_point(data = filter(mca1_obs_df, destaque_cabeca == TRUE), size = 9, alpha = 0.2, colour = "Black")  +
+  coord_equal() +
+  labs(title = "Deputados por Clust")
+
+png("plot/bancadas/deputados_cabeca_clust_dep.png", width = 800, height = 600)
+p
+dev.off()
+```
