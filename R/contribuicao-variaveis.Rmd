@@ -30,9 +30,13 @@ votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv
 
 mca1 = MCA(votos_por_deputado, 
            ncp = 2, # Default is 5 
-           graph = FALSE,
+           graph = TRUE,
            quali.sup = c(1:4),
            na.method = "Average") # NA or Avarege
+
+#Mapa das variáveis e indivíduos
+plot(mca1, invisible=c("ind","quali.sup","quanti.sup"), cex=0.9)
+plot(mca1, invisible=c("var","quali.sup","quanti.sup"), cex=0.9)
 
 # Top contribuição das variaveis
 top_contrib <- head(as.data.frame(mca1$var$contrib))
