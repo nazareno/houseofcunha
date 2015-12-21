@@ -33,7 +33,7 @@ votos$ano <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%Y'))
 votos <- filter(votos, ano >=2015)
 ```
 
-Orientação de cada partido para cada votação
+Concordância por partido
 
 ```{r}
 
@@ -45,13 +45,15 @@ concordancia_partidaria_mes <- function(votos,sigla.partido,num.mes) {
   total <- nrow(votos.partido.mes)
   conc <- nrow(votos.concordancia)
   
-  return (if (total != 0) conc/total else 0)
+  return (if (total != 0) conc/total else NA)
 }
 
 concordancia_partidaria_meses <- function(votos,partido) {
   conc <- data.frame()
   
-  for (num.mes in seq(1:12)) {
+  meses <- c(2:11)
+  
+  for (num.mes in meses) {
     conc.mes <- list()
     conc.mes$part <- partido
     conc.mes$concordancia <- concordancia_partidaria_mes(votos,partido,num.mes)
@@ -63,6 +65,12 @@ concordancia_partidaria_meses <- function(votos,partido) {
   conc
 }
 
+```
+
+Partidos de destaque
+
+```{r}
+
 conc.pmdb <- concordancia_partidaria_meses(votos,"pmdb")
 conc.psdb <- concordancia_partidaria_meses(votos,"psdb")
 conc.pt <- concordancia_partidaria_meses(votos,"pt")
@@ -71,12 +79,98 @@ conc.psol <- concordancia_partidaria_meses(votos,"psol")
 conc <- rbind(conc.pmdb, conc.psdb, conc.pt, conc.psol)
 conc$nome_mes <- month.abb[conc$n.mes]
 
-conc <- conc[order(conc$n.mes),]
-
-conc$nome_mes <- factor(conc$nome_mes, levels = month.abb[conc$n.mes][1:12])
+conc$nome_mes <- factor(conc$nome_mes, levels = month.abb[conc$n.mes][1:10])
 
 ggplot(data=conc, aes(x=nome_mes, y=concordancia, group=part, colour=part)) +
     geom_line() +
     geom_point()
 
 ```
+
+Todos os partidos
+
+```{r}
+
+conc <- data.frame()
+
+for (p in unique(votos$partido)) {
+  conc.partido <- concordancia_partidaria_meses(votos,p)
+  conc <- rbind(conc,conc.partido)
+}
+
+conc$nome_mes <- month.abb[conc$n.mes]
+
+conc$nome_mes <- factor(conc$nome_mes, levels = month.abb[conc$n.mes][1:10])
+
+ggplot(data=conc, aes(x=nome_mes, y=concordancia, group=part, colour=part)) +
+    geom_line() +
+    geom_point()
+
+```
+
+Top Concordância por partido
+
+```{r}
+
+conc <- data.frame()
+
+for (p in unique(votos$partido)) {
+  conc.partido <- concordancia_partidaria_meses(votos,p)
+  conc <- rbind(conc,conc.partido)
+}
+
+conc_por_partido <- aggregate(concordancia ~ part, conc, mean)
+conc_por_partido <- conc_por_partido[order(conc_por_partido$concordancia,decreasing = TRUE),]
+
+```
+
+Concordância por deputado
+
+```{r}
+
+concordancia_partidaria_dep_mes <- function(votos,id.deputado,num.mes) {
+  #id.deputado <- 191684
+  #num.mes = 10
+  votos.deputado.mes <- filter(votos,votos$id_dep == id.deputado, votos$mes == num.mes)
+  votos.deputado.mes <- filter(votos.deputado.mes,votos.deputado.mes$orientacao_partido != "liberado" & votos.deputado.mes$orientacao_partido != "NA")
+  votos.concordancia <- filter(votos.deputado.mes,as.character(votos.deputado.mes$voto) == as.character(votos.deputado.mes$orientacao_partido))
+  
+  total <- nrow(votos.deputado.mes)
+  conc <- nrow(votos.concordancia)
+  
+  return (if (total != 0) conc/total else NA)
+}
+
+concordancia_partidaria_dep_meses <- function(votos,id.deputado) {
+  conc <- data.frame()
+  
+  meses <- c(2:11)
+  
+  for (num.mes in meses) {
+    conc.mes <- list()
+    conc.mes$dep <- id.deputado
+    conc.mes$concordancia <- concordancia_partidaria_dep_mes(votos,id.deputado,num.mes)
+    conc.mes$n.mes <- num.mes
+    
+    conc <- rbind(conc,conc.mes, make.row.names = FALSE)
+  }
+  
+  conc
+}
+
+```
+
+Top Concordância por deputado
+
+```{r}
+
+conc <- data.frame()
+
+for (d in unique(votos$id_dep)) {
+  conc.deputado <- concordancia_partidaria_dep_meses(votos,d)
+  conc <- rbind(conc,conc.deputado)
+}
+
+conc_por_deputado <- aggregate(concordancia ~ dep, conc, mean)
+conc_por_deputado <- conc_por_deputado[order(conc_por_deputado$concordancia,decreasing = TRUE),]
+
