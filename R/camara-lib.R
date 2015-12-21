@@ -578,7 +578,9 @@ buildClustersPlots <- function(hcpc, mca1_obs_df,pasta_resultados) {
 
 recuperar_votos_proposicao <- function(votos_df, numero.prop, remover.nas = FALSE) {
   proposicao = as.character(numero.prop)
-  votos_proposicao <- votos_por_deputado[,grepl(paste("^",proposicao,"\\b", sep=""),names(votos_por_deputado))]
+  colunas_props <- grepl(paste("^",proposicao,"\\b", sep=""),names(votos_por_deputado))
+  votos_proposicao <- as.data.frame(votos_por_deputado[,colunas_props])
+  names(votos_proposicao) <- names(votos_por_deputado)[colunas_props]
   votos_proposicao <- cbind(votos_por_deputado[,1:4],votos_proposicao)
   
   if (remover.nas) {

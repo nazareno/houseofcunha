@@ -15,9 +15,17 @@ votos_geral <- ler_votos_de_ativos(filepath = "votacoes.csv",corrigir_migracoes 
 
 votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
 
-proposicao = 691
+proposicao <- 685
+id_votacao <- 5
+posicionamento <- "não"
 
 votos_prop <- recuperar_votos_proposicao(votos_df = votos_por_deputado, numero.prop = proposicao)
+
+votos_geral_prop <- votos_geral[votos_geral$num_pro == proposicao & votos_geral$id_votacao == id_votacao,]
+
+votacao <- paste(as.character(proposicao),as.character(id_votacao),sep="-")
+
+summary(votos_prop[votos_prop[[votacao]] %in% c(posicionamento),])
 
 ########## Análise MCA ##########
 
