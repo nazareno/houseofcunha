@@ -563,7 +563,7 @@ criar_df_aumentado <- function(df, delta = 0.4) {
 
   df_aum <- rbind(df_aum, cbind(gather(select(df_aux, x2, x1), nome_x, x_aum), gather(select(df_aux, y1, y2), nome_y, y_aum)))
   df_aum <- select(df_aum, -nome_x, -nome_y)   
-  df_aum <- cbind(df_aum, clust = rep(df_aux$clust, 4), )
+  df_aum <- cbind(df_aum, clust = rep(df_aux$clust, 4))
   df_aum
 }
 
@@ -575,7 +575,7 @@ recuperar_convex_hulls <- function(df, delta = .4) {
 }
 
 # TODO : não precisa do hcpc; usa mca1_obs_df$clust no lugar de hcpc$data.clust$clust (se a gente entendeu certo :))
-buildClustersPlots <- function(hcpc, mca1_obs_df,pasta_resultados) {
+buildClustersPlots <- function(hcpc, mca1_obs_df,pasta_resultados, cores = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8") ) {
   num_clusters <- length(levels(hcpc$data.clust$clust))
   p <- plotMCAstains(mca1_obs_df, alfa = 0.1)
   colors <- c("outros" = "grey70","pmdb" = "darkred","psdb" = "#56B4E9", "psol" = "#F0E442","pt" = "#FF0000")
@@ -604,8 +604,8 @@ buildClustersPlots <- function(hcpc, mca1_obs_df,pasta_resultados) {
                       aes(x = x_aum, y = y_aum, fill = clust), 
                       alpha = 0.5) + 
     geom_point(size = 9, alpha = .4, aes(colour = clust)) + 
-    scale_fill_manual(values = c("#b3e2cd", "#fdcdac", "#cbd5e8", "#f4cae4")) +
-    scale_colour_manual(values = c("#b3e2cd", "#fdcdac", "#cbd5e8", "#f4cae4")) +
+    scale_fill_manual(values = cores) +
+    scale_colour_manual(values = cores) +
     theme(legend.position="none")
 
   # temporariamente não destacamos mais partidos
