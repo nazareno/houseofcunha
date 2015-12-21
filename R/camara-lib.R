@@ -22,7 +22,7 @@ plotMCA <- function(dados){
 }
 
 plotMCAstains <- function(dados, alfa = 0.2){
-  ggplot(data = dados, aes(x = Dim.1, y = Dim.2, label = nome)) +
+  ggplot(data = dados, aes(x = Dim.1, y = Dim.2)) +
     geom_hline(yintercept = 0, colour = "gray70") +
     geom_vline(xintercept = 0, colour = "gray70") +
     geom_point(size = 9, alpha = alfa, colour = "grey") + 
@@ -549,24 +549,44 @@ obter_num_cabecas_por_cluster <- function(clusters) {
   cabecas_por_cluster
 }
 
-recuperar_convex_hulls <- function(df) {
-  find_hull <- function(df) df[chull(df$Dim.1, df$Dim.2), ]
-  hulls <- ddply(df, "clust", find_hull)
+criar_df_aumentado <- function(df, delta = 0.4) { 
+  require(tidyr)
+  
+  df_aux <- df
+  
+  df_aux$x1 <- df$Dim.1 + delta
+  df_aux$x2 <- df$Dim.1 - delta
+  
+  df_aux$y1 <- df$Dim.2 + delta
+  df_aux$y2 <- df$Dim.2 - delta  
+  df_aum <- cbind(gather(select(df_aux, x1, x2), key = nome_x, value = x_aum), gather(select(df_aux, y1, y2), nome_y, y_aum))
+
+  df_aum <- rbind(df_aum, cbind(gather(select(df_aux, x2, x1), nome_x, x_aum), gather(select(df_aux, y1, y2), nome_y, y_aum)))
+  df_aum <- select(df_aum, -nome_x, -nome_y)   
+  df_aum <- cbind(df_aum, clust = rep(df_aux$clust, 4), )
+  df_aum
+}
+
+recuperar_convex_hulls <- function(df, delta = .4) {
+  df.i <- criar_df_aumentado(df, delta)
+  find_hull <- function(df) df[chull(df$x_aum, df$y_aum), ]
+  hulls <- ddply(df.i, "clust", find_hull)
   return(hulls)
 }
 
+# TODO : não precisa do hcpc; usa mca1_obs_df$clust no lugar de hcpc$data.clust$clust (se a gente entendeu certo :))
 buildClustersPlots <- function(hcpc, mca1_obs_df,pasta_resultados) {
   num_clusters <- length(levels(hcpc$data.clust$clust))
   p <- plotMCAstains(mca1_obs_df, alfa = 0.1)
   colors <- c("outros" = "grey70","pmdb" = "darkred","psdb" = "#56B4E9", "psol" = "#F0E442","pt" = "#FF0000")
-  hulls <- recuperar_convex_hulls(mca1_obs_df)
+  hulls <- recuperar_convex_hulls(mca1_obs_df, delta = .04)
   
   for (i in seq(1:num_clusters)) {
-    file_name = paste("c",num_clusters,"_",i,".png",sep="")
+    file_name = paste("c", num_clusters, "_", i, ".png", sep="")
     file_path = paste(caminho_pasta_resultados,file_name,sep="/")
     print(file_path)
     png(file_path, width = 800, height = 600)
-    plot <- p + geom_polygon(data = hulls[hulls$clust == i,], alpha = 0.05, color = colors[1]) + 
+    plot <- p + geom_polygon(data = hulls[hulls$clust == i,], aes(x = x_aum, y = y_aum), alpha = 0.05, color = colors[1]) + 
       geom_point(data = filter(mca1_obs_df, clust == i), aes(colour = destaque_partido), size = 7)  +  
       scale_colour_manual(values = colors, 
                           guide = guide_legend(title = "partido", 
@@ -580,13 +600,18 @@ buildClustersPlots <- function(hcpc, mca1_obs_df,pasta_resultados) {
   print(file_path)
   png(file_path, width = 800, height = 600)
   plot <- p
-  for (i in seq(1:num_clusters)) {
-    color_index <- as.integer(i%%length(colors))
-    plot <- plot + geom_polygon(data = hulls[hulls$clust == i,], alpha = 0.05, color = colors[1])
-  }
-  plot <- plot + geom_point(data = mca1_obs_df, aes(colour = destaque_partido), size = 7)  +  
-    scale_colour_manual(values = colors, 
-                        guide = guide_legend(title = "partido", override.aes = list(alpha = 1, size = 7))) 
+  plot <- plot + geom_polygon(data = hulls, 
+                      aes(x = x_aum, y = y_aum, fill = clust), 
+                      alpha = 0.5) + 
+    geom_point(size = 9, alpha = .4, aes(colour = clust)) + 
+    scale_fill_manual(values = c("#b3e2cd", "#fdcdac", "#cbd5e8", "#f4cae4")) +
+    scale_colour_manual(values = c("#b3e2cd", "#fdcdac", "#cbd5e8", "#f4cae4")) +
+    theme(legend.position="none")
+
+  # temporariamente não destacamos mais partidos
+#   plot <- plot + geom_point(data = mca1_obs_df, aes(colour = destaque_partido), size = 7)  +  
+#     scale_colour_manual(values = colors, 
+#                         guide = guide_legend(title = "partido", override.aes = list(alpha = 1, size = 7))) 
   print(plot)
   dev.off()
 }
