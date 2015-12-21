@@ -36,13 +36,28 @@ plotMCAstains <- function(dados, alfa = 0.2){
 
 plotBancadas <- function(dados){
   aux <- as.data.frame(table(dados$clust))
-  colnames(aux) <- c("clust", "freq")
-  aux$porcentagem <- aux$freq / sum(aux$freq)
+  colnames(aux) <- c("clust", "freq") 
+  aux$porcentagem <- (aux$freq / sum(aux$freq)) * 100
   
   ggplot(data = aux, aes(x=reorder(clust, -porcentagem), y = porcentagem)) + 
     geom_bar(stat="identity") + 
     theme_classic() + 
     theme(axis.ticks = element_blank())
+}
+
+plotCluster <- function(mca1_obs_df){
+  splitData <- split(mca1_obs_df, mca1_obs_df$clust)
+  appliedData <- lapply(splitData, function(df){
+    df[chull(df), ]  # chull really is useful, even outside of contrived examples.
+  })
+  combinedData <- do.call(rbind, appliedData)
+  
+  p <- plotMCAstains(mca1_obs_df)
+  
+  p <- p + 
+    geom_polygon(data = combinedData, aes(x = Dim.1, y = Dim.2, fill = clust), alpha = 1/2) 
+  
+  p  
 }
 
 deputadosAtivos <- function(votacao, porcentagemAtividadeMinima) {
