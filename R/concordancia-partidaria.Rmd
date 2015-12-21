@@ -1,0 +1,82 @@
+---
+  title: "concordância-partidaria"
+author: "Tarciso Braz"
+date: "21-12-2015"
+output: html_document
+---
+  
+  
+  Mostra qual o nível de concordância dos deputados com seus respectivos partidos. 
+
+Bibliotecas necessárias 
+
+```{r}
+library(ggplot2)
+library(dplyr)
+require(scales)
+
+source("R/camara-lib.R")
+```
+
+Carregando CSV com os votos dos deputados
+
+```{r}
+votos <- ler_votos_de_ativos("votacoes.csv", corrigir_migracoes = FALSE)
+
+# distinguir diferentes votações de uma mesma proposição
+votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
+
+votos$pro_orientacao <- paste0(votos$num_pro, "-", votos$orientacao_partido)
+
+votos$mes <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%m'))
+votos$ano <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%Y'))
+votos <- filter(votos, ano >=2015)
+```
+
+Orientação de cada partido para cada votação
+
+```{r}
+
+concordancia_partidaria_mes <- function(votos,sigla.partido,num.mes) {
+  votos.partido.mes <- filter(votos,votos$partido == sigla.partido, votos$mes == num.mes)
+  votos.partido.mes <- filter(votos.partido.mes,votos.partido.mes$orientacao_partido != "liberado" & votos.partido.mes$orientacao_partido != "NA")
+  votos.concordancia <- filter(votos.partido.mes,as.character(votos.partido.mes$voto) == as.character(votos.partido.mes$orientacao_partido))
+  
+  total <- nrow(votos.partido.mes)
+  conc <- nrow(votos.concordancia)
+  
+  return (if (total != 0) conc/total else 0)
+}
+
+concordancia_partidaria_meses <- function(votos,partido) {
+  conc <- data.frame()
+  
+  for (num.mes in seq(1:12)) {
+    conc.mes <- list()
+    conc.mes$part <- partido
+    conc.mes$concordancia <- concordancia_partidaria_mes(votos,partido,num.mes)
+    conc.mes$n.mes <- num.mes
+    
+    conc <- rbind(conc,conc.mes, make.row.names = FALSE)
+  }
+  
+  conc
+}
+
+conc.pmdb <- concordancia_partidaria_meses(votos,"pmdb")
+conc.psdb <- concordancia_partidaria_meses(votos,"psdb")
+conc.pt <- concordancia_partidaria_meses(votos,"pt")
+conc.psol <- concordancia_partidaria_meses(votos,"psol")
+
+conc <- rbind(conc.pmdb, conc.psdb, conc.pt, conc.psol)
+conc$nome_mes <- month.abb[conc$n.mes]
+
+conc <- conc[order(conc$n.mes),]
+
+conc$nome_mes <- factor(conc$nome_mes, levels = month.abb[conc$n.mes][1:12])
+
+ggplot(data=conc, aes(x=nome_mes, y=concordancia, group=part, colour=part)) +
+    geom_line() +
+    geom_point()
+
+```
