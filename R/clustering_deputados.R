@@ -36,14 +36,14 @@ mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in%
                                              as.character(mca1_obs_df$partido), 
                                              "outros"))
 
-hcpc <- clusterizar(mca,3)
+hcpc <- clusterizar(mca, 2)
 clusters <- obter_clusters(hcpc)
 
 mca_clusters <- mca1_obs_df
 mca_clusters <- cbind(mca_clusters, select(clusters,clust))
 mca_clusters$clust <- as.factor(mca_clusters$clust)
 
-buildClustersPlots(hcpc,mca_clusters,caminho_pasta_resultados)
+buildClustersPlots(hcpc,mca_clusters,caminho_pasta_resultados, cores = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8"))
 
 partidos_por_cluster <- obter_partidos_por_cluster(clusters)
 posicao_deputados_em_destaque <- obter_cluster_de_deputados_em_destaque(clusters)
