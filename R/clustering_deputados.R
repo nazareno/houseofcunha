@@ -36,7 +36,7 @@ mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in%
                                              as.character(mca1_obs_df$partido), 
                                              "outros"))
 
-hcpc <- clusterizar(mca, 3)
+hcpc <- clusterizar(mca, 4)
 clusters <- obter_clusters(hcpc)
 
 mca_clusters <- mca1_obs_df
@@ -65,3 +65,5 @@ hcpc$desc.ind
 #Deputados ordenados por cluster
 deputados <- select(mca_clusters,id_dep,nome,uf,partido,clust)
 deputados <- deputados[order(deputados$clust),]
+
+write.csv(deputados,"data/deputados-clusters-4.csv", row.names = FALSE)
