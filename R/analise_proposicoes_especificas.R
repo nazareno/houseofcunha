@@ -15,8 +15,8 @@ votos_geral <- ler_votos_de_ativos(filepath = "votacoes.csv",corrigir_migracoes 
 
 votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
 
-proposicao <- 685
-id_votacao <- 5
+proposicao <- 171
+id_votacao <- 4
 posicionamento <- "não"
 
 votos_prop <- recuperar_votos_proposicao(votos_df = votos_por_deputado, numero.prop = proposicao)
