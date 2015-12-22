@@ -36,21 +36,23 @@ mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in%
                                              as.character(mca1_obs_df$partido), 
                                              "outros"))
 
-hcpc <- clusterizar(mca, 2)
+hcpc <- clusterizar(mca, 3)
 clusters <- obter_clusters(hcpc)
 
 mca_clusters <- mca1_obs_df
 mca_clusters <- cbind(mca_clusters, select(clusters,clust))
 mca_clusters$clust <- as.factor(mca_clusters$clust)
 
-buildClustersPlots(hcpc,mca_clusters,caminho_pasta_resultados, cores = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8"))
+buildClustersPlots(mca_clusters,caminho_pasta_resultados, cores = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8"))
 
 partidos_por_cluster <- obter_partidos_por_cluster(clusters)
 posicao_deputados_em_destaque <- obter_cluster_de_deputados_em_destaque(clusters)
 cabecas_por_cluster <- obter_num_cabecas_por_cluster(clusters)
 
+#Top-10 variáveis que melhor descrevem cada cluster
 top10_vars <- obter_topN_vars(hcpc,10)
 
+#Top-10 categorias de variáveis que melhor descrevem cada cluster
 top10_cats <- obter_topN_cats_por_cluster(hcpc,10)
 
 #descrição do HCPC pelas dimensões do MCA
@@ -59,3 +61,7 @@ hcpc$desc.axes
 #descriçao do HCPC utilizando os individuos que estao mais perto do centro e mais longe dos outros clusters para cada cluster
 #interessante para ver os individuos que representam a media do cluster
 hcpc$desc.ind
+
+#Deputados ordenados por cluster
+deputados <- select(mca_clusters,id_dep,nome,uf,partido,clust)
+deputados <- deputados[order(deputados$clust),]

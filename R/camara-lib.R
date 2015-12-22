@@ -576,9 +576,8 @@ recuperar_convex_hulls <- function(df, delta = .4) {
   return(hulls)
 }
 
-# TODO : não precisa do hcpc; usa mca1_obs_df$clust no lugar de hcpc$data.clust$clust (se a gente entendeu certo :))
-buildClustersPlots <- function(hcpc, mca1_obs_df,pasta_resultados, cores = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8") ) {
-  num_clusters <- length(levels(hcpc$data.clust$clust))
+buildClustersPlots <- function(mca1_obs_df,pasta_resultados, cores = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8") ) {
+  num_clusters <- length(levels(mca1_obs_df$clust))
   p <- plotMCAstains(mca1_obs_df, alfa = 0.1)
   colors <- c("outros" = "grey70","pmdb" = "darkred","psdb" = "#56B4E9", "psol" = "#F0E442","pt" = "#FF0000")
   hulls <- recuperar_convex_hulls(mca1_obs_df, delta = .04)
