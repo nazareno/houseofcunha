@@ -1,27 +1,27 @@
 ---
-  title: "concordância-partidaria"
+title: "concordância-partidaria"
 author: "Tarciso Braz"
 date: "21-12-2015"
 output: html_document
 ---
   
-  
-  Mostra qual o nível de concordância dos deputados com seus respectivos partidos. 
+Mostra qual o nível de concordância dos deputados com seus respectivos partidos. 
+
 
 Bibliotecas necessárias 
 
-```{r}
+```{r,  message=FALSE, warning=FALSE}
 library(ggplot2)
 library(dplyr)
 require(scales)
 
-source("R/camara-lib.R")
+source("camara-lib.R")
 ```
 
 Carregando CSV com os votos dos deputados
 
 ```{r}
-votos <- ler_votos_de_ativos("votacoes.csv", corrigir_migracoes = FALSE)
+votos <- ler_votos_de_ativos("votacoes.csv", corrigir_migracoes = FALSE, limpar.votos = FALSE)
 
 # distinguir diferentes votações de uma mesma proposição
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
@@ -39,7 +39,7 @@ Concordância por partido
 
 concordancia_partidaria_mes <- function(votos,sigla.partido,num.mes) {
   votos.partido.mes <- filter(votos,votos$partido == sigla.partido, votos$mes == num.mes)
-  votos.partido.mes <- filter(votos.partido.mes,votos.partido.mes$orientacao_partido != "liberado" & votos.partido.mes$orientacao_partido != "NA")
+  votos.partido.mes <- filter(votos.partido.mes,votos.partido.mes$orientacao_partido != "liberado" & votos.partido.mes$orientacao_partido != "NA" & votos.partido.mes$voto != "art. 17")
   votos.concordancia <- filter(votos.partido.mes,as.character(votos.partido.mes$voto) == as.character(votos.partido.mes$orientacao_partido))
   
   total <- nrow(votos.partido.mes)
@@ -108,7 +108,7 @@ ggplot(data=conc, aes(x=nome_mes, y=concordancia, group=part, colour=part)) +
 
 ```
 
-Top Concordância por partido
+Ranking Concordância por partido
 
 ```{r}
 
@@ -124,15 +124,27 @@ conc_por_partido <- conc_por_partido[order(conc_por_partido$concordancia,decreas
 
 ```
 
+Top-5 Partidos Unidos
+
+```{r}
+head(conc_por_partido,n = 5)
+
+```
+
+Top-5 Partidos Desunidos
+
+```{r}
+head(conc_por_partido[order(nrow(conc_por_partido):1),],n = 5)
+
+```
+
 Concordância por deputado
 
 ```{r}
 
 concordancia_partidaria_dep_mes <- function(votos,id.deputado,num.mes) {
-  #id.deputado <- 191684
-  #num.mes = 10
   votos.deputado.mes <- filter(votos,votos$id_dep == id.deputado, votos$mes == num.mes)
-  votos.deputado.mes <- filter(votos.deputado.mes,votos.deputado.mes$orientacao_partido != "liberado" & votos.deputado.mes$orientacao_partido != "NA")
+  votos.deputado.mes <- filter(votos.deputado.mes,votos.deputado.mes$orientacao_partido != "liberado" & votos.deputado.mes$orientacao_partido != "NA" & votos.deputado.mes$voto != "art. 17")
   votos.concordancia <- filter(votos.deputado.mes,as.character(votos.deputado.mes$voto) == as.character(votos.deputado.mes$orientacao_partido))
   
   total <- nrow(votos.deputado.mes)
@@ -160,7 +172,7 @@ concordancia_partidaria_dep_meses <- function(votos,id.deputado) {
 
 ```
 
-Top Concordância por deputado
+Ranking Concordância por deputado
 
 ```{r}
 
@@ -174,3 +186,25 @@ for (d in unique(votos$id_dep)) {
 conc_por_deputado <- aggregate(concordancia ~ dep, conc, mean)
 conc_por_deputado <- conc_por_deputado[order(conc_por_deputado$concordancia,decreasing = TRUE),]
 
+deputados_infieis <- deputados_que_mudaram_de_partido(votos)
+votos2 <- definir_partido(deputados_infieis,votos)
+
+deputados <- select(votos2, id_dep, nome, partido) %>% unique()
+
+conc_por_deputado <- left_join(conc_por_deputado, deputados, by = c("dep" = "id_dep"))
+
+
+```
+
+Top-5 Paus Mandados
+
+```{r}
+head(conc_por_deputado,n = 5)
+
+```
+
+Top-5 Ovelha Negra
+
+```{r}
+head(conc_por_deputado[order(nrow(conc_por_deputado):1),],n = 5)
+```

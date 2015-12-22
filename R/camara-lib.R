@@ -138,12 +138,14 @@ definir_nome <- function(deputados_repetidos,votos) {
 }
 
 # Ler os votos ativos dos deputados
-ler_votos_de_ativos <- function(filepath, corrigir_migracoes, min.porc.votacoes=0.15){
+ler_votos_de_ativos <- function(filepath, corrigir_migracoes, min.porc.votacoes=0.15, limpar.votos=TRUE){
   votos <- read.csv(filepath, strip.white=TRUE, quote="")
   
   # ajustes nos valores e tipos das variáveis
-  votos <- filter(votos, voto %in% c("sim", "não")) 
-  votos$voto <- droplevels(votos$voto)
+  if (limpar.votos) {
+    votos <- filter(votos, voto %in% c("sim", "não")) 
+    votos$voto <- droplevels(votos$voto)
+  }    
   votos$num_pro <- factor(votos$num_pro) 
   votos$uf <- droplevels(votos$uf)
   
