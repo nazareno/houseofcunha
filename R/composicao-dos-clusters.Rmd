@@ -1,0 +1,116 @@
+---
+title: "Deputados por cluster"
+author: "Nazareno Andrade"
+date: "22 de dezembro de 2015"
+output: html_document
+---
+
+```{r}
+library(dplyr)
+library(googleVis)
+require("treemap")
+
+le_csv_de_clusters <- function(f){
+  c <- read.csv(f)
+  c$clust <- as.factor(c$clust)
+  c$partido <- toupper(c$partido)
+  return(c)
+}
+```
+
+
+Olhemos os deputados a partir dos agrupamentos: 
+
+
+```{r}
+c2 <- le_csv_de_clusters("data/deputados-clusters-2.csv")
+summary(c2)
+
+counts <- c2 %>% group_by(partido, clust) %>% summarise(quantos = n())
+counts$partido <- paste0(counts$partido, " (", counts$quantos, ")")
+levels(counts$clust) <- c("Governo", "Oposição")
+
+treemap(counts, 
+              index = c("clust", "partido"), 
+              vSize = "quantos", 
+              type = "index", 
+              palette= c("#fdcdac", "#cbd5e8"),               
+              title = "",
+              ymod.labels = c(2.4, 0),
+              fontsize.labels = c(13, 16),
+              aspRatio = 1.5)
+
+png("plot/clusters-2-treemap.png", width = 600, height = 400)
+treemap(counts, 
+              index = c("clust", "partido"), 
+              vSize = "quantos", 
+              type = "index", 
+              palette= c("#fdcdac", "#cbd5e8"), 
+              title = "",
+              ymod.labels = c(2.3, 0),
+              palette.HCL.options = palette.HCL.options, 
+              fontsize.labels = c(16, 14),
+              aspRatio = 1.5)
+dev.off()
+```
+
+```{r}
+c3 <- le_csv_de_clusters("data/deputados-clusters-3.csv")
+summary(c3)
+
+counts <- c3 %>% group_by(partido, clust) %>% summarise(quantos = n())
+counts$partido <- paste0(counts$partido, " (", counts$quantos, ")")
+levels(counts$clust) <- c("Governo", "Centro", "Oposição")
+
+treemap(counts, 
+        index = c("clust", "partido"), 
+        vSize = "quantos", 
+        type = "index", 
+        palette= c("#fdcdac", "#f4cae4", "#cbd5e8"),               
+        title = "",
+        aspRatio = 1.5)
+
+png("plot/clusters-3-treemap.png", width = 600, height = 400)
+treemap(counts, 
+        index = c("clust", "partido"), 
+        vSize = "quantos", 
+        type = "index", 
+        palette= c("#fdcdac", "#f4cae4", "#cbd5e8"),
+        title = "",
+        ymod.labels = c(.3, 0),
+        palette.HCL.options = palette.HCL.options, 
+        fontsize.labels = c(16, 14),
+        aspRatio = 1.5)
+dev.off()
+```
+
+```{r}
+c4 <- le_csv_de_clusters("data/deputados-clusters-4.csv")
+summary(c4)
+
+counts <- c4 %>% group_by(partido, clust) %>% summarise(quantos = n())
+counts$partido <- paste0(counts$partido, " (", counts$quantos, ")")
+levels(counts$clust) <- c("Governo", "Centro", "Oposição de esquerda", "Oposição")
+pal = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8") 
+
+treemap(counts, 
+        index = c("clust", "partido"), 
+        vSize = "quantos", 
+        type = "index", 
+        palette= pal,               
+        title = "",
+        aspRatio = 2.4)
+
+png("plot/clusters-4-treemap.png", width = 700, height = 450)
+treemap(counts, 
+        index = c("clust", "partido"), 
+        vSize = "quantos", 
+        type = "index", 
+        palette= pal,
+        title = "",
+        #ymod.labels = c(.5, 0),
+        fontsize.labels = c(18, 14),
+        align.labels = list(c("left", "top"), c("center", "center")),
+        aspRatio = 1.5)
+dev.off()
+```
