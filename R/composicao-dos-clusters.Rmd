@@ -2,7 +2,7 @@
 title: "Deputados por cluster"
 author: "Nazareno Andrade"
 date: "22 de dezembro de 2015"
-output: html_document
+output: pdf_document
 ---
 
 ```{r}
@@ -48,7 +48,6 @@ treemap(counts,
               palette= c("#fdcdac", "#cbd5e8"), 
               title = "",
               ymod.labels = c(2.3, 0),
-              palette.HCL.options = palette.HCL.options, 
               fontsize.labels = c(16, 14),
               aspRatio = 1.5)
 dev.off()
@@ -78,7 +77,6 @@ treemap(counts,
         palette= c("#fdcdac", "#f4cae4", "#cbd5e8"),
         title = "",
         ymod.labels = c(.3, 0),
-        palette.HCL.options = palette.HCL.options, 
         fontsize.labels = c(16, 14),
         aspRatio = 1.5)
 dev.off()
