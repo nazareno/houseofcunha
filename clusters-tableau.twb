@@ -1,0 +1,1960 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 9200.15.1201.0018                                -->
+<workbook source-platform='mac' version='9.2' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='deputados-clusters-2' inline='true' name='textscan.0m71akz0g25bbf1dhhjux07oaqeh' version='9.2'>
+      <connection class='textscan' directory='/Users/nazareno/Documents/workspace/houseofcunha/data' filename='deputados-clusters-2.csv' password='' server='' username=''>
+        <relation name='deputados-clusters-2#csv' table='[deputados-clusters-2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='pt_BR' separator='&quot;' text-qualifier=''>
+            <column datatype='string' name='&quot;id_dep&quot;,&quot;nome&quot;,&quot;uf&quot;,&quot;partido&quot;,&quot;clust&quot;' ordinal='0' />
+            <column datatype='string' name='id_dep' ordinal='1' />
+            <column datatype='string' name=',' ordinal='2' />
+            <column datatype='string' name='nome' ordinal='3' />
+            <column datatype='string' name=', 1' ordinal='4' />
+            <column datatype='string' name='uf' ordinal='5' />
+            <column datatype='string' name=', 2' ordinal='6' />
+            <column datatype='integer' name='partido' ordinal='7' />
+            <column datatype='string' name=', 3' ordinal='8' />
+            <column datatype='string' name='clust' ordinal='9' />
+            <column datatype='string' name='F11' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>&quot;id_dep&quot;,&quot;nome&quot;,&quot;uf&quot;,&quot;partido&quot;,&quot;clust&quot;</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[&quot;id_dep&quot;,&quot;nome&quot;,&quot;uf&quot;,&quot;partido&quot;,&quot;clust&quot;]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>&quot;id_dep&quot;,&quot;nome&quot;,&quot;uf&quot;,&quot;partido&quot;,&quot;clust&quot;</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_dep</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id_dep]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>id_dep</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>,</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[,]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>,</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nome</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nome]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>nome</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>, 1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[, 1]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>, 1</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>uf</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[uf]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>uf</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>, 2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[, 2]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>, 2</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>partido</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[partido]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>partido</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>, 3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[, 3]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>, 3</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clust</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[clust]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>clust</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F11</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F11]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>F11</remote-alias>
+            <ordinal>10</ordinal>
+            <hidden>true</hidden>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='count-errors'>&quot;1&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;R$&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;\&quot;&quot;</attribute>
+              <attribute datatype='string' name='first-error'>&quot;420&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='last-error'>&quot;420&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='quote-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='&quot;Id Dep&quot;,&quot;Nome&quot;,&quot;Uf&quot;,&quot;Partido&quot;,&quot;Clust&quot;' datatype='string' name='[&quot;id_dep&quot;,&quot;nome&quot;,&quot;uf&quot;,&quot;partido&quot;,&quot;clust&quot;]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[F11]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Clust' datatype='string' name='[clust]' role='dimension' type='nominal' />
+      <column caption='Id Dep' datatype='string' name='[id_dep]' role='dimension' type='nominal' />
+      <column caption='Nome' datatype='string' name='[nome]' role='dimension' type='nominal' />
+      <column caption='Partido' datatype='integer' name='[partido]' role='measure' type='quantitative' />
+      <column caption='Uf' datatype='string' name='[uf]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.615245' measure-ordering='alphabetic' measure-percentage='0.384755' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Brasil&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+    <datasource caption='deputados-clusters-2 (2)' inline='true' name='textscan.03qi1ac1on4saa19ezqt71q4y8qz' version='9.2'>
+      <connection class='textscan' directory='/Users/nazareno/Documents/workspace/houseofcunha/data' filename='deputados-clusters-2.csv' password='' server='' username=''>
+        <relation name='deputados-clusters-2#csv' table='[deputados-clusters-2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='pt_BR' separator='&quot;' text-qualifier=''>
+            <column datatype='string' name='&quot;id_dep&quot;,&quot;nome&quot;,&quot;uf&quot;,&quot;partido&quot;,&quot;clust&quot;' ordinal='0' />
+            <column datatype='string' name='id_dep' ordinal='1' />
+            <column datatype='string' name=',' ordinal='2' />
+            <column datatype='string' name='nome' ordinal='3' />
+            <column datatype='string' name=', 1' ordinal='4' />
+            <column datatype='string' name='uf' ordinal='5' />
+            <column datatype='string' name=', 2' ordinal='6' />
+            <column datatype='integer' name='partido' ordinal='7' />
+            <column datatype='string' name=', 3' ordinal='8' />
+            <column datatype='string' name='clust' ordinal='9' />
+            <column datatype='string' name='F11' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>&quot;id_dep&quot;,&quot;nome&quot;,&quot;uf&quot;,&quot;partido&quot;,&quot;clust&quot;</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[&quot;id_dep&quot;,&quot;nome&quot;,&quot;uf&quot;,&quot;partido&quot;,&quot;clust&quot;]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>&quot;id_dep&quot;,&quot;nome&quot;,&quot;uf&quot;,&quot;partido&quot;,&quot;clust&quot;</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_dep</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id_dep]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>id_dep</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>,</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[,]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>,</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nome</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nome]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>nome</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>, 1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[, 1]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>, 1</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>uf</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[uf]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>uf</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>, 2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[, 2]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>, 2</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>partido</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[partido]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>partido</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>, 3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[, 3]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>, 3</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clust</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[clust]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>clust</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F11</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F11]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>F11</remote-alias>
+            <ordinal>10</ordinal>
+            <hidden>true</hidden>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='count-errors'>&quot;1&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;R$&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;\&quot;&quot;</attribute>
+              <attribute datatype='string' name='first-error'>&quot;420&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='last-error'>&quot;420&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='quote-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='&quot;Id Dep&quot;,&quot;Nome&quot;,&quot;Uf&quot;,&quot;Partido&quot;,&quot;Clust&quot;' datatype='string' name='[&quot;id_dep&quot;,&quot;nome&quot;,&quot;uf&quot;,&quot;partido&quot;,&quot;clust&quot;]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[F11]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Clust' datatype='string' name='[clust]' role='dimension' type='nominal' />
+      <column caption='Id Dep' datatype='string' name='[id_dep]' role='dimension' type='nominal' />
+      <column caption='Nome' datatype='string' name='[nome]' role='dimension' type='nominal' />
+      <column caption='Partido' datatype='integer' name='[partido]' role='measure' type='quantitative' />
+      <column caption='Uf' datatype='string' name='[uf]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.619586' measure-ordering='alphabetic' measure-percentage='0.380414' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Brasil&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+    <datasource caption='deputados-clusters-3' inline='true' name='textscan.0ga21h41p4x8j712oyijk0zty0h2' version='9.2'>
+      <connection class='textscan' directory='/Users/nazareno/Documents/workspace/houseofcunha/data' filename='deputados-clusters-3.csv' password='' server='' username=''>
+        <relation name='deputados-clusters-3#csv' table='[deputados-clusters-3#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='pt_BR' separator=',' text-qualifier='&quot;'>
+            <column datatype='integer' name='id_dep' ordinal='0' />
+            <column datatype='string' name='nome' ordinal='1' />
+            <column datatype='string' name='uf' ordinal='2' />
+            <column datatype='string' name='partido' ordinal='3' />
+            <column datatype='integer' name='clust' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>id_dep</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id_dep]</local-name>
+            <parent-name>[deputados-clusters-3#csv]</parent-name>
+            <remote-alias>id_dep</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nome</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nome]</local-name>
+            <parent-name>[deputados-clusters-3#csv]</parent-name>
+            <remote-alias>nome</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>uf</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[uf]</local-name>
+            <parent-name>[deputados-clusters-3#csv]</parent-name>
+            <remote-alias>uf</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>partido</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[partido]</local-name>
+            <parent-name>[deputados-clusters-3#csv]</parent-name>
+            <remote-alias>partido</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clust</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[clust]</local-name>
+            <parent-name>[deputados-clusters-3#csv]</parent-name>
+            <remote-alias>clust</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[deputados-clusters-3#csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;R$&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='quote-char'>&quot;\&quot;&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='partido' datatype='string' name='[Calculation_2169257309711659011]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='upper([partido])' />
+      </column>
+      <column datatype='string' hidden='true' name='[F11]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[clust]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[id_dep]' role='dimension' type='ordinal' />
+      <column caption='partido-original' datatype='string' name='[partido]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.592668' measure-ordering='alphabetic' measure-percentage='0.407332' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Brasil&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='id_dep' />
+        <field-sort-custom-order field='nome' />
+        <field-sort-custom-order field='uf' />
+        <field-sort-custom-order field='partido' />
+        <field-sort-custom-order field='Calculation_2169257309711659011' />
+        <field-sort-custom-order field='clust' />
+      </field-sort-info>
+    </datasource>
+    <datasource caption='deputados-clusters-2 (3)' inline='true' name='textscan.1h95m290fxtciu1634jb20iuxosi' version='9.2'>
+      <connection class='textscan' directory='/Users/nazareno/Documents/workspace/houseofcunha/data' filename='deputados-clusters-2.csv' password='' server='' username=''>
+        <relation name='deputados-clusters-2#csv' table='[deputados-clusters-2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='pt_BR' separator=',' text-qualifier='&quot;'>
+            <column datatype='integer' name='id_dep' ordinal='0' />
+            <column datatype='string' name='nome' ordinal='1' />
+            <column datatype='string' name='uf' ordinal='2' />
+            <column datatype='string' name='partido' ordinal='3' />
+            <column datatype='integer' name='clust' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>id_dep</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id_dep]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>id_dep</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nome</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nome]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>nome</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>uf</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[uf]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>uf</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>partido</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[partido]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>partido</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clust</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[clust]</local-name>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias>clust</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[deputados-clusters-2#csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;R$&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='quote-char'>&quot;\&quot;&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='partido' datatype='string' name='[Calculation_2169257309708959745]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='UPPER([partido])' />
+      </column>
+      <column datatype='string' hidden='true' name='[F11]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[clust]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='1' value='Governo' />
+          <alias key='2' value='Oposição' />
+        </aliases>
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[id_dep]' role='dimension' type='ordinal' />
+      <column caption='partido-original' datatype='string' name='[partido]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.592668' measure-ordering='alphabetic' measure-percentage='0.407332' show-aliased-fields='true' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Brasil&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='id_dep' />
+        <field-sort-custom-order field='nome' />
+        <field-sort-custom-order field='uf' />
+        <field-sort-custom-order field='partido' />
+        <field-sort-custom-order field='Calculation_2169257309708959745' />
+        <field-sort-custom-order field='clust' />
+      </field-sort-info>
+    </datasource>
+    <datasource caption='deputados-clusters-4' inline='true' name='textscan.1pyvl4m04269ql1gqjcps07ht6sc' version='9.2'>
+      <connection class='textscan' directory='/Users/nazareno/Documents/workspace/houseofcunha/data' filename='deputados-clusters-4.csv' password='' server='' username=''>
+        <relation name='deputados-clusters-4#csv' table='[deputados-clusters-4#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='pt_BR' separator=',' text-qualifier='&quot;'>
+            <column datatype='integer' name='id_dep' ordinal='0' />
+            <column datatype='string' name='nome' ordinal='1' />
+            <column datatype='string' name='uf' ordinal='2' />
+            <column datatype='string' name='partido' ordinal='3' />
+            <column datatype='integer' name='clust' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>id_dep</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id_dep]</local-name>
+            <parent-name>[deputados-clusters-4#csv]</parent-name>
+            <remote-alias>id_dep</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nome</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nome]</local-name>
+            <parent-name>[deputados-clusters-4#csv]</parent-name>
+            <remote-alias>nome</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>uf</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[uf]</local-name>
+            <parent-name>[deputados-clusters-4#csv]</parent-name>
+            <remote-alias>uf</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>partido</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[partido]</local-name>
+            <parent-name>[deputados-clusters-4#csv]</parent-name>
+            <remote-alias>partido</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clust</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[clust]</local-name>
+            <parent-name>[deputados-clusters-4#csv]</parent-name>
+            <remote-alias>clust</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[deputados-clusters-4#csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;R$&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='quote-char'>&quot;\&quot;&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='partido' datatype='string' name='[Calculation_2169257309714386948]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='upper([partido])' />
+      </column>
+      <column datatype='string' hidden='true' name='[F11]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[clust]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='1' value='Governo' />
+          <alias key='2' value='Alinhado com PMDB' />
+          <alias key='3' value='Oposição de esquerda' />
+          <alias key='4' value='Oposição' />
+        </aliases>
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[id_dep]' role='dimension' type='ordinal' />
+      <column caption='partido-original' datatype='string' name='[partido]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.519348' measure-ordering='alphabetic' measure-percentage='0.480652' show-aliased-fields='true' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Brasil&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='id_dep' />
+        <field-sort-custom-order field='nome' />
+        <field-sort-custom-order field='uf' />
+        <field-sort-custom-order field='partido' />
+        <field-sort-custom-order field='Calculation_2169257309714386948' />
+        <field-sort-custom-order field='clust' />
+      </field-sort-info>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Planilha 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='deputados-clusters-2 (3)' name='textscan.1h95m290fxtciu1634jb20iuxosi' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.1h95m290fxtciu1634jb20iuxosi'>
+            <column caption='partido' datatype='string' name='[Calculation_2169257309708959745]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='UPPER([partido])' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[clust]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='1' value='Governo' />
+                <alias key='2' value='Oposição' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_2169257309708959745]' derivation='None' name='[none:Calculation_2169257309708959745:nk]' pivot='key' type='nominal' />
+            <column-instance column='[clust]' derivation='None' name='[none:clust:ok]' pivot='key' type='ordinal' />
+            <column caption='partido-original' datatype='string' name='[partido]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='460' />
+            <format attr='font-size' field='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' value='8' />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' value='#686868' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' palette='tableau-map-brown' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='in-tooltip' field='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' />
+              <size column='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' />
+              <text column='[textscan.1h95m290fxtciu1634jb20iuxosi].[none:Calculation_2169257309708959745:nk]' />
+              <lod column='[textscan.1h95m290fxtciu1634jb20iuxosi].[none:clust:ok]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Æ&#10;</run>
+                <run>Æ&#10;</run>
+                <run>&lt;[textscan.1h95m290fxtciu1634jb20iuxosi].[none:Calculation_2169257309708959745:nk]&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[textscan.1h95m290fxtciu1634jb20iuxosi].[none:clust:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Planilha 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Planilha 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='deputados-clusters-2 (3)' name='textscan.1h95m290fxtciu1634jb20iuxosi' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.1h95m290fxtciu1634jb20iuxosi'>
+            <column caption='partido' datatype='string' name='[Calculation_2169257309708959745]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='UPPER([partido])' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[clust]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='1' value='Governo' />
+                <alias key='2' value='Oposição' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_2169257309708959745]' derivation='None' name='[none:Calculation_2169257309708959745:nk]' pivot='key' type='nominal' />
+            <column-instance column='[clust]' derivation='None' name='[none:clust:ok]' pivot='key' type='ordinal' />
+            <column caption='partido-original' datatype='string' name='[partido]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[textscan.1h95m290fxtciu1634jb20iuxosi].[none:clust:ok]' value='10' />
+            <format attr='font-size' value='9' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' field='[textscan.1h95m290fxtciu1634jb20iuxosi].[none:clust:ok]' value='left' />
+            <format attr='font-size' field='[textscan.1h95m290fxtciu1634jb20iuxosi].[none:clust:ok]' value='12' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' palette='tableau-orange-light' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' />
+              <color column='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' />
+              <lod column='[textscan.1h95m290fxtciu1634jb20iuxosi].[none:clust:ok]' />
+              <text column='[textscan.1h95m290fxtciu1634jb20iuxosi].[none:Calculation_2169257309708959745:nk]' />
+              <text column='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Planilha 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='deputados-clusters-3' name='textscan.0ga21h41p4x8j712oyijk0zty0h2' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0ga21h41p4x8j712oyijk0zty0h2'>
+            <column caption='partido' datatype='string' name='[Calculation_2169257309711659011]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='upper([partido])' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[clust]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_2169257309711659011]' derivation='None' name='[none:Calculation_2169257309711659011:nk]' pivot='key' type='nominal' />
+            <column-instance column='[clust]' derivation='None' name='[none:clust:ok]' pivot='key' type='ordinal' />
+            <column caption='partido-original' datatype='string' name='[partido]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='manual' column='[textscan.0ga21h41p4x8j712oyijk0zty0h2].[none:clust:ok]' direction='ASC'>
+            <dictionary>
+              <bucket>1</bucket>
+              <bucket>2</bucket>
+              <bucket>3</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' value='9' />
+            <format attr='font-weight' field='[textscan.0ga21h41p4x8j712oyijk0zty0h2].[none:Calculation_2169257309711659011:nk]' value='normal' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[textscan.0ga21h41p4x8j712oyijk0zty0h2].[sum:Number of Records:qk]' palette='tableau-red-light' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[textscan.0ga21h41p4x8j712oyijk0zty0h2].[sum:Number of Records:qk]' />
+              <color column='[textscan.0ga21h41p4x8j712oyijk0zty0h2].[sum:Number of Records:qk]' />
+              <lod column='[textscan.0ga21h41p4x8j712oyijk0zty0h2].[none:clust:ok]' />
+              <text column='[textscan.0ga21h41p4x8j712oyijk0zty0h2].[none:Calculation_2169257309711659011:nk]' />
+              <text column='[textscan.0ga21h41p4x8j712oyijk0zty0h2].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Planilha 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='deputados-clusters-4' name='textscan.1pyvl4m04269ql1gqjcps07ht6sc' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.1pyvl4m04269ql1gqjcps07ht6sc'>
+            <column caption='partido' datatype='string' name='[Calculation_2169257309714386948]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='upper([partido])' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[clust]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='1' value='Governo' />
+                <alias key='2' value='Alinhado com PMDB' />
+                <alias key='3' value='Oposição de esquerda' />
+                <alias key='4' value='Oposição' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_2169257309714386948]' derivation='None' name='[none:Calculation_2169257309714386948:nk]' pivot='key' type='nominal' />
+            <column-instance column='[clust]' derivation='None' name='[none:clust:ok]' pivot='key' type='ordinal' />
+            <column caption='partido-original' datatype='string' name='[partido]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[textscan.1pyvl4m04269ql1gqjcps07ht6sc].[sum:Number of Records:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#cacaca</color>
+                <color>#b3c6c6</color>
+                <color>#9cc3c2</color>
+                <color>#87bfbf</color>
+                <color>#72bcbb</color>
+                <color>#5eb9b7</color>
+                <color>#4ab5b4</color>
+                <color>#37b2b0</color>
+                <color>#25aead</color>
+                <color>#13aba9</color>
+                <color>#03a8a6</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[textscan.1pyvl4m04269ql1gqjcps07ht6sc].[sum:Number of Records:qk]' />
+              <color column='[textscan.1pyvl4m04269ql1gqjcps07ht6sc].[sum:Number of Records:qk]' />
+              <lod column='[textscan.1pyvl4m04269ql1gqjcps07ht6sc].[none:clust:ok]' />
+              <text column='[textscan.1pyvl4m04269ql1gqjcps07ht6sc].[none:Calculation_2169257309714386948:nk]' />
+              <text column='[textscan.1pyvl4m04269ql1gqjcps07ht6sc].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='108'>
+    <window class='worksheet' name='Planilha 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.1h95m290fxtciu1634jb20iuxosi].[none:Calculation_2169257309708959745:nk]</field>
+            <field>[textscan.1h95m290fxtciu1634jb20iuxosi].[none:partido:nk]</field>
+            <field>[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Planilha 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' maximized='true' name='Planilha 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='132'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.1h95m290fxtciu1634jb20iuxosi].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.1h95m290fxtciu1634jb20iuxosi].[none:Calculation_2169257309708959745:nk]</field>
+            <field>[textscan.1h95m290fxtciu1634jb20iuxosi].[none:clust:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Planilha 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='132'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.0ga21h41p4x8j712oyijk0zty0h2].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0ga21h41p4x8j712oyijk0zty0h2].[none:Calculation_2169257309711659011:nk]</field>
+            <field>[textscan.0ga21h41p4x8j712oyijk0zty0h2].[sum:Number of Records:qk]</field>
+            <field>[textscan.1h95m290fxtciu1634jb20iuxosi].[none:Calculation_2169257309708959745:nk]</field>
+            <field>[textscan.1h95m290fxtciu1634jb20iuxosi].[none:clust:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Planilha 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.1pyvl4m04269ql1gqjcps07ht6sc].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.1pyvl4m04269ql1gqjcps07ht6sc].[none:clust:ok]</field>
+            <field>[textscan.1pyvl4m04269ql1gqjcps07ht6sc].[sum:Number of Records:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Planilha 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAAsTAAALEwEAmpwY
+      AAAVv0lEQVR4nO3deXCU933H8fdz7a1bQrdAHOI+ZMkCjMFgDNixQ2zXwU3sOGmcOO6kado0
+      k3Y6mXSmMz1mmnTaZJI6bhLXjmPs+MBXiO8DgzlizI0kEOhEQvexh/Z8nv4BxnaCQIBWK/R8
+      XzPM7Ipnn+f77O5nn9/z29/zW8WyLAshbEpNdQFCpJIEQNiaBEDYmgRATCqWZZJIJP74j5im
+      ed7l9XGoSYiksyyThrqjGIaT5lNdLFxSiRkN0tPZQWZWOnvrOrl17dI/eZwEQEwKg837qO9W
+      yFT6iAc7+WBfDkOnj9I9OMC8ebPQnN7zPk4CICYFw5NGX+t+wh4PuT4PjfW7iCgaPjXGqc5e
+      zJgfkz9t8yvyPYCYLEzTRFEUFEU5e1vFNBOoqoqiKOd9jARA2Jr0AglbkwAIW5MApIBlWXQ0
+      1rN16+9pbO9OdTm2JucAKRAN9PKThx5hw02rOdkZZKovwcHGTubNKsXIKeHUiZO41Rh9UY3S
+      dDjUFiDDGmJYcbJqxTK2v/02JfOuYdW1i1K9K1c9OQKkgJlIoBsuYkMD7H5vN+8cPMacaVnU
+      dwZ46Tc/pzcY5I1de2ivO8KBY41U1tTQ0x4ky5XglTfeIG/2Ynb9YW+qd2NSkO8BUsCZnssN
+      NfM42NDG6vU3kqn4Odnezeq1N1Okx5hz3WrKMh30+i1KCzIozM1k7qL55OW7mebK5OCePVy3
+      tDrVuzEpSBNI2Jo0gYStJa0JNDg4iBxcxESX1CZQJBJheHg4WasX4rwMw8Dr9WKaJkNDQxdc
+      Nqknwa0nT3Dih/+QzE1MSKbbi+nLROvtSHUp40qfN4+KinCqy2C44BZmV60jFoux46f/htZ3
+      esRlk9sLZFlo/V1J3cREpETTAdAG7PUllxYJkKaGUl0GUT6+IEYN+dH8fSMuKyfBwtYkAMLW
+      JADC1iQAwtYkAMLWJADC1iQAwtYkAMLWJADC1iQAwtaSf0GMYuCZWo6qQLjzNI7cfFRdBTNB
+      sK0RK564+DquRqoDb3kFimUx3NGCkV1AtOcUpqXjzs3GwkB3O4n2dRIbjuEtLsGKRwmdasI6
+      /zSWVwXLNGnvCYGqkJvpJhgIE4qaeDwOsrzGiPPzJI1i4C2ZjqJYhLvaMRUHvsIiIj1tmKpv
+      HALgKGT2fQ/SX1uPt7iMwZMnKKipoXvPm4RPtxCfrAFwlDL3vs/QW9eIO03FmL2Krs3/zFC0
+      gLl33EhwWGG4sY60WfPp2LmNsuXL8fdHiNS+Tsu2namu/rJFwyH++6lDLJzqo9Vy4fT3M3P6
+      FLbvPcV37l9GoUcb34KMKcy5ax19DY14sr2EYhmo/kY8hbcS7DHHoQlkKVixCOGeHlCitL/y
+      NMGWZppfeoZ4OJr0zaeMpWBGw4R7+1B0J7FggIy5NeTMX4JpmShxP03PPkrTOzvJmjkL3ZOB
+      Iz0bzelMdeVXTE1YON06eiJGcDhCd/8wCjrqOH/4A2deh1iE4b5+FNVJzD+AO7+YocZ6zFh8
+      fM4BEqEhAm3HqHvo3zHj9rlIJhEcwN94kLpHfkKsv41E1lRcTpNIIAioOLLzSS+ZRiwUwn/s
+      A1q2voinYkGqy75iBQXprKgs49sb55CZkc66awqJOMGnpyIBkAj5CZw6Tu3mh1EVPyd/9xy+
+      OVU409PGoQmUGKJ7zzYCxw+dua9A3+EPgEkehMQAnbvfI3DiKAAD+3cy3DmII9GPUVSC4sik
+      aM2tJIbq6Th6nJKVa8idP522rS+luPAro+kGyxbkU5x7Zjbmyop8igsyeHB5Ice7wiwp9oxv
+      QWaArv27CTQfA2CwsZXC5WvxH3qf4ECSrwhrOHqEpu/fn6zVT1imN51ERg56Z0uqSxlXelUV
+      Sxan/nqA3il3MbPqZiKRCG/989+id7eOuKx0gwpbkwAIW5MACFuTAAhbkwAIW5MACFuTAAhb
+      kwAIW5MACFuTAAhbkwAIW5MACFuTAAhbkwAIW5MACFuTAAhbkwAIW5MACFuTAAhbkwAIW5MA
+      CFuTAAhbkwAIW5MACFuTAAhbkwAIW5MACFuTAAhbkwAIW5MACFuTAAhbkwAIW5MACFuTAAhb
+      kwAIW5MACFuTAAhbkwAIW5MACFuTAAhbkwAIW5MACFuTAAhbkwAIW5MACFuTAAhbkwAIW5MA
+      CFuTAAhbkwAIW5MACFuTAAhbkwAIW5MACFuTAAhbkwAIW5MACFuTAAhbkwAIW9NTXYAQSVVU
+      hpKZPuJ/JzcAqkqsbHZSNzERWS43picNy+FKdSnjyvTl0ZWIpLoMEpbj3O2FlRkUeB0jLpvU
+      AOg6XL/x6n4TJCyNfve1FKVdzgs7Y8zruVKtwSxKct3jtr2+oIXTULjAe3DMtcdG/sT/Y8k9
+      AiigK4mkbiLZFCw0xUJXrVSXMiZUBXRNGbftaaqFro7vNpX46JeVk2BhaxIAYWsSAGFrEgBh
+      axIAYWsSAGFrEgBhaxIAYWsSAGFrMhhOTG5mhO//x4voPoPyimlU6AFePNiL2+Xi9jUV4xAA
+      M8Z/P36YcMKkfGEpcx0RXtrXRU5+HpU5Fq/V92E4nDywcTZZLi3p5Vyu7W/v5a3jPRi6i7tv
+      msnDL+zDo8Omzy7n3bf20NAVIreggO/eu4KJuxdndDY38fMtu1BNi1s3fYZY6zFe29lI3uwZ
+      rMpXeWrXcTTN4Ov33spg8xGeeKuOrOxc7ru5kl8+/hpDlsLdn7+FBSWZo9ugZbJ58ys0dQfw
+      FJawrBAGHVNZV13Er595jdlFWby6txndl8Zf37sen3Msn0GTnCk5/M2XlvHDn21Fy3WweMls
+      ls3MxG2GxqMJZKI4HXz3vsXU7mvild3t3LRqJmWZJsda+rnnjsXcVuFiy86O5JdyBdo7evnq
+      PTcxLyvBrqPtLFq4gG/fUc3jWw7wjfs2oKFeFW9+gL7ubmpW1PDNu6t47rnX2Px+K//4nU2U
+      6QH2Hz7Bpnvu4MtrZrB5y7v84ul9fO/BTSzNibP5rcO4S4v5/MppvLmt8RK2aNLrj/B337yL
+      SHMd7zd08Pw7O/D3NPHLp7bT2t7O8vU3kBMf5OTpUHJ2WlFR3QbRhEltQyfv7GsnGLfG5xyg
+      oa6Lnzx7lGsrS9m4Zjon6jt4fV8vw3ELLIv8KT76gtHxKOWyxYPD/OKJN2kJGywqyQAU0nIz
+      8egJwGL8hnpdOQ3Y+vLb/PLlA9y2vIL8nCxU4NrqxXj0M3uSPSWfoWA/2Tk5eAyNitml9HcF
+      OVHXxI69zQS04CVts7+tnR//6gVyZ8wmx+1jbqbBI1sOcftti0nEYuzadYiG0/0Exnw4tUJz
+      fQv/8tDrmL5CyrJ99HT30dlxmi5/dHzOAWbNyedbm+YBFj9/8kNCuguXnoCIyRMv1+LvC3P7
+      zXPGo5TLZnjdfP32tRR7NFoajvP6O3torHdTPu/s9Q4aXC3jRU3g1s/eyIbqcsx4hF3bn+Cn
+      j2/lxMkBVkx1sPnJrZhDQ6xcu4ZTu7fzX/+3le7mLm67rYpHX2wibDnIuMRRvtklRTxw/x0Y
+      qsLjT77K0sXlPPTyfm5ekEUiHmEw4MelKxiWObY7q7r4r3/9wqf+dNMtH99WLMtK2uvWdKKW
+      /OYfEotbGMaZg00iYeIfjuF06BgKhGMmuq7iNFQUZeJ9jiYslT73MvLdQVRdQ1UUTNMkNBxF
+      0VTcTgNVgUg0gcOhT/gjQXMgm5IcJyYKunb2NYnHGQoO4/F40LEYjsbQNB2X08CyEgSCYQyH
+      A5ehEQpHsFBwu5xo6sX3tjdg4jIUHGoCXddQFIVYLI6mqcQTJqoClmURicZRNQ2307ji90Fr
+      pJDyOdVEIhG69/6KAu/wiMsm/wigKBjGxzukaSqZPue5+z7jamg1g258/FSpqorP++kLfZyO
+      q6dDTdW0T7V9NV0nKyPt3H3fJ/ZVUTTS07zn7ns9l3cxjfGJdX5026Gqn/ibcVnrvVLyPYCw
+      NQmAsDUJgLA1CYCwNQmAsDUJgLA1CYCwNQmAsDUJgLA1CYCwNQmAsDUJgLC1q2cEVwrFTJVw
+      fHJ8Vvgj0NI7xkOO/4hpgaKAgkIoCrpqcaljBc2zg5QvZ2Ro1HnxZT4iARiFUExjMDw5niqn
+      oVGal9y5yrsGE6R5nLgcl/+hMRRKkEAh03vpz3t7aPQjjCfHq5pkGc4Y+b6JfcXaaIWDV8tl
+      O+NjchzXhbhMEgBhaxIAYWsSAGFrEgBhaxIAYWsSAGFrEgBhaxIAYWsSAGFrMhRilIaHIwxH
+      4zgcBm6HyqA/AqpCutdFJBwhEjfxelw4r4KZ7oZ6e9j2YQOaZlBVNZsjh+qJxk2yCwqpqihk
+      144PafPHWb1iMXpkkHf2NFA0tZSaBVNRRz04zWTXzv30BSPklZQyr9DL6+/tx5tXzOLSNHYf
+      asSV5mP1soUYI06xaHFg70Ha+oNk5OZTPSuPt7btxfLmsv66udQeOUJd6wDLaq6hbIrvsp4L
+      CcAovbzlXRotN6ebu9i4bi4v72xmVo5K0J2P2tqEkp1O52CCf/2rdaku9aJOnTxJ22CcBdnD
+      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
+      /Ami8ZEnBP5/z+hX1OBQGMwAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='144' name='Planilha 2' width='174'>
+      iVBORw0KGgoAAAANSUhEUgAAAK4AAACQCAYAAACRfFAzAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAABmUlEQVR4nO3SQQ0AIBDAMMC/58MDH7KkVbDH9szMgpjzOwBeGJck45JkXJKMS5JxSTIu
+      ScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45Jk
+      XJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYl
+      ybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKM
+      S5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgk
+      GZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5Jx
+      STIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuScYlybgkGZck
+      45JkXJKMS5JxSTIuScYlybgkGZck45JkXJKMS5JxSTIuSRePYgUc7kJNEQAAAABJRU5ErkJg
+      gg==
+    </thumbnail>
+    <thumbnail height='192' name='Planilha 3' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAAsTAAALEwEAmpwY
+      AAAUf0lEQVR4nO3d+XMc5Z3H8Xf33IdmNDM6LEuWbEm2LGSMfGAb3yeXDWyKsGQ3kGMrlU1S
+      tbVVW/kHdveHVGqrUpvN7iabLKmQbIAQCCRAgrGxY2xDbIzv21iWZN0aHTOae6a79wfFBhII
+      sjWH5f6+ftH9PN8Z9Wf6eaa7n1YMwzAQwqTUUhcgRClJAISpSQCEqUkAhKlJAISpSQCEqUkA
+      hKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpWfPZWDKZzGdzQhRcXgOQTqfxeDz5bFKI
+      gsprAFRVxWazEQ6HketsxEyQ1wBcEzu7mxpnqhBNm1K3VkmF3/vBNwwDA1AUpWQ15cNgTKPS
+      5yxpDQUJgE01eObZ19HcTgxV4cqlK1Q1L+Trj6zEIdPuG2YzYNdLrzFoKKhOF4n+PhS7l7b6
+      Kk71DpFB5et/8xAu28x6cq2qzks/f4GUw4k7VMalQxepWbKIL29fW7QaCvaMpTM5dD1HbX0D
+      WxbP5ZFty2Tjn4ZMJoem5fC4fdRWlxHNJIlnYMeD21gY8hBOZktd4k3JZLLoeha3y0M6ncNj
+      Le7QuSB7AIDqmhoevq8dVVXZt7OzUN2Yhtdfwf33r8GeneBbP7xAwJkjGhvn1d/tIppMstFl
+      K3WJNyVYXce929djJY42ZmHHtmVF7V/J56oQ0WgUn89H74FnmWVPoKoqigK6rqMoyowfs5ZK
+      Z66KCp8X5Y/PZzabJacbOGxWstkcFqsVq2Xm7V77ojkqypyT2wkGmm5gKfLjKFhv40Nh9p3o
+      BsOgr39ENv5pGh0d5q1j59ENGB0KY7PZUFUVh8M+Izf+a4b7etl/7AKZdIJdB98jpxd3CFSw
+      Z+4HL+/n5NkrXOju4T9eeKtQ3ZhG/1CYcyePcuJSN//+1C9Ia7fH28xdw2Gunj7FD559jgsX
+      LtMVzRS1/4IFwGZ1U+1IE6yppaUuUKhuTCNQHiTgd6E4XSy9Y26py8kbn1VDCwSwxFS2L2vg
+      2MmRovZfsADctWgWUdVPwKawoKGmUN2YRl9vFxMpFw2hchob6rGqt8eQ8u3j59ATGdZvXMab
+      p/pZubSiqP0XbBJc65IDYfnSmauiKuArdRl51xfNUV3uLmkNM3f2JEQeSACEqUkAhKlJAISp
+      SQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkA
+      hKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISp
+      SQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqVlL
+      XYD4dNGMQiamlLaGRJoyt4O8VqHa6I9mb+hPIok0PrczbyVIAGYAj9POhSOHuTQSoaahgcGz
+      50m77axsX8yePfvwVNTz5KPbcFgLt0NXVYWgV+FH3/8llLlZPK+O94fCKDYnlRaNgYkYi5as
+      ZNnCOQWrAcBAofvEe5wZGMUXCBIb6GQs56St3kv3cJrm1jbWLWmZcnsyBJohwkOjOJw2Lnd0
+      Eqhs5As71vDe+RHamuay7d51Bd34rzNyjI4miY8McKFjgEQmQ0f3MF29PcRiEc5c6Sx8DUB4
+      cBS7007PUIT1dy9i6bJlGLEIiVSE4yc6MG6gLQnADOHwlLN100b+/vH7mYiGOXr8BMHKcjDg
+      hv7j0zS/tY2vf+OrNFWU81cPbcWlpVBtPu7btI6JnvGi1GBzlrF50wa+8fkdGMbkw3e6PGza
+      sJGUdmM1KIZh5O3pi0aj+Hw+eg88S60rla9mTe+yPgd0lfLKIBY03jt8jKzbx91t8xkfHcXt
+      L8dlsxS0hnAkTrDMzkg4QWWVn7HhUbwVQcIDvYxPJBgYGuWu9rsIevM3Pv84g2NxLNnM5HOh
+      QCoWJaVbyUwMcfryIIvubKMq4J1yezIHmCF85V6i0Rh+r4vGhQvw+8pQFYVQRaiIVVhxOhWS
+      mRxOj5NsOk1NTS01NdC6oHhVhKqCpDMZFKuFlAa+Mheqby6ba+fecFsSgBni7YP7uXhlCK/X
+      Q1ZLMq/tHtYtri9qDbnECC+//g6xlI49FyOt2vnalx4r+ji65+J5fnbwKA/Or+RU9zg1TYvY
+      srL1ptqSOcAMsWzJYnRFo9xu8ODW1fQPxIpeg9UdpGW2i7o51dTVVBLwlKMXvQqY3byA1oYa
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Planilha 4' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAAsTAAALEwEAmpwY
+      AAAXhElEQVR4nO3daXAUZ57n8W9mVWXdpfuidCKBuEGAweJwc/vGdo97uqePGcf07mz0jidi
+      9+2824mN2H2zuxH9ZnZ2Y3e6p2e6bY/ttt1u2gbcBowNxmAwtw6ErpJKR6mkOiTVmfvChjZr
+      t5GgslQo/58IIiRRPP+nivwpnyfzyUxF13UdIUxKXegOCLGQJADC1CQAwtQkAMLUJADC1CQA
+      wtQkAMLUJADC1CQAwtQkAMLUJADC1CQAwtQkAMLUJADC1Ky5bGxmZiaXzQlhuJwGIJFI4Ha7
+      c9mkEIbKaQBUVcVmszE+Po5cZyPmy+fzEYlE8lozpwG4JXbqDDWy/d+hz+uiwlVYe8exmemv
+      9EnPZlHU/E8Nx2emmV3aRPmV63f8PKvrqIpiWF1DAmBT4Jdv/JqMw4nmUHnt8gAvvfAsf/fq
+      cepdGRSfi4qiUm4MdJNR3Lz43HN4rYt7Pm5VVF59+SVSDhfuMh8d5zqpqtZo2/k8m+uKFqZP
+      qsp4Xxcvv3+GrM1CfamL2GyWxqUtnDt5CneVm/YtB2hrqspLXwA+PX2e81NjxJNZKpVpkthZ
+      uXQpx86cx1XiZHVVBad6x6koLeLfP7aX+42GYVtdIpUmm03j0px4omnevHCVhspKqiob+Kt9
+      +7gZGGQmkWZoLEg8lTWqGwUlmUqR1VO4nR5mZhJc6R+j3Gtf0D5lsxmS6QxWm53m2moi01ES
+      eorW1g381dMH+PR6T177k05nSGezuBxOGqvKCM/Gmc2m2dbWzrfbVnKhN0AimaQ3OEw2B6MM
+      Q/YAAFUVtRx85GGSsWHGohlOdg+wp7GJweFu/uFIkOqKcgaGZqgsK2E6kQanYV0pGOWV9Tz+
+      6C4seoz0pJUK2xDXBoZpLG5asD7pWHl01342LPfzq9dfodhXRGg0yMD1m/SNXWRL+8G89ier
+      2PnBgccosej8j5dfpszrJjQxTkf3Bc54VVb5/ZwLTOFK2sgAlvusp+TyrhCRSASfz0fg7UNU
+      Z3RURQV0srqOjo6CQjabIauDZrWSTKdQFBWbxYqBw7yC0ON1U+F0oap/+ExURSGT1bFaFmb4
+      F5yOU+V0oaOgqgrZbJbZZBKHppFOp0FRsVktKHn4zxmZjmNtbKD6ynVURUVRIJPJkEincWga
+      qVQK1WLBoigk02msFmtOPjfDPvnJ8RGOX+tBAYZHR7GqFiyqis1qw26zoSgKdpuGZl38G/8t
+      geF+znT2MB0LcezcBVCUBdv4b8lm0/z+zMdEZlPMRieZTWVRVRVN09Bs1rxs/F+WTkxz9PwZ
+      ArFZZmemmNUtqIqCXdOwWSyoqopD03L2uRn26f/Pw+9ysbuTjkAvP/3du0aVeaCEpsIcOfE+
+      nX1BApfP0BtNLXSXCIdHIRHi7dMX+dlLv+DK0PiC9ufMp+f4qCeATc/w96/8jBtTCUPrGRYA
+      m8VDlW2G0soGWqvLjSrzQCkrLserZbEUl9FQX0rP4ORCdwmb5qaqqpZoPMS+bVvve0x9v0r8
+      q/jJ7k387d//lJvTCuf6BgytZ9jMc31rLf1jCUpsCstra40q80DpvHkdr7eOVLCHrgkLjz28
+      MIc/vyyTinP6Ugeb1rZT5ElgsS7suQqnJcZrH17lb//ybyghxLit2tB6hk2C/bpJBvZz1ON1
+      U+3xLHQ37hCcjlPtLow+3ZoEL7nakdd5x+I++yTEXUgAhKlJAISpSQCEqUkAhKlJAISpSQCE
+      qUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJ
+      AISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCE
+      qUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJAISpSQCEqUkAhKlJ
+      AISpSQCEqUkAhKlJAISpSQCEqUkAhKlZF7oDQnxZgCzo+asnARAFxeH1Mjg2RllpBTY9RTAc
+      o35JBf1DwxQVl1JZ7MtpPQmAKCjnPrzITKmd1499gC8TwV+/jP5BG6c7hrGlkvyHf/cCmpK7
+      ehIAUVAUMnTd7GFFy0r89iQXbtzA5fWQmJ0hOhtjOpVB0yw5qycBEAXF6Svlh3t34FWz/OJf
+      /xWwUOYrQlVC1FSVYVNy+OsfCYAoMG1bV/L5Nq7yo+/8KTqgKgqP7txjSD0JgCgoIyNDHDt7
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Planilha 5' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAAsTAAALEwEAmpwY
+      AAAU6UlEQVR4nO3dWWxc133H8e/dZt9nuC+iSGpfaMWypMiW7TheZCdu3TgJUrRokwJN2vQt
+      QJuir+1DixZoHooCCZCmaNMiKYJmsRNLTrzJiyTLq7xpJSmKi2TuM+Rsd+sDbcWuZUuU5s6Q
+      uv/P03B4ec4Zzv3de85dzlVc13URwqfURjdAiEaSAAhfkwAIX5MACF+TAAhfkwAIX5MACF+T
+      AAhfkwAIX5MACF+TAAhfkwAIX5MACF+TAAhfkwAIX9NrWVixWMSyrFoWKYSnahoAy7JIJBI4
+      jlPLYoVPKIpCve/PqmkA3vejY8f4l3PDXhS9au3QNMKhUKOb8RHNjsOMtjJ6wn+xbYA/f+lF
+      zDpuQD0JwBwukeZO7kqGmK5atIQN/uH0Ob7W00kqEMRwXX5zcYp7WrLMlhf4x6HzXjRjRcmg
+      oV48x/ljbxPMZVFmp3AMncy2naQ6mhrWLsOCI889TaVUIdHdz+LwWZRMMxTGsaoGzTt3k2rN
+      1K09r1fzzD3yNEoqgZpN4ly8iN7ViTU4jBJNo+d0zIl59J4tBPrbrrs+z6LfF0/RrGn0xFPs
+      b+ng692d3JHN0YrFd89P8PCabjaGwtze1IzhVSNWGDM/i1msULk4x+L0DO5ikWphsdHNYmFi
+      DN2FxYkZTLMKjoNlKvTfu4+p14fq2xi7gjU9izVbhGJx6b35WZSeTWjpKNbJ8zi6innuYk2q
+      82QPAODi8pPhszxV1fnndX3c25LmjYUyvbEkf9YdYLSwQCyooShhUgpM+uLWfJ3cjl20rGtm
+      +LEnyPa1MV8oNbpRGLFmOj97N9b0GKMv51kYuYhjXWT4uSMEW7rq3h69dyuR27dTPvw8imFg
+      jk/huDM4YQM9EcBVDHALNalLqeWsEPl8nkQiwb8ePcK3zp3DdR0sIKgoSwMcQFdUFFzKjkNY
+      07Adh5IPBs37dYNYJITLe/8L20bRNFzLRjU82w5dUY9lM6qAoumAi10qgW6guDaOA3ooiKIo
+      dWnL323awt5jR6maFoqu4doWbrmKEgriVqsougGKi2taKIEgSg3GLp51gXRVZW8uR0KB5mAI
+      y3GoOg5F22LRtrFdlwXL8sXK/z7XsZk7cwbbrDI3eBbHdhq68r/PLMwyPzaOgotdcdADBlow
+      hBEO1W3l/yBr+Cz25AxYFVxVQ9E01HAYxdBRdGPpdY0G7p4F4PfXrucbHZ081NTEd7duJVr/
+      /+OKU52dYu70KSZefI35wUHefbPO/euPURibYOzpZ5k7+QZnn3q5sY2xFyg+9TxOqULp1z+n
+      MjrtaXWeBaApoPPcfAFUk2dnatNfW+0UI0Sqq4NqxSTZ1Um1uDL+L8FklnA6jNHRRyQZaWxj
+      TIvQnXdROXwAe6qEMzXlaXWe7X//a3iIL7Xm+OVUgbaYStkXg9xPpmpQmMnTtHkdcydPkRvY
+      2egmAWCX5zBauglHQmT6OxvbmEAEJt8keMeD6Akdu+ptF9Gz0seKBb4zuLSFOz8341U1q4oR
+      z7DmzjsASLS1N7g1v5Vat4XUe68Ta67/2Pp1UYME99566Ufd4x3SyjgFKESDSACEr0kAhK9J
+      AISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCE
+      r0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr0kAhK9J
+      AISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCE
+      r0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr0kAhK9J
+      AISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr0kAhK9JAISvSQCEr+mNboAQH/TNaBTb
+      cetWnwRArCiTbomjP32cUDZNUy7F5Pg42Z41TA8OEcx0sW7vDpQa1iddILGiuFaJhalZqpN5
+      FufzAJRnpzDRmDw1hFvjnYMEQKwsikJq7RYGHv4ciusQCASYHX4X1XEIGCaW7dS0OukCiRVF
+      DTWx7Z40uqHTc+s+KotFArEIZqmEZoQw9Npusz0JQJuq8oVA0IuiV61eRSFiOzg17cFeO811
+      MFSVhKKSqcWg03FArcHKqcD8yDCR1k6q0xcw0s1ouoEWN66/7MvwJAAh3SCDzdzYBWIdXVQu
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

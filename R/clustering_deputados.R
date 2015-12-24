@@ -1,4 +1,5 @@
-#Clusteriza o resultado do MCA sobre os dados dos deputados federais considerando os votos em cada proposição. 
+# Clusteriza o resultado do MCA sobre os dados dos deputados federais 
+# considerando os votos em cada proposição. 
 
 #Bibliotecas necessárias 
 library(ggplot2)

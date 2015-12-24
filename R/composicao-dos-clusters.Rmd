@@ -30,26 +30,34 @@ counts <- c2 %>% group_by(partido, clust) %>% summarise(quantos = n())
 counts$partido <- paste0(counts$partido, " (", counts$quantos, ")")
 levels(counts$clust) <- c("Governo", "Oposição")
 
+pal = "YlOrBr"
+
 treemap(counts, 
-              index = c("clust", "partido"), 
-              vSize = "quantos", 
-              type = "index", 
-              palette= c("#fdcdac", "#cbd5e8"),               
-              title = "",
-              ymod.labels = c(2.4, 0),
-              fontsize.labels = c(13, 16),
-              aspRatio = 1.5)
+        index = c("clust", "partido"), 
+        vSize = "quantos", 
+        vColor = "quantos",
+        type = "value",
+        #palette= c("#fdcdac", "#cbd5e8"),
+        position.legend = "none",
+        palette = pal,
+        title = "",
+        ymod.labels = c(2.4, 0),
+        fontsize.labels = c(13, 16),
+        aspRatio = 1.5)
 
 png("plot/clusters-2-treemap.png", width = 600, height = 400)
 treemap(counts, 
-              index = c("clust", "partido"), 
-              vSize = "quantos", 
-              type = "index", 
-              palette= c("#fdcdac", "#cbd5e8"), 
-              title = "",
-              ymod.labels = c(2.3, 0),
-              fontsize.labels = c(16, 14),
-              aspRatio = 1.5)
+        index = c("clust", "partido"), 
+        vSize = "quantos", 
+        vColor = "quantos",        
+        type = "value", 
+        position.legend = "none",
+        palette= pal, 
+        title = "",
+        fontsize.labels = c(16, 13),
+        bg.labels = "white",
+        align.labels = list(c("left", "top"), c("center", "center")),
+        aspRatio = 1.5)
 dev.off()
 ```
 
