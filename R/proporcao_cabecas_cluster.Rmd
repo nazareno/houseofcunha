@@ -17,14 +17,12 @@ require(cluster)
 require(ade4)
 require(scales)
 require(FactoMineR)
-require(rCharts)
+
 source("R/camara-lib.R")
 ```
 
 
 ```{r}
-caminho_pasta_resultados = "plot/clusters"
-
 votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
 
 mca <- MCA(votos_por_deputado, 
@@ -41,9 +39,13 @@ mca1_obs_df <-  data.frame(mca$ind$coord,
 
 mca1_obs_df$id_dep <- as.integer(as.character(mca1_obs_df$id_dep))
 
-hcpc <- clusterizar(mca,3)
+hcpc <- clusterizar(mca,4)
 clusters <- obter_clusters(hcpc)
+```
 
+
+
+```{r}
 mca1_obs_df <- cbind(mca1_obs_df, select(clusters,clust))
 mca1_obs_df$clust <- as.factor(mca1_obs_df$clust)
 ```
@@ -68,32 +70,71 @@ mca1_obs_df$destaque_cabeca <- mca1_obs_df$nome %in% cabecas$Cabeca
 Plot mostrando a proporção de deputados por clust
 
 ```{r}
+p <- plotCluster(mca1_obs_df) + 
+  geom_point(data = filter(mca1_obs_df, destaque_cabeca == TRUE), 
+             size = 9, alpha = 0.3, colour = "Black")  +
+  coord_equal() 
+
+png("plot/cabecas/deputados_cabeca_clust_dep.png", width = 800, height = 600)
+p
+dev.off()  
+
+p <- p + geom_text(data = filter(mca1_obs_df, destaque_cabeca == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   check_overlap = TRUE,
+                   colour = "black", alpha = 0.5, size = 3, hjust = -.15)
+
+png("plot/cabecas/deputados_cabeca_clust_dep_nome.png", width = 800, height = 600)
+p
+dev.off()  
+
+png("plot/cabecas/deputados_cabeca_clust_dep_nome_gg.png", width = 1500, height = 1200)
+p
+dev.off()  
+```
+
+Número de deputados cabeças por clust
+
+```{r}
 dep_clust <- filter(mca1_obs_df, destaque_cabeca == TRUE)
 dep_clust <- as.data.frame(table(dep_clust$clust))
-colnames(dep_clust) <- c("clust", "freq")
+colnames(dep_clust) <- c("clust", "cabecas")
 
-dep_clust$porcentagem <- (dep_clust$freq / sum(dep_clust$freq)) * 100
+p <- ggplot(data = dep_clust, aes(x=reorder(clust, -cabecas), y = cabecas, fill = clust)) + 
+  geom_bar(stat="identity") + 
+  theme_classic() + 
+  scale_fill_manual(values = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8")) +
+  labs(y='Nº de Deputados', x='') +
+  theme(axis.ticks = element_blank(), legend.position="none", axis.text.x=element_blank())
 
-p <- ggplot(data = dep_clust, aes(x=reorder(clust, -porcentagem), y = porcentagem)) + 
-    geom_bar(stat="identity") + 
-    theme_classic() + 
-    labs(y='% de Deputados', x='Clust', title = "Deputados por Clust") +
-    theme(axis.ticks = element_blank())
-
-png("plot/bancadas/deputados_cabeca_clust.png", width = 800, height = 600)
+png("plot/cabecas/deputados_n_cabeca_clust.png", width = 800, height = 600)
 p
 dev.off()
 ```
 
-Plot mostrando os deputados por clust
+Proporção de deputados cabeças por clust
 
 ```{r}
-p <- plotCluster(mca1_obs_df) + 
-  geom_point(data = filter(mca1_obs_df, destaque_cabeca == TRUE), size = 9, alpha = 0.2, colour = "Black")  +
-  coord_equal() +
-  labs(title = "Deputados por Clust")
+n_dep_clust <- as.data.frame(table(mca1_obs_df$clust))
+dep_clust <- cbind(dep_clust, total = n_dep_clust$Freq)
+dep_clust$prop <- dep_clust$cabecas / dep_clust$total
+dep_clust$comp <- 1 - dep_clust$prop
 
-png("plot/bancadas/deputados_cabeca_clust_dep.png", width = 800, height = 600)
+toPlot <- dep_clust
+toPlot$cabecas <- NULL
+toPlot$total <- NULL
+
+require(tidyr)
+toPlot <- gather(toPlot, "tipo", "proporcao", 2:3)
+
+p <- ggplot(data = toPlot, aes(x = clust, y=proporcao, fill=tipo)) +
+  geom_bar(stat="identity") +
+  theme_classic() + 
+  scale_fill_manual(values = c("#f0f0f0", "#bdbdbd")) + 
+  labs(y='', x='') +
+  theme(axis.ticks = element_blank(), legend.position="none")
+
+png("plot/cabecas/proprocao_cabeca_clust.png", width = 800, height = 600)
 p
 dev.off()
 ```

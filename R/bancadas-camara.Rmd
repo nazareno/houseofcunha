@@ -22,14 +22,14 @@ source("/home/viana/Projetos/houseofcunha/R/camara-lib.R")
 
 
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
-votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "/home/viana/Projetos/houseofcunha/votacoes.csv",corrigir.migracoes = TRUE)
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
 
 # Bancadas
-bancada.bala <- read.table("/home/viana/Projetos/houseofcunha/data/bancada-bala.csv", header=TRUE, quote="\"")
-bancada.humanista <- read.table("/home/viana/Projetos/houseofcunha/data/bancada-humanista.csv", header=TRUE, quote="\"")
-bancada.sindical <- read.table("/home/viana/Projetos/houseofcunha/data/bancada-sindical.csv", header=TRUE, quote="\"")
-bancada.evangelica <- read.table("/home/viana/Projetos/houseofcunha/data/bancada-evangelica.csv", header=TRUE, quote="\"")
-bancada.ruralista <- read.table("/home/viana/Projetos/houseofcunha/data/bancada-ruralista.csv", header=TRUE, quote="\"")
+bancada.bala <- read.table("data/bancada-bala.csv", header=TRUE, quote="\"")
+bancada.humanista <- read.table("data/bancada-humanista.csv", header=TRUE, quote="\"")
+bancada.sindical <- read.table("data/bancada-sindical.csv", header=TRUE, quote="\"")
+bancada.evangelica <- read.table("data/bancada-evangelica.csv", header=TRUE, quote="\"")
+bancada.ruralista <- read.table("data/bancada-ruralista.csv", header=TRUE, quote="\"")
 ```
 
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}

@@ -45,19 +45,19 @@ plotBancadas <- function(dados){
     theme(axis.ticks = element_blank())
 }
 
-plotCluster <- function(mca1_obs_df){
-  splitData <- split(mca1_obs_df, mca1_obs_df$clust)
-  appliedData <- lapply(splitData, function(df){
-    df[chull(df), ]  # chull really is useful, even outside of contrived examples.
-  })
-  combinedData <- do.call(rbind, appliedData)
+plotCluster <- function(mca1_obs_df, cores = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8")) {
+  num_clusters <- length(levels(mca1_obs_df$clust))
+  p <- plotMCAstains(mca1_obs_df, alfa = 0.3)
+  hulls <- recuperar_convex_hulls(mca1_obs_df, delta = .04)
   
-  p <- plotMCAstains(mca1_obs_df)
-  
-  p <- p + 
-    geom_polygon(data = combinedData, aes(x = Dim.1, y = Dim.2, fill = clust), alpha = 1/2) 
-  
-  p  
+  p <- p + geom_polygon(data = hulls, 
+                        aes(x = x_aum, y = y_aum, fill = clust), 
+                        alpha = 0.5) + 
+    geom_point(size = 9, alpha = .3, aes(colour = clust)) + 
+    scale_fill_manual(values = cores) +
+    scale_colour_manual(values = cores) +
+    theme(legend.position="none")
+  p
 }
 
 deputadosAtivos <- function(votacao, porcentagemAtividadeMinima) {
@@ -576,7 +576,7 @@ recuperar_convex_hulls <- function(df, delta = .4) {
   return(hulls)
 }
 
-buildClustersPlots <- function(mca1_obs_df,pasta_resultados, cores = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8") ) {
+buildClustersPlots <- function(mca1_obs_df, pasta_resultados, cores = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8") ) {
   num_clusters <- length(levels(mca1_obs_df$clust))
   p <- plotMCAstains(mca1_obs_df, alfa = 0.1)
   colors <- c("outros" = "grey70","pmdb" = "darkred","psdb" = "#56B4E9", "psol" = "#F0E442","pt" = "#FF0000")
