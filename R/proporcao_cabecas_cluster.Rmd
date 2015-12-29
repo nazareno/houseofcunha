@@ -17,6 +17,7 @@ require(cluster)
 require(ade4)
 require(scales)
 require(FactoMineR)
+require(tidyr)
 
 source("R/camara-lib.R")
 ```
@@ -75,66 +76,81 @@ p <- plotCluster(mca1_obs_df) +
              size = 9, alpha = 0.3, colour = "Black")  +
   coord_equal() 
 
-png("plot/cabecas/deputados_cabeca_clust_dep.png", width = 800, height = 600)
+png("plot/cabecas/deputados_cabeca_clust_dep.png", width = 960, height = 960)
 p
 dev.off()  
 
-p <- p + geom_text(data = filter(mca1_obs_df, destaque_cabeca == TRUE), 
+png("plot/cabecas/deputados_cabeca_clust_dep_nome.png", width = 800, height = 600)
+p + geom_text(data = filter(mca1_obs_df, destaque_cabeca == TRUE), 
                    aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
                    check_overlap = TRUE,
                    colour = "black", alpha = 0.5, size = 3, hjust = -.15)
-
-png("plot/cabecas/deputados_cabeca_clust_dep_nome.png", width = 800, height = 600)
-p
 dev.off()  
 
-png("plot/cabecas/deputados_cabeca_clust_dep_nome_gg.png", width = 1500, height = 1200)
-p
+png("plot/cabecas/deputados_cabeca_clust_dep_nome_gg.png", width = 4000, height = 3000)
+p + geom_text(data = filter(mca1_obs_df, destaque_cabeca == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   check_overlap = TRUE,
+                   colour = "black", alpha = 0.5, size = 9, hjust = -.15) 
 dev.off()  
+
 ```
+
+```{r}
+levels(mca1_obs_df$clust) <- c("Governo", "Alinhados com PMDB", "Oposição de esquerda", "Oposição")
+```
+
 
 Número de deputados cabeças por clust
 
 ```{r}
-dep_clust <- filter(mca1_obs_df, destaque_cabeca == TRUE)
-dep_clust <- as.data.frame(table(dep_clust$clust))
-colnames(dep_clust) <- c("clust", "cabecas")
+capitas <- mca1_obs_df %>% 
+  filter(destaque_cabeca == T) %>% 
+  select(clust) %>% 
+  table()
 
-p <- ggplot(data = dep_clust, aes(x=reorder(clust, -cabecas), y = cabecas, fill = clust)) + 
-  geom_bar(stat="identity") + 
-  theme_classic() + 
+p <- ggplot(data = filter(mca1_obs_df, destaque_cabeca), 
+            aes(x=reorder(clust, capitas[clust]), fill = clust)) + 
+  geom_bar(width = .5) + 
+  theme_pander() + 
   scale_fill_manual(values = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8")) +
   labs(y='Nº de Deputados', x='') +
-  theme(axis.ticks = element_blank(), legend.position="none", axis.text.x=element_blank())
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_text(size = rel(1.5)), 
+        legend.position="none") + 
+  coord_flip()
+p 
 
-png("plot/cabecas/deputados_n_cabeca_clust.png", width = 800, height = 600)
-p
+png("plot/cabecas/deputados_n_cabeca_clust.png", width = 850, height = 500)
+p 
 dev.off()
 ```
 
 Proporção de deputados cabeças por clust
 
 ```{r}
-n_dep_clust <- as.data.frame(table(mca1_obs_df$clust))
-dep_clust <- cbind(dep_clust, total = n_dep_clust$Freq)
-dep_clust$prop <- dep_clust$cabecas / dep_clust$total
-dep_clust$comp <- 1 - dep_clust$prop
 
-toPlot <- dep_clust
-toPlot$cabecas <- NULL
-toPlot$total <- NULL
+toPlot <- mca1_obs_df %>% 
+  group_by(clust, destaque_cabeca) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ungroup() %>% 
+  arrange(clust, -destaque_cabeca, perc)
 
-require(tidyr)
-toPlot <- gather(toPlot, "tipo", "proporcao", 2:3)
+ordem = rep(filter(toPlot, destaque_cabeca == T)$perc, each = 2)
 
-p <- ggplot(data = toPlot, aes(x = clust, y=proporcao, fill=tipo)) +
-  geom_bar(stat="identity") +
-  theme_classic() + 
-  scale_fill_manual(values = c("#f0f0f0", "#bdbdbd")) + 
-  labs(y='', x='') +
-  theme(axis.ticks = element_blank(), legend.position="none")
+p <- ggplot(toPlot, aes(x = reorder(clust, ordem), y = perc, fill = destaque_cabeca)) +  
+  geom_bar(stat = "identity", width = .4) + 
+  theme_pander() + 
+  scale_y_continuous(labels=percent) + 
+  labs(x = "", y = "% dos deputados que são cabeças") + 
+  theme(legend.position="none", 
+        axis.text = element_text(size = rel(1.5))) + 
+  scale_fill_brewer(palette = "YlOrBr") + 
+  coord_flip()
+p
 
-png("plot/cabecas/proprocao_cabeca_clust.png", width = 800, height = 600)
+png("plot/cabecas/proprocao_cabeca_clust.png", width = 850, height = 500)
 p
 dev.off()
 ```
