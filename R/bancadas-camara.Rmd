@@ -16,7 +16,7 @@ require(scales)
 require(FactoMineR)
 library(dplyr)
 
-source("/home/viana/Projetos/houseofcunha/R/camara-lib.R")
+source("R/camara-lib.R")
 ```
 
 
