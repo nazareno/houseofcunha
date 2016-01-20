@@ -22,14 +22,14 @@ source("R/camara-lib.R")
 
 
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
-votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
 
 # Bancadas
-bancada.bala <- read.table("data/bancada-bala.csv", header=TRUE, quote="\"")
-bancada.humanista <- read.table("data/bancada-humanista.csv", header=TRUE, quote="\"")
-bancada.sindical <- read.table("data/bancada-sindical.csv", header=TRUE, quote="\"")
-bancada.evangelica <- read.table("data/bancada-evangelica.csv", header=TRUE, quote="\"")
-bancada.ruralista <- read.table("data/bancada-ruralista.csv", header=TRUE, quote="\"")
+bancada.bala <- read.table("dados/bancada-bala.csv", header=TRUE, quote="\"")
+bancada.humanista <- read.table("dados/bancada-humanista.csv", header=TRUE, quote="\"")
+bancada.sindical <- read.table("dados/bancada-sindical.csv", header=TRUE, quote="\"")
+bancada.evangelica <- read.table("dados/bancada-evangelica.csv", header=TRUE, quote="\"")
+bancada.ruralista <- read.table("dados/bancada-ruralista.csv", header=TRUE, quote="\"")
 ```
 
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
@@ -39,46 +39,55 @@ mca1 = MCA(votos_por_deputado,
            quali.sup = c(1:4),
            na.method = "Average") # NA or Average
 
-# data frame with observation coordinates
-mca1_obs_df = data.frame(mca1$ind$coord, 
-                         nome = votos_por_deputado$nome,
-                         partido = votos_por_deputado$partido, 
-                         uf = votos_por_deputado$uf,
-                         id_dep = votos_por_deputado$id_dep)
 
-# Partidos icônicos
-mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in% 
-                                               c("pmdb", "psdb", "pt", "psol"), 
-                                             as.character(mca1_obs_df$partido), 
-                                             "outros"))
+
+mca <- MCA(votos_por_deputado, 
+           ncp = 6, # Default is 5 
+           graph = FALSE,
+           quali.sup = c(1:4),
+           na.method = "Average") # NA or Average
+
+mca_obs_df <-  data.frame(mca$ind$coord, 
+                           nome = votos_por_deputado$nome,
+                           partido = votos_por_deputado$partido, 
+                           uf = votos_por_deputado$uf,
+                           id_dep = votos_por_deputado$id_dep)
+
+mca_obs_df$id_dep <- as.integer(as.character(mca_obs_df$id_dep))
+
+hcpc <- clusterizar(mca,4)
+clusters <- obter_clusters(hcpc)
+
+mca_obs_df <- cbind(mca_obs_df, select(clusters,clust))
+mca_obs_df$clust <- as.factor(mca_obs_df$clust)
 
 
 # Destaque dos deputados que participam da bancada bala
-mca1_obs_df$destaque_bancada_bala <-  mca1_obs_df$nome %in% bancada.bala$Bala
-mca1_obs_df$destaque_bancada_bala_partido <-  ifelse(mca1_obs_df$destaque_bancada_bala == TRUE, as.character(mca1_obs_df$destaque_partido ), "não participam")
+mca_obs_df$destaque_bancada_bala <-  mca_obs_df$nome %in% bancada.bala$Bala
+mca_obs_df$destaque_bancada_bala_partido <-  ifelse(mca_obs_df$destaque_bancada_bala == TRUE, as.character(mca_obs_df$destaque_partido ), "não participam")
 
 # Destaque dos deputados que participam da bancada humanista
-mca1_obs_df$destaque_bancada_humanista <-  mca1_obs_df$nome %in% bancada.humanista$Humanista
-mca1_obs_df$destaque_bancada_humanista_partido <-  ifelse(mca1_obs_df$destaque_bancada_humanista == TRUE, as.character(mca1_obs_df$destaque_partido ), "não participam")
+mca_obs_df$destaque_bancada_humanista <-  mca_obs_df$nome %in% bancada.humanista$Humanista
+mca_obs_df$destaque_bancada_humanista_partido <-  ifelse(mca_obs_df$destaque_bancada_humanista == TRUE, as.character(mca_obs_df$destaque_partido ), "não participam")
 
 # Bancada Evangelica 
-mca1_obs_df$destaque_bancada_evangelica <- mca1_obs_df$nome %in% bancada.evangelica$Evangelica
-mca1_obs_df$destaque_bancada_evangelica_partido <-  ifelse(mca1_obs_df$destaque_bancada_evangelica == TRUE, as.character(mca1_obs_df$destaque_partido ), "não participam")
+mca_obs_df$destaque_bancada_evangelica <- mca_obs_df$nome %in% bancada.evangelica$Evangelica
+mca_obs_df$destaque_bancada_evangelica_partido <-  ifelse(mca_obs_df$destaque_bancada_evangelica == TRUE, as.character(mca_obs_df$destaque_partido ), "não participam")
 
 # Bancada Ruralista
 mca1_obs_df$destaque_bancada_ruralista <- mca1_obs_df$nome %in% bancada.ruralista$Ruralista
 mca1_obs_df$destaque_bancada_ruralista_partido <-  ifelse(mca1_obs_df$destaque_bancada_ruralista == TRUE, as.character(mca1_obs_df$destaque_partido ), "não participam")
 
 # Bancada Sindical
-mca1_obs_df$destaque_bancada_sindical <- mca1_obs_df$nome %in% bancada.sindical$Sindical
-mca1_obs_df$destaque_bancada_sindical_partido <-  ifelse(mca1_obs_df$destaque_bancada_sindical == TRUE, as.character(mca1_obs_df$destaque_partido ), "não participam")
+mca_obs_df$destaque_bancada_sindical <- mca_obs_df$nome %in% bancada.sindical$Sindical
+mca_obs_df$destaque_bancada_sindical_partido <-  ifelse(mca_obs_df$destaque_bancada_sindical == TRUE, as.character(mca_obs_df$destaque_partido ), "não participam")
 
 ```
 
 Bancada Bala 
 
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
-p <- plotMCAstains(mca1_obs_df, alfa = 0.1)
+p <- plotMCAstains(mca_obs_df, alfa = 0.1)
 
 p <- p + geom_point(aes(colour = destaque_bancada_bala_partido, label = nome), size = 7)  +  
   scale_colour_manual(values = c(alpha("grey70", .05), 
@@ -88,11 +97,15 @@ p <- p + geom_point(aes(colour = destaque_bancada_bala_partido, label = nome), s
                                  alpha("#FF3300", .6)), 
                       guide = guide_legend(title = "Partido", 
                                            override.aes = list(alpha = 1, size = 7))) +
-  labs(title = "Bancada da Bala") +
-  geom_text(data = filter(mca1_obs_df, destaque_bancada_bala == TRUE), 
-                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
-                   check_overlap = TRUE,
-                   colour = "red", alpha = 0.5, size = 3.5, hjust = -.15)
+  labs(title = "Bancada da Bala")
+
+require(tidyr)
+require(plyr)
+
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(mca_obs_df, destaque_bancada_bala == TRUE), 
+             size = 9, alpha = 0.3, colour = "Black")  +
+  coord_equal() 
 
 p
 png("plot/bancadas/bancada_bala.png", width = 800, height = 600)
