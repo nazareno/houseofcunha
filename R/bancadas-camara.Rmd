@@ -11,9 +11,10 @@ Comparação das composições das bancadas na câmara
 library(ggplot2)
 library(reshape2)
 require(cluster)
-#require(ade4)
+require(ade4)
 require(scales)
 require(FactoMineR)
+library(ggthemes)
 library(dplyr)
 
 source("R/camara-lib.R")
@@ -77,26 +78,77 @@ mca_obs_df$destaque_bancada_sindical_partido <-  ifelse(mca_obs_df$destaque_banc
 
 Bancada Bala 
 
+```{r}
+levels(mca_obs_df$clust) <- c("Governo", "Alinhados com PMDB", "Oposição de esquerda", "Oposição")
+```
+
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
-p <- plotMCAstains(mca_obs_df, alfa = 0.1)
-
-p <- p + geom_point(aes(colour = destaque_bancada_bala_partido, label = nome), size = 7)  +  
-  scale_colour_manual(values = c(alpha("grey70", .05), 
-                                 alpha("#018571", .6),
-                                 alpha("darkred", .6), 
-                                 alpha("#0066CC", .6),
-                                 alpha("#FF3300", .6)), 
-                      guide = guide_legend(title = "Partido", 
-                                           override.aes = list(alpha = 1, size = 7))) +
-  labs(title = "Bancada da Bala")
-
 p <- plotCluster(mca_obs_df) + 
   geom_point(data = filter(mca_obs_df, destaque_bancada_bala == TRUE), 
              size = 9, alpha = 0.3, colour = "Black")  +
   coord_equal() 
 
+png("plot/bancadas/bancada_bala_clust.png", width = 800, height = 600)
+p 
+dev.off()
+
+
+png("plot/bancadas/bancada_bala_nomes.png", width = 800, height = 600)
+
+p + geom_text(data = filter(mca_obs_df, destaque_bancada_bala == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.5, size = 3, hjust = -.15)
+dev.off()
+
+
+png("plot/bancadas/bancada_bala_nomes_gg.png", width = 4000, height = 3000)
+
+p + geom_text(data = filter(mca_obs_df, destaque_bancada_bala == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.5, size = 9, hjust = -.15) 
+dev.off()  
+
+# Número de deputados da bancada por clust
+
+n_dep <- mca_obs_df %>% 
+  filter(destaque_bancada_bala == TRUE) %>% 
+  select(clust) %>% 
+  table()
+
+p <- ggplot(data = filter(mca_obs_df, destaque_bancada_bala), 
+            aes(x=reorder(clust, n_dep[clust]), fill = clust)) + 
+  geom_bar(width = .5) + 
+  theme_pander() + 
+  scale_fill_manual(values = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8")) +
+  labs(y='Nº de Deputados', x='') +
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_text(size = rel(1.5)), 
+        legend.position="none") + 
+  coord_flip()
+
+png("plot/bancadas/bancada_bala_n_clust.png", width = 850, height = 500)
+p 
+dev.off()
+
+toPlot <- mca_obs_df %>% 
+  group_by(clust, destaque_bancada_bala) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ungroup() %>% 
+  arrange(clust, -destaque_bancada_bala, perc)
+
+p <- ggplot(toPlot, aes(x = clust, y = perc, fill = destaque_bancada_bala)) +  
+  geom_bar(stat = "identity", width = .4) + 
+  theme_pander() + 
+  scale_y_continuous(labels=percent) + 
+  labs(x = "", y = "% dos deputados que são da bancada da bala") + 
+  theme(legend.position="none", 
+        axis.text = element_text(size = rel(1.5))) + 
+  scale_fill_brewer(palette = "YlOrBr") + 
+  coord_flip()
+
+png("plot/bancadas/bancada_bala_proprocao_clust.png", width = 850, height = 500)
 p
-png("plot/bancadas/bancada_bala.png", width = 800, height = 600)
 dev.off()
 ```
 
