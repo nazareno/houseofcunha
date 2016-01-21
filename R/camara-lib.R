@@ -570,9 +570,11 @@ criar_df_aumentado <- function(df, delta = 0.4) {
 }
 
 recuperar_convex_hulls <- function(df, delta = .4) {
+  require(plyr)
   df.i <- criar_df_aumentado(df, delta)
   find_hull <- function(df) df[chull(df$x_aum, df$y_aum), ]
   hulls <- ddply(df.i, "clust", find_hull)
+  detach("package:plyr")
   return(hulls)
 }
 

@@ -11,7 +11,7 @@ Comparação das composições das bancadas na câmara
 library(ggplot2)
 library(reshape2)
 require(cluster)
-require(ade4)
+#require(ade4)
 require(scales)
 require(FactoMineR)
 library(dplyr)
@@ -33,14 +33,6 @@ bancada.ruralista <- read.table("dados/bancada-ruralista.csv", header=TRUE, quot
 ```
 
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
-mca1 = MCA(votos_por_deputado, 
-           ncp = 2, # Default is 5 
-           graph = FALSE,
-           quali.sup = c(1:4),
-           na.method = "Average") # NA or Average
-
-
-
 mca <- MCA(votos_por_deputado, 
            ncp = 6, # Default is 5 
            graph = FALSE,
@@ -60,7 +52,6 @@ clusters <- obter_clusters(hcpc)
 
 mca_obs_df <- cbind(mca_obs_df, select(clusters,clust))
 mca_obs_df$clust <- as.factor(mca_obs_df$clust)
-
 
 # Destaque dos deputados que participam da bancada bala
 mca_obs_df$destaque_bancada_bala <-  mca_obs_df$nome %in% bancada.bala$Bala
@@ -98,9 +89,6 @@ p <- p + geom_point(aes(colour = destaque_bancada_bala_partido, label = nome), s
                       guide = guide_legend(title = "Partido", 
                                            override.aes = list(alpha = 1, size = 7))) +
   labs(title = "Bancada da Bala")
-
-require(tidyr)
-require(plyr)
 
 p <- plotCluster(mca_obs_df) + 
   geom_point(data = filter(mca_obs_df, destaque_bancada_bala == TRUE), 
