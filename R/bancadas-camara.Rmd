@@ -27,7 +27,7 @@ votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votaco
 
 # Bancadas
 bancada.bala <- read.table("dados/bancada-bala.csv", header=TRUE, quote="\"")
-bancada.humanista <- read.table("dados/bancada-humanista.csv", header=TRUE, quote="\"")
+bancada.direitos.humanos <- read.table("dados/bancada-direitos-humanos.csv", header=TRUE, quote="\"")
 bancada.sindical <- read.table("dados/bancada-sindical.csv", header=TRUE, quote="\"")
 bancada.evangelica <- read.table("dados/bancada-evangelica.csv", header=TRUE, quote="\"")
 bancada.ruralista <- read.table("dados/bancada-ruralista.csv", header=TRUE, quote="\"")
@@ -48,6 +48,7 @@ mca_obs_df <-  data.frame(mca$ind$coord,
 
 mca_obs_df$id_dep <- as.integer(as.character(mca_obs_df$id_dep))
 
+#Criação do clust
 hcpc <- clusterizar(mca,4)
 clusters <- obter_clusters(hcpc)
 
@@ -56,33 +57,27 @@ mca_obs_df$clust <- as.factor(mca_obs_df$clust)
 
 # Destaque dos deputados que participam da bancada bala
 mca_obs_df$destaque_bancada_bala <-  mca_obs_df$nome %in% bancada.bala$Bala
-mca_obs_df$destaque_bancada_bala_partido <-  ifelse(mca_obs_df$destaque_bancada_bala == TRUE, as.character(mca_obs_df$destaque_partido ), "não participam")
 
-# Destaque dos deputados que participam da bancada humanista
-mca_obs_df$destaque_bancada_humanista <-  mca_obs_df$nome %in% bancada.humanista$Humanista
-mca_obs_df$destaque_bancada_humanista_partido <-  ifelse(mca_obs_df$destaque_bancada_humanista == TRUE, as.character(mca_obs_df$destaque_partido ), "não participam")
+# Destaque dos deputados que participam da bancada dos direitos humanos
+mca_obs_df$destaque_bancada_direitos_humanos <-  mca_obs_df$nome %in% bancada.direitos.humanos$Humanista
 
 # Bancada Evangelica 
 mca_obs_df$destaque_bancada_evangelica <- mca_obs_df$nome %in% bancada.evangelica$Evangelica
-mca_obs_df$destaque_bancada_evangelica_partido <-  ifelse(mca_obs_df$destaque_bancada_evangelica == TRUE, as.character(mca_obs_df$destaque_partido ), "não participam")
 
 # Bancada Ruralista
-mca1_obs_df$destaque_bancada_ruralista <- mca1_obs_df$nome %in% bancada.ruralista$Ruralista
-mca1_obs_df$destaque_bancada_ruralista_partido <-  ifelse(mca1_obs_df$destaque_bancada_ruralista == TRUE, as.character(mca1_obs_df$destaque_partido ), "não participam")
+mca_obs_df$destaque_bancada_ruralista <- mca_obs_df$nome %in% bancada.ruralista$Ruralista
 
 # Bancada Sindical
 mca_obs_df$destaque_bancada_sindical <- mca_obs_df$nome %in% bancada.sindical$Sindical
-mca_obs_df$destaque_bancada_sindical_partido <-  ifelse(mca_obs_df$destaque_bancada_sindical == TRUE, as.character(mca_obs_df$destaque_partido ), "não participam")
 
+
+levels(mca_obs_df$clust) <- c("Governo", "Alinhados com PMDB", "Oposição de esquerda", "Oposição")
 ```
 
 Bancada Bala 
 
-```{r}
-levels(mca_obs_df$clust) <- c("Governo", "Alinhados com PMDB", "Oposição de esquerda", "Oposição")
-```
-
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
+# Destaque dos deputados que fazem parte da bancada da bala 
 p <- plotCluster(mca_obs_df) + 
   geom_point(data = filter(mca_obs_df, destaque_bancada_bala == TRUE), 
              size = 9, alpha = 0.3, colour = "Black")  +
@@ -92,7 +87,7 @@ png("plot/bancadas/bancada_bala_clust.png", width = 800, height = 600)
 p 
 dev.off()
 
-
+# Nome dos deputados que fazem parte da bancada da bala 
 png("plot/bancadas/bancada_bala_nomes.png", width = 800, height = 600)
 
 p + geom_text(data = filter(mca_obs_df, destaque_bancada_bala == TRUE), 
@@ -100,6 +95,7 @@ p + geom_text(data = filter(mca_obs_df, destaque_bancada_bala == TRUE),
                    colour = "black", alpha = 0.5, size = 3, hjust = -.15)
 dev.off()
 
+x<-filter(mca_obs_df, destaque_bancada_bala == TRUE)
 
 png("plot/bancadas/bancada_bala_nomes_gg.png", width = 4000, height = 3000)
 
@@ -109,14 +105,13 @@ p + geom_text(data = filter(mca_obs_df, destaque_bancada_bala == TRUE),
 dev.off()  
 
 # Número de deputados da bancada por clust
-
 n_dep <- mca_obs_df %>% 
   filter(destaque_bancada_bala == TRUE) %>% 
   select(clust) %>% 
   table()
 
 p <- ggplot(data = filter(mca_obs_df, destaque_bancada_bala), 
-            aes(x=reorder(clust, n_dep[clust]), fill = clust)) + 
+            aes(x = reorder(clust, n_dep[clust]), fill = clust)) + 
   geom_bar(width = .5) + 
   theme_pander() + 
   scale_fill_manual(values = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8")) +
@@ -130,6 +125,7 @@ png("plot/bancadas/bancada_bala_n_clust.png", width = 850, height = 500)
 p 
 dev.off()
 
+# Proporção dos deputados que fazem parte da bancada da bala 
 toPlot <- mca_obs_df %>% 
   group_by(clust, destaque_bancada_bala) %>% 
   summarise(count=n()) %>% 
@@ -144,10 +140,227 @@ p <- ggplot(toPlot, aes(x = clust, y = perc, fill = destaque_bancada_bala)) +
   labs(x = "", y = "% dos deputados que são da bancada da bala") + 
   theme(legend.position="none", 
         axis.text = element_text(size = rel(1.5))) + 
-  scale_fill_brewer(palette = "YlOrBr") + 
+  scale_fill_brewer(palette = "OrRd") + 
   coord_flip()
 
-png("plot/bancadas/bancada_bala_proprocao_clust.png", width = 850, height = 500)
+png("plot/bancadas/bancada_bala_proporcao_clust.png", width = 850, height = 500)
+p
+dev.off()
+```
+
+Bancada evangelica
+
+```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
+# Destaque dos deputados que fazem parte da bancada evangelica 
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(mca_obs_df, destaque_bancada_evangelica == TRUE), 
+             size = 9, alpha = 0.3, colour = "Black")  +
+  coord_equal() 
+
+png("plot/bancadas/bancada_evangelica_clust.png", width = 800, height = 600)
+p 
+dev.off()
+
+# Nome dos deputados que fazem parte da bancada evangelica 
+png("plot/bancadas/bancada_evangelica_nomes.png", width = 800, height = 600)
+
+p + geom_text(data = filter(mca_obs_df, destaque_bancada_evangelica == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.5, size = 3, hjust = -.15)
+dev.off()
+
+png("plot/bancadas/bancada_evangelica_gg.png", width = 4000, height = 3000)
+
+p + geom_text(data = filter(mca_obs_df, destaque_bancada_evangelica == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.5, size = 9, hjust = -.15) 
+dev.off()  
+
+# Número de deputados da bancada por clust
+n_dep <- mca_obs_df %>% 
+  filter(destaque_bancada_evangelica == TRUE) %>% 
+  select(clust) %>% 
+  table()
+
+p <- ggplot(data = filter(mca_obs_df, destaque_bancada_evangelica), 
+            aes(x = reorder(clust, n_dep[clust]), fill = clust)) + 
+  geom_bar(width = .5) + 
+  theme_pander() + 
+  scale_fill_manual(values = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8")) +
+  labs(y='Nº de Deputados', x='') +
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_text(size = rel(1.5)), 
+        legend.position="none") + 
+  coord_flip()
+
+png("plot/bancadas/bancada_evangelica_n_clust.png", width = 850, height = 500)
+p 
+dev.off()
+
+# Proporção dos deputados que fazem parte da bancada evangelica
+toPlot <- mca_obs_df %>% 
+  group_by(clust, destaque_bancada_evangelica) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ungroup() %>% 
+  arrange(clust, -destaque_bancada_evangelica, perc)
+
+p <- ggplot(toPlot, aes(x = clust, y = perc, fill = destaque_bancada_evangelica)) +  
+  geom_bar(stat = "identity", width = .4) + 
+  theme_pander() + 
+  scale_y_continuous(labels=percent) + 
+  labs(x = "", y = "% dos deputados que são da bancada evangelica") + 
+  theme(legend.position="none", 
+        axis.text = element_text(size = rel(1.5))) + 
+  scale_fill_brewer(palette = "OrRd") + 
+  coord_flip()
+
+png("plot/bancadas/bancada_evangelica_proporcao_clust.png", width = 850, height = 500)
+p
+dev.off()
+```
+
+Bancada ruralista
+
+```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
+# Destaque dos deputados que fazem parte da bancada ruralista 
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(mca_obs_df, destaque_bancada_ruralista == TRUE), 
+             size = 9, alpha = 0.3, colour = "Black")  +
+  coord_equal() 
+
+png("plot/bancadas/bancada_ruralista_clust.png", width = 800, height = 600)
+p 
+dev.off()
+
+# Nome dos deputados que fazem parte da bancada ruralista 
+png("plot/bancadas/bancada_ruralista_nomes.png", width = 800, height = 600)
+
+p + geom_text(data = filter(mca_obs_df, destaque_bancada_ruralista == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.5, size = 3, hjust = -.15)
+dev.off()
+
+png("plot/bancadas/bancada_ruralista_gg.png", width = 4000, height = 3000)
+
+p + geom_text(data = filter(mca_obs_df, destaque_bancada_ruralista == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.5, size = 9, hjust = -.15) 
+dev.off()  
+
+# Número de deputados da bancada por clust
+n_dep <- mca_obs_df %>% 
+  filter(destaque_bancada_ruralista == TRUE) %>% 
+  select(clust) %>% 
+  table()
+
+p <- ggplot(data = filter(mca_obs_df, destaque_bancada_ruralista), 
+            aes(x = reorder(clust, n_dep[clust]), fill = clust)) + 
+  geom_bar(width = .5) + 
+  theme_pander() + 
+  scale_y_continuous(limits = c(0, max(n_dep)+5)) +  
+  scale_fill_manual(values = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8")) +
+  labs(y='Nº de Deputados', x='') +
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_text(size = rel(1.5)), 
+        legend.position="none") + 
+  coord_flip()
+
+png("plot/bancadas/bancada_ruralista_n_clust.png", width = 850, height = 500)
+p 
+dev.off()
+
+# Proporção dos deputados que fazem parte da bancada ruralista
+toPlot <- mca_obs_df %>% 
+  group_by(clust, destaque_bancada_ruralista) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ungroup() %>% 
+  arrange(clust, -destaque_bancada_ruralista, perc)
+
+p <- ggplot(toPlot, aes(x = clust, y = perc, fill = destaque_bancada_ruralista)) +  
+  geom_bar(stat = "identity", width = .4) + 
+  theme_pander() + 
+  scale_y_continuous(labels=percent) + 
+  labs(x = "", y = "% dos deputados que são da bancada ruralista") + 
+  theme(legend.position="none", 
+        axis.text = element_text(size = rel(1.5))) + 
+  scale_fill_brewer(palette = "OrRd") + 
+  coord_flip()
+
+png("plot/bancadas/bancada_ruralista_proporcao_clust.png", width = 850, height = 500)
+p
+dev.off()
+```
+
+Bancada sindical
+
+```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
+# Destaque dos deputados que fazem parte da bancada sindical 
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(mca_obs_df, destaque_bancada_sindical == TRUE), 
+             size = 9, alpha = 0.3, colour = "Black")  +
+  coord_equal() 
+
+png("plot/bancadas/bancada_sindical_clust.png", width = 800, height = 600)
+p 
+dev.off()
+
+# Nome dos deputados que fazem parte da bancada sindical 
+png("plot/bancadas/bancada_sindical_nomes.png", width = 800, height = 600)
+
+p + geom_text(data = filter(mca_obs_df, destaque_bancada_sindical == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.5, size = 3, hjust = -.15)
+dev.off()
+
+png("plot/bancadas/bancada_sindical_gg.png", width = 4000, height = 3000)
+
+p + geom_text(data = filter(mca_obs_df, destaque_bancada_sindical == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.5, size = 9, hjust = -.15) 
+dev.off()  
+
+# Número de deputados da bancada por clust
+n_dep <- mca_obs_df %>% 
+  filter(destaque_bancada_sindical == TRUE) %>% 
+  select(clust) %>% 
+  table()
+
+p <- ggplot(data = filter(mca_obs_df, destaque_bancada_sindical), 
+            aes(x = reorder(clust, n_dep[clust]), fill = clust)) + 
+  geom_bar(width = .5) + 
+  theme_pander() + 
+  scale_fill_manual(values = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8")) +
+  labs(y='Nº de Deputados', x='') +
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_text(size = rel(1.5)), 
+        legend.position="none") + 
+  coord_flip()
+
+png("plot/bancadas/bancada_sindical_n_clust.png", width = 850, height = 500)
+p 
+dev.off()
+
+# Proporção dos deputados que fazem parte da bancada sindical
+toPlot <- mca_obs_df %>% 
+  group_by(clust, destaque_bancada_sindical) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ungroup() %>% 
+  arrange(clust, -destaque_bancada_sindical, perc)
+
+p <- ggplot(toPlot, aes(x = clust, y = perc, fill = destaque_bancada_sindical)) +  
+  geom_bar(stat = "identity", width = .4) + 
+  theme_pander() + 
+  scale_y_continuous(labels=percent) + 
+  labs(x = "", y = "% dos deputados que são da bancada sindical") + 
+  theme(legend.position="none", 
+        axis.text = element_text(size = rel(1.5))) + 
+  scale_fill_brewer(palette = "OrRd") + 
+  coord_flip()
+
+png("plot/bancadas/bancada_sindical_proporcao_clust.png", width = 850, height = 500)
 p
 dev.off()
 ```
@@ -155,95 +368,129 @@ dev.off()
 Bancada dos direitos humanos
 
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
-p <- plotMCAstains(mca1_obs_df, alfa = 0.1)
+# Destaque dos deputados que fazem parte da bancada dos direitos humanos 
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(mca_obs_df, destaque_bancada_direitos_humanos == TRUE), 
+             size = 9, alpha = 0.3, colour = "Black")  +
+  coord_equal() 
 
-p <- p + geom_point(aes(colour = destaque_bancada_humanista_partido), size = 7)  +  
-  scale_colour_manual(values = c(alpha("grey70", .05), 
-                                 alpha("#018571", .6),
-                                 alpha("#0066CC", .6),
-                                 alpha("#E69F00", .6),
-                                 alpha("#FF3300", .6)), 
-                      guide = guide_legend(title = "Partido", 
-                                           override.aes = list(alpha = 1, size = 7))) +
-  labs(title = "Bancada dos Direitos Humanos") +
-  geom_text(data = filter(mca1_obs_df, destaque_bancada_humanista == TRUE), 
+png("plot/bancadas/bancada_direitos_humanos_clust.png", width = 800, height = 600)
+p 
+dev.off()
+
+# Nome dos deputados que fazem parte da bancada dos direitos humanos 
+png("plot/bancadas/bancada_direitos_humanos_nomes.png", width = 800, height = 600)
+
+p + geom_text(data = filter(mca_obs_df, destaque_bancada_direitos_humanos == TRUE), 
                    aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
-                   check_overlap = TRUE,
-                   colour = "red", alpha = 0.5, size = 3.5, hjust = -.15)
+                   colour = "black", alpha = 0.5, size = 3, hjust = -.15)
+dev.off()
 
+png("plot/bancadas/bancada_direitos_humanos_nomes_gg.png", width = 4000, height = 3000)
+
+p + geom_text(data = filter(mca_obs_df, destaque_bancada_direitos_humanos == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.5, size = 9, hjust = -.15) 
+dev.off()  
+
+# Número de deputados da bancada por clust
+n_dep <- mca_obs_df %>% 
+  filter(destaque_bancada_direitos_humanos == TRUE) %>% 
+  select(clust) %>% 
+  table()
+
+p <- ggplot(data = filter(mca_obs_df, destaque_bancada_direitos_humanos), 
+            aes(x = reorder(clust, n_dep[clust]), fill = clust)) + 
+  geom_bar(width = .5) + 
+  theme_pander() + 
+  scale_fill_manual(values = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8")) +
+  labs(y='Nº de Deputados', x='') +
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_text(size = rel(1.5)), 
+        legend.position="none") + 
+  coord_flip()
+
+png("plot/bancadas/bancada_direitos_humanos_n_clust.png", width = 850, height = 500)
+p 
+dev.off()
+
+# Proporção dos deputados que fazem parte da bancada dos direitos humanos
+toPlot <- mca_obs_df %>% 
+  group_by(clust, destaque_bancada_direitos_humanos) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ungroup() %>% 
+  arrange(clust, -destaque_bancada_direitos_humanos, perc)
+
+p <- ggplot(toPlot, aes(x = clust, y = perc, fill = destaque_bancada_direitos_humanos)) +  
+  geom_bar(stat = "identity", width = .4) + 
+  theme_pander() + 
+  scale_y_continuous(labels=percent) + 
+  labs(x = "", y = "% dos deputados que são da bancada dos direitos humanos") + 
+  theme(legend.position="none", 
+        axis.text = element_text(size = rel(1.5))) + 
+  scale_fill_brewer(palette = "OrRd") + 
+  coord_flip()
+
+png("plot/bancadas/bancada_direitos_humanos_proporcao_clust.png", width = 850, height = 500)
 p
-
-png("plot/bancadas/bancada_humanista.png", width = 800, height = 600)
 dev.off()
 ```
 
-Bancada evangelica
+Bancada dos direitos humanos
 
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
-p <- plotMCAstains(mca1_obs_df, alfa = 0.1)
+# Destaque dos deputados que fazem parte da bancada BBB
+bbb <- filter(mca_obs_df, destaque_bancada_bala == TRUE | destaque_bancada_evangelica == TRUE | destaque_bancada_ruralista == TRUE)
 
-p <- p + geom_point(aes(colour = destaque_bancada_evangelica_partido), size = 7)  +  
-  scale_colour_manual(values = c(alpha("grey70", .05), 
-                                 alpha("#018571", .6),
-                                  alpha("darkred", .6), 
-                                  alpha("#0066CC", .6),
-                                  alpha("#FF3300", .6)),  
-                      guide = guide_legend(title = "Partido", 
-                                           override.aes = list(alpha = 1, size = 7))) +
-  labs(title = "Bancada Evangelica") +
-  geom_text(data = filter(mca1_obs_df, destaque_bancada_evangelica == TRUE), 
-                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
-                   check_overlap = TRUE,
-                   colour = "red", alpha = 0.5, size = 3.5, hjust = -.15)
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = bbb, 
+             size = 9, alpha = 0.3, colour = "Black")  +
+  coord_equal() 
 
-p
-
-png("plot/bancadas/bancada_evangelica.png", width = 800, height = 600)
+png("plot/bancadas/bancada_bbb_clust.png", width = 800, height = 600)
+p 
 dev.off()
-```
 
-Bancada ruralista
+# Número de deputados da bancada por clust
+n_dep <- bbb %>%
+  select(clust) %>% 
+  table()
 
-```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
-p <- plotMCAstains(mca1_obs_df, alfa = 0.1)
+p <- ggplot(data = bbb, 
+            aes(x = reorder(clust, n_dep[clust]), fill = clust)) + 
+  geom_bar(width = .5) + 
+  theme_pander() + 
+  scale_fill_manual(values = c("#fdcdac", "#f4cae4", "#b3e2cd", "#cbd5e8")) +
+  labs(y='Nº de Deputados', x='') +
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_text(size = rel(1.5)), 
+        legend.position="none") + 
+  coord_flip()
 
-p <- p + geom_point(aes(colour = destaque_bancada_ruralista_partido), size = 7)  +  
-  scale_colour_manual(values = c(alpha("grey70", .05), 
-                                 alpha("#018571", .6),
-                                 alpha("darkred", .6),
-                                 alpha("#0066CC", .6),
-                                 alpha("#FF3300", .6)), 
-                      guide = guide_legend(title = "Partido", 
-                                           override.aes = list(alpha = 1, size = 7))) +
-  labs(title = "Bancada Ruralista") 
-
-p
-
-png("plot/bancadas/bancada_ruralista.png", width = 800, height = 600)
+png("plot/bancadas/bancada_bbb_n_clust.png", width = 850, height = 500)
+p 
 dev.off()
-```
 
-Bancada sindical
+# Proporção dos deputados que fazem parte da bancada bbb
+toPlot <- mca_obs_df %>% 
+  group_by(clust, destaque_bancada_direitos_humanos) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ungroup() %>% 
+  arrange(clust, -destaque_bancada_direitos_humanos, perc)
 
-```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
-p <- plotMCAstains(mca1_obs_df, alfa = 0.1)
+p <- ggplot(toPlot, aes(x = clust, y = perc, fill = destaque_bancada_direitos_humanos)) +  
+  geom_bar(stat = "identity", width = .4) + 
+  theme_pander() + 
+  scale_y_continuous(labels=percent) + 
+  labs(x = "", y = "% dos deputados que são da bancada dos direitos humanos") + 
+  theme(legend.position="none", 
+        axis.text = element_text(size = rel(1.5))) + 
+  scale_fill_brewer(palette = "OrRd") + 
+  coord_flip()
 
-p <- p + geom_point(aes(colour = destaque_bancada_sindical_partido), size = 7)  +  
-  scale_colour_manual(values = c(alpha("grey70", .05), 
-                                 alpha("#018571", .6),
-                                 alpha("#0066CC", .6),
-                                 alpha("#E69F00", .6),
-                                 alpha("#FF3300", .6)), 
-                      guide = guide_legend(title = "Partido", 
-                                           override.aes = list(alpha = 1, size = 7))) +
-  labs(title = "Bancada Sindical") +
-  geom_text(data = filter(mca1_obs_df, destaque_bancada_sindical == TRUE), 
-                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
-                   check_overlap = TRUE,
-                   colour = "red", alpha = 0.5, size = 3.5, hjust = -.15)
-
+png("plot/bancadas/bancada_direitos_humanos_proporcao_clust.png", width = 850, height = 500)
 p
-
-png("plot/bancadas/bancada_sindical.png", width = 800, height = 600)
 dev.off()
 ```
