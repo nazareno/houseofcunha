@@ -20,8 +20,6 @@ library(dplyr)
 source("R/camara-lib.R")
 ```
 
-
-
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
 votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
 
@@ -473,14 +471,16 @@ p
 dev.off()
 
 # Proporção dos deputados que fazem parte da bancada bbb
+mca_obs_df$destaque_bbb <- mca_obs_df$nome %in% bbb$nome
+
 toPlot <- mca_obs_df %>% 
-  group_by(clust, destaque_bancada_direitos_humanos) %>% 
+  group_by(clust, destaque_bbb) %>% 
   summarise(count=n()) %>% 
   mutate(perc=count/sum(count)) %>% 
   ungroup() %>% 
-  arrange(clust, -destaque_bancada_direitos_humanos, perc)
+  arrange(clust, -destaque_bbb, perc)
 
-p <- ggplot(toPlot, aes(x = clust, y = perc, fill = destaque_bancada_direitos_humanos)) +  
+p <- ggplot(toPlot, aes(x = clust, y = perc, fill = destaque_bbb)) +  
   geom_bar(stat = "identity", width = .4) + 
   theme_pander() + 
   scale_y_continuous(labels=percent) + 
@@ -490,7 +490,7 @@ p <- ggplot(toPlot, aes(x = clust, y = perc, fill = destaque_bancada_direitos_hu
   scale_fill_brewer(palette = "OrRd") + 
   coord_flip()
 
-png("plot/bancadas/bancada_direitos_humanos_proporcao_clust.png", width = 850, height = 500)
+png("plot/bancadas/bancada_bbb_proporcao_clust.png", width = 850, height = 500)
 p
 dev.off()
 ```
