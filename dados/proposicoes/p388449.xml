@@ -24,6 +24,10 @@
   <LinkInteiroTeor>http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=548411</LinkInteiroTeor>
   <apensadas>
     <proposicao>
+      <nomeProposicao>PL 6132/2002</nomeProposicao>
+      <codProposicao>44577</codProposicao>
+    </proposicao>
+    <proposicao>
       <nomeProposicao>PL 3716/2004</nomeProposicao>
       <codProposicao>256481</codProposicao>
     </proposicao>
@@ -40,20 +44,20 @@
       <codProposicao>332210</codProposicao>
     </proposicao>
     <proposicao>
-      <nomeProposicao>PL 137/2007</nomeProposicao>
-      <codProposicao>340680</codProposicao>
-    </proposicao>
-    <proposicao>
-      <nomeProposicao>PL 456/2007</nomeProposicao>
-      <codProposicao>344845</codProposicao>
-    </proposicao>
-    <proposicao>
       <nomeProposicao>PL 1613/2007</nomeProposicao>
       <codProposicao>359949</codProposicao>
     </proposicao>
     <proposicao>
       <nomeProposicao>PL 1852/2007</nomeProposicao>
       <codProposicao>364122</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PL 137/2007</nomeProposicao>
+      <codProposicao>340680</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PL 456/2007</nomeProposicao>
+      <codProposicao>344845</codProposicao>
     </proposicao>
     <proposicao>
       <nomeProposicao>PL 243/2007</nomeProposicao>
@@ -100,16 +104,16 @@
       <codProposicao>945601</codProposicao>
     </proposicao>
     <proposicao>
+      <nomeProposicao>PL 273/2015</nomeProposicao>
+      <codProposicao>946236</codProposicao>
+    </proposicao>
+    <proposicao>
       <nomeProposicao>PL 194/2015</nomeProposicao>
       <codProposicao>945936</codProposicao>
     </proposicao>
     <proposicao>
       <nomeProposicao>PL 234/2015</nomeProposicao>
       <codProposicao>946121</codProposicao>
-    </proposicao>
-    <proposicao>
-      <nomeProposicao>PL 273/2015</nomeProposicao>
-      <codProposicao>946236</codProposicao>
     </proposicao>
     <proposicao>
       <nomeProposicao>PL 1861/2011</nomeProposicao>
@@ -152,10 +156,6 @@
       <codProposicao>613762</codProposicao>
     </proposicao>
     <proposicao>
-      <nomeProposicao>PL 8258/2014</nomeProposicao>
-      <codProposicao>843755</codProposicao>
-    </proposicao>
-    <proposicao>
       <nomeProposicao>PL 448/2015</nomeProposicao>
       <codProposicao>948975</codProposicao>
     </proposicao>
@@ -176,12 +176,16 @@
       <codProposicao>964475</codProposicao>
     </proposicao>
     <proposicao>
-      <nomeProposicao>PL 816/2015</nomeProposicao>
-      <codProposicao>1049168</codProposicao>
-    </proposicao>
-    <proposicao>
       <nomeProposicao>PL 842/2015</nomeProposicao>
       <codProposicao>1049356</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PL 8258/2014</nomeProposicao>
+      <codProposicao>843755</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PL 816/2015</nomeProposicao>
+      <codProposicao>1049168</codProposicao>
     </proposicao>
   </apensadas>
 </proposicao>

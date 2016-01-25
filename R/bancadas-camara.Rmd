@@ -435,7 +435,7 @@ p
 dev.off()
 ```
 
-Bancada dos direitos humanos
+Bancada bbb
 
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
 # Destaque dos deputados que fazem parte da bancada BBB
@@ -484,7 +484,7 @@ p <- ggplot(toPlot, aes(x = clust, y = perc, fill = destaque_bbb)) +
   geom_bar(stat = "identity", width = .4) + 
   theme_pander() + 
   scale_y_continuous(labels=percent) + 
-  labs(x = "", y = "% dos deputados que são da bancada dos direitos humanos") + 
+  labs(x = "", y = "% dos deputados que são da bancada bbb") + 
   theme(legend.position="none", 
         axis.text = element_text(size = rel(1.5))) + 
   scale_fill_brewer(palette = "OrRd") + 

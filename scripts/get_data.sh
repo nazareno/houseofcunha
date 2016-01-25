@@ -1,10 +1,8 @@
 curl "http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoesVotadasEmPlenario?ano=2015&tipo=" > ../dados/proposicoes-votadas-2015.xml 
 
-http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx?wsdl
-
 java -jar xml2csv-conv.jar ../dados/proposicoes-votadas-2015.xml ../dados/proposicoes-votadas-2015.csv
 mkdir ../dados/proposicoes
-for prop in `grep -v rop proposicoes-votadas-2015.csv | cut -d, -f1`; 
+for prop in `grep -v rop ../dados/proposicoes-votadas-2015.csv | cut -d, -f1`; 
 do 
 	if [ ! -f ../dados/proposicoes/p$prop.xml ]; 
 	then 
@@ -20,7 +18,7 @@ do
 	propnum=`echo $line | awk -F"[ \t\n]+" '{print $2}'`
 	if [ ! -f ../dados/votacoes/$propnum.xml ]; then 
 		propurl=`echo $line | awk -F"[ \t\n]+" '{print "http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ObterVotacaoProposicao?tipo=" $1 "&numero=" $2 "&ano=" $3}'`
-		curl $propurl > ../votacoes/$propnum.xml
+		curl $propurl > ../dados/votacoes/$propnum.xml
 	fi 
 done < ../dados/props-tipo_numero_ano.txt
 
