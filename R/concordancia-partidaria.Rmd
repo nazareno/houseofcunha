@@ -16,6 +16,8 @@ library(dplyr)
 require(scales)
 library(grid)
 library(gridBase)
+library(reshape2)
+require(FactoMineR)
 
 source("R/camara-lib.R")
 ```
@@ -116,6 +118,9 @@ png("plot/fidelidade/fidelidade_grid.png", width = 800, height = 600)
 p
 dev.off()  
 
+
+# Gráfico Pirâmide
+
 base <- ggplot(conc, aes( x = reorder(nome_mes, -n.mes), y = concordancia)) +
   theme_classic() 
 
@@ -135,7 +140,6 @@ pt <- base + geom_bar(data = subset(conc, part == "pt"),
 pmdb <- base + geom_bar(data = subset(conc, part == "pmdb"),
    aes(y = concordancia, fill = part), stat = "identity", position = "identity") +
   scale_y_continuous('', trans = 'reverse', limits = c(1, 0)) +
-  
   ggtitle("PMDB") + 
   scale_fill_manual(values = "#a6bddb") +
   theme(legend.position = "none", 
@@ -162,7 +166,7 @@ text <- base +
         axis.title.x = element_blank()) + 
   coord_flip()
 
-# Gráfico da pirâmide
+
 grid.newpage()
 
 pushViewport( viewport( layout = grid.layout(1,3, widths = c(.4,.1,.4))))
@@ -173,6 +177,22 @@ print(pmdb, vp = vplayout(1,1))
 print(text,   vp = vplayout(1,2))
 print(pt,   vp = vplayout(1,3))
 
+scale_colour_manual(values = cores, 
+                    guide = guide_legend(title = "Partido")) +
+
+# Gráfico de Barra com PMDB e PT
+cores =  c("#a6bddb", "#fc9272")
+p <- ggplot(filter(conc, part == "pt" | part == "pmdb", n.mes < 11), aes( x = reorder(nome_mes, n.mes), y = concordancia)) +
+  geom_bar( aes(y = concordancia, fill = part), stat = "identity", position = "dodge") +
+  scale_fill_manual(values = cores, name="Partido") +
+  ylab("") + xlab("") +
+    theme(axis.text.x = element_blank(),
+        axis.title = element_blank()) +
+  theme_classic() 
+
+png("plot/fidelidade/fidelidade_barra_pmdb_pt.png", width = 800, height = 600)
+p
+dev.off()  
 ```
 
 Todos os partidos
@@ -228,11 +248,10 @@ head(conc_por_partido[order(nrow(conc_por_partido):1),],n = 5)
 Concordância por deputado
 
 ```{r}
-
-concordancia_partidaria_dep_mes <- function(votos,id.deputado,num.mes) {
-  votos.deputado.mes <- filter(votos,votos$id_dep == id.deputado, votos$mes == num.mes)
-  votos.deputado.mes <- filter(votos.deputado.mes,votos.deputado.mes$orientacao_partido != "liberado" & votos.deputado.mes$orientacao_partido != "NA" & votos.deputado.mes$voto != "art. 17")
-  votos.concordancia <- filter(votos.deputado.mes,as.character(votos.deputado.mes$voto) == as.character(votos.deputado.mes$orientacao_partido))
+concordancia_partidaria_dep_mes <- function(votos, id.deputado, num.mes) {
+  votos.deputado.mes <- filter(votos, votos$id_dep == id.deputado, votos$mes == num.mes)
+  votos.deputado.mes <- filter(votos.deputado.mes, votos.deputado.mes$orientacao_partido != "liberado" & votos.deputado.mes$orientacao_partido != "NA" & votos.deputado.mes$voto != "art. 17")
+  votos.concordancia <- filter(votos.deputado.mes, as.character(votos.deputado.mes$voto) == as.character(votos.deputado.mes$orientacao_partido))
   
   total <- nrow(votos.deputado.mes)
   conc <- nrow(votos.concordancia)
@@ -240,7 +259,7 @@ concordancia_partidaria_dep_mes <- function(votos,id.deputado,num.mes) {
   return (if (total != 0) conc/total else NA)
 }
 
-concordancia_partidaria_dep_meses <- function(votos,id.deputado) {
+concordancia_partidaria_dep_meses <- function(votos, id.deputado) {
   conc <- data.frame()
   
   meses <- c(2:11)
@@ -248,50 +267,89 @@ concordancia_partidaria_dep_meses <- function(votos,id.deputado) {
   for (num.mes in meses) {
     conc.mes <- list()
     conc.mes$dep <- id.deputado
-    conc.mes$concordancia <- concordancia_partidaria_dep_mes(votos,id.deputado,num.mes)
+    conc.mes$concordancia <- concordancia_partidaria_dep_mes(votos, id.deputado, num.mes)
     conc.mes$n.mes <- num.mes
     
-    conc <- rbind(conc,conc.mes, make.row.names = FALSE)
+    conc <- rbind(conc, conc.mes, make.row.names = FALSE)
   }
   
   conc
 }
-
 ```
 
 Ranking Concordância por deputado
 
 ```{r}
-
 conc <- data.frame()
 
 for (d in unique(votos$id_dep)) {
-  conc.deputado <- concordancia_partidaria_dep_meses(votos,d)
-  conc <- rbind(conc,conc.deputado)
+  conc.deputado <- concordancia_partidaria_dep_meses(votos, d)
+  conc <- rbind(conc, conc.deputado)
 }
 
+conc[is.na(conc)] <- 0
 conc_por_deputado <- aggregate(concordancia ~ dep, conc, mean)
-conc_por_deputado <- conc_por_deputado[order(conc_por_deputado$concordancia,decreasing = TRUE),]
+conc_por_deputado <- conc_por_deputado[order(conc_por_deputado$concordancia, decreasing = TRUE),]
 
-deputados_infieis <- deputados_que_mudaram_de_partido(votos)
-votos2 <- definir_partido(deputados_infieis,votos)
+#deputados_infieis <- deputados_que_mudaram_de_partido(votos)
+#votos2 <- definir_partido(deputados_infieis, votos)
 
-deputados <- select(votos2, id_dep, nome, partido) %>% unique()
+#deputados <- select(votos2, id_dep, nome, partido) %>% unique()
 
-conc_por_deputado <- left_join(conc_por_deputado, deputados, by = c("dep" = "id_dep"))
-
-
+#conc_por_deputado <- left_join(conc_por_deputado, deputados, by = c("dep" = "id_dep"))
 ```
 
 Top-5 Paus Mandados
 
 ```{r}
-head(conc_por_deputado,n = 5)
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
 
+mca <- MCA(votos_por_deputado, 
+           ncp = 6, # Default is 5 
+           graph = FALSE,
+           quali.sup = c(1:4),
+           na.method = "Average") # NA or Average
+
+mca1_obs_df <-  data.frame(mca$ind$coord, 
+                           nome = votos_por_deputado$nome,
+                           partido = votos_por_deputado$partido, 
+                           uf = votos_por_deputado$uf,
+                           id_dep = votos_por_deputado$id_dep)
+
+mca1_obs_df$id_dep <- as.integer(as.character(mca1_obs_df$id_dep))
+
+hcpc <- clusterizar(mca,4)
+clusters <- obter_clusters(hcpc)
+
+mca1_obs_df <- cbind(mca1_obs_df, select(clusters,clust))
+mca1_obs_df$clust <- as.factor(mca1_obs_df$clust)
+
+
+# Destaque dos deputados que estão na lista dos Top 5 Fidelidade
+mca1_obs_df$destaque_fidelidade <- mca1_obs_df$id_dep %in% head(conc_por_deputado, n = 10)$dep
+
+p <- plotCluster(mca1_obs_df) + 
+  geom_point(data = filter(mca1_obs_df, destaque_fidelidade == TRUE), 
+             size = 9, alpha = 0.3, colour = "Black")  +
+  coord_equal() 
+
+png("plot/fidelidade/fidelidade_dep.png", width = 800, height = 600)
+p
+dev.off()  
 ```
 
 Top-5 Ovelha Negra
 
 ```{r}
-head(conc_por_deputado[order(nrow(conc_por_deputado):1),],n = 5)
+# Destaque dos deputados que estão na lista dos Top 5 infiel
+mca1_obs_df$destaque_infidelidade <- mca1_obs_df$id_dep %in% tail(conc_por_deputado, n = 10)$dep
+
+p <- plotCluster(mca1_obs_df) + 
+  geom_point(data = filter(mca1_obs_df, destaque_infidelidade == TRUE), 
+             size = 9, alpha = 0.3, colour = "Black")  +
+  coord_equal() 
+
+png("plot/fidelidade/infidelidade_dep.png", width = 800, height = 600)
+p
+dev.off()  
 ```

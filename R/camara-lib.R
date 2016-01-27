@@ -84,11 +84,11 @@ deputadosAtivos2 <- function(votos, porcentagemAtividadeMinima) {
 }
 
 deputados_que_mudaram_de_partido <- function(votos) {
-  deputados <- select(votos,id_dep,partido,uf)
+  deputados <- select(votos, id_dep, partido, uf)
   deputados <- deputados[!duplicated(deputados),]
   deputados_agrupados_por_id <- aggregate(partido ~ id_dep, deputados, length)
   
-  deputados_infieis <- filter(deputados_agrupados_por_id,partido > 1)
+  deputados_infieis <- filter(deputados_agrupados_por_id, partido > 1)
   deputados_infieis
 }
 
@@ -138,7 +138,7 @@ definir_nome <- function(deputados_repetidos,votos) {
 }
 
 # Ler os votos ativos dos deputados
-ler_votos_de_ativos <- function(filepath, corrigir_migracoes, min.porc.votacoes=0.15, limpar.votos=TRUE){
+ler_votos_de_ativos <- function(filepath, corrigir_migracoes, min.porc.votacoes = 0.15, limpar.votos=TRUE){
   votos <- read.csv(filepath, strip.white=TRUE, quote="")
   
   # ajustes nos valores e tipos das variáveis
@@ -151,8 +151,8 @@ ler_votos_de_ativos <- function(filepath, corrigir_migracoes, min.porc.votacoes=
   
   deputados_antes <- votos[!duplicated(votos$id_dep),]
     
-  # Apenas quem votou em pelo menos 50% das proposições
-  ativos <- deputadosAtivos2(votos,min.porc.votacoes)
+  # Apenas quem votou em pelo menos x% das proposições
+  ativos <- deputadosAtivos2(votos, min.porc.votacoes)
   
 #   descartados <- filter(votos, !(id_dep %in% ativos$id_dep)) %>% select(nome, id_dep, uf, partido)
 #   descartados <- descartados[!duplicated(descartados$id_dep),]

@@ -24,7 +24,7 @@ source("R/camara-lib.R")
 
 
 ```{r}
-votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
 
 mca <- MCA(votos_por_deputado, 
            ncp = 6, # Default is 5 
