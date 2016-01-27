@@ -14,14 +14,16 @@ Bibliotecas necessárias
 library(ggplot2)
 library(dplyr)
 require(scales)
+library(grid)
+library(gridBase)
 
-source("camara-lib.R")
+source("R/camara-lib.R")
 ```
 
 Carregando CSV com os votos dos deputados
 
 ```{r}
-votos <- ler_votos_de_ativos("votacoes.csv", corrigir_migracoes = FALSE, limpar.votos = FALSE)
+votos <- ler_votos_de_ativos("dados/votacoes.csv", corrigir_migracoes = FALSE, limpar.votos = FALSE)
 
 # distinguir diferentes votações de uma mesma proposição
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
@@ -36,11 +38,11 @@ votos <- filter(votos, ano >=2015)
 Concordância por partido
 
 ```{r}
-
-concordancia_partidaria_mes <- function(votos,sigla.partido,num.mes) {
-  votos.partido.mes <- filter(votos,votos$partido == sigla.partido, votos$mes == num.mes)
-  votos.partido.mes <- filter(votos.partido.mes,votos.partido.mes$orientacao_partido != "liberado" & votos.partido.mes$orientacao_partido != "NA" & votos.partido.mes$voto != "art. 17")
-  votos.concordancia <- filter(votos.partido.mes,as.character(votos.partido.mes$voto) == as.character(votos.partido.mes$orientacao_partido))
+concordancia_partidaria_mes <- function(votos, sigla.partido, num.mes) {
+  votos.partido.mes <- filter(votos, partido == sigla.partido, mes == num.mes) %>%
+    filter(orientacao_partido != "liberado" & orientacao_partido != "NA" & voto != "art. 17")
+  
+  votos.concordancia <- filter(votos.partido.mes, as.character(votos.partido.mes$voto) == as.character(votos.partido.mes$orientacao_partido))
   
   total <- nrow(votos.partido.mes)
   conc <- nrow(votos.concordancia)
@@ -48,15 +50,15 @@ concordancia_partidaria_mes <- function(votos,sigla.partido,num.mes) {
   return (if (total != 0) conc/total else NA)
 }
 
-concordancia_partidaria_meses <- function(votos,partido) {
+concordancia_partidaria_meses <- function(votos, partido) {
   conc <- data.frame()
   
-  meses <- c(2:11)
+  meses <- c(2:12)
   
   for (num.mes in meses) {
     conc.mes <- list()
     conc.mes$part <- partido
-    conc.mes$concordancia <- concordancia_partidaria_mes(votos,partido,num.mes)
+    conc.mes$concordancia <- concordancia_partidaria_mes(votos, partido, num.mes)
     conc.mes$n.mes <- num.mes
     
     conc <- rbind(conc,conc.mes, make.row.names = FALSE)
@@ -64,33 +66,118 @@ concordancia_partidaria_meses <- function(votos,partido) {
   
   conc
 }
-
 ```
 
 Partidos de destaque
 
 ```{r}
-
 conc.pmdb <- concordancia_partidaria_meses(votos,"pmdb")
 conc.psdb <- concordancia_partidaria_meses(votos,"psdb")
 conc.pt <- concordancia_partidaria_meses(votos,"pt")
 conc.psol <- concordancia_partidaria_meses(votos,"psol")
 
 conc <- rbind(conc.pmdb, conc.psdb, conc.pt, conc.psol)
+conc <- conc[complete.cases(conc),]
 conc$nome_mes <- month.abb[conc$n.mes]
 
-conc$nome_mes <- factor(conc$nome_mes, levels = month.abb[conc$n.mes][1:10])
+cores = c("#0066CC", "darkred", "#FF3300", "#E69F00")
+p <- ggplot(data=conc, aes(x = reorder(nome_mes, n.mes), y=concordancia, group=part, colour=part)) +
+  geom_line() +
+  geom_point(size = 7, alpha = 0.3) + 
+  labs(y='Fidelidade Com o Partido', x='Meses') +
+  scale_fill_manual(values = cores) +
+  scale_colour_manual(values = cores, 
+                    guide = guide_legend(title = "Partido")) +
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank(), 
+        legend.position = "none") + 
+  theme_classic()  
 
-ggplot(data=conc, aes(x=nome_mes, y=concordancia, group=part, colour=part)) +
-    geom_line() +
-    geom_point()
+png("plot/fidelidade/fidelidade.png", width = 800, height = 600)
+p
+dev.off()  
+
+p <- ggplot(data=conc, aes(x = reorder(nome_mes, n.mes), y=concordancia, group=part, colour=part)) +
+  geom_line() +
+  geom_point(size = 7, alpha = 0.3) + 
+  labs(y='Fidelidade Com o Partido', x='Meses') +
+  scale_fill_manual(values = cores) +
+  scale_colour_manual(values = cores, 
+                    guide = FALSE) +
+    facet_grid(part ~ .) +
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank(), 
+        legend.position = "none") + 
+  theme_classic()  
+
+png("plot/fidelidade/fidelidade_grid.png", width = 800, height = 600)
+p
+dev.off()  
+
+base <- ggplot(conc, aes( x = reorder(nome_mes, -n.mes), y = concordancia)) +
+  theme_classic() 
+
+pt <- base + geom_bar(data = subset(conc, part == "pt"),
+   aes(y = concordancia, fill = part), stat = "identity") +
+  ggtitle("PT") + 
+  scale_fill_manual(values = "#fc9272") +
+  theme(legend.position = "none", 
+        axis.text.y = element_blank(),
+        axis.line.y = element_blank(),
+        axis.line.x = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.title.y = element_blank(),
+        axis.title.x = element_blank()) +
+   coord_flip()
+
+pmdb <- base + geom_bar(data = subset(conc, part == "pmdb"),
+   aes(y = concordancia, fill = part), stat = "identity", position = "identity") +
+  scale_y_continuous('', trans = 'reverse', limits = c(1, 0)) +
+  
+  ggtitle("PMDB") + 
+  scale_fill_manual(values = "#a6bddb") +
+  theme(legend.position = "none", 
+        axis.text.y = element_blank(),
+        axis.line.y = element_blank(),
+        axis.line.x = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.title.y = element_blank(),
+        axis.title.x = element_blank()) +
+   coord_flip()
+
+text <- base + 
+  geom_bar(data = subset(conc, part == "pt"),
+   aes(y = 0, fill = alpha('white',0)), stat = "identity") +
+  geom_text( aes( y = 0,  label = as.character(nome_mes)), size = 5, family = "Times New Roman") +
+  theme(legend.position = "none", 
+        axis.text.x = element_blank(),
+        axis.text.y = element_blank(),
+        axis.line.y = element_blank(),
+        axis.line.x = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.title.x = element_blank()) + 
+  coord_flip()
+
+# Gráfico da pirâmide
+grid.newpage()
+
+pushViewport( viewport( layout = grid.layout(1,3, widths = c(.4,.1,.4))))
+
+vplayout <- function(x, y) viewport(layout.pos.row = x, layout.pos.col = y)
+
+print(pmdb, vp = vplayout(1,1))
+print(text,   vp = vplayout(1,2))
+print(pt,   vp = vplayout(1,3))
 
 ```
 
 Todos os partidos
 
 ```{r}
-
 conc <- data.frame()
 
 for (p in unique(votos$partido)) {
