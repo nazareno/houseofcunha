@@ -1,0 +1,52 @@
+---
+title: "afinidade"
+output: html_document
+---
+
+Monta um ranking com os deputados mais próximos para cada deputado
+
+```{r}
+library(e1071)
+
+source("R/camara-lib.R")
+```
+
+Carrega os dados
+
+```{r}
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
+
+rownames(votos_por_deputado) <- votos_por_deputado$id_dep
+
+votos_por_deputado <- votos_por_deputado[,5:ncol(votos_por_deputado)]
+
+votos_por_deputado[] <- lapply(votos_por_deputado, as.character)
+votos_por_deputado[is.na(votos_por_deputado)] <- 0
+votos_por_deputado <- as.matrix(votos_por_deputado)
+
+votos_por_deputado <- as.data.frame(hamming.distance(votos_por_deputado))
+
+top_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado),apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == min(x))])))
+
+top_not_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado),apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(x))])))
+
+MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv")
+
+c <- as.data.frame(top_not_afinidade)
+cc <- unlist(c$V2)
+d <- as.data.frame(cc)[1:518,]
+
+toPrint <- cbind(MCA_new, d)
+
+toPrint$V1 <- NULL
+
+toPrint$not_afinidade <- toPrint$V2
+toPrint$V2 <- NULL
+
+str(toPrint)
+
+write.csv2(votos_por_deputado, file = "~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", row.names = FALSE)
+
+# TODO ARRUMAR O CÓDIGO E MELHORAR A FUNÇÃO
+
+```
