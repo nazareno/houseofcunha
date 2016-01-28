@@ -138,7 +138,7 @@ definir_nome <- function(deputados_repetidos,votos) {
 }
 
 # Ler os votos ativos dos deputados
-ler_votos_de_ativos <- function(filepath, corrigir_migracoes, min.porc.votacoes = 0.15, limpar.votos=TRUE){
+ler_votos_de_ativos <- function(filepath, corrigir_migracoes = TRUE, min.porc.votacoes = 0.15, limpar.votos=TRUE){
   votos <- read.csv(filepath, strip.white=TRUE, quote="")
   
   # ajustes nos valores e tipos das variáveis
