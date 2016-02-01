@@ -7,6 +7,7 @@ Monta um ranking com os deputados mais próximos para cada deputado
 
 ```{r}
 library(e1071)
+library(tidyr)
 
 source("R/camara-lib.R")
 ```
@@ -26,27 +27,28 @@ votos_por_deputado <- as.matrix(votos_por_deputado)
 
 votos_por_deputado <- as.data.frame(hamming.distance(votos_por_deputado))
 
-top_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado),apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == min(x))])))
+top_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == min(x))])))
 
-top_not_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado),apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(x))])))
+top_not_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(x))])))
+
+l1 <- sapply(top_not_afinidade$V2, length)
+unlist.col1 <- rep(top_not_afinidade$V1, l1)
+id_dep <- unlist(unlist.col1)
+
+not_afinidade <- unnest(top_not_afinidade, V2)
+
+df_not_afinidade <- cbind(id_dep, not_afinidade)
+df_not_afinidade$id_dep <- as.integer(as.character(df_not_afinidade$id_dep))
 
 MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv")
 
-c <- as.data.frame(top_not_afinidade)
-cc <- unlist(c$V2)
-d <- as.data.frame(cc)[1:518,]
+toPlot <- left_join(MCA_new, df_not_afinidade, by = "id_dep")
 
-toPrint <- cbind(MCA_new, d)
+toPlot$not_afinidade <- toPlot$V2
+toPlot$V2 <- NULL
 
-toPrint$V1 <- NULL
+write.csv2(toPlot, file = "~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", row.names = FALSE)
 
-toPrint$not_afinidade <- toPrint$V2
-toPrint$V2 <- NULL
-
-str(toPrint)
-
-write.csv2(votos_por_deputado, file = "~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", row.names = FALSE)
-
-# TODO ARRUMAR O CÓDIGO E MELHORAR A FUNÇÃO
+# TO DO ARRUMAR O CÓDIGO E MELHORAR A FUNÇÃO
 
 ```
