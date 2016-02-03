@@ -218,7 +218,6 @@ ggplot(data=conc, aes(x=nome_mes, y=concordancia, group=part, colour=part)) +
 Ranking Concordância por partido
 
 ```{r}
-
 conc <- data.frame()
 
 for (p in unique(votos$partido)) {
@@ -235,7 +234,6 @@ Top-5 Partidos Unidos
 
 ```{r}
 head(conc_por_partido,n = 5)
-
 ```
 
 Top-5 Partidos Desunidos

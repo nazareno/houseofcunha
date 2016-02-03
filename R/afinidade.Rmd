@@ -15,7 +15,11 @@ source("R/camara-lib.R")
 Carrega os dados
 
 ```{r}
-votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
+votos_por_deputado1 <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
+
+
+votos_por_deputado <- head(votos_por_deputado1)
+
 
 rownames(votos_por_deputado) <- votos_por_deputado$id_dep
 
@@ -30,6 +34,17 @@ votos_por_deputado <- as.data.frame(hamming.distance(votos_por_deputado))
 top_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == min(x))])))
 
 top_not_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(x))])))
+
+n <- length(votos_por_deputado)
+
+top_not_afinidade_2 <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(sort(x,partial=n-1)[n-1]))])))
+
+top_not_afinidade_3 <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(sort(x,partial=n-2)[n-2]))])))
+
+top_not_afinidade_4 <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(sort(x,partial=n-3)[n-3]))])))
+
+top_not_afinidade_5 <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(sort(x,partial=n-4)[n-4]))])))
+
 
 l1 <- sapply(top_not_afinidade$V2, length)
 unlist.col1 <- rep(top_not_afinidade$V1, l1)
