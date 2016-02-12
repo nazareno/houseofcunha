@@ -33,29 +33,17 @@ votos_por_deputado <- as.data.frame(hamming.distance(votos_por_deputado))
 
 top_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == min(x))])))
 
-
-
-n <- length(votos_por_deputado)
-
-top_not_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(x))])))
-
-top_not_afinidade_2 <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(sort(x,partial=n-1)[n-1]))])))
-
-top_not_afinidade_3 <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(sort(x,partial=n-2)[n-2]))])))
-
-top_not_afinidade_4 <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(sort(x,partial=n-3)[n-3]))])))
-
-top_not_afinidade_5 <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(sort(x,partial = n-4)[n-4]))])))
-
-
-col_list_to_number <- function(data_frame){
-  top_not_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(x))])))
-
-  l1 <- sapply(data_frame$V2, length)
-  unlist.col1 <- rep(data_frame$V1, l1)
+list_not_afinidade <- function(data_frame, top_n = 0){
+  n <- length(data_frame)
+  
+  top_not_afinidade <- as.data.frame(cbind(row.names(data_frame), 
+                                           apply(data_frame, 1, function(x) names(data_frame)[which(x == max(sort(x, partial = n-top_n)[n-top_n]))])))
+  
+  l1 <- sapply(top_not_afinidade$V2, length)
+  unlist.col1 <- rep(top_not_afinidade$V1, l1)
   id_dep <- unlist(unlist.col1)
   
-  not_afinidade <- unnest(data_frame, V2)
+  not_afinidade <- unnest(top_not_afinidade, V2)
   
   df <- cbind(id_dep, not_afinidade)
   df$id_dep <- as.integer(as.character(df$id_dep))
@@ -65,59 +53,48 @@ col_list_to_number <- function(data_frame){
   df
 }
 
-df_3 <- col_list_to_number(top_not_afinidade_3)
-df_2 <- col_list_to_number(top_not_afinidade_2)
-df_4 <- col_list_to_number(top_not_afinidade_4)
+top_not_afinidade <- function(data_frame){
+  df_5 <- list_not_afinidade(data_frame, 4)
+  colnames(df_5) <- c("id_dep", "5")
+  
+  df_4 <- list_not_afinidade(data_frame, 3)
+  colnames(df_4) <- c("id_dep", "4")
+  
+  df_3 <- list_not_afinidade(data_frame, 2)
+  colnames(df_3) <- c("id_dep", "3")
+  
+  df_2 <- list_not_afinidade(data_frame, 1)
+  colnames(df_2) <- c("id_dep", "2")
+  
+  df_1 <- list_not_afinidade(data_frame, 0)
+  colnames(df_1) <- c("id_dep", "1")
+  
+  join <- left_join(df_1, df_2, by = "id_dep") %>%
+    left_join(df_3, by = "id_dep") %>%
+    left_join(df_4, by = "id_dep") %>%
+    left_join(df_5, by = "id_dep")
+  
+  temp <- apply(join, 1, duplicated) %>% apply(2, sum)
+  join$del <- temp
+  
+  join <- filter(join, del < 1)
+  temp <- apply(join, 2, duplicated) 
+  
+  join$del <- temp[,1]
+  join <- filter(join, del == 0)
+  
+  join
+}
 
+not_afinidade <- top_not_afinidade(votos_por_deputado)
+not_afinidade$not_afinidade <- paste(not_afinidade$"1", not_afinidade$"2", not_afinidade$"3", 
+             not_afinidade$"4", not_afinidade$"5", sep=",")
 
-a <- as.data.frame(unique(df_2$id_dep))
-colnames(a) <- c("id_dep")
-
-
-aa <- c("a", "b", "c", "b")
-bb <- c("a", "b", "c", "b")
-
-cc <- rbind(aa, bb)
-
-aa[!duplicated(cc)]
-
-join <- left_join(a, df_3, by = "id_dep")
-
-join <- left_join(df_2, df_3, by = "id_dep")
-
-join1 <- left_join(join, df_4, by = "id_dep")
-
-join1[n_distinct(join1[1,])]
-
-
-
-join1 <- left_join(join, df_4, by = "id_dep")
-
-library(tidyr)
-
-a <- spread(df_3, V2, teste)
-
-DF[!duplicated(DF$ID), ]
-
-c <- apply(join1, 1, duplicated) %>% apply(2, sum)
-
-join1$del <- c
-
-join1 <- filter(join1, del < 1)
-
-a <- apply(join1, 2, duplicated) 
-a[,1]
-
-join1$del <- a[,1]
-
-join1 <- filter(join1, del == 0)
-
-
-
-
-
+not_afinidade <- select(not_afinidade, id_dep, not_afinidade)
 
 MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv")
+MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", sep=";")
+
 
 toPlot <- left_join(MCA_new, df_not_afinidade, by = "id_dep")
 
