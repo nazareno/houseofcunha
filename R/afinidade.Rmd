@@ -12,14 +12,10 @@ library(tidyr)
 source("R/camara-lib.R")
 ```
 
-Carrega os dados
+Top Not Afinidade
 
 ```{r}
-votos_por_deputado1 <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
-
-
-votos_por_deputado <- head(votos_por_deputado1)
-
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
 
 rownames(votos_por_deputado) <- votos_por_deputado$id_dep
 
@@ -31,78 +27,42 @@ votos_por_deputado <- as.matrix(votos_por_deputado)
 
 votos_por_deputado <- as.data.frame(hamming.distance(votos_por_deputado))
 
-top_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado), apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == min(x))])))
-
-list_not_afinidade <- function(data_frame, top_n = 0){
-  n <- length(data_frame)
-  
-  top_not_afinidade <- as.data.frame(cbind(row.names(data_frame), 
-                                           apply(data_frame, 1, function(x) names(data_frame)[which(x == max(sort(x, partial = n-top_n)[n-top_n]))])))
-  
-  l1 <- sapply(top_not_afinidade$V2, length)
-  unlist.col1 <- rep(top_not_afinidade$V1, l1)
-  id_dep <- unlist(unlist.col1)
-  
-  not_afinidade <- unnest(top_not_afinidade, V2)
-  
-  df <- cbind(id_dep, not_afinidade)
-  df$id_dep <- as.integer(as.character(df$id_dep))
-  
-  df$V1 <- NULL
-  
-  df
-}
-
-top_not_afinidade <- function(data_frame){
-  df_5 <- list_not_afinidade(data_frame, 4)
-  colnames(df_5) <- c("id_dep", "5")
-  
-  df_4 <- list_not_afinidade(data_frame, 3)
-  colnames(df_4) <- c("id_dep", "4")
-  
-  df_3 <- list_not_afinidade(data_frame, 2)
-  colnames(df_3) <- c("id_dep", "3")
-  
-  df_2 <- list_not_afinidade(data_frame, 1)
-  colnames(df_2) <- c("id_dep", "2")
-  
-  df_1 <- list_not_afinidade(data_frame, 0)
-  colnames(df_1) <- c("id_dep", "1")
-  
-  join <- left_join(df_1, df_2, by = "id_dep") %>%
-    left_join(df_3, by = "id_dep") %>%
-    left_join(df_4, by = "id_dep") %>%
-    left_join(df_5, by = "id_dep")
-  
-  temp <- apply(join, 1, duplicated) %>% apply(2, sum)
-  join$del <- temp
-  
-  join <- filter(join, del < 1)
-  temp <- apply(join, 2, duplicated) 
-  
-  join$del <- temp[,1]
-  join <- filter(join, del == 0)
-  
-  join
-}
-
 not_afinidade <- top_not_afinidade(votos_por_deputado)
 not_afinidade$not_afinidade <- paste(not_afinidade$"1", not_afinidade$"2", not_afinidade$"3", 
              not_afinidade$"4", not_afinidade$"5", sep=",")
 
 not_afinidade <- select(not_afinidade, id_dep, not_afinidade)
 
-MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv")
 MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", sep=";")
 
-
-toPlot <- left_join(MCA_new, df_not_afinidade, by = "id_dep")
-
-toPlot$not_afinidade <- toPlot$V2
-toPlot$V2 <- NULL
+toPlot <- left_join(MCA_new, not_afinidade, by = "id_dep")
 
 write.csv2(toPlot, file = "~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", row.names = FALSE)
+```
 
-# TO DO ARRUMAR O CÓDIGO E MELHORAR A FUNÇÃO
+Top Afinidade
 
+```{r}
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
+rownames(votos_por_deputado) <- votos_por_deputado$id_dep
+
+votos_por_deputado <- votos_por_deputado[,5:ncol(votos_por_deputado)]
+
+votos_por_deputado[] <- lapply(votos_por_deputado, as.character)
+votos_por_deputado[is.na(votos_por_deputado)] <- 0
+votos_por_deputado <- as.matrix(votos_por_deputado)
+
+votos_por_deputado <- as.data.frame(hamming.distance(votos_por_deputado))
+
+afinidade <- top_afinidade(votos_por_deputado)
+afinidade$afinidade <- paste(afinidade$"1", afinidade$"2", afinidade$"3", 
+             afinidade$"4", afinidade$"5", sep=",")
+
+afinidade <- select(afinidade, id_dep, afinidade)
+
+MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", sep=";")
+
+toPlot <- left_join(MCA_new, afinidade, by = "id_dep")
+
+write.csv2(toPlot, file = "~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", row.names = FALSE)
 ```
