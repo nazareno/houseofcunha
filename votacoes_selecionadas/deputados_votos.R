@@ -1,7 +1,7 @@
 setwd("~/Projects/houseofcunha/votacoes_selecionadas")
 library(reshape)
-
 votacoes = read.csv("votacoes_selecionadas.csv",stringsAsFactors=FALSE)
+
 votacoes_wide = votacoes[,c("id_dep","nome","voto","nome_votacao","partido","uf")]
 votacoes_wide2 = votacoes_wide
 votacoes_wide2$voto_long = votacoes_wide$voto
