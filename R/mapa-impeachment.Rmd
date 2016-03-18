@@ -1,0 +1,63 @@
+---
+title: "mapa-impeachment"
+output: html_document
+---
+
+Comparação das chapas do governo e oposição para formar a chapa especial de análise do impeachment.
+
+```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
+require(FactoMineR)
+library(dplyr)
+
+source("R/camara-lib.R")
+```
+
+
+```{r}
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
+
+mca <- MCA(votos_por_deputado, 
+           ncp = 5, # Default is 5 
+           graph = FALSE,
+           quali.sup = c(1:4),
+           na.method = "Average") # NA or Average
+
+mca_obs_df <-  data.frame(mca$ind$coord, 
+                           nome = votos_por_deputado$nome,
+                           partido = votos_por_deputado$partido, 
+                           uf = votos_por_deputado$uf,
+                           id_dep = votos_por_deputado$id_dep)
+
+mca_obs_df$id_dep <- as.integer(as.character(mca_obs_df$id_dep))
+
+#Criação do clust
+hcpc <- clusterizar(mca,4)
+clusters <- obter_clusters(hcpc)
+
+mca_obs_df <- cbind(mca_obs_df, select(clusters,clust))
+mca_obs_df$clust <- as.factor(mca_obs_df$clust)
+
+
+comissao <- read.table("dados/comissao_impeachment.csv", header=TRUE, quote="\"")
+mca_obs_df$destaque <- mca_obs_df$nome %in% comissao$Titulares
+x <- filter(mca_obs_df, destaque == TRUE)
+
+#y = filter(votos_por_deputado, uf == "SP")
+#yy = filter(y, partido = "psc")
+
+levels(mca_obs_df$clust) <- c("Governo", "Alinhados com PMDB", "Oposição de esquerda", "Oposição")
+```
+
+Plots
+
+```{r}
+# Destaque dos deputados que fazem parte da comissao
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(mca_obs_df, destaque == TRUE), 
+             size = 9, alpha = 0.3, colour = "Black")  +
+  coord_equal() 
+
+png("plot/impeachment/comissao_impeachment.png", width = 800, height = 600)
+p 
+dev.off()
+```
