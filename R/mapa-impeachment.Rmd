@@ -32,6 +32,8 @@ mca_obs_df <-  data.frame(mca$ind$coord,
 
 mca_obs_df$id_dep <- as.integer(as.character(mca_obs_df$id_dep))
 
+#mca_obs_df <- filter(mca_obs_df, id_dep != 191923)
+
 #Criação do clust
 hcpc <- clusterizar(mca,4)
 clusters <- obter_clusters(hcpc)
@@ -39,18 +41,32 @@ clusters <- obter_clusters(hcpc)
 mca_obs_df <- cbind(mca_obs_df, select(clusters,clust))
 mca_obs_df$clust <- as.factor(mca_obs_df$clust)
 
+# Add Dep Feliciano
+mca_aux <- filter(mca_obs_df, id_dep == 160601)
+mca_aux$nome <- "Pastor Marco Feliciano"
+mca_obs_df <- rbind(mca_obs_df, mca_aux) 
+
+# Add Dep João Marcelo Souza
+mca_aux <- filter(mca_obs_df, id_dep == 112437)
+mca_aux$nome <- "João Marcelo Souza"
+mca_obs_df <- rbind(mca_obs_df, mca_aux) 
+
+# Add Dep Jerônimo Goergen
+mca_aux <- filter(mca_obs_df, id_dep == 160570)
+mca_aux$nome <- "Jerônimo Goergen"
+mca_obs_df <- rbind(mca_obs_df, mca_aux) 
+
+# Add Dep Nogueira
+#dep_Nogueira <- c(-0.09748948, -0.03307884, -0.04056188, -0.05073609, 0.03257657, "Flavio Nogueira", "pdt", "PI", 191923, as.factor(3))
+#mca_obs_df <- rbind(mca_obs_df, c(-0.09748948, -0.03307884, -0.04056188, -0.05073609, 0.03257657, "Flavio Nogueira", "pdt", "PI", 191923, 3))
 
 comissao <- read.table("dados/comissao_impeachment.csv", header=TRUE, quote="\"")
 mca_obs_df$destaque <- mca_obs_df$nome %in% comissao$Titulares
 
-# Add Dep Feliciano
-x <- filter(mca_obs_df, id_dep == 160601)
+x <- filter(mca_obs_df, destaque == TRUE)
 
-x <- filter(mca_obs_df, uf == "SP")
-y <- filter(x, partido == "psc")
-
-#y = filter(votos_por_deputado, uf == "SP")
-#yy = filter(y, partido = "psc")
+#y = filter(votos_por_deputado, uf == "RS")
+#yy <- filter(y, partido = "pp")
 
 levels(mca_obs_df$clust) <- c("Governo", "Alinhados com PMDB", "Oposição de esquerda", "Oposição")
 ```

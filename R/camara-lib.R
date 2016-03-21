@@ -187,7 +187,7 @@ ler_doacoes_de_eleitos <- function(arquivo.doacoes, arquivo.eleitos){
 }
 
 recuperar_votos_por_deputado <- function(arquivo.votos, corrigir.migracoes) {
-  votos <- ler_votos_de_ativos(arquivo.votos,corrigir.migracoes)
+  votos <- ler_votos_de_ativos(arquivo.votos, corrigir.migracoes)
   
   # distinguir diferentes votações de uma mesma proposição
   votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
