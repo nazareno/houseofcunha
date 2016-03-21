@@ -116,7 +116,7 @@ deputados_com_multiplos_nomes <- function(votos) {
   deputados <- deputados[!duplicated(deputados),]
   deputados_agrupados_por_id <- aggregate(nome ~ id_dep, deputados, length)
   
-  deputados_repetidos <- filter(deputados_agrupados_por_id,nome > 1)
+  deputados_repetidos <- filter(deputados_agrupados_por_id, nome > 1)
   deputados_repetidos
 }
 
@@ -128,7 +128,7 @@ nome_atual <- function(id_deputado,votos) {
   return(nome)
 }
 
-definir_nome <- function(deputados_repetidos,votos) {
+definir_nome <- function(deputados_repetidos, votos) {
   for (i in seq(1:nrow(deputados_repetidos))) {
     id_deputado <- deputados_repetidos[i,]$id_dep
     nome <- nome_atual(id_deputado,votos) 

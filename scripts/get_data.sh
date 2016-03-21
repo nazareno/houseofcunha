@@ -1,7 +1,8 @@
-#curl "http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoesVotadasEmPlenario?ano=2015&tipo=" > ../dados/proposicoes-votadas.xml
+curl "http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoesVotadasEmPlenario?ano=2015&tipo=" > ../dados/proposicoes-votadas-2015.xml
 #curl "http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoesVotadasEmPlenario?ano=2016&tipo=" >> ../dados/proposicoes-votadas.xml 
 
-java -jar xml2csv-conv.jar ../dados/proposicoes-votadas.xml ../dados/proposicoes-votadas-2015.csv
+#java -jar xml2csv-conv.jar ../dados/proposicoes-votadas.xml ../dados/proposicoes-votadas-2015.csv
+java -jar xml2csv-conv.jar ../dados/proposicoes-votadas-2015.xml ../dados/proposicoes-votadas-2015.csv
 mkdir ../dados/proposicoes
 for prop in `grep -v rop ../dados/proposicoes-votadas-2015.csv | cut -d, -f1`; 
 do 
