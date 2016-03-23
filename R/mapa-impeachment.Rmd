@@ -77,8 +77,11 @@ dep_lava_jato <- data.frame( investigados = c("Aguinaldo Ribeiro",
 
 mca_obs_df$destaque_investigados <- mca_obs_df$nome %in% dep_lava_jato$investigados
 
+# Destaque dos deputados que receberam doações de empresas da lava jato 
+doacao_lava_jato <- read.table("dados/doacao_lava_jato.csv", header = TRUE, quote = "\"")
+mca_obs_df$destaque_doacao <- mca_obs_df$nome %in% doacao_lava_jato$Deputados
 
-x <- filter(mca_obs_df, destaque_processos == TRUE)
+x <- filter(mca_obs_df, destaque_doacao == TRUE)
 
 #y = filter(votos_por_deputado, uf == "RS")
 #yy <- filter(y, partido = "pp")
@@ -86,35 +89,98 @@ x <- filter(mca_obs_df, destaque_processos == TRUE)
 levels(mca_obs_df$clust) <- c("Governo", "Alinhados com PMDB", "Oposição de esquerda", "Oposição")
 ```
 
-Plots
+Destaque dos deputados que fazem parte da comissão
 
 ```{r}
-# Destaque dos deputados que fazem parte da comissao
 p <- plotCluster(mca_obs_df) + 
   geom_point(data = filter(mca_obs_df, destaque_comissão == TRUE), 
-             size = 9, alpha = 0.3, colour = "Black")  +
+             shape = 18, size = 10, alpha = 0.3, colour = "Black")  +
   coord_equal() 
 
-png("plot/impeachment/comissao_impeachment.png", width = 800, height = 600)
+png("plot/impeachment/comissao_impeachment.png", width = 960, height = 960)
 p 
 dev.off()
 
-# Destaque dos deputados que são investigados pela lava jato
+```
+
+Destaque dos deputados com nomes 
+
+```{r}
+clust1 <- filter(mca_obs_df, clust == "Governo")
+clust2 <- filter(mca_obs_df, clust == "Alinhados com PMDB")
+clust3 <- filter(mca_obs_df, clust == "Oposição de esquerda")
+clust4 <- filter(mca_obs_df, clust == "Oposição")
+
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(clust1, destaque_comissão == TRUE), 
+             shape = 18, size = 10, alpha = 0.2, colour = "Black")  +
+  geom_text(data = filter(clust1, destaque_comissão == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.6, size = 8) +
+  coord_equal()
+
+png("plot/impeachment/comissao_impeachment_governo.png", width = 4000, height = 3000)
+p 
+dev.off()
+
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(clust2, destaque_comissão == TRUE), 
+             shape = 18, size = 10, alpha = 0.2, colour = "Black")  +
+  geom_text(data = filter(clust2, destaque_comissão == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.6, size = 12) +
+  coord_equal()
+
+png("plot/impeachment/comissao_impeachment_alinhados_PMDB.png", width = 6000, height = 6000)
+p 
+dev.off()
+
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(clust3, destaque_comissão == TRUE), 
+             shape = 18, size = 10, alpha = 0.2, colour = "Black")  +
+  geom_text(data = filter(clust3, destaque_comissão == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.6, size = 8) +
+  coord_equal()
+
+png("plot/impeachment/comissao_impeachment_oposicao_esquerda.png", width = 4000, height = 3000)
+p 
+dev.off()
+
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(clust4, destaque_comissão == TRUE), 
+             shape = 18, size = 10, alpha = 0.2, colour = "Black")  +
+  geom_text(data = filter(clust4, destaque_comissão == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.6, size = 8) +
+  coord_equal()
+
+png("plot/impeachment/comissao_impeachment_oposicao.png", width = 4000, height = 3000)
+p 
+dev.off()
+```
+
+Destaque dos deputados que são investigados pela lava jato
+
+```{r}
 p <- plotCluster(mca_obs_df) + 
   geom_point(data = filter(mca_obs_df, destaque_comissão == TRUE), 
-             size = 9, alpha = 0.2, colour = "Black")  +
+             shape = 18, size = 10, alpha = 0.2, colour = "Black")  +
   geom_point(data = filter(mca_obs_df, destaque_investigados == TRUE), 
-             size = 9, alpha = 0.5, colour = "Black") +
+             shape = 18, size = 10, alpha = 0.5, colour = "Black") +
   geom_text(data = filter(mca_obs_df, destaque_investigados == TRUE), 
                    aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
                    colour = "black", alpha = 0.6, size = 5, hjust = 0.5, vjust = 2) +
   coord_equal() 
 
-png("plot/impeachment/comissao_impeachment_investigados_lava_jato.png", width = 800, height = 600)
+png("plot/impeachment/comissao_impeachment_investigados_lava_jato.png", width = 960, height = 960)
 p 
 dev.off()
+```
 
-# Plot dos deputados que respondem processo no stf 
+Plot dos deputados que respondem processo no stf 
+
+```{r}
 p <- plotCluster(mca_obs_df) + 
   geom_point(data = filter(mca_obs_df, destaque_comissão == TRUE), 
              size = 9, alpha = 0.2, colour = "Black")  +
@@ -130,6 +196,20 @@ p
 dev.off()
 ```
 
+Plot dos deputados que receberam doações de empresas da lava jato
+
+```{r}
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(mca_obs_df, destaque_comissão == TRUE), 
+             shape = 18, size = 10, alpha = 0.3, colour = "Black")  +
+   geom_point(data = filter(mca_obs_df, destaque_doacao == TRUE), 
+             shape = 18, size = 10, alpha = 0.7, colour = "Black") +
+  coord_equal() 
+
+png("plot/impeachment/comissao_impeachment_doacao_lava_jato_1.png", width = 800, height = 600)
+p 
+dev.off()
+```
 
 Número de deputados da comissão por clust e Proporção dos deputados da comissão por clust
 
