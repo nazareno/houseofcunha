@@ -7,11 +7,12 @@ Monta um ranking com os deputados mais próximos para cada deputado
 
 ```{r}
 library(e1071)
+library(tidyr)
 
 source("R/camara-lib.R")
 ```
 
-Carrega os dados
+Top Not Afinidade
 
 ```{r}
 votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
@@ -26,27 +27,42 @@ votos_por_deputado <- as.matrix(votos_por_deputado)
 
 votos_por_deputado <- as.data.frame(hamming.distance(votos_por_deputado))
 
-top_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado),apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == min(x))])))
+not_afinidade <- top_not_afinidade(votos_por_deputado)
+not_afinidade$not_afinidade <- paste(not_afinidade$"1", not_afinidade$"2", not_afinidade$"3", 
+             not_afinidade$"4", not_afinidade$"5", sep=",")
 
-top_not_afinidade <- as.data.frame(cbind(row.names(votos_por_deputado),apply(votos_por_deputado, 1, function(x) names(votos_por_deputado)[which(x == max(x))])))
+not_afinidade <- select(not_afinidade, id_dep, not_afinidade)
 
-MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv")
+MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", sep=";")
 
-c <- as.data.frame(top_not_afinidade)
-cc <- unlist(c$V2)
-d <- as.data.frame(cc)[1:518,]
+toPlot <- left_join(MCA_new, not_afinidade, by = "id_dep")
 
-toPrint <- cbind(MCA_new, d)
+write.csv2(toPlot, file = "~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", row.names = FALSE)
+```
 
-toPrint$V1 <- NULL
+Top Afinidade
 
-toPrint$not_afinidade <- toPrint$V2
-toPrint$V2 <- NULL
+```{r}
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
+rownames(votos_por_deputado) <- votos_por_deputado$id_dep
 
-str(toPrint)
+votos_por_deputado <- votos_por_deputado[,5:ncol(votos_por_deputado)]
 
-write.csv2(votos_por_deputado, file = "~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", row.names = FALSE)
+votos_por_deputado[] <- lapply(votos_por_deputado, as.character)
+votos_por_deputado[is.na(votos_por_deputado)] <- 0
+votos_por_deputado <- as.matrix(votos_por_deputado)
 
-# TODO ARRUMAR O CÓDIGO E MELHORAR A FUNÇÃO
+votos_por_deputado <- as.data.frame(hamming.distance(votos_por_deputado))
 
+afinidade <- top_afinidade(votos_por_deputado)
+afinidade$afinidade <- paste(afinidade$"1", afinidade$"2", afinidade$"3", 
+             afinidade$"4", afinidade$"5", sep=",")
+
+afinidade <- select(afinidade, id_dep, afinidade)
+
+MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", sep=";")
+
+toPlot <- left_join(MCA_new, afinidade, by = "id_dep")
+
+write.csv2(toPlot, file = "~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", row.names = FALSE)
 ```

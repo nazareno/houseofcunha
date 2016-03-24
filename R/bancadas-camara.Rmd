@@ -68,7 +68,6 @@ mca_obs_df$destaque_bancada_ruralista <- mca_obs_df$nome %in% bancada.ruralista$
 # Bancada Sindical
 mca_obs_df$destaque_bancada_sindical <- mca_obs_df$nome %in% bancada.sindical$Sindical
 
-
 levels(mca_obs_df$clust) <- c("Governo", "Alinhados com PMDB", "Oposição de esquerda", "Oposição")
 ```
 

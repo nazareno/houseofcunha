@@ -116,7 +116,7 @@ deputados_com_multiplos_nomes <- function(votos) {
   deputados <- deputados[!duplicated(deputados),]
   deputados_agrupados_por_id <- aggregate(nome ~ id_dep, deputados, length)
   
-  deputados_repetidos <- filter(deputados_agrupados_por_id,nome > 1)
+  deputados_repetidos <- filter(deputados_agrupados_por_id, nome > 1)
   deputados_repetidos
 }
 
@@ -128,7 +128,7 @@ nome_atual <- function(id_deputado,votos) {
   return(nome)
 }
 
-definir_nome <- function(deputados_repetidos,votos) {
+definir_nome <- function(deputados_repetidos, votos) {
   for (i in seq(1:nrow(deputados_repetidos))) {
     id_deputado <- deputados_repetidos[i,]$id_dep
     nome <- nome_atual(id_deputado,votos) 
@@ -187,7 +187,7 @@ ler_doacoes_de_eleitos <- function(arquivo.doacoes, arquivo.eleitos){
 }
 
 recuperar_votos_por_deputado <- function(arquivo.votos, corrigir.migracoes) {
-  votos <- ler_votos_de_ativos(arquivo.votos,corrigir.migracoes)
+  votos <- ler_votos_de_ativos(arquivo.votos, corrigir.migracoes)
   
   # distinguir diferentes votações de uma mesma proposição
   votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
@@ -653,4 +653,116 @@ add_col_partidos_iconicos <- function(df_pontos_mca) {
                                                "outros"))
   
   return(df_pontos_mca)
+}
+
+# Lista o deputado que não tem afinidade 
+list_not_afinidade <- function(data_frame, top_n = 0){
+  n <- length(data_frame)
+  
+  top_not_afinidade <- as.data.frame(cbind(row.names(data_frame), 
+                                           apply(data_frame, 1, function(x) names(data_frame)[which(x == max(sort(x, partial = n-top_n)[n-top_n]))])))
+  
+  l1 <- sapply(top_not_afinidade$V2, length)
+  unlist.col1 <- rep(top_not_afinidade$V1, l1)
+  id_dep <- unlist(unlist.col1)
+  
+  not_afinidade <- unnest(top_not_afinidade, V2)
+  
+  df <- cbind(id_dep, not_afinidade)
+  df$id_dep <- as.integer(as.character(df$id_dep))
+  
+  df$V1 <- NULL
+  
+  df
+}
+
+# Lista o deputado que tem afinidade
+list_afinidade <- function(data_frame, top_n = 0){
+  n <- length(data_frame)
+  
+  top_afinidade <- as.data.frame(cbind(row.names(data_frame), 
+                                           apply(data_frame, 1, function(x) names(data_frame)[which(x == min(sort(x, partial = n-top_n)[n-top_n]))])))
+  
+  l1 <- sapply(top_afinidade$V2, length)
+  unlist.col1 <- rep(top_afinidade$V1, l1)
+  id_dep <- unlist(unlist.col1)
+  
+  afinidade <- unnest(top_afinidade, V2)
+  
+  df <- cbind(id_dep, afinidade)
+  df$id_dep <- as.integer(as.character(df$id_dep))
+  
+  df$V1 <- NULL
+  
+  df
+}
+
+# Cria data frame com o top not afinidade
+top_not_afinidade <- function(data_frame){
+  df_5 <- list_not_afinidade(data_frame, 4)
+  colnames(df_5) <- c("id_dep", "5")
+  
+  df_4 <- list_not_afinidade(data_frame, 3)
+  colnames(df_4) <- c("id_dep", "4")
+  
+  df_3 <- list_not_afinidade(data_frame, 2)
+  colnames(df_3) <- c("id_dep", "3")
+  
+  df_2 <- list_not_afinidade(data_frame, 1)
+  colnames(df_2) <- c("id_dep", "2")
+  
+  df_1 <- list_not_afinidade(data_frame, 0)
+  colnames(df_1) <- c("id_dep", "1")
+  
+  join <- left_join(df_1, df_2, by = "id_dep") %>%
+    left_join(df_3, by = "id_dep") %>%
+    left_join(df_4, by = "id_dep") %>%
+    left_join(df_5, by = "id_dep")
+  
+  temp <- apply(join, 1, duplicated) %>% apply(2, sum)
+  join$del <- temp
+  
+  join <- filter(join, del < 1)
+  temp <- apply(join, 2, duplicated) 
+  
+  join$del <- temp[,1]
+  join <- filter(join, del == 0)
+  
+  join
+}
+
+# Cria data frame com o top afinidade
+top_afinidade <- function(data_frame){
+  data_frame <- votos_por_deputado
+  
+  df_5 <- list_afinidade(data_frame, 5)
+  colnames(df_5) <- c("id_dep", "5")
+  
+  df_4 <- list_afinidade(data_frame, 4)
+  colnames(df_4) <- c("id_dep", "4")
+  
+  df_3 <- list_afinidade(data_frame, 3)
+  colnames(df_3) <- c("id_dep", "3")
+  
+  df_2 <- list_afinidade(data_frame, 2)
+  colnames(df_2) <- c("id_dep", "2")
+  
+  df_1 <- list_afinidade(data_frame, 1)
+  colnames(df_1) <- c("id_dep", "1")
+  
+  join <- left_join(df_1, df_2, by = "id_dep") %>%
+    left_join(df_3, by = "id_dep") %>%
+    left_join(df_4, by = "id_dep") %>%
+    left_join(df_5, by = "id_dep")
+  
+  temp <- apply(join, 1, duplicated) %>% apply(2, sum)
+  join$del <- temp
+  
+  join <- filter(join, del < 1)
+  temp <- apply(join, 2, duplicated) 
+  
+  join$del <- temp[,1]
+  join <- filter(join, del == 0)
+  
+  join
 }

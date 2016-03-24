@@ -12,11 +12,11 @@ library(dplyr)
 
 source("R/camara-lib.R")
 
-votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv",corrigir.migracoes = TRUE)
 
-conselho.etica <- read.table("data/conselho-de-etica.csv", header=TRUE, quote="\"")
-chapas <- read.csv("data/chapas-impeachment.csv", header=TRUE)
-deputados <- read.delim("deputados/deputados.csv")
+conselho.etica <- read.table("dados/conselho-de-etica.csv", header=TRUE, quote="\"")
+chapas <- read.csv("dados/chapas-impeachment.csv", header=TRUE)
+deputados <- read.delim("dados/deputados/deputados.csv")
 
 chapas$chapa <- chapas$comissão
 chapas$comissão <- NULL
