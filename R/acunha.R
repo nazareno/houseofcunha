@@ -2,7 +2,7 @@ library(ggplot2)
 library(dplyr)
 source("R/camara-lib.R")
 
-votos <- ler_votos_de_ativos("votacoes.csv")
+votos <- ler_votos_de_ativos("dados/votacoes.csv")
 # separar sessões de uma mesma proposição
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 votos$nome <- paste0(votos$nome, " (", toupper(votos$partido), " ", votos$uf, ")")
