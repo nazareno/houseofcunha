@@ -79,10 +79,7 @@ mca_obs_df$destaque_investigados <- mca_obs_df$nome %in% dep_lava_jato$investiga
 
 # Destaque dos deputados que receberam doações de empresas da lava jato 
 doacao_lava_jato <- read.csv2("~/Projetos/houseofcunha/dados/doacao_lava_jato_completa.csv")
-
 mca_obs_df$destaque_doacao <- mca_obs_df$nome %in% doacao_lava_jato$Deputados
-
-x <- filter(mca_obs_df, destaque_doacao == TRUE)
 
 #y = filter(votos_por_deputado, uf == "RS")
 #yy <- filter(y, partido = "pp")
@@ -284,10 +281,48 @@ p <- plotCluster(mca_obs_df) +
   geom_point(data = filter(mca_obs_df, destaque_comissão == TRUE), 
              shape = 18, size = 10, alpha = 0.3, colour = "Black")  +
    geom_point(data = filter(mca_obs_df, destaque_doacao == TRUE), 
-             shape = 18, size = 10, alpha = 0.7, colour = "Black") +
+             shape = 18, size = 10, alpha = 0.6, colour = "Black") +
   coord_equal() 
 
-png("plot/impeachment/comissao_impeachment_doacao_lava_jato_1.png", width = 800, height = 600)
+png("plot/impeachment/comissao_impeachment_doacao_lava_jato_1.png", width = 960, height = 960)
+p 
+dev.off()
+
+plot_zoom_comissao <- function(num_clust){
+  filter_clust <- filter(mca_obs_df, clust == levels(mca_obs_df$clust)[num_clust])
+  
+   p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(filter_clust, destaque_comissão == TRUE), 
+             shape = 18, size = 10, alpha = 0.2, colour = "Black")  +
+  geom_point(data = filter(filter_clust, destaque_doacao == TRUE), 
+             shape = 18, size = 10, alpha = 0.4, colour = "Black")  +
+  geom_text(data = filter(filter_clust, destaque_doacao == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.6, size = 8) +
+  coord_equal()
+  p
+}
+
+
+e <- filter(mca_obs_df, clust == levels(mca_obs_df$clust)[1])
+
+d <- plot_zoom_comissao(4)
+
+d
+
+levels(mca_obs_df$clust)[2]
+
+p <- plotCluster(mca_obs_df) + 
+  geom_point(data = filter(mca_obs_df, destaque_comissão == TRUE), 
+             shape = 18, size = 10, alpha = 0.2, colour = "Black")  +
+  geom_point(data = filter(mca_obs_df, destaque_doacao == TRUE), 
+             shape = 18, size = 10, alpha = 0.4, colour = "Black")  +
+  geom_text(data = filter(mca_obs_df, destaque_doacao == TRUE), 
+                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
+                   colour = "black", alpha = 0.6, size = 8) +
+  coord_equal()
+
+png("plot/impeachment/comissao_impeachment_oposicao.png", width = 4000, height = 3000)
 p 
 dev.off()
 ```
