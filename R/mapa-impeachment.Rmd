@@ -288,42 +288,34 @@ png("plot/impeachment/comissao_impeachment_doacao_lava_jato_1.png", width = 960,
 p 
 dev.off()
 
+# Zoom do grafico por nomes
+
 plot_zoom_comissao <- function(num_clust){
   filter_clust <- filter(mca_obs_df, clust == levels(mca_obs_df$clust)[num_clust])
   
    p <- plotCluster(mca_obs_df) + 
   geom_point(data = filter(filter_clust, destaque_comissão == TRUE), 
-             shape = 18, size = 10, alpha = 0.2, colour = "Black")  +
+             shape = 18, size = 10, alpha = 0.3, colour = "Black")  +
   geom_point(data = filter(filter_clust, destaque_doacao == TRUE), 
              shape = 18, size = 10, alpha = 0.4, colour = "Black")  +
   geom_text(data = filter(filter_clust, destaque_doacao == TRUE), 
                    aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
-                   colour = "black", alpha = 0.6, size = 8) +
+                   colour = "black", alpha = 0.6, size = 8, hjust = -.15) +
+  
   coord_equal()
   p
 }
 
+png("plot/impeachment/comissao_impeachment_governo.png", width = 4000, height = 3000)
+plot_zoom_comissao(1)
+dev.off()
 
-e <- filter(mca_obs_df, clust == levels(mca_obs_df$clust)[1])
-
-d <- plot_zoom_comissao(4)
-
-d
-
-levels(mca_obs_df$clust)[2]
-
-p <- plotCluster(mca_obs_df) + 
-  geom_point(data = filter(mca_obs_df, destaque_comissão == TRUE), 
-             shape = 18, size = 10, alpha = 0.2, colour = "Black")  +
-  geom_point(data = filter(mca_obs_df, destaque_doacao == TRUE), 
-             shape = 18, size = 10, alpha = 0.4, colour = "Black")  +
-  geom_text(data = filter(mca_obs_df, destaque_doacao == TRUE), 
-                   aes(x = Dim.1, y = Dim.2, label = paste(nome, "-", toupper(partido))),
-                   colour = "black", alpha = 0.6, size = 8) +
-  coord_equal()
+png("plot/impeachment/comissao_impeachment_alinhado_pmdb.png", width = 4000, height = 3000)
+plot_zoom_comissao(2)
+dev.off()
 
 png("plot/impeachment/comissao_impeachment_oposicao.png", width = 4000, height = 3000)
-p 
+plot_zoom_comissao(4)
 dev.off()
 ```
 
@@ -363,6 +355,13 @@ png("plot/impeachment/comissao_impeachment_doacao_lava_jato_valores_2.png", widt
 p 
 dev.off()
 
+```
+
+Destaque dos deputados que receberam doações de empresas ligadas a lava jato divido por partido
+
+```{r}
+
+
 doacao_lava_jato$destaque_partido = factor(ifelse(doacao_lava_jato$partido %in% 
                                                c("PMDB", "PSDB", "PT", "PSOL"), 
                                              as.character(doacao_lava_jato$partido), 
@@ -372,18 +371,18 @@ p <- ggplot(data = doacao_lava_jato,
   geom_bar(stat = "identity", width = .5) +
   theme_pander() + 
   scale_y_continuous(limit = c(0, 750000), 
-                     breaks = c(0, 200000, 400000, 750000)) +
+                     breaks = c(0, 150000, 300000, 450000, 600000, 750000),
+                     labels=c("0", "150 mil", "300 mil", "450 mil", "600 mil", "750 mil")) +
   scale_fill_manual(values = c(alpha("grey70", .4),
                                  alpha("darkred", 0.5),
                                  alpha("#0066CC", 0.5),
-                                 alpha("#FF3300", 0.5)),
-                    guide = guide_legend(title = "Partido", reverse=TRUE)) +
+                                 alpha("#FF3300", 0.5))) +
   labs(y='Valor doado por empresas da lava jato em reais', x='') +
-  theme(axis.ticks.x = element_blank(), 
-        axis.text = element_text(size = rel(1.5))) + 
+  theme(
+        axis.text = element_text(size = rel(1.5)), legend.position="none") + 
   coord_flip()
 
-png("plot/impeachment/comissao_impeachment_doacao_lava_jato_valores_3.png", width = 800, height = 600)
+png("plot/impeachment/comissao_impeachment_doacao_lava_jato_valores_destaque.png", width = 950, height = 600)
 p 
 dev.off()
 
@@ -391,18 +390,28 @@ group <- group_by(doacao_lava_jato, partido) %>%
   summarise(sum(valor))
 colnames(group) <- c("Partido", "Valor")
 
+group$destaque_partido = factor(ifelse(group$Partido %in% 
+                                               c("PMDB", "PSDB", "PT", "PSOL"), 
+                                             as.character(group$Partido), 
+                                             "Outros"))
+
 p <- ggplot(data = group, 
-            aes(x = reorder(Partido, Valor), y = Valor)) + 
+            aes(x = reorder(Partido, Valor), y = Valor, fill = destaque_partido)) + 
   geom_bar(stat = "identity", width = .5) +
   theme_pander() + 
+  scale_fill_manual(values = c(alpha("grey70", .4),
+                                 alpha("darkred", 0.5),
+                                 alpha("#0066CC", 0.5),
+                                 alpha("#FF3300", 0.5))) + 
   scale_y_continuous(limit = c(0, 1700000), 
-                     breaks = c(0, 750000, 1700000)) +
+                     breaks = c(0, 340000, 680000, 1020000, 1360000, 1700000),
+                     labels = c("0", "340 mil", "680 mil", "1020 mil", "1360 mil", "1700 mil")) +
   labs(y='Valor doado por empresas da lava jato em reais', x='') +
   theme(axis.ticks.x = element_blank(), 
-        axis.text = element_text(size = rel(1.5))) + 
+        axis.text = element_text(size = rel(1.5)), legend.position="none") + 
   coord_flip()
 
-png("plot/impeachment/comissao_impeachment_doacao_lava_jato_valores_4.png", width = 800, height = 600)
+png("plot/impeachment/comissao_impeachment_doacao_lava_jato_valores_destaque_partido.png", width = 950, height = 600)
 p 
 dev.off()
 
