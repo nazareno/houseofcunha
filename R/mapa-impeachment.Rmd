@@ -411,7 +411,7 @@ p <- ggplot(data = group,
         axis.text = element_text(size = rel(1.5)), legend.position="none") + 
   coord_flip()
 
-png("plot/impeachment/comissao_impeachment_doacao_lava_jato_valores_destaque_partido.png", width = 950, height = 600)
+png("plot/impeachment/comissao_impeachment_doacao_lava_jato_valores_destaque_partido_15.png", width = 950, height = 600)
 p 
 dev.off()
 
