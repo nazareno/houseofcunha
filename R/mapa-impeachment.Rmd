@@ -404,14 +404,14 @@ p <- ggplot(data = group,
                                  alpha("#0066CC", 0.5),
                                  alpha("#FF3300", 0.5))) + 
   scale_y_continuous(limit = c(0, 1700000), 
-                     breaks = c(0, 340000, 680000, 1020000, 1360000, 1700000),
-                     labels = c("0", "340 mil", "680 mil", "1020 mil", "1360 mil", "1700 mil")) +
+                     breaks = c(0, 500000, 1000000, 1700000),
+                     labels = c("0", "500 mil", "1 milhão", "1.7 milhão")) +
   labs(y='Valor doado por empresas da lava jato em reais', x='') +
   theme(axis.ticks.x = element_blank(), 
         axis.text = element_text(size = rel(1.5)), legend.position="none") + 
   coord_flip()
 
-png("plot/impeachment/comissao_impeachment_doacao_lava_jato_valores_destaque_partido_15.png", width = 950, height = 600)
+png("plot/impeachment/comissao_impeachment_doacao_lava_jato_valores_destaque_partido_1.png", width = 950, height = 600)
 p 
 dev.off()
 
