@@ -95,13 +95,14 @@ deputados_que_mudaram_de_partido <- function(votos) {
 
 partido_atual <- function(id_deputado,votos) {
   votos_deputado <- votos[votos$id_dep == id_deputado,]
+  votos_deputado <- votos_deputado[complete.cases(votos_deputado[, 12]),]
   partidos_por_data <- votos_deputado[order(as.Date(votos_deputado$data, format="%d/%m/%Y")),]
   partido <- tail(partidos_por_data,1)$partido
   
   return(partido)
 }
 
-definir_partido <- function(deputados_infieis,votos) {
+definir_partido <- function(deputados_infieis, votos) {
   for (i in seq(1:nrow(deputados_infieis))) {
     id_deputado <- deputados_infieis[i,]$id_dep
     partido <- partido_atual(id_deputado,votos) 
@@ -142,6 +143,9 @@ definir_nome <- function(deputados_repetidos, votos) {
 ler_votos_de_ativos <- function(filepath, corrigir_migracoes, min.porc.votacoes = 0.15, limpar.votos=TRUE){
   votos <- read.csv(filepath, strip.white=TRUE, quote="")
   
+  # Considera todos os deputados com id_dep
+  votos <- votos[complete.cases(votos[,11]),]
+  
   # ajustes nos valores e tipos das variáveis
   if (limpar.votos) {
     votos <- filter(votos, voto %in% c("sim", "não")) 
@@ -169,7 +173,7 @@ ler_votos_de_ativos <- function(filepath, corrigir_migracoes, min.porc.votacoes 
   if (corrigir_migracoes) {
     # Correção de deputados que aparecem com mais de uma afiliação.
     deputados_infieis <- deputados_que_mudaram_de_partido(votos)
-    votos <- definir_partido(deputados_infieis,votos)
+    votos <- definir_partido(deputados_infieis, votos)
   }
 
   deputados_depois <- votos[!duplicated(votos$id_dep),]

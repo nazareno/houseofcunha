@@ -85,27 +85,6 @@
     </comissoes>
   </deputado>
   <deputado>
-    <ideCadastro>74470</ideCadastro>
-    <codOrcamento>3533</codOrcamento>
-    <condicao>Suplente</condicao>
-    <matricula>561</matricula>
-    <idParlamentar>5830857</idParlamentar>
-    <nome>MARCONDES IRAN BENEVIDES GADELHA</nome>
-    <nomeParlamentar>MARCONDES GADELHA</nomeParlamentar>
-    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/74470.jpg</urlFoto>
-    <sexo>masculino</sexo>
-    <uf>PB</uf>
-    <partido>PSC</partido>
-    <gabinete>611</gabinete>
-    <anexo>4</anexo>
-    <fone>3215-5611</fone>
-    <email>dep.marcondesgadelha@camara.gov.br</email>
-    <comissoes>
-      <titular />
-      <suplente />
-    </comissoes>
-  </deputado>
-  <deputado>
     <ideCadastro>193066</ideCadastro>
     <codOrcamento />
     <condicao>Suplente</condicao>
@@ -137,7 +116,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/160566.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>PR</uf>
-    <partido>PSC</partido>
+    <partido>PSDB</partido>
     <gabinete>513</gabinete>
     <anexo>4</anexo>
     <fone>3215-5513</fone>
@@ -158,7 +137,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/193726.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>PR</uf>
-    <partido>PSC</partido>
+    <partido>PSDB</partido>
     <gabinete>962</gabinete>
     <anexo>4</anexo>
     <fone>3215-5962</fone>
@@ -683,7 +662,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178998.jpg</urlFoto>
     <sexo>feminino</sexo>
     <uf>MG</uf>
-    <partido>PSC</partido>
+    <partido>PSD</partido>
     <gabinete>444</gabinete>
     <anexo>4</anexo>
     <fone>3215-5444</fone>
@@ -2069,7 +2048,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/74366.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>GO</uf>
-    <partido>PSDB</partido>
+    <partido>PRB</partido>
     <gabinete>315</gabinete>
     <anexo>4</anexo>
     <fone>3215-5315</fone>
@@ -2111,7 +2090,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178938.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>RJ</uf>
-    <partido>S.PART.</partido>
+    <partido>PTdoB</partido>
     <gabinete>803</gabinete>
     <anexo>4</anexo>
     <fone>3215-5803</fone>
@@ -2216,7 +2195,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178841.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>AL</uf>
-    <partido>PSD</partido>
+    <partido>PMDB</partido>
     <gabinete>760</gabinete>
     <anexo>4</anexo>
     <fone>3215-5760</fone>
@@ -2342,7 +2321,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178849.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>AM</uf>
-    <partido>PPS</partido>
+    <partido>PDT</partido>
     <gabinete>272</gabinete>
     <anexo>3</anexo>
     <fone>3215-5272</fone>
@@ -2993,7 +2972,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/160641.jpg</urlFoto>
     <sexo>feminino</sexo>
     <uf>AP</uf>
-    <partido>PT</partido>
+    <partido>PCdoB</partido>
     <gabinete>338</gabinete>
     <anexo>4</anexo>
     <fone>3215-5338</fone>
@@ -3602,7 +3581,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/186775.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>MG</uf>
-    <partido>PTdoB</partido>
+    <partido>PP</partido>
     <gabinete>627</gabinete>
     <anexo>4</anexo>
     <fone>3215-5627</fone>
@@ -3623,7 +3602,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/141450.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>RJ</uf>
-    <partido>PROS</partido>
+    <partido>PSB</partido>
     <gabinete>631</gabinete>
     <anexo>4</anexo>
     <fone>3215-5631</fone>
@@ -3665,7 +3644,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/74374.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>MS</uf>
-    <partido>PMDB</partido>
+    <partido>PSDB</partido>
     <gabinete>905</gabinete>
     <anexo>4</anexo>
     <fone>3215-5905</fone>
@@ -4138,6 +4117,27 @@
     </comissoes>
   </deputado>
   <deputado>
+    <ideCadastro>178912</ideCadastro>
+    <codOrcamento>3739</codOrcamento>
+    <condicao>Titular</condicao>
+    <matricula>135</matricula>
+    <idParlamentar>5830538</idParlamentar>
+    <nome>PEDRO OLIVEIRA CUNHA LIMA</nome>
+    <nomeParlamentar>PEDRO CUNHA LIMA</nomeParlamentar>
+    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178912.jpg</urlFoto>
+    <sexo>masculino</sexo>
+    <uf>PB</uf>
+    <partido>PSDB</partido>
+    <gabinete>611</gabinete>
+    <anexo>4</anexo>
+    <fone>3215-5611</fone>
+    <email>dep.pedrocunhalima@camara.gov.br</email>
+    <comissoes>
+      <titular />
+      <suplente />
+    </comissoes>
+  </deputado>
+  <deputado>
     <ideCadastro>160556</ideCadastro>
     <codOrcamento>2764</codOrcamento>
     <condicao>Titular</condicao>
@@ -4348,6 +4348,27 @@
     </comissoes>
   </deputado>
   <deputado>
+    <ideCadastro>141441</ideCadastro>
+    <codOrcamento>2477</codOrcamento>
+    <condicao>Titular</condicao>
+    <matricula>241</matricula>
+    <idParlamentar>5830739</idParlamentar>
+    <nome>GEORGE HILTON DOS SANTOS CECÍLIO</nome>
+    <nomeParlamentar>GEORGE HILTON</nomeParlamentar>
+    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/141441.jpg</urlFoto>
+    <sexo>masculino</sexo>
+    <uf>MG</uf>
+    <partido>PROS</partido>
+    <gabinete>804</gabinete>
+    <anexo>4</anexo>
+    <fone>3215-5804</fone>
+    <email>dep.georgehilton@camara.gov.br</email>
+    <comissoes>
+      <titular />
+      <suplente />
+    </comissoes>
+  </deputado>
+  <deputado>
     <ideCadastro>178920</ideCadastro>
     <codOrcamento>3747</codOrcamento>
     <condicao>Titular</condicao>
@@ -4547,7 +4568,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178852.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>AP</uf>
-    <partido>PSC</partido>
+    <partido>PSD</partido>
     <gabinete>344</gabinete>
     <anexo>4</anexo>
     <fone>3215-5344</fone>
@@ -5345,7 +5366,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/99654.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>BA</uf>
-    <partido>PSC</partido>
+    <partido>PEN</partido>
     <gabinete>756</gabinete>
     <anexo>4</anexo>
     <fone>3215-5756</fone>
@@ -5429,7 +5450,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178997.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>CE</uf>
-    <partido>PPS</partido>
+    <partido>PMDB</partido>
     <gabinete>809</gabinete>
     <anexo>4</anexo>
     <fone>3215-5809</fone>
@@ -6794,7 +6815,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/74474.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>PE</uf>
-    <partido>PCdoB</partido>
+    <partido>S.PART.</partido>
     <gabinete>423</gabinete>
     <anexo>4</anexo>
     <fone>3215-5423</fone>
@@ -7057,27 +7078,6 @@
     </comissoes>
   </deputado>
   <deputado>
-    <ideCadastro>74751</ideCadastro>
-    <codOrcamento>1744</codOrcamento>
-    <condicao>Suplente</condicao>
-    <matricula>542</matricula>
-    <idParlamentar>5830833</idParlamentar>
-    <nome>NILMÁRIO DE MIRANDA</nome>
-    <nomeParlamentar>NILMÁRIO MIRANDA</nomeParlamentar>
-    <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/74751.jpg</urlFoto>
-    <sexo>masculino</sexo>
-    <uf>MG</uf>
-    <partido>PT</partido>
-    <gabinete>844</gabinete>
-    <anexo>4</anexo>
-    <fone>3215-5844</fone>
-    <email>dep.nilmariomiranda@camara.gov.br</email>
-    <comissoes>
-      <titular />
-      <suplente />
-    </comissoes>
-  </deputado>
-  <deputado>
     <ideCadastro>74277</ideCadastro>
     <codOrcamento>1599</codOrcamento>
     <condicao>Suplente</condicao>
@@ -7173,9 +7173,9 @@
     <sexo>masculino</sexo>
     <uf>MG</uf>
     <partido>PTN</partido>
-    <gabinete>804</gabinete>
+    <gabinete>844</gabinete>
     <anexo>4</anexo>
-    <fone>3215-5804</fone>
+    <fone>3215-5844</fone>
     <email>dep.ademircamilo@camara.gov.br</email>
     <comissoes>
       <titular />
@@ -7739,7 +7739,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/160621.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>PR</uf>
-    <partido>PPS</partido>
+    <partido>PSD</partido>
     <gabinete>221</gabinete>
     <anexo>4</anexo>
     <fone>3215-5221</fone>
@@ -7949,7 +7949,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/141430.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>RJ</uf>
-    <partido>PSD</partido>
+    <partido>PROS</partido>
     <gabinete>216</gabinete>
     <anexo>4</anexo>
     <fone>3215-5216</fone>
@@ -8117,7 +8117,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178947.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>RJ</uf>
-    <partido>PSD</partido>
+    <partido>DEM</partido>
     <gabinete>560</gabinete>
     <anexo>4</anexo>
     <fone>3215-5560</fone>
@@ -9776,7 +9776,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/178833.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>RJ</uf>
-    <partido>PSD</partido>
+    <partido>PMDB</partido>
     <gabinete>554</gabinete>
     <anexo>4</anexo>
     <fone>3215-5554</fone>
@@ -10448,7 +10448,7 @@
     <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/141427.jpg</urlFoto>
     <sexo>masculino</sexo>
     <uf>MG</uf>
-    <partido>PMB</partido>
+    <partido>PMDB</partido>
     <gabinete>452</gabinete>
     <anexo>4</anexo>
     <fone>3215-5452</fone>

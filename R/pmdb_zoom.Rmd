@@ -1,0 +1,145 @@
+---
+title: "pmdb_zoom"
+output: html_document
+---
+
+Analise para verificar como foi o engajamento do PMDB no ano antes de romper com o governo 
+
+Bibliotecas necessárias 
+
+```{r}
+library(ggplot2)
+library(dplyr)
+require(scales)
+
+source("R/camara-lib.R")
+```
+
+
+```{r}
+votos <- ler_votos_de_ativos("dados/votacoes.csv", corrigir_migracoes = TRUE)
+  
+# distinguir diferentes votações de uma mesma proposição
+votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
+  
+votos$mes <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%m'))
+votos$ano <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%Y'))
+votos$dia <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%j'))
+
+rompimento_com_governo = 216 # Dia 04/08 
+votos_antes_rompimento <- filter(votos, dia >= rompimento_com_governo)
+votos_2015 <- filter(votos, ano == 2015)
+
+cria_mca <- function (votos){
+  votacao <- recuperar_votacoes(votos)
+  
+  votos_por_deputado <- dcast(votacao, 
+                      nome + partido + uf + id_dep ~ num_pro, 
+                      value.var = "voto")
+  
+  votos_por_deputado <- as.data.frame(apply(votos_por_deputado, 2, as.factor))
+
+  mca1 = MCA(votos_por_deputado, 
+           ncp = 2, # Default is 5 
+           graph = FALSE,
+           quali.sup = c(1:4),
+           na.method = "Average") # NA or Average
+
+  # data frame with observation coordinates
+  mca1_obs_df = data.frame(mca1$ind$coord, 
+                         nome = votos_por_deputado$nome,
+                         partido = votos_por_deputado$partido, 
+                         uf = votos_por_deputado$uf,
+                         id_dep = votos_por_deputado$id_dep)
+
+  # Partidos icônicos
+  mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in% 
+                                               c("pmdb", "pt"), 
+                                             as.character(mca1_obs_df$partido), 
+                                             "outros"))
+  
+  return (mca1_obs_df)
+}
+
+
+# , "pp", "pr"
+#x <- filter(mca3_completo, partido == "pr")
+
+#y <- filter(votos, id_dep == 178830)
+
+mca1_antes_rompimento <- cria_mca(votos_antes_rompimento)
+mca2_2015 <- cria_mca(votos_2015)
+mca3_completo <- cria_mca(votos)
+
+```
+
+
+
+
+```{r}
+p <- ggplot(data = mca1_antes_rompimento, 
+       aes(x = Dim.1, y = Dim.2, colour = destaque_partido)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_point(size = 9, alpha = 0.3) + 
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("darkred", 1),
+                                 alpha("#FF3300", 1)
+                                 ), 
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) +
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+png("plot/zoom_pmdb/antes_rompimento_2015.png", 
+    width = 800, height = 600)
+p
+dev.off()
+
+p <- ggplot(data = mca2_2015, 
+       aes(x = Dim.1, y = Dim.2, colour = destaque_partido)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_point(size = 9, alpha = 0.3) + 
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("darkred", 1),
+                                 alpha("#FF3300", 1)
+                                 ), 
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) +
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+png("plot/zoom_pmdb/em_2015.png", 
+    width = 800, height = 600)
+p
+dev.off()
+
+p <- ggplot(data = mca3_completo, 
+       aes(x = Dim.1, y = Dim.2, colour = destaque_partido)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_point(size = 9, alpha = 0.3) + 
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("darkred", 1),
+                                 alpha("#FF3300", 1)
+                                 ), 
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) +
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+png("plot/zoom_pmdb/2016_pp.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```

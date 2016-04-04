@@ -1506,9 +1506,24 @@
     <dataVotacao>17/02/2016</dataVotacao>
   </proposicao>
   <proposicao>
+    <codProposicao>945979</codProposicao>
+    <nomeProposicao>PEC 1/2015</nomeProposicao>
+    <dataVotacao>22/03/2016</dataVotacao>
+  </proposicao>
+  <proposicao>
     <codProposicao>1063052</codProposicao>
     <nomeProposicao>PEC 11/2015</nomeProposicao>
     <dataVotacao>23/02/2016</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1063052</codProposicao>
+    <nomeProposicao>PEC 11/2015</nomeProposicao>
+    <dataVotacao>22/03/2016</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>1712771</codProposicao>
+    <nomeProposicao>REQ 2965/2015 =&gt; PLP 392/2014</nomeProposicao>
+    <dataVotacao>29/03/2016</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>1738686</codProposicao>
@@ -1594,6 +1609,21 @@
     <codProposicao>2024766</codProposicao>
     <nomeProposicao>MPV 698/2015 </nomeProposicao>
     <dataVotacao>16/03/2016</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>2024766</codProposicao>
+    <nomeProposicao>MPV 698/2015 </nomeProposicao>
+    <dataVotacao>21/03/2016</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>2075925</codProposicao>
+    <nomeProposicao>MPV 702/2015 </nomeProposicao>
+    <dataVotacao>28/03/2016</dataVotacao>
+  </proposicao>
+  <proposicao>
+    <codProposicao>2076264</codProposicao>
+    <nomeProposicao>MPV 710/2016 </nomeProposicao>
+    <dataVotacao>29/03/2016</dataVotacao>
   </proposicao>
   <proposicao>
     <codProposicao>2077084</codProposicao>
