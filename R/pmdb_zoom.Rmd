@@ -61,20 +61,14 @@ cria_mca <- function (votos){
   return (mca1_obs_df)
 }
 
-
-# , "pp", "pr"
-#x <- filter(mca3_completo, partido == "pr")
-
 #y <- filter(votos, id_dep == 178830)
 
 mca1_antes_rompimento <- cria_mca(votos_antes_rompimento)
 mca2_2015 <- cria_mca(votos_2015)
 mca3_completo <- cria_mca(votos)
-
 ```
 
-
-
+Plot da evolução do mapa ao longo de 2015~2016 com destaque para o PT e PMDB
 
 ```{r}
 p <- ggplot(data = mca1_antes_rompimento, 
@@ -139,6 +133,41 @@ p <- ggplot(data = mca3_completo,
         axis.line = element_blank())
 
 png("plot/zoom_pmdb/2016_pp.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
+Plot com destaque para os partidos PMDB, PT, PP, PR e PTN
+
+```{r}
+
+mca3_completo$destaque_partido_base = factor(ifelse(mca3_completo$partido %in% 
+                                               c("pmdb", "pt",  "pp", "pr", "ptn"), 
+                                             as.character(mca3_completo$partido), 
+                                             "outros"))
+
+p <- ggplot(data = mca3_completo, 
+       aes(x = Dim.1, y = Dim.2, label = partido ,colour = destaque_partido_base)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 5.) + 
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("darkred", 1),
+                                 alpha("#01665e", 1), # pp
+                                 alpha("#762a83", 1), # pr
+                                 alpha("#FF3300", 1),
+                                 alpha("#8c510a", 1)
+                                 ), 
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) +
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+png("plot/zoom_pmdb/mapa_pp_pr_ptn.png", 
     width = 800, height = 600)
 p
 dev.off()
