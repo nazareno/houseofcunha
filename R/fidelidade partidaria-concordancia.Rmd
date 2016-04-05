@@ -5,8 +5,11 @@ date: "22-10-2015"
 output: html_document
 ---
 
+Definições importantes para essa análise
 
-Mostra qual o nível de concordância dos partidos com o governo. 
+* Fidelidade partidária é quantos dos deputados votaram de acordo com seu partido num período. 
+* Concordância de um partido com outro é o quanto eles concordaram na recomendação durante um período. 
+* Concordância de deputados com um partido é o quanto um conjunto de deputados votou de acordo com as recomendacoes de um partido
 
 Bibliotecas necessárias 
 
@@ -21,14 +24,14 @@ source("R/camara-lib.R")
 Carregando CSV com os votos dos deputados
 
 ```{r}
-votos <- ler_votos_de_ativos("dados/votacoes.csv", corrigir_migracoes = TRUE)
+votos <- ler_votos_de_ativos("dados/votacoes.csv", corrigir_migracoes = FALSE)
 
 # distinguir diferentes votações de uma mesma proposição
 votos$num_pro <- paste0(votos$num_pro, "-", votos$id_votacao)
 
 votos$pro_orientacao <- paste0(votos$num_pro, "-", votos$orientacao_partido)
 
-votos$mes <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%m'))
+votos$ano_mes <- paste0(as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%Y')), "", as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%m'))) 
 votos$ano <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%Y'))
 votos <- filter(votos, ano >= 2015)
 ```
@@ -36,7 +39,7 @@ votos <- filter(votos, ano >= 2015)
 Orientação de cada partido para cada votação
 
 ```{r}
-orientacao_partidos <- unique(votos[,c("data", "partido", "pro_orientacao")])
+orientacao_partidos <- unique(votos[,c("ano_mes", "partido", "pro_orientacao")])
 orientacao_partidos$ano <- as.numeric(format(as.Date(orientacao_partidos$data, format = "%d/%m/%Y"),'%Y'))
 orientacao_partidos$mes <- as.numeric(format(as.Date(orientacao_partidos$data, format = "%d/%m/%Y"),'%m'))
 
@@ -80,16 +83,29 @@ dev.off()
 Comparação entre o governo e outros partidos mês a mês 
 
 ```{r}
+partidoA <- orientacao_pt
+partidoB <- orientacao_pmdb
 concordancia_mes <- function(partidoA, partidoB){
   df <- data.frame()
-  mes <- unique(partidoA$mes)
   
-  for (m in mes){
+  max_orientacoes <- ifelse(length(partidoA) > length(partidoB), unique(partidoA$ano_mes),  
+                            unique(partidoB$ano_mes))
+  
+  if(length(partidoA) > length(partidoB)){
+    max_orientacoes <- partidoA
+  } else {
+    max_orientacoes <- partidoB
+  }
+  
+  
+  data <- unique(max_orientacoes$ano_mes)
+  
+  for (m in data){
     partidoA_mes <-  partidoA %>%
-      filter(mes == m)
+      filter(ano_mes == m)
     
     partidoB_mes <-  partidoB %>%
-      filter(mes == m)
+      filter(ano_mes == m)
     
     
     df <- rbind(df, data.frame(Concordancia = concordancia(partidoA_mes$pro_orientacao, partidoB_mes$pro_orientacao), Mes = m))

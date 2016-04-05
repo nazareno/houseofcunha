@@ -347,7 +347,9 @@ geraMCA <-  function(votos){
 # Comparação da orientação entre dois partidos partidos. 
 concordancia <- function(partidoA, partidoB){
   concordancia <- length(intersect(partidoA , partidoB))
-  discordancia <- length(partidoA) - concordancia
+  discordancia <- ifelse(length(partidoA) > length(partidoB), 
+                         length(partidoA) - concordancia,  
+                         length(partidoB) - concordancia)
   indice <- concordancia / (concordancia + discordancia)
   indice
 }
