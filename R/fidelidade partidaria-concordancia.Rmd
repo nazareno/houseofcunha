@@ -14,6 +14,7 @@ Definições importantes para essa análise
 Bibliotecas necessárias 
 
 ```{r}
+require(FactoMineR)
 library(ggplot2)
 library(dplyr)
 require(scales)
@@ -42,56 +43,56 @@ votos <- filter(votos, ano >= 2015)
 Orientação de cada partido para cada votação
 
 ```{r}
-orientacao_partidos <- unique(votos[,c("ano_mes", "partido", "pro_orientacao")])
+orientacao_partidos <- unique(votos[,c("ano_mes", "partido", "pro_orientacao", "orientacao_partido")])
 
 orientacao_pt <- orientacao_partidos %>%
-  filter(partido == "pt")
-
-orientacao_pmdb <- orientacao_partidos %>%
-  filter(partido == "pmdb")
-
-orientacao_psdb <- orientacao_partidos %>%
-  filter(partido == "psdb")
-
-orientacao_psol <- orientacao_partidos %>%
-  filter(partido == "psol")
-
-orientacao_ptn <- orientacao_partidos %>%
-  filter(partido == "ptn")
-
-orientacao_pp <- orientacao_partidos %>%
-  filter(partido == "pp")
+  filter(partido == "pt", orientacao_partido == "sim" | orientacao_partido == "não")
 
 orientacao_pr <- orientacao_partidos %>%
-  filter(partido == "pr")
+  filter(partido == "pr", orientacao_partido == "sim" | orientacao_partido == "não")
 
-x <- filter(votos, partido == "pmdb")
+orientacao_ptn <- orientacao_partidos %>%
+  filter(partido == "ptn", orientacao_partido == "sim" | orientacao_partido == "não")
+
+orientacao_pp <- orientacao_partidos %>%
+  filter(partido == "pp", orientacao_partido == "sim" | orientacao_partido == "não")
+
+orientacao_prb <- orientacao_partidos %>%
+  filter(partido == "prb", orientacao_partido == "sim" | orientacao_partido == "não")
+
+orientacao_psd <- orientacao_partidos %>%
+  filter(partido == "psd", orientacao_partido == "sim" | orientacao_partido == "não")
 ```
 
 Comparação da orientação do governo com a orientação dos outros partidos. 
 
 ```{r}
-pmdb <- concordancia(orientacao_pt$pro_orientacao, orientacao_pmdb$pro_orientacao)
-psdb <- concordancia(orientacao_pt$pro_orientacao, orientacao_psdb$pro_orientacao)
-psol <- concordancia(orientacao_pt$pro_orientacao, orientacao_psol$pro_orientacao)
+pr <- concordancia(orientacao_pt$pro_orientacao, orientacao_pr$pro_orientacao)
+ptn <- concordancia(orientacao_pt$pro_orientacao, orientacao_ptn$pro_orientacao)
+pp <- concordancia(orientacao_pt$pro_orientacao, orientacao_pp$pro_orientacao)
+prb <- concordancia(orientacao_pt$pro_orientacao, orientacao_prb$pro_orientacao)
+psd <- concordancia(orientacao_pt$pro_orientacao, orientacao_psd$pro_orientacao)
 
-concordancia_governo <- data.frame(Concordancia = c(pmdb, psdb, psol), Partidos = c("pmdb", "psdb", "psol"))
+concordancia_governo <- data.frame(Concordancia = c(pr, ptn, pp, prb, psd), Partidos = c("pr", "ptn", "pp", "prb", "psd"))
 
 p <- ggplot(data = concordancia_governo, aes(x=reorder(Partidos, -Concordancia), y = Concordancia)) + 
   geom_bar(stat="identity") + 
   labs(y='Concordância com o Governo', x='Partidos') +
+  scale_y_continuous(limit = c(0, 0.8), 
+                     breaks = c(0, 0.25, 0.50, 0.75),
+                     labels=c("0%", "25%", "50%", "75%")) +
   theme_classic() +
    theme(panel.background=element_blank())
 
-png("plot/fidelidade/concordancia_governo_partidos.png", width = 800, height = 600)
+png("plot/fidelidade/concordancia_governo_partidos_3.png", width = 800, height = 600)
 p
 dev.off()
 ```
 
-Comparação da orientação dos partidos com o que os deputados realmente votaram
+Comparação da orientação dos partidos com o que os deputados realmente votaram - Fidelidade partidaria
 
 ```{r}
-votos_ptn <- filter(votos, partido == "ptn",  voto == "sim" | voto == "não", 
+votos_prb <- filter(votos, partido == "prb",  voto == "sim" | voto == "não", 
                    orientacao_partido == "sim" | orientacao_partido == "não")
 
 votos_pp <- filter(votos, partido == "pp",  voto == "sim" | voto == "não", 
@@ -100,7 +101,7 @@ votos_pp <- filter(votos, partido == "pp",  voto == "sim" | voto == "não",
 votos_pr <- filter(votos, partido == "pr",  voto == "sim" | voto == "não", 
                    orientacao_partido == "sim" | orientacao_partido == "não")
 
-votos_psol <- filter(votos, partido == "psol",  voto == "sim" | voto == "não", 
+votos_psd <- filter(votos, partido == "psd",  voto == "sim" | voto == "não", 
                    orientacao_partido == "sim" | orientacao_partido == "não")
 
 votos_pt <- filter(votos, partido == "pt",  voto == "sim" | voto == "não", 
@@ -114,97 +115,89 @@ votos_psdb <- filter(votos, partido == "psdb",  voto == "sim" | voto == "não",
 
 pr <- concordancia(votos_pr$orientacao_dep, votos_pr$votos_dep)
 pp <- concordancia(votos_pp$orientacao_dep, votos_pp$votos_dep)
-ptn <- concordancia(votos_ptn$orientacao_dep, votos_ptn$votos_dep)
+prb <- concordancia(votos_prb$orientacao_dep, votos_prb$votos_dep)
 
-psol <- concordancia(votos_psol$orientacao_dep, votos_psol$votos_dep)
+psd <- concordancia(votos_psd$orientacao_dep, votos_psd$votos_dep)
 pt <- concordancia(votos_pt$orientacao_dep, votos_pt$votos_dep)
 pmdb <- concordancia(votos_pmdb$orientacao_dep, votos_pmdb$votos_dep)
 psdb <- concordancia(votos_psdb$orientacao_dep, votos_psdb$votos_dep)
 
-fidelidade_partidaria <- data.frame(Concordancia = c(pmdb, pt, psol, pr, pp, ptn, psdb), Partidos = c("pmdb", "pt", "psol", "pr", "pp", "ptn", "psdb"))
+fidelidade_partidaria <- data.frame(Concordancia = c(pmdb, pt, psd, pr, pp, prb, psdb), Partidos = c("pmdb", "pt", "psd", "pr", "pp", "prb", "psdb"),
+                                    Destaque = c(FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE))
 
-p <- ggplot(data = fidelidade_partidaria, aes(x=reorder(Partidos, -Concordancia), y = Concordancia)) + 
+# f0f0f0
+# bdbdbd
+p <- ggplot(data = fidelidade_partidaria, aes(x=reorder(Partidos, -Concordancia), y = Concordancia, fill = Destaque)) + 
   geom_bar(stat="identity") + 
+  scale_fill_manual(values = c("#bdbdbd", "#636363")) +
+  scale_y_continuous(limit = c(0, 1), 
+                     breaks = c(0, 0.25, 0.50, 0.75, 1),
+                     labels=c("0%", "25%", "50%", "75%", "100%")) +
   labs(y='Fidelidade dos partidos', x='Partidos') +
   theme_classic() +
-   theme(panel.background=element_blank())
+   theme(panel.background=element_blank(),
+          legend.position="none")
 
-png("plot/fidelidade/fidelidade_partidaria.png", width = 800, height = 600)
+png("plot/fidelidade/fidelidade_partidaria_centrao_3.png", width = 800, height = 600)
 p
 dev.off()
 ```
 
-
-
-Comparação entre o governo e outros partidos mês a mês 
+Destaque dos partidos centrão no mapa 
 
 ```{r}
-partidoA <- orientacao_pt
-partidoB <- orientacao_pmdb
-concordancia_mes <- function(partidoA, partidoB){
-  df <- data.frame()
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
 
-  if(length(partidoA) > length(partidoB)){
-    max_orientacoes <- partidoA
-  } else {
-    max_orientacoes <- partidoB
-  }
-  
-  data <- unique(max_orientacoes$ano_mes)
-  
-  for (m in data){
-    partidoA_mes <-  partidoA %>%
-      filter(ano_mes == 201512)
-    
-    partidoB_mes <-  partidoB %>%
-      filter(ano_mes == 20159)
-    
-    
-    df <- rbind(df, data.frame(Concordancia = concordancia(partidoA_mes$pro_orientacao, partidoB_mes$pro_orientacao), Mes = m))
-  }
-  df
-}
+mca <- MCA(votos_por_deputado, 
+           ncp = 5, # Default is 5 
+           graph = FALSE,
+           quali.sup = c(1:4),
+           na.method = "Average") # NA or Average
 
-pt_pmdb <- concordancia_mes(orientacao_pt, orientacao_pmdb)
-pt_pmdb$partido <- "pmdb"
+mca_obs_df <-  data.frame(mca$ind$coord, 
+                           nome = votos_por_deputado$nome,
+                           partido = votos_por_deputado$partido, 
+                           uf = votos_por_deputado$uf,
+                           id_dep = votos_por_deputado$id_dep)
 
-pt_psdb <- concordancia_mes(orientacao_pt, orientacao_psdb)
-pt_psdb$partido <- "psdb"
+mca_obs_df$id_dep <- as.integer(as.character(mca_obs_df$id_dep))
 
-pt_psol <- concordancia_mes(orientacao_pt, orientacao_psol)
-pt_psol$partido <- "psol"  
-
-plot <- rbind(pt_pmdb, pt_psdb, pt_psol)
-plot$nome_mes <- month.abb[plot$Mes]
-
-p <- ggplot(data = plot, aes(x=reorder(nome_mes, Mes), y = Concordancia, group=partido,  colour=partido)) + 
-  geom_line() +
-  geom_point() + 
-    scale_colour_manual(values = c(alpha("darkred", 1), 
-                                 alpha("#0066CC", 1),
-                                 alpha("#E69F00", 1)), 
+scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("darkred", 1),
+                                 alpha("#FF3300", 1)
+                                 ), 
                       guide = guide_legend(title = "Partido", 
                                            override.aes = list(alpha = 1, size = 4))) +
-  ylab("Concordância com o Governo") + xlab("Mês") +  
-  facet_grid(partido ~ .) +
+
+  
+mca_obs_df$destaque_partido = factor(ifelse(mca_obs_df$partido %in% 
+                                               c("pr", "pt",  "pp", "psd", "ptn", "prb"), 
+                                             as.character(mca_obs_df$partido), 
+                                             "outros"))  
+
+p <- ggplot(data = mca_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = partido, color = destaque_partido)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 5.) + 
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("#2166ac", 1), # pp 
+                                 alpha("#762a83", 1), # pr
+                                 alpha("#4d9221", 1), 
+                                 alpha("#8c510a", 1), # psd
+                                 alpha("darkred", 1), # pt
+                                 alpha("#01665e", 1) # ptn
+                                 ),
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) +
+  ylab("") + xlab("")+ 
   theme_classic() + 
-  theme(axis.ticks = element_blank())
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
 
-
-ggplot(data = pt_pmdb, aes(x=reorder(Mes, Mes), y = Concordancia, group=partido)) + 
-  geom_line() +
-  geom_point() + 
-  ylab("Concordância com o Governo") + xlab("Mês") +  
-  theme_classic() + 
-  theme(axis.ticks = element_blank())
-
-png("plot/concordancia_mes_a_mes_2.png", 
-    width = 800, height = 600)
+png("plot/fidelidade/mapa_centrao_1.png", width = 800, height = 600)
 p
 dev.off()
 
-# PAREI AQUI. CONTAR VOTAÇÕES POR MÊS
-votos %>% group_by(mes) %>% mutate(votados = NROW(unique(num_pro)))
-  
 ```
-
