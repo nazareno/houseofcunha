@@ -1,0 +1,81 @@
+@font-face {
+    font-family: gandhisans;
+    src: url(../../fonts/gandhisans_regular_macroman/GandhiSans-Regular-webfont.woff);
+}
+#grafico {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: white;
+}
+#divInfo {
+    width: 425px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    padding-left: 0px;
+    overflow: hidden;
+    font-size: 18px;
+}
+#divInfo div {
+    margin-bottom: 20px;
+    display: flex;
+}
+#infoDep {
+    font-size: 28px;
+    font-weight: 500;
+    flex-direction: row;
+}
+#infoGroup {
+    margin-left: 20px;
+    flex-direction: column;
+}
+#infoGroup div {
+    padding: 20px;
+}
+#divAfinidades {
+    justify-content: space-between;
+    flex-direction: row;
+}
+#divAfinidades div {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    width: 50%;
+    flex-direction: column;
+}
+#legenda {
+    display: none;
+    background-color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+    opacity: 0.3;
+}
+.axis text {
+    font-size:10px;
+}
+body {
+    font-family: gandhisans;
+    background-color: gray;
+}
+.circles {
+    opacity: .5;
+    cursor: pointer;
+}
+.tipsy {
+    font-size:11px;
+    margin-top:-10px;
+}
+.guide line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+    opacity: 0;
+}
