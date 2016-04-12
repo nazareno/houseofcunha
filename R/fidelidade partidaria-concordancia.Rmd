@@ -75,16 +75,19 @@ psd <- concordancia(orientacao_pt$pro_orientacao, orientacao_psd$pro_orientacao)
 
 concordancia_governo <- data.frame(Concordancia = c(pr, ptn, pp, prb, psd), Partidos = c("pr", "ptn", "pp", "prb", "psd"))
 
-p <- ggplot(data = concordancia_governo, aes(x=reorder(Partidos, -Concordancia), y = Concordancia)) + 
+str(concordancia_governo)
+
+p <- ggplot(data = concordancia_governo, aes(x=reorder(Partidos, -Concordancia), y = Concordancia, fill = "#fec44f")) + 
   geom_bar(stat="identity") + 
   labs(y='Concordância com o Governo', x='Partidos') +
+  scale_fill_manual(values = c("#fec44f")) +
   scale_y_continuous(limit = c(0, 0.8), 
                      breaks = c(0, 0.25, 0.50, 0.75),
                      labels=c("0%", "25%", "50%", "75%")) +
   theme_classic() +
    theme(panel.background=element_blank())
 
-png("plot/fidelidade/concordancia_governo_partidos_3.png", width = 800, height = 600)
+png("plot/fidelidade/concordancia_governo_partidos_3.png", width = 900, height = 500)
 p
 dev.off()
 ```
@@ -129,7 +132,7 @@ fidelidade_partidaria <- data.frame(Concordancia = c(pmdb, pt, psd, pr, pp, prb,
 # bdbdbd
 p <- ggplot(data = fidelidade_partidaria, aes(x=reorder(Partidos, -Concordancia), y = Concordancia, fill = Destaque)) + 
   geom_bar(stat="identity") + 
-  scale_fill_manual(values = c("#bdbdbd", "#636363")) +
+  scale_fill_manual(values = c("#fee6ce", "#fdae6b")) +
   scale_y_continuous(limit = c(0, 1), 
                      breaks = c(0, 0.25, 0.50, 0.75, 1),
                      labels=c("0%", "25%", "50%", "75%", "100%")) +
@@ -138,7 +141,7 @@ p <- ggplot(data = fidelidade_partidaria, aes(x=reorder(Partidos, -Concordancia)
    theme(panel.background=element_blank(),
           legend.position="none")
 
-png("plot/fidelidade/fidelidade_partidaria_centrao_3.png", width = 800, height = 600)
+png("plot/fidelidade/fidelidade_partidaria_centrao_4.png", width = 900, height = 500)
 p
 dev.off()
 ```
@@ -196,7 +199,7 @@ p <- ggplot(data = mca_obs_df,
         axis.text = element_blank(), 
         axis.line = element_blank())
 
-png("plot/fidelidade/mapa_centrao_1.png", width = 800, height = 600)
+png("plot/fidelidade/mapa_centrao_1.png", width = 960, height = 960)
 p
 dev.off()
 

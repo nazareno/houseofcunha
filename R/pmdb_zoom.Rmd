@@ -27,7 +27,9 @@ votos$ano <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%Y'))
 votos$dia <- as.numeric(format(as.Date(votos$data, format = "%d/%m/%Y"),'%j'))
 
 rompimento_com_governo = 216 # Dia 04/08 
-votos_antes_rompimento <- filter(votos, dia >= rompimento_com_governo)
+junho = 156 # Dia 04/06
+votos_antes_junho <- filter(votos, dia <= junho)
+votos_antes_rompimento <- filter(votos, dia <= rompimento_com_governo)
 votos_2015 <- filter(votos, ano == 2015)
 
 cria_mca <- function (votos){
@@ -63,15 +65,21 @@ cria_mca <- function (votos){
 
 #y <- filter(votos, id_dep == 178830)
 
+mca1_antes_junho <- cria_mca(votos_antes_junho)
 mca1_antes_rompimento <- cria_mca(votos_antes_rompimento)
-mca2_2015 <- cria_mca(votos_2015)
-mca3_completo <- cria_mca(votos)
+mca1_2015 <- cria_mca(votos_2015)
+mca1_completo <- cria_mca(votos)
+
+write.csv(mca1_antes_junho, file = "mca_antes_junho.csv", sep = ",", row.names = FALSE)
+write.csv(mca1_antes_rompimento, file = "mca_antes_agosto.csv", sep = ",", row.names = FALSE)
+write.csv(mca1_2015, file = "mca_2015.csv", sep = ",", row.names = FALSE)
+write.csv(mca1_completo, file = "mca_2016.csv", sep = ",", row.names = FALSE)
 ```
 
 Plot da evolução do mapa ao longo de 2015~2016 com destaque para o PT e PMDB
 
 ```{r}
-p <- ggplot(data = mca1_antes_rompimento, 
+p <- ggplot(data = mca1_completo, 
        aes(x = Dim.1, y = Dim.2, colour = destaque_partido)) +
   geom_hline(yintercept = 0, colour = "gray70") +
   geom_vline(xintercept = 0, colour = "gray70") +
@@ -88,7 +96,7 @@ p <- ggplot(data = mca1_antes_rompimento,
         axis.text = element_blank(), 
         axis.line = element_blank())
 
-png("plot/zoom_pmdb/antes_rompimento_2015.png", 
+png("plot/zoom_pmdb/completo_2016.png", 
     width = 800, height = 600)
 p
 dev.off()
