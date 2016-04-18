@@ -62,6 +62,12 @@ orientacao_prb <- orientacao_partidos %>%
 
 orientacao_psd <- orientacao_partidos %>%
   filter(partido == "psd", orientacao_partido == "sim" | orientacao_partido == "não")
+
+orientacao_pmdb <- orientacao_partidos %>%
+  filter(partido == "pmdb", orientacao_partido == "sim" | orientacao_partido == "não")
+
+orientacao_psdb <- orientacao_partidos %>%
+  filter(partido == "psdb", orientacao_partido == "sim" | orientacao_partido == "não")
 ```
 
 Comparação da orientação do governo com a orientação dos outros partidos. 
@@ -72,22 +78,24 @@ ptn <- concordancia(orientacao_pt$pro_orientacao, orientacao_ptn$pro_orientacao)
 pp <- concordancia(orientacao_pt$pro_orientacao, orientacao_pp$pro_orientacao)
 prb <- concordancia(orientacao_pt$pro_orientacao, orientacao_prb$pro_orientacao)
 psd <- concordancia(orientacao_pt$pro_orientacao, orientacao_psd$pro_orientacao)
+pmdb <- concordancia(orientacao_pt$pro_orientacao, orientacao_pmdb$pro_orientacao)
+psdb <- concordancia(orientacao_pt$pro_orientacao, orientacao_psdb$pro_orientacao)
 
-concordancia_governo <- data.frame(Concordancia = c(pr, ptn, pp, prb, psd), Partidos = c("pr", "ptn", "pp", "prb", "psd"))
+concordancia_governo <- data.frame(Concordancia = c(pr, ptn, pp, prb, psd, pmdb, psdb), Partidos = c("PR", "PTN", "PP", "PRB", "PSD", "PMDB", "PSDB"),
+                                   Destaque = c(FALSE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE))
 
-str(concordancia_governo)
-
-p <- ggplot(data = concordancia_governo, aes(x=reorder(Partidos, -Concordancia), y = Concordancia, fill = "#fec44f")) + 
+p <- ggplot(data = concordancia_governo, aes(x=reorder(Partidos, -Concordancia), y = Concordancia, fill = Destaque)) + 
   geom_bar(stat="identity") + 
+  scale_fill_manual(values = c("#fee6ce", "#fdae6b")) +
   labs(y='Concordância com o Governo', x='Partidos') +
-  scale_fill_manual(values = c("#fec44f")) +
   scale_y_continuous(limit = c(0, 0.8), 
                      breaks = c(0, 0.25, 0.50, 0.75),
                      labels=c("0%", "25%", "50%", "75%")) +
   theme_classic() +
-   theme(panel.background=element_blank())
+   theme(panel.background=element_blank(),
+         legend.position="none")
 
-png("plot/fidelidade/concordancia_governo_partidos_3.png", width = 900, height = 500)
+png("plot/fidelidade/concordancia_governo_partidos_4.png", width = 900, height = 500)
 p
 dev.off()
 ```
@@ -128,8 +136,7 @@ psdb <- concordancia(votos_psdb$orientacao_dep, votos_psdb$votos_dep)
 fidelidade_partidaria <- data.frame(Concordancia = c(pmdb, pt, psd, pr, pp, prb, psdb), Partidos = c("pmdb", "pt", "psd", "pr", "pp", "prb", "psdb"),
                                     Destaque = c(FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE))
 
-# f0f0f0
-# bdbdbd
+
 p <- ggplot(data = fidelidade_partidaria, aes(x=reorder(Partidos, -Concordancia), y = Concordancia, fill = Destaque)) + 
   geom_bar(stat="identity") + 
   scale_fill_manual(values = c("#fee6ce", "#fdae6b")) +
@@ -165,23 +172,13 @@ mca_obs_df <-  data.frame(mca$ind$coord,
 
 mca_obs_df$id_dep <- as.integer(as.character(mca_obs_df$id_dep))
 
-scale_colour_manual(values = c(alpha("grey70", .4),
-                                 alpha("darkred", 1),
-                                 alpha("#FF3300", 1)
-                                 ), 
-                      guide = guide_legend(title = "Partido", 
-                                           override.aes = list(alpha = 1, size = 4))) +
-
-  
 mca_obs_df$destaque_partido = factor(ifelse(mca_obs_df$partido %in% 
-                                               c("pr", "pt",  "pp", "psd", "ptn", "prb"), 
+                                               c("pr", "pt",  "pp", "psd", "ptn", "prb", "psdb"), 
                                              as.character(mca_obs_df$partido), 
                                              "outros"))  
 
 p <- ggplot(data = mca_obs_df, 
-       aes(x = Dim.1, y = Dim.2, label = partido, color = destaque_partido)) +
-  geom_hline(yintercept = 0, colour = "gray70") +
-  geom_vline(xintercept = 0, colour = "gray70") +
+       aes(x = Dim.1, y = Dim.2, label = toupper(partido), color = destaque_partido)) +
   geom_text(size = 5.) + 
   scale_colour_manual(values = c(alpha("grey70", .4),
                                  alpha("#2166ac", 1), # pp 
@@ -197,10 +194,161 @@ p <- ggplot(data = mca_obs_df,
   theme_classic() + 
   theme(axis.ticks = element_blank(), 
         axis.text = element_blank(), 
-        axis.line = element_blank())
+        axis.line = element_blank(),
+        legend.position="none")
 
-png("plot/fidelidade/mapa_centrao_1.png", width = 960, height = 960)
+png("plot/fidelidade/mapa_centrao_4.png", width = 960, height = 960)
 p
 dev.off()
 
+```
+
+Destaque dos partidos centrão no mapa (PR)
+
+```{r}
+mca_obs_df$destaque_partido1 = factor(ifelse(mca_obs_df$partido %in% 
+                                               c("pr", "pt", "psdb"), 
+                                             as.character(mca_obs_df$partido), 
+                                             "outros"))  
+
+p <- ggplot(data = mca_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = toupper(partido), color = destaque_partido1)) +
+  geom_text(size = 5.) + 
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("black", 1), # pr
+                                 alpha("#2c7fb8", 1),
+                                 alpha("darkred", 1) # pt
+                                 ),
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) +
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank(),
+        legend.position="none")
+
+png("plot/fidelidade/mapa_centrao_pr.png", width = 960, height = 960)
+p
+dev.off()
+```
+
+Destaque dos partidos centrão no mapa (PP) 
+
+```{r}
+mca_obs_df$destaque_partido2 = factor(ifelse(mca_obs_df$partido %in% 
+                                               c("pt",  "pp", "psdb"), 
+                                             as.character(mca_obs_df$partido), 
+                                             "outros"))  
+
+p <- ggplot(data = mca_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = toupper(partido), color = destaque_partido2)) +
+  geom_text(size = 5.) + 
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("black", 1), # pp 
+                                 alpha("#2c7fb8", 1),
+                                 alpha("darkred", 1) # pt
+                                 ),
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) +
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank(),
+        legend.position="none")
+
+png("plot/fidelidade/mapa_centrao_pp.png", width = 960, height = 960)
+p
+dev.off()
+```
+
+Destaque dos partidos centrão no mapa (PSD) 
+
+```{r}
+mca_obs_df$destaque_partido3 = factor(ifelse(mca_obs_df$partido %in% 
+                                               c("pt", "psd", "psdb"), 
+                                             as.character(mca_obs_df$partido), 
+                                             "outros"))  
+
+p <- ggplot(data = mca_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = toupper(partido), color = destaque_partido3)) +
+  geom_text(size = 5.) + 
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("black", 1), # psd
+                                                                  alpha("#2c7fb8", 1),
+                                 alpha("darkred", 1) # pt
+                                 ),
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) +
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank(),
+        legend.position="none")
+
+png("plot/fidelidade/mapa_centrao_psd.png", width = 960, height = 960)
+p
+dev.off()
+```
+
+Destaque dos partidos centrão no mapa (PTN) 
+
+```{r}
+mca_obs_df$destaque_partido4 = factor(ifelse(mca_obs_df$partido %in% 
+                                               c("pt", "ptn", "psdb"), 
+                                             as.character(mca_obs_df$partido), 
+                                             "outros"))  
+
+p <- ggplot(data = mca_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = toupper(nome), color = destaque_partido4)) +
+  geom_text(size = 5.) + 
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("#2c7fb8", 1),
+                                 alpha("darkred", 1), # pt                                 
+                                 alpha("black", 1) # ptn
+                                 ),
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) +
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank(),
+        legend.position="none")
+
+png("plot/fidelidade/mapa_centrao_ptn.png", width = 960, height = 960)
+p
+dev.off()
+```
+
+Destaque dos partidos centrão no mapa (PRB) 
+
+```{r}
+mca_obs_df$destaque_partido5 = factor(ifelse(mca_obs_df$partido %in% 
+                                               c("pt", "prb", "psdb"), 
+                                             as.character(mca_obs_df$partido), 
+                                             "outros"))  
+
+p <- ggplot(data = mca_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = toupper(partido), color = destaque_partido5)) +
+  geom_text(size = 5.) + 
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("black", 1), 
+                                 alpha("#2c7fb8", 1),
+                                 alpha("darkred", 1) # pt
+                                 ),
+                      guide = guide_legend(title = "Partido", 
+                                           override.aes = list(alpha = 1, size = 4))) +
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank(),
+        legend.position="none")
+
+png("plot/fidelidade/mapa_centrao_prb.png", width = 960, height = 960)
+p
+dev.off()
 ```
