@@ -9,7 +9,7 @@ function legenda() {
                   .domain(["outros","pmdb","psdb","psol","pt"])
                   .range(["#bdbdbd", "darkred", "#0066CC", "#E69F00", "#FF3300"]);
 
-    var legenda = svgWrapper.append("svg")
+    var legenda = d3.select("#grafico").append("svg")
         .attr("width", w + marginLegend.l + marginLegend.r)
         .attr("height", h + marginLegend.t + marginLegend.b);
 
