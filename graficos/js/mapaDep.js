@@ -5,22 +5,36 @@
 
 "use strict";
 
-var graficoVotacoesAfinidades =  function () {
+/**
+ * @param options - styling options
+ * @param divID - specify div where viz should be draw
+ */
+var graficoVotacoesAfinidades =  function (options, divID) {
     // setup and append svg before loading data
     // to avoid elements moving after loading
     this.margin = 75;
     this.widthPlot = 800 - this.margin;
     this.widthTop5 = 350;
     this.height = 650 - this.margin;
+    // array with featured parties that will be colored
+    this.coloredParties = options ? options.coloredParties :
+        ["pmdb", "psdb", "psol", "pt"];
+    this.coloredParties.push("outros");
+
+    this.colorsVector = options ? options.colorsVector
+        : ["rgba(139, 0, 0, 1)", "rgba(0,102,204,1)", "rgba(230,159,0,1)", "rgba(255,51,0,1)", "rgba(189,189,189, 1)"];
+
     //colors that will reflect parties
     this.color = d3.scale.ordinal()
-              .domain(["outros","pmdb","psdb","psol","pt"])
-              .range(["rgba(189,189,189, 1)", "rgba(139, 0, 0, 1)", "rgba(0,102,204,1)", "rgba(230,159,0,1)", "rgba(255,51,0,1)"]);
+                   .domain(this.coloredParties)
+                   .range(this.colorsVector);
 
     this.x = d3.scale.linear().range([0, this.widthPlot - this.margin]);
     this.y = d3.scale.linear().range([this.height - this.margin, 0]);
-    // get visualization div
-    this.svgWrapper = d3.select("#grafico");
+
+    // get or create visualization div
+    this.svgWrapper = divID ? d3.select("#" + divID) :
+        d3.select("body").append("div").attr("id", "grafico");
 
     // set up main graphic svg
     this.svg = this.svgWrapper.append("svg")
@@ -70,7 +84,7 @@ var graficoVotacoesAfinidades =  function () {
     }
 
     // draw legend
-    legenda();
+    legenda({ coloredParties: this.coloredParties, colorsVector: this.colorsVector });
 
     // set axes
     this.xAxis = d3.svg.axis()
@@ -80,38 +94,37 @@ var graficoVotacoesAfinidades =  function () {
                   .scale(this.y)
                   .ticks(0)
                   .orient("left");
-
-    // array with featured parties that will be colored
-    this.coloredParties = ["pmdb", "psdb", "psol", "pt"];
 }
 
 /**
-  * callback function after data is loaded
+  * @param data - datasource (MCA)
   * draws visualization
   */
 graficoVotacoesAfinidades.prototype.draw = function (data) {
-  // get data domain using d3.extent() function
-  this.x.domain( d3.extent(data, function (d) {
-    return d["Dim.1"];
-  }) );
-  this.y.domain( d3.extent(data, function (d) {
-    return d["Dim.2"];
-  }) );
+    // get data domain using d3.extent() function
+    this.x.domain( d3.extent(data, function (d) {
+        return d["Dim.1"];
+    }) );
+    this.y.domain( d3.extent(data, function (d) {
+        return d["Dim.2"];
+    }) );
 
-  // draw axes and axis labels
-  // x axis
-  this.svg.append("g")
+    // draw axes and axis labels
+    // x axis
+    this.svg.append("g")
      .attr("class", "x axis")
      .attr("transform", "translate(0," + (this.height - this.margin)/2 + ")")
      .call(this.xAxis);
-  // y axis
-  this.svg.append("g")
+    // y axis
+    this.svg.append("g")
      .attr("class", "y axis")
      .attr("transform", "translate(" + (this.widthPlot - this.margin)/2 + ",0)")
      .call(this.yAxis);
-  var that = this;
-  // style the circles, set their locations based on data
-  var circles = this.svg.selectAll("circle")
+
+    // save this because of different contexts
+    var that = this;
+    // style the circles, set their locations based on data
+    var circles = this.svg.selectAll("circle")
       .data(data)
       .enter()
       .append("circle")
@@ -131,34 +144,34 @@ graficoVotacoesAfinidades.prototype.draw = function (data) {
         }
       });
 
-  var nested = d3.nest()
+    var nested = d3.nest()
                  .key(function (d) {
                     return d["id_dep"];
                  })
                  .entries(data);
 
-  // what to do when we mouse over a bubble
-  var mouseOnEvent = function() {
-    var circle = d3.select(this);
-    // transition to increase size/opacity of bubble
-    circle.transition()
-          .duration(800).style("opacity", 0.6)
-          .attr("r", 12).ease("elastic");
-    // function to move mouseover item to front of SVG stage, in case
-    // another bubble overlaps it
-    d3.selection.prototype.moveToFront = function() {
-      return this.each(function() {
-        this.parentNode.appendChild(this);
-      });
+    // what to do when we mouse over a bubble
+    var mouseOnEvent = function() {
+        var circle = d3.select(this);
+        // transition to increase size/opacity of bubble
+        circle.transition()
+              .duration(800).style("opacity", 0.6)
+              .attr("r", 12).ease("elastic");
+        // function to move mouseover item to front of SVG stage, in case
+        // another bubble overlaps it
+        d3.selection.prototype.moveToFront = function() {
+            return this.each(function() {
+                this.parentNode.appendChild(this);
+            });
+        };
+        // skip this functionality for IE9, which doesn"t like it
+        if (!$.browser.msie) {
+          circle.moveToFront();
+        }
     };
-    // skip this functionality for IE9, which doesn"t like it
-    if (!$.browser.msie) {
-      circle.moveToFront();
-    }
-  };
 
-  // what happens when we leave a bubble?
-  var mouseOffEvent = function() {
+    // what happens when we leave a bubble?
+    var mouseOffEvent = function() {
     var circle = d3.select(this);
     // go back to original size and opacity
     circle.transition()
@@ -172,9 +185,9 @@ graficoVotacoesAfinidades.prototype.draw = function (data) {
         return d3.interpolate(.5, 0);
       })
       .remove()
-  };
+    };
 
-  var onClick = function(d) {
+    var onClick = function(d) {
       var circle = d3.select(this);
       circle.transition()
             .duration(200)
@@ -213,13 +226,13 @@ graficoVotacoesAfinidades.prototype.draw = function (data) {
      that.infoDep.transition()
             .duration(800)
             .attr("style", "background-color:" + rgba);
-};
+    };
 
 
-  /**
+    /**
     * Update top5
     */
-  function updateTop5(topIds, notTopIds) {
+    function updateTop5(topIds, notTopIds) {
       for (var i=0; i < 5; i++) {
           nested.forEach(function (d) {
               // converted to int because of white spaces on id_dep field
@@ -231,16 +244,43 @@ graficoVotacoesAfinidades.prototype.draw = function (data) {
               }
           });
       }
-  };
+    };
 
-  // run the mouseon/out events
-  circles.on("mouseover", mouseOnEvent);
-  circles.on("mouseout", mouseOffEvent);
-  // click event
-  circles.on("click", onClick);
-  // tooltips (using jQuery plugin tipsy)
-  circles.append("title")
+    // run the mouseon/out events
+    circles.on("mouseover", mouseOnEvent);
+    circles.on("mouseout", mouseOffEvent);
+    // click event
+    circles.on("click", onClick);
+    // tooltips (using jQuery plugin tipsy)
+    circles.append("title")
          .text(function(d) { return d["nome"]; })
-  $(".circles").tipsy({ gravity: "s", });
+    $(".circles").tipsy({ gravity: "s", });
 
+};
+
+graficoVotacoesAfinidades.prototype.updateOptions = function (options) {
+    if (options) {
+        if(options.hasOwnProperty("coloredParties")) {
+            this.coloredParties = options.coloredParties;
+            this.coloredParties.push("outros");
+        }
+        if(options.hasOwnProperty("colorsVector")) this.colorsVector = options.colorsVector;
+        // update color scale
+        this.color = d3.scale.ordinal()
+                       .domain(this.coloredParties)
+                       .range(this.colorsVector);
+    }
+
+    // update circle colors
+    var that = this;
+    var circles = this.svg.selectAll("circle")
+      .style("fill", function(d) {
+        if(that.coloredParties.includes(d["partido"])) {
+            console.log(d["partido"] + " " + that.color(d["partido"]));
+          return that.color(d["partido"]);
+        }
+        else {
+          return that.color("outros");
+        }
+      });
 };

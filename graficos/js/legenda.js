@@ -1,4 +1,4 @@
-function legenda() {
+var legenda = function (options) {
     var marginLegend = {t:0, r:20, b:20, l:75 },
         w = 900 - marginLegend.l - marginLegend.r,
         h = 60 - marginLegend.t - marginLegend.b,
@@ -6,10 +6,11 @@ function legenda() {
         yLegend = d3.scale.linear().range([h - 60, 0]),
         //colors that will reflect parties
         color = d3.scale.ordinal()
-                  .domain(["outros","pmdb","psdb","psol","pt"])
-                  .range(["#bdbdbd", "darkred", "#0066CC", "#E69F00", "#FF3300"]);
+                  .domain(options.coloredParties)
+                  .range(options.colorsVector);
 
-    var legenda = d3.select("#grafico").append("svg")
+    var legenda = d3.select("body").append("svg")
+        .attr("id", "legenda")
         .attr("width", w + marginLegend.l + marginLegend.r)
         .attr("height", h + marginLegend.t + marginLegend.b);
 
@@ -17,12 +18,9 @@ function legenda() {
     var groups = legenda.append("g")
                         .attr("transform", "translate(" + marginLegend.l + "," + marginLegend.t + ")");
 
-    // array of the parties, used for the legend
-    var parties = ["outros", "pmdb", "psdb", "psol", "pt"]
-
     // add circles
     var legend = legenda.selectAll("circle")
-                        .data(parties)
+                        .data(options.coloredParties)
                         .enter()
                         .append("circle")
                         .attr({
@@ -34,7 +32,7 @@ function legenda() {
 
     // legend labels
     legenda.selectAll("text")
-           .data(parties)
+           .data(options.coloredParties)
            .enter().append("text")
            .attr({
              x: function(d, i) { return (65 + i*80); },

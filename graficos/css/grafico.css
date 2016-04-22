@@ -46,9 +46,8 @@
     flex-direction: column;
 }
 #legenda {
-    display: none;
     background-color: white;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
 }
 .axis path,
