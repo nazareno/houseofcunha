@@ -12,6 +12,8 @@ require(FactoMineR)
 library(ggplot2)
 library(dplyr)
 require(scales)
+#install.packages('tm')
+library(tm)
 
 source("R/camara-lib.R")
 ```
@@ -94,27 +96,57 @@ levels(mca_obs_df$clust) <- c("Governo", "Alinhados com PMDB", "Oposição de es
 
 
 ```{r}
+str(discursos.impeachment)
+
 discursos.impeachment$Fala <- paste0(discursos.impeachment$Fala, " ", discursos.impeachment$X)
 discursos.impeachment$X <- NULL
 
 discursos.sim <- filter(discursos.impeachment, Voto == "Sim")
 discursos.nao <- filter(discursos.impeachment, Voto == "Não")
 
-install.packages('tm')
-library(tm)
 
-review_text <- paste(discursos.sim$Fala, collapse=" ")
-review_source <- VectorSource(review_text)
-corpus <- Corpus(review_source)
+frequencia_palavra_discursos <- function (discursos){
+  review_text <- paste(discursos$Fala, collapse=" ")
+  review_source <- VectorSource(review_text)
+  corpus <- Corpus(review_source)
+  
+  corpus <- tm_map(corpus, content_transformer(tolower))
+  corpus <- tm_map(corpus, removePunctuation)
+  corpus <- tm_map(corpus, stripWhitespace)
+  
+  dtm <- DocumentTermMatrix(corpus)
+  dtm2 <- as.matrix(dtm)
+  frequency <- colSums(dtm2)
+  frequency <- sort(frequency, decreasing = TRUE)
+  
+  frequency <- as.data.frame(frequency)
+  frequency <- cbind(Palavra = rownames(frequency), frequency)
+  rownames(frequency) <- NULL
+  
+  frequency$top <- 1:nrow(frequency)
+  
+  frequency
+}
 
-corpus <- tm_map(corpus, content_transformer(tolower))
-corpus <- tm_map(corpus, removePunctuation)
-corpus <- tm_map(corpus, stripWhitespace)
+frequencia.discursos.sim <- frequencia_palavra_discursos(discursos.sim)
+frequencia.discursos.nao <- frequencia_palavra_discursos(discursos.nao)
 
-dtm <- DocumentTermMatrix(corpus)
-dtm2 <- as.matrix(dtm)
-frequency <- colSums(dtm2)
-frequency <- sort(frequency, decreasing = TRUE)
+colnames(frequencia.discursos.nao) <- c("Palavra", "frequency", "top_nao")
 
-head(frequency)
+frequencia.discursos.sim.nao <- left_join(frequencia.discursos.sim, frequencia.discursos.nao, by = "Palavra")
+
+frequencia.discursos.sim.nao[1:100,]
+
+frequencia.discursos.sim.nao.sample <- frequencia.discursos.sim.nao[1:200,]
+
+
+ggplot(data = frequencia.discursos.sim.nao.sample, aes(x = top, y = top_nao)) + 
+   #geom_point(size = 9, alpha = 0.3) + 
+  geom_text(data = frequencia.discursos.sim.nao.sample, 
+                   aes(x = top, y = top_nao, label = Palavra),
+                   colour = "black", alpha = 0.5, size = 3, hjust = -.15) + 
+  theme_classic() + 
+  theme(axis.ticks = element_blank()) 
+
+
 ```
