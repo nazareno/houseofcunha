@@ -1,0 +1,120 @@
+---
+title: "pos-votacao-impeachment"
+output: html_document
+---
+
+Análise sobre a votação do impeachment na câmara do deputados.
+
+Carregando as bibliotecas necessárias
+
+```{r}
+require(FactoMineR)
+library(ggplot2)
+library(dplyr)
+require(scales)
+
+source("R/camara-lib.R")
+```
+
+Carregando os dados dos deputados e da votação do impeachment
+
+```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
+
+# Votação Impeachment
+discursos.impeachment <- read.csv("~/Projetos/houseofcunha/dados/discursos impeachment.csv", stringsAsFactors = FALSE)
+voto_impeachment <- select(discursos.impeachment, Deputado, Voto)
+```
+
+
+```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
+mca <- MCA(votos_por_deputado, 
+           ncp = 6, # Default is 5 
+           graph = FALSE,
+           quali.sup = c(1:4),
+           na.method = "Average") # NA or Average
+
+mca_obs_df <-  data.frame(mca$ind$coord, 
+                           nome = votos_por_deputado$nome,
+                           partido = votos_por_deputado$partido, 
+                           uf = votos_por_deputado$uf,
+                           id_dep = votos_por_deputado$id_dep)
+
+mca_obs_df$id_dep <- as.integer(as.character(mca_obs_df$id_dep))
+
+#Criação do clust
+hcpc <- clusterizar(mca,4)
+clusters <- obter_clusters(hcpc)
+
+mca_obs_df <- cbind(mca_obs_df, select(clusters,clust))
+mca_obs_df$clust <- as.factor(mca_obs_df$clust)
+
+# Destaque da votação do impeachment 
+mca_obs_df$impeachment <-  mca_obs_df$nome %in% voto_impeachment$Deputado
+
+voto_impeachment$nomes <- voto_impeachment$Deputado  %in%  mca_obs_df$nome
+
+voto_impeachment_false <- filter(voto_impeachment, nomes == FALSE)
+
+teste <- left_join(mca_obs_df, voto_impeachment, by = c("nome" = "Deputado"))
+
+x <- filter(mca_obs_df, impeachment == FALSE)
+# sum(mca_obs_df$impeachment)
+# y <- filter(mca_obs_df, impeachment == TRUE)
+
+match_deputados <- function(nome.deputados.novo, nome.deputados.original){
+  df <- data.frame()
+
+  for (nome in nome.deputados.novo){
+    novo_nome <- agrep(nome, nome.deputados.original, ignore.case=T, value=T, max.distance = 0.1, useBytes = FALSE)
+    df <- rbind(df, data.frame(nome, ifelse(length(novo_nome) == 0, "NA", novo_nome)))
+  }
+  
+  df
+}
+
+nome_deputados <- voto_impeachment_false$Deputado
+nome_original <- mca_obs_df$nome
+
+nome.deputados.novo <- nome_deputados
+nome.deputados.original <- nome_original
+
+p <- ggplot(data = teste, aes(x = Dim.1, y = Dim.2)) + 
+   geom_point(data = teste, size = 9, alpha = 0.3, aes(colour = factor(Voto))) + 
+  scale_colour_manual(values = c("red","blue", "green", "gray70", "black")) +
+  theme_classic() + 
+  theme(axis.ticks = element_blank()) 
+
+png("plot/pos_votacao/mapa_sim_nao_impeachment.png", width = 900, height = 500)
+p
+dev.off()
+
+levels(mca_obs_df$clust) <- c("Governo", "Alinhados com PMDB", "Oposição de esquerda", "Oposição")
+```
+
+
+```{r}
+discursos.impeachment$Fala <- paste0(discursos.impeachment$Fala, " ", discursos.impeachment$X)
+discursos.impeachment$X <- NULL
+
+discursos.sim <- filter(discursos.impeachment, Voto == "Sim")
+discursos.nao <- filter(discursos.impeachment, Voto == "Não")
+
+install.packages('tm')
+library(tm)
+
+review_text <- paste(discursos.sim$Fala, collapse=" ")
+review_source <- VectorSource(review_text)
+corpus <- Corpus(review_source)
+
+corpus <- tm_map(corpus, content_transformer(tolower))
+corpus <- tm_map(corpus, removePunctuation)
+corpus <- tm_map(corpus, stripWhitespace)
+
+dtm <- DocumentTermMatrix(corpus)
+dtm2 <- as.matrix(dtm)
+frequency <- colSums(dtm2)
+frequency <- sort(frequency, decreasing = TRUE)
+
+head(frequency)
+```
