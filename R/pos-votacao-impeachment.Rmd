@@ -21,9 +21,13 @@ source("R/camara-lib.R")
 Carregando os dados dos deputados e da votação do impeachment
 
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
+# Deputados votaçoes de 2015 ate abril de 2016
 votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
 
-# Votação Impeachment
+# Deputados votação impeachment
+deputados.votacao.impeachment <- read.csv("~/Projetos/houseofcunha/dados/deputados-votacao-impeachment.csv", sep=";")
+
+# Votação Impeachment Discursos
 discursos.impeachment <- read.csv("~/Projetos/houseofcunha/dados/discursos impeachment.csv", stringsAsFactors = FALSE)
 voto_impeachment <- select(discursos.impeachment, Deputado, Voto)
 ```
@@ -52,6 +56,22 @@ mca_obs_df <- cbind(mca_obs_df, select(clusters,clust))
 mca_obs_df$clust <- as.factor(mca_obs_df$clust)
 
 # Destaque da votação do impeachment 
+
+colnames(deputados.votacao.impeachment)
+
+deputados.votacao.impeachment2 <- deputados.votacao.impeachment[!duplicated(deputados.votacao.impeachment$id_dep), ]
+deputados.votacao.impeachment3 <- filter(deputados.votacao.impeachment2, id_dep != 74213)
+
+teste <- left_join(mca_obs_df, select(deputados.votacao.impeachment3, id_dep, IMPEACHMENT), by = "id_dep")
+
+summary(teste$IMPEACHMENT)
+
+X <- filter(teste, IMPEACHMENT == "SIM")
+xx <- filter(imp.votacao, voto == "SIM")
+
+
+
+
 mca_obs_df$impeachment <-  mca_obs_df$nome %in% voto_impeachment$Deputado
 
 voto_impeachment$nomes <- voto_impeachment$Deputado  %in%  mca_obs_df$nome
@@ -68,7 +88,7 @@ match_deputados <- function(nome.deputados.novo, nome.deputados.original){
   df <- data.frame()
 
   for (nome in nome.deputados.novo){
-    novo_nome <- agrep(nome, nome.deputados.original, ignore.case=T, value=T, max.distance = 0.1, useBytes = FALSE)
+    novo_nome <- agrep(nome, nome.deputados.original, ignore.case=T, value=T, max.distance = 0.2, useBytes = FALSE)
     df <- rbind(df, data.frame(nome, ifelse(length(novo_nome) == 0, "NA", novo_nome)))
   }
   
@@ -105,7 +125,7 @@ discursos.sim <- filter(discursos.impeachment, Voto == "Sim")
 discursos.nao <- filter(discursos.impeachment, Voto == "Não")
 
 
-frequencia_palavra_discursos <- function (discursos){
+frequencia_palavra_discursos <- function (discursos, n_grams = 1){
   review_text <- paste(discursos$Fala, collapse=" ")
   review_source <- VectorSource(review_text)
   corpus <- Corpus(review_source)
@@ -114,7 +134,9 @@ frequencia_palavra_discursos <- function (discursos){
   corpus <- tm_map(corpus, removePunctuation)
   corpus <- tm_map(corpus, stripWhitespace)
   
-  dtm <- DocumentTermMatrix(corpus)
+  ngramTokenizer <- function(x) unlist(lapply(ngrams(words(x), n_grams), paste, collapse = " "), use.names = FALSE)
+  
+  dtm <- DocumentTermMatrix(corpus, control = list(tokenize = ngramTokenizer))
   dtm2 <- as.matrix(dtm)
   frequency <- colSums(dtm2)
   frequency <- sort(frequency, decreasing = TRUE)
@@ -128,25 +150,36 @@ frequencia_palavra_discursos <- function (discursos){
   frequency
 }
 
-frequencia.discursos.sim <- frequencia_palavra_discursos(discursos.sim)
-frequencia.discursos.nao <- frequencia_palavra_discursos(discursos.nao)
+frequencia.discursos.sim <- frequencia_palavra_discursos(discursos.sim, 1)
+frequencia.discursos.nao <- frequencia_palavra_discursos(discursos.nao, 1)
+
+#frequencia.discursos.sim$zipf <- frequencia.discursos.sim$frequency * frequencia.discursos.sim$top
+#hist(frequencia.discursos.sim$zipf)
+
 
 colnames(frequencia.discursos.nao) <- c("Palavra", "frequency", "top_nao")
 
 frequencia.discursos.sim.nao <- left_join(frequencia.discursos.sim, frequencia.discursos.nao, by = "Palavra")
 
-frequencia.discursos.sim.nao[1:100,]
-
 frequencia.discursos.sim.nao.sample <- frequencia.discursos.sim.nao[1:200,]
 
+frequencia.discursos.sim.nao.sample <- frequencia.discursos.sim.nao.sample[complete.cases(frequencia.discursos.sim.nao.sample),]
 
-ggplot(data = frequencia.discursos.sim.nao.sample, aes(x = top, y = top_nao)) + 
+ggplot(data = frequencia.discursos.sim.nao.sample, aes(x = reorder(top, -top), y = reorder(top_nao, -top_nao))) + 
    #geom_point(size = 9, alpha = 0.3) + 
   geom_text(data = frequencia.discursos.sim.nao.sample, 
-                   aes(x = top, y = top_nao, label = Palavra),
-                   colour = "black", alpha = 0.5, size = 3, hjust = -.15) + 
+                   aes(label = Palavra),
+                   colour = "black", alpha = 0.5, size = 5, hjust = -.15) + 
+  labs(y='Discurso NAO', x='Discurso SIM') +
+  geom_abline(intercept = 0) +
   theme_classic() + 
-  theme(axis.ticks = element_blank()) 
+  theme(axis.ticks = element_blank(),
+        axis.text = element_blank()) 
+
+theme_classic() + 
+    theme(axis.ticks = element_blank(), 
+          axis.text = element_blank(), 
+          axis.line = element_blank())
 
 
 ```
