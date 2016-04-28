@@ -156,30 +156,59 @@ frequencia.discursos.nao <- frequencia_palavra_discursos(discursos.nao, 1)
 #frequencia.discursos.sim$zipf <- frequencia.discursos.sim$frequency * frequencia.discursos.sim$top
 #hist(frequencia.discursos.sim$zipf)
 
-
 colnames(frequencia.discursos.nao) <- c("Palavra", "frequency", "top_nao")
 
 frequencia.discursos.sim.nao <- left_join(frequencia.discursos.sim, frequencia.discursos.nao, by = "Palavra")
 
-frequencia.discursos.sim.nao.sample <- frequencia.discursos.sim.nao[1:200,]
+frequencia.discursos.nao.sim <- left_join(frequencia.discursos.nao, frequencia.discursos.sim, by = "Palavra")
+
+palavras_frequentes <- frequencia.discursos.sim.nao[1:200,]$Palavra
+palavras_frequentes <- append(palavras_frequentes, frequencia.discursos.nao.sim[1:200,]$Palavra)
+palavras_frequentes <- unique(palavras_frequentes)
+
+frequencia.discursos.total <- full_join(frequencia.discursos.sim.nao, frequencia.discursos.nao.sim, by = "Palavra", copy = TRUE)
+
+frequencia.discursos.total$destaque_top <- frequencia.discursos.total$Palavra %in% palavras_frequentes
+frequencia.discursos.total <- frequencia.discursos.total[,c(1,2,3,4,5,10)]
+
+frequencia.discursos.total.sample <- filter(frequencia.discursos.total, destaque_top == TRUE)
 
 frequencia.discursos.sim.nao.sample <- frequencia.discursos.sim.nao.sample[complete.cases(frequencia.discursos.sim.nao.sample),]
+
+
+create_destaque_columns <- function(df, n_palavras = 15) {
+  df$diff <- df$top - df$top_nao
+  top_sim <- head(df[with(df, order(diff)), ]$Palavra, n_palavras)
+  
+  df$diff <-  df$top_nao - df$top
+  top_nao <- head(df[with(df, order(diff)), ]$Palavra, n_palavras)
+  
+  palavras_destaque <- append(top_sim, top_nao)
+  df$destaque <- df$Palavra %in% palavras_destaque
+  
+  df
+}
+
+
+frequencia.discursos.sim.nao.sample2 <- create_destaque_columns(frequencia.discursos.sim.nao.sample, 15)
+
+
 
 ggplot(data = frequencia.discursos.sim.nao.sample, aes(x = reorder(top, -top), y = reorder(top_nao, -top_nao))) + 
    #geom_point(size = 9, alpha = 0.3) + 
   geom_text(data = frequencia.discursos.sim.nao.sample, 
-                   aes(label = Palavra),
+                   aes(label = toupper(Palavra)),
+                   colour = alpha("grey70", .4), alpha = 0.5, size = 5, hjust = -.15) + 
+  geom_text(data = filter(frequencia.discursos.sim.nao.sample2, destaque == TRUE), 
+                   aes(label =  toupper(Palavra)),
                    colour = "black", alpha = 0.5, size = 5, hjust = -.15) + 
-  labs(y='Discurso NAO', x='Discurso SIM') +
-  geom_abline(intercept = 0) +
-  theme_classic() + 
-  theme(axis.ticks = element_blank(),
-        axis.text = element_blank()) 
-
-theme_classic() + 
-    theme(axis.ticks = element_blank(), 
-          axis.text = element_blank(), 
-          axis.line = element_blank())
+  scale_x_discrete('Discurso SIM', breaks = c(max(frequencia.discursos.sim.nao.sample$top),  median(frequencia.discursos.sim.nao.sample$top), 1),
+                     labels=c("base", "meio", "topo")) +
+  scale_y_discrete('Discurso NAO', breaks = c(max(frequencia.discursos.sim.nao.sample$top_nao), median(frequencia.discursos.sim.nao.sample$top_nao), 1),
+                     labels=c("base", "meio", "topo")) +
+  geom_abline(intercept = 0, color = alpha("#762a83", 1)) +
+  theme_classic() 
 
 
+  
 ```
