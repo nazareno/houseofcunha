@@ -772,3 +772,72 @@ top_afinidade <- function(data_frame){
   
   join
 }
+
+
+##### FUNÇÕES PROCESSAMENTO DISCURSOS ####
+
+frequencia_palavra_discursos <- function (discursos, n_grams = 1){
+  review_text <- paste(discursos$Fala, collapse=" ")
+  review_source <- VectorSource(review_text)
+  corpus <- Corpus(review_source)
+  
+  corpus <- tm_map(corpus, content_transformer(tolower))
+  corpus <- tm_map(corpus, removePunctuation)
+  corpus <- tm_map(corpus, stripWhitespace)
+  
+  ngramTokenizer <- function(x) unlist(lapply(ngrams(words(x), n_grams), paste, collapse = " "), use.names = FALSE)
+  
+  dtm <- DocumentTermMatrix(corpus, control = list(tokenize = ngramTokenizer))
+  dtm2 <- as.matrix(dtm)
+  frequency <- colSums(dtm2)
+  frequency <- sort(frequency, decreasing = TRUE)
+  
+  frequency <- as.data.frame(frequency)
+  frequency <- cbind(Palavra = rownames(frequency), frequency)
+  rownames(frequency) <- NULL
+  
+  frequency$top <- 1:nrow(frequency)
+  
+  frequency
+}
+
+processamento_palavras_frequentes <- function(discursos.sim, discursos.nao, n_palavras = 100){
+  #frequencia.discursos.sim$zipf <- frequencia.discursos.sim$frequency * frequencia.discursos.sim$top
+  #hist(frequencia.discursos.sim$zipf)
+  
+  colnames(discursos.nao) <- c("Palavra", "frequency", "top_nao")
+  
+  discursos.sim.nao <- left_join(discursos.sim, discursos.nao, by = "Palavra")
+  
+  discursos.nao.sim <- left_join(discursos.nao, discursos.sim, by = "Palavra")
+  
+  palavras_frequentes <- discursos.sim.nao[1:100,]$Palavra
+  palavras_frequentes <- append(palavras_frequentes, discursos.nao.sim[1:100,]$Palavra)
+  palavras_frequentes <- unique(palavras_frequentes)
+  
+  discursos.total <- full_join(discursos.sim.nao, discursos.nao.sim, by = "Palavra")
+  
+  discursos.total$destaque_top <- discursos.total$Palavra %in% palavras_frequentes
+  discursos.total <- select(discursos.total, Palavra, frequency.x.x, top.x, frequency.x.y, top_nao.y, destaque_top)
+  
+  discursos.total <- filter(discursos.total, destaque_top == TRUE)
+  
+  discursos.total <- discursos.total[complete.cases(discursos.total),]
+  
+  colnames(discursos.total) <- c("Palavra", "frequency.sim", "top", "frequency.nao", "top_nao", "destaque_top")
+  
+  discursos.total
+}
+
+create_destaque_columns <- function(df, n_palavras = 15) {
+  df$diff <- df$top - df$top_nao
+  top_sim <- head(df[with(df, order(diff)), ]$Palavra, n_palavras)
+  
+  df$diff <-  df$top_nao - df$top
+  top_nao <- head(df[with(df, order(diff)), ]$Palavra, n_palavras)
+  
+  palavras_destaque <- append(top_sim, top_nao)
+  df$destaque <- df$Palavra %in% palavras_destaque
+  
+  df
+}
