@@ -47,3 +47,26 @@ names(votos)[names(votos)=="IMPEACHMENT"] <- "Impeachment"
 
 write.csv(votos,"deputados_votos_total.csv",row.names = FALSE, quote=FALSE)
 write.csv(votos_nomes,"deputados_votos_nomes_total.csv",row.names = FALSE, quote=FALSE)
+
+
+partidos_impeachment_nomes = read.csv("partidos_votos_nomes_impeachment.csv",stringsAsFactors=FALSE,sep = ',')
+partidos_impeachment = partidos_impeachment_nomes
+
+partidos_impeachment[ is.na( impeachment$Impeachment ), ]$Impeachment = -10
+partidos_impeachment[partidos_impeachment$Impeachment == "não votou",]$Impeachment = -10
+partidos_impeachment[partidos_impeachment$Impeachment == "liberado",]$Impeachment = -1
+partidos_impeachment[partidos_impeachment$Impeachment == "sim",]$Impeachment = 1
+partidos_impeachment[partidos_impeachment$Impeachment == "não",]$Impeachment = 0
+partidos_impeachment[partidos_impeachment$Impeachment == "sem orientação",]$Impeachment = -5
+
+partidos_votos = read.csv("partidos_votos.csv",stringsAsFactors=FALSE,sep = ',')
+partidos_votos_nomes = read.csv("partidos_votos_nomes.csv",stringsAsFactors=FALSE,sep = ',')
+
+votos_p = merge(partidos_votos,partidos_impeachment,by="nome",all = TRUE)
+votos_p[ is.na( votos_p)  ] = -10
+
+votos_nomes_p = merge(partidos_votos_nomes,partidos_impeachment_nomes,by="nome",all = TRUE)
+votos_nomes_p[ is.na( votos_nomes_p)  ] = "nao votou"
+
+write.csv(votos,"partidos_votos_total.csv",row.names = FALSE, quote=FALSE)
+write.csv(votos_nomes,"partidos_votos_nomes_total.csv",row.names = FALSE, quote=FALSE)
