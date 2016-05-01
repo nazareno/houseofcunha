@@ -1,5 +1,6 @@
 setwd("~/Projects/houseofcunha/votacoes_selecionadas")
 library(reshape)
+library(dplyr)
 votacoes = read.csv("votacoes_selecionadas.csv",stringsAsFactors=FALSE)
 
 votacoes_wide = votacoes[,c("id_dep","nome","voto","nome_votacao","partido","uf")]

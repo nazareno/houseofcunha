@@ -27,7 +27,7 @@ def parse(fileValue,fileName,fileJSON,indexCut):
                 print value
             continue
         dict_dept =  dict(zip( header[0:indexCut], deputado[0:indexCut]))
-        dict_dept["temas"] = [{"tema":voto[0].strip(),"value":voto[1],"value_name":voto[2]} for voto in zip( header[indexCut:], deputado[indexCut:], deputado2[indexCut:])]
+        dict_dept["temas"] = [{"tema":voto[0].strip().replace("."," "),"value":voto[1],"value_name":voto[2]} for voto in zip( header[indexCut:], deputado[indexCut:], deputado2[indexCut:])]
         # dict_dept["temas_nomes"] = [{"tema":voto[0],"value":voto[1]} for voto in zip( header[4:], deputado2[4:])]
         deputados.append(dict_dept)
 
@@ -35,5 +35,5 @@ def parse(fileValue,fileName,fileJSON,indexCut):
 
     deputados_json.close()
 
-parse("partidos_votos.csv","partidos_votos_nomes.csv","partidos_votos.json",1)
-parse("deputados_votos.csv","deputados_votos_nomes.csv","deputados_votos.json",4)
+#parse("partidos_votos.csv","partidos_votos_nomes.csv","partidos_votos.json",1)
+parse("deputados_votos_total.csv","deputados_votos_nomes_total.csv","deputados_votos_total.json",4)

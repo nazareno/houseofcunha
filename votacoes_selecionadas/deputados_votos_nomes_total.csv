@@ -1,0 +1,557 @@
+id_dep,nome,partido,uf,Cobrança.de.cursos.em.universidades.públicas,Coincidência.reeleição,Cota.para.mulheres.legislativo,Distritao,Financiamento.privado.para.partidos,Financiamento.privado.para.partidos.e.candidatos,Infaticídio.indígena,Maioridade.1,Maioridade.2,Pensão,Reeleição,Seguro.Desemprego,Tempo.Mandato,Terceirização,Terrorismo,Transgênico,Tributação.serviços.de.internet,Voto.Facultativo,Voto.impresso,Impeachment
+4930,Silvio Costa,psc,PE,sim,não,não,não,sim,sim,não,não,não,sim,sim,sim,não,sim,sim,sim,sim,não,sim,não
+4931,Izalci,psdb,DF,sim,não,não,não,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+62881,Danilo Forte,pmdb,CE,não votou,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,não,sim,não votou,não,sim,sim
+64960,Maria Helena,psb,RR,não,sim,sim,não,sim,sim,sim,não,não,não,sim,não,sim,não,não votou,não,não votou,não,sim,sim
+66828,Fausto Pinato,prb,SP,sim,não,não,não,sim,não,sim,sim,sim,sim,sim,não,não,sim,não,sim,não votou,não,sim,sim
+67138,Iracema Portella,pp,PI,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim
+67312,Júlia Marinho,psc,PA,sim,sim,sim,não votou,sim,não votou,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,sim,sim,sim
+69871,Bacelar,ptn,BA,sim,não,não,não,sim,não,sim,não,não,sim,sim,sim,não,não,sim,sim,sim,não,sim,não
+72912,Celso Pansera,pmdb,RJ,não votou,sim,sim,sim,sim,sim,não votou,não,não,sim,não,sim,não,sim,sim,não votou,não votou,sim,não votou,não
+73424,Simão Sessim,pp,RJ,sim,não votou,não votou,não votou,não votou,não votou,não votou,sim,sim,sim,não votou,sim,não votou,sim,não votou,sim,não votou,não votou,não votou,sim
+73433,Arlindo Chinaglia,pt,SP,não,não,sim,não,não,não,não votou,não,não,sim,sim,sim,sim,não,sim,não,não votou,não,sim,não
+73434,Arnaldo Faria de Sá,ptb,SP,sim,não,sim,sim,sim,sim,sim,sim,sim,não,sim,não,não,não,sim,sim,sim,sim,sim,sim
+73437,Beto Mansur,prb,SP,sim,não votou,não,não,sim,sim,sim,sim,sim,não votou,sim,sim,não votou,sim,sim,sim,sim,não votou,não votou,sim
+73441,Celso Russomanno,prb,SP,sim,não,sim,não,sim,não,não votou,sim,sim,sim,sim,sim,não,não votou,sim,sim,não votou,não,sim,sim
+73447,Edinho Araújo,pmdb,SP,não,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+73458,Alex Canziani,ptb,PR,sim,não,sim,não,sim,sim,não votou,não,não,sim,não,sim,não,sim,sim,sim,não votou,não votou,sim,sim
+73463,Osmar Serraglio,pmdb,PR,sim,sim,não votou,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,sim,sim,sim,sim,sim,não votou,não votou,sim
+73466,Rubens Bueno,pps,PR,sim,não,sim,não,não,não,sim,não,não,não,sim,não,não,sim,sim,sim,não,sim,sim,sim
+73481,Fernando Marroni,pt,RS,não votou,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não votou
+73482,Henrique Fontana,pt,RS,não votou,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+73483,Luis Carlos Heinze,pp,RS,sim,não,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,não,sim,sim
+73486,Pompeo de Mattos,pdt,RS,sim,não,sim,não,não,não,sim,não,não,não,sim,não,sim,não votou,sim,sim,não votou,não,sim,abstenção
+73531,Ivan Valente,psol,SP,não,não,sim,não,obstrução,não,não,não,obstrução,não,sim,não,sim,não,não,não,não,não,sim,não
+73535,Jorge Tadeu Mudalen,dem,SP,sim,não,abstenção,sim,sim,não,sim,sim,sim,não,sim,não,não,sim,sim,sim,sim,sim,sim,sim
+73553,Nelson Marquezelli,ptb,SP,sim,sim,não,sim,sim,sim,não votou,sim,sim,sim,sim,sim,não,sim,sim,sim,não,não,sim,sim
+73560,Silvio Torres,psdb,SP,sim,não votou,abstenção,não,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+73568,Celso Jacob,pmdb,RJ,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,não votou,sim,não votou
+73579,Alberto Fraga,dem,DF,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,não,sim,sim,sim,sim,não,sim,sim
+73584,Antonio Carlos Mendes Thame,psdb,SP,sim,não,sim,não,sim,sim,sim,não votou,não votou,não votou,sim,não,não,não votou,sim,não votou,sim,não,sim,não votou
+73586,Júlio Delgado,psb,MG,não,sim,sim,não,não,sim,sim,não,abstenção,não,sim,não votou,sim,sim,sim,não,sim,não,sim,sim
+73655,Augusto Carvalho,solidaried,DF,sim,sim,sim,sim,sim,não,não,não,não,não,sim,não,sim,sim,não,não,sim,sim,sim,sim
+73666,Jovair Arantes,ptb,GO,sim,sim,abstenção,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,não votou,não,sim,sim
+73674,Roberto Balestra,pp,GO,sim,não,sim,sim,sim,não votou,sim,sim,sim,não,sim,não votou,sim,sim,não,sim,sim,sim,sim,sim
+73692,Osmar Terra,pmdb,RS,não votou,sim,sim,não votou,não votou,não votou,sim,não,não,sim,não votou,sim,não votou,não,sim,não votou,sim,não,sim,sim
+73701,Benedita da Silva,pt,RJ,não,não,sim,não,não,não,não votou,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+73714,José Reinaldo,psb,MA,sim,sim,não,sim,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não,não,sim,sim
+73720,Cesar Souza,psd,SC,sim,não,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,não,sim,sim,sim,não votou,sim
+73768,Dilceu Sperafico,pp,PR,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+73772,Hermes Parcianello,pmdb,PR,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,não,não,sim,sim,sim,sim,sim
+73778,Luiz Carlos Hauly,psdb,PR,não votou,não,sim,não,sim,sim,não votou,sim,sim,não,sim,não,não,sim,sim,sim,não votou,não,sim,sim
+73781,Nelson Meurer,pp,PR,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,não,sim,sim
+73788,Ricardo Barros,pp,PR,sim,não,não votou,sim,sim,sim,não votou,não,não,sim,sim,sim,não,sim,não votou,não votou,não votou,não votou,não votou,sim
+73793,Edinho Bez,pmdb,SC,sim,não votou,não,sim,sim,abstenção,sim,sim,sim,abstenção,sim,sim,sim,sim,sim,sim,não,sim,sim,não votou
+73805,Roberto Freire,pps,SP,não votou,não,sim,não,não,não,sim,não,não,não votou,sim,não,não,sim,sim,sim,sim,não,abstenção,não votou
+73808,Sérgio Brito,psd,BA,sim,sim,não,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não
+73891,Darcísio Perondi,pmdb,RS,sim,não,sim,não,sim,sim,não,não,não,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim
+73926,Janete Capiberibe,psb,AP,não,sim,sim,não,não,não,não votou,não,não,não votou,sim,não votou,sim,não,não votou,não votou,não votou,não,sim,não
+73930,Wladimir Costa,solidaried,PA,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim,não votou,não votou,não votou,não votou,sim
+73931,Zé Geraldo,pt,PA,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,não votou,não,sim,não
+74010,Valdir Colatto,pmdb,SC,sim,não,sim,não votou,não votou,não votou,sim,sim,sim,sim,não votou,sim,sim,sim,não,sim,sim,não,sim,sim
+74017,Paulo Feijó,pr,RJ,sim,não,sim,não votou,não votou,não votou,sim,sim,sim,sim,não votou,não,sim,sim,não,sim,sim,não,sim,sim
+74040,Benjamin Maranhão,solidaried,PB,sim,não votou,abstenção,não,sim,sim,sim,sim,sim,não,sim,não,não votou,sim,sim,sim,sim,não votou,sim,sim
+74041,Luiz Couto,pt,PB,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,não,não,sim,não,sim,não
+74043,Wellington Roberto,pr,PB,sim,sim,sim,não,sim,sim,sim,sim,não votou,sim,sim,sim,sim,sim,sim,não votou,não votou,não,sim,não
+74048,Raul Jungmann,pps,PE,não votou,não,não votou,não votou,não,não votou,sim,não,não,não,não,não,não,sim,sim,não,não votou,não,não votou,não votou
+74050,Maurício Quintella Lessa,pr,AL,não votou,sim,abstenção,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não votou,não,sim,sim
+74057,Alice Portugal,pcdob,BA,não,não,sim,sim,não,não,não votou,não,não votou,não votou,sim,sim,não,não,sim,não,não,não,sim,não
+74060,Daniel Almeida,pcdob,BA,não,não,sim,sim,não,não,não,não,não,sim,sim,sim,não,não,sim,não,não,não,sim,não
+74075,Elcione Barbalho,pmdb,PA,sim,não votou,sim,sim,não,não,não votou,não,não,sim,sim,sim,não votou,sim,não votou,não votou,sim,não votou,não votou,não
+74079,José Priante,pmdb,PA,não votou,não,sim,sim,não votou,não votou,sim,não votou,não votou,sim,não votou,sim,sim,não votou,sim,não votou,não votou,não,não votou,sim
+74090,Átila Lins,psd,AM,não votou,sim,não,não votou,sim,não votou,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,não votou,sim,sim
+74095,Pauderney Avelino,dem,AM,não votou,não,abstenção,sim,sim,sim,não votou,sim,sim,não,sim,não,não,sim,não votou,sim,não votou,sim,sim,sim
+74103,Ariosto Holanda,pros,CE,sim,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não
+74140,José Carlos Araújo,psd,BA,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,não,sim,não votou,não,sim,não
+74156,Leonardo Monteiro,pt,MG,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,não votou,não,sim,não,sim,não
+74158,Mário Heringer,pdt,MG,sim,sim,sim,não votou,não votou,não votou,sim,não,não,não,não votou,não,sim,sim,sim,sim,não votou,não,sim,sim
+74161,Reginaldo Lopes,pt,MG,não,não,sim,não,não,não,não votou,não,não,sim,sim,sim,sim,não votou,sim,não votou,não votou,não,não,não
+74163,Carlos Manato,solidaried,ES,sim,sim,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+74171,Chico Alencar,psol,RJ,não,não,sim,não,obstrução,não,não,não,obstrução,não,sim,não,sim,não,não,não,não,não,sim,não
+74172,Deley,ptb,RJ,sim,não votou,sim,sim,sim,sim,sim,não,não votou,não,sim,não,não votou,não,sim,não,abstenção,não votou,sim,sim
+74173,Eduardo Cunha,pmdb,RJ,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,art. 17,sim
+74177,Marinha Raupp,pmdb,RO,não votou,sim,sim,não,sim,não,sim,não,não,sim,sim,não votou,sim,não,sim,não votou,não votou,não,sim,sim
+74210,Sarney Filho,pv,MA,não votou,sim,sim,não,sim,não,não,não,não,sim,não votou,sim,sim,não votou,sim,não,não votou,sim,não votou,sim
+74212,Aníbal Gomes,pmdb,CE,sim,não votou,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não votou,sim,não votou,não votou,não votou,sim,ausente
+74213,Antonio Balhmann,pros,CE,não votou,não votou,não,não,não,sim,não votou,sim,sim,sim,sim,sim,não votou,sim,não votou,não votou,não votou,não votou,sim,não votou
+74216,Raimundo Gomes de Matos,psdb,CE,sim,sim,abstenção,não,não votou,sim,sim,sim,sim,não,não votou,não,sim,sim,sim,sim,não votou,não,sim,sim
+74235,Marcus Vicente,pp,ES,sim,não votou,não,sim,sim,sim,sim,sim,sim,sim,sim,não,não votou,sim,não,sim,sim,não,sim,sim
+74253,Julio Lopes,pp,RJ,sim,não,abstenção,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,não,sim,sim
+74254,Leonardo Picciani,pmdb,RJ,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,não votou,sim,não votou,não
+74262,Carlos Sampaio,psdb,SP,não votou,não,sim,não,sim,sim,sim,sim,sim,não,sim,não,sim,não votou,não votou,sim,não votou,não,sim,sim
+74270,Gilberto Nascimento,psc,SP,sim,não votou,sim,sim,sim,sim,sim,sim,sim,não,sim,não,não votou,sim,não,sim,não votou,não votou,sim,sim
+74273,Jefferson Campos,psd,SP,sim,sim,abstenção,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não votou,sim,não votou,não,sim,sim
+74275,José Mentor,pt,SP,não votou,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,não votou,não,sim,não
+74277,Lobbe Neto,psdb,SP,sim,não,sim,não votou,não votou,não votou,sim,sim,sim,não,não votou,não,não,sim,sim,não votou,sim,sim,sim,não votou
+74283,Vicentinho,pt,SP,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+74291,Arnon Bezerra,ptb,CE,sim,não votou,não votou,sim,sim,sim,sim,sim,não,sim,não,sim,não votou,sim,não votou,sim,não votou,não votou,sim,não
+74299,Leônidas Cristino,pros,CE,sim,sim,não,não,sim,não,sim,não,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não
+74308,Vicente Arruda,pros,CE,sim,não votou,não votou,não votou,não votou,não votou,não,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim,não votou,sim,não votou,não votou,não
+74317,Júlio Cesar,psd,PI,sim,sim,abstenção,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+74319,Paes Landim,ptb,PI,sim,não,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,não,não votou,não,sim,não
+74351,Josué Bengtson,ptb,PA,sim,sim,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim
+74352,Nilson Pinto,psdb,PA,sim,não,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim
+74356,Silas Câmara,psd,AM,sim,sim,abstenção,não,sim,sim,sim,não votou,não votou,sim,sim,sim,sim,não votou,não,sim,sim,não,sim,sim
+74359,Nilton Capixaba,ptb,RO,sim,sim,sim,não votou,não votou,não votou,sim,sim,sim,sim,não votou,não,sim,sim,sim,não votou,sim,não,sim,sim
+74366,João Campos,psdb,GO,sim,não,abstenção,não,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim
+74371,Rubens Otoni,pt,GO,sim,não,sim,não,não,não,sim,não,não,sim,sim,sim,sim,não votou,sim,não,sim,não,sim,não
+74372,Sandes Júnior,pp,GO,não votou,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,não votou
+74374,Geraldo Resende,pmdb,MS,sim,sim,sim,não,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,sim,sim,não,não,sim,sim
+74376,Vander Loubet,pt,MS,não,sim,não votou,não,não,não,sim,não,não votou,sim,sim,sim,sim,não,sim,não votou,não votou,não,não votou,não
+74378,Assis do Couto,pt,PR,sim,sim,sim,não,não,não,abstenção,não,não,sim,sim,não votou,sim,não,sim,não,não,não,sim,não
+74383,Giacobo,pr,PR,não votou,sim,não votou,não,sim,sim,não votou,sim,sim,sim,não votou,sim,sim,sim,não votou,não votou,não votou,não,sim,sim
+74385,Takayama,psc,PR,não votou,não votou,não votou,não votou,não votou,não votou,sim,não votou,sim,não votou,não votou,não votou,não votou,não votou,sim,não votou,sim,não votou,não votou,sim
+74388,Jorge Boeira,pp,SC,não votou,não,não votou,não,não,não,não votou,sim,sim,não,sim,não,não,não,não votou,sim,não votou,sim,não votou,sim
+74395,José Otávio Germano,pp,RS,sim,não votou,sim,sim,não,não votou,sim,sim,sim,não,não votou,não,não votou,sim,não,sim,não votou,não votou,sim,sim
+74398,Maria do Rosário,pt,RS,não,não,sim,não,não,não,não votou,não,não,sim,não,sim,sim,não,sim,não,sim,não,sim,não
+74399,Onyx Lorenzoni,dem,RS,não votou,não,não,não votou,não votou,não votou,não votou,sim,sim,não votou,não votou,não,não,sim,não votou,sim,não votou,sim,sim,sim
+74400,Paulo Pimenta,pt,RS,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,não votou,não,sim,não
+74419,Gonzaga Patriota,psb,PE,não,não,sim,não,não,não,não votou,sim,sim,não,sim,não,sim,sim,sim,sim,não votou,não,sim,sim
+74428,Mendonça Filho,dem,PE,sim,não,não votou,sim,sim,sim,sim,sim,sim,não,não,não,não,não votou,não votou,sim,sim,sim,sim,sim
+74439,Wolney Queiroz,pdt,PE,não,sim,não votou,não,não,não,sim,não,não,não,sim,não,não,não,sim,não,não votou,não,sim,não
+74445,João Castelo,psdb,MA,sim,não,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,não,sim,sim
+74449,Pedro Fernandes,ptb,MA,não votou,não,não,não,sim,sim,sim,não,não,sim,sim,sim,não,não,não,sim,não,sim,sim,não
+74457,Moroni Torgan,dem,CE,sim,não,sim,sim,sim,não,sim,sim,sim,não,sim,não,não,não,não votou,sim,não,sim,sim,sim
+74459,Átila Lira,psb,PI,sim,sim,sim,não,sim,sim,sim,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,sim
+74460,Marcelo Castro,pmdb,PI,não votou,sim,não votou,não,não,não,sim,sim,abstenção,sim,sim,sim,sim,sim,sim,sim,não votou,não,não votou,não
+74467,Damião Feliciano,pdt,PB,não,não votou,sim,não,não,não,sim,não,não,não,sim,não,não votou,não,sim,não,sim,não votou,sim,não
+74474,Carlos Eduardo Cadoca,pcdob,PE,não,não,sim,sim,não,não,não,não,não,sim,sim,sim,não,sim,sim,não,não,sim,não votou,não votou
+74535,Benito Gama,ptb,BA,sim,não,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,não votou,sim,não,sim,sim
+74537,Claudio Cajado,dem,BA,não votou,não votou,não votou,sim,sim,sim,não votou,sim,sim,sim,sim,sim,não votou,não votou,sim,sim,não votou,sim,não votou,sim
+74553,José Carlos Aleluia,dem,BA,sim,não,não votou,não,sim,sim,não,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim
+74554,José Rocha,pr,BA,sim,não votou,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,não votou,não votou,sim,não
+74558,Givaldo Carimbão,pros,AL,não votou,não,não,não,sim,sim,não votou,não,não,sim,sim,sim,sim,sim,sim,sim,não votou,não votou,sim,não
+74570,Jutahy Junior,psdb,BA,sim,não,não,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,não,não votou,sim,não votou,sim,não,não,sim
+74574,Paulo Magalhães,psd,BA,sim,não,não,não,sim,não,sim,não,não,sim,sim,sim,sim,não votou,sim,sim,sim,não,sim,não
+74585,Lincoln Portela,pr,MG,abstenção,não votou,sim,não,sim,não,sim,sim,sim,sim,sim,não votou,não votou,não,sim,não,sim,não votou,sim,sim
+74650,Bonifácio de Andrada,psdb,MG,sim,não,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não,não,não votou,não,sim,sim,não,sim,sim
+74651,Carlos Melles,dem,MG,sim,não,sim,sim,sim,sim,sim,sim,sim,não votou,não,sim,não,sim,sim,sim,não votou,sim,sim,sim
+74655,Eduardo Barbosa,psdb,MG,sim,sim,sim,não,sim,sim,sim,não,não,não,sim,não,sim,sim,não,sim,sim,não,sim,sim
+74665,Jaime Martins,psd,MG,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,sim
+74688,Luiz Sérgio,pt,RJ,não votou,não,sim,não,não,não,não,não,não,não votou,sim,sim,sim,não,sim,sim,sim,não,não votou,não
+74693,Rodrigo Maia,dem,RJ,sim,não,abstenção,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não votou,sim,sim,sim,sim,sim
+74749,Mauro Lopes,pmdb,MG,sim,não votou,não,sim,sim,sim,sim,sim,não votou,sim,sim,sim,não votou,sim,sim,sim,sim,não votou,sim,sim
+74752,Odelmo Leão,pp,MG,sim,sim,não,sim,sim,não,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,não,sim,sim
+74762,Saraiva Felipe,pmdb,MG,sim,sim,sim,não votou,sim,não votou,sim,não,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+74765,Silas Brasileiro,pmdb,MG,sim,sim,não,não votou,não votou,não votou,sim,não votou,sim,não votou,não votou,não votou,sim,sim,sim,sim,sim,sim,sim,não votou
+74784,Luiza Erundina,psb,SP,não,não votou,não votou,não votou,não votou,não votou,não,não,não,não votou,não votou,não votou,não votou,não,não,não votou,não votou,não votou,não votou,não
+74787,Milton Monti,pr,SP,sim,sim,abstenção,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não,sim,sim
+74812,Pedro Chaves,pmdb,GO,não votou,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+74847,Jair Bolsonaro,pp,RJ,não,sim,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,não votou,não,sim,sim,não,sim,sim
+74848,Jandira Feghali,pcdob,RJ,não,não,sim,sim,não,não,não,não,não,sim,sim,sim,não,não,sim,não,não,não,sim,não
+74862,Miro Teixeira,pros,RJ,não votou,não,sim,sim,não,não,sim,não,não,não,sim,não,não,não,não,não,não,sim,sim,sim
+74862,Miro Teixeira,rede,RJ,não,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+76287,Marcelo Matos,pdt,RJ,não,sim,sim,não,não,não,sim,abstenção,sim,não,sim,não,sim,não,sim,não,não,não,sim,sim
+80920,Penna,pv,SP,não votou,não,sim,não,sim,não,não,sim,não,não votou,sim,não votou,sim,não votou,sim,não votou,não votou,sim,sim,não votou
+81232,Irajá Abreu,psd,TO,sim,não votou,sim,não votou,não votou,não votou,sim,sim,sim,sim,não votou,sim,não votou,sim,não votou,sim,não votou,não votou,sim,não
+92346,Eduardo Bolsonaro,psc,SP,não,sim,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,não votou,não,sim,sim,abstenção,sim,sim
+92699,Fernando Monteiro,pp,PE,sim,sim,não votou,sim,sim,sim,não,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não votou
+92776,Stefano Aguiar,psb,MG,sim,sim,abstenção,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não,não,não votou,não,sim,sim
+93083,Cacá Leão,pp,BA,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,abstenção
+93472,Cristiane Brasil,ptb,RJ,não votou,não votou,sim,sim,sim,sim,sim,sim,sim,não,sim,não,não votou,não votou,não votou,sim,não votou,não votou,não votou,sim
+94931,Lucio Vieira Lima,pmdb,BA,não votou,não votou,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,sim,sim,não votou,não votou,sim
+97707,Heráclito Fortes,psb,PI,sim,não votou,não votou,sim,sim,sim,sim,abstenção,sim,não votou,sim,não,sim,sim,sim,não,sim,não,não votou,sim
+99654,Erivelton Santana,psc,BA,não,sim,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,não,sim,sim
+101309,Davidson Magalhães,pcdob,BA,não,não,sim,sim,não,não,não,não,não,sim,sim,sim,não,não,sim,não,não,não,sim,não
+105112,Cabuçu Borges,pmdb,AP,sim,sim,não votou,sim,sim,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,sim
+112437,João Marcelo Souza,pmdb,MA,sim,não votou,não votou,sim,sim,sim,abstenção,não,não,sim,sim,sim,não votou,sim,sim,sim,sim,não votou,não votou,não
+113247,Valmir Prascidelli,pt,SP,sim,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,não votou,não,sim,não,não votou,não
+114941,Josi Nunes,pmdb,TO,sim,sim,sim,sim,sim,sim,sim,não,não,sim,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+118594,Marcelo Squassoni,prb,SP,sim,não,abstenção,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim
+122466,Ronaldo Martins,prb,CE,não,não,não,não,sim,não,sim,sim,sim,sim,sim,não,não,não,sim,sim,sim,não,sim,sim
+124411,Mauro Pereira,pmdb,RS,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,não,não,sim,sim
+129037,Gabriel Guimarães,pt,MG,sim,não,não votou,não,não,não,não,não,não,sim,sim,sim,sim,não votou,sim,não,não votou,não,não votou,não
+129618,Gorete Pereira,pr,CE,sim,sim,sim,não votou,não votou,não votou,sim,sim,sim,sim,não votou,sim,sim,sim,sim,sim,sim,não votou,sim,abstenção
+131943,Jarbas Vasconcelos,pmdb,PE,não,não,não,não,sim,sim,sim,não,não,não,sim,não,sim,sim,não votou,sim,sim,sim,sim,sim
+131966,José Fogaça,pmdb,RS,sim,não,não votou,não,não,não,sim,não,não,não,sim,não,não,sim,sim,não,sim,não,sim,sim
+132056,Paulo Maluf,pp,SP,não votou,não votou,não votou,sim,sim,não votou,sim,sim,sim,sim,não votou,sim,sim,sim,não votou,sim,não votou,não,não votou,sim
+132504,Enio Verri,pt,PR,sim,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+133373,Marco Maia,pt,RS,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+133374,Ademir Camilo,pros,MG,sim,sim,não,sim,não,não,sim,sim,sim,não votou,sim,não,sim,não,sim,sim,sim,não,sim,não votou
+133439,André Figueiredo,pdt,CE,não votou,não votou,sim,não,não,não,sim,não,não,não,sim,não,não votou,sim,sim,não votou,não votou,não votou,sim,não votou
+134812,Edmilson Rodrigues,psol,PA,não,não,sim,não,obstrução,não,não,não,obstrução,não,sim,não,sim,não,não,não,não,não,sim,não
+136811,Afonso Hamm,pp,RS,sim,sim,não,não,não,não,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,não,sim,sim
+137070,Vicentinho Júnior,psb,TO,não,sim,não,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,não,sim,não
+137853,Wadson Ribeiro,pcdob,MG,não,não,sim,sim,não,não,não,não,não,sim,sim,sim,não,não,sim,não,não,não,sim,não votou
+141335,Beto Faro,pt,PA,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+141372,Aelton Freitas,pr,MG,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não
+141383,Antonio Bulhões,prb,SP,sim,não,não,não,sim,não,sim,sim,sim,sim,sim,sim,não,não,sim,sim,sim,não,sim,sim
+141384,Valadares Filho,psb,SE,não,não votou,sim,não,sim,não,sim,não,sim,não,sim,não,não votou,não votou,sim,não,sim,não votou,sim,sim
+141385,Duarte Nogueira,psdb,SP,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+141389,Indio da Costa,psd,RJ,não votou,não,abstenção,não,sim,sim,sim,sim,sim,não votou,sim,sim,não,não votou,sim,sim,sim,sim,sim,sim
+141394,Bruno Araújo,psdb,PE,sim,não,abstenção,sim,sim,sim,sim,sim,sim,não votou,sim,não,sim,não votou,sim,sim,sim,não,sim,sim
+141398,Carlos Zarattini,pt,SP,sim,não,não votou,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,não votou,não
+141401,Carlos Bezerra,pmdb,MT,sim,sim,sim,não,sim,sim,não votou,não,não,sim,sim,sim,sim,não votou,sim,sim,sim,não,sim,sim
+141405,Celso Maldaner,pmdb,SC,sim,sim,sim,não,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim
+141408,Cleber Verde,prb,MA,sim,não votou,sim,não,sim,não,não votou,sim,sim,sim,sim,sim,não votou,sim,sim,sim,não votou,não votou,sim,sim
+141411,Dagoberto,pdt,MS,sim,sim,sim,não,não,não,sim,não,não,não,sim,não,sim,sim,sim,sim,não,não,sim,não
+141413,Décio Lima,pt,SC,não,não,sim,não,não,não,não,não,não,não votou,sim,sim,sim,não,não votou,não,sim,não votou,sim,não
+141417,Edio Lopes,pmdb,RR,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não,sim,não
+141421,Eduardo da Fonte,pp,PE,não votou,não,sim,não votou,não votou,não votou,sim,sim,sim,sim,não votou,sim,não votou,sim,não votou,não votou,não votou,não votou,não votou,sim
+141422,Efraim Filho,dem,PB,sim,sim,sim,sim,sim,sim,não votou,sim,sim,não,não,não,não,sim,não votou,sim,sim,sim,sim,sim
+141427,Fábio Ramalho,pv,MG,sim,sim,não votou,sim,sim,sim,não,não,não,não votou,sim,sim,sim,sim,sim,não,sim,não,sim,sim
+141428,Fábio Faria,psd,RN,sim,sim,sim,não,sim,sim,abstenção,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+141429,Felipe Maia,dem,RN,sim,sim,abstenção,sim,sim,sim,sim,sim,sim,não,sim,não,não,sim,não votou,sim,sim,sim,sim,sim
+141430,Felipe Bornier,psd,RJ,não votou,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,não votou,não,sim,sim,sim,sim,sim
+141431,Fernando Coelho Filho,psb,PE,sim,sim,não,não,sim,sim,sim,não,não,sim,sim,não,sim,sim,sim,não,sim,não,sim,sim
+141434,Flaviano Melo,pmdb,AC,não votou,não,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não votou,sim,não votou,não,não votou,sim
+141439,Chico D Angelo,pt,RJ,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+141440,Chico Lopes,pcdob,CE,não,não,sim,sim,não,não,não,não,não,sim,sim,sim,não,não,sim,não,não,não,sim,não
+141441,George Hilton,pros,MG,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não
+141445,Pepe Vargas,pt,RS,não,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não
+141450,Hugo Leal,pros,RJ,sim,não votou,sim,sim,sim,sim,sim,não,não,sim,sim,sim,não votou,sim,sim,não votou,não votou,não votou,não votou,sim
+141454,Alfredo Kaefer,psdb,PR,sim,não,não,não,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,não votou,não,sim,sim
+141458,João Carlos Bacelar,pr,BA,sim,não votou,não,não,sim,sim,não votou,sim,não votou,sim,sim,sim,sim,não,não votou,sim,não votou,não,sim,não
+141464,José Airton Cirilo,pt,CE,sim,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,não votou,não,sim,não,sim,não
+141470,José Guimarães,pt,CE,sim,não,não votou,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,sim,não votou,não,sim,não
+141472,Ricardo Tripoli,psdb,SP,sim,não,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não votou,sim,sim,sim,sim,sim
+141478,Laerte Bessa,pr,DF,não,sim,não,não,sim,sim,não votou,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,não votou,sim,sim
+141480,Lázaro Botelho,pp,TO,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não votou,sim,sim
+141482,Leonardo Quintão,pmdb,MG,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não votou,não,sim,sim
+141483,Lindomar Garçon,pmdb,RO,não votou,sim,não votou,sim,sim,sim,não votou,abstenção,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não votou,sim
+141484,Lúcio Vale,pr,PA,não,não,não,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,não,sim,não
+141485,Luiz Carlos Busato,ptb,RS,sim,não votou,sim,sim,sim,sim,sim,não,não,sim,sim,sim,não votou,sim,sim,não votou,não votou,não votou,não votou,sim
+141487,Luiz Fernando Faria,pp,MG,sim,sim,sim,sim,sim,não votou,não votou,sim,sim,sim,não votou,sim,sim,sim,sim,sim,não votou,não,sim,sim
+141488,Paulo Teixeira,pt,SP,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,não votou,não,não votou,não,sim,não
+141490,Manoel Junior,pmdb,PB,não votou,não votou,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim
+141500,Marcos Montes,psd,MG,sim,não,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim
+141503,Jô Moraes,pcdob,MG,não,não,não votou,sim,não,não,não,não,não,sim,sim,sim,não,não,sim,não,não votou,não,não votou,não
+141507,Mauro Mariani,pmdb,SC,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim
+141513,Bilac Pinto,pr,MG,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+141515,Otavio Leite,psdb,RJ,sim,não votou,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,não,sim,não,sim,sim
+141516,Paulo Abi-Ackel,psdb,MG,sim,não,não,sim,sim,sim,não votou,sim,sim,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+141518,Paulo Pereira da Silva,solidaried,SP,sim,sim,abstenção,sim,não votou,sim,sim,sim,sim,não,não votou,não,sim,sim,não,sim,não votou,sim,sim,sim
+141527,Renato Molling,pp,RS,não votou,sim,sim,sim,sim,sim,não votou,sim,sim,não votou,sim,não,sim,sim,não,sim,sim,sim,sim,sim
+141529,Roberto Britto,pp,BA,sim,sim,não,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não
+141531,Rodrigo de Castro,psdb,MG,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+141535,Rogério Marinho,psdb,RN,sim,não,abstenção,sim,sim,sim,sim,não votou,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim
+141536,Rômulo Gouveia,psd,PB,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim
+141542,Sérgio Moraes,ptb,RS,sim,sim,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,não votou,não,sim,não votou,não,sim,sim
+141552,Valtenir Pereira,pros,MT,sim,não,sim,não,não,não,não,sim,sim,sim,sim,sim,não,sim,sim,não votou,sim,não,sim,não
+141553,Vanderlei Macris,psdb,SP,sim,não,abstenção,não,sim,sim,sim,sim,sim,não votou,sim,não,sim,não votou,sim,sim,sim,não,sim,sim
+141555,Vinicius Carvalho,prb,SP,não,não,não,não,sim,não,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,não,sim,sim
+141558,Waldir Maranhão,pp,MA,não votou,não votou,não votou,sim,sim,sim,não votou,não,sim,sim,sim,sim,não votou,não votou,sim,não votou,sim,não votou,não votou,não
+141560,Walter Ihoshi,psd,SP,não votou,não,não,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,abstenção,sim,sim,não,sim,não votou
+141562,Lelo Coimbra,pmdb,ES,não,sim,sim,não,sim,não,sim,não,não,sim,sim,não,sim,sim,sim,não votou,não,sim,sim,sim
+141563,William Woo,pv,SP,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim,não votou,não,não votou,sim,não votou,não,não votou,não votou,não votou,não votou
+143632,Domingos Neto,pros,CE,sim,não votou,abstenção,sim,sim,não,sim,não,não votou,sim,sim,sim,não votou,sim,sim,sim,não votou,não votou,sim,não
+144523,Daniel Vilela,pmdb,GO,não,sim,não,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim
+146788,Marcelo Aro,phs,MG,não votou,não,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,não votou,não votou,não,sim,sim
+146829,Fabiano Horta,pt,RJ,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim,não votou,sim,não votou,não,não votou,não,não votou,não votou,não votou,não votou
+148134,Professor Victório Galli,psc,MT,sim,sim,sim,sim,sim,não,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,sim,sim,sim
+150418,Márcio Marinho,prb,BA,sim,não,não votou,não,sim,não,sim,sim,sim,sim,sim,não,não,não,sim,sim,sim,não,sim,sim
+151208,Laercio Oliveira,solidaried,SE,sim,não votou,sim,sim,não votou,sim,sim,sim,não votou,não,sim,não,não votou,sim,sim,sim,sim,não votou,sim,sim
+151965,José Maia Filho,solidaried,PI,não votou,sim,sim,sim,sim,sim,não votou,não,não,não votou,sim,não votou,sim,não votou,não votou,não votou,não votou,não votou,sim,não votou
+151965,Mainha,solidaried,PI,não,não votou,não votou,não votou,não votou,não votou,sim,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim,não votou,não votou,não votou,não votou,não votou
+152605,Glauber Braga,psb,RJ,não votou,não,sim,não,não,não,não,não,não,não,sim,não,não,não,não,não,não,não,sim,não
+152605,Glauber Braga,psol,RJ,não,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não
+152610,Roberto Alves,prb,SP,não,não,sim,não,sim,não,sim,sim,sim,sim,sim,sim,não,não votou,sim,sim,sim,não,sim,sim
+159237,Assis Carvalho,pt,PI,sim,não,não votou,não,não,não,não,não votou,não votou,sim,sim,sim,sim,não,sim,não,sim,não,não votou,não
+159238,Marcus Pestana,psdb,MG,sim,não,abstenção,não,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,não,sim,sim
+160426,Rogério Rosso,psd,DF,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,abstenção,sim,sim,sim,sim,sim
+160508,Afonso Florence,pt,BA,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+160509,Jorginho Mello,pr,SC,sim,não votou,sim,não,não votou,sim,não votou,sim,sim,sim,não votou,sim,não votou,sim,sim,sim,não votou,não votou,sim,sim
+160510,Luis Tibé,ptdob,MG,não votou,não,sim,não,sim,não,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,não,sim,sim
+160511,Alessandro Molon,rede,RJ,não,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não
+160511,Alessandro Molon,pt,RJ,não votou,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+160512,Aureo,solidaried,RJ,sim,não votou,sim,não,sim,sim,sim,não,não,não,sim,não,não votou,sim,sim,não votou,sim,não votou,sim,sim
+160515,Ronaldo Benedet,pmdb,SC,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim
+160517,Paulo Foletto,psb,ES,sim,sim,sim,não,não,não,sim,não,sim,não,sim,não,sim,sim,não,sim,sim,não,sim,sim
+160518,Weliton Prado,pt,MG,não,abstenção,abstenção,abstenção,abstenção,abstenção,sim,sim,sim,não,abstenção,não,abstenção,não,sim,não,sim,abstenção,abstenção,sim
+160527,Aguinaldo Ribeiro,pp,PB,sim,sim,não,sim,sim,sim,não,não votou,não votou,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+160530,Antonio Imbassahy,psdb,BA,sim,não,não,não,sim,sim,sim,sim,sim,não,sim,não,não,sim,sim,sim,sim,sim,sim,sim
+160531,Jhonatan de Jesus,prb,RR,não,sim,não votou,não,sim,não,sim,sim,sim,não votou,sim,não,não,sim,sim,sim,sim,não,não votou,sim
+160532,Eli Corrêa Filho,dem,SP,não votou,não votou,sim,não votou,sim,não votou,sim,sim,sim,não,sim,não,não,sim,sim,sim,não votou,sim,sim,sim
+160535,Marcon,pt,RS,não,não,sim,não,não,não,não,não,não,não votou,sim,não votou,sim,não,não,não,sim,não,sim,não
+160536,Marco Tebaldi,psdb,SC,sim,sim,sim,não,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não votou,sim,não votou,não,sim,sim
+160538,Bohn Gass,pt,RS,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,abstenção,não,sim,não
+160541,Arthur Lira,pp,AL,sim,não votou,não,sim,sim,sim,não votou,sim,sim,sim,sim,sim,não,sim,sim,sim,não,não votou,não votou,sim
+160543,Andre Moura,psc,SE,não votou,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não,sim,sim,não,não votou,não votou,não votou,sim,sim
+160545,Alexandre Leite,dem,SP,sim,sim,abstenção,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não,sim,não votou,sim,sim,sim
+160551,Anderson Ferreira,pr,PE,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,não votou,sim,sim
+160552,Danrlei de Deus Hinterholz,psd,RS,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,não,sim,sim
+160553,Antonio Brito,ptb,BA,abstenção,sim,abstenção,sim,sim,sim,sim,não,não,não,sim,abstenção,não,sim,sim,sim,não votou,não,sim,não
+160556,Padre João,pt,MG,não,não,sim,não,não,não,não,não,não,não votou,sim,não votou,sim,não,sim,não,sim,não,sim,não
+160558,Paulo Freire,pr,SP,sim,não,abstenção,não,sim,não,não votou,sim,sim,não,sim,não,sim,não votou,não votou,sim,sim,não,sim,sim
+160559,Alceu Moreira,pmdb,RS,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,não,não,sim,sim
+160561,Missionário José Olimpio,pp,SP,sim,sim,abstenção,sim,sim,não,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim
+160565,Mara Gabrilli,psdb,SP,sim,não votou,não votou,não,sim,abstenção,não votou,não,sim,não,sim,não,não votou,não,sim,sim,não votou,não votou,não votou,sim
+160566,Nelson Padovani,psdb,PR,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+160567,Nelson Marchezan Junior,psdb,RS,sim,não,não,não,sim,sim,sim,sim,sim,não,sim,não,não,sim,sim,sim,sim,não,sim,sim
+160569,Waldenor Pereira,pt,BA,não,não,sim,não,não,não,não votou,não,não,sim,sim,sim,sim,não,não votou,não,sim,não,sim,não
+160570,Jerônimo Goergen,pp,RS,sim,não votou,sim,não,sim,sim,sim,sim,sim,não,sim,não,não votou,sim,sim,sim,não,não votou,sim,sim
+160571,João Rodrigues,psd,SC,sim,não,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,não,sim,sim
+160572,Jorge Côrte Real,ptb,PE,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,não,sim,sim
+160573,João Arruda,pmdb,PR,não,não,não,sim,sim,não,não,não,não,não votou,sim,não,sim,não,sim,sim,não votou,sim,sim,sim
+160575,Erika Kokay,pt,DF,não,não,sim,não,não,não,não,não,não,não votou,sim,não votou,sim,não,sim,não,sim,não,sim,não
+160576,César Halum,prb,TO,sim,não votou,não,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim
+160578,Edmar Arruda,psc,PR,não votou,sim,não votou,sim,sim,não,sim,sim,sim,não,sim,sim,sim,não votou,não,não votou,sim,sim,não votou,não votou
+160582,Alberto Filho,pmdb,MA,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,não,sim,sim
+160588,Diego Andrade,psd,MG,sim,não votou,não votou,não,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,não votou,sim,sim
+160589,Bruna Furlan,psdb,SP,sim,não,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não,sim,sim,não votou,sim,não votou,não,sim,sim
+160591,Vinicius Gurgel,pr,AP,não votou,não,não,não,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,não votou,não votou,sim,não,não votou,abstenção
+160592,Zeca Dirceu,pt,PR,não,não,sim,não,não,não,não,não,não,sim,não,sim,sim,não,sim,não,não votou,não,sim,não
+160596,Heuler Cruvinel,psd,GO,sim,não,não,não votou,não votou,não votou,sim,sim,sim,sim,não votou,não,sim,sim,não,sim,não,não,sim,sim
+160598,Flávia Morais,pdt,GO,não votou,não votou,sim,não,não,não,sim,não,não,não,sim,não,não votou,sim,sim,sim,não votou,não votou,sim,sim
+160599,Dimas Fabiano,pp,MG,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim
+160600,Arthur Oliveira Maia,solidaried,BA,sim,não votou,abstenção,sim,sim,sim,sim,sim,sim,não,sim,não,não votou,sim,sim,não votou,não votou,não votou,sim,sim
+160601,Pr. Marco Feliciano,psc,SP,sim,sim,sim,sim,sim,não,sim,sim,sim,não votou,sim,não votou,não,não,não,sim,não votou,sim,sim,sim
+160602,Arnaldo Jordy,pps,PA,sim,não,sim,não,não,não,sim,não,não,não,sim,não,não,não,não votou,não,não votou,sim,sim,sim
+160604,Pedro Uczai,pt,SC,não,não,sim,não,não,não,não,não,não,não votou,sim,não votou,sim,não,sim,não,abstenção,não,sim,não
+160607,Jose Stédile,psb,RS,não,sim,sim,não,não,não,sim,não,não,não,sim,não,sim,não,não,não,não votou,não,sim,sim
+160610,Valmir Assunção,pt,BA,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+160611,Toninho Pinheiro,pp,MG,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+160612,Sergio Zveiter,psd,RJ,não votou,sim,sim,não votou,não votou,não votou,sim,não votou,não votou,sim,não votou,sim,sim,sim,não votou,não votou,não votou,não,sim,sim
+160613,Sibá Machado,pt,AC,sim,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,não votou,não,não votou,não,sim,não
+160617,Thiago Peixoto,psd,GO,sim,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+160619,José Nunes,psd,BA,sim,sim,sim,sim,não,não,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não
+160620,Washington Reis,pmdb,RJ,sim,não votou,sim,sim,não votou,sim,não votou,não,não,sim,não votou,sim,não votou,sim,sim,sim,não votou,não votou,sim,sim
+160621,Sandro Alex,pps,PR,sim,não,sim,não,não,não,sim,sim,sim,não,sim,não,não,sim,sim,sim,sim,sim,sim,sim
+160622,Vicente Candido,pt,SP,sim,não,sim,não,não,não,não votou,não,não,sim,sim,sim,sim,não,não votou,não,não votou,não,não votou,não
+160628,Luciana Santos,pcdob,PE,não,não,sim,sim,não,não,não,não,não,sim,sim,sim,não,não,sim,não,não votou,não,sim,não
+160630,Ságuas Moraes,pt,MT,não,não,sim,não,não,não,não,não,não,sim,sim,não votou,sim,não,sim,não votou,sim,não,sim,não
+160631,Walney Rocha,ptb,RJ,sim,sim,não,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não,sim,não,não,sim,não votou
+160632,Zé Silva,solidaried,MG,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+160633,Mandetta,dem,MS,sim,sim,sim,não,sim,não,sim,não,sim,não,sim,não,não,sim,sim,sim,sim,sim,sim,sim
+160636,Wilson Filho,ptb,PB,sim,sim,sim,sim,sim,não votou,não votou,sim,sim,sim,sim,sim,sim,sim,sim,não,não,sim,sim,sim
+160637,Ronaldo Fonseca,pros,DF,sim,não,não,não,não,não,sim,sim,sim,não,sim,não,não,sim,não votou,sim,sim,sim,sim,sim
+160639,Professora Dorinha Seabra Rezende,dem,TO,sim,sim,sim,não,sim,não,sim,não,não,não,sim,não,sim,não,sim,sim,não votou,sim,sim,sim
+160640,Eros Biondini,ptb,MG,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,não,sim,não,sim,sim,não votou,não,sim,sim
+160641,Professora Marcivania,pt,AP,não,não,sim,não,não,não,não,não,não,não votou,sim,não votou,sim,não,sim,não,sim,não,sim,não
+160642,Pastor Eurico,psb,PE,não votou,sim,sim,sim,não,sim,sim,sim,sim,não,não,não,sim,sim,sim,sim,sim,não,sim,sim
+160643,Dr. Jorge Silva,pros,ES,não,sim,não,não,não,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+160646,Fernando Francischini,solidaried,PR,não votou,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,sim,não votou,sim,não votou,não votou,não,sim,sim
+160649,Esperidião Amin,pp,SC,não,não,não,sim,não,não,sim,sim,sim,não,sim,não,sim,sim,não,sim,não votou,não,sim,sim
+160651,Rogério Peninha Mendonça,pmdb,SC,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,não,sim,sim
+160653,Roberto de Lucena,pv,SP,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+160654,Renzo Braz,pp,MG,sim,sim,não votou,sim,sim,sim,não votou,sim,sim,sim,sim,não,sim,não votou,sim,sim,não votou,não,não votou,sim
+160655,Ricardo Izar,psd,SP,sim,não,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,não votou,não,sim,sim
+160659,Keiko Ota,psb,SP,não votou,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,não,não votou,não,sim,sim
+160660,Marcelo Aguiar,dem,SP,sim,não,abstenção,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não,sim,sim,sim,sim,não votou
+160663,Leopoldo Meyer,psb,PR,sim,não votou,sim,não,não,não,sim,não,não,não,sim,não,sim,sim,sim,não,não votou,não,sim,sim
+160665,Augusto Coutinho,solidaried,PE,sim,não votou,não,não,sim,sim,sim,sim,sim,não,não,não,não votou,sim,sim,sim,não votou,não votou,sim,sim
+160666,Félix Mendonça Júnior,pdt,BA,sim,sim,sim,não,não,não,sim,não,não,não,sim,não,sim,sim,sim,sim,sim,não,sim,não
+160667,Guilherme Mussi,pp,SP,sim,não votou,sim,sim,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não,sim,sim
+160669,Genecias Noronha,solidaried,CE,sim,sim,não votou,sim,sim,sim,não votou,sim,não votou,não,sim,não,sim,sim,sim,não votou,sim,não,não votou,sim
+160672,Jean Wyllys,psol,RJ,não,não,sim,não,obstrução,não,não,não,obstrução,não,sim,não,sim,não,não,não,não,não,sim,não
+160673,Giovani Cherini,pdt,RS,sim,sim,sim,não,não votou,não,sim,não,não,não,sim,não,sim,sim,sim,sim,não,não,sim,sim
+160674,Hugo Motta,pmdb,PB,sim,sim,não votou,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,sim,sim,não votou,não,não votou,sim
+160676,Fernando Torres,psd,BA,sim,não votou,não,sim,sim,sim,sim,não,não,sim,sim,não votou,não votou,sim,sim,sim,sim,não votou,sim,não
+160677,Francisco Floriano,pr,RJ,não,sim,abstenção,não,sim,sim,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+160758,Domingos Sávio,psdb,MG,sim,não,abstenção,não,sim,sim,sim,sim,sim,não,sim,não votou,sim,sim,não,sim,não votou,não,sim,sim
+160976,Tiririca,pr,SP,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,não,sim,sim
+162332,Luiz Nishimori,pr,PR,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+163321,Ronaldo Nogueira,ptb,RS,sim,não votou,não,não,sim,sim,sim,sim,sim,não,sim,não,não,não,sim,não,sim,não,sim,sim
+163831,Fernando Jordão,pmdb,RJ,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim
+164359,Delegado Waldir,psdb,GO,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,não,sim,sim,sim,sim,sim,sim,sim
+164360,Carmen Zanotto,pps,SC,sim,não,sim,não,não,não,sim,não,não,não,sim,não,não,sim,sim,sim,sim,sim,sim,sim
+166401,Nilson Leitão,psdb,MT,sim,não votou,abstenção,não,sim,sim,sim,sim,sim,não votou,sim,não,sim,sim,não,sim,não votou,sim,sim,sim
+166402,Magda Mofatto,pr,GO,não votou,sim,não,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não,sim,sim
+167493,Weverton Rocha,pdt,MA,não votou,sim,sim,não,não,não,sim,não,não,não,sim,não,sim,sim,sim,não,não votou,não,sim,não
+167722,Marcos Rogério,pdt,RO,não,não,abstenção,abstenção,não,não,sim,sim,sim,não,sim,não,sim,não,não votou,sim,não votou,sim,sim,sim
+171617,Paulão,pt,AL,abstenção,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+171619,Margarida Salomão,pt,MG,abstenção,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+171623,Fabio Reis,pmdb,SE,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,não votou,sim,sim,sim
+177282,Subtenente Gonzaga,pdt,MG,não,sim,sim,não,não,não,sim,não,sim,não,sim,não,sim,não,sim,não votou,não,não,sim,sim
+178802,Luiz Carlos Ramos,psdc,RJ,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,não,sim,sim,sim,sim,sim,sim,sim
+178825,Leo de Brito,pt,AC,não,não,sim,não,não,não,não,não,não,sim,não,sim,sim,não,sim,não,não votou,não,sim,não
+178826,Major Olimpio,pdt,SP,sim,sim,abstenção,não,não,não,sim,sim,sim,não votou,sim,não,sim,sim,não,não,sim,não,sim,sim
+178827,Max Filho,psdb,ES,sim,não,sim,abstenção,não,não,sim,não,não,não,sim,não,abstenção,não votou,não,sim,não votou,sim,sim,sim
+178828,Evandro Gussi,pv,SP,sim,não,não votou,sim,sim,sim,não,não,não,não,sim,não,sim,sim,não votou,não,sim,não,sim,sim
+178829,Capitão Augusto,pr,SP,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+178830,Dr. Sinval Malheiros,pv,SP,sim,não votou,sim,não,sim,não,sim,não,sim,não,sim,não,não votou,não votou,não votou,não,sim,não votou,sim,sim
+178830,Dr. Sinval Malheiros,pv,SP,sim,não votou,sim,não,sim,não,sim,não,sim,não,sim,não,não votou,não votou,não votou,não,sim,não votou,sim,sim
+178831,André Abdon,prb,AP,sim,não,não,não,sim,não,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,não,sim,sim
+178832,Leandre,pv,PR,sim,sim,sim,não,não,não,sim,sim,sim,não,sim,não,sim,sim,sim,não,sim,sim,sim,sim
+178833,Alexandre Serfiotis,psd,RJ,não,não,não votou,não,sim,sim,sim,sim,sim,sim,sim,não,não,sim,não,não,sim,não,sim,sim
+178834,Bebeto,psb,BA,não votou,sim,sim,não,não,não,não,não,não,não,sim,não,sim,não,não,não,não votou,não,não votou,não
+178835,Afonso Motta,pdt,RS,sim,sim,sim,não,não,não,sim,não,não,não,sim,não,sim,sim,sim,sim,não,não,sim,não
+178836,Alan Rick,prb,AC,não,sim,sim,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+178837,Angelim,pt,AC,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,abstenção,não,sim,não
+178838,César Messias,psb,AC,sim,sim,não,não,não votou,não,sim,não,não,não,não votou,não,sim,não votou,não votou,não votou,não votou,não,sim,não
+178839,Jéssica Sales,pmdb,AC,sim,sim,não votou,não votou,não votou,não votou,sim,sim,sim,sim,não votou,sim,sim,não votou,não votou,sim,não votou,não,não votou,sim
+178840,Rocha,psdb,AC,sim,não,não votou,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,não,não votou,sim
+178841,Cícero Almeida,psd,AL,sim,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+178841,Cícero Almeida,prtb,AL,não votou,sim,sim,sim,sim,não,sim,sim,sim,não,sim,não,sim,não votou,sim,sim,sim,não,sim,sim
+178842,JHC,solidaried,AL,não votou,sim,sim,não,não,não,sim,não,sim,não,sim,não,não,não votou,sim,sim,sim,sim,sim,sim
+178842,JHC,psb,AL,não,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+178843,Marx Beltrão,pmdb,AL,sim,sim,não votou,sim,sim,sim,sim,sim,sim,não,não,sim,sim,sim,sim,sim,não votou,sim,sim,sim
+178844,Pedro Vilela,psdb,AL,sim,não,abstenção,não votou,não votou,não votou,sim,sim,sim,não,não votou,não,não,sim,sim,sim,não,sim,sim,sim
+178845,Ronaldo Lessa,pdt,AL,não,sim,sim,não,não votou,não votou,abstenção,não,não,não,não votou,não,sim,não votou,sim,não,não,sim,sim,não
+178846,Alfredo Nascimento,pr,AM,sim,não votou,não votou,não,sim,sim,sim,não votou,não votou,sim,sim,sim,não votou,sim,sim,sim,sim,não votou,não votou,sim
+178847,Arthur Virgílio Bisneto,psdb,AM,sim,não,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+178848,Conceição Sampaio,pp,AM,não,sim,sim,sim,sim,não,abstenção,não,não,não,sim,não,sim,sim,não,sim,sim,sim,sim,sim
+178849,Hissa Abrahão,pps,AM,sim,não,sim,não,não,não,não votou,não,não,não votou,sim,não,não,sim,sim,sim,sim,sim,sim,sim
+178850,Marcos Rotta,pmdb,AM,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,não votou,sim,sim,sim
+178851,Jozi  Araújo,ptb,AP,sim,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não
+178851,Jozi Rocha,ptb,AP,não votou,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,não,sim,não
+178852,Marcos Reategui,psc,AP,não,sim,abstenção,não,sim,não,não votou,não,sim,não,sim,não votou,sim,não,sim,não,não votou,sim,sim,sim
+178853,Caetano,pt,BA,não,não,sim,não,não,não,não votou,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+178854,Elmar Nascimento,dem,BA,sim,sim,não,sim,sim,sim,sim,sim,sim,não votou,sim,sim,não,sim,não,sim,sim,sim,sim,sim
+178855,Irmão Lazaro,psc,BA,não votou,sim,sim,não,não,sim,sim,não votou,sim,não,sim,não,não,sim,sim,sim,não votou,sim,sim,sim
+178856,João Gualberto,psdb,BA,não votou,sim,abstenção,sim,sim,sim,sim,sim,sim,não,não votou,não,sim,sim,sim,não votou,sim,não,sim,sim
+178857,Jorge Solla,pt,BA,não,sim,sim,não,não,não,não votou,não,não,sim,sim,sim,sim,não,sim,não,não votou,não,sim,não
+178858,Mário Negromonte Jr.,pp,BA,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,sim,não votou,não,sim,abstenção
+178859,Moema Gramacho,pt,BA,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,não votou,não
+178860,Paulo Azi,dem,BA,sim,não,abstenção,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,não,sim,sim,sim,sim,sim
+178861,Ronaldo Carletto,pp,BA,sim,sim,abstenção,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não
+178862,Tia Eron,prb,BA,sim,não,sim,não,sim,não,não votou,sim,sim,sim,sim,não,não,sim,sim,sim,sim,não,sim,sim
+178863,Uldurico Junior,ptc,BA,sim,sim,não votou,não,sim,não,sim,não,não,sim,sim,não,não,não,sim,não,sim,não,não votou,sim
+178864,Adail Carneiro,phs,CE,sim,não,não,sim,sim,sim,sim,não,não,sim,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+178865,Cabo Sabino,pr,CE,não,sim,não,não,sim,não,sim,sim,sim,sim,sim,sim,não,não,não votou,não votou,sim,sim,sim,sim
+178866,Luizianne Lins,pt,CE,não,não,sim,não,não,não,não votou,não,não,não votou,sim,não votou,sim,não,sim,não,sim,não,sim,não
+178867,Macedo,psl,CE,sim,sim,sim,sim,sim,não,não votou,não votou,não votou,sim,sim,sim,sim,não,sim,sim,sim,não,sim,não
+178868,Odorico Monteiro,pt,CE,sim,sim,sim,não,não,não,abstenção,não,não,sim,sim,sim,sim,não,não votou,não,sim,não,sim,não
+178869,Vitor Valim,pmdb,CE,sim,sim,sim,sim,sim,não,sim,sim,sim,não,sim,não,sim,não,sim,não votou,sim,sim,sim,sim
+178870,Roney Nemer,pmdb,DF,não,sim,sim,sim,sim,não,sim,sim,sim,não votou,não,sim,sim,sim,sim,sim,sim,sim,sim,sim
+178871,Evair de Melo,pv,ES,não,sim,sim,não,não,sim,sim,não,sim,sim,sim,não,sim,sim,não,sim,sim,sim,sim,sim
+178872,Givaldo Vieira,pt,ES,sim,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+178873,Helder Salomão,pt,ES,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,abstenção,não,sim,não
+178874,Sergio Vidigal,pdt,ES,sim,abstenção,sim,não,não,não,sim,não,não,não,sim,não,abstenção,sim,sim,não,não votou,abstenção,sim,sim
+178875,Alexandre Baldy,psdb,GO,sim,não,abstenção,não votou,não votou,não votou,não votou,sim,sim,não,não votou,não,sim,sim,sim,sim,não votou,sim,sim,sim
+178876,Célio Silveira,psdb,GO,sim,não,abstenção,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,não,não,sim,sim
+178877,Fábio Sousa,psdb,GO,sim,não,abstenção,sim,sim,sim,sim,sim,sim,não,não,não,não,sim,sim,não votou,não,sim,sim,sim
+178878,Giuseppe Vecci,psdb,GO,sim,não,sim,abstenção,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não votou,sim,não,não,sim,sim
+178879,Lucas Vergilio,solidaried,GO,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim
+178880,Marcos Abrão,pps,GO,sim,não,sim,não,não,não,sim,não,sim,não,sim,não,não,sim,sim,sim,não,sim,sim,sim
+178881,Aluisio Mendes,psdc,MA,sim,sim,não,não,sim,não,não,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,não,não,não
+178882,André Fufuca,pen,MA,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,não,sim,sim
+178883,Eliziane Gama,pps,MA,não votou,não,sim,não,não,não,sim,não,não,não,sim,não,não,não,sim,não,não,sim,sim,sim
+178883,Eliziane Gama,rede,MA,não,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+178884,Hildo Rocha,pmdb,MA,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,não,sim,sim,sim,não,sim,não,sim
+178885,Junior Marreca,pen,MA,sim,sim,não votou,sim,sim,sim,não,sim,sim,não,não votou,não votou,sim,sim,sim,não votou,não votou,sim,não votou,não
+178886,Juscelino Filho,prp,MA,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,não,sim
+178887,Rubens Pereira Júnior,pcdob,MA,não,não,não votou,sim,não,não,não,não,não,sim,sim,sim,não,não,sim,não,não,não,não votou,não
+178888,Victor Mendes,pv,MA,sim,não,sim,sim,sim,não,sim,não votou,não votou,sim,sim,sim,sim,sim,sim,não,não,não,sim,sim
+178889,Zé Carlos,pt,MA,não votou,não,sim,não,não,não,não,não,não,não votou,sim,não votou,sim,não,não,não,sim,não,sim,não
+178890,Adelmo Carneiro Leão,pt,MG,não,não votou,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,não votou,não
+178891,Caio Narcio,psdb,MG,sim,não,abstenção,não,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,não,não votou,sim
+178892,Dâmina Pereira,pmn,MG,sim,sim,não votou,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não,não votou,sim
+178893,Delegado Edson Moreira,ptn,MG,não,não,não,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim
+178894,Laudivio Carvalho,pmdb,MG,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim
+178895,Misael Varella,dem,MG,sim,sim,não,sim,sim,não,sim,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim
+178896,Newton Cardoso Jr,pmdb,MG,sim,sim,sim,sim,sim,sim,sim,não votou,não votou,sim,sim,sim,sim,sim,não,sim,sim,não,não,sim
+178897,Rodrigo Pacheco,pmdb,MG,sim,não votou,não,sim,sim,não,sim,não votou,não votou,sim,sim,sim,não votou,sim,sim,sim,sim,não votou,sim,sim
+178898,Tenente Lúcio,psb,MG,não,sim,sim,não,sim,sim,sim,não,não,não,sim,sim,sim,sim,não,não,sim,sim,sim,sim
+178900,Carlos Marun,pmdb,MS,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,não,sim,sim
+178901,Tereza Cristina,psb,MS,sim,sim,sim,não votou,sim,não votou,sim,não,sim,sim,sim,sim,sim,sim,não,sim,não,não,sim,sim
+178902,Zeca do Pt,pt,MS,não,sim,não votou,não,não,não,não,não votou,não votou,sim,sim,sim,sim,não,sim,não,sim,não,não votou,não
+178903,Adilton Sachetti,psb,MT,sim,sim,não,não,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,não,sim,sim,sim
+178904,Ezequiel Fonseca,pp,MT,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+178905,Fabio Garcia,psb,MT,sim,sim,não,não,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,não votou,sim,sim,sim
+178906,Beto Salame,pros,PA,não votou,sim,sim,não,não,não,sim,não,não,sim,sim,sim,sim,não,sim,sim,sim,não,sim,abstenção
+178907,Francisco Chapadinha,psd,PA,sim,não,sim,não votou,não votou,não votou,sim,sim,não votou,não votou,não votou,sim,sim,sim,sim,sim,sim,não,sim,sim
+178908,Delegado Éder Mauro,psd,PA,não,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim,sim,abstenção,sim,sim,sim,não,sim,sim
+178909,Hélio Leite,dem,PA,sim,não,não,não,sim,sim,sim,sim,sim,não,não,não,não,sim,sim,sim,sim,sim,não votou,sim
+178910,Joaquim Passarinho,psd,PA,não votou,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+178911,Simone Morgado,pmdb,PA,sim,sim,sim,não,não,não,sim,não,não,sim,sim,sim,sim,não votou,sim,sim,sim,não,sim,não
+178912,Pedro Cunha Lima,psdb,PB,sim,não,não,sim,sim,sim,sim,sim,sim,não,sim,não,não,sim,não,sim,não,não,sim,sim
+178913,Veneziano Vital do Rêgo,pmdb,PB,não,sim,sim,sim,sim,sim,não votou,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+178914,Adalberto Cavalcanti,ptb,PE,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,sim,não votou,sim,não votou,sim,sim,sim,não
+178915,Betinho Gomes,psdb,PE,sim,não,sim,não,sim,sim,abstenção,não,não,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim
+178916,Daniel Coelho,psdb,PE,sim,não,sim,sim,sim,abstenção,abstenção,sim,sim,não,sim,não,sim,sim,não,não,sim,sim,sim,sim
+178917,João Fernando Coutinho,psb,PE,não,sim,sim,não,sim,não,abstenção,não,não,sim,sim,não,sim,sim,não,não,sim,não,sim,sim
+178918,Kaio Maniçoba,phs,PE,sim,não,não,sim,sim,sim,sim,não,sim,não votou,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+178919,Marinaldo Rosendo,psb,PE,não,sim,sim,sim,não,não,sim,sim,sim,sim,sim,não,sim,sim,sim,não votou,não votou,não,sim,sim
+178920,Ricardo Teobaldo,ptb,PE,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,não votou,não,não votou,não
+178922,Tadeu Alencar,psb,PE,não,sim,sim,não,não,não,não,não,não,sim,sim,não,sim,não,não,não,não votou,não,sim,sim
+178923,Zeca Cavalcanti,ptb,PE,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,não,não votou,não
+178926,Rodrigo Martins,psb,PI,não,sim,sim,não,não,sim,sim,não votou,não votou,não,sim,não,sim,sim,sim,não,não,não,sim,sim
+178927,Aliel Machado,rede,PR,não,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não
+178927,Aliel Machado,pcdob,PR,não votou,não,sim,sim,não,não,não,não,não,sim,sim,não,não,não,sim,não,sim,não votou,sim,não
+178928,Christiane de Souza Yared,ptn,PR,não,não,sim,não,não,não,sim,não,não,não,sim,não,não,não,sim,sim,sim,não,sim,sim
+178929,Diego Garcia,phs,PR,não votou,não,não,sim,sim,não,sim,não,não,sim,sim,não,sim,não,sim,sim,sim,não,sim,sim
+178930,Evandro Roman,psd,PR,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+178931,Luciano Ducci,psb,PR,não,sim,sim,não,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,não votou,não,sim,sim
+178932,Marcelo Belinati,pp,PR,sim,não,não,sim,não,não,sim,sim,sim,não,sim,não,não,não,não,não,sim,sim,sim,sim
+178933,Sergio Souza,pmdb,PR,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,não votou,sim
+178934,Toninho Wandscheer,pt,PR,sim,sim,sim,não,não,não,sim,não,não votou,sim,sim,sim,sim,não,sim,não votou,não,não,não votou,sim
+178935,Rossoni,psdb,PR,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,não,sim,não votou
+178936,Alexandre Valle,prp,RJ,sim,não,sim,não,sim,sim,sim,não votou,não votou,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim
+178937,Altineu Côrtes,pr,RJ,sim,sim,não votou,não,não votou,sim,sim,sim,sim,sim,sim,não votou,sim,sim,não votou,sim,sim,não,sim,sim
+178938,Cabo Daciolo,s.part.,RJ,não,não,não votou,não votou,não,não votou,não votou,não,não,não,sim,não,não,não,não,não,não votou,sim,não votou,sim
+178939,Clarissa Garotinho,pr,RJ,sim,não,sim,não,não,não,sim,não,não,sim,sim,não,sim,não,não votou,não,sim,não,sim,ausente
+178940,Dr. João,pr,RJ,sim,não,abstenção,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,não,sim,sim
+178941,Ezequiel Teixeira,solidaried,RJ,sim,não,abstenção,abstenção,sim,sim,sim,sim,sim,não,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim
+178943,Marcos Soares,pr,RJ,sim,sim,não,não votou,não votou,não votou,sim,sim,sim,sim,sim,não,sim,não votou,não votou,abstenção,não votou,sim,sim,sim
+178944,Roberto Sales,prb,RJ,não,não,sim,não,sim,não,sim,sim,sim,sim,sim,não votou,sim,sim,sim,não votou,sim,não,sim,sim
+178945,Rosangela Gomes,prb,RJ,sim,não,sim,não,sim,não,sim,sim,sim,sim,sim,não,não,sim,sim,sim,sim,não,sim,sim
+178946,Soraya Santos,pmdb,RJ,não votou,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,sim,não votou,não votou,sim,sim
+178947,Sóstenes Cavalcante,psd,RJ,sim,não,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,não,não,sim,sim,sim,sim,sim
+178948,Beto Rosado,pp,RN,sim,sim,não,não,sim,sim,não votou,sim,sim,não votou,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+178949,Zenaide Maia,pr,RN,não,sim,sim,não,sim,sim,sim,não,não,sim,sim,sim,sim,abstenção,sim,não,sim,não,sim,não
+178950,Antônio Jácome,pmn,RN,não,sim,não votou,não,sim,não,sim,sim,sim,não,sim,não,não,não votou,sim,sim,sim,sim,sim,sim
+178951,Rafael Motta,pros,RN,sim,sim,sim,não,sim,não,sim,não,sim,sim,sim,não votou,sim,não votou,sim,sim,não,não votou,sim,sim
+178952,Walter Alves,pmdb,RN,sim,sim,não votou,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim
+178953,Expedito Netto,solidaried,RO,não,sim,não votou,não,sim,sim,sim,não,sim,não,sim,não votou,sim,sim,sim,sim,sim,não,não votou,sim
+178954,Lucio Mosquini,pmdb,RO,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,não votou,sim,sim,sim
+178955,Luiz Cláudio,pr,RO,sim,abstenção,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,abstenção,sim,sim,não,sim,sim
+178956,Mariana Carvalho,psdb,RO,sim,não,sim,não votou,não votou,não votou,sim,sim,sim,não,não votou,não,sim,sim,sim,sim,sim,sim,sim,sim
+178957,Abel Mesquita Jr.,pdt,RR,não,sim,sim,não,sim,sim,sim,não,sim,não,sim,não,sim,sim,não votou,sim,não,não,sim,sim
+178958,Carlos Andrade,phs,RR,não votou,não,não,sim,sim,sim,não votou,sim,sim,sim,não votou,não,sim,sim,sim,sim,sim,não,não votou,sim
+178959,Hiran Gonçalves,pmn,RR,sim,não,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,não votou,não,não,sim
+178960,Remídio Monai,pr,RR,não votou,sim,não,não,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,sim,sim,não votou,não,sim,sim
+178961,Shéridan,psdb,RR,sim,não votou,sim,sim,sim,sim,sim,sim,sim,não,sim,não,não votou,sim,não votou,não votou,sim,não votou,sim,sim
+178962,Carlos Gomes,prb,RS,sim,sim,não,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,não,sim,sim
+178963,Covatti Filho,pp,RS,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,não,sim,não,não,sim,sim
+178964,Heitor Schuch,psb,RS,não,sim,sim,não,não,não,sim,não,não,não,sim,não,sim,não,sim,não,não votou,não,sim,sim
+178965,João Derly,rede,RS,não,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+178965,João Derly,pcdob,RS,não votou,não votou,sim,sim,não,não,não votou,não,não,sim,sim,não,não,não,sim,não,não,não,sim,sim
+178966,Geovania de Sá,psdb,SC,sim,sim,sim,não,sim,sim,sim,sim,sim,não,sim,não,sim,não,não votou,não votou,sim,não,sim,sim
+178967,João Paulo Kleinübing,psd,SC,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+178968,Adelson Barreto,ptb,SE,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,não,não votou,sim,sim,sim
+178969,Fábio Mitidieri,psd,SE,não,sim,não votou,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,não,sim,não
+178970,João Daniel,pt,SE,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+178971,Jony Marcos,prb,SE,sim,não,sim,não,sim,não,não,sim,sim,sim,sim,sim,não,não,não votou,não,não votou,sim,sim,sim
+178972,Alex Manente,pps,SP,sim,não,sim,não,não,não,sim,sim,sim,não,sim,não,não,sim,sim,sim,sim,sim,sim,sim
+178973,Ana Perugini,pt,SP,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+178974,Andres Sanchez,pt,SP,não,não,sim,não,não,não,sim,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+178975,Baleia Rossi,pmdb,SP,sim,sim,sim,sim,sim,não,não votou,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim
+178976,Bruno Covas,psdb,SP,sim,não,não,não,sim,sim,sim,sim,sim,não,sim,não,não,sim,sim,não,sim,não,sim,sim
+178977,Eduardo Cury,psdb,SP,sim,não,abstenção,não,sim,sim,sim,sim,sim,não,sim,não,não,sim,não,sim,não votou,sim,sim,sim
+178978,Flavinho,psb,SP,não,não,sim,não,não,não,sim,não,não,não,sim,não,sim,sim,sim,não,sim,não,sim,sim
+178980,Goulart,psd,SP,sim,sim,abstenção,não,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,não votou,não,sim,não,sim,sim
+178981,Herculano Passos,psd,SP,sim,não,abstenção,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+178982,Luiz Lauro Filho,psb,SP,não,não,não,não,sim,sim,sim,sim,sim,não votou,sim,sim,sim,sim,sim,não,sim,não,sim,sim
+178983,Marcio Alvino,pr,SP,sim,sim,abstenção,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,não,sim,sim
+178984,Miguel Haddad,psdb,SP,sim,não,abstenção,não,sim,sim,sim,sim,sim,não,sim,não,não,sim,sim,sim,sim,sim,sim,sim
+178985,Miguel Lombardi,pr,SP,sim,sim,abstenção,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+178986,Nilto Tatto,pt,SP,não,não,sim,não,não,não,não,não,não,sim,sim,sim,sim,não,sim,não,sim,não,sim,não
+178987,Orlando Silva,pcdob,SP,não,não,sim,sim,não,não,não,não,não,sim,sim,sim,não,não,sim,não,não,não,sim,não
+178988,João Paulo Papa,psdb,SP,sim,não,sim,não,sim,sim,sim,não,sim,não,sim,não,não,sim,sim,não votou,sim,não,sim,sim
+178989,Renata Abreu,ptn,SP,sim,não,sim,sim,não,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,não votou,sim
+178990,Samuel Moreira,psdb,SP,sim,não,não,não,não votou,sim,sim,sim,sim,não,não votou,não,não,sim,sim,sim,sim,sim,sim,sim
+178991,Sérgio Reis,prb,SP,não votou,não votou,não votou,não,sim,não,sim,não votou,não votou,sim,sim,sim,não votou,não votou,sim,sim,sim,não votou,não votou,sim
+178992,Vitor Lippi,psdb,SP,sim,não,sim,não,sim,sim,sim,sim,sim,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim
+178993,Carlos Henrique Gaguim,pmdb,TO,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim
+178994,Dulce Miranda,pmdb,TO,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim
+178995,Roberto Góes,pdt,AP,não,sim,sim,não,sim,não,sim,não,não,não,não,não,sim,sim,sim,não,não,não,sim,não
+178997,Moses Rodrigues,pps,CE,sim,não,sim,sim,não,não,sim,sim,sim,não,sim,não,não,não,sim,sim,não,sim,sim,sim
+178998,Raquel Muniz,psc,MG,sim,sim,sim,sim,sim,não,sim,sim,sim,não,sim,não,sim,sim,não,sim,sim,não,sim,sim
+178999,Brunny,ptc,MG,não,não,sim,não,não votou,não,não,sim,sim,sim,não votou,sim,não,não,não votou,não,sim,não,sim,não
+179000,Marcelo Álvaro Antônio,prp,MG,sim,não,sim,sim,sim,não,sim,sim,sim,sim,sim,não,não,sim,sim,sim,sim,não,sim,sim
+180545,Osmar Bertoldi,dem,PR,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não,não votou,não,não votou,sim,não votou,sim,não votou,não votou,não votou,não votou
+181315,Marquinho Mendes,pmdb,RJ,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,sim,não votou,sim,sim,não votou
+181316,Elizeu Dionizio,psdb,MS,sim,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+181316,Elizeu Dionizio,solidaried,MS,não votou,sim,sim,não,sim,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,sim,não,sim,sim
+185500,Deoclides Macedo,pdt,MA,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim,não votou,não votou,não votou,não votou,não votou,não votou
+186775,Pastor Franklin,ptdob,MG,sim,não,não,não,sim,não,sim,sim,sim,sim,sim,não,sim,sim,sim,sim,sim,não,não votou,sim
+187008,Silas Freire,pr,PI,não,não,sim,não,não,sim,sim,sim,sim,sim,sim,sim,sim,não,sim,não,sim,não,sim,não votou
+188097,Merlong Solano,pt,PI,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim,não votou,não,não votou,abstenção,não votou,não votou,não votou,não votou
+189593,Wadih Damous,pt,RJ,não,não,sim,não,não,não,não,não,não,não votou,sim,não votou,sim,não votou,não,não votou,sim,não,sim,não
+190149,Fabricio Oliveira,psb,SC,não,não votou,não votou,não votou,não votou,não votou,sim,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim,não votou,sim,não votou,não votou,não votou
+191684,Rosângela Curado,pdt,MA,sim,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não,não votou,não votou,não votou
+191923,Flavio Nogueira,pdt,PI,sim,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou
+193726,Paulo Martins,psdb,PR,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+5830295,Capitão Fábio Abreu,ptb,PI,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não
+5830318,Miguel Corrêa,pt,MG,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não
+5830335,Danilo Cabral,psb,PE,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+5830356,Patrus Ananias,pt,MG,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não
+5830368,Arnaldo Jardim,pps,SP,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+5830460,Rejane Dias,pt,PI,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não
+5830461,André de Paula,psd,PE,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+5830480,Rodrigo Garcia,dem,SP,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+5830515,Pedro Paulo,pmdb,RJ,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+5830700,Marco Antônio Cabral,pmdb,RJ,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
+5830733,Sebastião Oliveira,pr,PE,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,abstenção
+5830793,Arolde de Oliveira,psc,RJ,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,não votou,sim
