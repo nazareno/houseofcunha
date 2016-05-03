@@ -25,7 +25,9 @@ Carregando os dados dos deputados e da votação do impeachment
 votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
 
 # Deputados votação impeachment
-deputados.votacao.impeachment <- read.csv("~/Projetos/houseofcunha/dados/deputados-votacao-impeachment.csv", sep=";")
+#deputados.votacao.impeachment <- read.csv("~/Projetos/houseofcunha/dados/deputados-votacao-impeachment.csv", sep=";")
+deputados.votos.impeachment <- read.csv("~/Projetos/houseofcunha/dados/deputados_votos_impeachment.csv")
+deputados.votos.impeachment <- select(deputados.votos.impeachment, id_dep, Impeachment)
 
 # Votação Impeachment Discursos
 discursos.impeachment <- read.csv("~/Projetos/houseofcunha/dados/discursos impeachment.csv", stringsAsFactors = FALSE)
@@ -56,33 +58,10 @@ mca_obs_df <- cbind(mca_obs_df, select(clusters,clust))
 mca_obs_df$clust <- as.factor(mca_obs_df$clust)
 
 # Destaque da votação do impeachment 
+# Sim - 358 (367)
+# Não - 136 (137)
+mca_obs_df <- left_join(mca_obs_df, deputados.votos.impeachment, by = "id_dep")
 
-colnames(deputados.votacao.impeachment)
-
-deputados.votacao.impeachment2 <- deputados.votacao.impeachment[!duplicated(deputados.votacao.impeachment$id_dep), ]
-deputados.votacao.impeachment3 <- filter(deputados.votacao.impeachment2, id_dep != 74213)
-
-teste <- left_join(mca_obs_df, select(deputados.votacao.impeachment3, id_dep, IMPEACHMENT), by = "id_dep")
-
-summary(teste$IMPEACHMENT)
-
-X <- filter(teste, IMPEACHMENT == "SIM")
-xx <- filter(imp.votacao, voto == "SIM")
-
-
-
-
-mca_obs_df$impeachment <-  mca_obs_df$nome %in% voto_impeachment$Deputado
-
-voto_impeachment$nomes <- voto_impeachment$Deputado  %in%  mca_obs_df$nome
-
-voto_impeachment_false <- filter(voto_impeachment, nomes == FALSE)
-
-teste <- left_join(mca_obs_df, voto_impeachment, by = c("nome" = "Deputado"))
-
-x <- filter(mca_obs_df, impeachment == FALSE)
-# sum(mca_obs_df$impeachment)
-# y <- filter(mca_obs_df, impeachment == TRUE)
 
 match_deputados <- function(nome.deputados.novo, nome.deputados.original){
   df <- data.frame()
@@ -95,15 +74,9 @@ match_deputados <- function(nome.deputados.novo, nome.deputados.original){
   df
 }
 
-nome_deputados <- voto_impeachment_false$Deputado
-nome_original <- mca_obs_df$nome
-
-nome.deputados.novo <- nome_deputados
-nome.deputados.original <- nome_original
-
-p <- ggplot(data = teste, aes(x = Dim.1, y = Dim.2)) + 
-   geom_point(data = teste, size = 9, alpha = 0.3, aes(colour = factor(Voto))) + 
-  scale_colour_manual(values = c("red","blue", "green", "gray70", "black")) +
+p <- ggplot(data = mca_obs_df, aes(x = Dim.1, y = Dim.2)) + 
+   geom_point(data = mca_obs_df, size = 9, alpha = 0.3, aes(colour = factor(Impeachment))) + 
+  scale_colour_manual(values = c("red", "blue", "green", "gray70", "black")) +
   theme_classic() + 
   theme(axis.ticks = element_blank()) 
 

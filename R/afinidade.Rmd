@@ -33,11 +33,26 @@ not_afinidade$not_afinidade <- paste(not_afinidade$"1", not_afinidade$"2", not_a
 
 not_afinidade <- select(not_afinidade, id_dep, not_afinidade)
 
-MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", sep=";")
+MCAtoplot <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCAtoplot.tsv", header=FALSE)
 
-toPlot <- left_join(MCA_new, not_afinidade, by = "id_dep")
+MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv")
 
-write.csv2(toPlot, file = "~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", row.names = FALSE)
+destaques <- read.csv("~/Projetos/houseofcunha/dados/destaques.csv")
+
+toPlot <- left_join(destaques, not_afinidade, by = "id_dep")
+
+colnames(toPlot)[6] <- "uf"
+toPlot$nome.y <- NULL
+toPlot$uf.y <- NULL
+toPlot$partido.y <- NULL
+toPlot$none <- NULL
+toPlot$destaque_pb <- NULL
+toPlot$destaque_cassacao_partido <- NULL
+toPlot$destaque_cassacao_pt <- NULL
+toPlot$destaque_cunha <- NULL
+
+
+write.csv2(toPlot, file = "~/Projetos/houseofcunha-interface/graficos/MCA_afinidades_notafinidades.csv", row.names = FALSE)
 ```
 
 Top Afinidade
@@ -60,9 +75,9 @@ afinidade$afinidade <- paste(afinidade$"1", afinidade$"2", afinidade$"3",
 
 afinidade <- select(afinidade, id_dep, afinidade)
 
-MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", sep=";")
+MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_afinidades_notafinidades.csv", sep=";")
 
 toPlot <- left_join(MCA_new, afinidade, by = "id_dep")
 
-write.csv2(toPlot, file = "~/Projetos/houseofcunha-interface/graficos/MCA_new.csv", row.names = FALSE)
+write.csv2(toPlot, file = "~/Projetos/houseofcunha-interface/graficos/MCA_afinidades_notafinidades.csv", row.names = FALSE)
 ```
