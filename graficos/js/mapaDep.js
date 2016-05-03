@@ -16,18 +16,19 @@ var graficoVotacoesAfinidades =  function (options, divID) {
     this.widthPlot = 800 - this.margin;
     this.widthTop5 = 350;
     this.height = 650 - this.margin;
+    this.options = {};
     // array with featured parties that will be colored
-    this.coloredParties = options ? options.coloredParties :
+    this.options.coloredParties = options ? options.coloredParties.slice() :
         ["pmdb", "psdb", "psol", "pt"];
-    this.coloredParties.push("outros");
+    this.options.coloredParties.push("outros");
 
-    this.colorsVector = options ? options.colorsVector
-        : ["rgba(139, 0, 0, 1)", "rgba(0,102,204,1)", "rgba(230,159,0,1)", "rgba(255,51,0,1)", "rgba(189,189,189, 1)"];
+    this.options.colorsVector = options ? options.colorsVector.slice() :
+        ["rgba(139, 0, 0, 1)", "rgba(0,102,204,1)", "rgba(230,159,0,1)", "rgba(255,51,0,1)", "rgba(189,189,189, 1)"];
 
     //colors that will reflect parties
     this.color = d3.scale.ordinal()
-                   .domain(this.coloredParties)
-                   .range(this.colorsVector);
+                   .domain(this.options.coloredParties)
+                   .range(this.options.colorsVector);
 
     this.x = d3.scale.linear().range([0, this.widthPlot - this.margin]);
     this.y = d3.scale.linear().range([this.height - this.margin, 0]);
@@ -84,7 +85,7 @@ var graficoVotacoesAfinidades =  function (options, divID) {
     }
 
     // draw legend
-    legenda({ coloredParties: this.coloredParties, colorsVector: this.colorsVector });
+    this.legend = new legenda(this.options);
 
     // set axes
     this.xAxis = d3.svg.axis()
@@ -95,6 +96,15 @@ var graficoVotacoesAfinidades =  function (options, divID) {
                   .ticks(0)
                   .orient("left");
 }
+
+graficoVotacoesAfinidades.prototype.getPartyColor = function (name) {
+    if(this.options.coloredParties.includes(name)) {
+      return this.color(name);
+    }
+    else {
+      return this.color("outros");
+    }
+};
 
 /**
   * @param data - datasource (MCA)
@@ -136,12 +146,7 @@ graficoVotacoesAfinidades.prototype.draw = function (data) {
         id: function(d) { return d["nome"]; }
       })
       .style("fill", function(d) {
-        if(that.coloredParties.includes(d["partido"])) {
-          return that.color(d["partido"]);
-        }
-        else {
-          return that.color("outros");
-        }
+          return that.getPartyColor(d["partido"]);
       });
 
     var nested = d3.nest()
@@ -217,10 +222,9 @@ graficoVotacoesAfinidades.prototype.draw = function (data) {
           .attr("y1", this.getAttribute("cy"))
           .attr("x2", that.widthPlot)
           .attr("y2", 20)
-          .attr("style", "stroke:" + that.color(d["partido"]));
-
+          .attr("style", "stroke:" + that.getPartyColor(d["partido"]));
      // get color and change opacity
-     var rgba = that.color(d["partido"]).split(",");
+     var rgba = that.getPartyColor(d["partido"]).split(",");
      rgba[rgba.length-1] = "0.5)";
      rgba = rgba.join();
      that.infoDep.transition()
@@ -259,28 +263,28 @@ graficoVotacoesAfinidades.prototype.draw = function (data) {
 };
 
 graficoVotacoesAfinidades.prototype.updateOptions = function (options) {
-    if (options) {
-        if(options.hasOwnProperty("coloredParties")) {
-            this.coloredParties = options.coloredParties;
-            this.coloredParties.push("outros");
-        }
-        if(options.hasOwnProperty("colorsVector")) this.colorsVector = options.colorsVector;
-        // update color scale
-        this.color = d3.scale.ordinal()
-                       .domain(this.coloredParties)
-                       .range(this.colorsVector);
+    if (!options) return;
+    if (options.hasOwnProperty("coloredParties")) {
+        this.options.coloredParties = options.coloredParties.slice();
+        this.options.coloredParties.push("outros");
     }
+    if (options.hasOwnProperty("colorsVector")) this.options.colorsVector = options.colorsVector;
+    // update color scale
+    this.color = d3.scale.ordinal()
+                   .domain(this.options.coloredParties)
+                   .range(this.options.colorsVector);
 
     // update circle colors
     var that = this;
-    var circles = this.svg.selectAll("circle")
+    this.svg.selectAll("circle")
       .style("fill", function(d) {
-        if(that.coloredParties.includes(d["partido"])) {
-            console.log(d["partido"] + " " + that.color(d["partido"]));
+        if(that.options.coloredParties.includes(d["partido"])) {
           return that.color(d["partido"]);
         }
         else {
           return that.color("outros");
         }
       });
+
+     this.legend.update(this.options);
 };
