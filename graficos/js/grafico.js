@@ -12,7 +12,7 @@ var viz = new graficoVotacoesAfinidades();
 // var viz2 = new graficoVotacoesAfinidades();
 
 // update example
-viz.updateOptions(options);
+// viz.updateOptions(options);
 
 function dataLoaded(data) {
     viz.draw(data);

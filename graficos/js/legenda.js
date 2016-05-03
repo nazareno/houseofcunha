@@ -59,8 +59,20 @@ legenda.prototype.update = function (options) {
                    .range(this.options.colorsVector);
 
     var that = this;
-    var circlesSelection = this.circles.data(this.options.coloredParties);
-    circlesSelection.exit().remove();
+    this.legenda.selectAll("circle").remove();
+    var circlesSelection = this.legenda
+        .selectAll("circle")
+        .data(this.options.coloredParties);
+
+    // TODO update instead of removing all elements
+    // circlesSelection.exit().remove();
+    // circlesSelection.attr({
+    //         cx: function(d, i) { return (75 + i*80); },
+    //         cy: (that.h + that.marginLegend.t) / 2,
+    //         r: 10
+    //     })
+    //     .style("fill", function(d) { return that.color(d); });;
+
     circlesSelection.enter()
            .append("circle")
            .transition()
@@ -72,8 +84,19 @@ legenda.prototype.update = function (options) {
             })
             .style("fill", function(d) { return that.color(d); });
 
-    var labelsSelection = this.labels.data(this.options.coloredParties);
-    labelsSelection.exit().remove();
+    this.legenda.selectAll("text").remove();
+    var labelsSelection = this.legenda
+        .selectAll("text")
+        .data(this.options.coloredParties);
+
+    // TODO update instead of removing all elements
+    // labelsSelection.exit().remove();
+    // labelsSelection.attr({
+    //     x: function(d, i) { console.log(i);return (65 + i*80); },
+    //     y: ((that.h + that.marginLegend.t) / 2) + 20
+    // })
+    // .text(function(d) { return d; });
+
     labelsSelection.enter()
           .append("text")
           .transition()
