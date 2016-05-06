@@ -9,8 +9,8 @@ var legenda = function (options) {
     this.options.colorsVector = options.colorsVector.slice();
         //colors that will reflect parties
     this.color = d3.scale.ordinal()
-                  .domain(this.options.coloredParties)
-                  .range(this.options.colorsVector);
+        .domain(this.options.coloredParties)
+        .range(this.options.colorsVector);
 
     this.legenda = d3.select("body").append("svg")
         .attr("id", "legenda")
@@ -26,25 +26,25 @@ var legenda = function (options) {
     this.circles = this.legenda.selectAll("circle");
     // add circles
     this.circles.data(this.options.coloredParties)
-                .enter()
-                .append("circle")
-                .attr({
-                    cx: function(d, i) { return (75 + i*80); },
-                    cy: (that.h + that.marginLegend.t) / 2,
-                    r: 10
-                })
-                .style("fill", function(d) { return that.color(d); });
+        .enter()
+        .append("circle")
+        .attr({
+            cx: function(d, i) { return (75 + i*80); },
+            cy: (that.h + that.marginLegend.t) / 2,
+            r: 10
+        })
+        .style("fill", function(d) { return that.color(d); });
 
     this.labels = this.legenda.selectAll("text");
     // legend labels
     this.labels.data(this.options.coloredParties)
-               .enter()
-               .append("text")
-               .attr({
-                   x: function(d, i) { return (65 + i*80); },
-                   y: ((that.h + that.marginLegend.t) / 2) + 20
-                })
-               .text(function(d) { return d; });
+        .enter()
+        .append("text")
+        .attr({
+            x: function(d, i) { return (65 + i*80); },
+            y: ((that.h + that.marginLegend.t) / 2) + 20
+        })
+        .text(function(d) { return d; });
 }
 
 legenda.prototype.update = function (options) {
@@ -55,8 +55,8 @@ legenda.prototype.update = function (options) {
     if(options.hasOwnProperty("colorsVector")) this.options.colorsVector = options.colorsVector.slice();
     // update color scale
     this.color = d3.scale.ordinal()
-                   .domain(this.options.coloredParties)
-                   .range(this.options.colorsVector);
+        .domain(this.options.coloredParties)
+        .range(this.options.colorsVector);
 
     var that = this;
     this.legenda.selectAll("circle").remove();
@@ -74,15 +74,15 @@ legenda.prototype.update = function (options) {
     //     .style("fill", function(d) { return that.color(d); });;
 
     circlesSelection.enter()
-           .append("circle")
-           .transition()
-           .duration(500)
-           .attr({
-               cx: function(d, i) { return (75 + i*80); },
-               cy: (that.h + that.marginLegend.t) / 2,
-               r: 10
-            })
-            .style("fill", function(d) { return that.color(d); });
+        .append("circle")
+        .transition()
+        .duration(500)
+        .attr({
+            cx: function(d, i) { return (75 + i*80); },
+            cy: (that.h + that.marginLegend.t) / 2,
+            r: 10
+        })
+        .style("fill", function(d) { return that.color(d); });
 
     this.legenda.selectAll("text").remove();
     var labelsSelection = this.legenda
@@ -98,12 +98,12 @@ legenda.prototype.update = function (options) {
     // .text(function(d) { return d; });
 
     labelsSelection.enter()
-          .append("text")
-          .transition()
-          .duration(500)
-          .attr({
-              x: function(d, i) { return (65 + i*80); },
-              y: ((that.h + that.marginLegend.t) / 2) + 20
-          })
-          .text(function(d) { return d; });
+        .append("text")
+        .transition()
+        .duration(500)
+        .attr({
+            x: function(d, i) { return (65 + i*80); },
+            y: ((that.h + that.marginLegend.t) / 2) + 20
+        })
+        .text(function(d) { return d; });
 };
