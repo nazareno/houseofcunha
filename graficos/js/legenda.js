@@ -1,42 +1,109 @@
 var legenda = function (options) {
-    var marginLegend = {t:0, r:20, b:20, l:75 },
-        w = 900 - marginLegend.l - marginLegend.r,
-        h = 60 - marginLegend.t - marginLegend.b,
-        xLegend = d3.scale.linear().range([0, w]),
-        yLegend = d3.scale.linear().range([h - 60, 0]),
+    this.marginLegend = {t:0, r:20, b:20, l:75 };
+    this.w = 900 - this.marginLegend.l - this.marginLegend.r;
+    this.h = 60 - this.marginLegend.t - this.marginLegend.b,
+    this.xLegend = d3.scale.linear().range([0, this.w]);
+    this.yLegend = d3.scale.linear().range([this.h - 60, 0]);
+    this.options = {};
+    this.options.coloredParties = options.coloredParties.slice();
+    this.options.colorsVector = options.colorsVector.slice();
         //colors that will reflect parties
-        color = d3.scale.ordinal()
-                  .domain(options.coloredParties)
-                  .range(options.colorsVector);
+    this.color = d3.scale.ordinal()
+        .domain(this.options.coloredParties)
+        .range(this.options.colorsVector);
 
-    var legenda = d3.select("body").append("svg")
+    this.legenda = d3.select("body").append("svg")
         .attr("id", "legenda")
-        .attr("width", w + marginLegend.l + marginLegend.r)
-        .attr("height", h + marginLegend.t + marginLegend.b);
+        .attr("width", this.w + this.marginLegend.l + this.marginLegend.r)
+        .attr("height", this.h + this.marginLegend.t + this.marginLegend.b)
+        .append("g");
 
-    // group that will contain all of the plots
-    var groups = legenda.append("g")
-                        .attr("transform", "translate(" + marginLegend.l + "," + marginLegend.t + ")");
+        // group that will contain all of the plots
+        // var groups = legenda.append("g")
+        //                     .attr("transform", "translate(" + marginLegend.l + "," + marginLegend.t + ")");
 
+    var that = this;
+    this.circles = this.legenda.selectAll("circle");
     // add circles
-    var legend = legenda.selectAll("circle")
-                        .data(options.coloredParties)
-                        .enter()
-                        .append("circle")
-                        .attr({
-                            cx: function(d, i) { return (75 + i*80); },
-                            cy: (h + marginLegend.t) / 2,
-                            r: 10
-                        })
-                        .style("fill", function(d) { return color(d); });
+    this.circles.data(this.options.coloredParties)
+        .enter()
+        .append("circle")
+        .attr({
+            cx: function(d, i) { return (75 + i*80); },
+            cy: (that.h + that.marginLegend.t) / 2,
+            r: 10
+        })
+        .style("fill", function(d) { return that.color(d); });
 
+    this.labels = this.legenda.selectAll("text");
     // legend labels
-    legenda.selectAll("text")
-           .data(options.coloredParties)
-           .enter().append("text")
-           .attr({
-             x: function(d, i) { return (65 + i*80); },
-             y: ((h + marginLegend.t) / 2) + 20
-            })
-            .text(function(d) { return d; });
+    this.labels.data(this.options.coloredParties)
+        .enter()
+        .append("text")
+        .attr({
+            x: function(d, i) { return (65 + i*80); },
+            y: ((that.h + that.marginLegend.t) / 2) + 20
+        })
+        .text(function(d) { return d; });
 }
+
+legenda.prototype.update = function (options) {
+    if (!options) return;
+    if(options.hasOwnProperty("coloredParties")) {
+        this.options.coloredParties = options.coloredParties.slice();
+    }
+    if(options.hasOwnProperty("colorsVector")) this.options.colorsVector = options.colorsVector.slice();
+    // update color scale
+    this.color = d3.scale.ordinal()
+        .domain(this.options.coloredParties)
+        .range(this.options.colorsVector);
+
+    var that = this;
+    this.legenda.selectAll("circle").remove();
+    var circlesSelection = this.legenda
+        .selectAll("circle")
+        .data(this.options.coloredParties);
+
+    // TODO update instead of removing all elements
+    // circlesSelection.exit().remove();
+    // circlesSelection.attr({
+    //         cx: function(d, i) { return (75 + i*80); },
+    //         cy: (that.h + that.marginLegend.t) / 2,
+    //         r: 10
+    //     })
+    //     .style("fill", function(d) { return that.color(d); });;
+
+    circlesSelection.enter()
+        .append("circle")
+        .transition()
+        .duration(500)
+        .attr({
+            cx: function(d, i) { return (75 + i*80); },
+            cy: (that.h + that.marginLegend.t) / 2,
+            r: 10
+        })
+        .style("fill", function(d) { return that.color(d); });
+
+    this.legenda.selectAll("text").remove();
+    var labelsSelection = this.legenda
+        .selectAll("text")
+        .data(this.options.coloredParties);
+
+    // TODO update instead of removing all elements
+    // labelsSelection.exit().remove();
+    // labelsSelection.attr({
+    //     x: function(d, i) { console.log(i);return (65 + i*80); },
+    //     y: ((that.h + that.marginLegend.t) / 2) + 20
+    // })
+    // .text(function(d) { return d; });
+
+    labelsSelection.enter()
+        .append("text")
+        .transition()
+        .duration(500)
+        .attr({
+            x: function(d, i) { return (65 + i*80); },
+            y: ((that.h + that.marginLegend.t) / 2) + 20
+        })
+        .text(function(d) { return d; });
+};
