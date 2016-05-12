@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+    body {
+        font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .dot {
+        stroke: #000;
+    }
+
+    .tooltip {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        pointer-events: none;
+        text-align:center;
+        font: 12px sans-serif;
+    }
+
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+    var margin = {top: 20, right: 20, bottom: 30, left: 30},
+            width = 740 - margin.left - margin.right,
+            height = 740 - margin.top - margin.bottom;
+
+    var x = d3.scale.linear()
+            .range([0, width]);
+
+    var y = d3.scale.linear()
+            .range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom").ticks(0);
+
+    var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left").ticks(0);
+
+
+    // setup fill color
+    var cValue = function(d) { return d.destaque;},
+            color = d3.scale.category10();
+
+    var svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // add the tooltip area to the webpage
+    var tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+    d3.csv("data/frequencia_3.csv", function(error, data) {
+        if (error) throw error;
+
+        data.forEach(function(d) {
+            d.TopSim = +d.TopSim;
+            d.TopNao = +d.TopNao;
+        });
+
+
+        x.domain(d3.extent(data, function(d) { return d.TopSim; })).nice();
+        y.domain(d3.extent(data, function(d) { return d.TopNao; })).nice();
+
+        svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis)
+                .append("text");
+
+        svg.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+                .append("text");
+
+
+        svg.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("id", "pt")
+                .attr("r", 3.5)
+                .attr("cx", function(d) { return x(d.TopSim); })
+                .attr("cy", function(d) { return y(d.TopNao); })
+                .style("fill", function(d) { return color(cValue(d));})
+                .on("mouseover", function(d) {
+                    tooltip.transition()
+                            .duration(200)
+                            .style("opacity", .9);
+                    tooltip.html(d["Palavra"].toUpperCase())
+                            .style("left", (d3.event.pageX - 25) + "px")
+                            .style("top", (d3.event.pageY - 20 ) + "px");
+
+                    d3.select(this).attr("r", 12).ease("elastic");
+
+                    // function to move mouseover item to front of SVG stage, in case
+                    // another bubble overlaps it
+                    d3.selection.prototype.moveToFront = function() {
+                        return this.each(function() {
+                            this.parentNode.appendChild(this);
+                        });
+                    };
+
+                    // skip this functionality for IE9, which doesn't like it
+                    if (!$.browser.msie) {
+                        circle.moveToFront();
+                    }
+                    //Show Tooltip with candidate name and party
+
+                })
+                .on("mouseout", function(d) {
+                    tooltip.transition()
+                            .duration(500)
+                            .style("opacity", 0);
+                    d3.select(this).attr("r", 3.5).ease("elastic");
+                    // fade out guide lines, then remove them
+                    d3.selectAll(".guide").transition().duration(100).styleTween("opacity",
+                            function() { return d3.interpolate(.5, 0); })
+                            .remove()
+                });
+
+        var legend = svg.selectAll(".legend")
+                .data(color.domain())
+                .enter().append("g")
+                .attr("class", "legend")
+                .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+
+    });
+
+</script>

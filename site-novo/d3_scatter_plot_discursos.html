@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<!-- Example based on http://bl.ocks.org/mbostock/3887118 -->
+<!-- Tooltip example from http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html -->
+
+<style>
+    body {
+        font: 11px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .dot {
+        stroke: #000;
+    }
+
+    .tooltip {
+        position: absolute;
+        width: 200px;
+        height: 28px;
+        pointer-events: none;
+    }
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script>
+    var margin = {top: 20, right: 20, bottom: 30, left: 40},
+            width = 960 - margin.left - margin.right,
+            height = 960 - margin.top - margin.bottom;
+
+    var x = d3.scale.linear()
+            .range([0, width-50]);
+
+    var y = d3.scale.linear()
+            .range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom").ticks(0);
+
+    var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left").ticks(0);
+
+
+    // setup fill color
+    var cValue = function(d) { return d.Palavra;},
+            color = d3.scale.category10();
+
+    // add the graph canvas to the body of the webpage
+    var svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // add the tooltip area to the webpage
+    var tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+    // load data
+    d3.csv("frequencia_1.csv", function(error, data) {
+
+        // change string (from CSV) into number format
+        data.forEach(function(d) {
+            d.nao = +d.nao;
+            d.sim = +d.sim;
+//    console.log(d);
+        });
+
+        x.domain(d3.extent(data, function(d) { return d.nao; })).nice();
+        y.domain(d3.extent(data, function(d) { return d.sim; })).nice();
+
+        // x-axis
+        svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis)
+                .append("text")
+                .text("Calories");
+
+        // y-axis
+        svg.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+                .append("text")
+                .text("Protein (g)");
+
+        // draw dots
+        svg.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("r", 3.5)
+                .attr("cx", function(d) { return x(d.nao); })
+                .attr("cy", function(d) { return y(d.sim); });
+
+        // draw legend
+        var legend = svg.selectAll(".legend")
+                .data(color.domain())
+                .enter().append("g")
+                .attr("class", "legend")
+                .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+        // draw legend colored rectangles
+        legend.append("rect")
+                .attr("x", width - 18)
+                .attr("width", 18)
+                .attr("height", 18)
+                .style("fill", color);
+
+        // draw legend text
+        legend.append("text")
+                .attr("x", width - 24)
+                .attr("y", 9)
+                .attr("dy", ".35em")
+                .style("text-anchor", "end")
+                .text(function(d) { return d;})
+    });
+
+</script>
+</body>
+</html>
