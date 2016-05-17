@@ -160,7 +160,7 @@ graficoVotacoesAfinidades.prototype.draw = function (data) {
         var circle = d3.select(this);
         // transition to increase size/opacity of bubble
         circle.transition()
-            .duration(800).style("opacity", 0.6)
+            .duration(800)
             .attr("r", 12).ease("elastic");
         // function to move mouseover item to front of SVG stage, in case
         // another bubble overlaps it
@@ -189,15 +189,11 @@ graficoVotacoesAfinidades.prototype.draw = function (data) {
         .styleTween("opacity", function() {
             return d3.interpolate(.5, 0);
         })
-        .remove()
+        .remove();
     };
 
     var onClick = function(d) {
         var circle = d3.select(this);
-        circle.transition()
-            .duration(200)
-            .style("opacity", .8)
-            .attr("r", 20);
         // display politian's information
         that.imgDep.attr("src", d["urlFoto"]);
         that.infoName.text(d["nome"]);
@@ -237,17 +233,27 @@ graficoVotacoesAfinidades.prototype.draw = function (data) {
     * Update top5
     */
     function updateTop5(topIds, notTopIds) {
-      for (var i=0; i < 5; i++) {
-          nested.forEach(function (d) {
-              // converted to int because of white spaces on id_dep field
-              if (+topIds[i] === +d["key"]) {
-                  that.top5Spans[i].text(d.values[0]["nome"]);
-              }
-              if (+notTopIds[i] === +d["key"]) {
-                  that.notTop5Spans[i].text(d.values[0]["nome"]);
-              }
-          });
-      }
+        // console.table(topIds);
+        // console.table(notTopIds);
+        that.top5Spans.forEach(function (span) {
+            span.text('');
+        });
+        that.notTop5Spans.forEach(function (span) {
+            span.text('');
+        });
+        for (var i=0; i < 5; i++) {
+            nested.forEach(function (d) {
+                // converted to int because of white spaces on id_dep field
+                if (+topIds[i] === +d["key"]) {
+                    that.top5Spans[i].text(d.values[0]["nome"]);
+                    return;
+                }
+                if (+notTopIds[i] === +d["key"]) {
+                    that.notTop5Spans[i].text(d.values[0]["nome"]);
+                    return;
+                }
+            });
+        }
     };
 
     // run the mouseon/out events

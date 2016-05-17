@@ -46,6 +46,8 @@
     flex-direction: column;
 }
 #legenda {
+    display: flex;
+    width: 100%;
     background-color: white;
     font-size: 15px;
     font-weight: bold;
