@@ -29,16 +29,17 @@
 </style>
 <body>
 <script src="//d3js.org/d3.v3.min.js"></script>
+<script src="js/jquery.js"></script>
 <script>
 
     var margin = {top: 20, right: 20, bottom: 30, left: 30},
             width = 740 - margin.left - margin.right,
             height = 740 - margin.top - margin.bottom;
 
-    var x = d3.scale.linear()
+    var x = d3.scale.pow().exponent(.2)
             .range([0, width]);
 
-    var y = d3.scale.linear()
+    var y = d3.scale.pow().exponent(.2)
             .range([height, 0]);
 
     var xAxis = d3.svg.axis()
@@ -74,8 +75,8 @@
         });
 
 
-        x.domain(d3.extent(data, function(d) { return d.TopSim; })).nice();
-        y.domain(d3.extent(data, function(d) { return d.TopNao; })).nice();
+        x.domain(d3.extent(data, function(d) { return d.TopSim; }));//.nice();
+        y.domain(d3.extent(data, function(d) { return d.TopNao; }));//.nice();
 
         svg.append("g")
                 .attr("class", "x axis")
@@ -93,12 +94,12 @@
                 .data(data)
                 .enter().append("circle")
                 .attr("class", "dot")
-                .attr("id", "pt")
+                .attr("id", (d, i) => "circle" + i)
                 .attr("r", 3.5)
-                .attr("cx", function(d) { return x(d.TopSim); })
+                .attr("cx", (d) => x(d.TopSim) )
                 .attr("cy", function(d) { return y(d.TopNao); })
                 .style("fill", function(d) { return color(cValue(d));})
-                .on("mouseover", function(d) {
+                .on("mouseover", (d, i) => {
                     tooltip.transition()
                             .duration(200)
                             .style("opacity", .9);
@@ -106,7 +107,7 @@
                             .style("left", (d3.event.pageX - 25) + "px")
                             .style("top", (d3.event.pageY - 20 ) + "px");
 
-                    d3.select(this).attr("r", 12).ease("elastic");
+                    d3.select("#circle" + i).transition().duration(800).attr("r", 12).ease("elastic");
 
                     // function to move mouseover item to front of SVG stage, in case
                     // another bubble overlaps it
@@ -127,7 +128,7 @@
                     tooltip.transition()
                             .duration(500)
                             .style("opacity", 0);
-                    d3.select(this).attr("r", 3.5).ease("elastic");
+                    d3.select(this).transition().duration(800).attr("r", 3.5).ease("elastic");
                     // fade out guide lines, then remove them
                     d3.selectAll(".guide").transition().duration(100).styleTween("opacity",
                             function() { return d3.interpolate(.5, 0); })
