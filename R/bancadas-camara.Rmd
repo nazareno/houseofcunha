@@ -23,7 +23,7 @@ source("R/camara-lib.R")
 ```{r, warning=FALSE, message=FALSE, fig.align='center', echo=FALSE}
 votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
 
-# Bancadas
+# Bancadas 
 bancada.bala <- read.table("dados/bancada-bala.csv", header=TRUE, quote="\"")
 bancada.direitos.humanos <- read.table("dados/bancada-direitos-humanos.csv", header=TRUE, quote="\"")
 bancada.sindical <- read.table("dados/bancada-sindical.csv", header=TRUE, quote="\"")
