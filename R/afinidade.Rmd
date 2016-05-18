@@ -33,10 +33,6 @@ not_afinidade$not_afinidade <- paste(not_afinidade$"1", not_afinidade$"2", not_a
 
 not_afinidade <- select(not_afinidade, id_dep, not_afinidade)
 
-MCAtoplot <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCAtoplot.tsv", header=FALSE)
-
-MCA_new <- read.csv("~/Projetos/houseofcunha-interface/graficos/MCA_new.csv")
-
 destaques <- read.csv("~/Projetos/houseofcunha/dados/destaques.csv")
 
 toPlot <- left_join(destaques, not_afinidade, by = "id_dep")

@@ -14,6 +14,8 @@ library(dplyr)
 require(scales)
 #install.packages('tm')
 library(tm)
+library(wordcloud)
+#install.packages('wordcloud')
 
 source("R/camara-lib.R")
 ```
@@ -99,18 +101,46 @@ discursos.nao <- filter(discursos.impeachment, Voto == "Não")
 frequencia.discursos.sim <- frequencia_palavra_discursos(discursos.sim, 1)
 frequencia.discursos.nao <- frequencia_palavra_discursos(discursos.nao, 1)
 
-toPlot <- create_destaque_columns(processamento_palavras_frequentes(frequencia.discursos.sim, frequencia.discursos.nao, 100), 20)
+# library(clusterSim)
 
-p <- ggplot(data = toPlot, aes(x = reorder(top, -top), y = reorder(top_nao, -top_nao))) + 
+#toPlot$TopSim <- data.Normalization(toPlot$top, type="n5", normalization="column")
+#toPlot$TopNao <- data.Normalization(toPlot$top_nao, type="n5", normalization="column")
+
+toPlot <- create_destaque_columns(processamento_palavras_frequentes(frequencia.discursos.sim, frequencia.discursos.nao, 100), 10)
+
+#write.csv2(toPlot, file = "~/Projetos/houseofcunha/dados/discurso_impeachment/frequencia_1_1.csv", row.names = FALSE)
+
+p <- ggplot(data = toPlot, aes(x = reorder(top, -top), y = reorder(top_nao, -top_nao), label = toupper(Palavra))) + 
   geom_text(data = toPlot, 
                    aes(label = toupper(Palavra)),
-                   colour = alpha("grey70", .4), alpha = 0.5, size = 5, hjust = -.15) + 
+                   colour = alpha("grey70", .4), alpha = 0.5, size = 5,
+            vjust="inward", hjust="inward") + 
   geom_text(data = filter(toPlot, destaque == TRUE), 
                    aes(label =  toupper(Palavra)),
-                   colour = "black", alpha = 0.5, size = 5, hjust = -.15) + 
+                   colour = "black", alpha = 0.5, size = 5,
+            vjust="inward", hjust="inward") + 
   scale_x_discrete('Discurso SIM', breaks = c(max(toPlot$top),  median(toPlot$top), 1),
                      labels=c("base", "meio", "topo")) +
-  scale_y_discrete('Discurso NAO', breaks = c(max(toPlot$top_nao), median(toPlot$top_nao), 1),
+  scale_y_discrete('Discurso NÃO', breaks = c(max(toPlot$top_nao), median(toPlot$top_nao), 1),
+                     labels=c("base", "meio", "topo")) +
+  geom_abline(intercept = 0, color = alpha("#762a83", 1)) +
+  theme_classic() 
+
+library(grid)
+p <- ggplot(data=df, aes(x=n.wheels, y=utility, label=word))  + geom_text() 
+gt <- ggplot_gtable(ggplot_build(p))
+gt$layout$clip[gt$layout$name == "panel"] <- "off"
+grid.draw(gt)
+
+
+p <- ggplot(data = toPlot, aes(x = reorder(top, -top), y = reorder(top_nao, -top_nao), label = toupper(Palavra))) + 
+  geom_text(colour = alpha("grey70", .4), size = 5) + 
+  geom_text(data = filter(toPlot, destaque == TRUE), 
+                   aes(label =  toupper(Palavra)),
+                   colour = "black", size = 5) + 
+  scale_x_discrete('Discurso SIM', breaks = c(max(toPlot$top),  median(toPlot$top), 1),
+                     labels=c("base", "meio", "topo")) +
+  scale_y_discrete('Discurso NÃO', breaks = c(max(toPlot$top_nao), median(toPlot$top_nao), 1),
                      labels=c("base", "meio", "topo")) +
   geom_abline(intercept = 0, color = alpha("#762a83", 1)) +
   theme_classic() 
@@ -124,10 +154,12 @@ dev.off()
 Processamento dos discrusos da votação do impeachment na câmara (2 palavra)
 
 ```{r}
-frequencia.discursos.sim <- frequencia_palavra_discursos(discursos.sim, 2)
-frequencia.discursos.nao <- frequencia_palavra_discursos(discursos.nao, 2)
+frequencia.discursos.sim <- frequencia_palavra_discursos(discursos.sim, 2, stopWords = TRUE)
+frequencia.discursos.nao <- frequencia_palavra_discursos(discursos.nao, 2, stopWords = TRUE)
 
 toPlot <- create_destaque_columns(processamento_palavras_frequentes(frequencia.discursos.sim, frequencia.discursos.nao, 100), 15)
+
+write.csv2(toPlot, file = "~/Projetos/houseofcunha/dados/discurso_impeachment/frequencia_2.csv", row.names = FALSE)
 
 p <- ggplot(data = toPlot, aes(x = reorder(top, -top), y = reorder(top_nao, -top_nao))) + 
   geom_text(data = toPlot, 
@@ -143,7 +175,7 @@ p <- ggplot(data = toPlot, aes(x = reorder(top, -top), y = reorder(top_nao, -top
   geom_abline(intercept = 0, color = alpha("#762a83", 1)) +
   theme_classic() 
 
-png("plot/pos_votacao_impeachment/mapa_2_palavra.png", 
+png("plot/pos_votacao_impeachment/mapa_2_palavra_stopWords.png", 
     width = 800, height = 800)
 p
 dev.off()
@@ -157,22 +189,34 @@ frequencia.discursos.nao <- frequencia_palavra_discursos(discursos.nao, 3)
 
 toPlot <- create_destaque_columns(processamento_palavras_frequentes(frequencia.discursos.sim, frequencia.discursos.nao, 100), 10)
 
+#write.csv2(toPlot, file = "~/Projetos/houseofcunha/dados/discurso_impeachment/frequencia_3.csv", row.names = FALSE)
+
 p <- ggplot(data = toPlot, aes(x = reorder(top, -top), y = reorder(top_nao, -top_nao))) + 
   geom_text(data = toPlot, 
                    aes(label = toupper(Palavra)),
-                   colour = alpha("grey70", .4), alpha = 0.5, size = 5, hjust = -.15) + 
+                   colour = alpha("grey70", .4), alpha = 0.5, size = 5, vjust="inward", hjust="inward") + 
   geom_text(data = filter(toPlot, destaque == TRUE), 
                    aes(label =  toupper(Palavra)),
-                   colour = "black", alpha = 0.5, size = 5, hjust = -.15) + 
+                   colour = "black", alpha = 0.5, size = 5, vjust="inward", hjust="inward") + 
   scale_x_discrete('Discurso SIM', breaks = c(max(toPlot$top),  median(toPlot$top), 1),
                      labels=c("base", "meio", "topo")) +
-  scale_y_discrete('Discurso NAO', breaks = c(max(toPlot$top_nao), median(toPlot$top_nao), 1),
+  scale_y_discrete('Discurso NÃO', breaks = c(max(toPlot$top_nao), median(toPlot$top_nao), 1),
                      labels=c("base", "meio", "topo")) +
   geom_abline(intercept = 0, color = alpha("#762a83", 1)) +
   theme_classic() 
 
-png("plot/pos_votacao_impeachment/mapa_3_palavra.png", 
+png("plot/pos_votacao_impeachment/mapa_3_palavra_stopWords.png", 
     width = 800, height = 800)
 p
 dev.off()
+```
+
+WordClud 
+
+```{r}
+frequencia.discursos <- frequencia_palavras(discursos.impeachment, 1, stopWords = TRUE)
+words <- names(frequencia.discursos)
+set.seed(1363)
+wordcloud(words, frequencia.discursos, min.freq = 5, max.words = 150, random.order = FALSE, rot.per=0.20)
+
 ```

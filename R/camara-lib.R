@@ -13,8 +13,21 @@ plotMCA <- function(dados){
                                    alpha("#0066CC", 1),
                                    alpha("#E69F00", 1),
                                    alpha("#FF3300", 1)), 
-                        guide = guide_legend(title = "partido", 
+                        guide = guide_legend(title = "Partido", 
                                              override.aes = list(alpha = 1, size = 4))) + 
+    ylab("") + xlab("")+ 
+    theme_classic() + 
+    theme(axis.ticks = element_blank(), 
+          axis.text = element_blank(), 
+          axis.line = element_blank())
+}
+
+
+plotMCABasico <- function(dados){
+  ggplot(data = dados, aes(x = Dim.1, y = Dim.2, label = nome)) +
+    geom_hline(yintercept = 0, colour = "gray70") +
+    geom_vline(xintercept = 0, colour = "gray70") +
+    geom_text(size = 3.,  colour = "gray70") +
     ylab("") + xlab("")+ 
     theme_classic() + 
     theme(axis.ticks = element_blank(), 
@@ -662,11 +675,9 @@ add_col_partidos_iconicos <- function(df_pontos_mca) {
 }
 
 # Lista o deputado que não tem afinidade 
-list_not_afinidade <- function(data_frame, top_n = 0){
-  n <- length(data_frame)
-  
+list_not_afinidade <- function(data_frame, top_n = 1){
   top_not_afinidade <- as.data.frame(cbind(row.names(data_frame), 
-                                           apply(data_frame, 1, function(x) names(data_frame)[which(x == max(sort(x, partial = n-top_n)[n-top_n]))])))
+                                           apply(data_frame, 1, function(x) names(data_frame)[which(x == sort(x, decreasing = TRUE)[top_n])])))
   
   l1 <- sapply(top_not_afinidade$V2, length)
   unlist.col1 <- rep(top_not_afinidade$V1, l1)
@@ -683,11 +694,9 @@ list_not_afinidade <- function(data_frame, top_n = 0){
 }
 
 # Lista o deputado que tem afinidade
-list_afinidade <- function(data_frame, top_n = 0){
-  n <- length(data_frame)
-  
-  top_afinidade <- as.data.frame(cbind(row.names(data_frame), 
-                                           apply(data_frame, 1, function(x) names(data_frame)[which(x == min(sort(x, partial = n-top_n)[n-top_n]))])))
+list_afinidade <- function(data_frame, top_n = 1){
+  top_afinidade <-  as.data.frame(cbind(row.names(data_frame), 
+                                        apply(data_frame, 1, function(x) names(data_frame)[which(x == sort(x, decreasing = FALSE)[top_n])])))
   
   l1 <- sapply(top_afinidade$V2, length)
   unlist.col1 <- rep(top_afinidade$V1, l1)
@@ -705,19 +714,19 @@ list_afinidade <- function(data_frame, top_n = 0){
 
 # Cria data frame com o top not afinidade
 top_not_afinidade <- function(data_frame){
-  df_5 <- list_not_afinidade(data_frame, 4)
+  df_5 <- list_not_afinidade(data_frame, 5)
   colnames(df_5) <- c("id_dep", "5")
   
-  df_4 <- list_not_afinidade(data_frame, 3)
+  df_4 <- list_not_afinidade(data_frame, 4)
   colnames(df_4) <- c("id_dep", "4")
   
-  df_3 <- list_not_afinidade(data_frame, 2)
+  df_3 <- list_not_afinidade(data_frame, 3)
   colnames(df_3) <- c("id_dep", "3")
   
-  df_2 <- list_not_afinidade(data_frame, 1)
+  df_2 <- list_not_afinidade(data_frame, 2)
   colnames(df_2) <- c("id_dep", "2")
   
-  df_1 <- list_not_afinidade(data_frame, 0)
+  df_1 <- list_not_afinidade(data_frame, 1)
   colnames(df_1) <- c("id_dep", "1")
   
   join <- left_join(df_1, df_2, by = "id_dep") %>%
@@ -731,66 +740,55 @@ top_not_afinidade <- function(data_frame){
   join <- filter(join, del < 1)
   temp <- apply(join, 2, duplicated) 
   
-  join$del <- temp[,1]
-  join <- filter(join, del == 0)
+  if (length(temp) != 0){
+    join$del <- temp[,1]
+    join <- filter(join, del == 0)
+  }
   
   join
 }
 
 # Cria data frame com o top afinidade
-top_afinidade <- function(data_frame){
-  data_frame <- votos_por_deputado
+#top_afinidade <- function(data_frame){
+#  df_5 <- list_afinidade(data_frame, 5)
+#  colnames(df_5) <- c("id_dep", "5")
   
-  df_5 <- list_afinidade(data_frame, 5)
-  colnames(df_5) <- c("id_dep", "5")
+#  df_4 <- list_afinidade(data_frame, 4)
+#  colnames(df_4) <- c("id_dep", "4")
   
-  df_4 <- list_afinidade(data_frame, 4)
-  colnames(df_4) <- c("id_dep", "4")
+#  df_3 <- list_afinidade(data_frame, 3)
+#  colnames(df_3) <- c("id_dep", "3")
   
-  df_3 <- list_afinidade(data_frame, 3)
-  colnames(df_3) <- c("id_dep", "3")
+#  df_2 <- list_afinidade(data_frame, 2)
+#  colnames(df_2) <- c("id_dep", "2")
   
-  df_2 <- list_afinidade(data_frame, 2)
-  colnames(df_2) <- c("id_dep", "2")
+#  df_1 <- list_afinidade(data_frame, 1)
+#  colnames(df_1) <- c("id_dep", "1")
   
-  df_1 <- list_afinidade(data_frame, 1)
-  colnames(df_1) <- c("id_dep", "1")
+#  join <- left_join(df_1, df_2, by = "id_dep") %>%
+#    left_join(df_3, by = "id_dep") %>%
+#    left_join(df_4, by = "id_dep") %>%
+#    left_join(df_5, by = "id_dep")
   
-  join <- left_join(df_1, df_2, by = "id_dep") %>%
-    left_join(df_3, by = "id_dep") %>%
-    left_join(df_4, by = "id_dep") %>%
-    left_join(df_5, by = "id_dep")
+#  temp <- apply(join, 1, duplicated) %>% apply(2, sum)
+#  join$del <- temp
   
-  temp <- apply(join, 1, duplicated) %>% apply(2, sum)
-  join$del <- temp
+#  join <- filter(join, del == 1)
+#  temp <- apply(join, 2, duplicated) 
   
-  join <- filter(join, del < 1)
-  temp <- apply(join, 2, duplicated) 
+#  if (length(temp) != 0){
+#    join$del <- temp[,1]
+#    join <- filter(join, del == 0)
+#  }
   
-  join$del <- temp[,1]
-  join <- filter(join, del == 0)
-  
-  join
-}
+#  join
+#}
 
 
 ##### FUNÇÕES PROCESSAMENTO DISCURSOS ####
 
-frequencia_palavra_discursos <- function (discursos, n_grams = 1){
-  review_text <- paste(discursos$Fala, collapse=" ")
-  review_source <- VectorSource(review_text)
-  corpus <- Corpus(review_source)
-  
-  corpus <- tm_map(corpus, content_transformer(tolower))
-  corpus <- tm_map(corpus, removePunctuation)
-  corpus <- tm_map(corpus, stripWhitespace)
-  
-  ngramTokenizer <- function(x) unlist(lapply(ngrams(words(x), n_grams), paste, collapse = " "), use.names = FALSE)
-  
-  dtm <- DocumentTermMatrix(corpus, control = list(tokenize = ngramTokenizer))
-  dtm2 <- as.matrix(dtm)
-  frequency <- colSums(dtm2)
-  frequency <- sort(frequency, decreasing = TRUE)
+frequencia_palavra_discursos <- function (discursos, n_grams = 1, stopWords = FALSE){
+  frequency <- frequencia_palavras(discursos, n_grams, stopWords)
   
   frequency <- as.data.frame(frequency)
   frequency <- cbind(Palavra = rownames(frequency), frequency)
@@ -800,6 +798,32 @@ frequencia_palavra_discursos <- function (discursos, n_grams = 1){
   
   frequency
 }
+
+
+frequencia_palavras <- function (discursos, n_grams = 1, stopWords = FALSE){
+  review_text <- paste(discursos$Fala, collapse=" ")
+  review_source <- VectorSource(review_text)
+  corpus <- Corpus(review_source)
+  
+  corpus <- tm_map(corpus, content_transformer(tolower))
+  corpus <- tm_map(corpus, removePunctuation)
+  corpus <- tm_map(corpus, stripWhitespace)
+  
+  if (stopWords){
+    corpus <- tm_map(corpus, removeWords, stopwords("portuguese"))
+  }
+  
+  
+  ngramTokenizer <- function(x) unlist(lapply(ngrams(words(x), n_grams), paste, collapse = " "), use.names = FALSE)
+  
+  dtm <- DocumentTermMatrix(corpus, control = list(tokenize = ngramTokenizer))
+  dtm2 <- as.matrix(dtm)
+  frequency <- colSums(dtm2)
+  frequency <- sort(frequency, decreasing = TRUE)
+  frequency
+}
+
+
 
 processamento_palavras_frequentes <- function(discursos.sim, discursos.nao, n_palavras = 100){
   #frequencia.discursos.sim$zipf <- frequencia.discursos.sim$frequency * frequencia.discursos.sim$top

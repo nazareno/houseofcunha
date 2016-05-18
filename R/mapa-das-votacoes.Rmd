@@ -30,20 +30,20 @@ require("rCharts")
 Carregando CSV com os votos dos deputados
 
 ```{r}
-votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "votacoes.csv",corrigir.migracoes = TRUE)
+votos_por_deputado <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes.csv", corrigir.migracoes = TRUE)
 
 # Dep que pediram a cassação de Cunha 
-cassacao.cunha <- read.table("data/cassacao-cunha.csv", header=TRUE, quote="\"")
+cassacao.cunha <- read.table("dados/cassacao-cunha.csv", header=TRUE, quote="\"")
 
 # Bancadas
-bancada.bala <- read.table("data/bancada-bala.csv", header=TRUE, quote="\"")
-bancada.humanista <- read.table("data/bancada-humanista.csv", header=TRUE, quote="\"")
-bancada.sindical <- read.table("data/bancada-sindical.csv", header=TRUE, quote="\"")
-bancada.evangelica <- read.table("data/bancada-evangelica.csv", header=TRUE, quote="\"")
-bancada.ruralista <- read.table("data/bancada-ruralista.csv", header=TRUE, quote="\"")
-cabecas <- read.table("data/cabecas.csv", header=TRUE, quote="\"")
-conselho.etica <- read.table("data/conselho-de-etica.csv", header=TRUE, quote="\"")
-deputados <- read.delim("deputados/deputados.csv")
+bancada.bala <- read.table("dados/bancada-bala.csv", header=TRUE, quote="\"")
+bancada.dHumanos <- read.table("dados/bancada-direitos-humanos.csv", header=TRUE, quote="\"")
+bancada.sindical <- read.table("dados/bancada-sindical.csv", header=TRUE, quote="\"")
+bancada.evangelica <- read.table("dados/bancada-evangelica.csv", header=TRUE, quote="\"")
+bancada.ruralista <- read.table("dados/bancada-ruralista.csv", header=TRUE, quote="\"")
+cabecas <- read.table("dados/cabecas.csv", header=TRUE, quote="\"")
+conselho.etica <- read.table("dados/conselho-de-etica.csv", header=TRUE, quote="\"")
+deputados.detalhes <- read.csv("~/Projetos/houseofcunha/dados/deputados-detalhes.csv")
 ```
 
 ```{r}
@@ -60,16 +60,10 @@ mca1_obs_df = data.frame(mca1$ind$coord,
                          uf = votos_por_deputado$uf,
                          id_dep = votos_por_deputado$id_dep)
 
-
 # To plot
 mca1_obs_df$id_dep <- as.integer(as.character(mca1_obs_df$id_dep))
-mca1_obs_df <- left_join(mca1_obs_df, deputados, by = c("id_dep" = "ideCadastro"))
+mca1_obs_df <- left_join(mca1_obs_df, select(deputados.detalhes, -partido, -nome, -uf), by = c("id_dep" = "ideCadastro"))
 #write.csv2(mca1_obs_df, "mapas_votacoes.csv", row.names = FALSE)
-
-mca1_obs_df_names <- names(mca1_obs_df)
-mca1_obs_df_names[3] <- "nome"
-mca1_obs_df_names[4] <- "partido"
-names(mca1_obs_df) <- mca1_obs_df_names
 
 # Alguns notáveis
 mca1_obs_df$destaque <- mca1_obs_df$nome %in% c("Tiririca", 
@@ -96,7 +90,7 @@ mca1_obs_df$destaque_bancada_bala <-  mca1_obs_df$nome %in% bancada.bala$Bala
 mca1_obs_df$destaque_cabeca <- mca1_obs_df$nome %in% cabecas$Cabeca
 
 # Destaque dos deputados que participam da bancada humanista
-mca1_obs_df$destaque_bancada_humanista <-  mca1_obs_df$nome %in% bancada.humanista$Humanista
+mca1_obs_df$destaque_bancada_humanista <-  mca1_obs_df$nome %in% bancada.dHumanos$Humanista
 
 # Bancada Evangelica 
 mca1_obs_df$destaque_bancada_evangelica <- mca1_obs_df$nome %in% bancada.evangelica$Evangelica
@@ -111,7 +105,7 @@ mca1_obs_df$destaque_bancada_sindical <- mca1_obs_df$nome %in% bancada.sindical$
 mca1_obs_df$destaque_cassacao  <- mca1_obs_df$nome %in% cassacao.cunha$Cassacao
 
 # Os da PB
-mca1_obs_df$destaque_pb <- ifelse(mca1_obs_df$uf.x == "PB", "PB", "Demais estados")
+mca1_obs_df$destaque_pb <- ifelse(mca1_obs_df$uf == "PB", "PB", "Demais estados")
 
 # Partidos icônicos
 mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in% 
@@ -129,7 +123,7 @@ mca1_obs_df$destaque_cassacao_pt <-  ifelse(as.character(mca1_obs_df$partido) ==
 # E E. Cunha
 mca1_obs_df$destaque_cunha <- ifelse(mca1_obs_df$nome == "Eduardo Cunha", TRUE, FALSE)
 
-write.csv(mca1_obs_df,"data/destaques.csv")
+#write.csv(mca1_obs_df,"data/destaques.csv")
 
 ```
 
@@ -138,14 +132,14 @@ Visão geral
 ```{r}
 # plot of variable categories
 semcunha <- filter(mca1_obs_df, nome != "Eduardo Cunha")
-p <- plotMCA(semcunha)
+p <- plotMCABasico(semcunha)
 p
 
-png("visao-geral.png", width = 800, height = 600)
+png("plot/outros/visao-geral.png", width = 800, height = 600)
 p
 dev.off()
 
-png("visao-geral-gg.png", width = 1500, height = 1200)
+png("plot/outros/visao-geral-gg.png", width = 1500, height = 1200)
 p
 dev.off()
 
@@ -154,7 +148,7 @@ p <- p + geom_point(data = filter(mca1_obs_df, nome == "Eduardo Cunha"),
                     size = 15, 
                     alpha = 0.7)
 
-png("visao-geral-cc.png", width = 800, height = 600)
+png("plot/outros/visao-geral-cc.png", width = 800, height = 600)
 p
 dev.off()
 
@@ -341,32 +335,15 @@ x <- votacao.cast %>% filter(nome %in% nomes)
 Partidos
 
 ```{r}
-p <- ggplot(data = semcunha, 
-       aes(x = Dim.1, y = Dim.2, label = nome, 
-           colour = destaque_partido)) +
-  geom_hline(yintercept = 0, colour = "gray70") +
-  geom_vline(xintercept = 0, colour = "gray70") +
-  geom_text(size = 3.) +
-  scale_colour_manual(values = c(alpha("grey70", .6), 
-                                 alpha("darkred", 1), 
-                                 alpha("#0066CC", 1),
-                                 alpha("#E69F00", 1),
-                                 alpha("#FF3300", 1)
-                                 ), 
-                      guide = guide_legend(title = "partido", 
-                                           override.aes = list(alpha = 1, size = 4))) + 
-  ylab("") + xlab("")+ 
-  theme_classic() + 
-  theme(axis.ticks = element_blank(), 
-        axis.text = element_blank(), 
-        axis.line = element_blank())
+p <- plotMCA(mca1_obs_df)
+
 p
-png("plot/partidos.png", 
+png("plot/outros/partidos.png", 
     width = 800, height = 600)
 p
 dev.off()
 
-png("plot/partidos-gg.png", width = 1500, height = 1200)
+png("plot/outros/partidos-gg.png", width = 1500, height = 1200)
 p
 dev.off()
 ```
@@ -393,11 +370,38 @@ p <- ggplot(data = semcunha,
         axis.text = element_blank(), 
         axis.line = element_blank())
 
-png("plot/deputados-da-pb.png", 
+png("plot/outros/deputados-da-pb.png", 
     width = 800, height = 600)
 p
 dev.off()
 
+```
+
+Gráfico com alguns deputados icônicos
+
+```{r}
+p <- ggplot(data = semcunha, 
+            aes(x = Dim.1, 
+                y = Dim.2, 
+                label = nome, 
+                colour = destaque)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text() +
+  scale_colour_manual(values = c(alpha("grey70", .5), 
+                                 alpha("black", 1))) + 
+  scale_size_manual(values = c(3.2, 4)) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(legend.position = "none", 
+        axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+
+png("plot/outros/icones.png", 
+    width = 800, height = 600)
+p
+dev.off()
 ```
 
 Interativo
