@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<proposicao tipo="PEC       " numero="4" ano="2015">
+  <nomeProposicao>PEC 4/2015</nomeProposicao>
+  <idProposicao>946734</idProposicao>
+  <idProposicaoPrincipal>
+  </idProposicaoPrincipal>
+  <nomeProposicaoOrigem>
+  </nomeProposicaoOrigem>
+  <tipoProposicao>Proposta de Emenda à Constituição</tipoProposicao>
+  <tema>Finanças Públicas e Orçamento</tema>
+  <Ementa>Altera o art. 76 do Ato das Disposições Constitucionais Transitórias</Ementa>
+  <ExplicacaoEmenta>Prorroga  a vigência da DRU até 31 de dezembro de 2019. Propõe a retirada escalonada da incidência da desvinculação de receita da arrecadação das contribuições sociais destinadas ao financiamento da seguridade social.</ExplicacaoEmenta>
+  <Autor>André Figueiredo</Autor>
+  <ideCadastro>133439</ideCadastro>
+  <ufAutor>CE</ufAutor>
+  <partidoAutor>PDT       </partidoAutor>
+  <DataApresentacao>11/02/2015</DataApresentacao>
+  <RegimeTramitacao>Especial</RegimeTramitacao>
+  <UltimoDespacho Data="25/02/2015">À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do Plenário. Regime de Tramitação: Especial</UltimoDespacho>
+  <Apreciacao>Proposição Sujeita à Apreciação do Plenário</Apreciacao>
+  <Indexacao>Ato das Disposições Constitucionais Transitórias, prorrogação, vigência, Desvinculação de Receitas da União (DRU), retirada, incidência, arrecadação, contribuição social, destinação, financiamento, seguridade social.</Indexacao>
+  <Situacao>Diversas</Situacao>
+  <LinkInteiroTeor>http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1300563</LinkInteiroTeor>
+  <apensadas>
+    <proposicao>
+      <nomeProposicao>PEC 87/2015</nomeProposicao>
+      <codProposicao>1567815</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 112/2015</nomeProposicao>
+      <codProposicao>1635604</codProposicao>
+    </proposicao>
+  </apensadas>
+</proposicao>
