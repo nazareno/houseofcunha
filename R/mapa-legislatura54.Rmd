@@ -1,0 +1,121 @@
+---
+title: "mapa-legislatura54"
+output: html_document
+---
+
+Compara as posições dos deputados federais considerando os votos em cada proposição. 
+Bibliotecas necessárias 
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(reshape2)
+require(cluster)
+require(ade4)
+require(scales)
+require(FactoMineR)
+
+source("R/camara-lib.R")
+
+# para instalar o rCharts:
+# require(devtools)
+# install_github('rCharts', 'ramnathv')
+require("rCharts")
+```
+
+Carregando CSV com os votos dos deputados
+
+```{r}
+votacoes.2007 <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes-2007.csv", corrigir.migracoes = TRUE)
+votacoes.2008 <- recuperar_votos_por_deputado(arquivo.votos = "dados/votacoes-2008.csv", corrigir.migracoes = TRUE)
+
+x <- outer_join_impl(votacoes.2007, votacoes.2008, by$ = "id_dep")
+
+x.partido.y <- NULL
+x.uf.y <- NULL
+
+colnames(x)
+```
+
+```{r}
+mca1 = MCA(votos_por_deputado, 
+           ncp = 2, # Default is 5 
+           graph = FALSE,
+           quali.sup = c(1:4),
+           na.method = "Average") # NA or Average
+
+# data frame with observation coordinates
+mca1_obs_df = data.frame(mca1$ind$coord, 
+                         nome = votos_por_deputado$nome,
+                         partido = votos_por_deputado$partido, 
+                         uf = votos_por_deputado$uf,
+                         id_dep = votos_por_deputado$id_dep)
+
+# Alguns notáveis
+mca1_obs_df$destaque <- mca1_obs_df$nome %in% c("Raul Jungmann", 
+                                                "Bruno Araújo", 
+                                                "Michel Temer", 
+                                                "Leonardo Picciani", 
+                                                "Ricardo Barros",
+                                                "Sarney Filho")
+
+
+# Partidos icônicos
+mca1_obs_df$destaque_partido = factor(ifelse(mca1_obs_df$partido %in% 
+                                               c("pmdb", "psdb", "pt", "psol"), 
+                                             as.character(mca1_obs_df$partido), 
+                                             "outros"))
+
+```
+
+Visão geral
+
+```{r}
+# plot of variable categories
+p <- plotMCABasico(mca1_obs_df)
+p
+
+png("plot/legislatura54/visao-geral.png", width = 800, height = 600)
+p
+dev.off()
+```
+
+
+Gráfico com os deputados que são ministros de Temer
+
+```{r}
+p <- ggplot(data = mca1_obs_df, 
+       aes(x = Dim.1, y = Dim.2, label = nome, 
+           colour = destaque)) +
+  geom_hline(yintercept = 0, colour = "gray70") +
+  geom_vline(xintercept = 0, colour = "gray70") +
+  geom_text(size = 3.) +
+  scale_colour_manual(values = c(alpha("grey70", .4),
+                                 alpha("#018571", 1), 
+                                 alpha("darkred", 1), 
+                                 alpha("#E69F00", 1),
+                                  alpha("#FF3300", 1)                      
+                                 )) + 
+  ylab("") + xlab("")+ 
+  theme_classic() + 
+  theme(axis.ticks = element_blank(), 
+        axis.text = element_blank(), 
+        axis.line = element_blank())
+p
+png("plot/legislatura54/destaque-ministros.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```
+
+Partidos
+
+```{r}
+p <- plotMCA(mca1_obs_df)
+
+p
+png("plot/legislatura54/destaque-partido-2008.png", 
+    width = 800, height = 600)
+p
+dev.off()
+```

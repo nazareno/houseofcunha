@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<proposicao tipo="PEC       " numero="446" ano="2009">
+  <nomeProposicao>PEC 446/2009</nomeProposicao>
+  <idProposicao>463451</idProposicao>
+  <idProposicaoPrincipal>
+  </idProposicaoPrincipal>
+  <nomeProposicaoOrigem>PEC 41/2008</nomeProposicaoOrigem>
+  <tipoProposicao>Proposta de Emenda à Constituição</tipoProposicao>
+  <tema>Administração Pública; Segurança Pública</tema>
+  <Ementa>Institui o piso salarial para os servidores policiais.</Ementa>
+  <ExplicacaoEmenta>
+  </ExplicacaoEmenta>
+  <Autor>Senado Federal - Renan Calheiros</Autor>
+  <ideCadastro>
+  </ideCadastro>
+  <ufAutor>AL</ufAutor>
+  <partidoAutor>PMDB      </partidoAutor>
+  <DataApresentacao>09/12/2009</DataApresentacao>
+  <RegimeTramitacao>Especial</RegimeTramitacao>
+  <UltimoDespacho Data="16/12/2009">À Comissão de Constituição e Justiça e de CidadaniaProposição Sujeita à Apreciação do PlenárioRegime de Tramitação: Especial</UltimoDespacho>
+  <Apreciacao>Proposição Sujeita à Apreciação do Plenário</Apreciacao>
+  <Indexacao>Segurança Pública, criação, fundo contábil, base de cálculo, receita tributária, cobertura, piso salarial, pagamento, salário, servidor público, policial.</Indexacao>
+  <Situacao>PLEN - Pronta para Pauta</Situacao>
+  <LinkInteiroTeor>http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=723694</LinkInteiroTeor>
+  <apensadas>
+    <proposicao>
+      <nomeProposicao>PEC 340/2009</nomeProposicao>
+      <codProposicao>427307</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 356/2009</nomeProposicao>
+      <codProposicao>431528</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 414/2009</nomeProposicao>
+      <codProposicao>453490</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 425/2009</nomeProposicao>
+      <codProposicao>457832</codProposicao>
+    </proposicao>
+    <proposicao>
+      <nomeProposicao>PEC 300/2008</nomeProposicao>
+      <codProposicao>414367</codProposicao>
+    </proposicao>
+  </apensadas>
+</proposicao>

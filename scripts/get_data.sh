@@ -1,7 +1,7 @@
 #curl --connect-timeout 15 --retry 5 --keepalive-time 10 "http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoesVotadasEmPlenario?ano=2015&tipo=" > ../dados/proposicoes-votadas.xml
 #curl --connect-timeout 15 --retry 5 --keepalive-time 10 "http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoesVotadasEmPlenario?ano=2016&tipo=" >> ../dados/proposicoes-votadas.xml 
 
-curl --connect-timeout 15 --retry 5 --keepalive-time 10 "http://www.camara.leg.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoesVotadasEmPlenario?ano=2008&tipo="  > ../dados/proposicoes-votadas.xml
+curl --connect-timeout 15 --retry 5 --keepalive-time 10 "http://www.camara.leg.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoesVotadasEmPlenario?ano=2010&tipo="  > ../dados/proposicoes-votadas.xml
 
 
 java -jar xml2csv-conv.jar ../dados/proposicoes-votadas.xml ../dados/proposicoes-votadas.csv
