@@ -20,7 +20,6 @@ header =  'tipo,num_pro,ano,id_votacao,resumo,data,hora,objetivo,sessao,nome,id_
 fileToWrite.write(header + '\n')
 
 for file in files:
-
     try:
         xmldoc = minidom.parse(file)
     except:
@@ -106,5 +105,5 @@ for file in files:
                 to_print_final =  ','.join(to_print + to_print_dep)
                 fileToWrite.write(to_print_final + "\n")
 
-
+fileToWrite.flush()
 fileToWrite.close()
