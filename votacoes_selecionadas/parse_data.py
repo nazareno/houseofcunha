@@ -16,10 +16,10 @@ def filter_selected_voting(all_voting_filename, selected_voting_names_filename, 
 
     missing_votings = set(selected_voting_names.nome_votacao) - set(
         selected_voting.drop_duplicates("nome_votacao").nome_votacao)
-    # if len(missing_votings) > 0:
-    #     raise Exception("ERROR, missing {} votings: {}".format(len(missing_votings), missing_votings))
-    # else:
-    selected_voting.to_csv(selected_voting_filename, index=False)
+    if len(missing_votings) > 0:
+        raise Exception("ERROR, missing {} votings: {}".format(len(missing_votings), missing_votings))
+    else:
+        selected_voting.to_csv(selected_voting_filename, index=False)
 
 def select_congressman(selected_voting_filename, congressman_filename):
     selected_voting = pd.read_csv(selected_voting_filename)
@@ -41,10 +41,10 @@ def unify_congressman_data(selected_voting_filename, congressman_filename):
 
     corrected_selected_voting = pd.merge(selected_voting.drop(["nome", "partido"], axis=1),
                                          congressman, on="id_dep", how="left")
-    # if len(corrected_selected_voting) != len(selected_voting):
-    #     raise Exception("Some congressman were not found")
-    # else:
-    corrected_selected_voting[selected_voting.columns].to_csv(selected_voting_filename, index=False)
+    if len(corrected_selected_voting) != len(selected_voting):
+        raise Exception("Some congressman were not found")
+    else:
+        corrected_selected_voting[selected_voting.columns].to_csv(selected_voting_filename, index=False)
 
 def select_voting_data(selected_voting_filename, selected_voting_names_filename, selected_voting_data_filename):
     selected_voting = pd.read_csv(selected_voting_filename)
@@ -55,10 +55,10 @@ def select_voting_data(selected_voting_filename, selected_voting_names_filename,
     selected_voting_data = selected_voting.drop_duplicates("nome_votacao")[columns]
     missing_votings = set(selected_voting_names.nome_votacao) - set(selected_voting_data.nome_votacao)
 
-    # if len(missing_votings) > 0:
-    #     raise Exception("{} voting names are missing: {}".format(len(missing_votings), missing_votings  ))
-    # else:
-    selected_voting_data.to_csv(selected_voting_data_filename, index=False)
+    if len(missing_votings) > 0:
+        raise Exception("{} voting names are missing: {}".format(len(missing_votings), missing_votings  ))
+    else:
+        selected_voting_data.to_csv(selected_voting_data_filename, index=False)
 
 
 filter_selected_voting(ALL_VOTING_FILENAME, SELECTED_VOTING_NAMES_FILENAME, SELECTED_VOTING_FILENAME)

@@ -5,7 +5,7 @@ import numpy as np
 def vote_to_int(vote):
     #'sem orientação' and 'liberado' are used only at parties orientation
     vote_to_int_values = {"sim": 1, "não": 0, "liberado": -1, "abstenção":-2,
-                          "obstrução":-3, "art. 17":-4, "sem orientação": -5, "não votou":None}
+                          "obstrução":-3, "art. 17":-4, "sem orientação": -5, "não votou":None, "-":None}
 
     if vote is None or vote is np.nan:
         return -1
