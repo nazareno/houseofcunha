@@ -1,4 +1,4 @@
-id_dep,deputado,partido,uf,Impeachment
+id_dep,deputado,partido,uf,voto
 178864,Adail Carneiro,phs,CE,sim
 178914,Adalberto Cavalcanti,ptb,PE,não
 178890,Adelmo Carneiro Leão,pt,MG,não
@@ -492,8 +492,8 @@ id_dep,deputado,partido,uf,Impeachment
 73424,Simão Sessim,pp,RJ,sim
 160610,Valmir Assunção,pt,BA,não
 178902,Zeca do PT,pt,MS,não
-5830461,André de Paula,psd,PE,sim
-5830335,Danilo Cabral,psb,PE,sim
+74471,André de Paula,psd,PE,sim
+160528,Danilo Cabral,psb,PE,sim
 5830733,Sebastião Oliveira,pr,PE,abstenção
 5830295,Capitão Fábio Abreu,ptb,PI,não
 5830460,Rejane Dias,pt,PI,não
@@ -503,10 +503,10 @@ id_dep,deputado,partido,uf,Impeachment
 186775,Franklin Lima,pp,MG,sim
 141441,George Hilton,pros,MG,não
 5830318,Miguel Corrêa,pt,MG,não
-5830356,Patrus Ananias,pt,MG,não
-5830793,Arolde de Oliveira,psc,RJ,sim
-5830700,Marco Antônio Cabral,pmdb,RJ,sim
-5830515,Pedro Paulo,pmdb,RJ,sim
+74160,Patrus Ananias,pt,MG,não
+74833,Arolde de Oliveira,psc,RJ,sim
+178942,Marco Antônio Cabral,pmdb,RJ,sim
+122158,Pedro Paulo,pmdb,RJ,sim
 5830368,Arnaldo Jardim,pps,SP,sim
 160653,Roberto de Lucena,pv,SP,sim
 5830480,Rodrigo Garcia,dem,SP,sim
