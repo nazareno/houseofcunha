@@ -145,7 +145,7 @@ parse_orientation("parties_orientation_selected.csv", "parties_already_know.csv"
 parse_parties_data("parties_orientation_selected_parsed.csv", "partidos_votos.csv", "partidos_votos_nomes.csv")
 
 external_voting = [("votacoes_selecionadas/impeachmeant_partidos.csv", "Impeachment"),
-                   ("votacoes_selecionadas/temer_partidos.csv", "Arquivamento da denúncia contra Temer")]
+                   ("votacoes_selecionadas/temer_partidos.csv", "Prosseguimento da denúncia contra Temer")]
 
 add_external_voting_parties(external_voting,
                             "partidos_votos.csv", "partidos_votos_nomes.csv",

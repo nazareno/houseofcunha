@@ -121,20 +121,11 @@ parse_congressman_data("votacoes_selecionadas.csv", "deputados_votos.csv", "depu
 
 parse_parties_data("orientacao_partido.csv", "partidos_votos.csv", "partidos_votos_nomes.csv")
 
-
 external_voting = [("votacoes_selecionadas/impeachmeant_deputados.csv", "Impeachment"),
-                ("votacoes_selecionadas/temer_deputados.csv", "Arquivamento da denúncia contra Temer")]
+                ("votacoes_selecionadas/temer_deputados.csv", "Prosseguimento da denúncia contra Temer")]
 
 add_external_voting_congressman(external_voting,
                                 "deputados_votos.csv", "deputados_votos_nomes.csv",
                                 "deputados_votos_total.csv", "deputados_votos_nomes_total.csv")
 
 extract_congressman("deputados_votos_total.csv", "deputados.csv")
-
-external_voting = [("votacoes_selecionadas/impeachmeant_partidos.csv", "Impeachment"),
-                   ("votacoes_selecionadas/temer_partidos.csv", "Arquivamento da denúncia contra Temer")]
-
-add_external_voting_parties(external_voting,
-                            "partidos_votos.csv", "partidos_votos_nomes.csv",
-                            "partidos_votos_total.csv", "partidos_votos_nomes_total.csv")
-
