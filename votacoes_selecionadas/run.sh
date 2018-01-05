@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #### 1 - Put XML selecting votes to folder "votacoes_selecionadas"
 #### 2 - Run parser scritps
 python parser.py "votacoes_selecionadas/*.xml" "votacoes.csv"

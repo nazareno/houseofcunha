@@ -1,18 +1,8 @@
 # coding: utf-8
 import pandas as pd
-import numpy as np
 import copy
+from utils import vote_to_int, check_added_duplicated_row
 
-
-def vote_to_int(vote):
-    vote_to_int_values = {"sim": 1, "não": 0, "liberado": -1, "abstenção":-2,
-                          "obstrução":-3, "art. 17":-4, "sem orientação": -5, "não votou":None, "-":None}
-
-    if vote is None or vote is np.nan:
-        return -1
-    if vote in vote_to_int_values:
-        return vote_to_int_values[vote]
-    raise Exception("Not found vote {}".format(vote))
 
 def parse_orientation(orientation_filename, parties_already_know_filename, orientantion_parsed_filename):
     orient = pd.read_csv(orientation_filename)
@@ -84,18 +74,23 @@ def add_external_voting_parties(external_voting, parties_voting_filename, partie
 
 
         parties_voting_names = pd.merge(parties_voting_names,
-                                        external_vote[["nome", "voto"]], on="nome", how="left")
+                                        external_vote[["nome", "voto"]], on="nome", how="outer")
         parties_voting_names = parties_voting_names.rename(columns={"voto": info[1]})
         parties_voting_names = parties_voting_names.fillna("não votou")
 
         parties_voting_int = pd.merge(parties_voting_int,
-                                      external_vote[["nome", "voto_int"]], on="nome", how="left")
+                                      external_vote[["nome", "voto_int"]], on="nome", how="outer")
         parties_voting_int = parties_voting_int.rename(columns={"voto_int": info[1]})
-        parties_voting_int = parties_voting_int.fillna(-10)
-        parties_voting_int.iloc[:, 1:] = parties_voting_int.iloc[:, 1:].astype(int)
 
-        parties_voting_int.to_csv(out_parties_voting_filename, index=False)
-        parties_voting_names.to_csv(out_parties_voting_name_filename, index=False)
+        check_added_duplicated_row(parties_voting_int, "nome", info[1])
+        check_added_duplicated_row(parties_voting_names, "nome", info[1])
+
+
+    parties_voting_int = parties_voting_int.fillna(-10)
+    parties_voting_int.iloc[:, 1:] = parties_voting_int.iloc[:, 1:].astype(int)
+
+    parties_voting_int.to_csv(out_parties_voting_filename, index=False)
+    parties_voting_names.to_csv(out_parties_voting_name_filename, index=False)
 
 
 parse_orientation("parties_orientation_selected.csv", "parties_already_know.csv", "parties_orientation_selected_parsed.csv")

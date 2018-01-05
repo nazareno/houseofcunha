@@ -1,17 +1,6 @@
 # coding: utf-8
 import pandas as pd
-import numpy as np
-
-def vote_to_int(vote):
-    #'sem orientação' and 'liberado' are used only at parties orientation
-    vote_to_int_values = {"sim": 1, "não": 0, "liberado": -1, "abstenção":-2,
-                          "obstrução":-3, "art. 17":-4, "sem orientação": -5, "não votou":None, "-":None}
-
-    if vote is None or vote is np.nan:
-        return -1
-    if vote in vote_to_int_values:
-        return vote_to_int_values[vote]
-    raise Exception("Not found vote {}".format(vote))
+from utils import vote_to_int, check_added_duplicated_row
 
 
 def parse_congressman_data(selected_voting_filename, congressman_voting_filename, congressman_voting_name_filename):
@@ -69,6 +58,7 @@ def add_missing_infos(infos_filename, df):
         df.rename(columns={c+"_x":c}, inplace=True)
     return df
 
+
 def add_external_voting_congressman(external_voting, congressman_voting_filename,
                                     congressman_voting_name_filename, congressman_missing_info,
                                     out_congressman_voting_filename,
@@ -86,6 +76,10 @@ def add_external_voting_congressman(external_voting, congressman_voting_filename
 
         voting_int = pd.merge(voting_int, external_vote[["id_dep", "voto_int"]], on="id_dep", how="outer")
         voting_int = voting_int.rename(columns={"voto_int": info[1]})
+
+        check_added_duplicated_row(voting_int, "id_dep", info[1])
+        check_added_duplicated_row(voting_names, "id_dep", info[1])
+
     voting_names = add_missing_infos(congressman_missing_info, voting_names)
     voting_int = add_missing_infos(congressman_missing_info, voting_int)
 
