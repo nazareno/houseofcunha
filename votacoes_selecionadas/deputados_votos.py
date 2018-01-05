@@ -35,23 +35,6 @@ def parse_congressman_data(selected_voting_filename, congressman_voting_filename
     voting_int_long.to_csv(congressman_voting_filename, index=False)
     voting_name_long.to_csv(congressman_voting_name_filename, index=False)
 
-def parse_parties_data(parties_orientation_filename, parties_voting_filename, parties_voting_name_filename):
-    voting = pd.read_csv(parties_orientation_filename)
-    voting.rename(columns={"partido": "nome"})
-    voting.orientacao_partido = voting.orientacao_partido.fillna("sem orientação")
-    voting["orientacao_partido_int"] = voting["orientacao_partido"].apply(vote_to_int)
-
-    voting_int_long = voting.pivot(index="partido", columns="nome_votacao",
-                                   values="orientacao_partido_int").reset_index()
-    voting_int_long = voting_int_long.fillna(-10)  # the party didn't exist at the time of voting
-
-    voting_name_long = voting.pivot(index="partido", columns="nome_votacao",
-                                    values="orientacao_partido").reset_index()
-    voting_name_long = voting_name_long.fillna("não votou")  # the party didn't exist at the time of voting
-
-    voting_int_long.to_csv(parties_voting_filename, index=False)
-    voting_name_long.to_csv(parties_voting_name_filename, index=False)
-
 def add_external_voting_parties(external_voting, parties_voting_filename, parties_voting_name_filename,
                                 out_parties_voting_filename, out_parties_voting_name_filename):
     parties_voting_int = pd.read_csv(parties_voting_filename)
@@ -87,7 +70,8 @@ def add_missing_infos(infos_filename, df):
     return df
 
 def add_external_voting_congressman(external_voting, congressman_voting_filename,
-                                    congressman_voting_name_filename, out_congressman_voting_filename,
+                                    congressman_voting_name_filename, congressman_missing_info,
+                                    out_congressman_voting_filename,
                                     out_congressman_voting_name_filename):
     voting_int = pd.read_csv(congressman_voting_filename)
     voting_names = pd.read_csv(congressman_voting_name_filename)
@@ -102,8 +86,8 @@ def add_external_voting_congressman(external_voting, congressman_voting_filename
 
         voting_int = pd.merge(voting_int, external_vote[["id_dep", "voto_int"]], on="id_dep", how="outer")
         voting_int = voting_int.rename(columns={"voto_int": info[1]})
-    voting_names = add_missing_infos("deputados_info_missing.csv", voting_names)
-    voting_int = add_missing_infos("deputados_info_missing.csv", voting_int)
+    voting_names = add_missing_infos(congressman_missing_info, voting_names)
+    voting_int = add_missing_infos(congressman_missing_info, voting_int)
 
     voting_names = voting_names.fillna("não votou")
     voting_int = voting_int.fillna(-1)
@@ -119,13 +103,12 @@ def extract_congressman(voting_filename, congressman_filename):
 
 parse_congressman_data("votacoes_selecionadas.csv", "deputados_votos.csv", "deputados_votos_nomes.csv")
 
-parse_parties_data("orientacao_partido.csv", "partidos_votos.csv", "partidos_votos_nomes.csv")
-
 external_voting = [("votacoes_selecionadas/impeachmeant_deputados.csv", "Impeachment"),
-                ("votacoes_selecionadas/temer_deputados.csv", "Prosseguimento da denúncia contra Temer")]
+                ("votacoes_selecionadas/temer_deputados.csv", "Prosseguimento da denúncia contra Temer"),
+                ("votacoes_selecionadas/temer_2_deputados.csv", "Prosseguimento da 2ª denúncia contra Temer")]
 
 add_external_voting_congressman(external_voting,
-                                "deputados_votos.csv", "deputados_votos_nomes.csv",
+                                "deputados_votos.csv", "deputados_votos_nomes.csv", "deputados_info_missing.csv",
                                 "deputados_votos_total.csv", "deputados_votos_nomes_total.csv")
 
 extract_congressman("deputados_votos_total.csv", "deputados.csv")
