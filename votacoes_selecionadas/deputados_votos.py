@@ -93,16 +93,24 @@ def add_external_voting_congressman(external_voting, congressman_voting_filename
 
 def extract_congressman(voting_filename, congressman_filename):
     voting = pd.read_csv(voting_filename)
+    assert len(voting[voting.id_dep == -1]) == 0
     voting[["nome","id_dep","partido"]].to_csv(congressman_filename, index=False)
 
-parse_congressman_data("votacoes_selecionadas.csv", "deputados_votos.csv", "deputados_votos_nomes.csv")
+CONGRESSMAN_VOTES_FILENAME = "data/deputados_votos.csv"
+CONGRESSMAN_VOTES_NAME_FILENAME = "data/deputados_votos_nomes.csv"
+CONGRESSMAN_INFO_MISSING_FILENAME = "data/deputados_info_missing.csv"
+CONGRESSMAN_ALL_VOTES_FILENAME = "data/deputados_votos_total.csv"
+CONGRESSMAN_ALL_VOTES_NAME_FILENAME = "data/deputados_votos_nomes_total.csv"
+CONGRESSMAN_INFOS_FILENAME = "data/deputados.csv"
+
+parse_congressman_data("data/votacoes_selecionadas.csv", CONGRESSMAN_VOTES_FILENAME, CONGRESSMAN_VOTES_NAME_FILENAME)
 
 external_voting = [("votacoes_selecionadas/impeachmeant_deputados.csv", "Impeachment"),
                 ("votacoes_selecionadas/temer_deputados.csv", "Prosseguimento da denúncia contra Temer"),
                 ("votacoes_selecionadas/temer_2_deputados.csv", "Prosseguimento da 2ª denúncia contra Temer")]
 
 add_external_voting_congressman(external_voting,
-                                "deputados_votos.csv", "deputados_votos_nomes.csv", "deputados_info_missing.csv",
-                                "deputados_votos_total.csv", "deputados_votos_nomes_total.csv")
+                                CONGRESSMAN_VOTES_FILENAME, CONGRESSMAN_VOTES_NAME_FILENAME, CONGRESSMAN_INFO_MISSING_FILENAME,
+                                CONGRESSMAN_ALL_VOTES_FILENAME, CONGRESSMAN_ALL_VOTES_NAME_FILENAME)
 
-extract_congressman("deputados_votos_total.csv", "deputados.csv")
+extract_congressman(CONGRESSMAN_ALL_VOTES_FILENAME, CONGRESSMAN_INFOS_FILENAME)
