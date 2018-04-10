@@ -37,5 +37,5 @@ def parse(fileValue,fileName,fileJSON,indexCut):
 
     deputados_json.close()
 
-parse("partidos_votos_total.csv","partidos_votos_nomes_total.csv","partidos_votos_total.json",1)
-parse("deputados_votos_total.csv","deputados_votos_nomes_total.csv","deputados_votos_total.json",4)
+parse("data/partidos_votos_total.csv","data/partidos_votos_nomes_total.csv","data/partidos_votos_total.json",1)
+parse("data/deputados_votos_total.csv","data/deputados_votos_nomes_total.csv","data/deputados_votos_total.json",4)

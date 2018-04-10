@@ -93,15 +93,15 @@ def add_external_voting_parties(external_voting, parties_voting_filename, partie
     parties_voting_names.to_csv(out_parties_voting_name_filename, index=False)
 
 
-parse_orientation("parties_orientation_selected.csv", "parties_already_know.csv", "parties_orientation_selected_parsed.csv")
+parse_orientation("data/parties_orientation_selected.csv", "data/parties_already_know.csv", "data/parties_orientation_selected_parsed.csv")
 
-parse_parties_data("parties_orientation_selected_parsed.csv", "partidos_votos.csv", "partidos_votos_nomes.csv")
+parse_parties_data("data/parties_orientation_selected_parsed.csv", "data/partidos_votos.csv", "data/partidos_votos_nomes.csv")
 
 external_voting = [("votacoes_selecionadas/impeachmeant_partidos.csv", "Impeachment"),
                    ("votacoes_selecionadas/temer_partidos.csv", "Prosseguimento da denúncia contra Temer"),
                    ("votacoes_selecionadas/temer_2_partidos.csv", "Prosseguimento da 2ª denúncia contra Temer")]
 
 add_external_voting_parties(external_voting,
-                            "partidos_votos.csv", "partidos_votos_nomes.csv",
-                            "partidos_votos_total.csv", "partidos_votos_nomes_total.csv")
+                            "data/partidos_votos.csv", "data/partidos_votos_nomes.csv",
+                            "data/partidos_votos_total.csv", "data/partidos_votos_nomes_total.csv")
 
