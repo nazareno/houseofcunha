@@ -13,6 +13,7 @@ python parse_data.py
 #### 5 - About external voting
 ##### 5.1 - Add congressman infos that are not in XML voting in "deputados_info_missing.csv"
 ##### 5.2 - Add the external file to "external_voting" variable in "deputados_votos.py" and "partidos_votos.py"
+##### 5.3 - Add file with new party names
 
 #### 6 - Run voting files:
 python deputados_votos.py

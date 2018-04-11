@@ -1,7 +1,7 @@
 # coding: utf-8
 import pandas as pd
 import copy
-from utils import vote_to_int, check_added_duplicated_row
+from utils import vote_to_int, check_added_duplicated_row, change_parties_names
 
 
 def parse_orientation(orientation_filename, parties_already_know_filename, orientantion_parsed_filename):
@@ -47,9 +47,10 @@ def parse_orientation(orientation_filename, parties_already_know_filename, orien
     df["partido"] = df["partido"].apply(lambda x: x.lower())
     df.to_csv(orientantion_parsed_filename, index=False)
 
+
 def parse_parties_data(parties_orientation_filename, parties_voting_filename, parties_voting_name_filename):
     voting = pd.read_csv(parties_orientation_filename)
-    voting.rename(columns={"partido":"nome"}, inplace=True)
+    voting.rename(columns={"partido": "nome"}, inplace=True)
     voting.orientacao_partido = voting.orientacao_partido.fillna("sem orientação")
     voting["orientacao_partido_int"] = voting["orientacao_partido"].apply(vote_to_int)
 
@@ -64,14 +65,18 @@ def parse_parties_data(parties_orientation_filename, parties_voting_filename, pa
     voting_int_long.to_csv(parties_voting_filename, index=False)
     voting_name_long.to_csv(parties_voting_name_filename, index=False)
 
+
 def add_external_voting_parties(external_voting, parties_voting_filename, parties_voting_name_filename,
-                                out_parties_voting_filename, out_parties_voting_name_filename):
+                                out_parties_voting_filename, out_parties_voting_name_filename, change_party_name):
     parties_voting_int = pd.read_csv(parties_voting_filename)
     parties_voting_names = pd.read_csv(parties_voting_name_filename)
+    new_name_parties = pd.read_csv(NEW_NAMES_PARTIES)
     for info in external_voting:
         external_vote = pd.read_csv(info[0])
-        external_vote["voto_int"] = external_vote["voto"].apply(vote_to_int)
+        if change_party_name:
+            external_vote = change_parties_names(external_vote, "nome", new_name_parties)
 
+        external_vote["voto_int"] = external_vote["voto"].apply(vote_to_int)
 
         parties_voting_names = pd.merge(parties_voting_names,
                                         external_vote[["nome", "voto"]], on="nome", how="outer")
@@ -85,7 +90,6 @@ def add_external_voting_parties(external_voting, parties_voting_filename, partie
         check_added_duplicated_row(parties_voting_int, "nome", info[1])
         check_added_duplicated_row(parties_voting_names, "nome", info[1])
 
-
     parties_voting_int = parties_voting_int.fillna(-10)
     parties_voting_int.iloc[:, 1:] = parties_voting_int.iloc[:, 1:].astype(int)
 
@@ -93,9 +97,13 @@ def add_external_voting_parties(external_voting, parties_voting_filename, partie
     parties_voting_names.to_csv(out_parties_voting_name_filename, index=False)
 
 
-parse_orientation("data/parties_orientation_selected.csv", "data/parties_already_know.csv", "data/parties_orientation_selected_parsed.csv")
+NEW_NAMES_PARTIES = "data/parties_new_names.csv"
 
-parse_parties_data("data/parties_orientation_selected_parsed.csv", "data/partidos_votos.csv", "data/partidos_votos_nomes.csv")
+parse_orientation("data/parties_orientation_selected.csv", "data/parties_already_know.csv",
+                  "data/parties_orientation_selected_parsed.csv")
+
+parse_parties_data("data/parties_orientation_selected_parsed.csv", "data/partidos_votos.csv",
+                   "data/partidos_votos_nomes.csv")
 
 external_voting = [("votacoes_selecionadas/impeachmeant_partidos.csv", "Impeachment"),
                    ("votacoes_selecionadas/temer_partidos.csv", "Prosseguimento da denúncia contra Temer"),
@@ -103,5 +111,5 @@ external_voting = [("votacoes_selecionadas/impeachmeant_partidos.csv", "Impeachm
 
 add_external_voting_parties(external_voting,
                             "data/partidos_votos.csv", "data/partidos_votos_nomes.csv",
-                            "data/partidos_votos_total.csv", "data/partidos_votos_nomes_total.csv")
+                            "data/partidos_votos_total.csv", "data/partidos_votos_nomes_total.csv", change_party_name=True)
 
