@@ -22,3 +22,6 @@ python partidos_votos.py
 #### 7 - Run script to generate json files that will be used in the website
 #in deputados_votos.csv deputados_votos_nomes.csv #out deputados_votos.json
 python parse_deputados_votos.py
+
+cp data/deputados_votos_total.json ../../quemMeRepresenta/dados/deputados_votos.json
+cp data/partidos_votos_total.json ../../quemMeRepresenta/dados/partidos_votos.json

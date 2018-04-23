@@ -1,6 +1,6 @@
 # coding: utf-8
 import pandas as pd
-from utils import vote_to_int, check_added_duplicated_row, change_parties_names_filename
+from utils import vote_to_int, check_added_duplicated_row, change_parties_names_filename, change_current_party
 
 
 def parse_congressman_data(selected_voting_filename, congressman_voting_filename, congressman_voting_name_filename):
@@ -104,6 +104,7 @@ CONGRESSMAN_ALL_VOTES_FILENAME = "data/deputados_votos_total.csv"
 CONGRESSMAN_ALL_VOTES_NAME_FILENAME = "data/deputados_votos_nomes_total.csv"
 CONGRESSMAN_INFOS_FILENAME = "data/deputados.csv"
 NEW_NAMES_PARTIES = "data/parties_new_names.csv"
+NEW_DEPUTIES_INFO = "data/deputados_info_by_api.csv"
 
 parse_congressman_data("data/votacoes_selecionadas.csv", CONGRESSMAN_VOTES_FILENAME, CONGRESSMAN_VOTES_NAME_FILENAME)
 
@@ -115,7 +116,11 @@ add_external_voting_congressman(external_voting,
                                 CONGRESSMAN_VOTES_FILENAME, CONGRESSMAN_VOTES_NAME_FILENAME, CONGRESSMAN_INFO_MISSING_FILENAME,
                                 CONGRESSMAN_ALL_VOTES_FILENAME, CONGRESSMAN_ALL_VOTES_NAME_FILENAME)
 
+change_current_party(CONGRESSMAN_ALL_VOTES_FILENAME, NEW_DEPUTIES_INFO)
+change_current_party(CONGRESSMAN_ALL_VOTES_NAME_FILENAME, NEW_DEPUTIES_INFO)
+
 change_parties_names_filename(CONGRESSMAN_ALL_VOTES_FILENAME, "partido", NEW_NAMES_PARTIES)
 change_parties_names_filename(CONGRESSMAN_ALL_VOTES_NAME_FILENAME, "partido", NEW_NAMES_PARTIES)
+
 
 extract_congressman(CONGRESSMAN_ALL_VOTES_FILENAME, CONGRESSMAN_INFOS_FILENAME)

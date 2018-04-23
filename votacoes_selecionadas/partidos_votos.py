@@ -4,7 +4,7 @@ import copy
 from utils import vote_to_int, check_added_duplicated_row, change_parties_names
 
 
-def parse_orientation(orientation_filename, parties_already_know_filename, orientantion_parsed_filename):
+def parse_orientation(orientation_filename, parties_already_know_filename, orientantion_parsed_filename, to_change_party_name):
     orient = pd.read_csv(orientation_filename)
     orient = orient[["partido", "nome_votacao", "orientacao_partido"]]
     coaliations = {
@@ -45,6 +45,10 @@ def parse_orientation(orientation_filename, parties_already_know_filename, orien
             raise Exception("Party not found: {}".format(party))
     df = pd.DataFrame.from_records(rows)
     df["partido"] = df["partido"].apply(lambda x: x.lower())
+    if to_change_party_name:
+        new_name_parties = pd.read_csv(NEW_NAMES_PARTIES)
+        new_name_parties = {r['old_name']: r['new_name'] for i, r in new_name_parties.iterrows()}
+        df['partido'] =  df["partido"].apply(lambda x: new_name_parties.get(x, x))
     df.to_csv(orientantion_parsed_filename, index=False)
 
 
@@ -53,7 +57,6 @@ def parse_parties_data(parties_orientation_filename, parties_voting_filename, pa
     voting.rename(columns={"partido": "nome"}, inplace=True)
     voting.orientacao_partido = voting.orientacao_partido.fillna("sem orientação")
     voting["orientacao_partido_int"] = voting["orientacao_partido"].apply(vote_to_int)
-
     voting_int_long = voting.pivot(index="nome", columns="nome_votacao",
                                    values="orientacao_partido_int").reset_index()
     voting_int_long = voting_int_long.fillna(-10)  # the party didn't exist at the time of voting
@@ -100,7 +103,7 @@ def add_external_voting_parties(external_voting, parties_voting_filename, partie
 NEW_NAMES_PARTIES = "data/parties_new_names.csv"
 
 parse_orientation("data/parties_orientation_selected.csv", "data/parties_already_know.csv",
-                  "data/parties_orientation_selected_parsed.csv")
+                  "data/parties_orientation_selected_parsed.csv", to_change_party_name=True)
 
 parse_parties_data("data/parties_orientation_selected_parsed.csv", "data/partidos_votos.csv",
                    "data/partidos_votos_nomes.csv")
@@ -112,4 +115,3 @@ external_voting = [("votacoes_selecionadas/impeachmeant_partidos.csv", "Impeachm
 add_external_voting_parties(external_voting,
                             "data/partidos_votos.csv", "data/partidos_votos_nomes.csv",
                             "data/partidos_votos_total.csv", "data/partidos_votos_nomes_total.csv", change_party_name=True)
-

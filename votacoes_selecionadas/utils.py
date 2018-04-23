@@ -34,3 +34,10 @@ def change_parties_names_filename(votes_file, column_party, new_name_parties_fil
     new_name_parties = pd.read_csv(new_name_parties_file)
     votes = change_parties_names(votes, column_party, new_name_parties)
     votes.to_csv(votes_file, index=False)
+
+def change_current_party(votes_file, deputies_info_file):
+    votes = pd.read_csv(votes_file)
+    deputies_info = pd.read_csv(deputies_info_file)
+    part_by_iddep = {str(d['id']): d['siglaPartido'] for index, d in deputies_info.iterrows()}
+    votes['partido'] = votes.apply(lambda x: part_by_iddep.get(str(x['id_dep']), x['partido']), axis=1)
+    votes.to_csv(votes_file, index=False)

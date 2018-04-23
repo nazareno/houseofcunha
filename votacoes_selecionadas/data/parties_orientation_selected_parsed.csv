@@ -1,20 +1,20 @@
 partido,nome_votacao,orientacao_partido
-pp,Cobrança de cursos em universidades públicas,sim
+progressistas,Cobrança de cursos em universidades públicas,sim
 ptb,Cobrança de cursos em universidades públicas,sim
 psc,Cobrança de cursos em universidades públicas,sim
 phs,Cobrança de cursos em universidades públicas,sim
-pmdb,Cobrança de cursos em universidades públicas,sim
-pen,Cobrança de cursos em universidades públicas,sim
+mdb,Cobrança de cursos em universidades públicas,sim
+patriotas,Cobrança de cursos em universidades públicas,sim
 pt,Cobrança de cursos em universidades públicas,liberado
 psdb,Cobrança de cursos em universidades públicas,sim
 prb,Cobrança de cursos em universidades públicas,sim
-ptn,Cobrança de cursos em universidades públicas,sim
+podemos,Cobrança de cursos em universidades públicas,sim
 pmn,Cobrança de cursos em universidades públicas,sim
 prp,Cobrança de cursos em universidades públicas,sim
 psdc,Cobrança de cursos em universidades públicas,sim
 ptc,Cobrança de cursos em universidades públicas,sim
 psl,Cobrança de cursos em universidades públicas,sim
-ptdob,Cobrança de cursos em universidades públicas,sim
+avante,Cobrança de cursos em universidades públicas,sim
 pr,Cobrança de cursos em universidades públicas,liberado
 psd,Cobrança de cursos em universidades públicas,sim
 psb,Cobrança de cursos em universidades públicas,liberado
@@ -27,23 +27,23 @@ pps,Cobrança de cursos em universidades públicas,sim
 pv,Cobrança de cursos em universidades públicas,sim
 psol,Cobrança de cursos em universidades públicas,não
 rede,Cobrança de cursos em universidades públicas,não
-pmdb,Transgênico,sim
-pp,Transgênico,sim
+mdb,Transgênico,sim
+progressistas,Transgênico,sim
 ptb,Transgênico,sim
 psc,Transgênico,sim
 phs,Transgênico,sim
-pen,Transgênico,sim
+patriotas,Transgênico,sim
 pt,Transgênico,não
 psdb,Transgênico,sim
 prb,Transgênico,sim
-ptn,Transgênico,sim
+podemos,Transgênico,sim
 pmn,Transgênico,sim
 prp,Transgênico,sim
 psdc,Transgênico,sim
 prtb,Transgênico,sim
 ptc,Transgênico,sim
 psl,Transgênico,sim
-ptdob,Transgênico,sim
+avante,Transgênico,sim
 psd,Transgênico,sim
 pr,Transgênico,sim
 psb,Transgênico,não
@@ -55,12 +55,12 @@ pros,Transgênico,sim
 pps,Transgênico,sim
 pv,Transgênico,não
 psol,Transgênico,não
-pp,Terceirização total 2017,sim
-ptn,Terceirização total 2017,sim
+progressistas,Terceirização total 2017,sim
+podemos,Terceirização total 2017,sim
 phs,Terceirização total 2017,sim
 prp,Terceirização total 2017,sim
-ptdob,Terceirização total 2017,sim
-pmdb,Terceirização total 2017,sim
+avante,Terceirização total 2017,sim
+mdb,Terceirização total 2017,sim
 pt,Terceirização total 2017,não
 psdb,Terceirização total 2017,sim
 pr,Terceirização total 2017,sim
@@ -79,25 +79,25 @@ pps,Terceirização total 2017,liberado
 psol,Terceirização total 2017,não
 pv,Terceirização total 2017,sim
 rede,Terceirização total 2017,não
-pen,Terceirização total 2017,sim
+patriotas,Terceirização total 2017,sim
 pmb,Terceirização total 2017,não
-pmdb,Infaticídio indígena,sim
-pp,Infaticídio indígena,sim
+mdb,Infaticídio indígena,sim
+progressistas,Infaticídio indígena,sim
 ptb,Infaticídio indígena,sim
 psc,Infaticídio indígena,sim
 phs,Infaticídio indígena,sim
-pen,Infaticídio indígena,sim
+patriotas,Infaticídio indígena,sim
 pt,Infaticídio indígena,não
 psdb,Infaticídio indígena,sim
 prb,Infaticídio indígena,sim
-ptn,Infaticídio indígena,sim
+podemos,Infaticídio indígena,sim
 pmn,Infaticídio indígena,sim
 prp,Infaticídio indígena,sim
 psdc,Infaticídio indígena,sim
 prtb,Infaticídio indígena,sim
 ptc,Infaticídio indígena,sim
 psl,Infaticídio indígena,sim
-ptdob,Infaticídio indígena,sim
+avante,Infaticídio indígena,sim
 pr,Infaticídio indígena,sim
 psd,Infaticídio indígena,sim
 psb,Infaticídio indígena,sim
@@ -109,23 +109,23 @@ pros,Infaticídio indígena,sim
 pps,Infaticídio indígena,sim
 pv,Infaticídio indígena,não
 psol,Infaticídio indígena,não
-pmdb,Terceirização,sim
-pp,Terceirização,sim
+mdb,Terceirização,sim
+progressistas,Terceirização,sim
 ptb,Terceirização,sim
 psc,Terceirização,sim
 phs,Terceirização,sim
-pen,Terceirização,sim
+patriotas,Terceirização,sim
 pt,Terceirização,não
 psdb,Terceirização,sim
 prb,Terceirização,liberado
-ptn,Terceirização,liberado
+podemos,Terceirização,liberado
 pmn,Terceirização,liberado
 prp,Terceirização,liberado
 psdc,Terceirização,liberado
 prtb,Terceirização,liberado
 ptc,Terceirização,liberado
 psl,Terceirização,liberado
-ptdob,Terceirização,liberado
+avante,Terceirização,liberado
 psd,Terceirização,sim
 pr,Terceirização,sim
 psb,Terceirização,sim
@@ -137,23 +137,23 @@ pros,Terceirização,liberado
 pps,Terceirização,sim
 pv,Terceirização,sim
 psol,Terceirização,não
-pmdb,Maioridade 1,sim
-pp,Maioridade 1,sim
+mdb,Maioridade 1,sim
+progressistas,Maioridade 1,sim
 ptb,Maioridade 1,sim
 psc,Maioridade 1,sim
 phs,Maioridade 1,sim
-pen,Maioridade 1,sim
+patriotas,Maioridade 1,sim
 pt,Maioridade 1,não
 psdb,Maioridade 1,sim
 prb,Maioridade 1,sim
-ptn,Maioridade 1,sim
+podemos,Maioridade 1,sim
 pmn,Maioridade 1,sim
 prp,Maioridade 1,sim
 psdc,Maioridade 1,sim
 prtb,Maioridade 1,sim
 ptc,Maioridade 1,sim
 psl,Maioridade 1,sim
-ptdob,Maioridade 1,sim
+avante,Maioridade 1,sim
 psd,Maioridade 1,sim
 pr,Maioridade 1,sim
 psb,Maioridade 1,não
@@ -165,23 +165,23 @@ pros,Maioridade 1,não
 pps,Maioridade 1,não
 pv,Maioridade 1,não
 psol,Maioridade 1,não
-pmdb,Maioridade 2,sim
-pp,Maioridade 2,sim
+mdb,Maioridade 2,sim
+progressistas,Maioridade 2,sim
 ptb,Maioridade 2,sim
 psc,Maioridade 2,sim
 phs,Maioridade 2,sim
-pen,Maioridade 2,sim
+patriotas,Maioridade 2,sim
 pt,Maioridade 2,não
 psdb,Maioridade 2,sim
 prb,Maioridade 2,sim
-ptn,Maioridade 2,sim
+podemos,Maioridade 2,sim
 pmn,Maioridade 2,sim
 prp,Maioridade 2,sim
 psdc,Maioridade 2,sim
 prtb,Maioridade 2,sim
 ptc,Maioridade 2,sim
 psl,Maioridade 2,sim
-ptdob,Maioridade 2,sim
+avante,Maioridade 2,sim
 psd,Maioridade 2,sim
 pr,Maioridade 2,sim
 psb,Maioridade 2,não
@@ -193,23 +193,23 @@ pros,Maioridade 2,não
 pps,Maioridade 2,não
 pv,Maioridade 2,não
 psol,Maioridade 2,obstrução
-pmdb,Distritao,sim
-pp,Distritao,sim
+mdb,Distritao,sim
+progressistas,Distritao,sim
 ptb,Distritao,sim
 psc,Distritao,sim
 phs,Distritao,sim
-pen,Distritao,sim
+patriotas,Distritao,sim
 pt,Distritao,não
 psdb,Distritao,liberado
 prb,Distritao,não
-ptn,Distritao,não
+podemos,Distritao,não
 pmn,Distritao,não
 prp,Distritao,não
 psdc,Distritao,não
 prtb,Distritao,não
 ptc,Distritao,não
 psl,Distritao,não
-ptdob,Distritao,não
+avante,Distritao,não
 psd,Distritao,liberado
 pr,Distritao,não
 psb,Distritao,não
@@ -221,23 +221,23 @@ pros,Distritao,liberado
 pps,Distritao,não
 pv,Distritao,não
 psol,Distritao,não
-pmdb,Financiamento privado para partidos e candidatos,sim
-pp,Financiamento privado para partidos e candidatos,sim
+mdb,Financiamento privado para partidos e candidatos,sim
+progressistas,Financiamento privado para partidos e candidatos,sim
 ptb,Financiamento privado para partidos e candidatos,sim
 psc,Financiamento privado para partidos e candidatos,sim
 phs,Financiamento privado para partidos e candidatos,sim
-pen,Financiamento privado para partidos e candidatos,sim
+patriotas,Financiamento privado para partidos e candidatos,sim
 pt,Financiamento privado para partidos e candidatos,não
 psdb,Financiamento privado para partidos e candidatos,sim
 prb,Financiamento privado para partidos e candidatos,não
-ptn,Financiamento privado para partidos e candidatos,não
+podemos,Financiamento privado para partidos e candidatos,não
 pmn,Financiamento privado para partidos e candidatos,não
 prp,Financiamento privado para partidos e candidatos,não
 psdc,Financiamento privado para partidos e candidatos,não
 prtb,Financiamento privado para partidos e candidatos,não
 ptc,Financiamento privado para partidos e candidatos,não
 psl,Financiamento privado para partidos e candidatos,não
-ptdob,Financiamento privado para partidos e candidatos,não
+avante,Financiamento privado para partidos e candidatos,não
 psd,Financiamento privado para partidos e candidatos,sim
 pr,Financiamento privado para partidos e candidatos,sim
 psb,Financiamento privado para partidos e candidatos,liberado
@@ -249,23 +249,23 @@ pros,Financiamento privado para partidos e candidatos,liberado
 pps,Financiamento privado para partidos e candidatos,não
 pv,Financiamento privado para partidos e candidatos,não
 psol,Financiamento privado para partidos e candidatos,não
-pmdb,Voto Facultativo,liberado
-pp,Voto Facultativo,liberado
+mdb,Voto Facultativo,liberado
+progressistas,Voto Facultativo,liberado
 ptb,Voto Facultativo,liberado
 psc,Voto Facultativo,liberado
 phs,Voto Facultativo,liberado
-pen,Voto Facultativo,liberado
+patriotas,Voto Facultativo,liberado
 pt,Voto Facultativo,não
 psdb,Voto Facultativo,não
 prb,Voto Facultativo,não
-ptn,Voto Facultativo,não
+podemos,Voto Facultativo,não
 pmn,Voto Facultativo,não
 prp,Voto Facultativo,não
 psdc,Voto Facultativo,não
 prtb,Voto Facultativo,não
 ptc,Voto Facultativo,não
 psl,Voto Facultativo,não
-ptdob,Voto Facultativo,não
+avante,Voto Facultativo,não
 psd,Voto Facultativo,não
 pr,Voto Facultativo,não
 psb,Voto Facultativo,não
@@ -277,23 +277,23 @@ pros,Voto Facultativo,não
 pps,Voto Facultativo,sim
 pv,Voto Facultativo,sim
 psol,Voto Facultativo,não
-pmdb,Financiamento privado para partidos,sim
-pp,Financiamento privado para partidos,sim
+mdb,Financiamento privado para partidos,sim
+progressistas,Financiamento privado para partidos,sim
 ptb,Financiamento privado para partidos,sim
 psc,Financiamento privado para partidos,sim
 phs,Financiamento privado para partidos,sim
-pen,Financiamento privado para partidos,sim
+patriotas,Financiamento privado para partidos,sim
 pt,Financiamento privado para partidos,não
 psdb,Financiamento privado para partidos,sim
 prb,Financiamento privado para partidos,sim
-ptn,Financiamento privado para partidos,sim
+podemos,Financiamento privado para partidos,sim
 pmn,Financiamento privado para partidos,sim
 prp,Financiamento privado para partidos,sim
 psdc,Financiamento privado para partidos,sim
 prtb,Financiamento privado para partidos,sim
 ptc,Financiamento privado para partidos,sim
 psl,Financiamento privado para partidos,sim
-ptdob,Financiamento privado para partidos,sim
+avante,Financiamento privado para partidos,sim
 psd,Financiamento privado para partidos,sim
 pr,Financiamento privado para partidos,sim
 psb,Financiamento privado para partidos,liberado
@@ -305,23 +305,23 @@ pros,Financiamento privado para partidos,sim
 pps,Financiamento privado para partidos,não
 pv,Financiamento privado para partidos,sim
 psol,Financiamento privado para partidos,obstrução
-pmdb,Reeleição,sim
-pp,Reeleição,sim
+mdb,Reeleição,sim
+progressistas,Reeleição,sim
 ptb,Reeleição,sim
 psc,Reeleição,sim
 phs,Reeleição,sim
-pen,Reeleição,sim
+patriotas,Reeleição,sim
 pt,Reeleição,sim
 psdb,Reeleição,sim
 prb,Reeleição,sim
-ptn,Reeleição,sim
+podemos,Reeleição,sim
 pmn,Reeleição,sim
 prp,Reeleição,sim
 psdc,Reeleição,sim
 prtb,Reeleição,sim
 ptc,Reeleição,sim
 psl,Reeleição,sim
-ptdob,Reeleição,sim
+avante,Reeleição,sim
 psd,Reeleição,sim
 pr,Reeleição,sim
 psb,Reeleição,sim
@@ -333,23 +333,23 @@ pros,Reeleição,sim
 pps,Reeleição,sim
 pv,Reeleição,sim
 psol,Reeleição,sim
-pmdb,Tempo Mandato,liberado
-pp,Tempo Mandato,liberado
+mdb,Tempo Mandato,liberado
+progressistas,Tempo Mandato,liberado
 ptb,Tempo Mandato,liberado
 psc,Tempo Mandato,liberado
 phs,Tempo Mandato,liberado
-pen,Tempo Mandato,liberado
+patriotas,Tempo Mandato,liberado
 pt,Tempo Mandato,sim
 psdb,Tempo Mandato,sim
 prb,Tempo Mandato,não
-ptn,Tempo Mandato,não
+podemos,Tempo Mandato,não
 pmn,Tempo Mandato,não
 prp,Tempo Mandato,não
 psdc,Tempo Mandato,não
 prtb,Tempo Mandato,não
 ptc,Tempo Mandato,não
 psl,Tempo Mandato,não
-ptdob,Tempo Mandato,não
+avante,Tempo Mandato,não
 psd,Tempo Mandato,sim
 pr,Tempo Mandato,sim
 psb,Tempo Mandato,sim
@@ -361,23 +361,23 @@ pros,Tempo Mandato,sim
 pps,Tempo Mandato,não
 pv,Tempo Mandato,liberado
 psol,Tempo Mandato,sim
-pmdb,Coincidência reeleição,liberado
-pp,Coincidência reeleição,liberado
+mdb,Coincidência reeleição,liberado
+progressistas,Coincidência reeleição,liberado
 ptb,Coincidência reeleição,liberado
 psc,Coincidência reeleição,liberado
 phs,Coincidência reeleição,liberado
-pen,Coincidência reeleição,liberado
+patriotas,Coincidência reeleição,liberado
 pt,Coincidência reeleição,não
 psdb,Coincidência reeleição,não
 prb,Coincidência reeleição,não
-ptn,Coincidência reeleição,não
+podemos,Coincidência reeleição,não
 pmn,Coincidência reeleição,não
 prp,Coincidência reeleição,não
 psdc,Coincidência reeleição,não
 prtb,Coincidência reeleição,não
 ptc,Coincidência reeleição,não
 psl,Coincidência reeleição,não
-ptdob,Coincidência reeleição,não
+avante,Coincidência reeleição,não
 psd,Coincidência reeleição,liberado
 pr,Coincidência reeleição,sim
 psb,Coincidência reeleição,sim
@@ -389,23 +389,23 @@ pros,Coincidência reeleição,sim
 pps,Coincidência reeleição,não
 pv,Coincidência reeleição,liberado
 psol,Coincidência reeleição,não
-pmdb,Cota para mulheres legislativo,liberado
-pp,Cota para mulheres legislativo,liberado
+mdb,Cota para mulheres legislativo,liberado
+progressistas,Cota para mulheres legislativo,liberado
 ptb,Cota para mulheres legislativo,liberado
 psc,Cota para mulheres legislativo,liberado
 phs,Cota para mulheres legislativo,liberado
-pen,Cota para mulheres legislativo,liberado
+patriotas,Cota para mulheres legislativo,liberado
 pt,Cota para mulheres legislativo,sim
 psdb,Cota para mulheres legislativo,liberado
 prb,Cota para mulheres legislativo,liberado
-ptn,Cota para mulheres legislativo,liberado
+podemos,Cota para mulheres legislativo,liberado
 pmn,Cota para mulheres legislativo,liberado
 prp,Cota para mulheres legislativo,liberado
 psdc,Cota para mulheres legislativo,liberado
 prtb,Cota para mulheres legislativo,liberado
 ptc,Cota para mulheres legislativo,liberado
 psl,Cota para mulheres legislativo,liberado
-ptdob,Cota para mulheres legislativo,liberado
+avante,Cota para mulheres legislativo,liberado
 psd,Cota para mulheres legislativo,sim
 pr,Cota para mulheres legislativo,sim
 psb,Cota para mulheres legislativo,liberado
@@ -417,23 +417,23 @@ pros,Cota para mulheres legislativo,liberado
 pps,Cota para mulheres legislativo,sim
 pv,Cota para mulheres legislativo,sim
 psol,Cota para mulheres legislativo,sim
-pmdb,Voto impresso,sim
-pp,Voto impresso,sim
+mdb,Voto impresso,sim
+progressistas,Voto impresso,sim
 ptb,Voto impresso,sim
 psc,Voto impresso,sim
 phs,Voto impresso,sim
-pen,Voto impresso,sim
+patriotas,Voto impresso,sim
 pt,Voto impresso,sim
 psdb,Voto impresso,sim
 prb,Voto impresso,sim
-ptn,Voto impresso,sim
+podemos,Voto impresso,sim
 pmn,Voto impresso,sim
 prp,Voto impresso,sim
 psdc,Voto impresso,sim
 prtb,Voto impresso,sim
 ptc,Voto impresso,sim
 psl,Voto impresso,sim
-ptdob,Voto impresso,sim
+avante,Voto impresso,sim
 psd,Voto impresso,sim
 pr,Voto impresso,sim
 psb,Voto impresso,sim
@@ -445,23 +445,23 @@ pros,Voto impresso,sim
 pps,Voto impresso,sim
 pv,Voto impresso,sim
 psol,Voto impresso,sim
-pmdb,Seguro Desemprego,sim
-pp,Seguro Desemprego,sim
+mdb,Seguro Desemprego,sim
+progressistas,Seguro Desemprego,sim
 ptb,Seguro Desemprego,sim
 psc,Seguro Desemprego,sim
 phs,Seguro Desemprego,sim
-pen,Seguro Desemprego,sim
+patriotas,Seguro Desemprego,sim
 pt,Seguro Desemprego,sim
 psdb,Seguro Desemprego,não
 prb,Seguro Desemprego,sim
-ptn,Seguro Desemprego,sim
+podemos,Seguro Desemprego,sim
 pmn,Seguro Desemprego,sim
 prp,Seguro Desemprego,sim
 psdc,Seguro Desemprego,sim
 prtb,Seguro Desemprego,sim
 ptc,Seguro Desemprego,sim
 psl,Seguro Desemprego,sim
-ptdob,Seguro Desemprego,sim
+avante,Seguro Desemprego,sim
 psd,Seguro Desemprego,sim
 pr,Seguro Desemprego,sim
 psb,Seguro Desemprego,não
@@ -473,23 +473,23 @@ pros,Seguro Desemprego,sim
 pps,Seguro Desemprego,não
 pv,Seguro Desemprego,liberado
 psol,Seguro Desemprego,não
-pmdb,Tributação serviços de internet,sim
-pp,Tributação serviços de internet,sim
+mdb,Tributação serviços de internet,sim
+progressistas,Tributação serviços de internet,sim
 ptb,Tributação serviços de internet,sim
 psc,Tributação serviços de internet,sim
 phs,Tributação serviços de internet,sim
-pen,Tributação serviços de internet,sim
+patriotas,Tributação serviços de internet,sim
 pt,Tributação serviços de internet,sim
 psdb,Tributação serviços de internet,sim
 prb,Tributação serviços de internet,sim
-ptn,Tributação serviços de internet,sim
+podemos,Tributação serviços de internet,sim
 pmn,Tributação serviços de internet,sim
 prp,Tributação serviços de internet,sim
 psdc,Tributação serviços de internet,sim
 prtb,Tributação serviços de internet,sim
 ptc,Tributação serviços de internet,sim
 psl,Tributação serviços de internet,sim
-ptdob,Tributação serviços de internet,sim
+avante,Tributação serviços de internet,sim
 pr,Tributação serviços de internet,sim
 psd,Tributação serviços de internet,sim
 psb,Tributação serviços de internet,sim
@@ -501,23 +501,23 @@ pros,Tributação serviços de internet,liberado
 pps,Tributação serviços de internet,liberado
 pv,Tributação serviços de internet,sim
 psol,Tributação serviços de internet,não
-pmdb,Pensão,sim
-pp,Pensão,sim
+mdb,Pensão,sim
+progressistas,Pensão,sim
 ptb,Pensão,sim
 psc,Pensão,sim
 phs,Pensão,sim
-pen,Pensão,sim
+patriotas,Pensão,sim
 pt,Pensão,sim
 psdb,Pensão,não
 prb,Pensão,sim
-ptn,Pensão,sim
+podemos,Pensão,sim
 pmn,Pensão,sim
 prp,Pensão,sim
 psdc,Pensão,sim
 prtb,Pensão,sim
 ptc,Pensão,sim
 psl,Pensão,sim
-ptdob,Pensão,sim
+avante,Pensão,sim
 psd,Pensão,sim
 pr,Pensão,sim
 psb,Pensão,não
@@ -529,10 +529,10 @@ pros,Pensão,sim
 pps,Pensão,não
 pv,Pensão,liberado
 psol,Pensão,não
-pp,Lei trabalhista,sim
-ptn,Lei trabalhista,sim
-ptdob,Lei trabalhista,sim
-pmdb,Lei trabalhista,sim
+progressistas,Lei trabalhista,sim
+podemos,Lei trabalhista,sim
+avante,Lei trabalhista,sim
+mdb,Lei trabalhista,sim
 pt,Lei trabalhista,não
 psdb,Lei trabalhista,sim
 pr,Lei trabalhista,sim
@@ -552,25 +552,25 @@ phs,Lei trabalhista,liberado
 psol,Lei trabalhista,não
 pv,Lei trabalhista,sim
 rede,Lei trabalhista,não
-pen,Lei trabalhista,sim
+patriotas,Lei trabalhista,sim
 pmb,Lei trabalhista,não
-pmdb,Terrorismo,sim
-pp,Terrorismo,sim
+mdb,Terrorismo,sim
+progressistas,Terrorismo,sim
 ptb,Terrorismo,sim
 psc,Terrorismo,sim
 phs,Terrorismo,sim
-pen,Terrorismo,sim
+patriotas,Terrorismo,sim
 pt,Terrorismo,sim
 psdb,Terrorismo,sim
 prb,Terrorismo,sim
-ptn,Terrorismo,sim
+podemos,Terrorismo,sim
 pmn,Terrorismo,sim
 prp,Terrorismo,sim
 psdc,Terrorismo,sim
 prtb,Terrorismo,sim
 ptc,Terrorismo,sim
 psl,Terrorismo,sim
-ptdob,Terrorismo,sim
+avante,Terrorismo,sim
 pr,Terrorismo,sim
 psd,Terrorismo,liberado
 psb,Terrorismo,liberado
