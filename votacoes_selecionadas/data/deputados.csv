@@ -1,25 +1,19 @@
 nome,id_dep,partido
-Abel Mesquita Jr.,178957,dem
 Alberto Fraga,73579,dem
 Alexandre Leite,160545,dem
 Carlos Melles,74651,dem
 Claudio Cajado,74537,progressistas
 Efraim Filho,141422,dem
-Eli Corrêa Filho,160532,dem
+Eli Côrrea Filho,160532,dem
 Elmar Nascimento,178854,dem
 Felipe Maia,141429,dem
-Francisco Floriano,160677,dem
 Hélio Leite,178909,dem
 Jorge Tadeu Mudalen,73535,dem
 José Carlos Aleluia,74553,dem
-Juscelino Filho,178886,dem
 Mandetta,160633,dem
 Marcelo Aguiar,160660,dem
-Marcos Rogério,167722,dem
-Marcos Soares,178943,dem
 Mendonça Filho,74428,dem
 Misael Varella,178895,psd
-Missionário José Olimpio,160561,dem
 Moroni Torgan,74457,dem
 Norma Ayub,66179,dem
 Onyx Lorenzoni,74399,dem
@@ -28,10 +22,11 @@ Pauderney Avelino,74095,dem
 Paulo Azi,178860,dem
 Professora Dorinha Seabra Rezende,160639,dem
 Rodrigo Maia,74693,dem
-Sóstenes Cavalcante,178947,dem
 Vaidon Oliveira,195866,pros
 Alice Portugal,74057,pcdob
+Angela Albino,192120,pcdob
 Assis Melo,160581,pcdob
+Carlos Eduardo Cadoca,74474,pdt
 Chico Lopes,141440,pcdob
 Daniel Almeida,74060,pcdob
 Davidson Magalhães,101309,pcdob
@@ -40,23 +35,22 @@ Jô Moraes,141503,pcdob
 Luciana Santos,160628,pcdob
 Moisés Diniz,195278,pcdob
 Orlando Silva,178987,pcdob
-Professora Marcivania,160641,pcdob
 Rubens Pereira Júnior,178887,pcdob
 Wadson Ribeiro,137853,pcdob
+Abel Mesquita Jr.,178957,dem
 Afonso Motta,178835,pdt
 André Figueiredo,133439,pdt
-Ariosto Holanda,74103,pdt
-Assis do Couto,74378,pdt
-Carlos Eduardo Cadoca,74474,pdt
-Dagoberto Nogueira,141411,pdt
+Dagoberto,141411,pdt
 Damião Feliciano,74467,pdt
 Deoclides Macedo,185500,pdt
 Flavio Nogueira,191923,pdt
 Flávia Morais,160598,pdt
 Félix Mendonça Júnior,160666,pdt
-Hissa Abrahão,178849,pdt
+Giovani Cherini,160673,pr
 Julião Amin Castro,141474,pdt
-Leônidas Cristino,74299,pdt
+Major Olimpio,178826,psl
+Marcelo Matos,76287,psd
+Marcos Rogério,167722,dem
 Mário Heringer,74158,pdt
 Pompeo de Mattos,73486,pdt
 Roberto Góes,178995,pdt
@@ -66,42 +60,39 @@ Sergio Vidigal,178874,pdt
 Subtenente Gonzaga,177282,pdt
 Weverton Rocha,167493,pdt
 Wolney Queiroz,74439,pdt
-Erivelton Santana,99654,patriotas
+André Fufuca,178882,progressistas
 Junior Marreca,178885,patriotas
-Walney Rocha,160631,patriotas
+Adail Carneiro,178864,podemos
 Carlos Andrade,178958,phs
 Diego Garcia,178929,podemos
-Dr. Jorge Silva,160643,solidaried
-Givaldo Carimbão,74558,avante
+Kaio Maniçoba,178918,solidaried
 Marcelo Aro,146788,phs
-Marcelo Matos,76287,psd
-Pastor Eurico,160642,patriotas
-Weliton Prado,160518,pros
+Pastor Luciano Braga,193982,prb
 Alberto Filho,160582,progressistas
 Alceu Moreira,160559,mdb
-Alexandre Serfiotis,178833,psd
-Altineu Côrtes,178937,pr
 André Amaral,195143,pros
 Aníbal Gomes,74212,dem
 Baleia Rossi,178975,mdb
 Cabuçu Borges,105112,mdb
 Carlos Bezerra,141401,mdb
+Carlos Henrique Gaguim,178993,dem
 Carlos Marun,178900,mdb
 Celso Jacob,73568,mdb
 Celso Maldaner,141405,mdb
 Celso Pansera,72912,pt
-Cícero Almeida,178841,phs
 Daniel Vilela,144523,mdb
+Danilo Forte,62881,psdb
 Darcísio Perondi,73891,mdb
 Dulce Miranda,178994,mdb
 Edinho Araújo,73447,mdb
 Edinho Bez,73793,mdb
+Edio Lopes,141417,pr
 Eduardo Cunha,74173,mdb
 Elcione Barbalho,74075,mdb
 Fabio Reis,171623,mdb
 Fernando Jordão,163831,mdb
 Flaviano Melo,141434,mdb
-Fábio Ramalho,141427,mdb
+Geraldo Resende,74374,psdb
 Hermes Parcianello,73772,mdb
 Hildo Rocha,178884,mdb
 Hugo Motta,160674,prb
@@ -113,11 +104,12 @@ José Priante,74079,mdb
 João Arruda,160573,mdb
 João Marcelo Souza,112437,mdb
 Jéssica Sales,178839,mdb
-Kaio Maniçoba,178918,solidaried
+Laudivio Carvalho,178894,podemos
 Laura Carneiro,74856,dem
 Lelo Coimbra,141562,mdb
 Leonardo Picciani,74254,mdb
 Leonardo Quintão,141482,mdb
+Lindomar Garçon,141483,prb
 Lucio Mosquini,178954,mdb
 Lucio Vieira Lima,94931,mdb
 Manoel Junior,141490,mdb
@@ -130,7 +122,6 @@ Marx Beltrão,178843,psd
 Mauro Lopes,74749,mdb
 Mauro Mariani,141507,mdb
 Mauro Pereira,124411,mdb
-Moses Rodrigues,178997,mdb
 Newton Cardoso Jr,178896,mdb
 Osmar Serraglio,73463,progressistas
 Osmar Terra,73692,mdb
@@ -140,6 +131,7 @@ Rocha Loures,141532,mdb
 Rodrigo Pacheco,178897,dem
 Rogério Peninha Mendonça,160651,mdb
 Ronaldo Benedet,160515,mdb
+Roney Nemer,178870,progressistas
 Saraiva Felipe,74762,mdb
 Sergio Souza,178933,mdb
 Sergio Zveiter,160612,dem
@@ -147,21 +139,19 @@ Silas Brasileiro,74765,mdb
 Simone Morgado,178911,mdb
 Soraya Santos,178946,pr
 Valdir Colatto,74010,mdb
-Valtenir Pereira,141552,mdb
 Veneziano Vital do Rêgo,178913,psb
 Vitor Valim,178869,pros
 Walter Alves,178952,mdb
 Washington Reis,160620,mdb
 Wilson Beserra,193066,mdb
 Zé Augusto Nalin,191945,dem
-Adail Carneiro,178864,podemos
+Antônio Jácome,178950,podemos
+Dâmina Pereira,178892,podemos
+Hiran Gonçalves,178959,progressistas
 Afonso Hamm,136811,progressistas
 Aguinaldo Ribeiro,160527,progressistas
-André Abdon,178831,progressistas
-André Fufuca,178882,progressistas
 Arthur Lira,160541,progressistas
 Beto Rosado,178948,progressistas
-Beto Salame,178906,progressistas
 Cacá Leão,93083,progressistas
 Conceição Sampaio,178848,progressistas
 Covatti Filho,178963,progressistas
@@ -170,12 +160,10 @@ Dimas Fabiano,160599,progressistas
 Eduardo da Fonte,141421,progressistas
 Esperidião Amin,160649,progressistas
 Ezequiel Fonseca,178904,progressistas
-Fausto Pinato,66828,progressistas
 Fernando Monteiro,92699,progressistas
-Franklin Lima,186775,progressistas
 Guilherme Mussi,160667,progressistas
-Hiran Gonçalves,178959,progressistas
 Iracema Portella,67138,progressistas
+Jair Bolsonaro,74847,psl
 Jerônimo Goergen,160570,progressistas
 Jorge Boeira,74388,progressistas
 José Otávio Germano,74395,progressistas
@@ -183,10 +171,9 @@ Julio Lopes,74253,progressistas
 Luis Carlos Heinze,73483,progressistas
 Luiz Fernando Faria,141487,progressistas
 Lázaro Botelho,141480,progressistas
-Macedo,178867,progressistas
-Maia Filho,151965,progressistas
 Marcelo Belinati,178932,progressistas
 Marcus Vicente,74235,progressistas
+Missionário José Olimpio,160561,dem
 Mário Negromonte Jr.,178858,progressistas
 Nelson Meurer,73781,progressistas
 Odelmo Leão,74752,progressistas
@@ -196,57 +183,51 @@ Renato Andrade,171620,progressistas
 Renato Molling,141527,progressistas
 Renzo Braz,160654,progressistas
 Ricardo Barros,73788,progressistas
-Ricardo Izar,160655,progressistas
 Roberto Balestra,73674,progressistas
 Roberto Britto,141529,progressistas
 Ronaldo Carletto,178861,progressistas
-Rôney Nemer,178870,progressistas
 Sandes Júnior,74372,progressistas
 Simão Sessim,73424,progressistas
 Toninho Pinheiro,160611,progressistas
 Waldir Maranhão,141558,psdb
 Alex Manente,178972,pps
 Arnaldo Jordy,160602,pps
-Arthur Oliveira Maia,160600,dem
 Carmen Zanotto,164360,pps
-Eliziane Gama,178883,pps
+Hissa Abrahão,178849,pdt
 Luzia Ferreira,198198,pps
 Marcos Abrão,178880,pps
+Moses Rodrigues,178997,mdb
 Pollyana Gama,195997,pps
 Raul Jungmann,74048,pps
 Roberto Freire,73805,pps
 Rubens Bueno,73466,pps
-Adelson Barreto,178968,pr
+Sandro Alex,160621,psd
 Aelton Freitas,141372,pr
-Alexandre Valle,178936,pr
 Alfredo Nascimento,178846,pr
+Altineu Côrtes,178937,pr
 Anderson Ferreira,160551,pr
 Bilac Pinto,141513,dem
-Brunny,178999,pr
 Cabo Sabino,178865,avante
 Cajar Nardes,194261,podemos
 Capitão Augusto,178829,pr
-Christiane de Souza Yared,178928,pr
 Clarissa Garotinho,178939,pros
-Delegado Edson Moreira,178893,pr
-Delegado Waldir,164359,psl
+Davi Alves Silva Júnior,141412,pr
 Dr. João,178940,pr
-Edio Lopes,141417,pr
+Francisco Floriano,160677,dem
 Giacobo,74383,pr
-Giovani Cherini,160673,pr
 Gorete Pereira,129618,pr
 Jorginho Mello,160509,pr
-José Carlos Araújo,74140,pr
 José Rocha,74554,pr
 João Carlos Bacelar,141458,pr
 Laerte Bessa,141478,pr
+Lincoln Portela,74585,pr
 Luiz Cláudio,178955,pr
 Luiz Nishimori,162332,pr
 Lúcio Vale,141484,pr
 Magda Mofatto,166402,pr
 Marcelo Delaroli,195826,pr
-Marcelo Álvaro Antônio,179000,psl
 Marcio Alvino,178983,pr
+Marcos Soares,178943,dem
 Maurício Quintella Lessa,74050,pr
 Miguel Lombardi,178985,pr
 Milton Monti,74787,pr
@@ -255,11 +236,11 @@ Paulo Freire,160558,pr
 Remídio Monai,178960,pr
 Silas Freire,187008,podemos
 Tiririca,160976,pr
-Vicentinho Júnior,137070,pr
 Vinicius Gurgel,160591,pr
 Wellington Roberto,74043,pr
 Zenaide Maia,178949,phs
 Alan Rick,178836,dem
+André Abdon,178831,progressistas
 Antonio Bulhões,141383,prb
 Beto Mansur,73437,mdb
 Carlos Gomes,178962,prb
@@ -267,45 +248,51 @@ Celso Russomanno,73441,prb
 Cleber Verde,141408,prb
 César Halum,160576,prb
 Dejorge Patrício,196357,prb
+Fausto Pinato,66828,progressistas
 Jhonatan de Jesus,160531,prb
 Jony Marcos,178971,prb
-João Campos,74366,prb
-Lincoln Portela,74585,pr
-Lindomar Garçon,141483,prb
 Marcelo Squassoni,118594,prb
 Márcio Marinho,150418,prb
-Pastor Luciano Braga,193982,prb
+Ricardo Bentinho,195581,prb
 Roberto Alves,152610,prb
 Roberto Sales,178944,dem
 Ronaldo Martins,122466,prb
 Rosangela Gomes,178945,prb
-Silas Câmara,74356,prb
 Sérgio Reis,178991,prb
 Tia Eron,178862,prb
 Vinicius Carvalho,141555,prb
+Ademir Camilo,133374,mdb
 Antonio Balhmann,74213,pdt
-Eros Biondini,160640,pros
-Felipe Bornier,141430,pros
-Odorico Monteiro,178868,psb
+Ariosto Holanda,74103,pdt
+Beto Salame,178906,progressistas
+Bosco Costa,74052,pros
+Domingos Neto,143632,psd
+Dr. Jorge Silva,160643,solidaried
+George Hilton,141441,psc
+Givaldo Carimbão,74558,avante
+Hugo Leal,141450,psd
+Leônidas Cristino,74299,pdt
+Rafael Motta,178951,psb
 Ronaldo Fonseca,160637,podemos
-Toninho Wandscheer,178934,pros
+Valtenir Pereira,141552,mdb
 Vicente Arruda,74308,pr
+Alexandre Valle,178936,pr
+Juscelino Filho,178886,dem
+Marcelo Álvaro Antônio,179000,psl
 Nivaldo Albuquerque,194260,prp
 Adilton Sachetti,178903,prb
 Bebeto,178834,psb
 Creuza Pereira,194258,psb
 César Messias,178838,psb
 Danilo Cabral,160528,psb
-Danilo Forte,62881,psdb
 Fabio Garcia,178905,dem
 Fabricio Oliveira,190149,psb
 Fernando Coelho Filho,141431,dem
 Flavinho,178978,psc
-George Hilton,141441,psc
 Gonzaga Patriota,74419,psb
 Heitor Schuch,178964,psb
 Heráclito Fortes,97707,dem
-Hugo Leal,141450,psd
+Ildon Marques,194592,psb
 JHC,178842,psb
 Janete Capiberibe,73926,psb
 Jose Stédile,160607,psb
@@ -317,38 +304,45 @@ Leopoldo Meyer,160663,psb
 Luana Costa,81366,psc
 Luciano Ducci,178931,psb
 Luiz Lauro Filho,178982,psb
+Luiza Erundina,74784,psol
 Maria Helena,64960,mdb
 Marinaldo Rosendo,178919,progressistas
+Pastor Eurico,160642,patriotas
 Paulo Foletto,160517,psb
-Rafael Motta,178951,psb
 Rodrigo Martins,178926,psb
 Severino Ninho,167614,psb
+Stefano Aguiar,92776,psd
 Tadeu Alencar,178922,psb
 Tenente Lúcio,178898,pr
 Tereza Cristina,178901,dem
 Valadares Filho,141384,psb
+Vicentinho Júnior,137070,pr
 Átila Lira,74459,psb
 Andre Moura,160543,psc
 Arolde de Oliveira,74833,psd
 Eduardo Bolsonaro,92346,psl
+Erivelton Santana,99654,patriotas
 Gilberto Nascimento,74270,psc
 Irmão Lazaro,178855,psc
-Jair Bolsonaro,74847,psl
 Júlia Marinho,67312,psc
+Marcos Reategui,178852,psd
 Pr. Marco Feliciano,160601,podemos
 Professor Victório Galli,148134,psl
+Raquel Muniz,178998,psd
+Silvio Costa,4930,avante
 Takayama,74385,psc
+Alexandre Serfiotis,178833,psd
 André de Paula,74471,psd
-Antonio Brito,160553,psd
 Cesar Souza,73720,psd
+Cícero Almeida,178841,phs
 Danrlei de Deus Hinterholz,160552,psd
 Delegado Éder Mauro,178908,psd
 Diego Andrade,160588,psd
-Domingos Neto,143632,psd
 Edmar Arruda,160578,psd
 Evandro Roman,178930,psd
-Expedito Netto,178953,psd
+Felipe Bornier,141430,pros
 Fernando Torres,160676,psd
+Francisco Chapadinha,178907,podemos
 Fábio Faria,141428,psd
 Fábio Mitidieri,178969,psd
 Goulart,178980,psd
@@ -359,25 +353,28 @@ Irajá Abreu,81232,psd
 Jaime Martins,74665,pros
 Jefferson Campos,74273,psb
 Joaquim Passarinho,178910,psd
+José Carlos Araújo,74140,pr
 José Nunes,160619,psd
 João Paulo Kleinübing,178967,dem
 João Rodrigues,160571,psd
 Júlio Cesar,74317,psd
 Marcos Montes,141500,psd
-Marcos Reategui,178852,psd
 Paulo Magalhães,74574,psd
-Raquel Muniz,178998,psd
 Reinhold Stephanes,73786,psd
+Ricardo Izar,160655,progressistas
 Rogério Rosso,160426,psd
 Rômulo Gouveia,141536,psd
-Sandro Alex,160621,psd
-Stefano Aguiar,92776,psd
+Silas Câmara,74356,prb
 Sérgio Brito,73808,psd
+Sóstenes Cavalcante,178947,dem
+Tampinha,73831,psd
 Thiago Peixoto,160617,psd
-Victor Mendes,178888,mdb
 Walter Ihoshi,141560,psd
 Átila Lins,74090,progressistas
 Adérmis Marini,196359,psdb
+Alexandre Baldy,178875,progressistas
+Alfredo Kaefer,141454,progressistas
+Antonio Carlos Mendes Thame,73584,pv
 Antonio Imbassahy,160530,psdb
 Arthur Virgílio Bisneto,178847,psdb
 Betinho Gomes,178915,psdb
@@ -389,17 +386,19 @@ Caio Narcio,178891,psdb
 Carlos Sampaio,74262,psdb
 Célio Silveira,178876,psdb
 Daniel Coelho,178916,pps
+Delegado Waldir,164359,psl
 Domingos Sávio,160758,psdb
+Duarte Nogueira,141385,psdb
 Eduardo Barbosa,74655,psdb
 Eduardo Cury,178977,psdb
 Elizeu Dionizio,181316,psb
 Fábio Sousa,178877,psdb
 Geovania de Sá,178966,psdb
-Geraldo Resende,74374,psdb
 Giuseppe Vecci,178878,psdb
 Guilherme Coelho,194259,psdb
-Izalci Lucas,4931,psdb
+Izalci,4931,psdb
 Izaque Silva,196378,psdb
+João Campos,74366,prb
 João Castelo,74445,psdb
 João Gualberto,178856,psdb
 João Paulo Papa,178988,psdb
@@ -418,6 +417,7 @@ Nilson Leitão,166401,psdb
 Nilson Pinto,74352,psdb
 Otavio Leite,141515,psdb
 Paulo Abi-Ackel,141516,psdb
+Paulo Martins,193726,psdb
 Pedro Cunha Lima,178912,psdb
 Pedro Vilela,178844,psdb
 Raimundo Gomes de Matos,74216,psdb
@@ -432,14 +432,14 @@ Silvio Torres,73560,psdb
 Vanderlei Macris,141553,psdb
 Vitor Lippi,178992,psdb
 Yeda Crusius,73992,psdb
-Alfredo Kaefer,141454,progressistas
-Dâmina Pereira,178892,podemos
+Aluisio Mendes,178881,podemos
+Luiz Carlos Ramos,178802,pr
+Macedo,178867,progressistas
 Chico Alencar,74171,psol
 Edmilson Rodrigues,134812,psol
 Glauber Braga,152605,psol
 Ivan Valente,73531,psol
 Jean Wyllys,160672,psol
-Luiza Erundina,74784,psol
 Adelmo Carneiro Leão,178890,pt
 Afonso Florence,160508,pt
 Ana Perugini,178973,pt
@@ -447,12 +447,13 @@ Andres Sanchez,178974,pt
 Angelim,178837,pt
 Arlindo Chinaglia,73433,pt
 Assis Carvalho,159237,pt
+Assis do Couto,74378,pdt
 Benedita da Silva,73701,pt
 Beto Faro,141335,pt
 Bohn Gass,160538,pt
 Caetano,178853,pt
 Carlos Zarattini,141398,pt
-Chico D´Angelo,141439,pdt
+Chico D Angelo,141439,pdt
 Décio Lima,141413,pt
 Enio Verri,132504,pt
 Erika Kokay,160575,pt
@@ -480,6 +481,7 @@ Merlong Solano,188097,pt
 Moema Gramacho,178859,pt
 Nelson Pellegrino,74571,pt
 Nilto Tatto,178986,pt
+Odorico Monteiro,178868,psb
 Padre João,160556,pt
 Patrus Ananias,74160,pt
 Paulo Pimenta,74400,pt
@@ -487,11 +489,13 @@ Paulo Teixeira,141488,pt
 Paulão,171617,pt
 Pedro Uczai,160604,pt
 Pepe Vargas,141445,pt
+Professora Marcivania,160641,pcdob
 Reginaldo Lopes,74161,pt
 Robinson Almeida,91208,pt
 Rubens Otoni,74371,pt
 Sibá Machado,160613,pt
 Ságuas Moraes,160630,pt
+Toninho Wandscheer,178934,pros
 Valmir Assunção,160610,pt
 Valmir Prascidelli,113247,pt
 Vander Loubet,74376,pt
@@ -499,82 +503,84 @@ Vicente Candido,160622,pt
 Vicentinho,74283,pt
 Wadih Damous,189593,pt
 Waldenor Pereira,160569,pt
+Weliton Prado,160518,pros
 Zeca Dirceu,160592,pt
 Zeca do Pt,178902,pt
 Zé Carlos,178889,pt
 Zé Geraldo,73931,pt
 Adalberto Cavalcanti,178914,avante
+Adelson Barreto,178968,pr
 Alex Canziani,73458,ptb
+Antonio Brito,160553,psd
 Arnaldo Faria de Sá,73434,progressistas
 Arnon Bezerra,74291,ptb
 Benito Gama,74535,ptb
 Cristiane Brasil,93472,ptb
 Deley,74172,ptb
+Eros Biondini,160640,pros
 Jorge Côrte Real,160572,ptb
 Josué Bengtson,74351,ptb
 Jovair Arantes,73666,ptb
+Jozi  Araújo,178851,podemos
 Luiz Carlos Busato,141485,ptb
 Nelson Marquezelli,73553,ptb
 Nilton Capixaba,74359,ptb
 Paes Landim,74319,ptb
 Pedro Fernandes,74449,ptb
+Ricardo Teobaldo,178920,podemos
 Ronaldo Nogueira,163321,ptb
 Sabino Castelo Branco,141522,ptb
 Sérgio Moraes,141542,ptb
+Walney Rocha,160631,patriotas
 Wilson Filho,160636,ptb
 Zeca Cavalcanti,178923,ptb
-Cabo Daciolo,178938,patriotas
+Brunny,178999,pr
+Uldurico Junior,178863,ppl
 Luis Tibé,160510,avante
+Pastor Franklin,186775,progressistas
 Rosinha da Adefal,146949,avante
-Silvio Costa,4930,avante
-Ademir Camilo,133374,mdb
-Alexandre Baldy,178875,progressistas
-Aluisio Mendes,178881,podemos
-Antônio Jácome,178950,podemos
 Bacelar,69871,podemos
-Carlos Henrique Gaguim,178993,dem
-Dr. Sinval Malheiros,178830,podemos
-Ezequiel Teixeira,178941,podemos
-Francisco Chapadinha,178907,podemos
-Jozi  Araújo,178851,podemos
-Luiz Carlos Ramos,178802,pr
+Christiane de Souza Yared,178928,pr
+Delegado Edson Moreira,178893,pr
 Renata Abreu,178989,podemos
-Ricardo Teobaldo,178920,podemos
-Antonio Carlos Mendes Thame,73584,pv
-Evair Vieira de Melo,178871,progressistas
+Dr. Sinval Malheiros,178830,podemos
+Evair de Melo,178871,progressistas
 Evandro Gussi,178828,pv
+Fábio Ramalho,141427,mdb
 Leandre,178832,pv
 Penna,80920,pv
 Roberto de Lucena,160653,podemos
 Sarney Filho,74210,pv
-Uldurico Junior,178863,ppl
+Victor Mendes,178888,mdb
 William Woo,141563,progressistas
 Alessandro Molon,160511,psb
 Aliel Machado,178927,psb
+Eliziane Gama,178883,pps
 João Derly,178965,rede
 Miro Teixeira,74862,rede
+Cabo Daciolo,178938,patriotas
+Arthur Oliveira Maia,160600,dem
 Augusto Carvalho,73655,solidaried
 Augusto Coutinho,160665,solidaried
 Aureo,160512,solidaried
 Benjamin Maranhão,74040,mdb
 Carlos Manato,74163,psl
-Delegado Francischini,160646,psl
+Expedito Netto,178953,psd
+Ezequiel Teixeira,178941,podemos
+Fernando Francischini,160646,psl
 Genecias Noronha,160669,solidaried
 Laercio Oliveira,151208,progressistas
-Laudivio Carvalho,178894,podemos
 Lucas Vergilio,178879,solidaried
-Major Olimpio,178826,psl
+Mainha,151965,progressistas
 Paulo Pereira da Silva,141518,solidaried
 Wladimir Costa,73930,solidaried
 Zé Silva,160632,solidaried
 Sebastião Oliveira,178921,pr
 Capitão Fábio Abreu,178924,pr
 Rejane Dias,178925,pt
-Paulo Martins,193726,psdb
 Miguel Corrêa,141509,pt
 Arnaldo Jardim,141391,pps
 Rodrigo Garcia,88950,dem
-Duarte Nogueira,141385,psdb
 Josias Gomes,74141,pt
 Luciano Bivar,74478,psl
 Rogerio Silva,198963,mdb

@@ -17,7 +17,9 @@ def parse_orientation(orientation_filename, parties_already_know_filename, orien
         "PrbPtnPmnPrpPsdcPrtbPtcPslPtdoB": ["Prb", "Ptn", "Pmn", "Prp", "Psdc", "Prtb", "Ptc", "Psl", "PtdoB"],
         "PtbProsPsl": ["Ptb", "Pros", "Psl"],
         "PpPtnPhs...": ["Pp", "Ptn", "Phs", "Prp", "Ptdob"],
-        "PpPtnPTdoB": ["Pp", "Ptn", "PTdoB"]
+        "PpPtnPTdoB": ["Pp", "Ptn", "PTdoB"],
+        "PpPtbPsc": ["Pp", "Ptb", "Psc"],
+        "PtnPtdoBPsl": ["Ptn", "PtdoB", "Psl"]
     }
 
     exclude = {"Maioria", "Minoria", "GOV."}

@@ -1,11 +1,11 @@
 import pandas as pd
 from datetime import datetime
 
-ALL_VOTING_FILENAME = "votacoes.csv"
-SELECTED_VOTING_NAMES_FILENAME = "votacoes_selecionadas_resumo_nome.csv"
-SELECTED_VOTING_FILENAME = "votacoes_selecionadas.csv"
-SELECTED_VOTING_DATA = "votacoes_dados.csv"
-PARTIES_ORIENATATION_FILENAME = "orientacao_partido.csv"
+ALL_VOTING_FILENAME = "data/votacoes.csv"
+SELECTED_VOTING_NAMES_FILENAME = "data/votacoes_selecionadas_resumo_nome.csv"
+SELECTED_VOTING_FILENAME = "data/votacoes_selecionadas.csv"
+SELECTED_VOTING_DATA = "data/votacoes_dados.csv"
+PARTIES_ORIENATATION_FILENAME = "data/orientacao_partido.csv"
 
 def filter_selected_voting(all_voting_filename, selected_voting_names_filename, selected_voting_filename):
     all_voting = pd.read_csv(all_voting_filename, delimiter=',', doublequote=True)
@@ -50,6 +50,6 @@ def select_voting_data(selected_voting_filename, selected_voting_names_filename,
 
 
 filter_selected_voting(ALL_VOTING_FILENAME, SELECTED_VOTING_NAMES_FILENAME, SELECTED_VOTING_FILENAME)
-filter_selected_voting("parties_orientation.csv", SELECTED_VOTING_NAMES_FILENAME, "parties_orientation_selected.csv")
-unify_congressman_data(SELECTED_VOTING_FILENAME)
-select_voting_data(SELECTED_VOTING_FILENAME, SELECTED_VOTING_NAMES_FILENAME, SELECTED_VOTING_DATA)
+filter_selected_voting("data/parties_orientation.csv", SELECTED_VOTING_NAMES_FILENAME, "data/parties_orientation_selected.csv")
+# unify_congressman_data(SELECTED_VOTING_FILENAME)
+# select_voting_data(SELECTED_VOTING_FILENAME, SELECTED_VOTING_NAMES_FILENAME, SELECTED_VOTING_DATA)
