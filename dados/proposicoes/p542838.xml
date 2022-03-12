@@ -1,51 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<proposicao tipo="PL        " numero="3771" ano="2012">
-  <nomeProposicao>PL 3771/2012</nomeProposicao>
-  <idProposicao>542838</idProposicao>
-  <idProposicaoPrincipal>
-  </idProposicaoPrincipal>
-  <nomeProposicaoOrigem>
-  </nomeProposicaoOrigem>
-  <tipoProposicao>Projeto de Lei</tipoProposicao>
-  <tema>Política Econômica</tema>
-  <Ementa>Dispõe sobre a política de valorização de longo prazo do salário mínimo.</Ementa>
-  <ExplicacaoEmenta>
-  </ExplicacaoEmenta>
-  <Autor>Jorge Boeira</Autor>
-  <ideCadastro>74388</ideCadastro>
-  <ufAutor>SC</ufAutor>
-  <partidoAutor>PSD       </partidoAutor>
-  <DataApresentacao>25/04/2012</DataApresentacao>
-  <RegimeTramitacao>Urgência art. 155 RICD</RegimeTramitacao>
-  <UltimoDespacho Data="14/05/2012">Às Comissões de Trabalho, de Administração e Serviço Público; Finanças e Tributação (Mérito e Art. 54, RICD) e Constituição e Justiça e de Cidadania (Art. 54 RICD) - Art. 24, IIProposição Sujeita à Apreciação Conclusiva pelas Comissões - Art. 24 IIRegime de Tramitação: Ordinária</UltimoDespacho>
-  <Apreciacao>Proposição Sujeita à Apreciação do Plenário</Apreciacao>
-  <Indexacao>Política, valorização, preservação, poder aquisitivo, salário mínimo.</Indexacao>
-  <Situacao>PLEN - Pronta para Pauta</Situacao>
-  <LinkInteiroTeor>http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=986323</LinkInteiroTeor>
-  <apensadas>
-    <proposicao>
-      <nomeProposicao>PL 7185/2014</nomeProposicao>
-      <codProposicao>606804</codProposicao>
-    </proposicao>
-    <proposicao>
-      <nomeProposicao>PL 7469/2014</nomeProposicao>
-      <codProposicao>613662</codProposicao>
-    </proposicao>
-    <proposicao>
-      <nomeProposicao>PL 165/2015</nomeProposicao>
-      <codProposicao>945699</codProposicao>
-    </proposicao>
-    <proposicao>
-      <nomeProposicao>PL 220/2015</nomeProposicao>
-      <codProposicao>946063</codProposicao>
-    </proposicao>
-    <proposicao>
-      <nomeProposicao>PL 7703/2014</nomeProposicao>
-      <codProposicao>618838</codProposicao>
-    </proposicao>
-    <proposicao>
-      <nomeProposicao>PL 7731/2014</nomeProposicao>
-      <codProposicao>619121</codProposicao>
-    </proposicao>
-  </apensadas>
-</proposicao>
